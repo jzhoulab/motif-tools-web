@@ -1,0 +1,21 @@
+{
+  "name": "motif-search",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && mv dist/index.html dist/motif-search.html",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "tomtom": "tsx scripts/run-tomtom.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "tsx": "^4.19.2",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0",
+    "vite-plugin-singlefile": "^2.3.0",
+    "vitest": "^3.2.4"
+  }
+}

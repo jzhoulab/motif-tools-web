@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Realtime Motif Search (FFT, log-odds NCC + logos)</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Realtime Motif Search (FFT, log-odds NCC)</h1>
+      <div class="row">
+        <input id="query" type="text" placeholder="Type a motif (IUPAC ok), e.g. ATGGCGGC" autocomplete="off"
+          spellcheck="false" />
+        <select id="dbSelect">
+          <option value="vierstra">Vierstra Clustered</option>
+          <option value="jaspar">JASPAR 2024</option>
+          <option value="h14">H14CORE MEME</option>
+          <option value="cisbprna">CIS-BP-RNA Human (RNA)</option>
+          <option value="custom">Custom Upload...</option>
+        </select>
+        <button class="btn" id="loadBtn" style="display:none">Load JSON…</button>
+        <input id="file" type="file" accept=".json,.txt,.meme" style="display:none" />
+        <label class="switch"><input id="rc" type="checkbox" checked /> check reverse-complement</label>
+        <label class="switch">Algorithm
+          <select id="modeSelect">
+            <option value="ncc">FFT NCC + LLR</option>
+            <option value="tomtom">TomTom (complete p-values)</option>
+          </select>
+        </label>
+        <label class="switch">Rank by
+          <select id="rankMode">
+            <option value="ncc">NCC (cosine)</option>
+            <option value="llr">LLR (sum bits)</option>
+          </select>
+        </label>
+        <span class="small" id="stats"></span>
+      </div>
+      <div id="error" class="error" style="margin-top:8px;display:none;"></div>
+      <div style="margin-top:14px" class="grid2">
+        <div class="small">
+          Scores are <b>normalized cross-correlation</b> (−1…+1) of 51-bp <b>log-odds</b> kernels. “LLR” is the
+          <b>sum</b> of PWM log-odds over the best overlap. Switch to <b>TomTom</b> mode to run the MEME-style complete
+          score p-value calculation.
+        </div>
+        <div class="small">DB: <span id="dbname" class="pill">sample</span> • motifs: <span id="motcount">—</span></div>
+      </div>
+      <table id="results">
+        <thead>
+          <tr>
+            <th data-sort="rank">#</th>
+            <th data-sort="id">Motif</th>
+            <th data-sort="len">Len</th>
+            <th data-sort="score">Score</th>
+            <th>Bar</th>
+            <th data-sort="llr">LLR (bits)</th>
+            <th>Logo</th>
+            <th data-sort="ori">Ori</th>
+            <th class="mono" data-sort="offset">Offset</th>
+            <th class="mono" data-sort="overlap">Overlap</th>
+            <th class="mono best-col">Best overlap (query vs motif consensus)</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  
+  <script type="module" src="/src/main.ts"></script>
+
+</body>
+
+</html>

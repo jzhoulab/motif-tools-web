@@ -1,0 +1,222 @@
+:root {
+      --bg: #0b0f14;
+      --panel: #121922;
+      --muted: #8aa0b5;
+      --text: #eaf0f6;
+      --accent: #5cc8ff;
+      --accent2: #7ee787;
+      --danger: #ff6b6b;
+    }
+
+    html,
+    body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+
+    .card {
+      background: var(--panel);
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .35);
+    }
+
+    h1 {
+      font-size: 20px;
+      margin: 0 0 10px;
+      letter-spacing: .3px;
+    }
+
+    .row {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      min-width: 260px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid #223040;
+      background: #0e1520;
+      color: var(--text);
+      outline: none;
+      font-size: 15px;
+    }
+
+    input[type="text"]::placeholder {
+      color: #6b7f94;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      background: #0e1520;
+      color: var(--text);
+      border: 1px solid #223040;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      border-color: #2b4056;
+    }
+
+    label.switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    select {
+      background: #0e1520;
+      color: var(--text);
+      border: 1px solid #223040;
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 14px;
+    }
+
+    .small {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th,
+    td {
+      padding: 10px 8px;
+      border-bottom: 1px solid #202b39;
+      font-size: 14px;
+      vertical-align: top;
+    }
+
+    th {
+      text-align: left;
+      color: var(--muted);
+      font-weight: 600;
+      user-select: none;
+    }
+
+    tr:hover td {
+      background: #0d141e;
+    }
+
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    .scorebar {
+      height: 8px;
+      background: #0e1520;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .scorebar>div {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+    }
+
+    .pill {
+      font-size: 11px;
+      border: 1px solid #2a394a;
+      border-radius: 999px;
+      padding: 2px 8px;
+      color: var(--muted);
+    }
+
+    .right {
+      text-align: right;
+    }
+
+    .error {
+      color: var(--danger);
+    }
+
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: center;
+    }
+
+    pre {
+      margin: 0;
+      white-space: pre;
+    }
+
+    th.best-col {
+      width: 100%;
+      white-space: normal;
+    }
+
+    td.best-overlap {
+      max-width: 520px;
+      white-space: normal;
+    }
+
+    td.best-overlap pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-size: 12px;
+      line-height: 1.2;
+    }
+
+    th[data-sort="score"],
+    td[data-col="pvalue"] {
+      min-width: 50px;
+      white-space: nowrap;
+    }
+
+    .logo {
+      min-width: 220px;
+      overflow: hidden;
+    }
+
+    /* Motif column: cap width + ellipsize, with tooltip */
+    td.motif {
+      width: 1%;
+    }
+
+    td.motif .truncate {
+      display: inline-block;
+      max-width: 340px;
+      /* tweak to preference */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: top;
+    }
+
+    @media (max-width: 1200px) {
+      td.motif .truncate {
+        max-width: 260px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      td.motif .truncate {
+        max-width: 200px;
+      }
+    }
