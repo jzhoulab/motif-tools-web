@@ -8,10 +8,11 @@ import { fileURLToPath } from 'node:url';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const dist = resolve(root, 'site/dist');
 
+// Motif Match is intentionally excluded from the public site (it targets model
+// developers with an ONNX file). It still lives in the repo under apps/motif-match.
 const TOOLS = [
   { file: 'apps/motif-scanner/dist/motif-scanner.html', route: 'scan', download: 'motif-scanner.html' },
   { file: 'apps/motif-search/dist/motif-search.html', route: 'search', download: 'motif-search.html' },
-  { file: 'apps/motif-match/dist/motif-match.html', route: 'match', download: 'motif-match.html' },
 ];
 
 for (const t of TOOLS) {
