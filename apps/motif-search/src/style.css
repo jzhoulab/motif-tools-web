@@ -1,10 +1,12 @@
 :root {
-      --bg: #0b0f14;
-      --panel: #121922;
-      --muted: #8aa0b5;
-      --text: #eaf0f6;
-      --accent: #5cc8ff;
-      --accent2: #7ee787;
+      /* shared "Motif Tools" brand palette (matches the landing page) */
+      --bg: #0B1220;
+      --panel: #121C2E;
+      --line: #23324A;
+      --muted: #8FA3BC;
+      --text: #E7EDF5;
+      --accent: #35C9D6;
+      --accent2: #22C08A;
       --danger: #ff6b6b;
     }
 
@@ -237,3 +239,25 @@
 .chip .dot.rna { background: #f7b32b; }
 .chip .dot.dna { background: #7ee787; }
 .chip .dot.custom { background: #5cc8ff; }
+
+/* shared Motif Tools top bar */
+.topbar {
+  position: sticky; top: 0; z-index: 40;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 56px; padding: 0 18px;
+  background: rgba(18, 28, 46, 0.55);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; }
+.topbar .brand .mark { display: inline-flex; gap: 3px; }
+.topbar .brand .mark i { width: 6px; height: 18px; border-radius: 2px; }
+.topbar .brand .mark i:nth-child(1) { background: #109648; }
+.topbar .brand .mark i:nth-child(2) { background: #255C99; }
+.topbar .brand .mark i:nth-child(3) { background: #F7B32B; }
+.topbar .brand .mark i:nth-child(4) { background: #D62828; }
+.topbar .brand .bname { font-weight: 600; letter-spacing: -0.01em; }
+.topbar .brand .sep { color: #4a5c76; }
+.topbar .brand .tname { color: var(--muted); }
+.topbar .back { color: var(--muted); text-decoration: none; font-size: 14px; }
+.topbar .back:hover { color: var(--text); }

@@ -321,7 +321,7 @@
   <div class="wrap">
     <div class="sec-head"><span class="bases"><i class="bG"></i><i class="bT"></i></span><span class="eyebrow">How it works</span></div>
     <h2 class="sec-title">Methodology</h2>
-    <p class="sec-lead">The tools reimplement standard, published motif methods in TypeScript so they run in the browser. Numerical output is validated against reference implementations.</p>
+    <p class="sec-lead">The tools implement well-established motif methods in TypeScript so they run in the browser, and validate their output against reference implementations where one exists.</p>
 
     <div class="methods">
       <div class="method">
@@ -343,9 +343,9 @@
       <div class="method">
         <div class="num">// similarity</div>
         <h3>Cross-correlation &amp; LLR search</h3>
-        <p>For search, the query and each database motif are compared as log-odds columns. Normalized cross-correlation (cosine similarity) is computed across every offset via FFT; the log-likelihood ratio sums log-odds over the best overlap. Both strands are considered.</p>
+        <p>The query and each database motif become columns of log-odds scores. Sliding the query across a motif, every offset is scored by normalized cross-correlation — the cosine similarity of the overlapping columns, from −1 to +1 — and the best offset is kept over both strands. A complementary log-likelihood ratio sums the query's log-odds over that overlap. It's a simple, sensible similarity measure; an FFT makes the all-offsets comparison fast.</p>
         <div class="formula">NCC(τ) = ⟨ <span class="var">q</span>, <span class="var">m</span><sub>τ</sub> ⟩ / (‖q‖ ‖m<sub>τ</sub>‖)</div>
-        <div class="ref">Fast O(n log n) offset search over the reference set.</div>
+        <div class="ref">O(n log n) per motif via FFT. In-house measure — no separate reference.</div>
       </div>
 
       <div class="method">
@@ -357,14 +357,6 @@
       </div>
     </div>
 
-    <div class="tool-secondary" style="margin-top:20px; border-style:solid;">
-      <div class="l">
-        <div class="kicker">RNA support</div>
-        <h3>DNA and RNA motifs</h3>
-        <p>MEME files with an <span style="font-family:var(--font-mono);color:var(--text)">ACGU</span> alphabet are parsed as RNA: logos and alignments render U instead of T, reverse-complement is disabled, and U/T in your input are treated interchangeably. Pick a database with one dropdown — one alphabet at a time.</p>
-      </div>
-      <a href="/scan/" style="color:var(--cyan)">Try CIS-BP-RNA →</a>
-    </div>
   </div>
 </section>
 

@@ -335,15 +335,30 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-primary-500/30 selection:text-white pb-20">
+      {/* Shared Motif Tools top bar */}
+      <div className="border-b border-slate-800 bg-slate-900/40 backdrop-blur sticky top-0 z-40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+          <a href="https://motif.zhoulab.io/" className="flex items-center gap-2.5">
+            <span className="flex gap-[3px]">
+              <span className="w-[6px] h-[18px] rounded-sm" style={{ background: '#109648' }}></span>
+              <span className="w-[6px] h-[18px] rounded-sm" style={{ background: '#255C99' }}></span>
+              <span className="w-[6px] h-[18px] rounded-sm" style={{ background: '#F7B32B' }}></span>
+              <span className="w-[6px] h-[18px] rounded-sm" style={{ background: '#D62828' }}></span>
+            </span>
+            <span className="font-semibold text-white tracking-tight">Motif Tools</span>
+            <span className="text-slate-600">/</span>
+            <span className="text-slate-300">Scanner</span>
+          </a>
+          <a href="https://motif.zhoulab.io/" className="text-sm text-slate-400 hover:text-white transition-colors">← All tools</a>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
 
         <div className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-end border-b border-slate-800 pb-6 gap-4">
           <div>
-            <h1 className="text-3xl font-bold text-white tracking-tight mb-2">
-              <span className="bg-gradient-to-r from-primary-400 to-emerald-400 bg-clip-text text-transparent">Realtime</span> Motif Scanner
-            </h1>
             <p className="text-slate-400 text-sm max-w-2xl">
-              FIMO-style Probabilistic Scanning. Visuals are trimmed to "Core" motif (high info content), but scores/p-values reflect the full PSSM.
+              FIMO-style probabilistic scanning. Logos are trimmed to the high-information "core" of each motif; scores and p-values use the full matrix.
             </p>
             <div className="mt-3 flex items-center gap-3 text-xs text-slate-500 font-mono">
               <span className="px-2 py-1 bg-slate-900 rounded border border-slate-800 text-emerald-400">DB: {dbName}</span>
