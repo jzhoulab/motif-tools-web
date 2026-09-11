@@ -1,0 +1,14 @@
+{
+  // Cloudflare Workers static-assets deployment for motif.zhoulab.io.
+  // Assets-only (no Worker script). Deploy with:  npm run build && npm run build:site && npx wrangler deploy
+  "name": "motif-tools-site",
+  "compatibility_date": "2026-01-01",
+  "assets": {
+    "directory": "./site/dist",
+    "not_found_handling": "404-page"
+  }
+  // After the first `wrangler deploy`, attach the custom domain in the Cloudflare
+  // dashboard (Workers & Pages -> this Worker -> Settings -> Domains & Routes ->
+  // Add custom domain -> motif.zhoulab.io). Cloudflare provisions the certificate
+  // and the DNS record automatically once zhoulab.io is on this account.
+}

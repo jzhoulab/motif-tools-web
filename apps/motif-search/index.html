@@ -14,14 +14,8 @@
       <div class="row">
         <input id="query" type="text" placeholder="Type a motif (IUPAC ok), e.g. ATGGCGGC" autocomplete="off"
           spellcheck="false" />
-        <select id="dbSelect">
-          <option value="vierstra">Vierstra Clustered</option>
-          <option value="jaspar">JASPAR 2024</option>
-          <option value="h14">H14CORE MEME</option>
-          <option value="cisbprna">CIS-BP-RNA Human (RNA)</option>
-          <option value="custom">Custom Upload...</option>
-        </select>
-        <button class="btn" id="loadBtn" style="display:none">Load JSON…</button>
+        <span id="dbChips" class="chips"></span>
+        <button class="btn" id="loadBtn">+ Upload</button>
         <input id="file" type="file" accept=".json,.txt,.meme" style="display:none" />
         <label class="switch"><input id="rc" type="checkbox" checked /> check reverse-complement</label>
         <label class="switch">Algorithm

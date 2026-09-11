@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Motif Tools — Zhou Lab</title>
+<meta name="description" content="Browser-based sequence motif scanning and search for DNA and RNA. FIMO-style scanning with exact p-values and FFT / Tomtom motif search — no install, nothing leaves your browser." />
+<meta property="og:title" content="Motif Tools — Zhou Lab" />
+<meta property="og:description" content="Scan and search DNA/RNA sequence motifs in your browser. Exact p-values, Tomtom search, JASPAR / HOCOMOCO / Vierstra / CIS-BP-RNA built in." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #0B1220;
+    --ink-2: #0e1626;
+    --panel: #121C2E;
+    --panel-2: #17233a;
+    --line: #23324A;
+    --line-soft: #1a2740;
+    --text: #E7EDF5;
+    --muted: #8FA3BC;
+    --muted-2: #64768f;
+    --A: #109648; --C: #255C99; --G: #F7B32B; --T: #D62828;
+    --cyan: #35c9d6;
+    --maxw: 1120px;
+    --radius: 14px;
+    --font-display: 'Space Grotesk', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.02em; line-height: 1.08; margin: 0; }
+  p { margin: 0; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* base-colored dots used as a recurring signature */
+  .bases { display: inline-flex; gap: 4px; vertical-align: middle; }
+  .bases i { width: 8px; height: 8px; border-radius: 2px; display: inline-block; }
+  .bA { background: var(--A); } .bC { background: var(--C); } .bG { background: var(--G); } .bT { background: var(--T); }
+
+  /* ---------- nav ---------- */
+  header.nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(11,18,32,0.72);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 600; font-size: 17px; letter-spacing: -0.01em; }
+  .brand .mark { display: inline-flex; gap: 3px; }
+  .brand .mark i { width: 7px; height: 22px; border-radius: 2px; }
+  .nav-links { display: flex; align-items: center; gap: 26px; font-size: 14px; }
+  .nav-links a { color: var(--muted); transition: color .15s; }
+  .nav-links a:hover { color: var(--text); }
+  .nav-links .lab { font-family: var(--font-mono); font-size: 12px; color: var(--muted-2); }
+  .nav-toggle { display: none; }
+
+  /* ---------- hero ---------- */
+  .hero { position: relative; padding: 84px 0 56px; }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center; }
+  .hero h1 { font-size: clamp(38px, 6vw, 66px); font-weight: 700; }
+  .hero h1 .hl { position: relative; white-space: nowrap; }
+  .hero h1 .hl::after {
+    content: ""; position: absolute; left: -2px; right: -2px; bottom: 4px; height: 30%;
+    background: linear-gradient(90deg, rgba(16,150,72,.30), rgba(37,92,153,.30), rgba(247,179,43,.30), rgba(214,40,40,.30));
+    z-index: -1; border-radius: 3px;
+  }
+  .hero .sub { margin-top: 24px; font-size: 19px; color: var(--muted); max-width: 34em; }
+  .hero .cta-row { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--font-display); font-weight: 600; font-size: 15px;
+    padding: 13px 22px; border-radius: 10px; border: 1px solid transparent; cursor: pointer;
+    transition: transform .12s ease, background .15s, border-color .15s;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--text); color: var(--ink); }
+  .btn-primary:hover { background: #fff; }
+  .btn-ghost { border-color: var(--line); color: var(--text); background: rgba(255,255,255,.02); }
+  .btn-ghost:hover { border-color: var(--muted-2); background: rgba(255,255,255,.05); }
+  .btn .k { font-family: var(--font-mono); font-size: 12px; opacity: .55; }
+  .hero .note { margin-top: 20px; font-family: var(--font-mono); font-size: 12.5px; color: var(--muted-2); display: flex; align-items: center; gap: 8px; }
+
+  /* hero logo panel */
+  .logo-card {
+    background: linear-gradient(180deg, var(--panel), var(--ink-2));
+    border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 22px 22px 18px; box-shadow: 0 24px 60px -30px rgba(0,0,0,.8);
+  }
+  .logo-card .cap { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
+  .logo-card .cap .name { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); }
+  .logo-card .cap .name b { color: var(--text); font-weight: 700; }
+  .logo-card .cap .p { font-family: var(--font-mono); font-size: 11.5px; color: var(--cyan); }
+  #heroLogo { width: 100%; height: 130px; display: block; }
+  .logo-axis { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 10px; color: var(--muted-2); margin-top: 6px; }
+  .scan-demo { margin-top: 16px; border-top: 1px solid var(--line-soft); padding-top: 14px; font-family: var(--font-mono); font-size: 13px; letter-spacing: .05em; word-break: break-all; color: var(--muted); line-height: 2; }
+  .scan-demo .hit { color: var(--ink); background: var(--cyan); border-radius: 3px; padding: 1px 1px; font-weight: 700; box-shadow: 0 0 0 1px rgba(53,201,214,.4); }
+  .legend { display: flex; gap: 16px; margin-top: 14px; font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend i { width: 10px; height: 10px; border-radius: 2px; }
+
+  /* ---------- section frame ---------- */
+  section { padding: 68px 0; border-top: 1px solid var(--line-soft); }
+  .sec-head { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+  .sec-head .bases i { width: 7px; height: 18px; }
+  .sec-title { font-size: clamp(26px, 3.4vw, 36px); }
+  .sec-lead { color: var(--muted); font-size: 17px; max-width: 46em; margin-top: 14px; }
+
+  /* ---------- tools ---------- */
+  .tools { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+  .tool {
+    position: relative; display: flex; flex-direction: column;
+    background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 28px; overflow: hidden; transition: border-color .15s, transform .15s;
+  }
+  .tool:hover { border-color: var(--muted-2); transform: translateY(-2px); }
+  .tool::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; }
+  .tool.scan::before { background: var(--A); }
+  .tool.search::before { background: var(--C); }
+  .tool .kicker { font-family: var(--font-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted-2); }
+  .tool h3 { font-size: 24px; margin-top: 8px; }
+  .tool p { color: var(--muted); margin-top: 12px; font-size: 15.5px; }
+  .tool ul { margin: 18px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .tool ul li { font-size: 14px; color: var(--muted); padding-left: 20px; position: relative; }
+  .tool ul li::before { content: ""; position: absolute; left: 0; top: 8px; width: 8px; height: 8px; border-radius: 2px; }
+  .tool.scan ul li::before { background: var(--A); }
+  .tool.search ul li::before { background: var(--C); }
+  .tool .open { margin-top: 24px; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 600; font-size: 15px; color: var(--text); }
+  .tool .open .arr { transition: transform .15s; }
+  .tool:hover .open .arr { transform: translateX(4px); }
+
+  .tool-secondary {
+    margin-top: 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    background: var(--ink-2); border: 1px dashed var(--line); border-radius: var(--radius); padding: 20px 24px;
+  }
+  .tool-secondary .l { display: flex; flex-direction: column; gap: 4px; }
+  .tool-secondary .kicker { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted-2); }
+  .tool-secondary h3 { font-size: 18px; }
+  .tool-secondary p { color: var(--muted); font-size: 14px; max-width: 52ch; }
+  .tool-secondary a { white-space: nowrap; font-family: var(--font-display); font-weight: 600; font-size: 14px; color: var(--G); }
+
+  /* ---------- methods ---------- */
+  .methods { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+  .method { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+  .method .num { font-family: var(--font-mono); font-size: 12px; color: var(--muted-2); }
+  .method h3 { font-size: 19px; margin-top: 6px; }
+  .method p { color: var(--muted); font-size: 14.5px; margin-top: 12px; }
+  .method .formula {
+    margin-top: 16px; font-family: var(--font-mono); font-size: 13px; color: var(--text);
+    background: var(--ink); border: 1px solid var(--line-soft); border-radius: 8px; padding: 12px 14px; overflow-x: auto;
+  }
+  .method .formula .var { color: var(--cyan); }
+  .method .ref { margin-top: 14px; font-family: var(--font-mono); font-size: 11.5px; color: var(--muted-2); }
+  .method .ref a { color: var(--muted); border-bottom: 1px solid var(--line); }
+  .method .ref a:hover { color: var(--text); }
+
+  /* ---------- databases ---------- */
+  .db-table { margin-top: 36px; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .db-row { display: grid; grid-template-columns: 1.4fr 0.7fr 0.6fr 2fr; gap: 16px; padding: 16px 22px; align-items: center; border-top: 1px solid var(--line-soft); font-size: 14px; }
+  .db-row:first-child { border-top: none; background: var(--ink-2); font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted-2); }
+  .db-row .dbname { font-weight: 600; color: var(--text); display: flex; align-items: center; gap: 10px; }
+  .db-row .tag { font-family: var(--font-mono); font-size: 11px; padding: 2px 8px; border-radius: 20px; border: 1px solid var(--line); color: var(--muted); }
+  .db-row .tag.rna { color: var(--G); border-color: rgba(247,179,43,.4); }
+  .db-row .tag.dna { color: var(--A); border-color: rgba(16,150,72,.4); }
+  .db-row .count { font-family: var(--font-mono); color: var(--text); }
+  .db-row .cite { color: var(--muted); font-size: 13px; }
+  .db-row .cite a { color: var(--muted); border-bottom: 1px solid var(--line); }
+  .db-note { margin-top: 16px; font-size: 13.5px; color: var(--muted-2); }
+
+  /* ---------- downloads / privacy ---------- */
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+  .card h3 { font-size: 20px; }
+  .card p { color: var(--muted); font-size: 15px; margin-top: 12px; }
+  .dl-links { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+  .dl-links a { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border: 1px solid var(--line); border-radius: 9px; font-family: var(--font-mono); font-size: 13.5px; color: var(--text); transition: border-color .15s, background .15s; }
+  .dl-links a:hover { border-color: var(--muted-2); background: var(--ink-2); }
+  .dl-links a .sz { color: var(--muted-2); font-size: 12px; }
+  .privacy .lock { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 12px; color: var(--A); margin-top: 4px; }
+
+  /* ---------- footer ---------- */
+  footer { border-top: 1px solid var(--line-soft); padding: 48px 0 60px; }
+  .foot-grid { display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+  .foot-brand { max-width: 30ch; }
+  .foot-brand p { color: var(--muted); font-size: 14px; margin-top: 12px; }
+  .foot-col h4 { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted-2); margin: 0 0 14px; font-weight: 500; }
+  .foot-col a { display: block; color: var(--muted); font-size: 14px; margin-bottom: 10px; transition: color .15s; }
+  .foot-col a:hover { color: var(--text); }
+  .foot-bottom { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--line-soft); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-family: var(--font-mono); font-size: 12px; color: var(--muted-2); }
+  .cite-box { margin-top: 22px; font-family: var(--font-mono); font-size: 12px; color: var(--muted); background: var(--ink-2); border: 1px solid var(--line-soft); border-radius: 8px; padding: 12px 14px; line-height: 1.7; }
+
+  @media (max-width: 900px) {
+    .hero-grid, .tools, .methods, .split { grid-template-columns: 1fr; }
+    .hero { padding: 56px 0 40px; }
+    .hero-grid { gap: 40px; }
+    .nav-links a:not(.lab-link) { display: none; }
+    .db-row { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .db-row .cite, .db-row:first-child span:nth-child(4) { display: none; }
+    .db-row:first-child { grid-template-columns: 1fr 1fr; }
+    .tool-secondary { flex-direction: column; align-items: flex-start; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <span class="mark"><i class="bA"></i><i class="bC"></i><i class="bG"></i><i class="bT"></i></span>
+      Motif&nbsp;Tools
+    </a>
+    <nav class="nav-links">
+      <a href="#tools">Tools</a>
+      <a href="#methods">Methods</a>
+      <a href="#databases">Databases</a>
+      <a href="#downloads">Downloads</a>
+      <a href="https://github.com/jzhoulab/motif-tools" class="lab-link">GitHub</a>
+      <a href="https://zhoulab.io" class="lab lab-link">Zhou&nbsp;Lab ↗</a>
+    </nav>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero" style="border-top:none;">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Zhou Lab · The University of Chicago</div>
+      <h1>Read the <span class="hl">regulatory grammar</span> of DNA and RNA, in your browser.</h1>
+      <p class="sub">Scan a sequence for transcription-factor and RNA-binding motifs, or search a motif against reference databases — with FIMO-style exact p-values and Tomtom comparison. No install, no upload: every base you type stays on your machine.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/scan/">Open Scanner <span class="k">/scan</span></a>
+        <a class="btn btn-ghost" href="/search/">Open Search <span class="k">/search</span></a>
+      </div>
+      <div class="note"><span class="bases"><i class="bA"></i><i class="bC"></i><i class="bG"></i><i class="bT"></i></span> Runs entirely client-side · DNA &amp; RNA · free &amp; open source</div>
+    </div>
+
+    <div class="logo-card">
+      <div class="cap">
+        <div class="name">motif <b>CTCF</b> · JASPAR</div>
+        <div class="p">information content (bits)</div>
+      </div>
+      <svg id="heroLogo" viewBox="0 0 620 130" preserveAspectRatio="none" aria-label="Sequence logo"></svg>
+      <div class="logo-axis"><span>1</span><span>position →</span><span id="axisEnd">19</span></div>
+      <div class="scan-demo" id="scanDemo">…GCCTGAGCA<span class="hit">CCAGGTGGCAGC</span>AGGGATGT…</div>
+      <div class="legend">
+        <span><i style="background:var(--A)"></i>A</span>
+        <span><i style="background:var(--C)"></i>C</span>
+        <span><i style="background:var(--G)"></i>G</span>
+        <span><i style="background:var(--T)"></i>T / U</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tools">
+  <div class="wrap">
+    <div class="sec-head"><span class="bases"><i class="bA"></i><i class="bC"></i></span><span class="eyebrow">The tools</span></div>
+    <h2 class="sec-title">Two ways to work with motifs</h2>
+    <p class="sec-lead">Both tools bundle JASPAR, HOCOMOCO, CIS-BP, and Vierstra for DNA plus CIS-BP-RNA — combine several at once, add your own MEME or JSON file, and build to a single HTML file you can keep.</p>
+
+    <div class="tools">
+      <a class="tool scan" href="/scan/">
+        <div class="kicker">Sequence in → motifs out</div>
+        <h3>Motif Scanner</h3>
+        <p>Paste a DNA or RNA sequence and see every motif occurrence highlighted in place, scored the way FIMO scores them.</p>
+        <ul>
+          <li>Exact p-values, bit scores, and relative scores per hit</li>
+          <li>Forward and reverse-complement scanning</li>
+          <li>Combine several databases in one scan</li>
+          <li>Genomic intervals via Seqstr (fetched from UCSC)</li>
+          <li>Adjustable score and p-value thresholds, live</li>
+        </ul>
+        <span class="open">Open Scanner <span class="arr">→</span></span>
+      </a>
+
+      <a class="tool search" href="/search/">
+        <div class="kicker">Motif in → ranked matches out</div>
+        <h3>Motif Search</h3>
+        <p>Type a consensus (IUPAC codes welcome) or upload a matrix, and rank the closest database motifs by three complementary measures.</p>
+        <ul>
+          <li>FFT normalized cross-correlation over all offsets</li>
+          <li>Log-likelihood ratio over the best overlap</li>
+          <li>Tomtom column comparison with complete p-values</li>
+          <li>Aligned sequence logos for every match</li>
+        </ul>
+        <span class="open">Open Search <span class="arr">→</span></span>
+      </a>
+    </div>
+
+    <div class="tool-secondary">
+      <div class="l">
+        <div class="kicker">For model developers</div>
+        <h3>Motif Match</h3>
+        <p>Drop an ONNX model to cluster its first-layer convolutional filters against known motifs. Specialized — most users won't need it.</p>
+      </div>
+      <a href="/match/">Open Motif Match →</a>
+    </div>
+  </div>
+</section>
+
+<section id="methods">
+  <div class="wrap">
+    <div class="sec-head"><span class="bases"><i class="bG"></i><i class="bT"></i></span><span class="eyebrow">How it works</span></div>
+    <h2 class="sec-title">Methodology</h2>
+    <p class="sec-lead">The tools reimplement standard, published motif methods in TypeScript so they run in the browser. Numerical output is validated against reference implementations.</p>
+
+    <div class="methods">
+      <div class="method">
+        <div class="num">// scoring</div>
+        <h3>Log-odds position weight matrix</h3>
+        <p>A probability matrix is converted to a log-odds PWM against a background distribution (default A/C/G/T = 0.295 / 0.205 / 0.205 / 0.295) with a small pseudocount. A window's score is the sum of per-position log-odds.</p>
+        <div class="formula">score = Σ<sub>i</sub> log<sub>2</sub>( <span class="var">p</span>(b<sub>i</sub>, i) + ε ) − log<sub>2</sub>( <span class="var">bg</span>(b<sub>i</sub>) + ε )</div>
+        <div class="ref">Reported as bit score, relative score (0–1), and p-value.</div>
+      </div>
+
+      <div class="method">
+        <div class="num">// significance</div>
+        <h3>Exact p-values</h3>
+        <p>The full score distribution under the background is built by dynamic-programming convolution over motif positions, quantized to a fixed bin size. Each hit's p-value is the exact tail probability of its score — no sampling, no normal approximation.</p>
+        <div class="formula">P(S ≥ s) = Σ<sub>x ≥ s</sub> <span class="var">Pr</span><sub>bg</sub>(x)</div>
+        <div class="ref">Method: Grant, Bailey &amp; Noble, <a href="https://doi.org/10.1093/bioinformatics/btr064">FIMO (Bioinformatics 2011)</a>.</div>
+      </div>
+
+      <div class="method">
+        <div class="num">// similarity</div>
+        <h3>Cross-correlation &amp; LLR search</h3>
+        <p>For search, the query and each database motif are compared as log-odds columns. Normalized cross-correlation (cosine similarity) is computed across every offset via FFT; the log-likelihood ratio sums log-odds over the best overlap. Both strands are considered.</p>
+        <div class="formula">NCC(τ) = ⟨ <span class="var">q</span>, <span class="var">m</span><sub>τ</sub> ⟩ / (‖q‖ ‖m<sub>τ</sub>‖)</div>
+        <div class="ref">Fast O(n log n) offset search over the reference set.</div>
+      </div>
+
+      <div class="method">
+        <div class="num">// comparison</div>
+        <h3>Tomtom p-values</h3>
+        <p>Tomtom mode runs the MEME-style column-comparison statistic with complete (exact) p-values, giving calibrated significance for motif-vs-motif matches. Ported from memesuite-lite and checked for parity against its test vectors.</p>
+        <div class="formula">column scores → offset alignment → complete p-value</div>
+        <div class="ref">Method: Gupta, Stamatoyannopoulos, Bailey &amp; Noble, <a href="https://doi.org/10.1186/gb-2007-8-2-r24">Tomtom (Genome Biology 2007)</a>.</div>
+      </div>
+    </div>
+
+    <div class="tool-secondary" style="margin-top:20px; border-style:solid;">
+      <div class="l">
+        <div class="kicker">RNA support</div>
+        <h3>DNA and RNA motifs</h3>
+        <p>MEME files with an <span style="font-family:var(--font-mono);color:var(--text)">ACGU</span> alphabet are parsed as RNA: logos and alignments render U instead of T, reverse-complement is disabled, and U/T in your input are treated interchangeably. Pick a database with one dropdown — one alphabet at a time.</p>
+      </div>
+      <a href="/scan/" style="color:var(--cyan)">Try CIS-BP-RNA →</a>
+    </div>
+  </div>
+</section>
+
+<section id="databases">
+  <div class="wrap">
+    <div class="sec-head"><span class="bases"><i class="bC"></i><i class="bG"></i></span><span class="eyebrow">Reference data</span></div>
+    <h2 class="sec-title">Databases built in</h2>
+    <p class="sec-lead">Bundled and selectable in both tools. Please cite the original source for any database you use.</p>
+
+    <div class="db-table">
+      <div class="db-row">
+        <span>Database</span><span>Type</span><span>Motifs</span><span>Source &amp; citation</span>
+      </div>
+      <div class="db-row">
+        <span class="dbname"><span class="tag dna">DNA</span> JASPAR 2024 CORE</span>
+        <span class="tag dna">vertebrates</span>
+        <span class="count">879</span>
+        <span class="cite">Rauluseviciute et al., NAR 2024 · <a href="https://jaspar.elixir.no">jaspar.elixir.no</a></span>
+      </div>
+      <div class="db-row">
+        <span class="dbname"><span class="tag dna">DNA</span> HOCOMOCO H14 CORE</span>
+        <span class="tag dna">human</span>
+        <span class="count">1595</span>
+        <span class="cite">Vorontsov et al. · <a href="https://hocomoco14.autosome.org">hocomoco14.autosome.org</a></span>
+      </div>
+      <div class="db-row">
+        <span class="dbname"><span class="tag dna">DNA</span> CIS-BP 2.0</span>
+        <span class="tag dna">human TFs</span>
+        <span class="count">1065</span>
+        <span class="cite">Weirauch et al., Cell 2014 · <a href="http://cisbp.ccbr.utoronto.ca">cisbp.ccbr.utoronto.ca</a></span>
+      </div>
+      <div class="db-row">
+        <span class="dbname"><span class="tag dna">DNA</span> Vierstra clustered v2</span>
+        <span class="tag dna">TF footprints</span>
+        <span class="count">693</span>
+        <span class="cite">Vierstra et al., Nature 2020 · <a href="https://www.vierstra.org/resources/motif_clustering">vierstra.org</a></span>
+      </div>
+      <div class="db-row">
+        <span class="dbname"><span class="tag rna">RNA</span> CIS-BP-RNA</span>
+        <span class="tag rna">human RBPs</span>
+        <span class="count">98</span>
+        <span class="cite">Ray et al., Nature 2013 · <a href="http://cisbp-rna.ccbr.utoronto.ca">cisbp-rna.ccbr.utoronto.ca</a></span>
+      </div>
+    </div>
+    <p class="db-note">Select any combination of DNA databases to search them together; RNA is scanned on its own. Bring your own too — upload any MEME-format file (ACGT or ACGU) or a JSON matrix, parsed in your browser and never uploaded.</p>
+  </div>
+</section>
+
+<section id="downloads">
+  <div class="wrap">
+    <div class="sec-head"><span class="bases"><i class="bT"></i><i class="bA"></i></span><span class="eyebrow">Take it offline</span></div>
+    <h2 class="sec-title">Download &amp; privacy</h2>
+
+    <div class="split">
+      <div class="card">
+        <h3>Standalone HTML</h3>
+        <p>Each tool builds to one self-contained file — databases embedded, no CDN, no server. Save it and open it from disk; it works fully offline.</p>
+        <div class="dl-links">
+          <a href="/downloads/motif-scanner.html" download>motif-scanner.html <span class="sz">DNA + RNA scanning</span></a>
+          <a href="/downloads/motif-search.html" download>motif-search.html <span class="sz">NCC · LLR · Tomtom</span></a>
+          <a href="/downloads/motif-match.html" download>motif-match.html <span class="sz">ONNX filter clustering</span></a>
+        </div>
+      </div>
+
+      <div class="card privacy">
+        <h3>Your sequences stay yours</h3>
+        <div class="lock"><span class="bases"><i class="bA"></i><i class="bC"></i><i class="bG"></i><i class="bT"></i></span> nothing is uploaded</div>
+        <p>All scanning, searching, and matching runs in your browser. Sequences you paste are never sent anywhere.</p>
+        <p>The one exception: if you enter genomic <em>coordinates</em> in the scanner (Seqstr format), those coordinates — not sequences you typed — are sent to the UCSC Genome Browser API to fetch the reference sequence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top">
+          <span class="mark"><i class="bA"></i><i class="bC"></i><i class="bG"></i><i class="bT"></i></span>
+          Motif&nbsp;Tools
+        </a>
+        <p>Open-source motif analysis from the Zhou Lab at the University of Chicago. Built for the community — use it, fork it, cite it.</p>
+        <div class="cite-box" id="citeBox">Zhou Lab. Motif Tools: browser-based motif scanning and search.<br />https://motif.zhoulab.io · <span id="citeYear">2026</span>.</div>
+      </div>
+      <div class="foot-col">
+        <h4>Tools</h4>
+        <a href="/scan/">Scanner</a>
+        <a href="/search/">Search</a>
+        <a href="/match/">Match</a>
+        <a href="#downloads">Downloads</a>
+      </div>
+      <div class="foot-col">
+        <h4>About</h4>
+        <a href="#methods">Methods</a>
+        <a href="#databases">Databases</a>
+        <a href="https://github.com/jzhoulab/motif-tools">Source (GitHub)</a>
+        <a href="https://zhoulab.io">Zhou Lab ↗</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>MIT licensed · © <span id="year">2026</span> Zhou Lab, University of Chicago</span>
+      <span>Tomtom port © Jacob Schreiber (MIT)</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    // Nucleotide colors + glyph paths (100×100), shared with the tools.
+    var COLOR = { A: '#109648', C: '#255C99', G: '#F7B32B', T: '#D62828' };
+    var GLYPH = {
+      A: 'M 0 100 L 33 0 L 66 0 L 100 100 L 75 100 L 66 75 L 33 75 L 25 100 Z M 41 55 L 50 25 L 58 55 Z',
+      C: 'M 100 28 C 100 -13 0 -13 0 50 C 0 113 100 113 100 72 L 75 72 C 75 90 30 90 30 50 C 30 10 75 10 75 28 L 100 28',
+      G: 'M 100 28 C 100 -13 0 -13 0 50 C 0 113 100 113 100 72 L 100 48 L 55 48 L 55 72 L 75 72 C 75 90 30 90 30 50 C 30 10 75 5 75 28 L 100 28',
+      T: 'M 0 0 L 0 20 L 35 20 L 35 100 L 65 100 L 65 20 L 100 20 L 100 0 L 0 0'
+    };
+    var ORDER = ['A', 'C', 'G', 'T'];
+
+    // A CTCF-like PWM (columns of A,C,G,T probabilities), for illustration.
+    var PWM = [
+      [0.10,0.10,0.05,0.75],[0.05,0.05,0.85,0.05],[0.05,0.80,0.10,0.05],[0.75,0.05,0.10,0.10],
+      [0.05,0.05,0.85,0.05],[0.10,0.10,0.70,0.10],[0.10,0.75,0.10,0.05],[0.85,0.05,0.05,0.05],
+      [0.05,0.05,0.80,0.10],[0.05,0.05,0.85,0.05],[0.20,0.10,0.60,0.10],[0.10,0.60,0.20,0.10],
+      [0.75,0.10,0.10,0.05],[0.10,0.10,0.70,0.10],[0.05,0.05,0.85,0.05],[0.15,0.55,0.20,0.10],
+      [0.30,0.25,0.25,0.20],[0.20,0.30,0.30,0.20],[0.25,0.25,0.25,0.25]
+    ];
+
+    var svg = document.getElementById('heroLogo');
+    if (!svg) return;
+    var NS = 'http://www.w3.org/2000/svg';
+    var n = PWM.length, colW = 620 / n, H = 130, GW = colW * 0.86;
+    document.getElementById('axisEnd').textContent = n;
+
+    PWM.forEach(function (col, i) {
+      // information content: 2 - entropy; letter height ∝ p * IC
+      var ent = 0;
+      col.forEach(function (p) { if (p > 0) ent -= p * Math.log2(p); });
+      var ic = Math.max(0, 2 - ent); // bits, 0..2
+      var idx = [0, 1, 2, 3].sort(function (a, b) { return col[a] - col[b]; }); // ascending
+      var y = H;
+      idx.forEach(function (b) {
+        var h = (col[b] * ic / 2) * H;
+        if (h < 0.4) return;
+        var g = document.createElementNS(NS, 'g');
+        g.setAttribute('transform', 'translate(' + (i * colW + (colW - GW) / 2) + ',' + (y - h) + ') scale(' + (GW / 100) + ',' + (h / 100) + ')');
+        var path = document.createElementNS(NS, 'path');
+        path.setAttribute('d', GLYPH[ORDER[b]]);
+        path.setAttribute('fill', COLOR[ORDER[b]]);
+        g.appendChild(path);
+        svg.appendChild(g);
+        y -= h;
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    var cy = document.getElementById('citeYear'); if (cy) cy.textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>

@@ -59,6 +59,10 @@ based on them, and consult each source for its terms of use.
   <https://www.vierstra.org/resources/motif_clustering>.
   Vierstra et al., *Global reference mapping of human transcription factor
   footprints*, Nature (2020).
+- **CIS-BP 2.0 (Homo sapiens)** — <http://cisbp.ccbr.utoronto.ca>.
+  Weirauch et al., *Determination and inference of eukaryotic transcription
+  factor sequence specificity*, Cell (2014). MEME-format file taken from the
+  MEME Suite motif database bundle (v12.25).
 - **CIS-BP-RNA (Homo sapiens, build 0.6)** —
   <http://cisbp-rna.ccbr.utoronto.ca>.
   Ray et al., *A compendium of RNA-binding motifs for decoding gene

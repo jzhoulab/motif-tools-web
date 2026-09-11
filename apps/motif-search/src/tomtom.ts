@@ -367,7 +367,7 @@ function buildTomTomPreview(qSeq, mSeq, shift) {
         if (qc === " " || mc === " ") mid += " ";
         else mid += (qc === mc ? "|" : ".");
     }
-    return top + "\\n" + mid + "\\n" + bot;
+    return top + "\n" + mid + "\n" + bot;
 }
 
 export function runTomTomSearch(query, rcEnabled, DB) {

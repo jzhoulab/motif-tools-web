@@ -19,15 +19,37 @@ import jasparJson from '../../resources/JASPAR2024_CORE_vertebrates.json';
 // However, for this environment, I will use a direct import and assume Vite handles it or I'll use a fetch if it fails.
 // Let's try standard import first, but since it's a .meme file, it might need ?raw.
 import h14Meme from '../../resources/H14CORE_meme_format.meme?raw';
+import cisbpMeme from '../../resources/CISBP_Homo_sapiens.meme?raw';
 import cisbpRnaMeme from '../../resources/CISBP-RNA_Homo_sapiens.meme?raw';
 
-const DATABASES = {
-  'vierstra': { name: 'Vierstra Clustered Motifs', data: vierstraJson, type: 'json', alphabet: 'dna' },
-  'jaspar': { name: 'JASPAR 2024 CORE Vertebrates', data: jasparJson, type: 'json', alphabet: 'dna' },
-  'h14': { name: 'H14CORE MEME Format', data: h14Meme, type: 'meme', alphabet: 'dna' },
-  'cisbp-rna': { name: 'CIS-BP-RNA Human RBPs (RNA)', data: cisbpRnaMeme, type: 'meme', alphabet: 'rna' },
-  'custom': { name: 'Custom Upload', data: null, type: 'custom', alphabet: 'dna' }
+interface DbEntry { name: string; short: string; data: any; type: 'json' | 'meme'; alphabet: 'dna' | 'rna'; }
+
+const DATABASES: Record<string, DbEntry> = {
+  'jaspar': { name: 'JASPAR 2024 CORE Vertebrates', short: 'JASPAR 2024', data: jasparJson, type: 'json', alphabet: 'dna' },
+  'h14': { name: 'HOCOMOCO H14 CORE', short: 'HOCOMOCO', data: h14Meme, type: 'meme', alphabet: 'dna' },
+  'cisbp': { name: 'CIS-BP 2.0 Human', short: 'CIS-BP', data: cisbpMeme, type: 'meme', alphabet: 'dna' },
+  'vierstra': { name: 'Vierstra Clustered Motifs', short: 'Vierstra', data: vierstraJson, type: 'json', alphabet: 'dna' },
+  'cisbp-rna': { name: 'CIS-BP-RNA Human RBPs', short: 'CIS-BP-RNA', data: cisbpRnaMeme, type: 'meme', alphabet: 'rna' },
 };
+const DB_ORDER = ['jaspar', 'h14', 'cisbp', 'vierstra', 'cisbp-rna'];
+
+// Merge one or more selected databases into a single payload. DNA databases can be
+// combined; RNA is its own alphabet and never mixed with DNA (enforced by the UI).
+function combineDbs(entries: DbEntry[]): MotifInputData & { alphabet: 'dna' | 'rna' } {
+  let alphabet: 'dna' | 'rna' = 'dna';
+  const motifs: any[] = [];
+  const names: string[] = [];
+  for (const db of entries) {
+    let d: any = db.data;
+    if (db.type === 'meme') d = parseMeme(db.data as string);
+    const a = d.alphabet || db.alphabet || 'dna';
+    if (a === 'rna') alphabet = 'rna';
+    for (const m of d.motifs) motifs.push(m);
+    names.push(db.name);
+  }
+  const name = entries.length === 1 ? names[0] : `${entries.length} databases`;
+  return { name, motifs, alphabet };
+}
 
 function App() {
   // query is now the UI input state
@@ -43,8 +65,10 @@ function App() {
   const [isComputing, setIsComputing] = useState(false);
   const [isFetchingSeq, setIsFetchingSeq] = useState(false);
 
-  // Database Selection
-  const [selectedDbKey, setSelectedDbKey] = useState<string>('vierstra');
+  // Database Selection (multi-select; DNA sets combine, RNA is exclusive)
+  const [selectedDbKeys, setSelectedDbKeys] = useState<string[]>(['jaspar']);
+  const customDbRef = useRef<DbEntry | null>(null);
+  const [hasCustom, setHasCustom] = useState(false);
 
   // Controls
   const [rc, setRc] = useState(true);
@@ -86,37 +110,51 @@ function App() {
     });
   }, []);
 
-  // Load Database Effect
-  useEffect(() => {
-    if (!workerRef.current) return;
-    if (selectedDbKey === 'custom') return; // Handled by file upload
+  const entriesFor = useCallback((keys: string[]): DbEntry[] => {
+    return keys.map(k => k === 'custom' ? customDbRef.current : DATABASES[k]).filter(Boolean) as DbEntry[];
+  }, []);
 
-    const db = DATABASES[selectedDbKey as keyof typeof DATABASES];
-    if (!db) return;
+  const loadDbs = useCallback((keys: string[], w?: Worker | null) => {
+    const worker = w || workerRef.current;
+    if (!worker) return;
+    const entries = entriesFor(keys);
+    if (!entries.length) return;
 
     setIsComputing(true);
-    setDbName(`Loading ${db.name}...`);
-
+    setDbName('Loading...');
     try {
-      let payload: any = db.data;
-      if (db.type === 'meme') {
-        payload = parseMeme(db.data as string);
-      }
-
-      // Ensure name is passed if not in data
-      if (!payload.name) payload.name = db.name;
-
-      const isRna = payload.alphabet === 'rna' || (db as any).alphabet === 'rna';
-      setAlphabet(isRna ? 'rna' : 'dna');
-      setRc(!isRna);
-
-      workerRef.current.postMessage({ type: "load-db", payload });
+      const payload = combineDbs(entries);
+      setAlphabet(payload.alphabet);
+      setRc(payload.alphabet !== 'rna');
+      worker.postMessage({ type: "load-db", payload });
     } catch (err: any) {
       setError(`Failed to load database: ${err.message}`);
       setIsComputing(false);
     }
+  }, [entriesFor]);
 
-  }, [selectedDbKey]);
+  // Toggle a built-in database. DNA sets accumulate; RNA is exclusive; never empty.
+  const toggleDb = useCallback((key: string) => {
+    setSelectedDbKeys(prev => {
+      const db = DATABASES[key];
+      const base = prev.filter(k => k !== 'custom');
+      if (db.alphabet === 'rna') return [key];               // RNA replaces everything
+      const baseAlpha = base.length ? DATABASES[base[0]]?.alphabet : 'dna';
+      if (baseAlpha === 'rna') return [key];                 // switching DNA<-RNA
+      if (base.includes(key)) {
+        const next = base.filter(k => k !== key);
+        return next.length ? next : base;                    // keep at least one
+      }
+      return [...base, key];
+    });
+  }, []);
+
+  // Load Database Effect (re-runs whenever the selection changes)
+  useEffect(() => {
+    if (!workerRef.current) return;
+    loadDbs(selectedDbKeys);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedDbKeys.join('|'), loadDbs]);
 
   useEffect(() => {
     // Try real Worker; if blocked (file://), fallback to inline shim on main thread.
@@ -195,8 +233,7 @@ function App() {
       }
     };
 
-    const initialDb = DATABASES['vierstra'];
-    worker.postMessage({ type: "load-db", payload: initialDb.data });
+    loadDbs(selectedDbKeys, worker as Worker);
 
     return () => {
       if (worker && 'terminate' in worker) worker.terminate();
@@ -214,11 +251,10 @@ function App() {
     const file = e.target.files?.[0];
     if (!file || !workerRef.current) return;
 
-    setSelectedDbKey('custom'); // Switch dropdown to custom
     setIsComputing(true);
     try {
       const text = await file.text();
-      let data: MotifInputData | null = null;
+      let data: any = null;
       try {
         data = JSON.parse(text);
       } catch (jsonErr) {
@@ -229,10 +265,10 @@ function App() {
         }
       }
       if (data) {
-        const isRna = (data as any).alphabet === 'rna';
-        setAlphabet(isRna ? 'rna' : 'dna');
-        setRc(!isRna);
-        workerRef.current.postMessage({ type: "load-db", payload: data });
+        const alpha: 'dna' | 'rna' = (data.alphabet === 'rna') ? 'rna' : 'dna';
+        customDbRef.current = { name: file.name, short: file.name, data, type: 'json', alphabet: alpha };
+        setHasCustom(true);
+        setSelectedDbKeys(['custom']); // upload becomes its own single selection
         e.target.value = '';
       }
     } catch (err: any) {
@@ -315,27 +351,40 @@ function App() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
-            {/* Database Selector */}
-            <div className="relative">
-              <select
-                value={selectedDbKey}
-                onChange={(e) => setSelectedDbKey(e.target.value)}
-                className="appearance-none bg-slate-900 border border-slate-700 text-slate-300 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 pr-8"
-              >
-                {Object.entries(DATABASES).map(([key, db]) => (
-                  <option key={key} value={key}>{db.name}</option>
-                ))}
-              </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-400">
-                <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
-              </div>
+          <div className="flex flex-col items-start md:items-end gap-2">
+            <span className="text-[10px] font-mono uppercase tracking-wider text-slate-500">Databases (select one or more)</span>
+            <div className="flex flex-wrap gap-2 md:justify-end">
+              {DB_ORDER.map((key) => {
+                const db = DATABASES[key];
+                const active = selectedDbKeys.includes(key);
+                const isRna = db.alphabet === 'rna';
+                return (
+                  <button
+                    key={key}
+                    onClick={() => toggleDb(key)}
+                    title={db.name}
+                    className={`flex items-center gap-2 text-sm rounded-lg border px-3 py-2 transition-colors ${active ? 'bg-primary-500/15 border-primary-500 text-primary-200' : 'bg-slate-900 border-slate-700 text-slate-400 hover:border-slate-600'}`}
+                  >
+                    <span className={`w-2 h-2 rounded-sm ${isRna ? 'bg-amber-400' : 'bg-emerald-400'}`}></span>
+                    {db.short}
+                  </button>
+                );
+              })}
+              {hasCustom && (
+                <button
+                  onClick={() => setSelectedDbKeys(['custom'])}
+                  className={`flex items-center gap-2 text-sm rounded-lg border px-3 py-2 transition-colors ${selectedDbKeys.includes('custom') ? 'bg-primary-500/15 border-primary-500 text-primary-200' : 'bg-slate-900 border-slate-700 text-slate-400 hover:border-slate-600'}`}
+                  title={customDbRef.current?.name}
+                >
+                  <span className="w-2 h-2 rounded-sm bg-sky-400"></span>
+                  Custom
+                </button>
+              )}
+              <label className="cursor-pointer flex items-center gap-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 px-3 py-2 rounded-lg transition-colors text-sm">
+                <span>+ Upload</span>
+                <input type="file" accept=".json,.txt,.meme" className="hidden" onChange={handleFileUpload} />
+              </label>
             </div>
-
-            <label className="btn-secondary cursor-pointer flex items-center gap-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 px-4 py-2 rounded-lg transition-colors text-sm font-medium shadow-sm">
-              <span>Load Custom (JSON / MEME)</span>
-              <input type="file" accept=".json,.txt,.meme" className="hidden" onChange={handleFileUpload} />
-            </label>
           </div>
         </div>
 

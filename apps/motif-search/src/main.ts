@@ -1,7 +1,7 @@
 // @ts-nocheck
 import './style.css';
 import { embedLogo } from './logo';
-import { DATABASES } from './databases';
+import { DATABASES, DB_ORDER } from './databases';
 import { BASES, BASE_IDX, COMP, IUPAC, LOGO_LIMIT } from './constants';
 // @ts-ignore
 import SearchWorker from './worker?worker&inline';
@@ -11,7 +11,6 @@ import SearchWorker from './worker?worker&inline';
     const tbody = $("#results tbody");
     const q = $("#query"), stat = $("#stats"), err = $("#error"), dbname = $("#dbname"), motcount = $("#motcount");
     const file = $("#file"), loadBtn = $("#loadBtn"), rcBox = $("#rc"), rankModeSel = $("#rankMode"), modeSel = $("#modeSelect");
-    const dbSelect = $("#dbSelect"); // New selector
     const scoreHeader = document.querySelector('th[data-sort="score"]');
     const llrHeader = document.querySelector('th[data-sort="llr"]');
 
@@ -141,81 +140,109 @@ import SearchWorker from './worker?worker&inline';
       return { name: "Imported MEME", motifs, alphabet };
     }
 
-    // --- LOADING LOGIC ---
-    async function loadDatabase(key) {
-      if (key === 'custom') {
-        file.click();
-        return;
+    // --- MULTI-SELECT DATABASE LOGIC ---
+    // DNA databases combine into one search set; RNA is its own alphabet and is
+    // never mixed with DNA (the chip UI enforces this). Custom uploads are their
+    // own single selection.
+    let selectedKeys = ['jaspar'];
+    let customDb = null;
+    const chipHost = document.getElementById('dbChips');
+
+    function entriesFor(keys) {
+      return keys.map(k => k === 'custom' ? customDb : DATABASES[k]).filter(Boolean);
+    }
+
+    function combineSelected() {
+      const entries = entriesFor(selectedKeys);
+      let alphabet = 'dna';
+      const motifs = [];
+      const names = [];
+      for (const db of entries) {
+        const d = (db.type === 'meme') ? parseMeme(db.data) : db.data;
+        const a = d.alphabet || db.alphabet || 'dna';
+        if (a === 'rna') alphabet = 'rna';
+        for (const m of d.motifs) motifs.push(m);
+        names.push(db.name);
       }
+      const name = entries.length === 1 ? names[0] : `${entries.length} databases`;
+      return { name, motifs, alphabet };
+    }
 
-      const db = DATABASES[key];
-      if (!db) return;
-
+    function loadSelected() {
+      const entries = entriesFor(selectedKeys);
+      if (!entries.length) return;
       dbname.textContent = "Loading...";
       stat.textContent = "processing...";
-
       try {
-        let data;
-        if (db.type === 'meme') {
-          data = parseMeme(db.data);
-        } else {
-          // JSON data is already an object
-          data = db.data;
-        }
-
-        rnaMode = (db.alphabet === 'rna') || !!(data && data.alphabet === 'rna');
+        const data = combineSelected();
+        rnaMode = data.alphabet === 'rna';
         rcBox.checked = !rnaMode;
-
-        // Clone to avoid modifying the global constant if we add name
-        // (though postMessage clones, it's safer to be explicit if we modify)
-        // Actually, we can just pass it. The worker will receive a copy.
-        // But we want to ensure 'name' is set for the worker's response.
-        // If we modify db.data, it persists. Let's make a shallow copy if needed.
-        // But wait, db.data is the huge object. Shallow copy is cheap.
-        if (!data.name) {
-          // We can't easily modify the const object if it's frozen (it's not).
-          // But let's just send the name in the payload if possible, or modify it.
-          // The worker uses payload.name.
-          data.name = db.name;
-        }
-
         worker.postMessage({ type: "load-db", payload: data });
-
       } catch (ex) {
-        showError(`Failed to load ${db.name}: ${ex.message}`);
+        showError(`Failed to load databases: ${ex.message}`);
         dbname.textContent = "Error";
         stat.textContent = "error";
       }
     }
 
-    // Initialize Dropdown
-    const dbSel = document.getElementById('dbSelect');
-    if (dbSel) {
-      dbSel.addEventListener('change', (e) => {
-        loadDatabase(e.target.value);
-      });
+    function toggleDb(key) {
+      const db = DATABASES[key];
+      const base = selectedKeys.filter(k => k !== 'custom');
+      if (db.alphabet === 'rna') { selectedKeys = [key]; }
+      else {
+        const baseAlpha = base.length ? DATABASES[base[0]].alphabet : 'dna';
+        if (baseAlpha === 'rna') selectedKeys = [key];
+        else if (base.includes(key)) {
+          const next = base.filter(k => k !== key);
+          selectedKeys = next.length ? next : base;
+        } else selectedKeys = [...base, key];
+      }
+      renderChips();
+      loadSelected();
     }
 
-    loadBtn.addEventListener("click", () => {
-      // If custom is selected in dropdown, just click file input
-      // If not, maybe we should switch dropdown to custom?
-      dbSelect.value = 'custom';
-      file.click();
-    });
+    function renderChips() {
+      if (!chipHost) return;
+      chipHost.innerHTML = "";
+      const mk = (key, label, alphabet, active) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'chip' + (active ? ' active' : '');
+        b.title = key === 'custom' && customDb ? customDb.name : (DATABASES[key] ? DATABASES[key].name : label);
+        const dot = document.createElement('i');
+        dot.className = 'dot ' + (alphabet === 'rna' ? 'rna' : (key === 'custom' ? 'custom' : 'dna'));
+        b.appendChild(dot);
+        b.appendChild(document.createTextNode(label));
+        return b;
+      };
+      for (const key of DB_ORDER) {
+        const db = DATABASES[key];
+        const b = mk(key, db.short, db.alphabet, selectedKeys.includes(key));
+        b.addEventListener('click', () => toggleDb(key));
+        chipHost.appendChild(b);
+      }
+      if (customDb) {
+        const b = mk('custom', 'Custom', customDb.alphabet, selectedKeys.includes('custom'));
+        b.addEventListener('click', () => { selectedKeys = ['custom']; renderChips(); loadSelected(); });
+        chipHost.appendChild(b);
+      }
+    }
+
+    loadBtn.addEventListener("click", () => file.click());
 
     file.addEventListener("change", async (e) => {
       const f = e.target.files[0]; if (!f) return;
       try {
         const txt = await f.text();
         let parsed;
-        try {
-          parsed = JSON.parse(txt);
-        } catch (e) {
-          parsed = parseMeme(txt);
-        }
-        rnaMode = !!(parsed && parsed.alphabet === 'rna');
-        rcBox.checked = !rnaMode;
-        worker.postMessage({ type: "load-db", payload: parsed });
+        try { parsed = JSON.parse(txt); }
+        catch (e) { parsed = parseMeme(txt); }
+        const alphabet = (parsed && parsed.alphabet === 'rna') ? 'rna' : 'dna';
+        customDb = { name: f.name, short: f.name, data: parsed, type: 'json', alphabet };
+        selectedKeys = ['custom'];
+        renderChips();
+        loadSelected();
+        e.target.value = '';
       } catch (ex) {
         showError("Failed to read file: " + ex.message);
       }
@@ -407,5 +434,6 @@ import SearchWorker from './worker?worker&inline';
     };
 
     /* preload default */
-    loadDatabase('vierstra');
+    renderChips();
+    loadSelected();
     q.focus();

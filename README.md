@@ -18,13 +18,18 @@ download and open locally, and all analysis happens in your browser.
 Bundled databases, selectable in each tool (see
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for sources and citations):
 
-- **Vierstra clustered motifs v2** (DNA)
-- **JASPAR 2024 CORE vertebrates** (DNA)
-- **HOCOMOCO H14CORE** (DNA)
-- **CIS-BP-RNA Homo sapiens** (RNA) — RNA-binding protein motifs; select it
-  from the database dropdown in the scanner or search tool. RNA motifs are
-  displayed with U in logos and alignments; input sequences may use U or T
-  interchangeably.
+- **JASPAR 2024 CORE vertebrates** (DNA, 879 motifs)
+- **HOCOMOCO H14CORE** (DNA, 1595)
+- **CIS-BP 2.0 Homo sapiens** (DNA, 1065)
+- **Vierstra clustered motifs v2** (DNA, 693)
+- **CIS-BP-RNA Homo sapiens** (RNA, 98) — RNA-binding protein motifs. RNA
+  motifs are displayed with U in logos and alignments; input sequences may use
+  U or T interchangeably.
+
+**Combining databases:** select any number of DNA databases at once to scan or
+search against them together. RNA uses a different alphabet, so CIS-BP-RNA is
+scanned on its own (selecting it clears the DNA selection and disables
+reverse-complement).
 
 Custom databases can be uploaded as MEME-format files (DNA `ACGT` or RNA
 `ACGU` alphabets) or as JSON (`{"name": ..., "motifs": [{"id", "pwm"}]}`).
@@ -73,6 +78,24 @@ Match a query sequence against a MEME database from the command line:
 npm run tomtom -w motif-search -- --db apps/motif-search/tests/data/test.meme \
   --query ATGCGTA --max-pvalue 0.001 --top 5
 ```
+
+## Website & deployment
+
+The public site (landing page + all three tools + downloads) is served at
+**[motif.zhoulab.io](https://motif.zhoulab.io)**. It is a static site:
+
+```bash
+npm run build          # build the three tools
+npm run build:site     # assemble site/dist (landing + /scan /search /match /downloads)
+npx wrangler deploy    # deploy to Cloudflare (config in wrangler.jsonc)
+# or: npm run deploy   # does all three
+```
+
+`site/src/index.html` is the landing page; `site/build.mjs` copies the built
+tool HTML into `site/dist/` at clean routes. The site is plain static files, so
+it can also be hosted on GitHub Pages, Netlify, or any static host — point it at
+`site/dist/`. The custom domain is attached in the Cloudflare dashboard after
+the first deploy (see `wrangler.jsonc`).
 
 ## Privacy
 

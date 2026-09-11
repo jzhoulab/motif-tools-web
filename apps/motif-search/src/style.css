@@ -220,3 +220,20 @@
         max-width: 200px;
       }
     }
+
+
+/* database multi-select chips */
+.chips { display: inline-flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  font: 500 13px/1 ui-sans-serif, system-ui, sans-serif;
+  color: var(--muted); background: var(--panel);
+  border: 1px solid #223042; border-radius: 8px; padding: 7px 11px; cursor: pointer;
+  transition: border-color .12s, color .12s, background .12s;
+}
+.chip:hover { border-color: #34506a; color: var(--text); }
+.chip.active { background: rgba(92,200,255,.12); border-color: var(--accent); color: #cdebff; }
+.chip .dot { width: 8px; height: 8px; border-radius: 2px; background: var(--accent2); }
+.chip .dot.rna { background: #f7b32b; }
+.chip .dot.dna { background: #7ee787; }
+.chip .dot.custom { background: #5cc8ff; }
