@@ -6,9 +6,10 @@
   "assets": {
     "directory": "./site/dist",
     "not_found_handling": "404-page"
-  }
-  // After the first `wrangler deploy`, attach the custom domain in the Cloudflare
-  // dashboard (Workers & Pages -> this Worker -> Settings -> Domains & Routes ->
-  // Add custom domain -> motif.zhoulab.io). Cloudflare provisions the certificate
-  // and the DNS record automatically once zhoulab.io is on this account.
+  },
+  // Custom domain: provisions the DNS record + certificate for motif.zhoulab.io
+  // (zhoulab.io must be a zone on this Cloudflare account).
+  "routes": [
+    { "pattern": "motif.zhoulab.io", "custom_domain": true }
+  ]
 }
