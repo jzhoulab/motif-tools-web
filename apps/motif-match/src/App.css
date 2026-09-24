@@ -1,27 +1,27 @@
-/* Modern Dark UI Design System - Consistent with Realtime Motif Scanner */
+/* Shared "Motif Tools" brand palette (matches the landing, scanner, and search) */
 :root {
-  /* Slate Palette */
-  --bg-root: #020617;       /* Slate 950 */
-  --bg-panel: #0f172a;      /* Slate 900 */
-  --bg-card: #1e293b;       /* Slate 800 */
-  --bg-card-hover: #334155; /* Slate 700 */
-  
+  /* Base */
+  --bg-root: #0B1220;       /* ink */
+  --bg-panel: #121C2E;      /* panel */
+  --bg-card: #17233A;
+  --bg-card-hover: #23324A;
+
   /* Borders */
-  --border-subtle: #1e293b; /* Slate 800 */
-  --border-hover: #334155;  /* Slate 700 */
-  --border-active: #3b82f6; /* Blue 500 */
+  --border-subtle: #1a2740;
+  --border-hover: #33465F;
+  --border-active: #35C9D6; /* cyan accent */
 
   /* Text */
-  --text-primary: #e2e8f0;  /* Slate 200 */
-  --text-secondary: #94a3b8; /* Slate 400 */
-  --text-muted: #64748b;    /* Slate 500 */
+  --text-primary: #E7EDF5;
+  --text-secondary: #A9BAD0;
+  --text-muted: #8FA3BC;
 
   /* Accents */
-  --accent-primary: #3b82f6; /* Blue 500 */
-  --accent-primary-hover: #2563eb; /* Blue 600 */
-  --accent-glow: rgba(59, 130, 246, 0.15);
-  --accent-success: #34d399; /* Emerald 400 */
-  --accent-warning: #fbbf24; /* Amber 400 */
+  --accent-primary: #35C9D6; /* cyan */
+  --accent-primary-hover: #1FB4C2;
+  --accent-glow: rgba(53, 201, 214, 0.15);
+  --accent-success: #22C08A;
+  --accent-warning: #F7B32B; /* nucleotide gold */
 
   /* Dimensions */
   --header-height: 56px;
@@ -489,3 +489,42 @@ body {
   height: 48px;
   opacity: 0.2;
 }
+
+/* ---- shared brand header + input guide (added when Match rejoined the site) ---- */
+.brand-link { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); }
+.brand-mark { display: inline-flex; gap: 3px; }
+.brand-mark i { width: 6px; height: 18px; border-radius: 2px; }
+.brand-mark i:nth-child(1) { background: #109648; }
+.brand-mark i:nth-child(2) { background: #255C99; }
+.brand-mark i:nth-child(3) { background: #F7B32B; }
+.brand-mark i:nth-child(4) { background: #D62828; }
+.brand-name { font-weight: 600; letter-spacing: -0.01em; }
+.brand-sep { color: #4a5c76; }
+.brand-tool { color: var(--text-secondary); }
+.back-link { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; margin-right: 0.35rem; white-space: nowrap; }
+.back-link:hover { color: var(--text-primary); }
+
+.input-guide {
+  max-width: 620px; margin: 8vh auto 0; padding: 0 1.5rem; text-align: left;
+  display: flex; flex-direction: column; gap: 1rem; color: var(--text-secondary);
+}
+.input-guide .empty-icon { width: 34px; height: 34px; color: var(--text-muted); opacity: 0.8; }
+.input-guide h2 { margin: 0; font-size: 1.35rem; font-weight: 700; color: var(--text-primary); }
+.input-guide-lead { margin: 0; line-height: 1.6; }
+.input-guide-lead strong { color: var(--text-primary); }
+.input-spec {
+  display: flex; flex-direction: column; gap: 0.75rem;
+  background: var(--bg-panel); border: 1px solid var(--border-subtle);
+  border-radius: 12px; padding: 1rem 1.25rem;
+}
+.input-spec-row { display: grid; grid-template-columns: 116px 1fr; gap: 1rem; align-items: baseline; font-size: 0.9rem; line-height: 1.5; }
+.input-spec-k { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); padding-top: 2px; }
+.input-spec-v { color: var(--text-secondary); }
+.input-spec-v code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.85em;
+  background: var(--bg-root); border: 1px solid var(--border-subtle);
+  border-radius: 5px; padding: 1px 5px; color: var(--text-primary);
+}
+.input-guide-note { margin: 0; font-size: 0.85rem; color: var(--text-muted); }
+.input-guide-note a { color: var(--accent-primary); text-decoration: none; }
+.input-guide-note a:hover { text-decoration: underline; }

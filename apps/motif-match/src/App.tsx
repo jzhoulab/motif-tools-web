@@ -277,13 +277,19 @@ function App() {
                 <input {...getInputProps()} />
             {isDragActive && (
                 <div className="dropzone-overlay">
-                    <div>Drop ONNX file to analyze</div>
+                    <div>Drop your <strong>.onnx</strong> model to analyze its motif filters</div>
             </div>
             )}
-            
+
             <header className="header">
-                <h1>Motif Match</h1>
+                <a className="brand-link" href="https://motif.zhoulab.io/">
+                    <span className="brand-mark"><i></i><i></i><i></i><i></i></span>
+                    <span className="brand-name">Motif Tools</span>
+                    <span className="brand-sep">/</span>
+                    <span className="brand-tool">Match</span>
+                </a>
                 <div className="controls">
+                    <a className="back-link" href="https://motif.zhoulab.io/">← All tools</a>
                     <div className="status-pill">
                         <div className={`status-dot ${status.includes('Ready') || status.includes('complete') ? 'ready' : 'busy'}`}></div>
                         {status}
@@ -329,8 +335,8 @@ function App() {
                     <div className="match-list">
                         {matches.length === 0 ? (
                             <div className="empty-state">
-                                <span>No matches loaded</span>
-                                <span className="text-xs">Drop an ONNX file to start</span>
+                                <span>No model loaded</span>
+                                <span className="text-xs">Drop an .onnx file anywhere to start</span>
                             </div>
                         ) : (
                             filteredMatches.map((m, i) => {
@@ -433,10 +439,39 @@ function App() {
                                 />
                             </div>
                         </>
-                    ) : (
+                    ) : matches.length > 0 ? (
                         <div className="empty-state">
                             <GridIcon className="empty-icon" />
                             <p>Select a match to view details</p>
+                        </div>
+                    ) : (
+                        <div className="input-guide">
+                            <GridIcon className="empty-icon" />
+                            <h2>Drop an ONNX model to begin</h2>
+                            <p className="input-guide-lead">
+                                Motif Match reads the <strong>first 1-D convolution layer</strong> of a trained
+                                DNA sequence model, clusters its learned filters, and aligns each cluster to
+                                known motifs in the database you pick above.
+                            </p>
+                            <div className="input-spec">
+                                <div className="input-spec-row">
+                                    <span className="input-spec-k">Input</span>
+                                    <span className="input-spec-v">a single <code>.onnx</code> file, dragged anywhere onto this page</span>
+                                </div>
+                                <div className="input-spec-row">
+                                    <span className="input-spec-k">Expected layer</span>
+                                    <span className="input-spec-v">a <code>Conv1d</code> weight of shape <code>(filters × 4 × width)</code> — one input channel per base A/C/G/T (the first 3-D tensor in the graph is used)</span>
+                                </div>
+                                <div className="input-spec-row">
+                                    <span className="input-spec-k">Output</span>
+                                    <span className="input-spec-v">filter clusters matched to motifs, with aligned logos and a similarity heatmap; export as CSV</span>
+                                </div>
+                            </div>
+                            <p className="input-guide-note">
+                                Not what you're looking for? To scan a sequence or search a motif, use the
+                                {' '}<a href="https://motif.zhoulab.io/scan/">Scanner</a> or
+                                {' '}<a href="https://motif.zhoulab.io/search/">Search</a> tools instead.
+                            </p>
                         </div>
                     )}
                 </div>
