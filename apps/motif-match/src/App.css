@@ -551,3 +551,53 @@ body {
 .btn-upload.primary:hover { background: var(--accent-primary-hover); border-color: var(--accent-primary-hover); }
 .input-guide-actions { display: flex; align-items: center; gap: 0.9rem; margin-top: 0.25rem; }
 .input-guide-hint { font-size: 0.85rem; color: var(--text-muted); }
+
+/* ---------- network view ---------- */
+.view-toggle { display: inline-flex; border: 1px solid var(--border-hover); border-radius: 8px; overflow: hidden; }
+.view-toggle button {
+  background: var(--bg-panel); color: var(--text-secondary); border: none;
+  padding: 0.4rem 0.85rem; font-size: 0.82rem; cursor: pointer;
+}
+.view-toggle button.active { background: var(--accent-primary); color: #05222b; font-weight: 600; }
+.net-dbtag { font-size: 0.8rem; color: var(--text-muted); font-family: ui-monospace, monospace; white-space: nowrap; }
+
+.net-wrap { position: relative; flex: 1; overflow: hidden; background:
+  radial-gradient(1200px 600px at 50% 40%, rgba(53,201,214,0.05), transparent 70%), var(--bg-root); }
+.net-canvas { display: block; width: 100%; height: 100%; cursor: grab; touch-action: none; }
+.net-canvas:active { cursor: grabbing; }
+
+.net-legend {
+  position: absolute; top: 14px; left: 14px; display: flex; flex-wrap: wrap; gap: 6px; max-width: 60%;
+}
+.net-legend-item {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--text-secondary);
+  background: rgba(18,28,46,0.75); backdrop-filter: blur(6px);
+  border: 1px solid var(--border-subtle); border-radius: 20px; padding: 3px 9px; cursor: pointer;
+}
+.net-legend-item.static { cursor: default; }
+.net-legend-item.off { opacity: 0.4; text-decoration: line-through; }
+.net-legend-item i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.net-legend-item .net-count { color: var(--text-muted); font-family: ui-monospace, monospace; font-size: 0.7rem; }
+
+.net-controls { position: absolute; top: 14px; right: 14px; display: flex; gap: 6px; }
+.net-controls button {
+  background: rgba(18,28,46,0.85); color: var(--text-secondary); border: 1px solid var(--border-hover);
+  border-radius: 8px; padding: 5px 12px; font-size: 0.8rem; cursor: pointer;
+}
+.net-controls button:hover { color: var(--text-primary); border-color: var(--accent-primary); }
+
+.net-hint {
+  position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+  font-size: 0.72rem; color: var(--text-muted); background: rgba(11,18,32,0.6);
+  padding: 3px 10px; border-radius: 20px; pointer-events: none;
+}
+
+.net-tooltip {
+  position: absolute; z-index: 20; width: 220px; pointer-events: none;
+  background: rgba(11,18,32,0.96); border: 1px solid var(--border-hover);
+  border-radius: 10px; padding: 10px 12px; box-shadow: 0 12px 30px -12px rgba(0,0,0,0.8);
+}
+.net-tooltip-title { display: flex; align-items: center; gap: 7px; font-size: 0.82rem; font-weight: 600; color: var(--text-primary); word-break: break-word; }
+.net-tooltip .net-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.net-tooltip-logo { margin: 8px 0 6px; background: #050b16; border-radius: 6px; padding: 4px; height: 54px; }
+.net-tooltip-sub { font-size: 0.72rem; color: var(--text-muted); font-family: ui-monospace, monospace; }

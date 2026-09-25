@@ -11,7 +11,7 @@ download and open locally, and all analysis happens in your browser.
 |---|---|
 | [`apps/motif-scanner`](apps/motif-scanner) | FIMO-style scanning of a sequence against motif databases, with exact p-values, interactive highlighting, and [Seqstr](https://github.com/jzhoulab/Seqstr) genomic-interval input |
 | [`apps/motif-search`](apps/motif-search) | Type a sequence (IUPAC codes OK) and rank database motifs by FFT normalized cross-correlation, log-likelihood ratio, or Tomtom p-values |
-| [`apps/motif-match`](apps/motif-match) | Drop an ONNX model and cluster its first-layer convolutional filters against known motif databases |
+| [`apps/motif-match`](apps/motif-match) | Explore a **network map of all known DNA motifs** and place your own motifs onto it — upload a MEME/JSON motif set or an ONNX model (its first Conv1d filters), which are clustered and matched to the nearest known motifs. Also has a cluster/heatmap detail view. |
 
 ## Motif databases
 
@@ -55,6 +55,18 @@ Built files land in `apps/<tool>/dist/`:
 `motif-scanner.html`, `motif-search.html`, `motif-match.html`. Each is fully
 self-contained (databases embedded, no CDN dependencies) and can be opened
 directly from disk.
+
+### Regenerating the motif network map
+
+The Motif Match "network" view renders a precomputed 2-D similarity map of every
+DNA motif across all bundled databases (`resources/motif-network.json`). It is
+generated offline so the browser renders it instantly and only the user's
+uploaded motifs are compared at runtime. Regenerate it after changing the DNA
+databases:
+
+```bash
+node apps/motif-match/scripts/build-network.mjs   # ~15s; writes resources/motif-network.json
+```
 
 ### Tests
 

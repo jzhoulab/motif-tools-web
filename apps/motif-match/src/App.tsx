@@ -16,9 +16,21 @@ import cisbpRnaMeme from '@resources/CISBP-RNA_Homo_sapiens.meme?raw';
 
 import MotifLogo from './components/MotifLogo';
 import Heatmap from './components/Heatmap';
+import NetworkView, { type DbNode, type QueryNode, type QueryEdge } from './components/NetworkView';
 import { SearchIcon, ArrowRightIcon, RefreshIcon, GridIcon, DownloadIcon } from './components/Icons';
 import { decideAutoRC } from './utils/alignment';
 import { parseMeme } from './utils/memeParser';
+// @ts-ignore
+import networkData from '@resources/motif-network.json';
+
+// DNA databases that back the precomputed motif map — MUST match the order used
+// in scripts/build-network.mjs so node indices line up with motif-network.json.
+const DNA_DBS = [
+  { key: 'JASPAR', data: jasparJson, type: 'json' as const },
+  { key: 'HOCOMOCO', data: h14Meme, type: 'meme' as const },
+  { key: 'CIS-BP', data: cisbpMeme, type: 'meme' as const },
+  { key: 'Vierstra', data: vierstraJson, type: 'json' as const },
+];
 
 const DATABASES = {
   'jaspar': { name: 'JASPAR 2024 CORE Vertebrates', data: jasparJson, type: 'json' },
@@ -33,9 +45,32 @@ type Query =
   | { kind: 'onnx'; buffer: ArrayBuffer; name: string }
   | { kind: 'motifs'; data: { name: string; motifs: any[] }; name: string };
 
+// Build the combined DNA motif list (id + pwm + source) in the canonical order,
+// and attach precomputed x/y from motif-network.json by index.
+function buildMap() {
+    const all: { id: string; pwm: number[][]; source: string }[] = [];
+    for (const db of DNA_DBS) {
+        const parsed: any = db.type === 'meme' ? parseMeme(db.data as string) : db.data;
+        for (const m of parsed.motifs) all.push({ id: m.id, pwm: m.pwm, source: db.key });
+    }
+    const dbNodes: DbNode[] = (networkData.nodes as any[]).map((n, i) => ({
+        id: n.id, source: n.source, x: n.x, y: n.y, pwm: all[i]?.pwm,
+    }));
+    return { all, dbNodes };
+}
+
 function App() {
     const [status, setStatus] = useState('Initializing...');
+    const [view, setView] = useState<'network' | 'clusters'>('network');
+    const [queryNodes, setQueryNodes] = useState<QueryNode[]>([]);
+    const [queryEdges, setQueryEdges] = useState<QueryEdge[]>([]);
     const [selectedDbKey, setSelectedDbKey] = useState<string>('vierstra');
+
+    const map = useMemo(() => buildMap(), []);
+    const dbNodesRef = useRef(map.dbNodes);
+    dbNodesRef.current = map.dbNodes;
+    const viewRef = useRef(view);
+    useEffect(() => { viewRef.current = view; }, [view]);
     const [currentQuery, setCurrentQuery] = useState<Query | null>(null);
     const currentQueryRef = useRef<Query | null>(null);
 
@@ -46,6 +81,16 @@ function App() {
     const postQuery = (worker: Worker, q: Query) => {
         if (q.kind === 'onnx') worker.postMessage({ type: 'match', payload: q.buffer });
         else worker.postMessage({ type: 'match-motifs', payload: q.data });
+    };
+
+    // Route a loaded query to the computation the active view needs.
+    const dispatchQuery = (worker: Worker, q: Query) => {
+        if (viewRef.current === 'network') {
+            const payload = q.kind === 'onnx' ? { kind: 'onnx', buffer: q.buffer } : { kind: 'motifs', data: q.data };
+            worker.postMessage({ type: 'network-query', payload });
+        } else {
+            postQuery(worker, q);
+        }
     };
     
     // Data from worker
@@ -82,14 +127,47 @@ function App() {
         const worker = new Worker();
         workerRef.current = worker;
 
+        // Give the worker the combined DNA motif set that backs the network map.
+        worker.postMessage({ type: 'set-net-db', payload: { motifs: map.all.map((m) => ({ id: m.id, pwm: m.pwm })) } });
+
         worker.onmessage = (e) => {
             const { type, message, count, matches: results, layerName, dims, motifs: rawMotifs, annotations: annots, scores: rawScores, N } = e.data;
-            
+
+            if (type === 'network-query') {
+                const qn = e.data.nodes as { id: string; pwm: number[][] }[];
+                const qe = e.data.edges as { q: number; db: number; weight: number }[];
+                const bm = e.data.bestMatch as { db: number; weight: number }[];
+                const nodesArr = dbNodesRef.current;
+                const placed: QueryNode[] = qn.map((n, i) => {
+                    const es = qe.filter((x) => x.q === i);
+                    let X = 0, Y = 0, wsum = 0;
+                    for (const x of es) {
+                        const dn = nodesArr[x.db];
+                        if (!dn) continue;
+                        const w = Math.max(0.01, x.weight);
+                        X += dn.x * w; Y += dn.y * w; wsum += w;
+                    }
+                    let x: number, y: number;
+                    if (wsum > 0) { x = X / wsum; y = Y / wsum; }
+                    else { const dn = nodesArr[bm[i]?.db]; x = dn ? dn.x : 0.5; y = dn ? dn.y : 0.5; }
+                    // small deterministic jitter so co-located query nodes don't stack
+                    x += Math.cos(i * 2.399) * 0.01; y += Math.sin(i * 2.399) * 0.01;
+                    const best = bm[i] ? nodesArr[bm[i].db] : null;
+                    return { id: n.id, pwm: n.pwm, x, y, bestId: best?.id, bestScore: bm[i]?.weight };
+                });
+                setQueryNodes(placed);
+                setQueryEdges(qe);
+                setStatus(`Mapped ${qn.length} motifs onto the network.`);
+                return;
+            }
+
             if (type === 'db-loaded') {
                 const q = currentQueryRef.current;
-                if (q) {
+                if (q && viewRef.current === 'clusters') {
                     setStatus(`Database loaded. Re-matching against ${q.name}...`);
                     postQuery(worker, q);
+                } else if (viewRef.current === 'network') {
+                    setStatus('Motif map ready — drop a model or motif file to place it.');
                 } else {
                     setStatus(`Database loaded (${count} motifs). Ready.`);
                 }
@@ -139,6 +217,17 @@ function App() {
         }
     }, [selectedDbKey]);
 
+    // When switching views, run whatever computation that view needs for the
+    // currently-loaded query (network overlay vs. cluster match).
+    useEffect(() => {
+        const w = workerRef.current;
+        const q = currentQueryRef.current;
+        if (!w || !q) return;
+        if (view === 'network' && queryNodes.length === 0) dispatchQuery(w, q);
+        if (view === 'clusters' && matches.length === 0) dispatchQuery(w, q);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [view]);
+
     const handleExport = () => {
         if (matches.length === 0) return;
         
@@ -185,7 +274,7 @@ function App() {
                 const buffer = reader.result as ArrayBuffer;
                 const q: Query = { kind: 'onnx', buffer, name: file.name };
                 setCurrentQuery(q);
-                postQuery(worker, q);
+                dispatchQuery(worker, q);
             };
             reader.readAsArrayBuffer(file);
         } else {
@@ -204,7 +293,7 @@ function App() {
                     if (!data.motifs || !data.motifs.length) throw new Error('No motifs found in file.');
                     const q: Query = { kind: 'motifs', data, name: file.name };
                     setCurrentQuery(q);
-                    postQuery(worker, q);
+                    dispatchQuery(worker, q);
                 } catch (err: any) {
                     setStatus(`Error: ${err.message}`);
                 }
@@ -344,33 +433,54 @@ function App() {
                     <span className="brand-tool">Match</span>
                 </a>
                 <div className="controls">
+                    <div className="view-toggle">
+                        <button className={view === 'network' ? 'active' : ''} onClick={() => setView('network')}>Network</button>
+                        <button className={view === 'clusters' ? 'active' : ''} onClick={() => setView('clusters')}>Clusters</button>
+                    </div>
                     <a className="back-link" href="https://motif.zhoulab.io/">← All tools</a>
                     <button className="btn-upload" onClick={() => fileInputRef.current?.click()}>Load file…</button>
                     <div className="status-pill">
-                        <div className={`status-dot ${status.includes('Ready') || status.includes('complete') ? 'ready' : 'busy'}`}></div>
+                        <div className={`status-dot ${status.includes('Ready') || status.includes('complete') || status.includes('Mapped') ? 'ready' : 'busy'}`}></div>
                         {status}
                     </div>
-                    <button 
-                        className="btn-icon"
-                        onClick={handleExport}
-                        title="Export Matches as CSV"
-                        disabled={matches.length === 0}
-                        style={{ opacity: matches.length === 0 ? 0.5 : 1 }}
-                    >
-                        <DownloadIcon style={{ width: 14, height: 14 }} />
-                    </button>
-                    <select 
-                        value={selectedDbKey} 
-                        onChange={(e) => setSelectedDbKey(e.target.value)}
-                        className="db-select"
-                    >
-                        {Object.entries(DATABASES).map(([key, db]) => (
-                            <option key={key} value={key}>{db.name}</option>
-                        ))}
-                    </select>
+                    {view === 'clusters' ? (
+                        <>
+                            <button
+                                className="btn-icon"
+                                onClick={handleExport}
+                                title="Export Matches as CSV"
+                                disabled={matches.length === 0}
+                                style={{ opacity: matches.length === 0 ? 0.5 : 1 }}
+                            >
+                                <DownloadIcon style={{ width: 14, height: 14 }} />
+                            </button>
+                            <select
+                                value={selectedDbKey}
+                                onChange={(e) => setSelectedDbKey(e.target.value)}
+                                className="db-select"
+                            >
+                                {Object.entries(DATABASES).map(([key, db]) => (
+                                    <option key={key} value={key}>{db.name}</option>
+                                ))}
+                            </select>
+                        </>
+                    ) : (
+                        <span className="net-dbtag">All DNA databases · {map.dbNodes.length.toLocaleString()} motifs</span>
+                    )}
                 </div>
             </header>
 
+            {view === 'network' && (
+                <NetworkView
+                    nodes={map.dbNodes}
+                    edges={networkData.edges as [number, number][]}
+                    queryNodes={queryNodes}
+                    queryEdges={queryEdges}
+                    sources={networkData.sources as { key: string; count: number }[]}
+                />
+            )}
+
+            {view === 'clusters' && (
             <div className="main-layout">
                 {/* Left Column */}
                 <div className="col-left">
@@ -629,6 +739,7 @@ function App() {
                     )}
                 </div>
             </div>
+            )}
         </div>
     );
 }
