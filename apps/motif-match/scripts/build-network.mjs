@@ -19,7 +19,7 @@ const EPS = 0.01;
 // ---- parsers -> list of { id, pwm(4xL probabilities) } ----
 function fromJson(file) {
     const d = JSON.parse(readFileSync(R(file), 'utf8'));
-    return d.motifs.map((m) => ({ id: m.id, pwm: toRows(m.pwm) }));
+    return d.motifs.map((m) => ({ id: m.id, name: m.name || m.id, pwm: toRows(m.pwm) }));
 }
 function toRows(pwm) {
     if (pwm.length === 4) return pwm;
@@ -31,17 +31,17 @@ function fromMeme(file) {
     const text = readFileSync(R(file), 'utf8');
     const lines = text.split(/\r?\n/);
     const motifs = [];
-    let id = null, rows = [], inM = false;
+    let id = null, mname = '', rows = [], inM = false;
     const flush = () => {
         if (!id || !rows.length) return;
         const L = rows.length, pwm = [[], [], [], []];
         for (let i = 0; i < L; i++) for (let b = 0; b < 4; b++) pwm[b].push(rows[i][b]);
-        motifs.push({ id, pwm });
+        motifs.push({ id, name: mname || id, pwm });
     };
     for (const line of lines) {
         const t = line.trim();
         if (!t || t.startsWith('#')) continue;
-        if (t.startsWith('MOTIF')) { flush(); const p = t.split(/\s+/); id = p[1]; rows = []; inM = false; continue; }
+        if (t.startsWith('MOTIF')) { flush(); const p = t.split(/\s+/); id = p[1]; mname = p.slice(2).join(' '); rows = []; inM = false; continue; }
         if (t.toLowerCase().startsWith('letter-probability')) { inM = true; continue; }
         if (inM) {
             const p = t.split(/\s+/);
@@ -106,7 +106,7 @@ function ncc(aCols, aNorm, bCols, bRc, bNorm) {
 
 // ---- assemble nodes ----
 const nodes = [];
-for (const src of SOURCES) for (const m of src.motifs) nodes.push({ id: m.id, source: src.key, pwm: m.pwm });
+for (const src of SOURCES) for (const m of src.motifs) nodes.push({ id: m.id, name: m.name || m.id, source: src.key, pwm: m.pwm });
 const N = nodes.length;
 console.log(`Encoding ${N} DNA motifs from ${SOURCES.map((s) => `${s.key}:${s.motifs.length}`).join(', ')}`);
 
@@ -228,6 +228,30 @@ const xsAll = simNodes.map((s) => s.x), ysAll = simNodes.map((s) => s.y);
 const minX = pct(xsAll, 0.01), maxX = pct(xsAll, 0.99);
 const minY = pct(ysAll, 0.01), maxY = pct(ysAll, 0.99);
 const span = Math.max(maxX - minX, maxY - minY) || 1;
+// ---- derive a TF family for EVERY motif (so ungrouped dots are annotated too) ----
+function nameRoot(m) {
+    const id = m.id || '', src = m.source || '', nm = m.name || '';
+    let t = '';
+    if (src === 'Vierstra') {                     // AC0001:DLX/LHX:Homeodomain
+        const p = id.split(':');
+        t = p.length >= 2 ? (p[1].split(/[/,]/)[0] || '') : '';
+    } else if (/^M\d+(_|$)/.test(id)) {           // CIS-BP: TF name lives in the MOTIF name
+        const g = nm.match(/\(([^)]+)\)/);        // "(TFAP2D)_(Mus_musculus)_(DBD_0.80)"
+        t = g ? g[1] : (nm.split(/[\s_]/)[0] || '');  // or a bare name: "SNAI2"
+    } else {                                      // JASPAR / HOCOMOCO
+        t = id.split(' (')[0].split('.')[0].split('::')[0];
+    }
+    t = t.trim().replace(/[_-].*$/, '').replace(/\d+$/, '');
+    return /^[A-Za-z][A-Za-z0-9]*$/.test(t) ? t.toUpperCase() : '';
+}
+const famNameOf = nodes.map((n) => nameRoot(n));
+const famCount = new Map();
+for (const f of famNameOf) if (f) famCount.set(f, (famCount.get(f) || 0) + 1);
+const famNames = [...famCount.entries()].sort((a, b) => b[1] - a[1]).map(([f]) => f);
+const famIndex = new Map(famNames.map((f, i) => [f, i]));
+const famOf = famNameOf.map((f) => (f && famIndex.has(f) ? famIndex.get(f) : -1));
+console.log(`families: ${famNames.length}; motifs with a family: ${famOf.filter((f) => f >= 0).length}/${N}`);
+
 const outNodes = nodes.map((n, i) => ({
     id: n.id,
     source: n.source,
@@ -236,26 +260,17 @@ const outNodes = nodes.map((n, i) => ({
     nn: nn[i],
     nns: Math.round(nnScore[i] * 100) / 100,
     c: clusterId[i],
+    f: famOf[i],
 }));
 
 // ---- name each coloured cluster by its dominant TF family ----
-function nameRoot(id, source) {
-    if (source === 'Vierstra') {                 // AC0001:DLX/LHX:Homeodomain
-        const p = id.split(':');
-        if (p.length >= 2) return (p[1].split(/[/,]/)[0] || '').trim().replace(/\d+$/, '');
-        return '';
-    }
-    if (/^M\d+(_|$)/.test(id)) return '';         // CIS-BP code (no TF name in id)
-    const t = id.split(' (')[0].split('.')[0].split('::')[0]; // JASPAR / HOCOMOCO
-    return t.replace(/[_-].*$/, '').replace(/\d+$/, '');
-}
 const clusterInfo = new Map();
 outNodes.forEach((n, i) => {
     if (n.c < 0) return;
     let e = clusterInfo.get(n.c);
     if (!e) { e = { xs: [], ys: [], roots: new Map() }; clusterInfo.set(n.c, e); }
     e.xs.push(n.x); e.ys.push(n.y);
-    const root = nameRoot(nodes[i].id, nodes[i].source);
+    const root = famNameOf[i];
     if (root) e.roots.set(root, (e.roots.get(root) || 0) + 1);
 });
 const clusters = [];
@@ -273,7 +288,7 @@ for (const [c, e] of clusterInfo) {
 clusters.sort((a, b) => b.size - a.size);
 console.log(`named ${clusters.filter((c) => c.label).length}/${clusters.length} clusters; top: ${clusters.slice(0, 8).map((c) => c.label + '(' + c.size + ')').join(', ')}`);
 
-const out = { generated: new Date().toISOString().slice(0, 10), sources: SOURCES.map((s) => ({ key: s.key, count: s.motifs.length })), nodes: outNodes, edges, clusters };
+const out = { generated: new Date().toISOString().slice(0, 10), sources: SOURCES.map((s) => ({ key: s.key, count: s.motifs.length })), nodes: outNodes, edges, clusters, families: famNames };
 const outPath = R('motif-network.json');
 writeFileSync(outPath, JSON.stringify(out));
 console.log(`Wrote ${outPath}: ${outNodes.length} nodes, ${edges.length} edges, ${(JSON.stringify(out).length / 1e6).toFixed(2)} MB`);

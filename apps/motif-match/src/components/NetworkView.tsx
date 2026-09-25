@@ -11,6 +11,7 @@ export interface DbNode {
     nn?: number;   // index of nearest relative (for hover alignment)
     nns?: number;  // its correlation
     c?: number;    // cluster id (-1 = not in a coloured cluster)
+    f?: number;    // TF family index (every motif has one)
 }
 
 // Colour for a cluster id via golden-angle hue rotation (locally distinct).
@@ -18,6 +19,12 @@ const clusterHue = (c: number) => (c * 137.508) % 360;
 function clusterColor(c: number | undefined): string {
     if (c == null || c < 0) return '#4a5a70';
     return `hsl(${clusterHue(c).toFixed(0)} 60% 62%)`;
+}
+// Motifs outside a clique still belong to a TF family — tint them by it, but
+// muted so the clique territories stay dominant.
+function familyColor(f: number | undefined): string {
+    if (f == null || f < 0) return '#4a5a70';
+    return `hsl(${((f * 137.508) % 360).toFixed(0)} 40% 52%)`;
 }
 export interface QueryNode {
     id: string;
@@ -48,6 +55,7 @@ interface Props {
     queryEdges: QueryEdge[];
     sources: { key: string; count: number }[];
     clusters: Cluster[];
+    families: string[];
 }
 
 const MAX_CLIQUE_LOGOS = 8;
@@ -66,7 +74,7 @@ const WORLD = 1400; // normalized coords are scaled into a WORLD x WORLD box
 
 type PickResult = { type: 'db' | 'query'; idx: number };
 
-export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sources, clusters }: Props) {
+export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sources, clusters, families }: Props) {
     const wrapRef = useRef<HTMLDivElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const transformRef = useRef({ x: 0, y: 0, k: 1 });
@@ -82,6 +90,22 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
     const [colorMode, setColorMode] = useState<'cluster' | 'source'>('cluster');
     const colorModeRef = useRef(colorMode);
     colorModeRef.current = colorMode;
+    const [search, setSearch] = useState('');
+
+    // motifs matching the search (by motif id or TF family name)
+    const matches = useMemo(() => {
+        const q = search.trim().toLowerCase();
+        if (q.length < 2) return null;
+        const set = new Set<number>();
+        for (let i = 0; i < nodes.length; i++) {
+            const n = nodes[i];
+            const fam = n.f != null && n.f >= 0 ? families[n.f] : '';
+            if (n.id.toLowerCase().includes(q) || (fam && fam.toLowerCase().includes(q))) set.add(i);
+        }
+        return set;
+    }, [search, nodes, families]);
+    const matchesRef = useRef(matches);
+    matchesRef.current = matches;
 
     // soft "territory" blobs, one per coloured cluster (normalized coords)
     const blobs = useMemo(() => {
@@ -148,6 +172,7 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
         const focusUid = focus ? (focus.type === 'db' ? 'd' : 'q') + focus.idx : null;
         const cmode = colorModeRef.current;
         const t = transformRef.current;
+        const mset = matchesRef.current;
 
         ctx.save();
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -223,11 +248,15 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
             const uid = 'd' + i;
             const isFocus = uid === focusUid;
             const isNeigh = neigh.has(uid);
+            const isHit = mset ? mset.has(i) : false;
             ctx.beginPath();
-            ctx.arc(sx, sy, isFocus ? 3 : isNeigh ? 2 : 1.3, 0, Math.PI * 2);
-            ctx.fillStyle = isFocus || isNeigh ? COL_HILITE : (cmode === 'cluster' ? clusterColor(n.c) : (SRC_COLORS[n.source] || '#8FA3BC'));
-            ctx.globalAlpha = focus && !isFocus && !isNeigh ? 0.35 : 0.95;
+            ctx.arc(sx, sy, isFocus ? 3 : isHit ? 3 : isNeigh ? 2 : 1.3, 0, Math.PI * 2);
+            ctx.fillStyle = isFocus || isNeigh ? COL_HILITE
+                : cmode === 'cluster' ? (n.c != null && n.c >= 0 ? clusterColor(n.c) : familyColor(n.f))
+                : (SRC_COLORS[n.source] || '#8FA3BC');
+            ctx.globalAlpha = mset && !isHit ? 0.12 : (focus && !isFocus && !isNeigh ? 0.35 : 0.95);
             ctx.fill();
+            if (isHit) { ctx.lineWidth = 1; ctx.strokeStyle = COL_HILITE; ctx.stroke(); }
         }
         ctx.globalAlpha = 1;
 
@@ -297,6 +326,28 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
         ctx.restore();
     }, [nodes, edges, queryNodes, queryEdges, hover, selected, clusters]);
 
+    // frame a specific set of motifs (used by search)
+    const fitTo = useCallback((idxs: number[]) => {
+        if (!idxs.length) return;
+        const { w, h } = sizeRef.current;
+        let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+        for (const i of idxs) {
+            const n = nodes[i];
+            minX = Math.min(minX, n.x); maxX = Math.max(maxX, n.x);
+            minY = Math.min(minY, n.y); maxY = Math.max(maxY, n.y);
+        }
+        const pad = 90;
+        const bw = Math.max(0.02, maxX - minX) * WORLD;
+        const bh = Math.max(0.02, maxY - minY) * WORLD;
+        const k = Math.max(0.1, Math.min(8, Math.min((w - pad * 2) / bw, (h - pad * 2) / bh)));
+        transformRef.current = {
+            k,
+            x: w / 2 - ((minX + maxX) / 2) * WORLD * k,
+            y: h / 2 - ((minY + maxY) / 2) * WORLD * k,
+        };
+        draw();
+    }, [nodes, draw]);
+
     const fit = useCallback(() => {
         const { w, h } = sizeRef.current;
         if (!w) return;
@@ -324,7 +375,7 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
         return () => window.removeEventListener('resize', resize);
     }, [fit, draw]);
 
-    useEffect(() => { draw(); }, [draw, hidden, colorMode]);
+    useEffect(() => { draw(); }, [draw, hidden, colorMode, search]);
 
     const pick = useCallback((sx: number, sy: number): PickResult | null => {
         const t = transformRef.current;
@@ -441,6 +492,22 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
             </div>
 
             <div className="net-controls">
+                <div className="net-search">
+                    <input
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        onKeyDown={(e) => { if (e.key === 'Enter' && matches) fitTo([...matches]); if (e.key === 'Escape') setSearch(''); }}
+                        placeholder="Search motif or family…"
+                        spellCheck={false}
+                    />
+                    {matches && (
+                        <span className="net-search-count">
+                            {matches.size} {matches.size === 1 ? 'hit' : 'hits'}
+                            {matches.size > 0 && <button onClick={() => fitTo([...matches])} title="Zoom to matches">⤢</button>}
+                        </span>
+                    )}
+                    {search && <button className="net-search-clear" onClick={() => setSearch('')} title="Clear">×</button>}
+                </div>
                 <div className="net-colormode">
                     <span>Colour</span>
                     <button className={colorMode === 'cluster' ? 'active' : ''} onClick={() => setColorMode('cluster')}>Family</button>
@@ -536,6 +603,11 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
                             {hn.id}
                             {rows.length > 1 && <span className="net-clique-count">{hover.pick.type === 'query' ? `${rows.length - 1} matches` : `clique of ${rows.length}`}</span>}
                         </div>
+                        {hover.pick.type === 'db' && (hn as DbNode).f != null && (hn as DbNode).f! >= 0 && (
+                            <div className="net-tooltip-fam">
+                                <b>{families[(hn as DbNode).f!]}</b> family · {(hn as DbNode).source}
+                            </div>
+                        )}
                         <div className="net-clique-list">
                             {aligned.map((a, i) => (
                                 <div className="net-clique-row" key={i}>

@@ -60,7 +60,7 @@ function buildMap() {
     const dbNodes: DbNode[] = (networkData.nodes as any[]).map((n, i) => ({
         id: n.id, source: n.source, x: n.x, y: n.y,
         pwm: byId.get(n.id) || all[i]?.pwm,
-        nn: n.nn, nns: n.nns, c: n.c,
+        nn: n.nn, nns: n.nns, c: n.c, f: n.f,
     }));
     return { all, dbNodes };
 }
@@ -484,6 +484,7 @@ function App() {
                     queryEdges={queryEdges}
                     sources={networkData.sources as { key: string; count: number }[]}
                     clusters={(networkData as any).clusters || []}
+                    families={(networkData as any).families || []}
                 />
             )}
 
