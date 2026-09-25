@@ -71,12 +71,16 @@ export function bestCosineAcrossShifts(m1: number[][], m2: number[][]): number {
     return best;
 }
 
-export function decideAutoRC(motif: number[][], refMotif: number[][]): boolean {
+// Decide whether `motif` should be reverse-complemented to match `refMotif`.
+// `margin` requires the RC orientation to win by a clear amount, so near-palindromic
+// motifs (where forward and RC align almost equally) keep their aligned forward
+// orientation instead of flipping on a coin-toss difference.
+export function decideAutoRC(motif: number[][], refMotif: number[][], margin = 0): boolean {
     const scFwd = bestCosineAcrossShifts(motif, refMotif);
-    
+
     const motifRC = getRC(motif);
     const scRev = bestCosineAcrossShifts(motifRC, refMotif);
-    
-    return scRev > scFwd + 1e-9;
+
+    return scRev > scFwd + margin + 1e-9;
 }
 

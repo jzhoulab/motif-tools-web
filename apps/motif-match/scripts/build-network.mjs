@@ -143,19 +143,28 @@ for (let i = 0; i < N; i++) {
     cand.sort((a, b) => row[b] - row[a]);
     topK.push(new Set(cand.slice(0, K)));
 }
-const edges = [];       // [i,j] for output
-const simLinks = [];    // {source,target,w} for layout
+const edges = [];       // [i, j, correlation] for output + hover cliques
 for (let i = 0; i < N; i++) {
     for (const j of topK[i]) {
         if (j > i && topK[j].has(i)) {           // mutual only
-            edges.push([i, j]);
-            simLinks.push({ source: i, target: j, w: wOf(S[i][j]) });
+            edges.push([i, j, Math.round(S[i][j] * 100) / 100]);
         }
     }
 }
 const connected = new Set();
 for (const [i, j] of edges) { connected.add(i); connected.add(j); }
 console.log(`mutual kNN: ${edges.length} edges, ${connected.size}/${N} connected (threshold ${THRESH}, floor ${FLOOR}, gamma ${GAMMA})`);
+
+// ---- connected components -> cluster id per node (for map-style coloring) ----
+const parent = Array.from({ length: N }, (_, i) => i);
+const find = (a) => { while (parent[a] !== a) { parent[a] = parent[parent[a]]; a = parent[a]; } return a; };
+for (const [i, j] of edges) { const ra = find(i), rb = find(j); if (ra !== rb) parent[ra] = rb; }
+const compMembers = new Map();
+for (let i = 0; i < N; i++) { const r = find(i); (compMembers.get(r) || compMembers.set(r, []).get(r)).push(i); }
+const bigComps = [...compMembers.values()].filter((m) => m.length >= 5).sort((a, b) => b.length - a.length);
+const clusterId = new Int32Array(N).fill(-1); // -1 = not in a coloured cluster
+bigComps.forEach((members, cid) => { for (const m of members) clusterId[m] = cid; });
+console.log(`coloured clusters (size>=5): ${bigComps.length}`);
 
 // ---- UMAP embedding from the precomputed similarity (distance = 1 - NCC) ----
 // A neighbour-embedding gives an organic "map": related motifs form clusters,
@@ -211,6 +220,7 @@ const outNodes = nodes.map((n, i) => ({
     y: Math.round(((simNodes[i].y - minY) / span) * 1000) / 1000,
     nn: nn[i],
     nns: Math.round(nnScore[i] * 100) / 100,
+    c: clusterId[i],
 }));
 
 const out = { generated: new Date().toISOString().slice(0, 10), sources: SOURCES.map((s) => ({ key: s.key, count: s.motifs.length })), nodes: outNodes, edges };

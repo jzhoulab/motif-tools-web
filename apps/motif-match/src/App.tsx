@@ -54,7 +54,7 @@ function buildMap() {
         for (const m of parsed.motifs) all.push({ id: m.id, pwm: m.pwm, source: db.key });
     }
     const dbNodes: DbNode[] = (networkData.nodes as any[]).map((n, i) => ({
-        id: n.id, source: n.source, x: n.x, y: n.y, pwm: all[i]?.pwm, nn: n.nn, nns: n.nns,
+        id: n.id, source: n.source, x: n.x, y: n.y, pwm: all[i]?.pwm, nn: n.nn, nns: n.nns, c: n.c,
     }));
     return { all, dbNodes };
 }
@@ -473,7 +473,7 @@ function App() {
             {view === 'network' && (
                 <NetworkView
                     nodes={map.dbNodes}
-                    edges={networkData.edges as [number, number][]}
+                    edges={networkData.edges as number[][]}
                     queryNodes={queryNodes}
                     queryEdges={queryEdges}
                     sources={networkData.sources as { key: string; count: number }[]}

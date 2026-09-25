@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import MotifLogo from './MotifLogo';
 import { decideAutoRC } from '../utils/alignment';
 
@@ -10,6 +10,14 @@ export interface DbNode {
     pwm?: number[][];
     nn?: number;   // index of nearest relative (for hover alignment)
     nns?: number;  // its correlation
+    c?: number;    // cluster id (-1 = not in a coloured cluster)
+}
+
+// Colour for a cluster id via golden-angle hue rotation (locally distinct).
+const clusterHue = (c: number) => (c * 137.508) % 360;
+function clusterColor(c: number | undefined): string {
+    if (c == null || c < 0) return '#4a5a70';
+    return `hsl(${clusterHue(c).toFixed(0)} 60% 62%)`;
 }
 export interface QueryNode {
     id: string;
@@ -27,11 +35,13 @@ export interface QueryEdge {
 
 interface Props {
     nodes: DbNode[];
-    edges: [number, number][];
+    edges: number[][]; // [i, j] or [i, j, correlation]
     queryNodes: QueryNode[];
     queryEdges: QueryEdge[];
     sources: { key: string; count: number }[];
 }
+
+const MAX_CLIQUE_LOGOS = 8;
 
 const SRC_COLORS: Record<string, string> = {
     JASPAR: '#5B8DEF',
@@ -60,6 +70,41 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
 
     const [hover, setHover] = useState<{ pick: PickResult; x: number; y: number } | null>(null);
     const [selected, setSelected] = useState<PickResult | null>(null);
+    const [colorMode, setColorMode] = useState<'cluster' | 'source'>('cluster');
+    const colorModeRef = useRef(colorMode);
+    colorModeRef.current = colorMode;
+
+    // soft "territory" blobs, one per coloured cluster (normalized coords)
+    const blobs = useMemo(() => {
+        const g = new Map<number, { xs: number[]; ys: number[] }>();
+        for (const nd of nodes) {
+            if (nd.c == null || nd.c < 0) continue;
+            let e = g.get(nd.c);
+            if (!e) { e = { xs: [], ys: [] }; g.set(nd.c, e); }
+            e.xs.push(nd.x); e.ys.push(nd.y);
+        }
+        const out: { hue: number; cx: number; cy: number; r: number }[] = [];
+        for (const [c, e] of g) {
+            const cx = e.xs.reduce((a, b) => a + b, 0) / e.xs.length;
+            const cy = e.ys.reduce((a, b) => a + b, 0) / e.ys.length;
+            let r = 0;
+            for (let k = 0; k < e.xs.length; k++) r = Math.max(r, Math.hypot(e.xs[k] - cx, e.ys[k] - cy));
+            out.push({ hue: clusterHue(c), cx, cy, r: r + 0.02 });
+        }
+        return out;
+    }, [nodes]);
+
+    // adjacency: db node index -> its clique neighbours sorted by correlation
+    const adj = useMemo(() => {
+        const m = new Map<number, { idx: number; w: number }[]>();
+        for (const e of edges) {
+            const a = e[0], b = e[1], w = e.length > 2 ? e[2] : 0;
+            (m.get(a) || m.set(a, []).get(a)!).push({ idx: b, w });
+            (m.get(b) || m.set(b, []).get(b)!).push({ idx: a, w });
+        }
+        for (const list of m.values()) list.sort((p, q) => q.w - p.w);
+        return m;
+    }, [edges]);
 
     const wx = (n: { x: number; y: number }) => n.x * WORLD;
     const wy = (n: { x: number; y: number }) => n.y * WORLD;
@@ -92,10 +137,28 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
             }
         }
         const focusUid = focus ? (focus.type === 'db' ? 'd' : 'q') + focus.idx : null;
+        const cmode = colorModeRef.current;
+        const t = transformRef.current;
 
         ctx.save();
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
         ctx.clearRect(0, 0, w, h);
+
+        // soft territory blobs behind everything (cluster colour mode, no focus)
+        if (cmode === 'cluster' && !focus) {
+            for (const bl of blobs) {
+                const [sx, sy] = toScreen(bl.cx * WORLD, bl.cy * WORLD);
+                const rr = bl.r * WORLD * t.k;
+                if (rr < 7) continue;
+                const g = ctx.createRadialGradient(sx, sy, 0, sx, sy, rr);
+                g.addColorStop(0, `hsla(${bl.hue.toFixed(0)} 60% 55% / 0.22)`);
+                g.addColorStop(1, `hsla(${bl.hue.toFixed(0)} 60% 55% / 0)`);
+                ctx.fillStyle = g;
+                ctx.beginPath();
+                ctx.arc(sx, sy, rr, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
 
         // db edges (skip if either endpoint hidden, or if the edge spans a long
         // distance in the embedding — those are UMAP "tears" that just add clutter)
@@ -152,7 +215,7 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
             const isNeigh = neigh.has(uid);
             ctx.beginPath();
             ctx.arc(sx, sy, isFocus ? 6 : isNeigh ? 4 : 2.6, 0, Math.PI * 2);
-            ctx.fillStyle = isFocus || isNeigh ? COL_HILITE : (SRC_COLORS[n.source] || '#8FA3BC');
+            ctx.fillStyle = isFocus || isNeigh ? COL_HILITE : (cmode === 'cluster' ? clusterColor(n.c) : (SRC_COLORS[n.source] || '#8FA3BC'));
             ctx.globalAlpha = focus && !isFocus && !isNeigh ? 0.35 : 0.95;
             ctx.fill();
         }
@@ -220,7 +283,7 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
         return () => window.removeEventListener('resize', resize);
     }, [fit, draw]);
 
-    useEffect(() => { draw(); }, [draw, hidden]);
+    useEffect(() => { draw(); }, [draw, hidden, colorMode]);
 
     const pick = useCallback((sx: number, sy: number): PickResult | null => {
         const t = transformRef.current;
@@ -305,77 +368,108 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
             />
 
             <div className="net-legend">
-                {sources.map((s) => (
-                    <button
-                        key={s.key}
-                        className={`net-legend-item ${hidden.has(s.key) ? 'off' : ''}`}
-                        onClick={() => toggleSource(s.key)}
-                        title="Toggle database"
-                    >
-                        <i style={{ background: SRC_COLORS[s.key] || '#8FA3BC' }} />
-                        {s.key} <span className="net-count">{s.count}</span>
-                    </button>
-                ))}
+                {colorMode === 'source' ? (
+                    sources.map((s) => (
+                        <button
+                            key={s.key}
+                            className={`net-legend-item ${hidden.has(s.key) ? 'off' : ''}`}
+                            onClick={() => toggleSource(s.key)}
+                            title="Toggle database"
+                        >
+                            <i style={{ background: SRC_COLORS[s.key] || '#8FA3BC' }} />
+                            {s.key} <span className="net-count">{s.count}</span>
+                        </button>
+                    ))
+                ) : (
+                    <span className="net-legend-item static">
+                        <i style={{ background: 'linear-gradient(90deg,#5B8DEF,#35B0A7,#A78BFA,#EC6A9C)' }} />
+                        coloured by motif family <span className="net-count">{blobs.length} clusters</span>
+                    </span>
+                )}
                 {queryNodes.length > 0 && (
                     <span className="net-legend-item static"><i style={{ background: COL_QUERY }} /> your motifs <span className="net-count">{queryNodes.length}</span></span>
                 )}
             </div>
 
             <div className="net-controls">
+                <div className="net-colormode">
+                    <span>Colour</span>
+                    <button className={colorMode === 'cluster' ? 'active' : ''} onClick={() => setColorMode('cluster')}>Family</button>
+                    <button className={colorMode === 'source' ? 'active' : ''} onClick={() => setColorMode('source')}>Database</button>
+                </div>
                 <button onClick={() => { fittedRef.current = false; fit(); }}>Fit</button>
             </div>
             <div className="net-hint">scroll to zoom · drag to pan · hover a node for its logo</div>
 
             {hover && hn && (() => {
-                // Partner motif to align against: best DB match for a query node,
-                // or the nearest relative for a DB node.
-                let partner: DbNode | null = null;
-                let relLabel = '';
-                let relScore: number | undefined;
+                // Build the clique to show: the hovered motif first, then its
+                // neighbours (DB node -> its clique; query node -> its matches),
+                // every logo reverse-complemented to the hovered motif's direction.
+                const refPwm = hn.pwm as number[][];
+                type Row = { id: string; pwm: number[][]; r?: number; self?: boolean; src?: string; query?: boolean };
+                const rows: Row[] = [{ id: hn.id, pwm: refPwm, self: true, src: hover.pick.type === 'db' ? (hn as DbNode).source : undefined, query: hover.pick.type === 'query' }];
+
                 if (hover.pick.type === 'query') {
                     const q = queryNodes[hover.pick.idx];
-                    if (q.bestDbIndex != null) partner = nodes[q.bestDbIndex] || null;
-                    relLabel = 'best match';
-                    relScore = q.bestScore;
+                    const es = queryEdges.filter((e) => e.q === hover.pick.idx).sort((a, b) => (b as any).weight - (a as any).weight);
+                    for (const e of es) {
+                        const dn = nodes[e.db];
+                        if (dn?.pwm) rows.push({ id: dn.id, pwm: dn.pwm, r: (e as any).weight, src: dn.source });
+                    }
+                    if (rows.length === 1 && q.bestDbIndex != null) {
+                        const dn = nodes[q.bestDbIndex];
+                        if (dn?.pwm) rows.push({ id: dn.id, pwm: dn.pwm, r: q.bestScore, src: dn.source });
+                    }
                 } else {
-                    const dn = nodes[hover.pick.idx];
-                    if (dn.nn != null && dn.nn >= 0) partner = nodes[dn.nn] || null;
-                    relLabel = 'closest motif';
-                    relScore = dn.nns;
+                    const neigh = adj.get(hover.pick.idx) || [];
+                    for (const nb of neigh) {
+                        const dn = nodes[nb.idx];
+                        if (dn?.pwm) rows.push({ id: dn.id, pwm: dn.pwm, r: nb.w, src: dn.source });
+                    }
+                    if (rows.length === 1 && (hn as DbNode).nn != null && (hn as DbNode).nn! >= 0) {
+                        const dn = nodes[(hn as DbNode).nn!];
+                        if (dn?.pwm) rows.push({ id: dn.id, pwm: dn.pwm, r: (hn as DbNode).nns, src: dn.source });
+                    }
                 }
-                const flip = partner && hn.pwm ? decideAutoRC(hn.pwm, partner.pwm as number[][]) : false;
+                const extra = rows.length - MAX_CLIQUE_LOGOS;
+                const shown = rows.slice(0, MAX_CLIQUE_LOGOS);
+                const tall = 30 + shown.length * 44 + (extra > 0 ? 16 : 0);
+
                 return (
                     <div
-                        className="net-tooltip"
+                        className="net-tooltip net-clique"
                         style={{
-                            left: Math.min(hover.x + 14, (sizeRef.current.w || 400) - 260),
-                            top: Math.min(hover.y + 14, (sizeRef.current.h || 400) - (partner ? 210 : 120)),
+                            left: Math.min(hover.x + 14, (sizeRef.current.w || 400) - 268),
+                            top: Math.max(8, Math.min(hover.y + 14, (sizeRef.current.h || 400) - tall)),
                         }}
                     >
                         <div className="net-tooltip-title">
                             <span className="net-dot" style={{ background: hover.pick.type === 'db' ? (SRC_COLORS[(hn as DbNode).source] || '#8FA3BC') : COL_QUERY }} />
                             {hn.id}
+                            {rows.length > 1 && <span className="net-clique-count">{hover.pick.type === 'query' ? `${rows.length - 1} matches` : `clique of ${rows.length}`}</span>}
                         </div>
-                        {hn.pwm && (
-                            <div className="net-tooltip-logo">
-                                <MotifLogo pwm={hn.pwm} height={50} glyphWidth={16} fit="fill" width="100%" />
-                            </div>
-                        )}
-                        {partner && partner.pwm ? (
-                            <>
-                                <div className="net-align-mid">
-                                    {relLabel}{relScore != null ? ` · r=${relScore.toFixed(2)}` : ''}
-                                    <span className="net-align-name">{partner.id}{flip ? ' (rc)' : ''}</span>
-                                </div>
-                                <div className="net-tooltip-logo">
-                                    <MotifLogo pwm={partner.pwm} rc={flip} height={50} glyphWidth={16} fit="fill" width="100%" />
-                                </div>
-                            </>
-                        ) : (
-                            <div className="net-tooltip-sub">
-                                {hover.pick.type === 'db' ? `${(hn as DbNode).source} database` : 'your motif / filter'}
-                            </div>
-                        )}
+                        <div className="net-clique-list">
+                            {shown.map((row, i) => {
+                                // only flip when RC is clearly better, so near-palindromic
+                                // motifs keep the orientation that already matches the reference
+                                const flip = row.self ? false : decideAutoRC(row.pwm, refPwm, 0.05);
+                                return (
+                                    <div className="net-clique-row" key={i}>
+                                        <div className="net-clique-logo">
+                                            <MotifLogo pwm={row.pwm} rc={flip} height={30} glyphWidth={12} fit="fill" width="100%" />
+                                        </div>
+                                        <div className="net-clique-meta">
+                                            <span className="net-clique-name">
+                                                <i className="net-dot" style={{ background: row.query ? COL_QUERY : (SRC_COLORS[row.src || ''] || '#8FA3BC') }} />
+                                                {row.id.length > 22 ? row.id.slice(0, 21) + '…' : row.id}{flip ? ' ↺' : ''}
+                                            </span>
+                                            <span className="net-clique-r">{row.self ? 'hovered' : (row.r != null ? `r ${row.r.toFixed(2)}` : '')}</span>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                            {extra > 0 && <div className="net-clique-more">+{extra} more in clique</div>}
+                        </div>
                     </div>
                 );
             })()}

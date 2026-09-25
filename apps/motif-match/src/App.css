@@ -608,3 +608,23 @@ body {
   font-family: ui-monospace, monospace; display: flex; flex-direction: column; gap: 1px;
 }
 .net-align-mid .net-align-name { color: var(--text-secondary); font-size: 0.72rem; word-break: break-word; }
+
+/* clique tooltip: multiple RC-aligned logos */
+.net-clique { width: 250px; }
+.net-clique-count { margin-left: auto; font-size: 0.66rem; color: var(--text-muted); font-family: ui-monospace, monospace; }
+.net-tooltip-title { display: flex; align-items: center; gap: 7px; }
+.net-clique-list { margin-top: 8px; display: flex; flex-direction: column; gap: 6px; }
+.net-clique-row { display: flex; flex-direction: column; gap: 1px; }
+.net-clique-logo { background: #050b16; border-radius: 5px; padding: 2px 4px; height: 30px; }
+.net-clique-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.net-clique-name { display: inline-flex; align-items: center; gap: 5px; font-size: 0.68rem; color: var(--text-secondary); font-family: ui-monospace, monospace; }
+.net-clique-name .net-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.net-clique-r { font-size: 0.64rem; color: var(--text-muted); font-family: ui-monospace, monospace; white-space: nowrap; }
+.net-clique-more { font-size: 0.66rem; color: var(--text-muted); text-align: center; padding-top: 2px; }
+
+/* colour-mode toggle in the network controls */
+.net-controls { align-items: center; }
+.net-colormode { display: inline-flex; align-items: center; gap: 4px; background: rgba(18,28,46,0.85); border: 1px solid var(--border-hover); border-radius: 8px; padding: 3px 6px; }
+.net-colormode span { font-size: 0.72rem; color: var(--text-muted); margin-right: 2px; }
+.net-colormode button { background: transparent; border: none; color: var(--text-secondary); font-size: 0.76rem; padding: 3px 8px; border-radius: 6px; cursor: pointer; }
+.net-colormode button.active { background: var(--accent-primary); color: #05222b; font-weight: 600; }
