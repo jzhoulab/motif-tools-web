@@ -528,3 +528,26 @@ body {
 .input-guide-note { margin: 0; font-size: 0.85rem; color: var(--text-muted); }
 .input-guide-note a { color: var(--accent-primary); text-decoration: none; }
 .input-guide-note a:hover { text-decoration: underline; }
+
+/* upload controls (Match accepts ONNX or MEME/JSON) */
+.btn-upload {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-hover);
+  color: var(--text-primary);
+  padding: 0.4rem 0.85rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.btn-upload:hover { border-color: var(--accent-primary); color: #fff; }
+.btn-upload.primary {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: #05222b;
+  font-weight: 600;
+  padding: 0.55rem 1.1rem;
+}
+.btn-upload.primary:hover { background: var(--accent-primary-hover); border-color: var(--accent-primary-hover); }
+.input-guide-actions { display: flex; align-items: center; gap: 0.9rem; margin-top: 0.25rem; }
+.input-guide-hint { font-size: 0.85rem; color: var(--text-muted); }

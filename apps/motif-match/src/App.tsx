@@ -9,27 +9,44 @@ import vierstraJson from '@resources/vierstra_clustered_motif_v2.json';
 import jasparJson from '@resources/JASPAR2024_CORE_vertebrates.json';
 // @ts-ignore
 import h14Meme from '@resources/H14CORE_meme_format.meme?raw';
+// @ts-ignore
+import cisbpMeme from '@resources/CISBP_Homo_sapiens.meme?raw';
+// @ts-ignore
+import cisbpRnaMeme from '@resources/CISBP-RNA_Homo_sapiens.meme?raw';
 
 import MotifLogo from './components/MotifLogo';
 import Heatmap from './components/Heatmap';
 import { SearchIcon, ArrowRightIcon, RefreshIcon, GridIcon, DownloadIcon } from './components/Icons';
 import { decideAutoRC } from './utils/alignment';
+import { parseMeme } from './utils/memeParser';
 
 const DATABASES = {
-  'vierstra': { name: 'Vierstra Clustered Motifs', data: vierstraJson, type: 'json' },
   'jaspar': { name: 'JASPAR 2024 CORE Vertebrates', data: jasparJson, type: 'json' },
-  'h14': { name: 'H14CORE MEME Format', data: h14Meme, type: 'meme' }
+  'h14': { name: 'HOCOMOCO H14 CORE', data: h14Meme, type: 'meme' },
+  'cisbp': { name: 'CIS-BP 2.0 Human', data: cisbpMeme, type: 'meme' },
+  'vierstra': { name: 'Vierstra Clustered Motifs', data: vierstraJson, type: 'json' },
+  'cisbp-rna': { name: 'CIS-BP-RNA Human RBPs', data: cisbpRnaMeme, type: 'meme' }
 };
+
+// A loaded query is either an ONNX model or a parsed motif set (MEME/JSON).
+type Query =
+  | { kind: 'onnx'; buffer: ArrayBuffer; name: string }
+  | { kind: 'motifs'; data: { name: string; motifs: any[] }; name: string };
 
 function App() {
     const [status, setStatus] = useState('Initializing...');
     const [selectedDbKey, setSelectedDbKey] = useState<string>('vierstra');
-    const [currentWeights, setCurrentWeights] = useState<{buffer: ArrayBuffer, name: string} | null>(null);
-    const currentWeightsRef = useRef<{buffer: ArrayBuffer, name: string} | null>(null);
-    
+    const [currentQuery, setCurrentQuery] = useState<Query | null>(null);
+    const currentQueryRef = useRef<Query | null>(null);
+
     useEffect(() => {
-        currentWeightsRef.current = currentWeights;
-    }, [currentWeights]);
+        currentQueryRef.current = currentQuery;
+    }, [currentQuery]);
+
+    const postQuery = (worker: Worker, q: Query) => {
+        if (q.kind === 'onnx') worker.postMessage({ type: 'match', payload: q.buffer });
+        else worker.postMessage({ type: 'match-motifs', payload: q.data });
+    };
     
     // Data from worker
     const [matches, setMatches] = useState<any[]>([]);
@@ -59,6 +76,7 @@ function App() {
     const [heatmapTransposed, setHeatmapTransposed] = useState(true);
 
     const workerRef = useRef<Worker | null>(null);
+    const fileInputRef = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
         const worker = new Worker();
@@ -68,10 +86,10 @@ function App() {
             const { type, message, count, matches: results, layerName, dims, motifs: rawMotifs, annotations: annots, scores: rawScores, N } = e.data;
             
             if (type === 'db-loaded') {
-                const weights = currentWeightsRef.current;
-                if (weights) {
-                    setStatus(`Database loaded. Re-matching against ${weights.name}...`);
-                    worker.postMessage({ type: 'match', payload: weights.buffer });
+                const q = currentQueryRef.current;
+                if (q) {
+                    setStatus(`Database loaded. Re-matching against ${q.name}...`);
+                    postQuery(worker, q);
                 } else {
                     setStatus(`Database loaded (${count} motifs). Ready.`);
                 }
@@ -154,21 +172,51 @@ function App() {
         document.body.removeChild(link);
     };
 
+    const loadQuery = useCallback((file: File) => {
+        const worker = workerRef.current;
+        if (!worker) return;
+        setStatus(`Reading ${file.name}...`);
+        const name = file.name.toLowerCase();
+        const reader = new FileReader();
+
+        if (name.endsWith('.onnx')) {
+            reader.onload = () => {
+                if (!reader.result) return;
+                const buffer = reader.result as ArrayBuffer;
+                const q: Query = { kind: 'onnx', buffer, name: file.name };
+                setCurrentQuery(q);
+                postQuery(worker, q);
+            };
+            reader.readAsArrayBuffer(file);
+        } else {
+            // MEME (.meme/.txt) or JSON motif set
+            reader.onload = () => {
+                if (typeof reader.result !== 'string') return;
+                const text = reader.result;
+                try {
+                    let data: { name: string; motifs: any[] };
+                    try {
+                        const json = JSON.parse(text);
+                        data = json.motifs ? json : { name: file.name, motifs: json };
+                    } catch {
+                        data = parseMeme(text);
+                    }
+                    if (!data.motifs || !data.motifs.length) throw new Error('No motifs found in file.');
+                    const q: Query = { kind: 'motifs', data, name: file.name };
+                    setCurrentQuery(q);
+                    postQuery(worker, q);
+                } catch (err: any) {
+                    setStatus(`Error: ${err.message}`);
+                }
+            };
+            reader.readAsText(file);
+        }
+    }, []);
+
     const onDrop = useCallback((acceptedFiles: File[]) => {
         const file = acceptedFiles[0];
-        if (!file || !workerRef.current) return;
-
-        setStatus(`Reading ${file.name}...`);
-        const reader = new FileReader();
-        reader.onload = () => {
-            if (reader.result) {
-                const buffer = reader.result as ArrayBuffer;
-                setCurrentWeights({ buffer, name: file.name });
-                workerRef.current?.postMessage({ type: 'match', payload: buffer });
-            }
-        };
-        reader.readAsArrayBuffer(file);
-    }, []);
+        if (file) loadQuery(file);
+    }, [loadQuery]);
 
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop, noClick: true });
 
@@ -275,9 +323,16 @@ function App() {
     return (
         <div className="App" {...getRootProps()}>
                 <input {...getInputProps()} />
+                <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept=".onnx,.meme,.txt,.json"
+                    style={{ display: 'none' }}
+                    onChange={(e) => { const f = e.target.files?.[0]; if (f) loadQuery(f); e.target.value = ''; }}
+                />
             {isDragActive && (
                 <div className="dropzone-overlay">
-                    <div>Drop your <strong>.onnx</strong> model to analyze its motif filters</div>
+                    <div>Drop an <strong>.onnx</strong> model or a <strong>.meme / .json</strong> motif file</div>
             </div>
             )}
 
@@ -290,6 +345,7 @@ function App() {
                 </a>
                 <div className="controls">
                     <a className="back-link" href="https://motif.zhoulab.io/">← All tools</a>
+                    <button className="btn-upload" onClick={() => fileInputRef.current?.click()}>Load file…</button>
                     <div className="status-pill">
                         <div className={`status-dot ${status.includes('Ready') || status.includes('complete') ? 'ready' : 'busy'}`}></div>
                         {status}
@@ -447,28 +503,32 @@ function App() {
                     ) : (
                         <div className="input-guide">
                             <GridIcon className="empty-icon" />
-                            <h2>Drop an ONNX model to begin</h2>
+                            <h2>Load a model or a motif set to begin</h2>
                             <p className="input-guide-lead">
-                                Motif Match reads the <strong>first 1-D convolution layer</strong> of a trained
-                                DNA sequence model, clusters its learned filters, and aligns each cluster to
-                                known motifs in the database you pick above.
+                                Motif Match clusters a collection of motifs and aligns each cluster to known
+                                motifs in the database you pick above — so you can see which known motifs your
+                                set resembles. The collection can come from a trained model or from a motif file.
                             </p>
                             <div className="input-spec">
                                 <div className="input-spec-row">
-                                    <span className="input-spec-k">Input</span>
-                                    <span className="input-spec-v">a single <code>.onnx</code> file, dragged anywhere onto this page</span>
+                                    <span className="input-spec-k">ONNX model</span>
+                                    <span className="input-spec-v">a <code>.onnx</code> file whose first layer is a <code>Conv1d</code> of shape <code>(filters × 4 × width)</code> — one channel per base A/C/G/T. Its learned filters become the query set.</span>
                                 </div>
                                 <div className="input-spec-row">
-                                    <span className="input-spec-k">Expected layer</span>
-                                    <span className="input-spec-v">a <code>Conv1d</code> weight of shape <code>(filters × 4 × width)</code> — one input channel per base A/C/G/T (the first 3-D tensor in the graph is used)</span>
+                                    <span className="input-spec-k">Motif file</span>
+                                    <span className="input-spec-v">a <code>.meme</code> file, or JSON <code>{'{ motifs: [{ id, pwm }] }'}</code>, to compare any set of motifs against the database.</span>
                                 </div>
                                 <div className="input-spec-row">
                                     <span className="input-spec-k">Output</span>
-                                    <span className="input-spec-v">filter clusters matched to motifs, with aligned logos and a similarity heatmap; export as CSV</span>
+                                    <span className="input-spec-v">clusters matched to known motifs, with aligned logos and a similarity heatmap; export as CSV.</span>
                                 </div>
                             </div>
+                            <div className="input-guide-actions">
+                                <button className="btn-upload primary" onClick={() => fileInputRef.current?.click()}>Choose a file…</button>
+                                <span className="input-guide-hint">or drag it anywhere onto this page</span>
+                            </div>
                             <p className="input-guide-note">
-                                Not what you're looking for? To scan a sequence or search a motif, use the
+                                Just have a sequence or a single motif? Use the
                                 {' '}<a href="https://motif.zhoulab.io/scan/">Scanner</a> or
                                 {' '}<a href="https://motif.zhoulab.io/search/">Search</a> tools instead.
                             </p>

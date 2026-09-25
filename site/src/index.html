@@ -131,7 +131,7 @@
   .sec-lead { color: var(--muted); font-size: 17px; max-width: 46em; margin-top: 14px; }
 
   /* ---------- tools ---------- */
-  .tools { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+  .tools { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
   .tool {
     position: relative; display: flex; flex-direction: column;
     background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
@@ -141,6 +141,7 @@
   .tool::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; }
   .tool.scan::before { background: var(--A); }
   .tool.search::before { background: var(--C); }
+  .tool.match::before { background: var(--G); }
   .tool .kicker { font-family: var(--font-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted-2); }
   .tool h3 { font-size: 24px; margin-top: 8px; }
   .tool p { color: var(--muted); margin-top: 12px; font-size: 15.5px; }
@@ -149,6 +150,7 @@
   .tool ul li::before { content: ""; position: absolute; left: 0; top: 8px; width: 8px; height: 8px; border-radius: 2px; }
   .tool.scan ul li::before { background: var(--A); }
   .tool.search ul li::before { background: var(--C); }
+  .tool.match ul li::before { background: var(--G); }
   .tool .open { margin-top: 24px; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 600; font-size: 15px; color: var(--text); }
   .tool .open .arr { transition: transform .15s; }
   .tool:hover .open .arr { transform: translateX(4px); }
@@ -282,8 +284,8 @@
 <section id="tools">
   <div class="wrap">
     <div class="sec-head"><span class="bases"><i class="bA"></i><i class="bC"></i></span><span class="eyebrow">The tools</span></div>
-    <h2 class="sec-title">Two ways to work with motifs</h2>
-    <p class="sec-lead">Both tools bundle JASPAR, HOCOMOCO, CIS-BP, and Vierstra for DNA plus CIS-BP-RNA — combine several at once, add your own MEME or JSON file, and build to a single HTML file you can keep.</p>
+    <h2 class="sec-title">Three ways to work with motifs</h2>
+    <p class="sec-lead">All three run in your browser on the same motif databases — JASPAR, HOCOMOCO, CIS-BP, and Vierstra for DNA plus CIS-BP-RNA — take your own MEME or JSON files, and build to single HTML files you can keep.</p>
 
     <div class="tools">
       <a class="tool scan" href="/scan/">
@@ -312,15 +314,19 @@
         </ul>
         <span class="open">Open Search <span class="arr">→</span></span>
       </a>
-    </div>
 
-    <div class="tool-secondary">
-      <div class="l">
-        <div class="kicker">For model developers</div>
+      <a class="tool match" href="/match/">
+        <div class="kicker">Motif set in → known matches out</div>
         <h3>Motif Match</h3>
-        <p><strong>Needs an ONNX model, not a sequence.</strong> Drop a trained DNA sequence model whose first layer is a 1-D convolution over the four bases (weight shape filters&nbsp;×&nbsp;4&nbsp;×&nbsp;width). Motif Match clusters those learned filters and aligns each cluster to known motifs, so you can see what your model learned. Specialized — most users want the Scanner or Search.</p>
-      </div>
-      <a href="/match/">Open Motif Match →</a>
+        <p>Compare a whole set of motifs — or the filters a trained model learned — against the databases, clustered and aligned so you can see what they resemble.</p>
+        <ul>
+          <li>Upload a MEME file or JSON motif set to compare any motifs</li>
+          <li>Or drop an ONNX model — reads its first Conv1d (filters × 4 × width)</li>
+          <li>Clusters the set and matches each cluster to known motifs</li>
+          <li>Aligned logos, similarity heatmap, CSV export</li>
+        </ul>
+        <span class="open">Open Match <span class="arr">→</span></span>
+      </a>
     </div>
   </div>
 </section>
