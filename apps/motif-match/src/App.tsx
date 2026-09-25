@@ -53,8 +53,14 @@ function buildMap() {
         const parsed: any = db.type === 'meme' ? parseMeme(db.data as string) : db.data;
         for (const m of parsed.motifs) all.push({ id: m.id, pwm: m.pwm, source: db.key });
     }
+    // Look matrices up by motif id (falling back to index) so a parser-count drift
+    // can never silently pair a node with the wrong logo.
+    const byId = new Map<string, number[][]>();
+    for (const m of all) if (!byId.has(m.id)) byId.set(m.id, m.pwm);
     const dbNodes: DbNode[] = (networkData.nodes as any[]).map((n, i) => ({
-        id: n.id, source: n.source, x: n.x, y: n.y, pwm: all[i]?.pwm, nn: n.nn, nns: n.nns, c: n.c,
+        id: n.id, source: n.source, x: n.x, y: n.y,
+        pwm: byId.get(n.id) || all[i]?.pwm,
+        nn: n.nn, nns: n.nns, c: n.c,
     }));
     return { all, dbNodes };
 }

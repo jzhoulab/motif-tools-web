@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import MotifLogo from './MotifLogo';
-import { decideAutoRC, getRC, bestShift } from '../utils/alignment';
+import { getRC, bestShift } from '../utils/alignment';
 
 export interface DbNode {
     id: string;
@@ -153,14 +153,15 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
         ctx.clearRect(0, 0, w, h);
 
-        // soft territory blobs behind everything (cluster colour mode, no focus)
-        if (cmode === 'cluster' && !focus) {
+        // soft territory blobs behind everything (cluster colour mode; dimmed while focused)
+        if (cmode === 'cluster') {
+            const blobA = focus ? 0.12 : 0.22;
             for (const bl of blobs) {
                 const [sx, sy] = toScreen(bl.cx * WORLD, bl.cy * WORLD);
                 const rr = bl.r * WORLD * t.k;
                 if (rr < 7) continue;
                 const g = ctx.createRadialGradient(sx, sy, 0, sx, sy, rr);
-                g.addColorStop(0, `hsla(${bl.hue.toFixed(0)} 60% 55% / 0.22)`);
+                g.addColorStop(0, `hsla(${bl.hue.toFixed(0)} 60% 55% / ${blobA})`);
                 g.addColorStop(1, `hsla(${bl.hue.toFixed(0)} 60% 55% / 0)`);
                 ctx.fillStyle = g;
                 ctx.beginPath();
@@ -262,23 +263,35 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
         }
         if (focus) label(focus.type === 'db' ? nodes[focus.idx] : queryNodes[focus.idx], true);
 
-        // cluster (motif family) names, like place labels on a map
-        if (cmode === 'cluster' && !focus) {
-            const minSize = t.k > 1.3 ? 6 : t.k > 0.7 ? 14 : 26;
+        // cluster (motif family) names — always shown, like place labels on a map
+        if (cmode === 'cluster') {
+            const minSize = t.k > 1.3 ? 6 : t.k > 0.7 ? 12 : 20;
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
+            ctx.globalAlpha = focus ? 0.55 : 1;
+            // place labels largest-first, skipping any that would collide (map-style)
+            const placed: { x1: number; y1: number; x2: number; y2: number }[] = [];
             for (const cl of clusters) {
                 if (!cl.label || cl.size < minSize) continue;
                 const [sx, sy] = toScreen(cl.x * WORLD, cl.y * WORLD);
                 if (sx < -40 || sy < -20 || sx > w + 40 || sy > h + 20) continue;
                 const fs = Math.max(11, Math.min(20, 7 + Math.sqrt(cl.size) * 0.8));
                 ctx.font = `600 ${fs}px ui-sans-serif, system-ui, sans-serif`;
+                const tw = ctx.measureText(cl.label).width;
+                const box = { x1: sx - tw / 2 - 4, y1: sy - fs / 2 - 2, x2: sx + tw / 2 + 4, y2: sy + fs / 2 + 2 };
+                let clash = false;
+                for (const p of placed) {
+                    if (box.x1 < p.x2 && box.x2 > p.x1 && box.y1 < p.y2 && box.y2 > p.y1) { clash = true; break; }
+                }
+                if (clash) continue;
+                placed.push(box);
                 ctx.shadowColor = 'rgba(0,0,0,0.95)';
                 ctx.shadowBlur = 5;
                 ctx.fillStyle = `hsl(${clusterHue(cl.c).toFixed(0)} 75% 82%)`;
                 ctx.fillText(cl.label, sx, sy);
                 ctx.shadowBlur = 0;
             }
+            ctx.globalAlpha = 1;
         }
 
         ctx.restore();
@@ -441,7 +454,24 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
                 // Build the clique to show: the hovered motif first, then its
                 // neighbours (DB node -> its clique; query node -> its matches),
                 // every logo reverse-complemented to the hovered motif's direction.
-                const refPwm = hn.pwm as number[][];
+                const refPwm = (hn.pwm as number[][] | undefined);
+                // No matrix for this node (shouldn't happen, but never crash the view)
+                if (!refPwm || !refPwm[0]?.length) {
+                    return (
+                        <div
+                            className="net-tooltip"
+                            style={{
+                                left: Math.min(hover.x + 14, (sizeRef.current.w || 400) - 260),
+                                top: Math.max(8, Math.min(hover.y + 14, (sizeRef.current.h || 400) - 70)),
+                            }}
+                        >
+                            <div className="net-tooltip-title">
+                                <span className="net-dot" style={{ background: hover.pick.type === 'db' ? (SRC_COLORS[(hn as DbNode).source] || '#8FA3BC') : COL_QUERY }} />
+                                {hn.id}
+                            </div>
+                        </div>
+                    );
+                }
                 type Row = { id: string; pwm: number[][]; r?: number; self?: boolean; src?: string; query?: boolean };
                 const rows: Row[] = [{ id: hn.id, pwm: refPwm, self: true, src: hover.pick.type === 'db' ? (hn as DbNode).source : undefined, query: hover.pick.type === 'query' }];
 
@@ -472,11 +502,18 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
 
                 // Orient each row to the reference and compute its offset so the shared
                 // core lines up column-by-column across the stacked logos.
+                // Orientation AND offset come from the same metric: take whichever
+                // strand cross-correlates better with the hovered motif, and use that
+                // strand's argmax offset. (A separate RC rule would disagree with the
+                // offset and leave logos visibly unaligned.)
                 const aligned = shown.map((row) => {
-                    const flip = row.self ? false : decideAutoRC(row.pwm, refPwm, 0.05);
-                    const oriented = flip ? getRC(row.pwm) : row.pwm;
-                    const shift = row.self ? 0 : bestShift(oriented, refPwm).shift;
-                    return { row, flip, oriented, shift, len: oriented[0].length };
+                    if (!row.pwm || !row.pwm[0]?.length) return { row, flip: false, shift: 0, len: 1 };
+                    const len = row.pwm[0].length;
+                    if (row.self) return { row, flip: false, shift: 0, len };
+                    const fwd = bestShift(row.pwm, refPwm);
+                    const rev = bestShift(getRC(row.pwm), refPwm);
+                    const flip = rev.score > fwd.score;
+                    return { row, flip, shift: (flip ? rev : fwd).shift, len };
                 });
                 let gMin = 0, gMax = refPwm[0].length;
                 for (const a of aligned) { gMin = Math.min(gMin, a.shift); gMax = Math.max(gMax, a.shift + a.len); }
