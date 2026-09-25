@@ -20,6 +20,7 @@ import NetworkView, { type DbNode, type QueryNode, type QueryEdge } from './comp
 import { SearchIcon, ArrowRightIcon, RefreshIcon, GridIcon, DownloadIcon } from './components/Icons';
 import { decideAutoRC } from './utils/alignment';
 import { parseMeme } from './utils/memeParser';
+import { sequenceToPwm } from './utils/sequence';
 // @ts-ignore
 import networkData from '@resources/motif-network.json';
 
@@ -308,6 +309,19 @@ function App() {
         }
     }, []);
 
+    // Place a typed DNA/IUPAC sequence onto the map (same path as an uploaded motif).
+    const handleSequenceSearch = useCallback((seq: string) => {
+        const worker = workerRef.current;
+        if (!worker) return;
+        const pwm = sequenceToPwm(seq);
+        if (!pwm[0].length) return;
+        const data = { name: seq, motifs: [{ id: seq.toUpperCase(), pwm }] };
+        const q: Query = { kind: 'motifs', data, name: seq.toUpperCase() };
+        setCurrentQuery(q);
+        setStatus(`Placing ${seq.toUpperCase()} on the map…`);
+        worker.postMessage({ type: 'network-query', payload: { kind: 'motifs', data } });
+    }, []);
+
     const onDrop = useCallback((acceptedFiles: File[]) => {
         const file = acceptedFiles[0];
         if (file) loadQuery(file);
@@ -485,6 +499,7 @@ function App() {
                     sources={networkData.sources as { key: string; count: number }[]}
                     clusters={(networkData as any).clusters || []}
                     families={(networkData as any).families || []}
+                    onSequenceSearch={handleSequenceSearch}
                 />
             )}
 

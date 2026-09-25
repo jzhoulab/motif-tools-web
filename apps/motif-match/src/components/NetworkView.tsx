@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import MotifLogo from './MotifLogo';
 import { getRC, bestShift } from '../utils/alignment';
+import { isSequence } from '../utils/sequence';
 
 export interface DbNode {
     id: string;
@@ -56,6 +57,7 @@ interface Props {
     sources: { key: string; count: number }[];
     clusters: Cluster[];
     families: string[];
+    onSequenceSearch: (seq: string) => void;
 }
 
 const MAX_CLIQUE_LOGOS = 8;
@@ -74,7 +76,7 @@ const WORLD = 1400; // normalized coords are scaled into a WORLD x WORLD box
 
 type PickResult = { type: 'db' | 'query'; idx: number };
 
-export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sources, clusters, families }: Props) {
+export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sources, clusters, families, onSequenceSearch }: Props) {
     const wrapRef = useRef<HTMLDivElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const transformRef = useRef({ x: 0, y: 0, k: 1 });
@@ -91,9 +93,11 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
     const colorModeRef = useRef(colorMode);
     colorModeRef.current = colorMode;
     const [search, setSearch] = useState('');
+    const [searchMode, setSearchMode] = useState<'name' | 'seq'>('name');
 
     // motifs matching the search (by motif id or TF family name)
     const matches = useMemo(() => {
+        if (searchMode !== 'name') return null;
         const q = search.trim().toLowerCase();
         if (q.length < 2) return null;
         const set = new Set<number>();
@@ -103,7 +107,7 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
             if (n.id.toLowerCase().includes(q) || (fam && fam.toLowerCase().includes(q))) set.add(i);
         }
         return set;
-    }, [search, nodes, families]);
+    }, [search, searchMode, nodes, families]);
     const matchesRef = useRef(matches);
     matchesRef.current = matches;
 
@@ -493,14 +497,35 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
 
             <div className="net-controls">
                 <div className="net-search">
+                    <div className="net-search-mode">
+                        <button className={searchMode === 'name' ? 'active' : ''} onClick={() => setSearchMode('name')} title="Search motif / family names">name</button>
+                        <button className={searchMode === 'seq' ? 'active' : ''} onClick={() => setSearchMode('seq')} title="Find where a DNA sequence lands on the map">seq</button>
+                    </div>
                     <input
                         value={search}
-                        onChange={(e) => setSearch(e.target.value)}
-                        onKeyDown={(e) => { if (e.key === 'Enter' && matches) fitTo([...matches]); if (e.key === 'Escape') setSearch(''); }}
-                        placeholder="Search motif or family…"
+                        onChange={(e) => {
+                            const v = e.target.value;
+                            setSearch(v);
+                            // typing a DNA/IUPAC string is almost certainly a sequence query
+                            if (searchMode === 'name' && isSequence(v) && v.trim().length >= 6) setSearchMode('seq');
+                        }}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                                if (searchMode === 'seq') { if (isSequence(search)) onSequenceSearch(search.trim()); }
+                                else if (matches) fitTo([...matches]);
+                            }
+                            if (e.key === 'Escape') setSearch('');
+                        }}
+                        placeholder={searchMode === 'seq' ? 'Type a sequence, e.g. TGASTCA…' : 'Search motif or family…'}
                         spellCheck={false}
                     />
-                    {matches && (
+                    {searchMode === 'seq' ? (
+                        <span className="net-search-count">
+                            {isSequence(search)
+                                ? <button onClick={() => onSequenceSearch(search.trim())} title="Place this sequence on the map">place ⏎</button>
+                                : (search.trim() ? <span className="net-search-hint">A/C/G/T or IUPAC</span> : null)}
+                        </span>
+                    ) : matches && (
                         <span className="net-search-count">
                             {matches.size} {matches.size === 1 ? 'hit' : 'hits'}
                             {matches.size > 0 && <button onClick={() => fitTo([...matches])} title="Zoom to matches">⤢</button>}
