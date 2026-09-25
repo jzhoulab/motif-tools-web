@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import MotifLogo from './MotifLogo';
+import { decideAutoRC } from '../utils/alignment';
 
 export interface DbNode {
     id: string;
@@ -7,6 +8,8 @@ export interface DbNode {
     x: number; // normalized 0..1
     y: number;
     pwm?: number[][];
+    nn?: number;   // index of nearest relative (for hover alignment)
+    nns?: number;  // its correlation
 }
 export interface QueryNode {
     id: string;
@@ -15,6 +18,7 @@ export interface QueryNode {
     pwm: number[][];
     bestId?: string;
     bestScore?: number;
+    bestDbIndex?: number;
 }
 export interface QueryEdge {
     q: number;
@@ -319,32 +323,59 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
             </div>
             <div className="net-hint">scroll to zoom · drag to pan · hover a node for its logo</div>
 
-            {hover && hn && (
-                <div
-                    className="net-tooltip"
-                    style={{
-                        left: Math.min(hover.x + 14, (sizeRef.current.w || 400) - 250),
-                        top: Math.min(hover.y + 14, (sizeRef.current.h || 400) - 140),
-                    }}
-                >
-                    <div className="net-tooltip-title">
-                        <span className="net-dot" style={{ background: hover.pick.type === 'db' ? (SRC_COLORS[(hn as DbNode).source] || '#8FA3BC') : COL_QUERY }} />
-                        {hn.id}
-                    </div>
-                    {hn.pwm && (
-                        <div className="net-tooltip-logo">
-                            <MotifLogo pwm={hn.pwm} height={54} glyphWidth={16} fit="fill" width="100%" />
+            {hover && hn && (() => {
+                // Partner motif to align against: best DB match for a query node,
+                // or the nearest relative for a DB node.
+                let partner: DbNode | null = null;
+                let relLabel = '';
+                let relScore: number | undefined;
+                if (hover.pick.type === 'query') {
+                    const q = queryNodes[hover.pick.idx];
+                    if (q.bestDbIndex != null) partner = nodes[q.bestDbIndex] || null;
+                    relLabel = 'best match';
+                    relScore = q.bestScore;
+                } else {
+                    const dn = nodes[hover.pick.idx];
+                    if (dn.nn != null && dn.nn >= 0) partner = nodes[dn.nn] || null;
+                    relLabel = 'closest motif';
+                    relScore = dn.nns;
+                }
+                const flip = partner && hn.pwm ? decideAutoRC(hn.pwm, partner.pwm as number[][]) : false;
+                return (
+                    <div
+                        className="net-tooltip"
+                        style={{
+                            left: Math.min(hover.x + 14, (sizeRef.current.w || 400) - 260),
+                            top: Math.min(hover.y + 14, (sizeRef.current.h || 400) - (partner ? 210 : 120)),
+                        }}
+                    >
+                        <div className="net-tooltip-title">
+                            <span className="net-dot" style={{ background: hover.pick.type === 'db' ? (SRC_COLORS[(hn as DbNode).source] || '#8FA3BC') : COL_QUERY }} />
+                            {hn.id}
                         </div>
-                    )}
-                    <div className="net-tooltip-sub">
-                        {hover.pick.type === 'db'
-                            ? `${(hn as DbNode).source} database`
-                            : (queryNodes[hover.pick.idx].bestId
-                                ? `best match: ${queryNodes[hover.pick.idx].bestId} (${(queryNodes[hover.pick.idx].bestScore ?? 0).toFixed(2)})`
-                                : 'your motif / filter')}
+                        {hn.pwm && (
+                            <div className="net-tooltip-logo">
+                                <MotifLogo pwm={hn.pwm} height={50} glyphWidth={16} fit="fill" width="100%" />
+                            </div>
+                        )}
+                        {partner && partner.pwm ? (
+                            <>
+                                <div className="net-align-mid">
+                                    {relLabel}{relScore != null ? ` · r=${relScore.toFixed(2)}` : ''}
+                                    <span className="net-align-name">{partner.id}{flip ? ' (rc)' : ''}</span>
+                                </div>
+                                <div className="net-tooltip-logo">
+                                    <MotifLogo pwm={partner.pwm} rc={flip} height={50} glyphWidth={16} fit="fill" width="100%" />
+                                </div>
+                            </>
+                        ) : (
+                            <div className="net-tooltip-sub">
+                                {hover.pick.type === 'db' ? `${(hn as DbNode).source} database` : 'your motif / filter'}
+                            </div>
+                        )}
                     </div>
-                </div>
-            )}
+                );
+            })()}
         </div>
     );
 }

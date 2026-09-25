@@ -601,3 +601,10 @@ body {
 .net-tooltip .net-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
 .net-tooltip-logo { margin: 8px 0 6px; background: #050b16; border-radius: 6px; padding: 4px; height: 54px; }
 .net-tooltip-sub { font-size: 0.72rem; color: var(--text-muted); font-family: ui-monospace, monospace; }
+
+/* hover alignment (two logos) in the network tooltip */
+.net-align-mid {
+  margin: 7px 0 3px; font-size: 0.68rem; color: var(--text-muted);
+  font-family: ui-monospace, monospace; display: flex; flex-direction: column; gap: 1px;
+}
+.net-align-mid .net-align-name { color: var(--text-secondary); font-size: 0.72rem; word-break: break-word; }

@@ -54,7 +54,7 @@ function buildMap() {
         for (const m of parsed.motifs) all.push({ id: m.id, pwm: m.pwm, source: db.key });
     }
     const dbNodes: DbNode[] = (networkData.nodes as any[]).map((n, i) => ({
-        id: n.id, source: n.source, x: n.x, y: n.y, pwm: all[i]?.pwm,
+        id: n.id, source: n.source, x: n.x, y: n.y, pwm: all[i]?.pwm, nn: n.nn, nns: n.nns,
     }));
     return { all, dbNodes };
 }
@@ -153,7 +153,7 @@ function App() {
                     // small deterministic jitter so co-located query nodes don't stack
                     x += Math.cos(i * 2.399) * 0.01; y += Math.sin(i * 2.399) * 0.01;
                     const best = bm[i] ? nodesArr[bm[i].db] : null;
-                    return { id: n.id, pwm: n.pwm, x, y, bestId: best?.id, bestScore: bm[i]?.weight };
+                    return { id: n.id, pwm: n.pwm, x, y, bestId: best?.id, bestScore: bm[i]?.weight, bestDbIndex: bm[i]?.db };
                 });
                 setQueryNodes(placed);
                 setQueryEdges(qe);
