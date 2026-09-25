@@ -8,7 +8,8 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { forceSimulation, forceManyBody, forceLink, forceCenter, forceCollide, forceX, forceY } from 'd3-force';
+import umapPkg from 'umap-js';
+const { UMAP } = umapPkg;
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
 const R = (f) => resolve(root, 'resources', f);
@@ -156,60 +157,38 @@ const connected = new Set();
 for (const [i, j] of edges) { connected.add(i); connected.add(j); }
 console.log(`mutual kNN: ${edges.length} edges, ${connected.size}/${N} connected (threshold ${THRESH}, floor ${FLOOR}, gamma ${GAMMA})`);
 
-// ---- connected components (union-find) so each motif family gets its own region ----
-const parent = Array.from({ length: N }, (_, i) => i);
-const find = (a) => { while (parent[a] !== a) { parent[a] = parent[parent[a]]; a = parent[a]; } return a; };
-const union = (a, b) => { const ra = find(a), rb = find(b); if (ra !== rb) parent[ra] = rb; };
-for (const [i, j] of edges) union(i, j);
-const compMap = new Map();
-for (let i = 0; i < N; i++) { const r = find(i); if (!compMap.has(r)) compMap.set(r, []); compMap.get(r).push(i); }
-const comps = [...compMap.values()].sort((a, b) => b.length - a.length);
-console.log(`components: ${comps.length} (largest ${comps[0].length}, singletons ${comps.filter((c) => c.length === 1).length})`);
-
-// Multi-node cliques get their own well-spaced slots on a jittered golden-angle
-// spiral (tight clumps). Singletons are scattered organically across the disc so
-// they read as a background field rather than artificial concentric rings.
-const GA = 2.399963229728653; // golden angle
-const compCenter = new Map(); // node index -> {cx, cy, big}
-const multi = comps.filter((c) => c.length >= 2);
-const singles = comps.filter((c) => c.length === 1);
-let acc = 0;
-multi.forEach((members, k) => {
-    const rad = Math.sqrt(members.length) * 7;
-    acc += rad + 30;
-    const R = 3.4 * Math.sqrt(acc);
-    const ang = k * GA + (Math.random() - 0.5) * 0.5;
-    const cx = Math.cos(ang) * R, cy = Math.sin(ang) * R;
-    for (const m of members) compCenter.set(m, { cx, cy, big: true });
-});
-const Rmax = 3.4 * Math.sqrt(acc) || 200;
-for (const [m] of singles) {
-    const ang = Math.random() * 2 * Math.PI;
-    const r = Math.sqrt(Math.random()) * Rmax * 1.02; // uniform over the disc
-    compCenter.set(m, { cx: Math.cos(ang) * r, cy: Math.sin(ang) * r, big: false });
+// ---- UMAP embedding from the precomputed similarity (distance = 1 - NCC) ----
+// A neighbour-embedding gives an organic "map": related motifs form clusters,
+// unrelated ones spread out — no artificial placement. We feed UMAP our own kNN.
+const NN = 15;
+const knnIndices = [];
+const knnDistances = [];
+for (let i = 0; i < N; i++) {
+    const row = S[i];
+    const order = [];
+    for (let j = 0; j < N; j++) if (j !== i) order.push(j);
+    order.sort((a, b) => row[b] - row[a]);
+    const idx = [i];                          // UMAP expects self as the first neighbour
+    const dist = [0];
+    for (let n = 0; n < NN - 1; n++) {
+        const j = order[n];
+        idx.push(j);
+        dist.push(Math.max(0, 1 - row[j]));   // similarity -> distance
+    }
+    knnIndices.push(idx);
+    knnDistances.push(dist);
 }
 
-// ---- force layout: strong edges pull tight; each node is pulled toward its
-// component's target centre so families separate into distinct clumps ----
-const simNodes = nodes.map((n, i) => {
-    const c = compCenter.get(i);
-    return { i, cx: c.cx, cy: c.cy, big: c.big, x: c.cx + (Math.random() - 0.5) * 8, y: c.cy + (Math.random() - 0.5) * 8 };
-});
-const sim = forceSimulation(simNodes)
-    .force('link', forceLink(simLinks).id((d) => d.i)
-        .distance((l) => 3 + (1 - l.w) * 30)
-        .strength((l) => 0.2 + 0.8 * l.w))
-    .force('charge', forceManyBody().strength(-16).distanceMax(130).theta(0.9))
-    .force('x', forceX((d) => d.cx).strength((d) => (d.big ? 0.25 : 0.04)))
-    .force('y', forceY((d) => d.cy).strength((d) => (d.big ? 0.25 : 0.04)))
-    .force('collide', forceCollide(3))
-    .stop();
-const ticks = 400;
-for (let k = 0; k < ticks; k++) {
-    sim.alpha(Math.max(0.02, 1 - k / ticks));
-    sim.tick();
-    if (k % 100 === 0) console.log(`  layout tick ${k}/${ticks}`);
-}
+// deterministic RNG so the map is stable across rebuilds
+let seed = 1234567;
+const rand = () => { seed = (seed * 1103515245 + 12345) & 0x7fffffff; return seed / 0x7fffffff; };
+const t1 = Date.now();
+const umap = new UMAP({ nComponents: 2, nNeighbors: NN, minDist: 0.25, spread: 1.4, random: rand });
+umap.setPrecomputedKNN(knnIndices, knnDistances);
+const dummyX = Array.from({ length: N }, () => [0]);
+const embedding = umap.fit(dummyX);
+console.log(`UMAP embedded ${N} motifs in ${((Date.now() - t1) / 1000).toFixed(1)}s`);
+const simNodes = embedding.map(([x, y]) => ({ x, y }));
 
 // nearest overall relative per node (for the hover alignment), regardless of threshold
 const nn = new Int32Array(N).fill(-1);

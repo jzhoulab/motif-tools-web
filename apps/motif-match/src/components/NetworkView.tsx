@@ -97,13 +97,16 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
         ctx.clearRect(0, 0, w, h);
 
-        // db edges (skip if either endpoint hidden)
+        // db edges (skip if either endpoint hidden, or if the edge spans a long
+        // distance in the embedding — those are UMAP "tears" that just add clutter)
+        const MAXLEN = 0.09; // in normalized 0..1 coords
         ctx.strokeStyle = COL_EDGE;
         ctx.lineWidth = 1;
         ctx.beginPath();
         for (const [a, b] of edges) {
             const na = nodes[a], nb = nodes[b];
             if (hid.has(na.source) || hid.has(nb.source)) continue;
+            if (Math.hypot(na.x - nb.x, na.y - nb.y) > MAXLEN) continue;
             const [ax, ay] = toScreen(wx(na), wy(na));
             const [bx, by] = toScreen(wx(nb), wy(nb));
             ctx.moveTo(ax, ay); ctx.lineTo(bx, by);
