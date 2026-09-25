@@ -115,7 +115,7 @@ const norms = enc.map(norm);
 
 // ---- full pairwise (upper triangle) then kNN edges ----
 const t0 = Date.now();
-const K = 6, THRESH = 0.6;
+const K = 8, THRESH = 0.7;
 const S = Array.from({ length: N }, () => new Float32Array(N));
 for (let i = 0; i < N; i++) {
     for (let j = i + 1; j < N; j++) {
@@ -126,35 +126,57 @@ for (let i = 0; i < N; i++) {
 }
 console.log(`pairwise done in ${((Date.now() - t0) / 1000).toFixed(1)}s`);
 
-const edges = [];
-const seen = new Set();
+// Emphasize strong correlations and let weak ones decay to ~0:
+//   w(s) = ((s - FLOOR) / (1 - FLOOR))^GAMMA, clamped to [0,1]
+// with FLOOR=0.7 (so s<=0.7 contributes zero) and GAMMA>1 (superlinear).
+const FLOOR = 0.7, GAMMA = 3;
+const wOf = (s) => { const t = (s - FLOOR) / (1 - FLOOR); return t <= 0 ? 0 : Math.pow(Math.min(1, t), GAMMA); };
+
+// Top-K neighbours per node (candidates), then keep only MUTUAL edges — this
+// drops one-directional "bridge" links to hubs and leaves clique-like groups.
+const topK = [];
 for (let i = 0; i < N; i++) {
     const row = S[i];
     const cand = [];
     for (let j = 0; j < N; j++) if (j !== i && row[j] >= THRESH) cand.push(j);
     cand.sort((a, b) => row[b] - row[a]);
-    for (let n = 0; n < Math.min(K, cand.length); n++) {
-        const j = cand[n];
-        const key = i < j ? `${i}-${j}` : `${j}-${i}`;
-        if (seen.has(key)) continue;
-        seen.add(key);
-        edges.push([i, j]);
+    topK.push(new Set(cand.slice(0, K)));
+}
+const edges = [];       // [i,j] for output
+const simLinks = [];    // {source,target,w} for layout
+for (let i = 0; i < N; i++) {
+    for (const j of topK[i]) {
+        if (j > i && topK[j].has(i)) {           // mutual only
+            edges.push([i, j]);
+            simLinks.push({ source: i, target: j, w: wOf(S[i][j]) });
+        }
     }
 }
-console.log(`kNN done: ${edges.length} edges`);
+const connected = new Set();
+for (const [i, j] of edges) { connected.add(i); connected.add(j); }
+console.log(`mutual kNN: ${edges.length} edges, ${connected.size}/${N} connected (threshold ${THRESH}, floor ${FLOOR}, gamma ${GAMMA})`);
 
-// ---- force layout ----
-const simNodes = nodes.map((n, i) => ({ i }));
-const simLinks = edges.map(([s, t]) => ({ source: s, target: t }));
+// ---- force layout: strong edges pull tight & short, weak edges barely at all;
+// no central gravity (so cliques drift apart), strong local repulsion. A very
+// weak radial pull keeps disconnected singletons from drifting to infinity. ----
+const simNodes = nodes.map((n, i) => ({ i, solo: !connected.has(i) }));
 const sim = forceSimulation(simNodes)
-    .force('link', forceLink(simLinks).id((d) => d.i).distance(18).strength(0.6))
-    .force('charge', forceManyBody().strength(-14).distanceMax(220).theta(0.9))
-    .force('x', forceX(0).strength(0.02))
-    .force('y', forceY(0).strength(0.02))
-    .force('collide', forceCollide(3))
+    .force('link', forceLink(simLinks).id((d) => d.i)
+        .distance((l) => 4 + (1 - l.w) * 42)
+        .strength((l) => 0.1 + 0.9 * l.w))
+    .force('charge', forceManyBody().strength(-34).distanceMax(360).theta(0.85))
+    .force('center', forceCenter(0, 0))
+    // gentle radial containment only for isolated nodes
+    .force('x', forceX(0).strength((d) => (d.solo ? 0.02 : 0)))
+    .force('y', forceY(0).strength((d) => (d.solo ? 0.02 : 0)))
+    .force('collide', forceCollide(3.5))
     .stop();
-const ticks = 320;
-for (let k = 0; k < ticks; k++) { sim.tick(); if (k % 60 === 0) console.log(`  layout tick ${k}/${ticks}`); }
+const ticks = 500;
+for (let k = 0; k < ticks; k++) {
+    sim.alpha(Math.max(0.02, 1 - k / ticks));
+    sim.tick();
+    if (k % 100 === 0) console.log(`  layout tick ${k}/${ticks}`);
+}
 
 // normalize coordinates to a stable range
 let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
