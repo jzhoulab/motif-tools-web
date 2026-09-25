@@ -169,7 +169,7 @@ console.log(`coloured clusters (size>=5): ${bigComps.length}`);
 // ---- UMAP embedding from the precomputed similarity (distance = 1 - NCC) ----
 // A neighbour-embedding gives an organic "map": related motifs form clusters,
 // unrelated ones spread out — no artificial placement. We feed UMAP our own kNN.
-const NN = 15;
+const NN = 10;
 const knnIndices = [];
 const knnDistances = [];
 for (let i = 0; i < N; i++) {
@@ -192,7 +192,18 @@ for (let i = 0; i < N; i++) {
 let seed = 1234567;
 const rand = () => { seed = (seed * 1103515245 + 12345) & 0x7fffffff; return seed / 0x7fffffff; };
 const t1 = Date.now();
-const umap = new UMAP({ nComponents: 2, nNeighbors: NN, minDist: 0.25, spread: 1.4, random: rand });
+// Tight cliques: small minDist packs members together, and damping UMAP's
+// repulsion (repulsionStrength / negativeSampleRate) stops it pushing the
+// clusters apart into a diffuse cloud.
+const umap = new UMAP({
+    nComponents: 2,
+    nNeighbors: NN,
+    minDist: 0.02,
+    spread: 1.0,
+    repulsionStrength: 0.4,
+    negativeSampleRate: 3,
+    random: rand,
+});
 umap.setPrecomputedKNN(knnIndices, knnDistances);
 const dummyX = Array.from({ length: N }, () => [0]);
 const embedding = umap.fit(dummyX);
@@ -209,9 +220,13 @@ for (let i = 0; i < N; i++) {
     nn[i] = bj; nnScore[i] = bs;
 }
 
-// normalize coordinates to a stable range
-let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
-for (const s of simNodes) { minX = Math.min(minX, s.x); maxX = Math.max(maxX, s.x); minY = Math.min(minY, s.y); maxY = Math.max(maxY, s.y); }
+// Normalize on a robust (1st-99th percentile) range so a handful of far outliers
+// don't squeeze the dense core into a tiny patch. Outliers simply land outside
+// [0,1] and still render.
+const pct = (arr, q) => { const a = [...arr].sort((u, v) => u - v); return a[Math.min(a.length - 1, Math.max(0, Math.floor(q * (a.length - 1))))]; };
+const xsAll = simNodes.map((s) => s.x), ysAll = simNodes.map((s) => s.y);
+const minX = pct(xsAll, 0.01), maxX = pct(xsAll, 0.99);
+const minY = pct(ysAll, 0.01), maxY = pct(ysAll, 0.99);
 const span = Math.max(maxX - minX, maxY - minY) || 1;
 const outNodes = nodes.map((n, i) => ({
     id: n.id,

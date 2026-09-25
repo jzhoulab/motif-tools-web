@@ -98,7 +98,7 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
             const cy = e.ys.reduce((a, b) => a + b, 0) / e.ys.length;
             let r = 0;
             for (let k = 0; k < e.xs.length; k++) r = Math.max(r, Math.hypot(e.xs[k] - cx, e.ys[k] - cy));
-            out.push({ hue: clusterHue(c), cx, cy, r: r + 0.02 });
+            out.push({ hue: clusterHue(c), cx, cy, r: r + 0.012 });
         }
         return out;
     }, [nodes]);
