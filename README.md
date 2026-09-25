@@ -1,9 +1,17 @@
 # Motif Tools
 
+### → Use it now at **[motif.zhoulab.io](https://motif.zhoulab.io)**
+
 Browser-based tools for DNA/RNA sequence motif analysis from the
 [Zhou Lab](https://zhoulab.io). Everything runs client-side — no server, no
 installation. Each tool builds to a **single self-contained HTML file** you can
 download and open locally, and all analysis happens in your browser.
+
+| | |
+|---|---|
+| **Scan** a sequence | [motif.zhoulab.io/scan](https://motif.zhoulab.io/scan/) |
+| **Search** a motif | [motif.zhoulab.io/search](https://motif.zhoulab.io/search/) |
+| **Map** of all known DNA motifs | [motif.zhoulab.io/match](https://motif.zhoulab.io/match/) |
 
 ## Tools
 
