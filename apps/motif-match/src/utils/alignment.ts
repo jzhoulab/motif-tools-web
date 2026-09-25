@@ -75,6 +75,41 @@ export function bestCosineAcrossShifts(m1: number[][], m2: number[][]): number {
 // `margin` requires the RC orientation to win by a clear amount, so near-palindromic
 // motifs (where forward and RC align almost equally) keep their aligned forward
 // orientation instead of flipping on a coin-toss difference.
+// Per-column mean-centre (subtract the column mean) so cross-correlation is
+// discriminative — informative columns become signed and align sharply.
+function centerCols(pwm: number[][]): number[][] {
+    return toCols(pwm).map((c) => {
+        const m = (c[0] + c[1] + c[2] + c[3]) / 4;
+        return [c[0] - m, c[1] - m, c[2] - m, c[3] - m];
+    });
+}
+
+// Best ungapped offset aligning `motif` to `refMotif`, taken from the maximum
+// of the cross-correlation (raw dot of mean-centred columns) over all offsets —
+// the same notion of alignment the matcher uses. Returns `shift` = the column in
+// the reference frame where the motif's first column sits (reference at 0).
+export function bestShift(motif: number[][], refMotif: number[][]): { shift: number; score: number } {
+    const cm = centerCols(motif);
+    const cr = centerCols(refMotif);
+    const Lm = cm.length;
+    const Lr = cr.length;
+    let best = -Infinity;
+    let bestD = 0;
+    for (let d = -(Lm - 1); d <= Lr - 1; d++) {
+        let dot = 0, ov = 0;
+        for (let j = 0; j < Lm; j++) {
+            const rp = d + j;
+            if (rp < 0 || rp >= Lr) continue;
+            const a = cm[j], b = cr[rp];
+            dot += a[0] * b[0] + a[1] * b[1] + a[2] * b[2] + a[3] * b[3];
+            ov++;
+        }
+        if (ov <= 0) continue;
+        if (dot > best) { best = dot; bestD = d; }
+    }
+    return { shift: bestD, score: best };
+}
+
 export function decideAutoRC(motif: number[][], refMotif: number[][], margin = 0): boolean {
     const scFwd = bestCosineAcrossShifts(motif, refMotif);
 

@@ -477,6 +477,7 @@ function App() {
                     queryNodes={queryNodes}
                     queryEdges={queryEdges}
                     sources={networkData.sources as { key: string; count: number }[]}
+                    clusters={(networkData as any).clusters || []}
                 />
             )}
 

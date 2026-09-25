@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import MotifLogo from './MotifLogo';
-import { decideAutoRC } from '../utils/alignment';
+import { decideAutoRC, getRC, bestShift } from '../utils/alignment';
 
 export interface DbNode {
     id: string;
@@ -33,12 +33,21 @@ export interface QueryEdge {
     db: number;
 }
 
+export interface Cluster {
+    c: number;
+    label: string;
+    size: number;
+    x: number;
+    y: number;
+}
+
 interface Props {
     nodes: DbNode[];
     edges: number[][]; // [i, j] or [i, j, correlation]
     queryNodes: QueryNode[];
     queryEdges: QueryEdge[];
     sources: { key: string; count: number }[];
+    clusters: Cluster[];
 }
 
 const MAX_CLIQUE_LOGOS = 8;
@@ -57,7 +66,7 @@ const WORLD = 1400; // normalized coords are scaled into a WORLD x WORLD box
 
 type PickResult = { type: 'db' | 'query'; idx: number };
 
-export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sources }: Props) {
+export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sources, clusters }: Props) {
     const wrapRef = useRef<HTMLDivElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const transformRef = useRef({ x: 0, y: 0, k: 1 });
@@ -214,7 +223,7 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
             const isFocus = uid === focusUid;
             const isNeigh = neigh.has(uid);
             ctx.beginPath();
-            ctx.arc(sx, sy, isFocus ? 6 : isNeigh ? 4 : 2.6, 0, Math.PI * 2);
+            ctx.arc(sx, sy, isFocus ? 3 : isNeigh ? 2 : 1.3, 0, Math.PI * 2);
             ctx.fillStyle = isFocus || isNeigh ? COL_HILITE : (cmode === 'cluster' ? clusterColor(n.c) : (SRC_COLORS[n.source] || '#8FA3BC'));
             ctx.globalAlpha = focus && !isFocus && !isNeigh ? 0.35 : 0.95;
             ctx.fill();
@@ -227,7 +236,7 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
             const [sx, sy] = toScreen(wx(n), wy(n));
             const isFocus = 'q' + i === focusUid;
             ctx.beginPath();
-            ctx.arc(sx, sy, isFocus ? 8 : 6, 0, Math.PI * 2);
+            ctx.arc(sx, sy, isFocus ? 4 : 3, 0, Math.PI * 2);
             ctx.fillStyle = COL_QUERY;
             ctx.strokeStyle = '#0B1220';
             ctx.lineWidth = 1.5;
@@ -253,8 +262,27 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
         }
         if (focus) label(focus.type === 'db' ? nodes[focus.idx] : queryNodes[focus.idx], true);
 
+        // cluster (motif family) names, like place labels on a map
+        if (cmode === 'cluster' && !focus) {
+            const minSize = t.k > 1.3 ? 6 : t.k > 0.7 ? 14 : 26;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            for (const cl of clusters) {
+                if (!cl.label || cl.size < minSize) continue;
+                const [sx, sy] = toScreen(cl.x * WORLD, cl.y * WORLD);
+                if (sx < -40 || sy < -20 || sx > w + 40 || sy > h + 20) continue;
+                const fs = Math.max(11, Math.min(20, 7 + Math.sqrt(cl.size) * 0.8));
+                ctx.font = `600 ${fs}px ui-sans-serif, system-ui, sans-serif`;
+                ctx.shadowColor = 'rgba(0,0,0,0.95)';
+                ctx.shadowBlur = 5;
+                ctx.fillStyle = `hsl(${clusterHue(cl.c).toFixed(0)} 75% 82%)`;
+                ctx.fillText(cl.label, sx, sy);
+                ctx.shadowBlur = 0;
+            }
+        }
+
         ctx.restore();
-    }, [nodes, edges, queryNodes, queryEdges, hover, selected]);
+    }, [nodes, edges, queryNodes, queryEdges, hover, selected, clusters]);
 
     const fit = useCallback(() => {
         const { w, h } = sizeRef.current;
@@ -334,16 +362,25 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
         else if (hover) setHover(null);
     };
     const onUp = () => { panRef.current = null; };
-    const onWheel = (e: React.WheelEvent) => {
-        e.preventDefault();
-        const [sx, sy] = rel(e);
-        const t = transformRef.current;
-        const k = Math.max(0.1, Math.min(12, t.k * Math.exp(-e.deltaY * 0.0015)));
-        t.x = sx - ((sx - t.x) / t.k) * k;
-        t.y = sy - ((sy - t.y) / t.k) * k;
-        t.k = k;
-        draw();
-    };
+
+    // Non-passive wheel listener so zoom never scrolls or (ctrl+wheel) zooms the page.
+    useEffect(() => {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+        const handler = (e: WheelEvent) => {
+            e.preventDefault();
+            const r = canvas.getBoundingClientRect();
+            const sx = e.clientX - r.left, sy = e.clientY - r.top;
+            const t = transformRef.current;
+            const k = Math.max(0.1, Math.min(12, t.k * Math.exp(-e.deltaY * 0.0015)));
+            t.x = sx - ((sx - t.x) / t.k) * k;
+            t.y = sy - ((sy - t.y) / t.k) * k;
+            t.k = k;
+            draw();
+        };
+        canvas.addEventListener('wheel', handler, { passive: false });
+        return () => canvas.removeEventListener('wheel', handler);
+    }, [draw]);
 
     const toggleSource = (key: string) => {
         setHidden((prev) => {
@@ -364,7 +401,6 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
                 onPointerMove={onMove}
                 onPointerUp={onUp}
                 onPointerLeave={() => { onUp(); setHover(null); }}
-                onWheel={onWheel}
             />
 
             <div className="net-legend">
@@ -433,13 +469,28 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
                 }
                 const extra = rows.length - MAX_CLIQUE_LOGOS;
                 const shown = rows.slice(0, MAX_CLIQUE_LOGOS);
-                const tall = 30 + shown.length * 44 + (extra > 0 ? 16 : 0);
+
+                // Orient each row to the reference and compute its offset so the shared
+                // core lines up column-by-column across the stacked logos.
+                const aligned = shown.map((row) => {
+                    const flip = row.self ? false : decideAutoRC(row.pwm, refPwm, 0.05);
+                    const oriented = flip ? getRC(row.pwm) : row.pwm;
+                    const shift = row.self ? 0 : bestShift(oriented, refPwm).shift;
+                    return { row, flip, oriented, shift, len: oriented[0].length };
+                });
+                let gMin = 0, gMax = refPwm[0].length;
+                for (const a of aligned) { gMin = Math.min(gMin, a.shift); gMax = Math.max(gMax, a.shift + a.len); }
+                const totalCols = Math.max(1, gMax - gMin);
+                const colW = Math.max(6, Math.min(13, 300 / totalCols));
+                const frameW = totalCols * colW;
+                const tall = 34 + shown.length * 46 + (extra > 0 ? 16 : 0);
 
                 return (
                     <div
                         className="net-tooltip net-clique"
                         style={{
-                            left: Math.min(hover.x + 14, (sizeRef.current.w || 400) - 268),
+                            width: Math.max(240, frameW + 24),
+                            left: Math.min(hover.x + 14, (sizeRef.current.w || 400) - (frameW + 34)),
                             top: Math.max(8, Math.min(hover.y + 14, (sizeRef.current.h || 400) - tall)),
                         }}
                     >
@@ -449,25 +500,22 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
                             {rows.length > 1 && <span className="net-clique-count">{hover.pick.type === 'query' ? `${rows.length - 1} matches` : `clique of ${rows.length}`}</span>}
                         </div>
                         <div className="net-clique-list">
-                            {shown.map((row, i) => {
-                                // only flip when RC is clearly better, so near-palindromic
-                                // motifs keep the orientation that already matches the reference
-                                const flip = row.self ? false : decideAutoRC(row.pwm, refPwm, 0.05);
-                                return (
-                                    <div className="net-clique-row" key={i}>
-                                        <div className="net-clique-logo">
-                                            <MotifLogo pwm={row.pwm} rc={flip} height={30} glyphWidth={12} fit="fill" width="100%" />
-                                        </div>
-                                        <div className="net-clique-meta">
-                                            <span className="net-clique-name">
-                                                <i className="net-dot" style={{ background: row.query ? COL_QUERY : (SRC_COLORS[row.src || ''] || '#8FA3BC') }} />
-                                                {row.id.length > 22 ? row.id.slice(0, 21) + '…' : row.id}{flip ? ' ↺' : ''}
-                                            </span>
-                                            <span className="net-clique-r">{row.self ? 'hovered' : (row.r != null ? `r ${row.r.toFixed(2)}` : '')}</span>
+                            {aligned.map((a, i) => (
+                                <div className="net-clique-row" key={i}>
+                                    <div className="net-clique-logo" style={{ width: frameW }}>
+                                        <div style={{ marginLeft: (a.shift - gMin) * colW, width: a.len * colW }}>
+                                            <MotifLogo pwm={a.row.pwm} rc={a.flip} height={30} glyphWidth={colW} fit="fill" width={a.len * colW} />
                                         </div>
                                     </div>
-                                );
-                            })}
+                                    <div className="net-clique-meta">
+                                        <span className="net-clique-name">
+                                            <i className="net-dot" style={{ background: a.row.query ? COL_QUERY : (SRC_COLORS[a.row.src || ''] || '#8FA3BC') }} />
+                                            {a.row.id.length > 22 ? a.row.id.slice(0, 21) + '…' : a.row.id}{a.flip ? ' ↺' : ''}
+                                        </span>
+                                        <span className="net-clique-r">{a.row.self ? 'hovered' : (a.row.r != null ? `r ${a.row.r.toFixed(2)}` : '')}</span>
+                                    </div>
+                                </div>
+                            ))}
                             {extra > 0 && <div className="net-clique-more">+{extra} more in clique</div>}
                         </div>
                     </div>

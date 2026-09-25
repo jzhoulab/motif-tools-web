@@ -615,7 +615,7 @@ body {
 .net-tooltip-title { display: flex; align-items: center; gap: 7px; }
 .net-clique-list { margin-top: 8px; display: flex; flex-direction: column; gap: 6px; }
 .net-clique-row { display: flex; flex-direction: column; gap: 1px; }
-.net-clique-logo { background: #050b16; border-radius: 5px; padding: 2px 4px; height: 30px; }
+.net-clique-logo { background: #050b16; border-radius: 5px; padding: 2px 0; height: 30px; overflow: hidden; }
 .net-clique-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .net-clique-name { display: inline-flex; align-items: center; gap: 5px; font-size: 0.68rem; color: var(--text-secondary); font-family: ui-monospace, monospace; }
 .net-clique-name .net-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }

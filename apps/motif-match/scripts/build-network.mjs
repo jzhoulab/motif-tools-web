@@ -223,7 +223,42 @@ const outNodes = nodes.map((n, i) => ({
     c: clusterId[i],
 }));
 
-const out = { generated: new Date().toISOString().slice(0, 10), sources: SOURCES.map((s) => ({ key: s.key, count: s.motifs.length })), nodes: outNodes, edges };
+// ---- name each coloured cluster by its dominant TF family ----
+function nameRoot(id, source) {
+    if (source === 'Vierstra') {                 // AC0001:DLX/LHX:Homeodomain
+        const p = id.split(':');
+        if (p.length >= 2) return (p[1].split(/[/,]/)[0] || '').trim().replace(/\d+$/, '');
+        return '';
+    }
+    if (/^M\d+(_|$)/.test(id)) return '';         // CIS-BP code (no TF name in id)
+    const t = id.split(' (')[0].split('.')[0].split('::')[0]; // JASPAR / HOCOMOCO
+    return t.replace(/[_-].*$/, '').replace(/\d+$/, '');
+}
+const clusterInfo = new Map();
+outNodes.forEach((n, i) => {
+    if (n.c < 0) return;
+    let e = clusterInfo.get(n.c);
+    if (!e) { e = { xs: [], ys: [], roots: new Map() }; clusterInfo.set(n.c, e); }
+    e.xs.push(n.x); e.ys.push(n.y);
+    const root = nameRoot(nodes[i].id, nodes[i].source);
+    if (root) e.roots.set(root, (e.roots.get(root) || 0) + 1);
+});
+const clusters = [];
+for (const [c, e] of clusterInfo) {
+    let label = '', best = 0;
+    for (const [r, cnt] of e.roots) if (cnt > best) { best = cnt; label = r; }
+    clusters.push({
+        c,
+        label,
+        size: e.xs.length,
+        x: Math.round((e.xs.reduce((a, b) => a + b, 0) / e.xs.length) * 1000) / 1000,
+        y: Math.round((e.ys.reduce((a, b) => a + b, 0) / e.ys.length) * 1000) / 1000,
+    });
+}
+clusters.sort((a, b) => b.size - a.size);
+console.log(`named ${clusters.filter((c) => c.label).length}/${clusters.length} clusters; top: ${clusters.slice(0, 8).map((c) => c.label + '(' + c.size + ')').join(', ')}`);
+
+const out = { generated: new Date().toISOString().slice(0, 10), sources: SOURCES.map((s) => ({ key: s.key, count: s.motifs.length })), nodes: outNodes, edges, clusters };
 const outPath = R('motif-network.json');
 writeFileSync(outPath, JSON.stringify(out));
 console.log(`Wrote ${outPath}: ${outNodes.length} nodes, ${edges.length} edges, ${(JSON.stringify(out).length / 1e6).toFixed(2)} MB`);
