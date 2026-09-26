@@ -74,6 +74,48 @@ const COL_QEDGE = 'rgba(247,179,43,0.6)';
 const COL_HILITE = '#35C9D6';
 const WORLD = 1400; // normalized coords are scaled into a WORLD x WORLD box
 
+// Zoom thresholds at which per-motif detail appears
+const NAME_ZOOM = 2.2;
+const LOGO_ZOOM = 4.0;
+const MAX_DETAIL_NODES = 500; // don't try to letter a whole screen of motifs
+
+// Nucleotide glyphs (100x100), same shapes as the SVG logos, for canvas drawing
+const GLYPH_D = [
+    'M 0 100 L 33 0 L 66 0 L 100 100 L 75 100 L 66 75 L 33 75 L 25 100 Z M 41 55 L 50 25 L 58 55 Z',
+    'M 100 28 C 100 -13 0 -13 0 50 C 0 113 100 113 100 72 L 75 72 C 75 90 30 90 30 50 C 30 10 75 10 75 28 L 100 28',
+    'M 100 28 C 100 -13 0 -13 0 50 C 0 113 100 113 100 72 L 100 48 L 55 48 L 55 72 L 75 72 C 75 90 30 90 30 50 C 30 10 75 5 75 28 L 100 28',
+    'M 0 0 L 0 20 L 35 20 L 35 100 L 65 100 L 65 20 L 100 20 L 100 0 L 0 0',
+];
+const NUC_COLORS = ['#109648', '#255C99', '#F7B32B', '#D62828'];
+let GLYPHS: Path2D[] | null = null;
+const glyphs = () => (GLYPHS ||= GLYPH_D.map((d) => new Path2D(d)));
+
+// Draw an information-content sequence logo straight onto the canvas.
+function drawMiniLogo(ctx: CanvasRenderingContext2D, pwm: number[][], cx: number, baseY: number, colW: number, height: number) {
+    const G = glyphs();
+    const L = pwm[0].length;
+    let x = cx - (L * colW) / 2;
+    for (let i = 0; i < L; i++) {
+        let ent = 0;
+        for (let b = 0; b < 4; b++) { const p = pwm[b][i]; if (p > 0) ent -= p * Math.log2(p); }
+        const ic = Math.max(0, 2 - ent);
+        const order = [0, 1, 2, 3].sort((a, b) => pwm[a][i] - pwm[b][i]);
+        let y = baseY;
+        for (const b of order) {
+            const h = (pwm[b][i] * ic / 2) * height;
+            if (h < 0.4) continue;
+            ctx.save();
+            ctx.translate(x, y - h);
+            ctx.scale(colW / 100, h / 100);
+            ctx.fillStyle = NUC_COLORS[b];
+            ctx.fill(G[b], 'evenodd');
+            ctx.restore();
+            y -= h;
+        }
+        x += colW;
+    }
+}
+
 type PickResult = { type: 'db' | 'query'; idx: number };
 
 export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sources, clusters, families, onSequenceSearch }: Props) {
@@ -295,6 +337,54 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
             for (let i = 0; i < queryNodes.length; i++) if ('q' + i !== focusUid) label(queryNodes[i], false);
         }
         if (focus) label(focus.type === 'db' ? nodes[focus.idx] : queryNodes[focus.idx], true);
+
+        // per-motif detail once zoomed in: names, then logos
+        if (t.k >= NAME_ZOOM) {
+            const vis: { n: DbNode; sx: number; sy: number }[] = [];
+            for (let i = 0; i < nodes.length; i++) {
+                const n = nodes[i];
+                if (hid.has(n.source)) continue;
+                const [sx, sy] = toScreen(wx(n), wy(n));
+                if (sx < -60 || sy < -60 || sx > w + 60 || sy > h + 60) continue;
+                vis.push({ n, sx, sy });
+                if (vis.length > MAX_DETAIL_NODES) break;
+            }
+            if (vis.length <= MAX_DETAIL_NODES) {
+                const showLogos = t.k >= LOGO_ZOOM;
+                const taken: { x1: number; y1: number; x2: number; y2: number }[] = [];
+                ctx.save();
+                ctx.font = '10px ui-monospace, SFMono-Regular, Menlo, monospace';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'top';
+                // logos and names both reserve space, so neither piles up in dense areas
+                const clashes = (bx: { x1: number; y1: number; x2: number; y2: number }) => {
+                    for (const q of taken) if (bx.x1 < q.x2 && bx.x2 > q.x1 && bx.y1 < q.y2 && bx.y2 > q.y1) return true;
+                    return false;
+                };
+                for (const v of vis) {
+                    if (showLogos && v.n.pwm && v.n.pwm.length === 4) {
+                        const colW = Math.max(3.5, Math.min(10, t.k * 1.1));
+                        const lw = v.n.pwm[0].length * colW;
+                        const lh = Math.min(30, 8 + t.k * 2.4);
+                        const lbox = { x1: v.sx - lw / 2 - 1, y1: v.sy - 6 - lh, x2: v.sx + lw / 2 + 1, y2: v.sy - 4 };
+                        if (!clashes(lbox)) {
+                            taken.push(lbox);
+                            drawMiniLogo(ctx, v.n.pwm, v.sx, v.sy - 6, colW, lh);
+                        }
+                    }
+                    const text = v.n.id.length > 24 ? v.n.id.slice(0, 23) + '…' : v.n.id;
+                    const tw = ctx.measureText(text).width;
+                    const box = { x1: v.sx - tw / 2 - 3, y1: v.sy + 4, x2: v.sx + tw / 2 + 3, y2: v.sy + 17 };
+                    if (clashes(box)) continue;
+                    taken.push(box);
+                    ctx.fillStyle = 'rgba(11,18,32,0.72)';
+                    ctx.fillRect(box.x1, box.y1, box.x2 - box.x1, 13);
+                    ctx.fillStyle = '#C7D3E3';
+                    ctx.fillText(text, v.sx, v.sy + 5);
+                }
+                ctx.restore();
+            }
+        }
 
         // cluster (motif family) names — always shown, like place labels on a map
         if (cmode === 'cluster') {
