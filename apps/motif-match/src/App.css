@@ -642,3 +642,21 @@ body {
 .net-search-mode button { background: transparent; border: none; color: var(--text-muted); font-size: 0.66rem; padding: 2px 6px; border-radius: 4px; cursor: pointer; font-family: ui-monospace, monospace; }
 .net-search-mode button.active { background: var(--accent-primary); color: #05222b; font-weight: 700; }
 .net-search-hint { font-size: 0.66rem; color: var(--text-muted); font-family: ui-monospace, monospace; }
+
+/* search suggestions */
+.net-search { position: relative; }
+.net-suggest {
+  position: absolute; top: calc(100% + 6px); right: 0; min-width: 260px; max-width: 340px;
+  background: rgba(11,18,32,0.97); border: 1px solid var(--border-hover); border-radius: 10px;
+  padding: 4px; box-shadow: 0 16px 40px -16px rgba(0,0,0,0.85); z-index: 30; max-height: 320px; overflow-y: auto;
+}
+.net-suggest-head { font-size: 0.64rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .1em; padding: 5px 8px 3px; }
+.net-suggest-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%;
+  background: transparent; border: none; color: var(--text-secondary); cursor: pointer;
+  padding: 6px 8px; border-radius: 6px; font-size: 0.76rem; text-align: left;
+}
+.net-suggest-row:hover, .net-suggest-row.hi { background: rgba(53,201,214,0.16); color: var(--text-primary); }
+.net-suggest-label { font-family: ui-monospace, monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.net-suggest-label b { color: var(--accent-primary); font-family: ui-sans-serif, system-ui, sans-serif; }
+.net-suggest-meta { font-size: 0.66rem; color: var(--text-muted); font-family: ui-monospace, monospace; white-space: nowrap; }

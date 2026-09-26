@@ -152,6 +152,39 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
     }, [search, searchMode, nodes, families]);
     const matchesRef = useRef(matches);
     matchesRef.current = matches;
+    const [hiIdx, setHiIdx] = useState(-1);
+
+    const famIdx = useMemo(() => {
+        const m = new Map<string, number[]>();
+        nodes.forEach((n, i) => {
+            if (n.f == null || n.f < 0) return;
+            const name = families[n.f];
+            if (!name) return;
+            const a = m.get(name);
+            if (a) a.push(i); else m.set(name, [i]);
+        });
+        return m;
+    }, [nodes, families]);
+
+    type Sugg = { kind: 'fam' | 'motif'; label: string; idxs?: number[]; idx?: number; count?: number; r?: number; sub?: string };
+    const suggestions = useMemo<Sugg[]>(() => {
+        if (searchMode === 'seq') {
+            // ranked matches for the placed sequence, so you needn't hover to read them
+            if (!queryNodes.length) return [];
+            const es = queryEdges.filter((e) => e.q === 0).slice().sort((a, b) => ((b as any).weight ?? 0) - ((a as any).weight ?? 0)).slice(0, 10);
+            return es.map((e) => ({ kind: 'motif' as const, label: nodes[e.db]?.id || '', idx: e.db, r: (e as any).weight, sub: nodes[e.db]?.source }));
+        }
+        const q = search.trim().toLowerCase();
+        if (q.length < 2) return [];
+        const out: Sugg[] = [];
+        const fams = [...famIdx.entries()].filter(([name]) => name.toLowerCase().includes(q)).sort((a, b) => b[1].length - a[1].length).slice(0, 5);
+        for (const [name, idxs] of fams) out.push({ kind: 'fam', label: name, idxs, count: idxs.length });
+        let c = 0;
+        for (let i = 0; i < nodes.length && c < 8; i++) {
+            if (nodes[i].id.toLowerCase().includes(q)) { out.push({ kind: 'motif', label: nodes[i].id, idx: i, sub: nodes[i].source }); c++; }
+        }
+        return out;
+    }, [search, searchMode, nodes, famIdx, queryNodes, queryEdges]);
 
     // soft "territory" blobs, one per coloured cluster (normalized coords)
     const blobs = useMemo(() => {
@@ -442,6 +475,17 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
         draw();
     }, [nodes, draw]);
 
+    // centre on one motif and zoom in enough to read it
+    const focusNode = useCallback((i: number) => {
+        const { w, h } = sizeRef.current;
+        const n = nodes[i];
+        if (!n || !w) return;
+        const k = Math.max(transformRef.current.k, 4.5);
+        transformRef.current = { k, x: w / 2 - n.x * WORLD * k, y: h / 2 - n.y * WORLD * k };
+        setSelected({ type: 'db', idx: i });
+        draw();
+    }, [nodes, draw]);
+
     const fit = useCallback(() => {
         const { w, h } = sizeRef.current;
         if (!w) return;
@@ -474,7 +518,9 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
     const pick = useCallback((sx: number, sy: number): PickResult | null => {
         const t = transformRef.current;
         const hid = hiddenRef.current;
-        const rq = (12 / t.k), rd = (7 / t.k);
+        // Hit area tracks the drawn dot (db 1.3px, query 3px) plus a small margin,
+        // so hovering feels precise instead of grabbing a neighbour several px away.
+        const rq = 6 / t.k, rd = 4 / t.k;
         const [mx, my] = [(sx - t.x) / t.k, (sy - t.y) / t.k];
         // query first
         let best: PickResult | null = null, bestD = Infinity;
@@ -540,6 +586,12 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
         return () => canvas.removeEventListener('wheel', handler);
     }, [draw]);
 
+    const activate = (sg: { kind: 'fam' | 'motif'; idxs?: number[]; idx?: number }) => {
+        if (sg.kind === 'fam' && sg.idxs?.length) fitTo(sg.idxs);
+        else if (sg.idx != null) focusNode(sg.idx);
+        setHiIdx(-1);
+    };
+
     const toggleSource = (key: string) => {
         setHidden((prev) => {
             const next = new Set(prev);
@@ -588,23 +640,28 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
             <div className="net-controls">
                 <div className="net-search">
                     <div className="net-search-mode">
-                        <button className={searchMode === 'name' ? 'active' : ''} onClick={() => setSearchMode('name')} title="Search motif / family names">name</button>
-                        <button className={searchMode === 'seq' ? 'active' : ''} onClick={() => setSearchMode('seq')} title="Find where a DNA sequence lands on the map">seq</button>
+                        <button className={searchMode === 'name' ? 'active' : ''} onClick={() => { setSearchMode('name'); setHiIdx(-1); }} title="Search motif / family names">name</button>
+                        <button className={searchMode === 'seq' ? 'active' : ''} onClick={() => { setSearchMode('seq'); setHiIdx(-1); }} title="Find where a DNA sequence lands on the map">seq</button>
                     </div>
                     <input
                         value={search}
                         onChange={(e) => {
                             const v = e.target.value;
                             setSearch(v);
-                            // typing a DNA/IUPAC string is almost certainly a sequence query
+                            setHiIdx(-1);
                             if (searchMode === 'name' && isSequence(v) && v.trim().length >= 6) setSearchMode('seq');
                         }}
                         onKeyDown={(e) => {
+                            if (e.key === 'ArrowDown') { e.preventDefault(); setHiIdx((i) => Math.min(suggestions.length - 1, i + 1)); return; }
+                            if (e.key === 'ArrowUp') { e.preventDefault(); setHiIdx((i) => Math.max(-1, i - 1)); return; }
                             if (e.key === 'Enter') {
+                                const sg = suggestions[hiIdx];
+                                if (sg) { activate(sg); return; }
                                 if (searchMode === 'seq') { if (isSequence(search)) onSequenceSearch(search.trim()); }
-                                else if (matches) fitTo([...matches]);
+                                else if (matches && matches.size) fitTo([...matches]);
+                                return;
                             }
-                            if (e.key === 'Escape') setSearch('');
+                            if (e.key === 'Escape') { setSearch(''); setHiIdx(-1); }
                         }}
                         placeholder={searchMode === 'seq' ? 'Type a sequence, e.g. TGASTCA…' : 'Search motif or family…'}
                         spellCheck={false}
@@ -618,10 +675,31 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
                     ) : matches && (
                         <span className="net-search-count">
                             {matches.size} {matches.size === 1 ? 'hit' : 'hits'}
-                            {matches.size > 0 && <button onClick={() => fitTo([...matches])} title="Zoom to matches">⤢</button>}
+                            {matches.size > 0 && <button onClick={() => fitTo([...matches])} title="Zoom to all matches">⤢</button>}
                         </span>
                     )}
-                    {search && <button className="net-search-clear" onClick={() => setSearch('')} title="Clear">×</button>}
+                    {search && <button className="net-search-clear" onClick={() => { setSearch(''); setHiIdx(-1); }} title="Clear">×</button>}
+
+                    {suggestions.length > 0 && (
+                        <div className="net-suggest">
+                            {searchMode === 'seq' && <div className="net-suggest-head">top matches for your sequence</div>}
+                            {suggestions.map((sg, i) => (
+                                <button
+                                    key={`${sg.kind}-${sg.label}-${i}`}
+                                    className={`net-suggest-row ${i === hiIdx ? 'hi' : ''}`}
+                                    onMouseEnter={() => setHiIdx(i)}
+                                    onClick={() => activate(sg)}
+                                >
+                                    <span className="net-suggest-label">
+                                        {sg.kind === 'fam' ? <b>{sg.label}</b> : sg.label}
+                                    </span>
+                                    <span className="net-suggest-meta">
+                                        {sg.kind === 'fam' ? `family · ${sg.count}` : (sg.r != null ? `r ${sg.r.toFixed(2)}` : sg.sub)}
+                                    </span>
+                                </button>
+                            ))}
+                        </div>
+                    )}
                 </div>
                 <div className="net-colormode">
                     <span>Colour</span>
