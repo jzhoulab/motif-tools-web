@@ -66,6 +66,10 @@ table.mem td.s{font-family:var(--font-mono);font-size:11.5px;color:var(--muted)}
 .flag.x{background:#2a1a1a;color:#e0866f;border:1px solid #4a2a26}
 .flag.i{background:#1c2436;color:#8FA3BC;border:1px solid #2a3category}
 .flag.w{background:#231d12;color:#c9a35a;border:1px solid #3a2f1c}
+.feedback{margin:34px 0 0;padding:18px 20px;border:1px solid var(--line-soft);background:var(--panel);border-radius:var(--radius)}
+.feedback p{margin-top:8px;font-size:14.5px;color:var(--muted);max-width:74ch}
+.fb-btn{border-color:var(--cyan)!important;color:var(--cyan)!important}
+.fb-btn:hover{background:rgba(53,201,214,.1)}
 .evkey{margin-top:10px;font-size:12.5px;line-height:1.6;color:var(--muted-2)}
 .evkey b{color:var(--muted);font-family:var(--font-mono)}
 details{margin-top:12px}
@@ -102,8 +106,36 @@ const HEAD = (title, desc, canonical) => `<!DOCTYPE html>
 <style>${CSS}</style></head><body>
 <header class="top"><div class="wrap">
 <a class="brand" href="/"><span class="bars"><i style="background:var(--A)"></i><i style="background:var(--C)"></i><i style="background:var(--G)"></i><i style="background:var(--T)"></i></span>Motif Tools</a>
-<nav><a href="/scan/">Scan</a><a href="/search/">Search</a><a href="/match/">Map</a><a href="/families/">Families</a></nav>
+<nav><a href="/scan/">Scan</a><a href="/search/">Search</a><a href="/map/">Map</a><a href="/families/">Families</a></nav>
 </div></header><main><div class="wrap">`;
+
+// Readers who spot an error are the best reviewers this atlas will get. A prefilled
+// GitHub issue is the lowest-friction route that leaves a public, trackable record.
+const REPO = 'https://github.com/jzhoulab/motif-tools-web';
+function feedbackBlock(f) {
+    const where = f ? `${f.name} (${f.key})` : 'the family atlas';
+    const url = f ? `https://motif.zhoulab.io/families/${f.key.toLowerCase()}/` : 'https://motif.zhoulab.io/families/';
+    const body = [
+        `**Page:** ${url}`,
+        f ? `**Family:** ${f.name} (\`${f.key}\`)` : '',
+        '',
+        '**What is wrong**',
+        '',
+        '',
+        '**What it should say**',
+        '',
+        '',
+        '**Source** (PMID, DOI or link, if you have one)',
+        '',
+    ].filter((l) => l !== null).join('\n');
+    const href = `${REPO}/issues/new?title=${encodeURIComponent(`Atlas correction: ${where}`)}`
+        + `&body=${encodeURIComponent(body)}&labels=${encodeURIComponent('family atlas')}`;
+    return `<div class="feedback">
+<div class="eyebrow">Spotted something wrong?</div>
+<p>These entries are written from the primary literature and every citation is checked against PubMed, but ${f ? 'this one' : 'any of them'} can still be out of date, too confident, or simply wrong &mdash; especially where a motif&rsquo;s published site and its database matrices disagree. Corrections and additions are welcome, and they are the fastest way to make ${f ? 'this page' : 'the atlas'} better for everyone.</p>
+<div class="rel"><a class="fb-btn" href="${href}" rel="noopener" target="_blank">Suggest a correction &rarr;</a><a href="${REPO}/issues" rel="noopener" target="_blank">See open corrections</a></div>
+</div>`;
+}
 
 const FOOT = (extra = '') => `</div></main>
 <footer><div class="wrap">Motif family atlas · <a href="/">Motif Tools</a> · Zhou Lab ·
@@ -173,9 +205,10 @@ export function buildFamilies(dist) {
             + memberRows(f.members || []) + `</tbody></table>`
             + `<p class="evkey">HOCOMOCO tags read as assay + quality grade: <b>P</b> ChIP-seq, <b>S</b> HT-SELEX, <b>M</b> methyl-HT-SELEX, <b>G</b> GHT-SELEX, <b>I</b> SMiLE-seq, <b>B</b> PBM; grade <b>A</b> means two or more assay types agreed. A <b>P</b>-only matrix is a record of where the protein was crosslinked, which need not be a sequence it binds itself.</p>`
             + `</details>`
+            + feedbackBlock(f)
             + (related.length ? `<h2 style="font-size:19px;margin-top:30px">Other ${esc(f.class)} families</h2><div class="rel">`
                 + related.map((g) => `<a href="/families/${g.key.toLowerCase()}/">${esc(g.name)}</a>`).join('') + `</div>` : '')
-            + `<div class="rel" style="margin-top:26px"><a href="/match/">See this family on the motif map →</a><a href="/search/">Search your motif against the databases →</a></div>`
+            + `<div class="rel" style="margin-top:26px"><a href="/map/">See this family on the motif map →</a><a href="/search/">Search your motif against the databases →</a></div>`
             + FOOT();
         writeFileSync(resolve(dir, 'index.html'), html);
         written.push(f.key);
@@ -228,6 +261,7 @@ export function buildFamilies(dist) {
         + `<table class="mem"><thead><tr><th>motif</th><th>database</th><th>filed under</th><th>matches</th><th>consensus</th></tr></thead><tbody>`
         + resembles.map((m) => `<tr><td>${esc(m.id)}</td><td class="s">${esc(m.source)}</td><td class="s">${linkOf(m.fam.key)}</td><td class="s">${linkOf(m.resembles)}</td><td class="c">${esc(m.consensus || '')}</td></tr>`).join('')
         + `</tbody></table>`
+        + feedbackBlock(null)
         + `<div class="rel" style="margin-top:30px"><a href="/families/">Back to the family atlas →</a></div>`
         + FOOT();
     mkdirSync(resolve(dist, 'families', 'label-checks'), { recursive: true });
@@ -257,6 +291,7 @@ export function buildFamilies(dist) {
         + `<p style="margin-top:18px"><a class="fam-checks" href="/families/label-checks/">See where the data disagrees with the label →</a></p>`
         + `<div class="sbar"><input id="q" type="search" placeholder="filter families — name, consensus, gene symbol" autocomplete="off"/><span class="eyebrow" id="cnt"></span></div>`
         + `<div id="all">${cards}</div>`
+        + feedbackBlock(null)
         + `<script>
 const q=document.getElementById('q'),cnt=document.getElementById('cnt');
 const cards=[...document.querySelectorAll('.card')];

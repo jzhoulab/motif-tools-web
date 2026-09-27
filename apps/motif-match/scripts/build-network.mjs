@@ -12,6 +12,7 @@ import umapPkg from 'umap-js';
 const { UMAP } = umapPkg;
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
+const ROOT_SCRIPTS = resolve(dirname(fileURLToPath(import.meta.url)));
 const R = (f) => resolve(root, 'resources', f);
 const BG = [0.25, 0.25, 0.25, 0.25];
 const EPS = 0.01;
@@ -155,16 +156,11 @@ const connected = new Set();
 for (const [i, j] of edges) { connected.add(i); connected.add(j); }
 console.log(`mutual kNN: ${edges.length} edges, ${connected.size}/${N} connected (threshold ${THRESH}, floor ${FLOOR}, gamma ${GAMMA})`);
 
-// ---- connected components -> cluster id per node (for map-style coloring) ----
-const parent = Array.from({ length: N }, (_, i) => i);
-const find = (a) => { while (parent[a] !== a) { parent[a] = parent[parent[a]]; a = parent[a]; } return a; };
-for (const [i, j] of edges) { const ra = find(i), rb = find(j); if (ra !== rb) parent[ra] = rb; }
-const compMembers = new Map();
-for (let i = 0; i < N; i++) { const r = find(i); (compMembers.get(r) || compMembers.set(r, []).get(r)).push(i); }
-const bigComps = [...compMembers.values()].filter((m) => m.length >= 5).sort((a, b) => b.length - a.length);
-const clusterId = new Int32Array(N).fill(-1); // -1 = not in a coloured cluster
-bigComps.forEach((members, cid) => { for (const m of members) clusterId[m] = cid; });
-console.log(`coloured clusters (size>=5): ${bigComps.length}`);
+// The map used to colour by connected components of the similarity graph. Single-linkage
+// chains, so a component could walk from AP-1 through CREB to POU and be drawn as one
+// territory of 318 motifs spanning seven unrelated families. Now that every motif has a
+// curated family, the territories are the families themselves - computed after the
+// layout, below, once each motif has coordinates.
 
 // ---- UMAP embedding from the precomputed similarity (distance = 1 - NCC) ----
 // A neighbour-embedding gives an organic "map": related motifs form clusters,
@@ -239,7 +235,13 @@ const shortName = (name) => {
     if (t.length > 26) t = t.slice(0, 25) + '\u2026';
     return t;
 };
-const famList = ASSIGN.families.map((f) => ({ key: f.key, name: f.name, short: shortName(f.name), class: f.class }));
+const ONTOLOGY = JSON.parse(readFileSync(resolve(ROOT_SCRIPTS, 'families/ontology.json'), 'utf8'));
+const abbrOf = new Map(ONTOLOGY.map((f) => [f.key, f.abbr || shortName(f.name)]));
+// Three lengths per family: `abbr` for the zoomed-out map, `short` once there is room,
+// `name` for the card and the atlas link.
+const famList = ASSIGN.families.map((f) => ({
+    key: f.key, name: f.name, short: shortName(f.name), abbr: abbrOf.get(f.key) || shortName(f.name), class: f.class,
+}));
 const famIndex = new Map(famList.map((f, i) => [f.key, i]));
 const famNameOf = nodes.map((n) => {
     const e = ASSIGN.motifs[n.id];
@@ -249,6 +251,50 @@ const famOf = famNameOf.map((k) => (k && famIndex.has(k) ? famIndex.get(k) : -1)
 const missing = famOf.filter((f) => f < 0).length;
 console.log(`families: ${famList.length}; motifs with a family: ${N - missing}/${N}`);
 if (missing) console.warn(`! ${missing} motifs are missing from the assignment - rerun scripts/families/assign.mjs`);
+
+// ---- family territories ------------------------------------------------------
+// A family is not always one blob on the map: KRAB-ZNFs are scattered everywhere, and a
+// centroid over scattered points lands in empty space. So for each family we find where
+// its members are densest, and draw and label only that core - members outside it keep
+// the family's colour but do not stretch the territory.
+const CORE_R = 0.085;                      // radius of the core neighbourhood, map units
+const clusterId = new Int32Array(N).fill(-1);
+const famMembers = new Map();
+famOf.forEach((f, i) => { if (f >= 0) (famMembers.get(f) || famMembers.set(f, []).get(f)).push(i); });
+const territories = [];
+for (const [f, members] of famMembers) {
+    if (members.length < 4) continue;
+    const px = members.map((i) => (simNodes[i].x - minX) / span);
+    const py = members.map((i) => (simNodes[i].y - minY) / span);
+    // densest point: the member with the most family neighbours within CORE_R
+    let bi = 0, bn = -1;
+    for (let a = 0; a < members.length; a++) {
+        let c = 0;
+        for (let b = 0; b < members.length; b++) {
+            if (Math.hypot(px[a] - px[b], py[a] - py[b]) <= CORE_R) c++;
+        }
+        if (c > bn) { bn = c; bi = a; }
+    }
+    if (bn < 4) continue;                  // no coherent core: colour the dots, draw no territory
+    const core = [];
+    for (let b = 0; b < members.length; b++) {
+        if (Math.hypot(px[bi] - px[b], py[bi] - py[b]) <= CORE_R) core.push(b);
+    }
+    for (const b of core) clusterId[members[b]] = f;
+    territories.push({
+        c: f,
+        label: famList[f].abbr,
+        name: famList[f].short,
+        size: core.length,
+        total: members.length,
+        x: Math.round((core.reduce((s, b) => s + px[b], 0) / core.length) * 1000) / 1000,
+        y: Math.round((core.reduce((s, b) => s + py[b], 0) / core.length) * 1000) / 1000,
+    });
+}
+territories.sort((a, b) => b.size - a.size);
+console.log(`family territories: ${territories.length} of ${famMembers.size} families have a coherent core; ` +
+    `${clusterId.filter((c) => c >= 0).length}/${N} motifs inside one`);
+console.log(`  largest: ${territories.slice(0, 8).map((t) => `${t.label}(${t.size}${t.size < t.total ? '/' + t.total : ''})`).join(', ')}`);
 
 const outNodes = nodes.map((n, i) => {
     const a = ASSIGN.motifs[n.id] || {};
@@ -275,38 +321,7 @@ const outNodes = nodes.map((n, i) => {
     return out;
 });
 
-// ---- name each coloured cluster by its dominant TF family ----
-const clusterInfo = new Map();
-outNodes.forEach((n, i) => {
-    if (n.c < 0) return;
-    let e = clusterInfo.get(n.c);
-    if (!e) { e = { xs: [], ys: [], roots: new Map() }; clusterInfo.set(n.c, e); }
-    e.xs.push(n.x); e.ys.push(n.y);
-    const root = famNameOf[i];
-    if (root) e.roots.set(root, (e.roots.get(root) || 0) + 1);
-});
-const clusters = [];
-for (const [c, e] of clusterInfo) {
-    // A component held together by weak chaining can span two unrelated families; name it
-    // after both rather than letting a bare plurality speak for 300 motifs.
-    const ranked = [...e.roots.entries()].sort((a, b) => b[1] - a[1]);
-    const nameOf = (k) => (k && famIndex.has(k) ? famList[famIndex.get(k)].short : k);
-    const total = e.xs.length;
-    let label = nameOf(ranked[0]?.[0] || '');
-    if (ranked[0] && ranked[0][1] / total < 0.4 && ranked[1]) label += ' / ' + nameOf(ranked[1][0]);
-    clusters.push({
-        c,
-        label,
-        size: e.xs.length,
-        x: Math.round((e.xs.reduce((a, b) => a + b, 0) / e.xs.length) * 1000) / 1000,
-        y: Math.round((e.ys.reduce((a, b) => a + b, 0) / e.ys.length) * 1000) / 1000,
-    });
-}
-clusters.sort((a, b) => b.size - a.size);
-console.log(`named ${clusters.filter((c) => c.label).length}/${clusters.length} clusters; top: ${clusters.slice(0, 8).map((c) => c.label + '(' + c.size + ')').join(', ')}`);
-console.log(`label caveats carried into the map: ${outNodes.filter((n) => n.sus).length} conflicts, ${outNodes.filter((n) => n.res).length} resemblances, ${outNodes.filter((n) => n.inf).length} inferred families`);
-
-const out = { generated: new Date().toISOString().slice(0, 10), sources: SOURCES.map((s) => ({ key: s.key, count: s.motifs.length })), nodes: outNodes, edges, clusters, families: famList };
+const out = { generated: new Date().toISOString().slice(0, 10), sources: SOURCES.map((s) => ({ key: s.key, count: s.motifs.length })), nodes: outNodes, edges, clusters: territories, families: famList };
 const outPath = R('motif-network.json');
 writeFileSync(outPath, JSON.stringify(out));
 console.log(`Wrote ${outPath}: ${outNodes.length} nodes, ${edges.length} edges, ${(JSON.stringify(out).length / 1e6).toFixed(2)} MB`);

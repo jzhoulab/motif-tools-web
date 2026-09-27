@@ -3,1002 +3,1169 @@
   "key": "AP1",
   "name": "AP-1 (FOS/JUN)",
   "class": "bZIP",
-  "def": "TRE/AP-1 site TGA(C/G)TCA. FOS, FOSB, FOSL1/2, JUN, JUNB, JUND, BATF, BATF2/3, JDP2, ATF3, and FOS::JUN heterodimers."
+  "def": "TRE/AP-1 site TGA(C/G)TCA. FOS, FOSB, FOSL1/2, JUN, JUNB, JUND, BATF, BATF2/3, JDP2, ATF3, and FOS::JUN heterodimers.",
+  "abbr": "AP-1"
  },
  {
   "key": "CREB_ATF",
   "name": "CREB / ATF (CRE)",
   "class": "bZIP",
-  "def": "Cyclic-AMP response element TGACGTCA and its half-site. CREB1, CREM, ATF1, ATF2, ATF4, ATF7, CREB5."
+  "def": "Cyclic-AMP response element TGACGTCA and its half-site. CREB1, CREM, ATF1, ATF2, ATF4, ATF7, CREB5.",
+  "abbr": "CREB/ATF"
  },
  {
   "key": "ATF6_CREB3",
   "name": "ATF6 / CREB3 (ER stress)",
   "class": "bZIP",
-  "def": "ERSE / UPR elements, TGACGTGG-like. ATF6, ATF6B, CREB3, CREB3L1-L4, XBP1."
+  "def": "ERSE / UPR elements, TGACGTGG-like. ATF6, ATF6B, CREB3, CREB3L1-L4, XBP1.",
+  "abbr": "ATF6/CREB3"
  },
  {
   "key": "CEBP",
   "name": "C/EBP",
   "class": "bZIP",
-  "def": "TT(G/A)CGCAA palindrome. CEBPA/B/D/E/G, and DDIT3 (CHOP) heterodimer sites."
+  "def": "TT(G/A)CGCAA palindrome. CEBPA/B/D/E/G, and DDIT3 (CHOP) heterodimer sites.",
+  "abbr": "C/EBP"
  },
  {
   "key": "MAF",
   "name": "MAF (MARE)",
   "class": "bZIP",
-  "def": "Maf recognition element TGCTGAC(G)TCAGCA; large MAFs (MAF, MAFA/B, NRL) and small MAFs (MAFF/G/K)."
+  "def": "Maf recognition element TGCTGAC(G)TCAGCA; large MAFs (MAF, MAFA/B, NRL) and small MAFs (MAFF/G/K).",
+  "abbr": "MAF"
  },
  {
   "key": "NFE2_BACH",
   "name": "NFE2 / NRF / BACH (ARE)",
   "class": "bZIP",
-  "def": "Antioxidant/electrophile response element TGACTCAGC. NFE2, NFE2L1/L2/L3, BACH1, BACH2."
+  "def": "Antioxidant/electrophile response element TGACTCAGC. NFE2, NFE2L1/L2/L3, BACH1, BACH2.",
+  "abbr": "NFE2/BACH"
  },
  {
   "key": "PAR_BZIP",
   "name": "PAR bZIP (HLF/NFIL3/DBP)",
   "class": "bZIP",
-  "def": "Proline- and acidic-rich bZIPs binding TTATG(T/C)AA. HLF, NFIL3/E4BP4, DBP, TEF."
+  "def": "Proline- and acidic-rich bZIPs binding TTATG(T/C)AA. HLF, NFIL3/E4BP4, DBP, TEF.",
+  "abbr": "PAR bZIP"
  },
  {
   "key": "BZIP_OTHER",
   "name": "Other bZIP",
   "class": "bZIP",
-  "def": "bZIP factors not covered above, e.g. CREBZF, CREBL2, and unclassified bZIP archetypes."
+  "def": "bZIP factors not covered above, e.g. CREBZF, CREBL2, and unclassified bZIP archetypes.",
+  "abbr": "bZIP other"
  },
  {
   "key": "MYC_MAX",
   "name": "MYC / MAX / MXD",
   "class": "bHLH",
-  "def": "Canonical E-box CACGTG. MYC, MYCN, MAX, MXI1, MXD1-4, MNT, MGA, MLX, MLXIP, MLXIPL."
+  "def": "Canonical E-box CACGTG. MYC, MYCN, MAX, MXI1, MXD1-4, MNT, MGA, MLX, MLXIP, MLXIPL.",
+  "abbr": "MYC/MAX"
  },
  {
   "key": "USF",
   "name": "USF",
   "class": "bHLH",
-  "def": "E-box with flanking preference GTCACGTGAC. USF1, USF2, USF3."
+  "def": "E-box with flanking preference GTCACGTGAC. USF1, USF2, USF3.",
+  "abbr": "USF"
  },
  {
   "key": "MITF_TFE",
   "name": "MITF / TFE (CLEAR)",
   "class": "bHLH",
-  "def": "CLEAR/M-box GTCACGTGAC. MITF, TFE3, TFEB, TFEC."
+  "def": "CLEAR/M-box GTCACGTGAC. MITF, TFE3, TFEB, TFEC.",
+  "abbr": "MITF/TFE"
  },
  {
   "key": "SREBF",
   "name": "SREBP",
   "class": "bHLH",
-  "def": "Sterol response element TCACNCCAC plus E-box binding. SREBF1, SREBF2."
+  "def": "Sterol response element TCACNCCAC plus E-box binding. SREBF1, SREBF2.",
+  "abbr": "SREBP"
  },
  {
   "key": "CLOCK_BMAL",
   "name": "CLOCK / BMAL1",
   "class": "bHLH-PAS",
-  "def": "Tandem E-boxes CACGTG of the circadian oscillator. CLOCK, ARNTL/BMAL1, NPAS2."
+  "def": "Tandem E-boxes CACGTG of the circadian oscillator. CLOCK, ARNTL/BMAL1, NPAS2.",
+  "abbr": "CLOCK/BMAL"
  },
  {
   "key": "HIF_ARNT",
   "name": "HIF / ARNT",
   "class": "bHLH-PAS",
-  "def": "Hypoxia response element (A/G)CGTG. HIF1A, EPAS1/HIF2A, HIF3A, ARNT, ARNT2."
+  "def": "Hypoxia response element (A/G)CGTG. HIF1A, EPAS1/HIF2A, HIF3A, ARNT, ARNT2.",
+  "abbr": "HIF/ARNT"
  },
  {
   "key": "AHR",
   "name": "AHR / AHRR",
   "class": "bHLH-PAS",
-  "def": "Xenobiotic response element TNGCGTG. AHR, AHRR (with ARNT)."
+  "def": "Xenobiotic response element TNGCGTG. AHR, AHRR (with ARNT).",
+  "abbr": "AHR / AHRR"
  },
  {
   "key": "NPAS",
   "name": "NPAS3 / NPAS4 / other PAS",
   "class": "bHLH-PAS",
-  "def": "Neuronal PAS-domain bHLH factors binding E-box variants."
+  "def": "Neuronal PAS-domain bHLH factors binding E-box variants.",
+  "abbr": "NPAS"
  },
  {
   "key": "E_PROTEIN",
   "name": "E-proteins (TCF3/4/12)",
   "class": "bHLH",
-  "def": "Class I bHLH E-box CAGCTG/CACCTG heterodimer partners. TCF3/E2A, TCF4/ITF2, TCF12/HEB, TCF15, TCFL5."
+  "def": "Class I bHLH E-box CAGCTG/CACCTG heterodimer partners. TCF3/E2A, TCF4/ITF2, TCF12/HEB, TCF15, TCFL5.",
+  "abbr": "E-proteins"
  },
  {
   "key": "MYOD",
   "name": "Myogenic bHLH (MyoD)",
   "class": "bHLH",
-  "def": "Muscle E-box CAGCTG with AT-flank preference. MYOD1, MYF5, MYF6, MYOG, MSC, MYOR."
+  "def": "Muscle E-box CAGCTG with AT-flank preference. MYOD1, MYF5, MYF6, MYOG, MSC, MYOR.",
+  "abbr": "Myogenic bHLH"
  },
  {
   "key": "NEUROD_ATOH",
   "name": "NeuroD / Atonal / ASCL",
   "class": "bHLH",
-  "def": "Class II neural E-box CAGATG / CAGCTG. NEUROD1/2/4/6, NEUROG1-3, ATOH1/7/8, ASCL1/2, OLIG1-3, PTF1A, FERD3L, BHLHA9/15, BHLHE22/23, MSGN1, FIGLA, NHLH1/2."
+  "def": "Class II neural E-box CAGATG / CAGCTG. NEUROD1/2/4/6, NEUROG1-3, ATOH1/7/8, ASCL1/2, OLIG1-3, PTF1A, FERD3L, BHLHA9/15, BHLHE22/23, MSGN1, FIGLA, NHLH1/2.",
+  "abbr": "NeuroD"
  },
  {
   "key": "HAND_TWIST",
   "name": "TWIST / HAND",
   "class": "bHLH",
-  "def": "E-box CATCTG/CAGATG bound by TWIST1/2, HAND1/2, TCF21, MESP1/2, SCX."
+  "def": "E-box CATCTG/CAGATG bound by TWIST1/2, HAND1/2, TCF21, MESP1/2, SCX.",
+  "abbr": "TWIST/HAND"
  },
  {
   "key": "TAL_LYL",
   "name": "TAL1 / LYL1 (hematopoietic)",
   "class": "bHLH",
-  "def": "E-box CAGCTG/CAGGTG within composite GATA-E-box elements. TAL1, TAL2, LYL1."
+  "def": "E-box CAGCTG/CAGGTG within composite GATA-E-box elements. TAL1, TAL2, LYL1.",
+  "abbr": "TAL1"
  },
  {
   "key": "HES_HEY",
   "name": "HES / HEY (N-box)",
   "class": "bHLH-Orange",
-  "def": "Class C bHLH-Orange repressors reading CACGYG (and the N box CACNAG); the CACGTG form is shared with the MYC/USF/MITF/CLOCK E-box families. HES1-7, HEY1/2, HEYL, HELT."
+  "def": "Class C bHLH-Orange repressors reading CACGYG (and the N box CACNAG); the CACGTG form is shared with the MYC/USF/MITF/CLOCK E-box families. HES1-7, HEY1/2, HEYL, HELT.",
+  "abbr": "HES/HEY"
  },
  {
   "key": "BHLHE40_41",
   "name": "BHLHE40 / BHLHE41 (DEC1/2)",
   "class": "bHLH",
-  "def": "Class B E-box CACGTG repressors of the circadian and hypoxia programs."
+  "def": "Class B E-box CACGTG repressors of the circadian and hypoxia programs.",
+  "abbr": "BHLHE40/41"
  },
  {
   "key": "TFAP4",
   "name": "TFAP4 (AP-4)",
   "class": "bHLH",
-  "def": "Palindromic E-box CAGCTG. TFAP4."
+  "def": "Palindromic E-box CAGCTG. TFAP4.",
+  "abbr": "TFAP4"
  },
  {
   "key": "EBF",
   "name": "EBF / COE",
   "class": "Rel",
-  "def": "Palindromic Olf-1/EBF site TCCCNNGGGA, read by a Rel-like DNA-binding domain with a zinc knuckle rather than by a bHLH. EBF1-4 (COE1-3)."
+  "def": "Palindromic Olf-1/EBF site TCCCNNGGGA, read by a Rel-like DNA-binding domain with a zinc knuckle rather than by a bHLH. EBF1-4 (COE1-3).",
+  "abbr": "EBF / COE"
  },
  {
   "key": "BHLH_OTHER",
   "name": "Other bHLH",
   "class": "bHLH",
-  "def": "bHLH factors and archetypes not covered above, incl. MYRF-like and unclassified E-box archetypes."
+  "def": "bHLH factors and archetypes not covered above, incl. MYRF-like and unclassified E-box archetypes.",
+  "abbr": "bHLH other"
  },
  {
   "key": "NR_STEROID",
   "name": "Steroid receptors (GR/MR/PR/AR)",
   "class": "Nuclear receptor",
-  "def": "Inverted repeat of AGAACA (ARE/GRE) spaced by 3 bp. NR3C1/GR, NR3C2/MR, PGR, AR."
+  "def": "Inverted repeat of AGAACA (ARE/GRE) spaced by 3 bp. NR3C1/GR, NR3C2/MR, PGR, AR.",
+  "abbr": "steroid NR"
  },
  {
   "key": "ESR",
   "name": "Estrogen receptors",
   "class": "Nuclear receptor",
-  "def": "ERE: inverted AGGTCA repeat, GGTCAnnnTGACC. ESR1, ESR2."
+  "def": "ERE: inverted AGGTCA repeat, GGTCAnnnTGACC. ESR1, ESR2.",
+  "abbr": "Estrogen NR"
  },
  {
   "key": "ESRR",
   "name": "Estrogen-related receptors",
   "class": "Nuclear receptor",
-  "def": "ERRE TNAAGGTCA extended half-site. ESRRA, ESRRB, ESRRG."
+  "def": "ERRE TNAAGGTCA extended half-site. ESRRA, ESRRB, ESRRG.",
+  "abbr": "ERR"
  },
  {
   "key": "RXR_HETERO",
   "name": "RXR and its heterodimers",
   "class": "Nuclear receptor",
-  "def": "DR1-DR5 direct repeats of AGGTCA. RXRA/B/G, RARA/B/G, THRA/THRB, VDR, PPARA/D/G, NR1H2/3 (LXR), NR1H4 (FXR), NR1I2/I3 (PXR/CAR)."
+  "def": "DR1-DR5 direct repeats of AGGTCA. RXRA/B/G, RARA/B/G, THRA/THRB, VDR, PPARA/D/G, NR1H2/3 (LXR), NR1H4 (FXR), NR1I2/I3 (PXR/CAR).",
+  "abbr": "RXR"
  },
  {
   "key": "NR4A",
   "name": "NR4A (NUR77/NURR1)",
   "class": "Nuclear receptor",
-  "def": "NBRE AAAGGTCA monomeric half-site and NurRE. NR4A1/2/3."
+  "def": "NBRE AAAGGTCA monomeric half-site and NurRE. NR4A1/2/3.",
+  "abbr": "NR4A"
  },
  {
   "key": "NR5A",
   "name": "NR5A (SF-1 / LRH-1)",
   "class": "Nuclear receptor",
-  "def": "SF-1 response element (T)CAAGGTCA. NR5A1, NR5A2."
+  "def": "SF-1 response element (T)CAAGGTCA. NR5A1, NR5A2.",
+  "abbr": "NR5A"
  },
  {
   "key": "ROR",
   "name": "ROR",
   "class": "Nuclear receptor",
-  "def": "RORE: AT-rich half-site AAAGTAGGTCA. RORA, RORB, RORC."
+  "def": "RORE: AT-rich half-site AAAGTAGGTCA. RORA, RORB, RORC.",
+  "abbr": "ROR"
  },
  {
   "key": "REV_ERB",
   "name": "REV-ERB (NR1D)",
   "class": "Nuclear receptor",
-  "def": "RevDR2 and RORE-like sites. NR1D1, NR1D2."
+  "def": "RevDR2 and RORE-like sites. NR1D1, NR1D2.",
+  "abbr": "REV-ERB"
  },
  {
   "key": "NR2F_COUP",
   "name": "COUP-TF (NR2F)",
   "class": "Nuclear receptor",
-  "def": "DR1 AGGTCAAAGGTCA. NR2F1/2/6."
+  "def": "DR1 AGGTCAAAGGTCA. NR2F1/2/6.",
+  "abbr": "COUP-TF"
  },
  {
   "key": "HNF4",
   "name": "HNF4",
   "class": "Nuclear receptor",
-  "def": "DR1 with strong 5' extension. HNF4A, HNF4G, NR2C1/2 (TR2/TR4)."
+  "def": "DR1 with strong 5' extension. HNF4A, HNF4G, NR2C1/2 (TR2/TR4).",
+  "abbr": "HNF4"
  },
  {
   "key": "NR2E",
   "name": "NR2E (TLX / PNR)",
   "class": "Nuclear receptor",
-  "def": "AAGGTCA monomeric sites. NR2E1, NR2E3."
+  "def": "AAGGTCA monomeric sites. NR2E1, NR2E3.",
+  "abbr": "NR2E"
  },
  {
   "key": "NR6A1",
   "name": "NR6A1 (GCNF)",
   "class": "Nuclear receptor",
-  "def": "DR0 direct repeat TCAAGGTCA. NR6A1."
+  "def": "DR0 direct repeat TCAAGGTCA. NR6A1.",
+  "abbr": "NR6A1"
  },
  {
   "key": "NR_OTHER",
   "name": "Other nuclear receptors",
   "class": "Nuclear receptor",
-  "def": "Nuclear receptor archetypes and orphan receptors not covered above."
+  "def": "Nuclear receptor archetypes and orphan receptors not covered above.",
+  "abbr": "NR other"
  },
  {
   "key": "ETS_CLASS1",
   "name": "ETS class I (ETS1/ERG/FLI1)",
   "class": "ETS",
-  "def": "GGA(A/T) core, ACCGGAAGT. ETS1/2, ERG, FLI1, FEV, ETV1/4/5, ETV6/7, ERF, ETV3, ELK1/3/4, GABPA, SPDEF."
+  "def": "GGA(A/T) core, ACCGGAAGT. ETS1/2, ERG, FLI1, FEV, ETV1/4/5, ETV6/7, ERF, ETV3, ELK1/3/4, GABPA, SPDEF.",
+  "abbr": "ETS"
  },
  {
   "key": "ETS_EHF",
   "name": "ETS epithelial (ELF/EHF)",
   "class": "ETS",
-  "def": "AACCGGAAGT with distinct 5' preference. ELF1-5, EHF, ELF2."
+  "def": "AACCGGAAGT with distinct 5' preference. ELF1-5, EHF, ELF2.",
+  "abbr": "ELF/EHF"
  },
  {
   "key": "SPI1",
   "name": "SPI1 / SPIB / SPIC (PU.1)",
   "class": "ETS",
-  "def": "Purine-rich AGAGGAAGTG. SPI1, SPIB, SPIC; EICE composite with IRF."
+  "def": "Purine-rich AGAGGAAGTG. SPI1, SPIB, SPIC; EICE composite with IRF.",
+  "abbr": "PU.1"
  },
  {
   "key": "ETV2_ETV6",
   "name": "ETV2 / ETV6-type",
   "class": "ETS",
-  "def": "ETS sites with tandem GGAA repeats favoured by ETV2 and the ETV6 repressor."
+  "def": "ETS sites with tandem GGAA repeats favoured by ETV2 and the ETV6 repressor.",
+  "abbr": "ETV2/6"
  },
  {
   "key": "IRF",
   "name": "IRF",
   "class": "IRF",
-  "def": "ISRE/AICE, AANTGAAA repeats. IRF1-9; composite EICE (with SPI1) and AICE (with BATF)."
+  "def": "ISRE/AICE, AANTGAAA repeats. IRF1-9; composite EICE (with SPI1) and AICE (with BATF).",
+  "abbr": "IRF"
  },
  {
   "key": "STAT",
   "name": "STAT",
   "class": "STAT",
-  "def": "GAS TTCnnnGAA and ISRE-like. STAT1-4, STAT5A/B, STAT6."
+  "def": "GAS TTCnnnGAA and ISRE-like. STAT1-4, STAT5A/B, STAT6.",
+  "abbr": "STAT"
  },
  {
   "key": "NFKB",
   "name": "NF-kB / Rel",
   "class": "Rel",
-  "def": "kB site GGGRNNYYCC. NFKB1, NFKB2, RELA, RELB, REL."
+  "def": "kB site GGGRNNYYCC. NFKB1, NFKB2, RELA, RELB, REL.",
+  "abbr": "NF-kB / Rel"
  },
  {
   "key": "NFAT",
   "name": "NFAT",
   "class": "Rel",
-  "def": "GGAAA core; NFATC1-4 (Rel-homology) and NFAT5/TonEBP."
+  "def": "GGAAA core; NFATC1-4 (Rel-homology) and NFAT5/TonEBP.",
+  "abbr": "NFAT"
  },
  {
   "key": "P53",
   "name": "p53 family",
   "class": "p53",
-  "def": "Two decamers RRRCWWGYYY. TP53, TP63, TP73."
+  "def": "Two decamers RRRCWWGYYY. TP53, TP63, TP73.",
+  "abbr": "p53 family"
  },
  {
   "key": "RUNX",
   "name": "RUNX",
   "class": "Runt",
-  "def": "TGTGGT core (ACCACA). RUNX1/2/3 with CBFB."
+  "def": "TGTGGT core (ACCACA). RUNX1/2/3 with CBFB.",
+  "abbr": "RUNX"
  },
  {
   "key": "MEF2",
   "name": "MEF2",
   "class": "MADS",
-  "def": "AT-rich CTA(A/T)4TAG. MEF2A/B/C/D."
+  "def": "AT-rich CTA(A/T)4TAG. MEF2A/B/C/D.",
+  "abbr": "MEF2"
  },
  {
   "key": "SRF",
   "name": "SRF",
   "class": "MADS",
-  "def": "CArG box CCW6GG. SRF."
+  "def": "CArG box CCW6GG. SRF.",
+  "abbr": "SRF"
  },
  {
   "key": "TBX",
   "name": "T-box",
   "class": "T-box",
-  "def": "AGGTGTGA half-site, palindromic in TBXT. TBX1-6, TBX10, TBX15, TBX18-21, TBXT/T, TBR1, EOMES, MGA."
+  "def": "AGGTGTGA half-site, palindromic in TBXT. TBX1-6, TBX10, TBX15, TBX18-21, TBXT/T, TBR1, EOMES, MGA.",
+  "abbr": "T-box"
  },
  {
   "key": "GATA",
   "name": "GATA",
   "class": "GATA",
-  "def": "WGATAA. GATA1-6, TRPS1; composite GATA-E-box with TAL1."
+  "def": "WGATAA. GATA1-6, TRPS1; composite GATA-E-box with TAL1.",
+  "abbr": "GATA"
  },
  {
   "key": "RFX",
   "name": "RFX",
   "class": "RFX",
-  "def": "X-box GTTRCC(A/T)3GGYAAC. RFX1-8."
+  "def": "X-box GTTRCC(A/T)3GGYAAC. RFX1-8.",
+  "abbr": "RFX"
  },
  {
   "key": "SMAD",
   "name": "SMAD",
   "class": "SMAD",
-  "def": "SBE GTCT/AGAC and GC-rich SMAD motifs. SMAD1-5, SMAD9."
+  "def": "SBE GTCT/AGAC and GC-rich SMAD motifs. SMAD1-5, SMAD9.",
+  "abbr": "SMAD"
  },
  {
   "key": "NFI",
   "name": "NFI (CTF/NF-1)",
   "class": "SMAD/NF-1",
-  "def": "Palindromic TTGGC(N5)GCCAA. NFIA, NFIB, NFIC, NFIX."
+  "def": "Palindromic TTGGC(N5)GCCAA. NFIA, NFIB, NFIC, NFIX.",
+  "abbr": "NFI"
  },
  {
   "key": "AP2",
   "name": "AP-2 (TFAP2)",
   "class": "AP-2",
-  "def": "GCCYGCRGGC. TFAP2A-E."
+  "def": "GCCYGCRGGC. TFAP2A-E.",
+  "abbr": "AP-2"
  },
  {
   "key": "GRHL",
   "name": "Grainyhead (GRHL)",
   "class": "Grainyhead",
-  "def": "AACCGGTT. GRHL1-3, TFCP2, TFCP2L1, UBP1."
+  "def": "AACCGGTT. GRHL1-3, TFCP2, TFCP2L1, UBP1.",
+  "abbr": "Grainyhead"
  },
  {
   "key": "TEAD",
   "name": "TEAD",
   "class": "TEA",
-  "def": "MCAT element GGAATG. TEAD1-4."
+  "def": "MCAT element GGAATG. TEAD1-4.",
+  "abbr": "TEAD"
  },
  {
   "key": "NFY",
   "name": "NF-Y (CBF)",
   "class": "CBF/NF-Y",
-  "def": "CCAAT box. NFYA, NFYB, NFYC."
+  "def": "CCAAT box. NFYA, NFYB, NFYC.",
+  "abbr": "NF-Y"
  },
  {
   "key": "HSF",
   "name": "HSF",
   "class": "HSF",
-  "def": "Heat-shock element, inverted nGAAn repeats. HSF1/2/4/5, HSFY1/2."
+  "def": "Heat-shock element, inverted nGAAn repeats. HSF1/2/4/5, HSFY1/2.",
+  "abbr": "HSF"
  },
  {
   "key": "SAND",
   "name": "SAND domain (AIRE/SP100/GMEB)",
   "class": "SAND",
-  "def": "GMEB1/2 (GRE-modulating), SP100, SP140, AIRE, DEAF1-like SAND factors."
+  "def": "GMEB1/2 (GRE-modulating), SP100, SP140, AIRE, DEAF1-like SAND factors.",
+  "abbr": "SAND domain"
  },
  {
   "key": "MYB",
   "name": "MYB / MYB-like",
   "class": "Myb/SANT",
-  "def": "MBS YAACKG. MYB, MYBL1, MYBL2; plus Myb/SANT archetypes (SNAPC4, MYPOP, TERF1/2 telobox)."
+  "def": "MBS YAACKG. MYB, MYBL1, MYBL2; plus Myb/SANT archetypes (SNAPC4, MYPOP, TERF1/2 telobox).",
+  "abbr": "MYB"
  },
  {
   "key": "E2F",
   "name": "E2F / DP",
   "class": "E2F",
-  "def": "TTTSSCGC. E2F1-8, TFDP1/2."
+  "def": "TTTSSCGC. E2F1-8, TFDP1/2.",
+  "abbr": "E2F/DP"
  },
  {
   "key": "CSL",
   "name": "CSL / RBPJ",
   "class": "CSL",
-  "def": "GTGGGAA. RBPJ (SUH), plus NOTCH-dependent dimer sites."
+  "def": "GTGGGAA. RBPJ (SUH), plus NOTCH-dependent dimer sites.",
+  "abbr": "CSL / RBPJ"
  },
  {
   "key": "DMRT",
   "name": "DMRT (DM domain)",
   "class": "DM",
-  "def": "DM element, palindromic ACAWTGTW. DMRT1-3, DMRTA1/2, DMRTB1, DMRTC2."
+  "def": "DM element, palindromic ACAWTGTW. DMRT1-3, DMRTA1/2, DMRTB1, DMRTC2.",
+  "abbr": "DMRT"
  },
  {
   "key": "NDT80",
   "name": "Ndt80/PhoG-like (C11orf9/MYRF)",
   "class": "Ndt80/PhoG",
-  "def": "Ndt80-like DNA-binding domain archetypes, incl. MYRF."
+  "def": "Ndt80-like DNA-binding domain archetypes, incl. MYRF.",
+  "abbr": "Ndt80"
  },
  {
   "key": "THAP",
   "name": "THAP-type zinc finger",
   "class": "THAP finger",
-  "def": "THAP1, THAP12 and other THAP-type zinc fingers. THAP11 is covered by the ZNF143 entry, whose site it shares."
+  "def": "THAP1, THAP12 and other THAP-type zinc fingers. THAP11 is covered by the ZNF143 entry, whose site it shares.",
+  "abbr": "THAP"
  },
  {
   "key": "ZBED",
   "name": "BED-type zinc finger",
   "class": "BED_ZF",
-  "def": "hAT-transposase-derived BED fingers. ZBED1 (hDREF, TATCGATA), ZBED2/4/5."
+  "def": "hAT-transposase-derived BED fingers. ZBED1 (hDREF, TATCGATA), ZBED2/4/5.",
+  "abbr": "ZBED"
  },
  {
   "key": "CENPB_POGO",
   "name": "CENP-B / pogo / Tigger",
   "class": "CENPB/pogo",
-  "def": "CENP-B box TTCGTTGGAA and related pogo-family transposase-derived domains. CENPB, TIGD1-7, POGK, JRK, CENPBD1."
+  "def": "CENP-B box TTCGTTGGAA and related pogo-family transposase-derived domains. CENPB, TIGD1-7, POGK, JRK, CENPBD1.",
+  "abbr": "CENP-B"
  },
  {
   "key": "ARID",
   "name": "ARID / BRIGHT",
   "class": "ARID",
-  "def": "AT-rich interaction domain; ARID3A/B, ARID5A/B."
+  "def": "AT-rich interaction domain; ARID3A/B, ARID5A/B.",
+  "abbr": "ARID"
  },
  {
   "key": "MBD_CXXC",
   "name": "MBD and CxxC readers",
   "class": "MBD/CxxC",
-  "def": "Methyl-CpG and unmethylated-CpG readers. MECP2, MBD1-3, CXXC1/4/5, KDM2A/B, TET1/3, DNMT1, KMT2A/B."
+  "def": "Methyl-CpG and unmethylated-CpG readers. MECP2, MBD1-3, CXXC1/4/5, KDM2A/B, TET1/3, DNMT1, KMT2A/B.",
+  "abbr": "MBD/CxxC"
  },
  {
   "key": "HMGA",
   "name": "HMGA (AT-hook)",
   "class": "HMGA",
-  "def": "AT-rich minor-groove binding. HMGA1, HMGA2."
+  "def": "AT-rich minor-groove binding. HMGA1, HMGA2.",
+  "abbr": "HMGA"
  },
  {
   "key": "CSD",
   "name": "Cold-shock domain (YBX)",
   "class": "CSD",
-  "def": "Y-box CTGATTGGC. YBX1 and CSD archetypes."
+  "def": "Y-box CTGATTGGC. YBX1 and CSD archetypes.",
+  "abbr": "Y-box"
  },
  {
   "key": "TBP",
   "name": "TBP / TATA",
   "class": "TBP",
-  "def": "TATA box TATAWAWR. TBP, TAF1."
+  "def": "TATA box TATAWAWR. TBP, TAF1.",
+  "abbr": "TBP / TATA"
  },
  {
   "key": "PROSPERO",
   "name": "PROX1 (Prospero)",
   "class": "Prospero",
-  "def": "Prospero-domain homeodomain-like factor PROX1."
+  "def": "Prospero-domain homeodomain-like factor PROX1.",
+  "abbr": "PROX1"
  },
  {
   "key": "CG_OTHER",
   "name": "Other / unclassified",
   "class": "Other",
-  "def": "Motifs whose factor has no assigned structural family here: LCOR and LCORL (psq-type HTH) and LRRFIP1. Cofactors without a DBD are in CHROMATIN; unnamed archetypes are in ZNF_UNNAMED."
+  "def": "Motifs whose factor has no assigned structural family here: LCOR and LCORL (psq-type HTH) and LRRFIP1. Cofactors without a DBD are in CHROMATIN; unnamed archetypes are in ZNF_UNNAMED.",
+  "abbr": "unclassified"
  },
  {
   "key": "HD_HOX_ANT",
   "name": "Anterior HOX (HOX1-8)",
   "class": "Homeodomain",
-  "def": "TAAT core with PBX/MEIS cooperativity; paralogue groups 1-8: HOXA1-A7, HOXB1-B8, HOXC4-C8, HOXD1-D8."
+  "def": "TAAT core with PBX/MEIS cooperativity; paralogue groups 1-8: HOXA1-A7, HOXB1-B8, HOXC4-C8, HOXD1-D8.",
+  "abbr": "HOX ant"
  },
  {
   "key": "HD_HOX_POST",
   "name": "Posterior HOX (HOX9-13, AbdB-like)",
   "class": "Homeodomain",
-  "def": "TTTTATKR / TTAT core preferred by paralogue groups 9-13: HOXA9-A13, HOXB9, HOXB13, HOXC9-C13, HOXD9-D13."
+  "def": "TTTTATKR / TTAT core preferred by paralogue groups 9-13: HOXA9-A13, HOXB9, HOXB13, HOXC9-C13, HOXD9-D13.",
+  "abbr": "HOX post"
  },
  {
   "key": "HD_NKX",
   "name": "NKX",
   "class": "Homeodomain",
-  "def": "TAAGTG / CACTTAA. NKX1-1/1-2, NKX2-1 to 2-8, NKX3-1/3-2, NKX6-1 to 6-3, plus NKX-like archetypes."
+  "def": "TAAGTG / CACTTAA. NKX1-1/1-2, NKX2-1 to 2-8, NKX3-1/3-2, NKX6-1 to 6-3, plus NKX-like archetypes.",
+  "abbr": "NKX"
  },
  {
   "key": "HD_Q50",
   "name": "Q50 homeodomain (DLX/MSX/LHX-type, TAATTA)",
   "class": "Homeodomain",
-  "def": "Palindromic TAATTA read by homeodomains with glutamine at position 50, grouped by that specificity rather than by gene family: DLX1-6, MSX1-3, LHX1-9, ALX1/3/4, PRRX1/2, SHOX/SHOX2, EMX1/2, VAX1/2, EN1/2, GBX1/2, BARHL1/2, BARX1/2, UNCX, ARX, ESX1, HLX, HMX1-3, MEOX1/2, MNX1, NOTO, HESX1, ISL1/2, ISX, LBX1/2, LMX1A/1B, DBX1/2, EVX1/2, GSX1/2, TLX1-3, and the Q50 paired-like factors VSX1/2, RAX/RAX2, PHOX2A/2B, NOBOX, MIXL1, VENTX, PROP1, DRGX, BSX, OTP, SEBOX, PDX1."
+  "def": "Palindromic TAATTA read by homeodomains with glutamine at position 50, grouped by that specificity rather than by gene family: DLX1-6, MSX1-3, LHX1-9, ALX1/3/4, PRRX1/2, SHOX/SHOX2, EMX1/2, VAX1/2, EN1/2, GBX1/2, BARHL1/2, BARX1/2, UNCX, ARX, ESX1, HLX, HMX1-3, MEOX1/2, MNX1, NOTO, HESX1, ISL1/2, ISX, LBX1/2, LMX1A/1B, DBX1/2, EVX1/2, GSX1/2, TLX1-3, and the Q50 paired-like factors VSX1/2, RAX/RAX2, PHOX2A/2B, NOBOX, MIXL1, VENTX, PROP1, DRGX, BSX, OTP, SEBOX, PDX1.",
+  "abbr": "Q50 HD"
  },
  {
   "key": "HD_K50",
   "name": "K50 homeodomain (OTX/PITX/CRX-type, TAATCC)",
   "class": "Homeodomain",
-  "def": "TAATCC/TAATCY specificity from lysine at homeodomain position 50. The true K50 set: OTX1/2, CRX, DMBX1, PITX1-3, GSC, GSC2. Paired-like factors that carry Q50 and read TAATTA are grouped with HD_Q50 instead, whatever their gene family."
+  "def": "TAATCC/TAATCY specificity from lysine at homeodomain position 50. The true K50 set: OTX1/2, CRX, DMBX1, PITX1-3, GSC, GSC2. Paired-like factors that carry Q50 and read TAATTA are grouped with HD_Q50 instead, whatever their gene family.",
+  "abbr": "K50 HD"
  },
  {
   "key": "HD_PRD_LIKE",
   "name": "PRD-like / primate-specific (CRX-like)",
   "class": "Homeodomain",
-  "def": "Divergent paired-like homeodomains of germline and early embryo: DPRX, LEUTX, TPRX1, ARGFX, RHOXF1/2, DUX-like TPRX paralogs."
+  "def": "Divergent paired-like homeodomains of germline and early embryo: DPRX, LEUTX, TPRX1, ARGFX, RHOXF1/2, DUX-like TPRX paralogs.",
+  "abbr": "PRD-like"
  },
  {
   "key": "HD_DUX",
   "name": "DUX / DUXA",
   "class": "Homeodomain",
-  "def": "Double homeodomain TAATCTAATCA. DUX4, DUXA, DUXB."
+  "def": "Double homeodomain TAATCTAATCA. DUX4, DUXA, DUXB.",
+  "abbr": "DUX"
  },
  {
   "key": "HD_TALE",
   "name": "TALE homeodomain (PBX/MEIS/TGIF)",
   "class": "TALE homeodomain",
-  "def": "TGATTGAT and TGACAG. PBX1-4, MEIS1-3, PKNOX1/2, TGIF1/2, TGIF2LX/2LY; PBX-HOX composite sites."
+  "def": "TGATTGAT and TGACAG. PBX1-4, MEIS1-3, PKNOX1/2, TGIF1/2, TGIF2LX/2LY; PBX-HOX composite sites.",
+  "abbr": "TALE HD"
  },
  {
   "key": "HD_CUT",
   "name": "CUX (CUT homeodomain)",
   "class": "CUT homeodomain",
-  "def": "ATCGAT / ATCRAT. CUX1, CUX2, SATB1, SATB2."
+  "def": "ATCGAT / ATCRAT. CUX1, CUX2, SATB1, SATB2.",
+  "abbr": "CUX"
  },
  {
   "key": "HD_ONECUT",
   "name": "ONECUT (HNF6)",
   "class": "CUT homeodomain",
-  "def": "TATTGATTT. ONECUT1/2/3."
+  "def": "TATTGATTT. ONECUT1/2/3.",
+  "abbr": "ONECUT"
  },
  {
   "key": "HD_POU",
   "name": "POU (octamer)",
   "class": "POU",
-  "def": "Octamer ATGCAAAT and MORE/PORE dimer sites. POU1F1, POU2F1-3, POU3F1-4, POU4F1-3, POU5F1/OCT4, POU5F1B, POU6F1/2."
+  "def": "Octamer ATGCAAAT and MORE/PORE dimer sites. POU1F1, POU2F1-3, POU3F1-4, POU4F1-3, POU5F1/OCT4, POU5F1B, POU6F1/2.",
+  "abbr": "POU"
  },
  {
   "key": "HD_HNF1",
   "name": "HNF1",
   "class": "POU-homeodomain hybrid",
-  "def": "GTTAATNATTAAC palindrome. HNF1A, HNF1B."
+  "def": "GTTAATNATTAAC palindrome. HNF1A, HNF1B.",
+  "abbr": "HNF1"
  },
  {
   "key": "HD_SIX",
   "name": "SIX",
   "class": "SIX homeodomain",
-  "def": "MEF3 element, read as TGATAC / GTATCA (the two strands of one extended site). SIX1/2/4 and SIX3/6 select the same core in vitro and differ in cofactor use rather than in sequence."
+  "def": "MEF3 element, read as TGATAC / GTATCA (the two strands of one extended site). SIX1/2/4 and SIX3/6 select the same core in vitro and differ in cofactor use rather than in sequence.",
+  "abbr": "SIX"
  },
  {
   "key": "HD_IRX",
   "name": "IRX (TALE, Iroquois)",
   "class": "TALE homeodomain",
-  "def": "ACA-rich TALE sites. IRX1-6."
+  "def": "ACA-rich TALE sites. IRX1-6.",
+  "abbr": "IRX"
  },
  {
   "key": "HD_CDX_PDX",
   "name": "CDX / PDX / anterior gut HD",
   "class": "Homeodomain",
-  "def": "TTTATG / CTTTAT. CDX1/2/4, PDX1, and related ParaHox factors."
+  "def": "TTTATG / CTTTAT. CDX1/2/4, PDX1, and related ParaHox factors.",
+  "abbr": "CDX/PDX"
  },
  {
   "key": "HD_ATYPICAL",
   "name": "Atypical / composite homeodomain",
   "class": "Homeodomain",
-  "def": "Homeodomains in unusual architectures: ZHX1-3, ZFHX2/3, HOMEZ, TSHZ1-3, ADNP, HDX, HMBOX1, PROX1-like, HHEX, POU-less HD archetypes."
+  "def": "Homeodomains in unusual architectures: ZHX1-3, ZFHX2/3, HOMEZ, TSHZ1-3, ADNP, HDX, HMBOX1, PROX1-like, HHEX, POU-less HD archetypes.",
+  "abbr": "atypical HD"
  },
  {
   "key": "HD_PAIRED",
   "name": "PAX paired domain",
   "class": "Paired box",
-  "def": "Paired-domain site GTCACGC(A/T)TGA; PAX1/9, PAX2/5/8, PAX3/7, PAX4/6 (with and without the homeodomain half-site)."
+  "def": "Paired-domain site GTCACGC(A/T)TGA; PAX1/9, PAX2/5/8, PAX3/7, PAX4/6 (with and without the homeodomain half-site).",
+  "abbr": "PAX"
  },
  {
   "key": "FOX",
   "name": "Forkhead (FOX)",
   "class": "Forkhead",
-  "def": "RYAAAYA core. FOXA1-3, FOXB1/2, FOXC1/2, FOXD1-4, FOXE1, FOXF1/2, FOXG1, FOXH1, FOXI1, FOXJ1-3, FOXK1/2, FOXL1/2, FOXM1, FOXN1-4, FOXO1/3/4/6, FOXP1-4, FOXQ1, FOXR1/2, FOXS1."
+  "def": "RYAAAYA core. FOXA1-3, FOXB1/2, FOXC1/2, FOXD1-4, FOXE1, FOXF1/2, FOXG1, FOXH1, FOXI1, FOXJ1-3, FOXK1/2, FOXL1/2, FOXM1, FOXN1-4, FOXO1/3/4/6, FOXP1-4, FOXQ1, FOXR1/2, FOXS1.",
+  "abbr": "Forkhead"
  },
  {
   "key": "FOX_FHL",
   "name": "Divergent forkhead sites (FOXP dimeric / FHL)",
   "class": "Forkhead",
-  "def": "Forkhead factors whose preferred site is not the canonical RYAAAYA: FOXP1-4 dimeric TGTTTAC repeats, and the alternate FHL/GACGC site used by FOXN1/N4 and bispecifically by FOXN2/N3, FOXJ2/J3."
+  "def": "Forkhead factors whose preferred site is not the canonical RYAAAYA: FOXP1-4 dimeric TGTTTAC repeats, and the alternate FHL/GACGC site used by FOXN1/N4 and bispecifically by FOXN2/N3, FOXJ2/J3.",
+  "abbr": "FOX divergent"
  },
  {
   "key": "SOX",
   "name": "SOX (HMG box)",
   "class": "Sox",
-  "def": "AACAAT / (A/T)(A/T)CAA(A/T)G. SOX1-21, SOX30, SRY; plus SOX-OCT composite sites."
+  "def": "AACAAT / (A/T)(A/T)CAA(A/T)G. SOX1-21, SOX30, SRY; plus SOX-OCT composite sites.",
+  "abbr": "SOX"
  },
  {
   "key": "TCF_LEF",
   "name": "TCF/LEF (HMG box)",
   "class": "Sox",
-  "def": "WNT response element CTTTGWW. TCF7, TCF7L1, TCF7L2, LEF1."
+  "def": "WNT response element CTTTGWW. TCF7, TCF7L1, TCF7L2, LEF1.",
+  "abbr": "TCF/LEF"
  },
  {
   "key": "HMG_OTHER",
   "name": "Other HMG-box",
   "class": "Sox",
-  "def": "HMG-box factors outside SOX and TCF/LEF: HMG20A/20B, BBX, HMGB-like archetypes."
+  "def": "HMG-box factors outside SOX and TCF/LEF: HMG20A/20B, BBX, HMGB-like archetypes.",
+  "abbr": "HMG other"
  },
  {
   "key": "CTCF",
   "name": "CTCF",
   "class": "C2H2 zinc finger",
-  "def": "19-bp core CCASYAGRKGGCRSYR with upstream module; the insulator/loop-anchor motif. CTCF."
+  "def": "19-bp core CCASYAGRKGGCRSYR with upstream module; the insulator/loop-anchor motif. CTCF.",
+  "abbr": "CTCF"
  },
  {
   "key": "CTCFL",
   "name": "CTCFL (BORIS)",
   "class": "C2H2 zinc finger",
-  "def": "CTCF-like core bound by the testis paralogue CTCFL."
+  "def": "CTCF-like core bound by the testis paralogue CTCFL.",
+  "abbr": "CTCFL"
  },
  {
   "key": "KLF_SP",
   "name": "KLF / SP (GC-box)",
   "class": "C2H2 zinc finger",
-  "def": "GC-box GGGGCGGGG and CACCC-box. KLF1-17, SP1-9."
+  "def": "GC-box GGGGCGGGG and CACCC-box. KLF1-17, SP1-9.",
+  "abbr": "KLF/SP"
  },
  {
   "key": "EGR",
   "name": "EGR",
   "class": "C2H2 zinc finger",
-  "def": "GCGTGGGCG. EGR1-4, WT1."
+  "def": "GCGTGGGCG. EGR1-4, WT1.",
+  "abbr": "EGR"
  },
  {
   "key": "WT1",
   "name": "WT1",
   "class": "C2H2 zinc finger",
-  "def": "EGR-like GC-rich site with distinct KTS-isoform preference. WT1."
+  "def": "EGR-like GC-rich site with distinct KTS-isoform preference. WT1.",
+  "abbr": "WT1"
  },
  {
   "key": "GLI",
   "name": "GLI",
   "class": "C2H2 zinc finger",
-  "def": "GACCACCCA. GLI1-3, GLI4, GLIS1-3, ZIC-adjacent sites."
+  "def": "GACCACCCA. GLI1-3, GLI4, GLIS1-3, ZIC-adjacent sites.",
+  "abbr": "GLI"
  },
  {
   "key": "ZIC",
   "name": "ZIC",
   "class": "C2H2 zinc finger",
-  "def": "GLI-like CCTGCTGNG. ZIC1-5."
+  "def": "GLI-like CCTGCTGNG. ZIC1-5.",
+  "abbr": "ZIC"
  },
  {
   "key": "ZEB",
   "name": "ZEB",
   "class": "C2H2 zinc finger",
-  "def": "E-box-like CACCTG bound by ZEB1/ZEB2 zinc fingers."
+  "def": "E-box-like CACCTG bound by ZEB1/ZEB2 zinc fingers.",
+  "abbr": "ZEB"
  },
  {
   "key": "SNAI",
   "name": "SNAIL / SCRATCH",
   "class": "C2H2 zinc finger",
-  "def": "E-box CAGGTG. SNAI1-3, SCRT1/2."
+  "def": "E-box CAGGTG. SNAI1-3, SCRT1/2.",
+  "abbr": "SNAIL"
  },
  {
   "key": "GFI",
   "name": "GFI1 / GFI1B",
   "class": "C2H2 zinc finger",
-  "def": "AATC core, TAAATCAC(A/T)GC. GFI1, GFI1B."
+  "def": "AATC core, TAAATCAC(A/T)GC. GFI1, GFI1B.",
+  "abbr": "GFI1 / GFI1B"
  },
  {
   "key": "INSM",
   "name": "INSM1 / INSM2",
   "class": "C2H2 zinc finger",
-  "def": "INSM1 and INSM2. The matrices here are GC-rich (TGTCAGGGGGCG) rather than E-box-like, and all three trace back to one compiled model, so the apparent agreement between databases is one matrix repeated."
+  "def": "INSM1 and INSM2. The matrices here are GC-rich (TGTCAGGGGGCG) rather than E-box-like, and all three trace back to one compiled model, so the apparent agreement between databases is one matrix repeated.",
+  "abbr": "INSM1 / INSM2"
  },
  {
   "key": "YY1",
   "name": "YY1 / YY2",
   "class": "C2H2 zinc finger",
-  "def": "AAnATGGCggc. YY1, YY2, ZFP42/REX1."
+  "def": "AAnATGGCggc. YY1, YY2, ZFP42/REX1.",
+  "abbr": "YY1 / YY2"
  },
  {
   "key": "REST",
   "name": "REST (NRSF)",
   "class": "C2H2 zinc finger",
-  "def": "21-bp RE1/NRSE TTCAGCACCACGGACAGCGCC. REST."
+  "def": "21-bp RE1/NRSE TTCAGCACCACGGACAGCGCC. REST.",
+  "abbr": "REST"
  },
  {
   "key": "ZNF143",
   "name": "ZNF143 / THAP11 (SBS)",
   "class": "C2H2 zinc finger",
-  "def": "SPH/SBS element ACTACAATTCCC, bound by ZNF143 and by THAP11 (Ronin) with HCFC1; also ZNF76."
+  "def": "SPH/SBS element ACTACAATTCCC, bound by ZNF143 and by THAP11 (Ronin) with HCFC1; also ZNF76.",
+  "abbr": "ZNF143"
  },
  {
   "key": "ZNF263",
   "name": "ZNF263",
   "class": "C2H2 zinc finger",
-  "def": "Long GA-rich/GGAGGA repeat motif. ZNF263."
+  "def": "Long GA-rich/GGAGGA repeat motif. ZNF263.",
+  "abbr": "ZNF263"
  },
  {
   "key": "MAZ",
   "name": "MAZ / PATZ1",
   "class": "C2H2 zinc finger",
-  "def": "GGGAGGG G-rich sites. MAZ, PATZ1, ZNF278-like."
+  "def": "GGGAGGG G-rich sites. MAZ, PATZ1, ZNF278-like.",
+  "abbr": "MAZ / PATZ1"
  },
  {
   "key": "ZBTB33",
   "name": "ZBTB33 (Kaiso)",
   "class": "C2H2 zinc finger",
-  "def": "KBS TCCTGCNA and methyl-CpG CGCG sites. ZBTB33."
+  "def": "KBS TCCTGCNA and methyl-CpG CGCG sites. ZBTB33.",
+  "abbr": "Kaiso"
  },
  {
   "key": "ZBTB7",
   "name": "ZBTB7A/B/C (LRF)",
   "class": "C2H2 zinc finger",
-  "def": "GC-rich GACCCCCCCC. ZBTB7A, ZBTB7B, ZBTB7C."
+  "def": "GC-rich GACCCCCCCC. ZBTB7A, ZBTB7B, ZBTB7C.",
+  "abbr": "ZBTB7"
  },
  {
   "key": "ZBTB18",
   "name": "ZBTB18 (RP58)",
   "class": "C2H2 zinc finger",
-  "def": "ZBTB18 (RP58): a C2H2 repressor reading the E-box-like site MACATCTGKM, core CATCTG/CAGATG - an E-box read by zinc fingers rather than by a bHLH."
+  "def": "ZBTB18 (RP58): a C2H2 repressor reading the E-box-like site MACATCTGKM, core CATCTG/CAGATG - an E-box read by zinc fingers rather than by a bHLH.",
+  "abbr": "ZBTB18"
  },
  {
   "key": "ZBTB_OTHER",
   "name": "Other BTB-ZF (ZBTB)",
   "class": "C2H2 zinc finger",
-  "def": "BTB-domain zinc fingers without a dedicated entry: ZBTB1-6, ZBTB11-49 and relatives. BCL6/BCL6B, HIC1/HIC2, ZBTB17, ZBTB18, ZBTB33, ZBTB7A/B/C and ZBTB48 are covered separately."
+  "def": "BTB-domain zinc fingers without a dedicated entry: ZBTB1-6, ZBTB11-49 and relatives. BCL6/BCL6B, HIC1/HIC2, ZBTB17, ZBTB18, ZBTB33, ZBTB7A/B/C and ZBTB48 are covered separately.",
+  "abbr": "ZBTB other"
  },
  {
   "key": "BCL6",
   "name": "BCL6 / BCL6B",
   "class": "C2H2 zinc finger",
-  "def": "STAT-like TTCCTAGAA bound by the BTB-ZF repressors BCL6, BCL6B."
+  "def": "STAT-like TTCCTAGAA bound by the BTB-ZF repressors BCL6, BCL6B.",
+  "abbr": "BCL6 / BCL6B"
  },
  {
   "key": "HIC",
   "name": "HIC1 / HIC2",
   "class": "C2H2 zinc finger",
-  "def": "TGCC(A/G) HiRE sites. HIC1, HIC2."
+  "def": "TGCC(A/G) HiRE sites. HIC1, HIC2.",
+  "abbr": "HIC1 / HIC2"
  },
  {
   "key": "ZBTB17",
   "name": "ZBTB17 (MIZ1)",
   "class": "C2H2 zinc finger",
-  "def": "Core-promoter GC-rich MIZ1 sites; MYC partner. ZBTB17."
+  "def": "Core-promoter GC-rich MIZ1 sites; MYC partner. ZBTB17.",
+  "abbr": "MIZ1"
  },
  {
   "key": "IKZF",
   "name": "IKZF (Ikaros)",
   "class": "C2H2 zinc finger",
-  "def": "GGGAA core Ikaros sites. IKZF1-5."
+  "def": "GGGAA core Ikaros sites. IKZF1-5.",
+  "abbr": "IKZF"
  },
  {
   "key": "BCL11",
   "name": "BCL11A / BCL11B",
   "class": "C2H2 zinc finger",
-  "def": "TGACCA-containing sites. BCL11A, BCL11B."
+  "def": "TGACCA-containing sites. BCL11A, BCL11B.",
+  "abbr": "BCL11"
  },
  {
   "key": "PRDM",
   "name": "PRDM",
   "class": "C2H2 zinc finger",
-  "def": "PR/SET-domain zinc fingers. PRDM1/BLIMP1 (AAAG(T/C)GAAAG), PRDM4-6, PRDM9 (recombination hotspots), PRDM10/13/14/15/16."
+  "def": "PR/SET-domain zinc fingers. PRDM1/BLIMP1 (AAAG(T/C)GAAAG), PRDM4-6, PRDM9 (recombination hotspots), PRDM10/13/14/15/16.",
+  "abbr": "PRDM"
  },
  {
   "key": "MECOM",
   "name": "MECOM / EVI1",
   "class": "C2H2 zinc finger",
-  "def": "Two-finger-cluster GATA-like and GACAAGATA sites. MECOM, PRDM16-EVI1 module."
+  "def": "Two-finger-cluster GATA-like and GACAAGATA sites. MECOM, PRDM16-EVI1 module.",
+  "abbr": "MECOM / EVI1"
  },
  {
   "key": "SALL",
   "name": "SALL",
   "class": "C2H2 zinc finger",
-  "def": "AT-rich double zinc-finger sites. SALL1-4."
+  "def": "AT-rich double zinc-finger sites. SALL1-4.",
+  "abbr": "SALL"
  },
  {
   "key": "ZFX",
   "name": "ZFX / ZFY",
   "class": "C2H2 zinc finger",
-  "def": "CpG-island GGCCT core at promoters. ZFX, ZFY."
+  "def": "CpG-island GGCCT core at promoters. ZFX, ZFY.",
+  "abbr": "ZFX / ZFY"
  },
  {
   "key": "ZNF384",
   "name": "ZNF384 / ZNF362",
   "class": "C2H2 zinc finger",
-  "def": "AT-rich TAAAAA-type site at extracellular-matrix gene promoters, shared by the near-identical paralogues ZNF384 and ZNF362."
+  "def": "AT-rich TAAAAA-type site at extracellular-matrix gene promoters, shared by the near-identical paralogues ZNF384 and ZNF362.",
+  "abbr": "ZNF384"
  },
  {
   "key": "ZNF410",
   "name": "ZNF410",
   "class": "C2H2 zinc finger",
-  "def": "Long GC-rich site clustered at the CHD4 promoter. ZNF410."
+  "def": "Long GC-rich site clustered at the CHD4 promoter. ZNF410.",
+  "abbr": "ZNF410"
  },
  {
   "key": "ZNF460",
   "name": "ZNF460 / ZNF317-like",
   "class": "C2H2 zinc finger",
-  "def": "Long composite KZFP motifs characterised by ChIP-exo; covers ZNF460 and the closely related ZNF317."
+  "def": "Long composite KZFP motifs characterised by ChIP-exo; covers ZNF460 and the closely related ZNF317.",
+  "abbr": "ZNF460"
  },
  {
   "key": "ZNF768",
   "name": "ZNF768",
   "class": "C2H2 zinc finger",
-  "def": "MYC-box-like TGGCAGCAGC repeat. ZNF768."
+  "def": "MYC-box-like TGGCAGCAGC repeat. ZNF768.",
+  "abbr": "ZNF768"
  },
  {
   "key": "ZNF281",
   "name": "ZNF281 / ZNF148 (ZBP-89)",
   "class": "C2H2 zinc finger",
-  "def": "GC-rich CCCCACCCC sites. ZNF281, ZNF148, ZNF219."
+  "def": "GC-rich CCCCACCCC sites. ZNF281, ZNF148, ZNF219.",
+  "abbr": "ZNF281"
  },
  {
   "key": "ZNF24",
   "name": "ZNF24 / ZSCAN-type promoter ZFs",
   "class": "C2H2 zinc finger",
-  "def": "SCAN-domain zinc fingers with defined promoter motifs. ZNF24, ZSCAN4, ZKSCAN1/3, ZSCAN21/22/29."
+  "def": "SCAN-domain zinc fingers with defined promoter motifs. ZNF24, ZSCAN4, ZKSCAN1/3, ZSCAN21/22/29.",
+  "abbr": "ZNF24"
  },
  {
   "key": "HINFP",
   "name": "HINFP (MIZF)",
   "class": "C2H2 zinc finger",
-  "def": "Histone H4 promoter site GTCCGCGGTA. HINFP."
+  "def": "Histone H4 promoter site GTCCGCGGTA. HINFP.",
+  "abbr": "HINFP"
  },
  {
   "key": "MTF1",
   "name": "MTF1",
   "class": "C2H2 zinc finger",
-  "def": "Metal response element TGCRCNC. MTF1."
+  "def": "Metal response element TGCRCNC. MTF1.",
+  "abbr": "MTF1"
  },
  {
   "key": "VEZF1",
   "name": "VEZF1",
   "class": "C2H2 zinc finger",
-  "def": "CT/GC-rich sites in vascular promoters. VEZF1."
+  "def": "CT/GC-rich sites in vascular promoters. VEZF1.",
+  "abbr": "VEZF1"
  },
  {
   "key": "RREB1",
   "name": "RREB1",
   "class": "C2H2 zinc finger",
-  "def": "RAS-responsive element, GC-rich. RREB1."
+  "def": "RAS-responsive element, GC-rich. RREB1.",
+  "abbr": "RREB1"
  },
  {
   "key": "MYT1",
   "name": "MYT1 / ST18 (CCHC zinc finger)",
   "class": "CCHC zinc finger",
-  "def": "AAAGTTT core neural repressor sites. MYT1, MYT1L, ST18."
+  "def": "AAAGTTT core neural repressor sites. MYT1, MYT1L, ST18.",
+  "abbr": "MYT1 / ST18"
  },
  {
   "key": "KRAB_ZNF",
   "name": "KRAB zinc-finger proteins (KZFPs)",
   "class": "C2H2 zinc finger",
-  "def": "The large, rapidly evolving KRAB-ZNF family; long idiosyncratic motifs, frequently derived from transposable elements. Most ZNF### genes without a separate entry."
+  "def": "The large, rapidly evolving KRAB-ZNF family; long idiosyncratic motifs, frequently derived from transposable elements. Most ZNF### genes without a separate entry.",
+  "abbr": "KRAB-ZNF"
  },
  {
   "key": "ZNF_OTHER",
   "name": "Other C2H2 zinc fingers",
   "class": "C2H2 zinc finger",
-  "def": "C2H2 factors and archetypes that are not KZFPs and have no dedicated entry."
+  "def": "C2H2 factors and archetypes that are not KZFPs and have no dedicated entry.",
+  "abbr": "C2H2 other"
  },
  {
   "key": "ZSCAN",
   "name": "SCAN-domain zinc fingers (ZSCAN/ZKSCAN)",
   "class": "C2H2 zinc finger",
-  "def": "SCAN-domain C2H2 factors: ZSCAN and ZKSCAN genes, ZNF24-like SCAN factors."
+  "def": "SCAN-domain C2H2 factors: ZSCAN and ZKSCAN genes, ZNF24-like SCAN factors.",
+  "abbr": "ZSCAN"
  },
  {
   "key": "GTF3A",
   "name": "GTF3A (TFIIIA)",
   "class": "C2H2 zinc finger",
-  "def": "5S rRNA internal control region. GTF3A."
+  "def": "5S rRNA internal control region. GTF3A.",
+  "abbr": "TFIIIA"
  },
  {
   "key": "ZFP_TE",
   "name": "Transposase-derived / TE-binding zinc fingers",
   "class": "C2H2 zinc finger",
-  "def": "Zinc fingers whose motif is a transposable-element sequence (ZNF91/93 on SVA/L1, ZNF445, ZFP57 on imprinted TGCCGC, ZNF808, ZNF780A)."
+  "def": "Zinc fingers whose motif is a transposable-element sequence (ZNF91/93 on SVA/L1, ZNF445, ZFP57 on imprinted TGCCGC, ZNF808, ZNF780A).",
+  "abbr": "TE-binding ZF"
  },
  {
   "key": "ZFP57",
   "name": "ZFP57 / imprinting",
   "class": "C2H2 zinc finger",
-  "def": "Methylated TGCCGC hexamer at imprinting control regions. ZFP57, ZNF445."
+  "def": "Methylated TGCCGC hexamer at imprinting control regions. ZFP57, ZNF445.",
+  "abbr": "ZFP57"
  },
  {
   "key": "NRF1",
   "name": "NRF1",
   "class": "Other",
-  "def": "Palindromic GCGCATGCGC at nuclear-encoded mitochondrial gene promoters. NRF1."
+  "def": "Palindromic GCGCATGCGC at nuclear-encoded mitochondrial gene promoters. NRF1.",
+  "abbr": "NRF1"
  },
  {
   "key": "GCM",
   "name": "GCM (glial cells missing)",
   "class": "GCM",
-  "def": "GCM box ATGCGGGT. GCM1, GCM2."
+  "def": "GCM box ATGCGGGT. GCM1, GCM2.",
+  "abbr": "GCM"
  },
  {
   "key": "PLAG",
   "name": "PLAG / PLAGL",
   "class": "C2H2 zinc finger",
-  "def": "GRGGC(N6-8)GGG bipartite sites. PLAG1, PLAGL1/ZAC1, PLAGL2."
+  "def": "GRGGC(N6-8)GGG bipartite sites. PLAG1, PLAGL1/ZAC1, PLAGL2.",
+  "abbr": "PLAG / PLAGL"
  },
  {
   "key": "OVOL",
   "name": "OVOL (OVO-like)",
   "class": "C2H2 zinc finger",
-  "def": "CCGTTA core. OVOL1, OVOL2, OVOL3."
+  "def": "CCGTTA core. OVOL1, OVOL2, OVOL3.",
+  "abbr": "OVOL"
  },
  {
   "key": "CASZ1",
   "name": "CASZ1 (castor)",
   "class": "C2H2 zinc finger",
-  "def": "Castor-type multi-zinc-finger factor; AT-rich composite site. CASZ1."
+  "def": "Castor-type multi-zinc-finger factor; AT-rich composite site. CASZ1.",
+  "abbr": "CASZ1"
  },
  {
   "key": "CAMTA",
   "name": "CAMTA",
   "class": "CG-1",
-  "def": "CGCG box bound by the calmodulin-binding CG-1 domain. CMTA1/CAMTA1, CAMTA2."
+  "def": "CGCG box bound by the calmodulin-binding CG-1 domain. CMTA1/CAMTA1, CAMTA2.",
+  "abbr": "CAMTA"
  },
  {
   "key": "OSR",
   "name": "OSR1 / OSR2",
   "class": "C2H2 zinc finger",
-  "def": "Odd-skipped related zinc fingers; GC-rich sites. OSR1, OSR2."
+  "def": "Odd-skipped related zinc fingers; GC-rich sites. OSR1, OSR2.",
+  "abbr": "OSR1 / OSR2"
  },
  {
   "key": "CIC",
   "name": "CIC (capicua)",
   "class": "Sox",
-  "def": "HMG-box repressor binding TGAATGAA octamer. CIC."
+  "def": "HMG-box repressor binding TGAATGAA octamer. CIC.",
+  "abbr": "CIC"
  },
  {
   "key": "HBP1",
   "name": "HBP1",
   "class": "Sox",
-  "def": "HMG-box factor binding an AT-rich site at cell-cycle promoters. HBP1."
+  "def": "HMG-box factor binding an AT-rich site at cell-cycle promoters. HBP1.",
+  "abbr": "HBP1"
  },
  {
   "key": "PUR",
   "name": "PURA / PURB",
   "class": "Other",
-  "def": "PUR-repeat GGN-rich single-strand-capable binders. PURA, PURB."
+  "def": "PUR-repeat GGN-rich single-strand-capable binders. PURA, PURB.",
+  "abbr": "PURA / PURB"
  },
  {
   "key": "LIN54",
   "name": "LIN54 / DREAM (CHR)",
   "class": "CRC/tesmin",
-  "def": "Cell-cycle genes homology region TTYGAA. LIN54 in the DREAM/LIN complex."
+  "def": "Cell-cycle genes homology region TTYGAA. LIN54 in the DREAM/LIN complex.",
+  "abbr": "LIN54/CHR"
  },
  {
   "key": "CDC5L",
   "name": "CDC5L",
   "class": "Myb/SANT",
-  "def": "Myb-like repeat factor with a spliceosomal role; MBS-like site. CDC5L."
+  "def": "Myb-like repeat factor with a spliceosomal role; MBS-like site. CDC5L.",
+  "abbr": "CDC5L"
  },
  {
   "key": "TELOBOX",
   "name": "Telobox (TERF1/TERF2/ZBTB48)",
   "class": "Myb/SANT",
-  "def": "Telomeric TTAGGG repeat binders. TERF1, TERF2, ZBTB48/TZAP."
+  "def": "Telomeric TTAGGG repeat binders. TERF1, TERF2, ZBTB48/TZAP.",
+  "abbr": "telobox"
  },
  {
   "key": "RBP_INFERRED",
   "name": "RNA-binding proteins with inferred DNA motifs",
   "class": "RNA-binding",
-  "def": "Factors whose motif comes from an RNA-binding assay or from inference, so the DNA motif should be read with caution: CPEB1, LIN28B and MBNL2. MBNL1 has no matrix in these databases."
+  "def": "Factors whose motif comes from an RNA-binding assay or from inference, so the DNA motif should be read with caution: CPEB1, LIN28B and MBNL2. MBNL1 has no matrix in these databases.",
+  "abbr": "RBP-inferred"
  },
  {
   "key": "CHROMATIN",
   "name": "Chromatin regulators without a classical DBD",
   "class": "Other",
-  "def": "Motifs attributed to cofactors, readers and writers that have no sequence-specific DBD of their own: BPTF, PHF1, PHF21A, DPF1/2, MYSM1, SETBP1, TOPORS, GATAD2A, ZFPM1, ZZZ3, GLYR1, TCF20, SP140L, NAIF1, ARID1A."
+  "def": "Motifs attributed to cofactors, readers and writers that have no sequence-specific DBD of their own: BPTF, PHF1, PHF21A, DPF1/2, MYSM1, SETBP1, TOPORS, GATAD2A, ZFPM1, ZZZ3, GLYR1, TCF20, SP140L, NAIF1, ARID1A.",
+  "abbr": "cofactors"
  },
  {
   "key": "ZNF_SCAN_OTHER",
   "name": "Thinly characterized small families",
   "class": "Other",
-  "def": "Factors with a measured motif but almost no dedicated literature: MSANTD1/3/4, DNTTIP1, FLYWCH1, FAM200B (= ZBED11), ELYS/AHCTF1, NACC2, and XPA, which is a DNA repair protein rather than a transcription factor. BANP is named in older drafts of this entry, but its only matrix is a joint Vierstra archetype filed under ZBTB_OTHER."
+  "def": "Factors with a measured motif but almost no dedicated literature: MSANTD1/3/4, DNTTIP1, FLYWCH1, FAM200B (= ZBED11), ELYS/AHCTF1, NACC2, and XPA, which is a DNA repair protein rather than a transcription factor. BANP is named in older drafts of this entry, but its only matrix is a joint Vierstra archetype filed under ZBTB_OTHER.",
+  "abbr": "small families"
  },
  {
   "key": "NFKB_LIKE",
   "name": "Other Rel-homology archetypes",
   "class": "Rel",
-  "def": "Rel-homology-region archetypes that cannot be assigned to NF-kB or NFAT."
+  "def": "Rel-homology-region archetypes that cannot be assigned to NF-kB or NFAT.",
+  "abbr": "Rel other"
  },
  {
   "key": "SPZ1",
   "name": "SPZ1",
   "class": "bHLH",
-  "def": "Testis-specific bHLH-Zip factor. SPZ1."
+  "def": "Testis-specific bHLH-Zip factor. SPZ1.",
+  "abbr": "SPZ1"
  },
  {
   "key": "TFAP2_LIKE",
   "name": "AP-2-like archetypes",
   "class": "AP-2",
-  "def": "AP-2-family archetypes without a specific TFAP2 paralogue assignment."
+  "def": "AP-2-family archetypes without a specific TFAP2 paralogue assignment.",
+  "abbr": "AP-2-like"
  },
  {
   "key": "FUSION",
   "name": "Fusion oncoprotein motifs",
   "class": "Other",
-  "def": "Motifs from fusion proteins, e.g. EWSR1-FLI1 GGAA microsatellite binding."
+  "def": "Motifs from fusion proteins, e.g. EWSR1-FLI1 GGAA microsatellite binding.",
+  "abbr": "fusions"
  },
  {
   "key": "DACH",
   "name": "DACH / SKI-family corepressors",
   "class": "DACH/SKI",
-  "def": "DACH1/DACH2 (DD1 winged-helix, binds forkhead-like sites and competes with FOXM1) and the SKI/SnoN/SKOR corepressors (SKI, SKIL, SKOR1, SKOR2), whose DNA contact comes from a SAND-like motif in the Ski homology domain. Their ChIP motifs often resemble those of the homeodomain partners they are recruited by."
+  "def": "DACH1/DACH2 (DD1 winged-helix, binds forkhead-like sites and competes with FOXM1) and the SKI/SnoN/SKOR corepressors (SKI, SKIL, SKOR1, SKOR2), whose DNA contact comes from a SAND-like motif in the Ski homology domain. Their ChIP motifs often resemble those of the homeodomain partners they are recruited by.",
+  "abbr": "DACH/SKI"
  },
  {
   "key": "ZNF_UNNAMED",
   "name": "Unnamed zinc-finger archetypes",
   "class": "C2H2 zinc finger",
-  "def": "Archetype motifs whose only label is the generic token ZNF, so nothing is claimed beyond the structural class. This is not one motif: it is a set of long, distinct zinc-finger matrices, many of them matching transposable-element sequence."
+  "def": "Archetype motifs whose only label is the generic token ZNF, so nothing is claimed beyond the structural class. This is not one motif: it is a set of long, distinct zinc-finger matrices, many of them matching transposable-element sequence.",
+  "abbr": "unnamed ZNF"
  }
 ]

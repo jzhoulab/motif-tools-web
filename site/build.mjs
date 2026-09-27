@@ -38,6 +38,12 @@ for (const t of TOOLS) {
   copyFileSync(src, resolve(dist, 'downloads', t.download));        // /downloads/motif-*.html
 }
 
+// The motif map is the part of Match most people want on its own — it is useful without
+// having a model or a motif set to compare. Same build, its own address, and the app
+// reads the route to present itself as the Map rather than as Match.
+mkdirSync(resolve(dist, 'map'), { recursive: true });
+copyFileSync(resolve(root, 'apps/motif-match/dist/motif-match.html'), resolve(dist, 'map', 'index.html'));
+
 // Brand-mark favicon: four nucleotide-colored bars (A C G T)
 const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 <rect width="32" height="32" rx="6" fill="#0B1220"/>
@@ -57,5 +63,6 @@ console.log('  /            landing page');
 console.log('  /scan/       motif scanner');
 console.log('  /search/     motif search');
 console.log('  /match/      motif match');
+console.log('  /map/        motif map (same build, network view)');
 console.log('  /downloads/  standalone HTML files');
 if (nFam) console.log(`  /families/   ${nFam} motif family pages`);

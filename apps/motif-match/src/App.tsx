@@ -70,6 +70,10 @@ function buildMap() {
     return { all, dbNodes };
 }
 
+// The same build is served at /match/ and at /map/. On /map/ the motif map is the point
+// of the page rather than one view of the matching tool, so it names itself accordingly.
+const IS_MAP = typeof location !== 'undefined' && /(^|\/)map(\/|$)/.test(location.pathname);
+
 function App() {
     const [status, setStatus] = useState('Initializing...');
     const [view, setView] = useState<'network' | 'clusters'>('network');
@@ -454,7 +458,7 @@ function App() {
                     <span className="brand-mark"><i></i><i></i><i></i><i></i></span>
                     <span className="brand-name">Motif Tools</span>
                     <span className="brand-sep">/</span>
-                    <span className="brand-tool">Match</span>
+                    <span className="brand-tool">{IS_MAP ? 'Map' : 'Match'}</span>
                 </a>
                 <div className="controls">
                     <div className="view-toggle">

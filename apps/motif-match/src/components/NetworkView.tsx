@@ -83,8 +83,10 @@ export interface QueryEdge {
 
 export interface Cluster {
     c: number;
-    label: string;
+    label: string;   // compact form, for the zoomed-out map
+    name?: string;   // fuller form, used once there is room for it
     size: number;
+    total?: number;  // members of the family outside this territory
     x: number;
     y: number;
 }
@@ -483,18 +485,27 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
                 if (sx < -40 || sy < -20 || sx > w + 40 || sy > h + 20) continue;
                 const fs = Math.max(11, Math.min(20, 7 + Math.sqrt(cl.size) * 0.8));
                 ctx.font = `600 ${fs}px ui-sans-serif, system-ui, sans-serif`;
-                const tw = ctx.measureText(cl.label).width;
-                const box = { x1: sx - tw / 2 - 4, y1: sy - fs / 2 - 2, x2: sx + tw / 2 + 4, y2: sy + fs / 2 + 2 };
-                let clash = false;
-                for (const p of placed) {
-                    if (box.x1 < p.x2 && box.x2 > p.x1 && box.y1 < p.y2 && box.y2 > p.y1) { clash = true; break; }
-                }
-                if (clash) continue;
+                // Zoomed out, the map is a place index: short names, so more of them fit.
+                // Zoomed in there is room to spell the family out — try the full name and
+                // fall back to the short one if it would collide with a label already placed.
+                const fits = (text: string) => {
+                    const tw = ctx.measureText(text).width;
+                    const b = { x1: sx - tw / 2 - 4, y1: sy - fs / 2 - 2, x2: sx + tw / 2 + 4, y2: sy + fs / 2 + 2 };
+                    for (const p of placed) {
+                        if (b.x1 < p.x2 && b.x2 > p.x1 && b.y1 < p.y2 && b.y2 > p.y1) return null;
+                    }
+                    return b;
+                };
+                const wantFull = t.k >= 1.8 && cl.name && cl.name !== cl.label;
+                let label = wantFull ? cl.name! : cl.label;
+                let box = fits(label);
+                if (!box && wantFull) { label = cl.label; box = fits(label); }
+                if (!box) continue;
                 placed.push(box);
                 ctx.shadowColor = 'rgba(0,0,0,0.95)';
                 ctx.shadowBlur = 5;
                 ctx.fillStyle = `hsl(${clusterHue(cl.c).toFixed(0)} 75% 82%)`;
-                ctx.fillText(cl.label, sx, sy);
+                ctx.fillText(label, sx, sy);
                 ctx.shadowBlur = 0;
             }
             ctx.globalAlpha = 1;
@@ -691,7 +702,7 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
                 ) : (
                     <span className="net-legend-item static">
                         <i style={{ background: 'linear-gradient(90deg,#5B8DEF,#35B0A7,#A78BFA,#EC6A9C)' }} />
-                        coloured by motif family <span className="net-count">{blobs.length} clusters</span>
+                        coloured by motif family <span className="net-count">{families.length} families</span>
                     </span>
                 )}
                 {queryNodes.length > 0 && (
