@@ -228,6 +228,14 @@
   @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; transition: none !important; scroll-behavior: auto; }
   }
+  /* ---------- family atlas teaser ---------- */
+  .fam-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
+  .fam-card { border: 1px solid var(--line-soft); background: var(--panel); border-radius: 12px; padding: 16px 17px; }
+  .fam-card .kicker { font-family: var(--font-mono); font-size: 11px; letter-spacing: .13em; text-transform: uppercase; color: var(--cyan); margin-bottom: 7px; }
+  .fam-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+  .fam-cta { font-family: var(--font-display); font-weight: 600; font-size: 16px; color: var(--text); border-bottom: 1px solid var(--line); padding-bottom: 3px; }
+  .fam-cta:hover { color: var(--cyan); border-color: var(--cyan); }
+  @media (max-width: 860px) { .fam-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -240,6 +248,7 @@
     </a>
     <nav class="nav-links">
       <a href="#tools">Tools</a>
+      <a href="/families/">Families</a>
       <a href="#methods">Methods</a>
       <a href="#databases">Databases</a>
       <a href="#downloads">Downloads</a>
@@ -328,6 +337,30 @@
         <span class="open">Open Match <span class="arr">→</span></span>
       </a>
     </div>
+  </div>
+</section>
+
+<section id="families">
+  <div class="wrap">
+    <div class="sec-head"><span class="bases"><i class="bT"></i><i class="bG"></i></span><span class="eyebrow">Reference</span></div>
+    <h2 class="sec-title">Motif family atlas</h2>
+    <p class="sec-lead">A hit is only useful if you know what it means. The atlas gives every one of the 4,232 bundled DNA motifs a curated family, and every family a short referenced entry: what binds the site, what the sequence means structurally, and what a match does and does not let you conclude.</p>
+
+    <div class="fam-grid">
+      <div class="fam-card">
+        <div class="kicker">163 families</div>
+        <p>Grouped by what the motif <em>is</em>, not by gene name — a family here is a set of matrices it is reasonable to treat as the same motif, usually one DNA-binding-domain family whose paralogues cannot be told apart from sequence.</p>
+      </div>
+      <div class="fam-card">
+        <div class="kicker">Labels are claims</div>
+        <p>The factor name on a motif can be wrong: ChIP-derived matrices can belong to a partner protein, 83 CIS-BP entries are inherited from a non-human orthologue, and archetype names describe a majority rather than a protein. Each entry says which applies.</p>
+      </div>
+      <div class="fam-card">
+        <div class="kicker">Checked against the data</div>
+        <p>Every motif is compared with all 4,232 others, so the atlas can flag the cases where a motif's closest relatives disagree with the name it carries — and where an uncharacterised zinc finger is simply reproducing a known family's motif.</p>
+      </div>
+    </div>
+    <p style="margin-top:22px"><a class="fam-cta" href="/families/">Browse the family atlas <span class="arr">→</span></a></p>
   </div>
 </section>
 

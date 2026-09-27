@@ -12,7 +12,33 @@ export interface DbNode {
     nn?: number;   // index of nearest relative (for hover alignment)
     nns?: number;  // its correlation
     c?: number;    // cluster id (-1 = not in a coloured cluster)
-    f?: number;    // TF family index (every motif has one)
+    f?: number;    // curated motif family index (every motif has one)
+    // How much the name on this motif is worth: the label is a claim, and these say
+    // when the claim is weak. See scripts/families/assign.mjs.
+    sus?: number;  // 1 = its closest relatives belong to family `alt`, not to `f`
+    alt?: number;  // that family
+    res?: number;  // uncharacterised motif that matches this known family
+    inf?: number;  // family inferred from motif similarity (label was generic)
+    ev?: string;   // HOCOMOCO evidence + grade, e.g. "PSM.A"
+    sp?: string;   // motif transferred from this species' protein, with DBD identity
+    dim?: number;  // matrix of a heterodimer
+}
+
+export interface FamilyMeta {
+    key: string;
+    name: string;
+    short: string;   // compact label for the map
+    class: string;   // DNA-binding-domain class
+}
+// Written entries from the family atlas, keyed by family key (may be absent).
+export interface FamilyText {
+    name: string;
+    class: string;
+    n: number;
+    cons: string;
+    nocons?: number;   // the entry states this family has no single consensus
+    aka: string[];
+    short: string;
 }
 
 // Colour for a cluster id via golden-angle hue rotation (locally distinct).
@@ -27,6 +53,20 @@ function familyColor(f: number | undefined): string {
     if (f == null || f < 0) return '#4a5a70';
     return `hsl(${((f * 137.508) % 360).toFixed(0)} 40% 52%)`;
 }
+// One short line on how much the name attached to a motif is worth. The databases label
+// a matrix with a factor name, which is a claim about what binds it - and ChIP-derived
+// matrices, cross-species transfers and generic archetype names all weaken that claim.
+export function labelNote(n: DbNode, families: FamilyMeta[]): string | null {
+    if (n.sus && n.alt != null && families[n.alt]) {
+        return `closest relatives are ${families[n.alt].short} motifs \u2014 label and matrix may disagree`;
+    }
+    if (n.sp) return `matrix transferred from ${n.sp} DBD identity`;
+    if (n.inf) return 'family inferred from motif similarity (label was generic)';
+    if (n.res != null && families[n.res]) return `essentially the ${families[n.res].short} motif`;
+    if (n.ev && /^P/.test(n.ev)) return 'ChIP-derived: the matrix may belong to a partner factor';
+    return null;
+}
+
 export interface QueryNode {
     id: string;
     x: number; // world coords (already placed near matches)
@@ -56,7 +96,8 @@ interface Props {
     queryEdges: QueryEdge[];
     sources: { key: string; count: number }[];
     clusters: Cluster[];
-    families: string[];
+    families: FamilyMeta[];
+    familyText?: Record<string, FamilyText>;
     onSequenceSearch: (seq: string) => void;
 }
 
@@ -118,7 +159,7 @@ function drawMiniLogo(ctx: CanvasRenderingContext2D, pwm: number[][], cx: number
 
 type PickResult = { type: 'db' | 'query'; idx: number };
 
-export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sources, clusters, families, onSequenceSearch }: Props) {
+export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sources, clusters, families, familyText, onSequenceSearch }: Props) {
     const wrapRef = useRef<HTMLDivElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const transformRef = useRef({ x: 0, y: 0, k: 1 });
@@ -145,28 +186,30 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
         const set = new Set<number>();
         for (let i = 0; i < nodes.length; i++) {
             const n = nodes[i];
-            const fam = n.f != null && n.f >= 0 ? families[n.f] : '';
-            if (n.id.toLowerCase().includes(q) || (fam && fam.toLowerCase().includes(q))) set.add(i);
+            const fam = n.f != null && n.f >= 0 ? families[n.f] : undefined;
+            const hay = fam ? `${fam.name} ${fam.short} ${fam.key} ${fam.class}`.toLowerCase() : '';
+            if (n.id.toLowerCase().includes(q) || hay.includes(q)) set.add(i);
         }
         return set;
     }, [search, searchMode, nodes, families]);
     const matchesRef = useRef(matches);
     matchesRef.current = matches;
     const [hiIdx, setHiIdx] = useState(-1);
+    const [famFocus, setFamFocus] = useState<string | null>(null);
 
     const famIdx = useMemo(() => {
         const m = new Map<string, number[]>();
         nodes.forEach((n, i) => {
             if (n.f == null || n.f < 0) return;
-            const name = families[n.f];
-            if (!name) return;
-            const a = m.get(name);
-            if (a) a.push(i); else m.set(name, [i]);
+            const fam = families[n.f];
+            if (!fam) return;
+            const a = m.get(fam.key);
+            if (a) a.push(i); else m.set(fam.key, [i]);
         });
         return m;
     }, [nodes, families]);
 
-    type Sugg = { kind: 'fam' | 'motif'; label: string; idxs?: number[]; idx?: number; count?: number; r?: number; sub?: string };
+    type Sugg = { kind: 'fam' | 'motif'; label: string; idxs?: number[]; idx?: number; count?: number; r?: number; sub?: string; famKey?: string };
     const suggestions = useMemo<Sugg[]>(() => {
         if (searchMode === 'seq') {
             // ranked matches for the placed sequence, so you needn't hover to read them
@@ -177,14 +220,21 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
         const q = search.trim().toLowerCase();
         if (q.length < 2) return [];
         const out: Sugg[] = [];
-        const fams = [...famIdx.entries()].filter(([name]) => name.toLowerCase().includes(q)).sort((a, b) => b[1].length - a[1].length).slice(0, 5);
-        for (const [name, idxs] of fams) out.push({ kind: 'fam', label: name, idxs, count: idxs.length });
+        const metaOf = new Map(families.map((f) => [f.key, f]));
+        const fams = [...famIdx.entries()]
+            .filter(([key]) => {
+                const f = metaOf.get(key);
+                const t = f ? `${f.name} ${f.short} ${f.key} ${f.class} ${(familyText?.[key]?.aka || []).join(' ')}`.toLowerCase() : key.toLowerCase();
+                return t.includes(q);
+            })
+            .sort((a, b) => b[1].length - a[1].length).slice(0, 5);
+        for (const [key, idxs] of fams) out.push({ kind: 'fam', label: metaOf.get(key)?.name || key, idxs, count: idxs.length, famKey: key });
         let c = 0;
         for (let i = 0; i < nodes.length && c < 8; i++) {
             if (nodes[i].id.toLowerCase().includes(q)) { out.push({ kind: 'motif', label: nodes[i].id, idx: i, sub: nodes[i].source }); c++; }
         }
         return out;
-    }, [search, searchMode, nodes, famIdx, queryNodes, queryEdges]);
+    }, [search, searchMode, nodes, families, familyText, famIdx, queryNodes, queryEdges]);
 
     // soft "territory" blobs, one per coloured cluster (normalized coords)
     const blobs = useMemo(() => {
@@ -586,11 +636,23 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
         return () => canvas.removeEventListener('wheel', handler);
     }, [draw]);
 
-    const activate = (sg: { kind: 'fam' | 'motif'; idxs?: number[]; idx?: number }) => {
-        if (sg.kind === 'fam' && sg.idxs?.length) fitTo(sg.idxs);
-        else if (sg.idx != null) focusNode(sg.idx);
+    const activate = (sg: { kind: 'fam' | 'motif'; idxs?: number[]; idx?: number; famKey?: string }) => {
+        if (sg.kind === 'fam' && sg.idxs?.length) { fitTo(sg.idxs); setFamFocus(sg.famKey || null); setSelected(null); }
+        else if (sg.idx != null) { focusNode(sg.idx); setFamFocus(null); }
         setHiIdx(-1);
     };
+
+    // Which family the card should describe: an explicitly searched family, else the
+    // family of whatever motif is selected or hovered.
+    const cardKey = useMemo(() => {
+        if (famFocus) return famFocus;
+        const pick = selected || hover?.pick;
+        if (pick?.type === 'db') {
+            const n = nodes[pick.idx];
+            if (n?.f != null && n.f >= 0) return families[n.f]?.key || null;
+        }
+        return null;
+    }, [famFocus, selected, hover, nodes, families]);
 
     const toggleSource = (key: string) => {
         setHidden((prev) => {
@@ -710,6 +772,39 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
             </div>
             <div className="net-hint">scroll to zoom · drag to pan · hover a node for its logo</div>
 
+            {cardKey && (() => {
+                const fam = families.find((f) => f.key === cardKey);
+                const txt = familyText?.[cardKey];
+                if (!fam) return null;
+                const pick = selected || hover?.pick;
+                const node = pick?.type === 'db' ? nodes[pick.idx] : null;
+                const note = node && node.f != null && families[node.f]?.key === cardKey ? labelNote(node, families) : null;
+                return (
+                    <div className="net-card">
+                        <button className="net-card-x" onClick={() => { setFamFocus(null); setSelected(null); }} title="Close">×</button>
+                        <div className="net-card-head">
+                            <b>{fam.name}</b>
+                            <span className="net-card-class">{fam.class}</span>
+                        </div>
+                        <div className="net-card-meta">
+                            {txt?.cons
+                                ? <span className="net-card-cons">{txt.cons}</span>
+                                : (txt?.nocons ? <span className="net-card-nocons">no single consensus</span> : null)}
+                            <span>{(txt?.n ?? famIdx.get(cardKey)?.length ?? 0).toLocaleString()} motifs</span>
+                            {txt?.aka?.length ? <span>aka {txt.aka.slice(0, 2).join(', ')}</span> : null}
+                        </div>
+                        {txt?.short
+                            ? <p className="net-card-body">{txt.short}</p>
+                            : <p className="net-card-body net-card-empty">No written entry for this family yet.</p>}
+                        {note && <div className="net-card-note">{note}</div>}
+                        <div className="net-card-foot">
+                            <button onClick={() => { const idxs = famIdx.get(cardKey); if (idxs?.length) fitTo(idxs); }}>Show all {famIdx.get(cardKey)?.length ?? 0}</button>
+                            <a href={`https://motif.zhoulab.io/families/${cardKey.toLowerCase()}/`} target="_blank" rel="noopener noreferrer">Full entry →</a>
+                        </div>
+                    </div>
+                );
+            })()}
+
             {hover && hn && (() => {
                 // Build the clique to show: the hovered motif first, then its
                 // neighbours (DB node -> its clique; query node -> its matches),
@@ -796,11 +891,19 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
                             {hn.id}
                             {rows.length > 1 && <span className="net-clique-count">{hover.pick.type === 'query' ? `${rows.length - 1} matches` : `clique of ${rows.length}`}</span>}
                         </div>
-                        {hover.pick.type === 'db' && (hn as DbNode).f != null && (hn as DbNode).f! >= 0 && (
-                            <div className="net-tooltip-fam">
-                                <b>{families[(hn as DbNode).f!]}</b> family · {(hn as DbNode).source}
-                            </div>
-                        )}
+                        {hover.pick.type === 'db' && (hn as DbNode).f != null && (hn as DbNode).f! >= 0 && (() => {
+                            const n = hn as DbNode;
+                            const fam = families[n.f!];
+                            return (
+                                <>
+                                    <div className="net-tooltip-fam">
+                                        <b>{fam?.name || ''}</b> · {n.source}
+                                        {fam?.class ? <span className="net-tooltip-cls">{fam.class}</span> : null}
+                                    </div>
+                                    {labelNote(n, families) && <div className="net-tooltip-warn">{labelNote(n, families)}</div>}
+                                </>
+                            );
+                        })()}
                         <div className="net-clique-list">
                             {aligned.map((a, i) => (
                                 <div className="net-clique-row" key={i}>

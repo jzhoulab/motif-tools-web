@@ -228,40 +228,52 @@ const xsAll = simNodes.map((s) => s.x), ysAll = simNodes.map((s) => s.y);
 const minX = pct(xsAll, 0.01), maxX = pct(xsAll, 0.99);
 const minY = pct(ysAll, 0.01), maxY = pct(ysAll, 0.99);
 const span = Math.max(maxX - minX, maxY - minY) || 1;
-// ---- derive a TF family for EVERY motif (so ungrouped dots are annotated too) ----
-function nameRoot(m) {
-    const id = m.id || '', src = m.source || '', nm = m.name || '';
-    let t = '';
-    if (src === 'Vierstra') {                     // AC0001:DLX/LHX:Homeodomain
-        const p = id.split(':');
-        t = p.length >= 2 ? (p[1].split(/[/,]/)[0] || '') : '';
-    } else if (/^M\d+(_|$)/.test(id)) {           // CIS-BP: TF name lives in the MOTIF name
-        const g = nm.match(/\(([^)]+)\)/);        // "(TFAP2D)_(Mus_musculus)_(DBD_0.80)"
-        t = g ? g[1] : (nm.split(/[\s_]/)[0] || '');  // or a bare name: "SNAI2"
-    } else {                                      // JASPAR / HOCOMOCO
-        t = id.split(' (')[0].split('.')[0].split('::')[0];
-    }
-    t = t.trim().replace(/[_-].*$/, '').replace(/\d+$/, '');
-    return /^[A-Za-z][A-Za-z0-9]*$/.test(t) ? t.toUpperCase() : '';
-}
-const famNameOf = nodes.map((n) => nameRoot(n));
-const famCount = new Map();
-for (const f of famNameOf) if (f) famCount.set(f, (famCount.get(f) || 0) + 1);
-const famNames = [...famCount.entries()].sort((a, b) => b[1] - a[1]).map(([f]) => f);
-const famIndex = new Map(famNames.map((f, i) => [f, i]));
-const famOf = famNameOf.map((f) => (f && famIndex.has(f) ? famIndex.get(f) : -1));
-console.log(`families: ${famNames.length}; motifs with a family: ${famOf.filter((f) => f >= 0).length}/${N}`);
+// ---- curated motif family for EVERY motif -------------------------------------
+// resources/motif-family-assignment.json is built by scripts/families/assign.mjs from
+// the ontology plus the per-symbol assignment tables; it also carries the label checks
+// (does this motif actually look like the family its name claims?).
+const ASSIGN = JSON.parse(readFileSync(R('motif-family-assignment.json'), 'utf8'));
+// Map labels want a compact form: "AP-1 (FOS/JUN)" -> "AP-1".
+const shortName = (name) => {
+    let t = String(name).split(' (')[0].replace(/\s*\/\s*/g, '/');
+    if (t.length > 26) t = t.slice(0, 25) + '\u2026';
+    return t;
+};
+const famList = ASSIGN.families.map((f) => ({ key: f.key, name: f.name, short: shortName(f.name), class: f.class }));
+const famIndex = new Map(famList.map((f, i) => [f.key, i]));
+const famNameOf = nodes.map((n) => {
+    const e = ASSIGN.motifs[n.id];
+    return e ? e.f : '';
+});
+const famOf = famNameOf.map((k) => (k && famIndex.has(k) ? famIndex.get(k) : -1));
+const missing = famOf.filter((f) => f < 0).length;
+console.log(`families: ${famList.length}; motifs with a family: ${N - missing}/${N}`);
+if (missing) console.warn(`! ${missing} motifs are missing from the assignment - rerun scripts/families/assign.mjs`);
 
-const outNodes = nodes.map((n, i) => ({
-    id: n.id,
-    source: n.source,
-    x: Math.round(((simNodes[i].x - minX) / span) * 1000) / 1000,
-    y: Math.round(((simNodes[i].y - minY) / span) * 1000) / 1000,
-    nn: nn[i],
-    nns: Math.round(nnScore[i] * 100) / 100,
-    c: clusterId[i],
-    f: famOf[i],
-}));
+const outNodes = nodes.map((n, i) => {
+    const a = ASSIGN.motifs[n.id] || {};
+    const out = {
+        id: n.id,
+        source: n.source,
+        x: Math.round(((simNodes[i].x - minX) / span) * 1000) / 1000,
+        y: Math.round(((simNodes[i].y - minY) / span) * 1000) / 1000,
+        nn: nn[i],
+        nns: Math.round(nnScore[i] * 100) / 100,
+        c: clusterId[i],
+        f: famOf[i],
+    };
+    // Label caveats, so the map can say when a motif's name is doing more work than the
+    // evidence supports: sus = its closest relatives belong to family `alt`;
+    // res = an uncharacterised motif that matches family `res`; inf = family inferred
+    // from motif similarity because the label was generic; ev/sp = how the entry was made.
+    if (a.sus && famIndex.has(a.alt)) { out.sus = 1; out.alt = famIndex.get(a.alt); }
+    if (a.res && famIndex.has(a.res)) out.res = famIndex.get(a.res);
+    if (a.inf) out.inf = 1;
+    if (a.p?.evidence) out.ev = a.p.evidence + (a.p.grade || '');
+    if (a.p?.species) out.sp = `${a.p.species} ${a.p.dbdIdentity ?? ''}`.trim();
+    if (a.p?.dimer) out.dim = 1;
+    return out;
+});
 
 // ---- name each coloured cluster by its dominant TF family ----
 const clusterInfo = new Map();
@@ -275,8 +287,13 @@ outNodes.forEach((n, i) => {
 });
 const clusters = [];
 for (const [c, e] of clusterInfo) {
-    let label = '', best = 0;
-    for (const [r, cnt] of e.roots) if (cnt > best) { best = cnt; label = r; }
+    // A component held together by weak chaining can span two unrelated families; name it
+    // after both rather than letting a bare plurality speak for 300 motifs.
+    const ranked = [...e.roots.entries()].sort((a, b) => b[1] - a[1]);
+    const nameOf = (k) => (k && famIndex.has(k) ? famList[famIndex.get(k)].short : k);
+    const total = e.xs.length;
+    let label = nameOf(ranked[0]?.[0] || '');
+    if (ranked[0] && ranked[0][1] / total < 0.4 && ranked[1]) label += ' / ' + nameOf(ranked[1][0]);
     clusters.push({
         c,
         label,
@@ -287,8 +304,9 @@ for (const [c, e] of clusterInfo) {
 }
 clusters.sort((a, b) => b.size - a.size);
 console.log(`named ${clusters.filter((c) => c.label).length}/${clusters.length} clusters; top: ${clusters.slice(0, 8).map((c) => c.label + '(' + c.size + ')').join(', ')}`);
+console.log(`label caveats carried into the map: ${outNodes.filter((n) => n.sus).length} conflicts, ${outNodes.filter((n) => n.res).length} resemblances, ${outNodes.filter((n) => n.inf).length} inferred families`);
 
-const out = { generated: new Date().toISOString().slice(0, 10), sources: SOURCES.map((s) => ({ key: s.key, count: s.motifs.length })), nodes: outNodes, edges, clusters, families: famNames };
+const out = { generated: new Date().toISOString().slice(0, 10), sources: SOURCES.map((s) => ({ key: s.key, count: s.motifs.length })), nodes: outNodes, edges, clusters, families: famList };
 const outPath = R('motif-network.json');
 writeFileSync(outPath, JSON.stringify(out));
 console.log(`Wrote ${outPath}: ${outNodes.length} nodes, ${edges.length} edges, ${(JSON.stringify(out).length / 1e6).toFixed(2)} MB`);

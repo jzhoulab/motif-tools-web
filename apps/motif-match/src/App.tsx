@@ -23,6 +23,8 @@ import { parseMeme } from './utils/memeParser';
 import { sequenceToPwm } from './utils/sequence';
 // @ts-ignore
 import networkData from '@resources/motif-network.json';
+// Family atlas text (short entries only; the full reviews live on the website).
+import familyText from '@resources/motif-families.app.json';
 
 // DNA databases that back the precomputed motif map — MUST match the order used
 // in scripts/build-network.mjs so node indices line up with motif-network.json.
@@ -62,6 +64,8 @@ function buildMap() {
         id: n.id, source: n.source, x: n.x, y: n.y,
         pwm: byId.get(n.id) || all[i]?.pwm,
         nn: n.nn, nns: n.nns, c: n.c, f: n.f,
+        // label-quality flags from the family assignment
+        sus: n.sus, alt: n.alt, res: n.res, inf: n.inf, ev: n.ev, sp: n.sp, dim: n.dim,
     }));
     return { all, dbNodes };
 }
@@ -499,6 +503,7 @@ function App() {
                     sources={networkData.sources as { key: string; count: number }[]}
                     clusters={(networkData as any).clusters || []}
                     families={(networkData as any).families || []}
+                    familyText={familyText as any}
                     onSequenceSearch={handleSequenceSearch}
                 />
             )}

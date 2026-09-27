@@ -660,3 +660,95 @@ body {
 .net-suggest-label { font-family: ui-monospace, monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .net-suggest-label b { color: var(--accent-primary); font-family: ui-sans-serif, system-ui, sans-serif; }
 .net-suggest-meta { font-size: 0.66rem; color: var(--text-muted); font-family: ui-monospace, monospace; white-space: nowrap; }
+
+/* ---- family card: what binds the motif you are looking at ---------------- */
+.net-card {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    width: 328px;
+    max-height: 62%;
+    overflow-y: auto;
+    background: rgba(12, 19, 33, 0.95);
+    border: 1px solid #23324a;
+    border-radius: 12px;
+    padding: 13px 15px 12px;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+    z-index: 6;
+}
+.net-card-x {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    background: none;
+    border: none;
+    color: #64768f;
+    font-size: 17px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 2px 4px;
+}
+.net-card-x:hover { color: #e7edf5; }
+.net-card-head { display: flex; align-items: baseline; gap: 8px; padding-right: 16px; }
+.net-card-head b { font-size: 14.5px; letter-spacing: -0.01em; }
+.net-card-class {
+    font-family: var(--font-mono, monospace);
+    font-size: 10px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #8fa3bc;
+    border: 1px solid #23324a;
+    border-radius: 999px;
+    padding: 2px 7px;
+    white-space: nowrap;
+}
+.net-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 6px;
+    font-family: var(--font-mono, monospace);
+    font-size: 11px;
+    color: #64768f;
+}
+.net-card-cons { color: #35c9d6; letter-spacing: 0.08em; }
+.net-card-body { margin: 9px 0 0; font-size: 12.7px; line-height: 1.55; color: #cfdaea; }
+.net-card-empty { color: #64768f; font-style: italic; }
+.net-card-note {
+    margin-top: 9px;
+    font-size: 11.5px;
+    line-height: 1.45;
+    color: #d2a344;
+    background: #1b1710;
+    border: 1px solid #3a2f1c;
+    border-radius: 7px;
+    padding: 7px 9px;
+}
+.net-card-foot { display: flex; align-items: center; gap: 12px; margin-top: 11px; }
+.net-card-foot button {
+    background: #17233a;
+    border: 1px solid #23324a;
+    color: #cfdaea;
+    border-radius: 7px;
+    font-size: 11.5px;
+    padding: 5px 9px;
+    cursor: pointer;
+}
+.net-card-foot button:hover { border-color: #35c9d6; color: #fff; }
+.net-card-foot a { font-size: 11.5px; color: #35c9d6; text-decoration: none; }
+.net-card-foot a:hover { text-decoration: underline; }
+.net-tooltip-cls {
+    margin-left: 7px;
+    font-family: var(--font-mono, monospace);
+    font-size: 9.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #64768f;
+}
+.net-tooltip-warn {
+    margin-top: 4px;
+    font-size: 10.5px;
+    line-height: 1.4;
+    color: #d2a344;
+}
+.net-card-nocons { color: #64768f; font-style: italic; }

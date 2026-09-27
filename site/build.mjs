@@ -4,6 +4,7 @@
 import { cpSync, mkdirSync, rmSync, existsSync, copyFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildFamilies } from './build-families.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const dist = resolve(root, 'site/dist');
@@ -48,9 +49,13 @@ const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 // (kept simple; the 4th bar is thin to fit)
 writeFileSync(resolve(dist, 'favicon.svg'), favicon.replace('x="26" y="7" width="1.5"', 'x="25" y="7" width="4"'));
 
+// Motif family atlas: one page per family, generated from resources/motif-families.json
+const nFam = buildFamilies(dist);
+
 console.log('Site assembled at site/dist/:');
 console.log('  /            landing page');
 console.log('  /scan/       motif scanner');
 console.log('  /search/     motif search');
 console.log('  /match/      motif match');
 console.log('  /downloads/  standalone HTML files');
+if (nFam) console.log(`  /families/   ${nFam} motif family pages`);
