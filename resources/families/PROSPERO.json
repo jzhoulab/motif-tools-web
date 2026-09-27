@@ -1,0 +1,77 @@
+{
+ "key": "PROSPERO",
+ "aka": [
+  "PROX1",
+  "Prospero-related homeobox",
+  "homeo-prospero domain",
+  "HPD",
+  "HD-PROS factors (TFClass)",
+  "Prospero (Drosophila pros)"
+ ],
+ "consensus": "TAAGACG",
+ "short": "PROX1 is the human counterpart of Drosophila Prospero, and it binds DNA with a module unlike any other homeodomain: a highly divergent homeodomain fused to a conserved Prospero domain, the two folding into one structural unit called the homeo-prospero domain. That unit reads a non-canonical site, TAAGACG, rather than the TAAT core used by ordinary homeodomains, and the Prospero domain both aligns the protein on DNA and masks a nuclear export signal, coupling DNA binding to where the protein sits in the cell. PROX1 is essential for lymphatic endothelium, lens fibre elongation, liver and pancreas development and dentate gyrus identity, and it also works without its own site by tethering to nuclear receptors. A single human gene, so no paralogue ambiguity.",
+ "long": "## The factors\n\nThis family has effectively one member in human, PROX1, a 737-residue protein; PROX2 is a shorter relative\nwith much less supporting data. PROX1 was cloned as the vertebrate homologue of *Drosophila* Prospero, a\npan-neural factor required for proper differentiation of neuronal lineages. The DNA-binding module sits at\nthe C terminus and is unusual enough that standard domain annotation does not register a homeobox in PROX1\nat all. It consists of a highly divergent putative homeodomain immediately followed by a conserved\nProspero domain, and the crystal structures showed that these two regions are not separable: they fold as a\nsingle structural unit, the homeo-prospero domain. The homeodomain region retains a three-helix fold\nsimilar to a canonical homeodomain, the Prospero domain is a four-helix bundle, and the recognition helix\nbridges the two. PROX1 binds as a monomer through this unit; it has no zinc fingers, leucine zipper or\nother dimerisation module. Both the fly and human proteins also act on other transcription factors: \nProspero modulates the DNA-binding properties of conventional homeodomain proteins such as Deformed, and\nPROX1 modulates nuclear receptors, in both cases through the same conserved C-terminal region that binds\nDNA but through activities that are formally independent of it.\n\n## The motif\n\nThe functionally validated Prospero target sequence is TAAGACG, which is not a homeodomain site: there is\nno TAAT core, and the bases contacted are read by residues that do not correspond to the canonical\nhomeodomain specificity positions. The co-crystal structure of the homeo-prospero domain with DNA showed\nLys1290, Asn1294 and Asp1297, invariant across the family, making the specific contacts, and it reconciled\ntwo different sequences that had previously been proposed as Prospero targets, the TAAGACG element and a\nlooser SELEX-derived pyrimidine-rich consensus. The Prospero domain does not itself contact many bases; its\njob is to align the protein correctly on the site. In vitro selection on human PROX1 extends the site to an\neleven-position model, AAGACGCCTTA, whose reverse complement reads TAAGGCGTCTT; the TAAGACG core of the\nliterature consensus is contained in it, and the extra positions are a weakly specified 3' half that makes\nthe whole thing look like a loose near-palindrome of two AAG-type half sites. All four database models in\nthe family agree on this shape, with a cohesion of 0.89, and the only weak entry is a shortened HOCOMOCO\nmodel reduced to CGTCTT. Because there is one gene, there is no paralogue problem: the motif and the\nprotein correspond one to one.\n\n## Where it acts\n\nPROX1 acts at promoters and enhancers of lineage genes in the tissues where it is expressed: lymphatic\nendothelium, lens, liver, pancreas, heart, lymphocytes and dentate gyrus granule cells. A large part of its\ngenomic footprint, though, is not explained by its own site. PROX1 functions as a corepressor and\ncoregulator of nuclear receptors, including liver receptor homologue-1, the oestrogen-related receptor\nERRalpha with its coactivator PGC-1alpha, and the retinoic-acid-related orphan receptors; in these\ncomplexes it is recruited to the receptor's own response element. So PROX1 ChIP peaks are expected to be\nenriched for nuclear receptor half sites as well as for TAAGACG, and in bioenergetic gene programs the\nnuclear receptor element may be the only motif present. There is no widely used name for a PROX1 composite\nelement.\n\n## Biology and disease\n\nProx1-null mouse embryos fail to form a lymphatic vasculature: lymphatic endothelial cells do not bud from\nthe embryonic veins, which established PROX1 as the switch for lymphatic endothelial identity. Forced PROX1\nexpression in blood vascular endothelial cells reprogrammes them toward a lymphatic phenotype, and this\nremains one of the cleaner examples of single-factor endothelial fate conversion. Prox1 loss also blocks\nlens fibre elongation, causing a cataract-like phenotype, and blocks hepatocyte migration during liver\ndevelopment. In the brain, Prox1 postmitotically specifies dentate gyrus granule cell identity in\npreference to CA3 pyramidal identity. Through ERRalpha/PGC-1alpha, PROX1 restrains mitochondrial and\nbioenergetic gene expression. In cancer the direction of effect is context-dependent and contested; in\nintestinal tumorigenesis a PROX1-positive tumour stem or progenitor population has been described that\ncontributes to tumour growth, while other settings report tumour-suppressive behaviour.\n\n## Reading a hit\n\nA good TAAGACG or AAGACGCCTTA match is unusually informative for a homeodomain-class family, because the\nsite shares nothing with the TAAT core that hundreds of other homeodomain factors use, and because there is\nonly one human protein that reads it. Two limits. The site is short and only moderately constrained, so\nchance occurrence is not negligible in a large search space, and matches should be weighted by whether\nPROX1 is expressed in the tissue at all; it is off in most adult somatic cell types. More importantly, the\nconverse inference fails: a PROX1 ChIP peak with no TAAGACG is not evidence against PROX1 involvement,\nbecause much of what PROX1 does genomically is tethered to nuclear receptors. The available models rest on\nin vitro selection, which supports the statement that PROX1 binds this sequence, and the crystal structure\nsupports it independently; that is a stronger evidence base than most families in this atlas.",
+ "caveats": "One gene, one motif, so no paralogue ambiguity, and the site is structurally validated by a co-crystal of the homeo-prospero domain with DNA. The limits are elsewhere. TAAGACG is only seven constrained positions, so chance matches are common in large searches and should be filtered by whether PROX1 is expressed. The database models come from in vitro selection, which is good evidence for sequence but not for occupancy. And a large fraction of PROX1 genomic action is indirect: it is recruited as a coregulator by nuclear receptors including LRH-1, ERRalpha and RORs, so PROX1 ChIP peaks are expected to carry nuclear receptor elements rather than, or in addition to, this motif.",
+ "refs": [
+  {
+   "cite": "Oliver G, Sosa-Pineda B, Geisendorf S, et al. Prox 1, a prospero-related homeobox gene expressed during mouse development. Mech Dev 1993;44:3-16.",
+   "pmid": "7908825",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7908825/"
+  },
+  {
+   "cite": "Hassan B, Li L, Bremer KA, et al. Prospero is a panneural transcription factor that modulates homeodomain protein activity. Proc Natl Acad Sci U S A 1997;94:10991-6.",
+   "pmid": "9380747",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9380747/"
+  },
+  {
+   "cite": "Ryter JM, Doe CQ, Matthews BW. Structure of the DNA binding region of prospero reveals a novel homeo-prospero domain. Structure 2002;10:1541-9.",
+   "pmid": "12429095",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12429095/"
+  },
+  {
+   "cite": "Yousef MS, Matthews BW. Structural basis of Prospero-DNA interaction: implications for transcription regulation in developing cells. Structure 2005;13:601-7.",
+   "pmid": "15837198",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15837198/"
+  },
+  {
+   "cite": "Wigle JT, Oliver G. Prox1 function is required for the development of the murine lymphatic system. Cell 1999;98:769-78.",
+   "pmid": "10499794",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10499794/"
+  },
+  {
+   "cite": "Wigle JT, Chowdhury K, Gruss P, et al. Prox1 function is crucial for mouse lens-fibre elongation. Nat Genet 1999;21:318-22.",
+   "pmid": "10080188",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10080188/"
+  },
+  {
+   "cite": "Sosa-Pineda B, Wigle JT, Oliver G. Hepatocyte migration during liver development requires Prox1. Nat Genet 2000;25:254-5.",
+   "pmid": "10888866",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10888866/"
+  },
+  {
+   "cite": "Petrova TV, Mäkinen T, Mäkelä TP, et al. Lymphatic endothelial reprogramming of vascular endothelial cells by the Prox-1 homeobox transcription factor. EMBO J 2002;21:4593-9.",
+   "pmid": "12198161",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12198161/"
+  },
+  {
+   "cite": "Charest-Marcotte A, Dufour CR, Wilson BJ, et al. The homeobox protein Prox1 is a negative modulator of ERR{alpha}/PGC-1{alpha} bioenergetic functions. Genes Dev 2010;24:537-42.",
+   "pmid": "20194433",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20194433/"
+  },
+  {
+   "cite": "Iwano T, Masuda A, Kiyonari H, et al. Prox1 postmitotically defines dentate gyrus cells by specifying granule cell identity over CA3 pyramidal cell fate in the hippocampus. Development 2012;139:3051-62.",
+   "pmid": "22791897",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22791897/"
+  },
+  {
+   "cite": "Kallio P, Bessone C, Seyednasrollah F, et al. A Multipotent PROX1+ Tumor Stem/Progenitor Cell Population Emerges during Intestinal Tumorigenesis and Mediates Radioresistance in Colorectal Cancer. Cancer Res 2025;85:4616-4631.",
+   "pmid": "39841093",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39841093/"
+  },
+  {
+   "cite": "Rauluseviciute I, Riudavets-Puig R, Blanc-Mathieu R, et al. JASPAR 2024: 20th anniversary of the open-access database of transcription factor binding profiles. Nucleic Acids Res 2024;52:D174-D182.",
+   "pmid": "37962376",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37962376/"
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "key": "CENPB_POGO",
+ "aka": [
+  "CENP-B box",
+  "CENPB",
+  "pogo-derived transposase domain",
+  "Tigger element derived (TIGD1-7)",
+  "POGK",
+  "JRK / jerky",
+  "CENPBD1",
+  "alpha-satellite CENP-B box"
+ ],
+ "consensus": "TTCGTTGGAA",
+ "short": "The third and largest of the atlas's domesticated-transposase families. CENP-B, the Tigger-derived TIGD1 to TIGD7 proteins, POGK, JRK and CENPBD1 all carry DNA-binding domains descended from pogo, a Drosophila DNA transposon whose Tigger relatives left more than a hundred thousand fossil copies in the human genome. CENP-B itself recognizes the 17-base-pair CENP-B box, which recurs in alpha-satellite DNA - so a CENP-B box match is almost always centromeric or pericentromeric, not a regulatory site. Sixteen motifs cover twelve symbols, most of them sharing a bipartite pattern of a TTCG/CGAA block and a CCCG/CGGG block read by two helix-turn-helix domains. Cohesion is low at 0.48 and one model is flagged suspect.",
+ "long": "## The factors\n\nIn 1996 a survey of human interspersed repeats identified two roughly 2.5 kb elements with coding capacity, Tigger1 and Tigger2, that closely resemble pogo, a DNA transposon of Drosophila, and that probably mobilised at least fourteen families and more than a hundred thousand degenerate short copies carrying 14 to 25 base-pair terminal inverted repeats. The deduced pogo and Tigger transposases turned out to be very similar to CENP-B, the major mammalian centromere protein - the observation that first suggested CENP-B has a transposase origin. This family collects the human descendants of that lineage: CENPB itself, the Tigger transposable element derived proteins TIGD1 through TIGD7, POGK, JRK (jerky) and CENPBD1. TIGD7 was in fact isolated as a Jerky/JRK-like gene, and the wider pogo group also contains POGZ, which is not filed here.\n\nTheir host functions have diverged completely. CENP-B is a centromeric chromatin protein. Jerky, in Drosophila, facilitates cell-specific Wnt/Wingless signalling by modulating beta-catenin-TCF activity, and in mouse it is associated with translationally inactive neuronal mRNA. Several TIGD genes have no characterised function at all. What they retain in common is the recognition module, which is exactly what makes this family readable as a motif family and unreadable as a functional one.\n\n## The motif\n\nCENP-B binds a 17 base-pair sequence in centromeric alpha-satellite (alphoid) DNA, purified from HeLa nuclear extract as the protein that recognizes it, with an affinity of about 6 x 10^8 M^-1, and the major protein-DNA complex contains two DNA molecules. The 129-residue DNA-binding region forms two helix-turn-helix domains that occupy adjacent major grooves; the DNA is kinked at both recognition-helix contacts, the larger kink reaching 43 degrees through an arginine-rich helix that bridges the phosphate backbone, giving an overall bend of 59 degrees. The box recurs in alpha-satellite at regular intervals, roughly every other repeat unit.\n\nThe atlas models for CENPB, tCCCGCaTnntACGAA in HOCOMOCO and CCCGcdTnnwaCGAA in CIS-BP and Vierstra, are written on the strand opposite the way the box is conventionally quoted: the CCCG block at their 5' end corresponds to the CGGG block at the 3' end of the box, and their 3' CGAA corresponds to the box's 5' TTCG. Read in either orientation the bipartite architecture is visible, two conserved blocks separated by a tolerant spacer, exactly matching the two-helix-turn-helix structure. The same signature runs through the family: JRK gives CCTCgrTTAACCGGAA, TIGD7 ttCnnTAATTCGGAC, TIGD4 ACCCCGTTAaTAcGAaC, TIGD3 TATGCAGgTAAcCGda, TIGD5 cccbtTATAACGC and POGK TCGACcTtAgGTCGACa. These are long, information-rich models of 12 to 26 bits with grade A HOCOMOCO evidence, but they are not the same site as each other, which is why family cohesion is only 0.48. The tail is weak: TIGD1 gives TATTGCG, CENPBD1 TACGta at 4.1 bits, TIGD6 aaCGAA at 3.4 bits, and the Vierstra archetype AC0265 collapses to CG and is flagged suspect with SAND as its alternative family. Two CIS-BP models, for TIGD2 and TIGD6, are transferred from Monodelphis domestica, and a third for POGK is a PBM construct at only 73 percent domain identity.\n\n## Where it acts\n\nFor CENP-B the answer is unusually definite: its sites are in alpha-satellite arrays at centromeres and pericentromeric regions, distributed through higher-order repeat units, and they are functional there. Both the CENP-B box and alphoid sequence context are required for de novo centromere chromatin assembly on synthetic repeats in the human artificial chromosome assay, including recruitment of CENP-A, CENP-C and CENP-E; combining CENP-B box positive and negative synthetic repeats improves artificial chromosome formation further. Alpha-satellite arrays differ in their CENP-B box content, and the box has arisen independently more than once - it is present in some New World monkey satellite lineages with separate origins. The other members are nuclear proteins of unremarkable distribution whose genomic occupancy is poorly mapped.\n\n## Biology and disease\n\nThe centromeric role of the box is not matched by a requirement for the protein: Cenpb null mice are viable with no apparent abnormalities, so CENP-B is best understood as facilitating centromere assembly rather than being essential to it. This is the standard picture for domesticated transposases, whose retention reflects opportunistic recruitment rather than indispensability. Jerky loss in mouse produces an epilepsy phenotype, and the fly orthologue modulates Wnt signalling through beta-catenin-TCF. The Tigger and POGK members remain largely uncharacterised; POGZ, a pogo relative outside this family, is a well-established neurodevelopmental disorder gene, which is a reason to expect more phenotypes here.\n\n## Reading a hit\n\nCheck repeat annotation first. A CENP-B box match will nearly always fall inside alpha satellite, and in that context it is a structural feature of the centromere, not a candidate enhancer; counting matches is effectively counting satellite repeat units, and satellite arrays are poorly resolved in most reference assemblies, so occurrence counts are unreliable. For the rest of the family, the long grade A models for JRK, POGK, TIGD3, TIGD4, TIGD5 and TIGD7 are individually specific and mutually distinct, so a hit can be assigned to a member rather than only to the family - but almost nothing is known about what those sites do, and there is no occupancy evidence to corroborate them. Discard the CENPBD1, TIGD6 and TIGD1 models, the cross-species transfers, and the suspect CG archetype.",
+ "caveats": "This is a low-cohesion family (0.48) whose members do not share one site: only CENPB, and the models labelled CENPB, correspond to the CENP-B box, and those are written reverse-complement to the usual rendering of the box. A CENP-B box hit is almost always inside alpha satellite and should be read as centromeric structure, not regulation; match counts there track satellite copy number and assembly quality rather than biology. Four models are effectively uninformative (CENPBD1 4.1 bits, TIGD6 3.4 bits, the suspect CG archetype AC0265, and TIGD1's seven-base TATTGCG). Two CIS-BP models are transferred from Monodelphis domestica and one POGK model from a PBM construct at 73 percent domain identity. No member except CENPB has published occupancy data to corroborate its motif.",
+ "refs": [
+  {
+   "cite": "Smit AF, Riggs AD. Tiggers and DNA transposon fossils in the human genome. Proc Natl Acad Sci U S A 1996;93:1443-8.",
+   "pmid": "8643651",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8643651/"
+  },
+  {
+   "cite": "Muro Y, Masumoto H, Yoda K, et al. Centromere protein B assembles human centromeric alpha-satellite DNA at the 17-bp sequence, CENP-B box. J Cell Biol 1992;116:585-96.",
+   "pmid": "1730770",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1730770/"
+  },
+  {
+   "cite": "Tanaka Y, Nureki O, Kurumizaka H, et al. Crystal structure of the CENP-B protein-DNA complex: the DNA-binding domains of CENP-B induce kinks in the CENP-B box DNA. EMBO J 2001;20:6612-8.",
+   "pmid": "11726497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11726497/"
+  },
+  {
+   "cite": "Ohzeki J, Nakano M, Okada T, et al. CENP-B box is required for de novo centromere chromatin assembly on human alphoid DNA. J Cell Biol 2002;159:765-75.",
+   "pmid": "12460987",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12460987/"
+  },
+  {
+   "cite": "Perez-Castro AV, Shamanski FL, Meneses JJ, et al. Centromeric protein B null mice are viable with no apparent abnormalities. Dev Biol 1998;201:135-43.",
+   "pmid": "9740654",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9740654/"
+  },
+  {
+   "cite": "Okazaki K, Nakano M, Ohzeki JI, et al. Combination of CENP-B Box Positive and Negative Synthetic Alpha Satellite Repeats Improves De Novo Human Artificial Chromosome Formation. Cells 2022;11.",
+   "pmid": "35563684",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35563684/"
+  },
+  {
+   "cite": "Thongchum R, Nishihara H, Srikulnath K, et al. The CENP-B box, a nucleotide motif involved in centromere formation, has multiple origins in New World monkeys. Genes Genet Syst 2020;94:301-306.",
+   "pmid": "31813924",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31813924/"
+  },
+  {
+   "cite": "Rosandić M, Paar V, Basar I, et al. CENP-B box and pJalpha sequence distribution in human alpha satellite higher-order repeats (HOR). Chromosome Res 2006;14:735-53.",
+   "pmid": "17115329",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17115329/"
+  },
+  {
+   "cite": "Dou T, Gu S, Zhou Z, et al. Isolation and characterization of a Jerky and JRK/JH8 like gene, tigger transposable element derived 7, TIGD7. Biochem Genet 2004;42:279-85.",
+   "pmid": "15487591",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15487591/"
+  },
+  {
+   "cite": "Benchabane H, Xin N, Tian A, et al. Jerky/Earthbound facilitates cell-specific Wnt/Wingless signalling by modulating β-catenin-TCF activity. EMBO J 2011;30:1444-58.",
+   "pmid": "21399610",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21399610/"
+  },
+  {
+   "cite": "Sinzelle L, Izsvák Z, Ivics Z. Molecular domestication of transposable elements: from detrimental parasites to useful host genes. Cell Mol Life Sci 2009;66:1073-93.",
+   "pmid": "19132291",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19132291/"
+  },
+  {
+   "cite": "Jangam D, Feschotte C, Betrán E. Transposable Element Domestication As an Adaptation to Evolutionary Conflicts. Trends Genet 2017;33:817-831.",
+   "pmid": "28844698",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28844698/"
+  }
+ ]
+}

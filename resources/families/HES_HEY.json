@@ -1,0 +1,78 @@
+{
+ "key": "HES_HEY",
+ "aka": [
+  "N box",
+  "N-box CACNAG",
+  "class C site",
+  "class B E-box (CACGYG)",
+  "hairy/Enhancer-of-split (HES)",
+  "HESR/HERP/HRT/CHF/gridlock (HEY)",
+  "bHLH-Orange factors"
+ ],
+ "consensus": "CACGYG",
+ "short": "HES1-7, HEY1/2, HEYL and HELT are the vertebrate hairy/Enhancer-of-split relatives: bHLH repressors with an Orange domain that sets partner choice and a C-terminal WRPW or YRPW peptide that recruits TLE/Groucho corepressors. Most are direct Notch targets, so their activity reports Notch signalling. They read a genuinely different site from the class II bHLH activators — a proline in the basic region shifts preference away from CANNTG. Two sites are described: the functionally defined N box CACNAG, and the higher-affinity CACGYG (CACGTG or CACGCG) that the database matrices actually capture. HES1 autorepression through N boxes generates a two-hour expression oscillation; HES7 drives the somite segmentation clock.",
+ "long": "## The factors\n\nHES1-HES7, HEY1, HEY2, HEYL and HELT are the vertebrate relatives of *Drosophila* hairy and Enhancer of split, and they are structurally distinct from the class I and class II bHLH proteins that read E-boxes. Three features define them. First, a proline in the basic region, which is why this group is sometimes called the proline-bHLH class and why its sequence preference differs from CANNTG. Second, an Orange domain, a two-helix module immediately C-terminal to the bHLH that restricts which partners a given member will dimerise with. Third, a C-terminal tetrapeptide — WRPW in HES proteins, YRPW in HEY proteins — that recruits TLE/Groucho corepressors. They are repressors, not activators. Most are direct transcriptional targets of Notch signalling through RBPJ/CSL, so their expression reports Notch activity: HES1 broadly, HES5 in neural progenitors, HES7 in presomitic mesoderm, HEY1/HEY2/HEYL in cardiovascular and endothelial tissue. HES2, HES3, HES4 and HES6 are divergent; HES6 does not behave like a canonical repressor. Crucially, these proteins repress by two routes. They bind DNA and recruit corepressors, and they also sequester class II activators: HES1 reduces E47-driven transcription and blocks MyoD- and MASH1-driven differentiation, which requires no HES site at all.\n\n## The motif\n\nTwo different sites are attributed to this family, and the distinction matters. The site defined functionally is the N box, CACNAG, the Enhancer-of-split recognition sequence through which HES1 represses transcription. *Drosophila* hairy was then shown to prefer a non-canonical site, CACGCG, and mutating a single CACGCG in the *achaete* promoter abolishes hairy-mediated repression in cells and produces ectopic sensory organs in flies. Different papers call this site a class C site or a class B E-box; the nomenclature is not consistent, so it is safer to write the sequence than the class name.\n\nWhat the databases contain is neither of these. Twenty-four of the 26 motifs assigned here read CACGTG or CACGYG, usually with GG/CC flanks: GGCACGTGCC. The representative model is JASPAR HEY1 MA0823.1 (CACGTGCC), and almost all the HOCOMOCO models carry in vitro evidence (`S` or `SM`), so this is a real binding preference measured in vitro, not an artefact. Genome-wide, HEY1, HEY2 and HEYL bound preferentially to CACGYG, but a large fraction of efficiently bound promoters contained no E-box at all, implying additional, loosely defined binding modes. The honest summary is that the high-affinity in vitro site is CACGYG, the classical repression site is the lower-affinity N box CACNAG, and the database matrices capture only the former. The atlas's data consensus CACGTGCC therefore disagrees with the ontology definition's N box for a documented reason rather than by error.\n\nCACGTG is a problem sequence. It is the canonical palindromic E-box of MYC/MAX, USF1/2, TFE3/TFEB/MITF, SREBF1/2, BHLHE40/41, ARNT and the CLOCK-BMAL1 heterodimer. The Vierstra archetype `AC0068:HEY/CLOCK:bHLH` states this in its name. Two further Vierstra archetypes here, `AC0263:HES` and `AC0264:HES`, have low-information consensuses (CACACTT, CNCACGT) that resemble nothing else in the family and should not be used as HES models. Two CIS-BP entries, for HES4 and HEYL, are inferred from mouse proteins at 91% DNA-binding-domain identity.\n\n## Where it acts\n\nUnlike the E-box families, HES/HEY sites are promoter-proximal. Chromatin immunoprecipitation of HEY factors in HEK293 cells, cardiomyocytes and mouse hearts found binding clustered in proximal promoter regions, disproportionately at genes encoding transcriptional regulators and developmental control proteins. CACGTG contains a CpG, so these sites are enriched in CpG islands and their occupancy is sensitive to DNA methylation. HES1 binds N boxes in its own promoter, and that negative feedback loop, combined with short protein and mRNA half-lives, generates a roughly two-hour oscillation in HES1 expression. Neighbouring RBPJ/CSL sites are common, because these genes and their targets are Notch-responsive.\n\n## Biology and disease\n\nHES and HEY proteins are the main transcriptional output of Notch signalling. Hes1 and Hes5 maintain neural progenitors and delay neuronal differentiation; removing them causes premature neurogenesis and progenitor depletion. Hes7 drives the segmentation clock in presomitic mesoderm, and its loss disorganises somite formation; in humans, *HES7* mutations cause spondylocostal dysostosis with vertebral and rib malformations. HEY1, HEY2 and HEYL are strikingly redundant, which is why single knockouts are often mild and combined losses phenocopy each other in the heart. HES1 acts downstream of activated NOTCH1 in T-cell acute lymphoblastic leukaemia.\n\n## Reading a hit\n\nA CACGTG hit is one of the least specific results a scan can return: on sequence alone it is compatible with at least eight other families, several of which (MYC/MAX, USF, MITF, CLOCK-BMAL1) are far more abundantly expressed in most cell types than HES or HEY. Treat a CACGTG match as a \"class B E-box\" hit and resolve it with expression and co-factor evidence, not with motif scores. If you are specifically after Notch-effector repression, the functionally validated site is the N box CACNAG, which the database matrices will not find for you; scan for it separately and expect weak scores. The individual HES and HEY paralogues cannot be distinguished. Finally, remember that these proteins can repress without binding DNA, by titrating E-proteins and class II activators, so the absence of a site is not evidence that HES or HEY is not acting on a gene.",
+ "caveats": "The site the databases model, CACGTG, is the canonical palindromic E-box shared with MYC/MAX, USF1/2, TFE3/TFEB/MITF, SREBF, BHLHE40/41, ARNT and CLOCK-BMAL1 — one Vierstra archetype here is named HEY/CLOCK for exactly that reason — so a hit is weak evidence for HES or HEY specifically. The classically defined repression site, the N box CACNAG, is lower affinity and is not represented by these matrices, so a scan will miss it. Two low-information Vierstra HES archetypes resemble nothing else in the family. HES4 and HEYL models are inferred from mouse proteins. HES and HEY also repress without binding DNA, by sequestering E-proteins, so absent sites do not exclude their involvement.",
+ "refs": [
+  {
+   "cite": "Sasai Y, Kageyama R, Tagawa Y, et al. Two mammalian helix-loop-helix factors structurally related to Drosophila hairy and Enhancer of split. Genes Dev 1992;6:2620-34.",
+   "pmid": "1340473",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1340473/"
+  },
+  {
+   "cite": "Ohsako S, Hyer J, Panganiban G, et al. Hairy function as a DNA-binding helix-loop-helix repressor of Drosophila sensory organ formation. Genes Dev 1994;8:2743-55.",
+   "pmid": "7958930",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7958930/"
+  },
+  {
+   "cite": "Van Doren M, Bailey AM, Esnayra J, et al. Negative regulation of proneural gene activity: hairy is a direct transcriptional repressor of achaete. Genes Dev 1994;8:2729-42.",
+   "pmid": "7958929",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7958929/"
+  },
+  {
+   "cite": "Dawson SR, Turner DL, Weintraub H, et al. Specificity for the hairy/enhancer of split basic helix-loop-helix (bHLH) proteins maps outside the bHLH domain and suggests two separable modes of transcriptional repression. Mol Cell Biol 1995;15:6923-31.",
+   "pmid": "8524259",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8524259/"
+  },
+  {
+   "cite": "Ohtsuka T, Ishibashi M, Gradwohl G, et al. Hes1 and Hes5 as notch effectors in mammalian neuronal differentiation. EMBO J 1999;18:2196-207.",
+   "pmid": "10205173",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10205173/"
+  },
+  {
+   "cite": "Bessho Y, Sakata R, Komatsu S, et al. Dynamic expression and essential functions of Hes7 in somite segmentation. Genes Dev 2001;15:2642-7.",
+   "pmid": "11641270",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11641270/"
+  },
+  {
+   "cite": "Hirata H, Yoshiura S, Ohtsuka T, et al. Oscillatory expression of the bHLH factor Hes1 regulated by a negative feedback loop. Science 2002;298:840-3.",
+   "pmid": "12399594",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12399594/"
+  },
+  {
+   "cite": "Iso T, Kedes L, Hamamori Y. HES and HERP families: multiple effectors of the Notch signaling pathway. J Cell Physiol 2003;194:237-55.",
+   "pmid": "12548545",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12548545/"
+  },
+  {
+   "cite": "Kageyama R, Ohtsuka T, Kobayashi T. The Hes gene family: repressors and oscillators that orchestrate embryogenesis. Development 2007;134:1243-51.",
+   "pmid": "17329370",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17329370/"
+  },
+  {
+   "cite": "Fischer A, Gessler M. Delta-Notch--and then? Protein interactions and proposed modes of repression by Hes and Hey bHLH factors. Nucleic Acids Res 2007;35:4583-96.",
+   "pmid": "17586813",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17586813/"
+  },
+  {
+   "cite": "Heisig J, Weber D, Englberger E, et al. Target gene analysis by microarrays and chromatin immunoprecipitation identifies HEY proteins as highly redundant bHLH repressors. PLoS Genet 2012;8:e1002728.",
+   "pmid": "22615585",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22615585/"
+  },
+  {
+   "cite": "Sparrow DB, Faqeih EA, Sallout B, et al. Mutation of HES7 in a large extended family with spondylocostal dysostosis and dextrocardia with situs inversus. Am J Med Genet A 2013;161A:2244-9.",
+   "pmid": "23897666",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23897666/"
+  }
+ ]
+}

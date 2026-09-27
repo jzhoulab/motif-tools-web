@@ -1,0 +1,78 @@
+{
+ "key": "NFAT",
+ "aka": [
+  "NFAT site",
+  "GGAAA core",
+  "ARRE-2",
+  "antigen-receptor response element",
+  "NFAT-AP1 composite element",
+  "TonE",
+  "nuclear factor of activated T cells"
+ ],
+ "consensus": "TGGAAA",
+ "short": "NFAT sites are read by five proteins with a Rel-homology DNA-binding domain: the calcineurin-regulated NFATC1, NFATC2, NFATC3 and NFATC4, plus the structurally distinct, calcium-independent NFAT5 (TonEBP). Unlike NF-kB, the calcineurin-dependent NFATs bind as monomers to a short GGAAA core, usually written TGGAAA and only about six informative bases long. Because that is too little information to specify a site on its own, NFATs typically work in composite elements, most famously the NFAT-AP1 element of the interleukin-2 promoter, where NFAT and a Fos-Jun dimer touch each other on adjacent DNA. NFAT activity is controlled by dephosphorylation and nuclear import, which is why cyclosporin A and tacrolimus, which inhibit calcineurin, are immunosuppressive.",
+ "long": "## The factors\n\nFive human proteins carry an NFAT DNA-binding domain. NFATC1 (NFAT2), NFATC2 (NFAT1), NFATC3 (NFAT4) and NFATC4 (NFAT3) share a Rel-homology region related to that of NF-kB, preceded by a long regulatory domain packed with serine-rich motifs and SP boxes. In a resting cell that domain is heavily phosphorylated and the protein is cytoplasmic; a sustained rise in cytosolic calcium activates the phosphatase calcineurin, which dephosphorylates it and exposes a nuclear localisation signal. Nuclear export kinases such as GSK3, CK1 and DYRK reverse this, so NFAT shuttles continuously and its nuclear concentration tracks calcium in near-real time. NFATC1 and NFATC2 dominate in lymphocytes, NFATC3 in thymocytes, NFATC4 in heart, skeletal muscle and brain. NFAT5 (TonEBP) is the outlier: it keeps the Rel-homology fold but lacks the calcineurin-docking regulatory domain, is activated by hypertonicity rather than calcium, and binds DNA as an obligate homodimer that completely encircles the double helix. That structural work also made the family's relationship to NF-kB explicit, since DNA-bound NFAT5 adopts an NF-kB-like arrangement.\n\n## The motif\n\nThe core is GGAAA, normally written with its 5' T as TGGAAA, and the databases converge on a very short model: the representative in vitro-supported HOCOMOCO entry is ATGGAAAAT, of whose nine positions about six carry real information. The Rel-homology domain contacts the GGAA bases through basic residues in the equivalent of NF-kB's L1 loop, but a monomer covers only one half-site's worth of DNA, so total specificity is low - TGGAAA occurs roughly every 2 kb in random sequence. Two features add length in practice. First, many NFAT models in these databases are two half-sites in opposed orientation (for example TTTCCATGGAAA, or TTTCCNNTAACGGAAAA), reflecting genuine NFAT dimers on pseudo-palindromic, kB-like sites; the HIV-1 LTR tandem kB element is the structural example. Second, the classic arrangement is the NFAT-AP1 composite element of the interleukin-2 distal antigen-receptor response element, where NFAT and Fos-Jun bind adjacent sites and form a continuous protein-DNA interface across 15 bp. That partnership leaves a visible mark on the motif collections: the ChIP-derived NFATC1 and NFATC2 models here read TGGAAAAANTGAGTCA - the NFAT core spliced to a canonical AP-1 site, which is a property of the element, not of the protein. NFAT5 differs slightly, preferring a TonE-like TGGAAANNYNY, but not enough to separate it from NFATC1-4 by score. Within NFATC1-4 there is no usable discrimination at all: family cohesion is 0.87 and several members' models are effectively identical.\n\n## Where it acts\n\nNFAT sites are enhancer elements far more often than promoter elements, and they are not CpG-island features. Occupancy is strongly cell-type restricted because it depends both on calcium signalling and on chromatin a lineage factor has already opened; in T cells the relevant regions are co-occupied by AP-1, and frequently by RUNX1, ETS1, GATA3 or TBX21 depending on the subset. Composite elements with recognised names include the interleukin-2 ARRE-2 (NFAT-AP1) and the tandem kB/NFAT element of the HIV-1 long terminal repeat, which NFAT and NF-kB can each occupy. Cooperation with AP-1 is not optional for much of the programme: NFAT mutants that cannot recruit Fos and Jun activate a different, largely non-overlapping set of genes.\n\n## Biology and disease\n\nThe calcineurin-NFAT axis is the main transcriptional output of antigen-receptor signalling, driving interleukin-2, interleukin-4, interferon-gamma, CD40LG and FASLG in T cells, and contributing to the anergy programme when NFAT acts without AP-1. Beyond immunity, NFATC1 is required for osteoclast differentiation downstream of RANK and for heart valve development, and NFATC3 and NFATC4 contribute to cardiac hypertrophy. The pathway is a first-line drug target: cyclosporin A and tacrolimus block calcineurin and are standard immunosuppressants in transplantation, and their renal and neurological toxicity reflects how broadly the pathway is used. NFAT5-null mice show that the lymphoid microenvironment is osmotically stressful, with impaired lymphocyte function and renal medullary defects, and NFAT5 drives osmolyte-transporter genes under hypertonic conditions.\n\n## Reading a hit\n\nA bare TGGAAA match is weak evidence. With six informative positions the site occurs hundreds of thousands of times in the human genome, so one match carries essentially no information unless supported by clustering, conservation, or an adjacent partner site. Look for composites: a TGGAAA within about 15 bp of a TGASTCA is far more convincing than either alone, and tandem or inverted GGAAA repeats indicate the dimeric mode. A hit cannot distinguish NFATC1 from NFATC2, NFATC3 or NFATC4, and only marginally separates NFAT5, so report it as NFAT-family. Check the evidence code before trusting a model: HOCOMOCO entries with S or M in the fourth field come from HT-SELEX or methyl-HT-SELEX and are statements about the protein, whereas the ChIP-only NFATC1 and NFATC2 models here are demonstrably contaminated by the composite element's AP-1 site - scan with those and you are scoring AP-1 as much as NFAT. Note also that the Vierstra archetype AC0682 is labelled NFATC/ZNF because unrelated zinc-finger motifs clustered with it, not because those factors share a specificity.",
+ "caveats": "This is a short, low-information motif and that dominates everything else. Six informative bases make chance matches overwhelmingly more common than real sites, so an isolated TGGAAA should not be reported as an NFAT site; require a composite (usually AP-1 within about 15 bp), a tandem or inverted pair, or independent occupancy data. No model separates NFATC1-4, and NFAT5 only weakly, so a hit is family-level. Several ChIP-derived NFATC1 and NFATC2 models in these databases include the AP-1 TGAGTCA alongside the NFAT core: that is the partner's motif riding along, and it inflates apparent specificity. Finally, occupancy requires calcium signalling, so matches in an unstimulated cell are mostly inactive.",
+ "refs": [
+  {
+   "cite": "Jain J, McCaffrey PG, Miner Z, et al. The T-cell transcription factor NFATp is a substrate for calcineurin and interacts with Fos and Jun. Nature 1993;365:352-5.",
+   "pmid": "8397339",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8397339/"
+  },
+  {
+   "cite": "Rooney JW, Sun YL, Glimcher LH, et al. Novel NFAT sites that mediate activation of the interleukin-2 promoter in response to T-cell receptor stimulation. Mol Cell Biol 1995;15:6299-310.",
+   "pmid": "7565783",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7565783/"
+  },
+  {
+   "cite": "Rao A, Luo C, Hogan PG. Transcription factors of the NFAT family: regulation and function. Annu Rev Immunol 1997;15:707-47.",
+   "pmid": "9143705",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9143705/"
+  },
+  {
+   "cite": "Chen L, Glover JN, Hogan PG, et al. Structure of the DNA-binding domains from NFAT, Fos and Jun bound specifically to DNA. Nature 1998;392:42-8.",
+   "pmid": "9510247",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9510247/"
+  },
+  {
+   "cite": "Miyakawa H, Woo SK, Dahl SC, et al. Tonicity-responsive enhancer binding protein, a rel-like protein that stimulates transcription in response to hypertonicity. Proc Natl Acad Sci U S A 1999;96:2538-42.",
+   "pmid": "10051678",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10051678/"
+  },
+  {
+   "cite": "Macián F, García-Rodríguez C, Rao A. Gene expression elicited by NFAT in the presence or absence of cooperative recruitment of Fos and Jun. EMBO J 2000;19:4783-95.",
+   "pmid": "10970869",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10970869/"
+  },
+  {
+   "cite": "Stroud JC, Lopez-Rodriguez C, Rao A, et al. Structure of a TonEBP-DNA complex reveals DNA encircled by a transcription factor. Nat Struct Biol 2002;9:90-4.",
+   "pmid": "11780147",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11780147/"
+  },
+  {
+   "cite": "Giffin MJ, Stroud JC, Bates DL, et al. Structure of NFAT1 bound as a dimer to the HIV-1 LTR kappa B element. Nat Struct Biol 2003;10:800-6.",
+   "pmid": "12949493",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12949493/"
+  },
+  {
+   "cite": "Hogan PG, Chen L, Nardone J, et al. Transcriptional regulation by calcium, calcineurin, and NFAT. Genes Dev 2003;17:2205-32.",
+   "pmid": "12975316",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12975316/"
+  },
+  {
+   "cite": "Go WY, Liu X, Roti MA, et al. NFAT5/TonEBP mutant mice define osmotic stress as a critical feature of the lymphoid microenvironment. Proc Natl Acad Sci U S A 2004;101:10673-8.",
+   "pmid": "15247420",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15247420/"
+  },
+  {
+   "cite": "Macian F. NFAT proteins: key regulators of T-cell development and function. Nat Rev Immunol 2005;5:472-84.",
+   "pmid": "15928679",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15928679/"
+  },
+  {
+   "cite": "Bates DL, Barthel KK, Wu Y, et al. Crystal structure of NFAT bound to the HIV-1 LTR tandem kappaB enhancer element. Structure 2008;16:684-94.",
+   "pmid": "18462673",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18462673/"
+  }
+ ]
+}

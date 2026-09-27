@@ -1,0 +1,78 @@
+{
+ "key": "CLOCK_BMAL",
+ "aka": [
+  "Circadian E-box",
+  "CACGTG E-box",
+  "Tandem E-box (E1-E2)",
+  "E'-box (CACGTT)",
+  "BMAL1/ARNTL (MOP3)",
+  "NPAS2 (MOP4)",
+  "bHLH-PAS factors"
+ ],
+ "consensus": "CACGTG",
+ "short": "CLOCK, BMAL1 (gene symbol ARNTL) and NPAS2 are basic helix-loop-helix PER-ARNT-SIM (bHLH-PAS) transcription factors that form the activating limb of the mammalian circadian clock. BMAL1 pairs with CLOCK or with its paralogue NPAS2 and binds the palindromic E-box CACGTG together with a small set of E-box-like variants. The complex reads seven base pairs rather than six, because a flanking A-T pair next to the core contributes to affinity. Strong circadian promoters usually carry two E-boxes in tandem six to seven base pairs apart, and it is the pair, not a single hexamer, that produces rhythmic transcription. Occupancy oscillates once a day and drives Per, Cry, Rev-erb and thousands of output genes. Because CACGTG is also the core read by MYC/MAX, USF and SREBP, sequence alone cannot assign an E-box to the clock.",
+ "long": "## The factors\n\nCLOCK, BMAL1 (*ARNTL*, formerly MOP3) and NPAS2 (MOP4) are bHLH-PAS proteins: an N-terminal basic helix-loop-helix domain followed by two PAS domains (PAS-A, PAS-B) and a PAC extension. The bHLH contacts DNA; the PAS domains set dimerization specificity and provide cofactor and small-molecule surfaces. Neither subunit binds DNA productively alone. BMAL1 is the obligate partner, heterodimerizing with CLOCK or with NPAS2; BMAL2 (*ARNTL2*) is a lower-abundance paralogue. The crystal structure of the mouse CLOCK:BMAL1 bHLH-PAS region shows an asymmetric, interdigitated assembly with three separate interfaces, so the subunits wrap around one another rather than pairing symmetrically (Huang et al. 2012). CLOCK and BMAL1 are broadly expressed; NPAS2 is enriched in forebrain and some peripheral tissues and can substitute for CLOCK, which is why *Clock*-null mice keep behavioral rhythms (DeBruyne et al. 2006) while *Bmal1*-null mice are arrhythmic in constant darkness (Bunger et al. 2000). This family holds 12 motifs from JASPAR, HOCOMOCO and CIS-BP labeled ARNTL/BMAL1, CLOCK or NPAS2, with none flagged as probably mislabeled.\n\n## The motif\n\nThe core is the palindromic E-box CACGTG. Each basic helix enters the major groove and reads one CAC half-site; because the hexamer is its own reverse complement, the two subunits occupy equivalent halves. A structure of the human CLOCK:BMAL1 bHLH domains on a canonical E-box resolved the hydrogen-bond network and showed BMAL1 Ile80 contacting the base pair immediately 3' of the core, so the recognized unit is 7 bp, CACGTGA, with that flanking A-T pair indispensable; the same study measured single substitutions and defined two high-affinity non-canonical boxes, AACGTGA and CATGTGA (Wang et al. 2013). This resolves an apparent split in the databases. The methyl-HT-SELEX models CLOCK.H14CORE.0.M.C and NPAS2.H14CORE.1.M.C recover ACACATGT and ACATGTGT, the CATGTG variant, while the grade-A models BMAL1.H14CORE.0.PSM.A and CLOCK.H14CORE.1.PS.A recover CACGTG with a flanking base. The pooled consensus computed from the members is cCACGTGc; it does not contradict the literature 7-mer, because averaging a strand-ambiguous palindrome symmetrizes the flanks. The other commonly cited variant is the E'-box CACGTT. Functionally rhythmic promoters generally carry tandem E-boxes 6-7 bp apart, and the pair rather than either hexamer confers cell-autonomous rhythmicity (Nakahata et al. 2008); the most information-rich model here, NPAS2.H14CORE.2.S.B, is itself a tandem (CACGTGbnndaCACGTGt, about 21 bits). No member of the family can be told from another by sequence.\n\n## Where it acts\n\nBinding is promoter-biased. ChIP-seq in mouse liver puts most confident sites within a few hundred base pairs of transcription start sites, often in CpG-island promoters, with roughly one to three thousand sites per time point (Rey et al. 2011; Koike et al. 2012). Occupancy itself cycles, peaking once per day ahead of the RNA polymerase II and H3K4me3/H3K9ac rhythms it drives (Koike et al. 2012). Core targets are *Per1*, *Per2*, *Cry1*, *Cry2*, *Nr1d1*/*Nr1d2* and *Dbp*; the wider output program layers E-boxes with D-boxes (DBP/HLF/TEF) and ROREs (ROR/REV-ERB) so that one clock input can generate many output phases (Takahashi 2017). A specific hexamer is expected about 7 x 10^5 times in a 3-Gb genome under uniform base composition; CpG depletion lowers the real count, but matches still outnumber occupied sites by orders of magnitude.\n\n## Biology and disease\n\nCLOCK:BMAL1 was identified as the activator of *Per1* through E-boxes, with the dominant-negative *Clock* mutation lengthening period (Gekakis et al. 1998). *Bmal1* loss abolishes free-running rhythms (Bunger et al. 2000) and produces early-onset aging phenotypes including cataracts, sarcopenia and reduced lifespan (Kondratov et al. 2006). Pancreatic-islet disruption of *Clock* or *Bmal1* causes hypoinsulinemia and diabetes (Marcheva et al. 2010). In humans the clock is implicated in sleep-phase disorders, metabolic syndrome and shift-work-associated disease, though the strongest Mendelian sleep-timing mutations lie in *PER2* and *CSNK1D* rather than in CLOCK or BMAL1 (Takahashi 2017).\n\n## Reading a hit\n\nA CACGTG match by itself says almost nothing about which bHLH protein bound it: MYC/MAX, MXI1, USF1/2, SREBF1/2, TFE3/MITF, ARNT homodimers and HIF:ARNT all read the same or an overlapping core, and several CLOCK/BMAL models in this family have a closer neighbor in another family than within their own. Features that shift the interpretation toward the clock are a tandem pair 6-7 bp apart, an A or T immediately 3' of the core, a promoter-proximal CpG-island location, and rhythmic accessibility or expression of the nearby gene. The hit cannot separate CLOCK from NPAS2, BMAL1 from BMAL2, or either from an ARNT homodimer. Evidence codes matter: the grade-A BMAL1 and CLOCK models carry in vitro support (HT-SELEX and methyl-HT-SELEX), whereas ChIP-only models can reflect tethering to partner factors, and CLOCK/BMAL1 ChIP peaks include many regions with no recognizable E-box.",
+ "caveats": "Treat a hit as \"an E-box\" first and a clock site only with extra evidence. The core CACGTG is shared with the MYC/MAX, USF, SREBP and MiT bHLH groups and with HIF:ARNT, and in this family several models sit closer to motifs outside the family than inside it. Nothing in the sequence distinguishes CLOCK from NPAS2 or BMAL1 from BMAL2. The non-canonical CATGTG-type models come from methyl-HT-SELEX at grade C and are lower confidence than the grade-A CACGTG models. ChIP-derived versions include indirect binding, so peak-derived motifs are not proof that the tagged subunit touched the DNA. Tandem spacing and rhythmic behavior of the locus are more informative than the match score.",
+ "refs": [
+  {
+   "cite": "Gekakis N, Staknis D, Nguyen HB, et al. Role of the CLOCK protein in the mammalian circadian mechanism. Science 1998;280:1564-9.",
+   "pmid": "9616112",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9616112/"
+  },
+  {
+   "cite": "Hogenesch JB, Gu YZ, Jain S, et al. The basic-helix-loop-helix-PAS orphan MOP3 forms transcriptionally active complexes with circadian and hypoxia factors. Proc Natl Acad Sci U S A 1998;95:5474-9.",
+   "pmid": "9576906",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9576906/"
+  },
+  {
+   "cite": "Bunger MK, Wilsbacher LD, Moran SM, et al. Mop3 is an essential component of the master circadian pacemaker in mammals. Cell 2000;103:1009-17.",
+   "pmid": "11163178",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11163178/"
+  },
+  {
+   "cite": "Huang N, Chelliah Y, Shan Y, et al. Crystal structure of the heterodimeric CLOCK:BMAL1 transcriptional activator complex. Science 2012;337:189-94.",
+   "pmid": "22653727",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22653727/"
+  },
+  {
+   "cite": "Wang Z, Wu Y, Li L, et al. Intermolecular recognition revealed by the complex structure of human CLOCK-BMAL1 basic helix-loop-helix domains with E-box DNA. Cell Res 2013;23:213-24.",
+   "pmid": "23229515",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23229515/"
+  },
+  {
+   "cite": "Nakahata Y, Yoshida M, Takano A, et al. A direct repeat of E-box-like elements is required for cell-autonomous circadian rhythm of clock genes. BMC Mol Biol 2008;9:1.",
+   "pmid": "18177499",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18177499/"
+  },
+  {
+   "cite": "Rey G, Cesbron F, Rougemont J, et al. Genome-wide and phase-specific DNA-binding rhythms of BMAL1 control circadian output functions in mouse liver. PLoS Biol 2011;9:e1000595.",
+   "pmid": "21364973",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21364973/"
+  },
+  {
+   "cite": "Koike N, Yoo SH, Huang HC, et al. Transcriptional architecture and chromatin landscape of the core circadian clock in mammals. Science 2012;338:349-54.",
+   "pmid": "22936566",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22936566/"
+  },
+  {
+   "cite": "Debruyne JP, Noton E, Lambert CM, et al. A clock shock: mouse CLOCK is not required for circadian oscillator function. Neuron 2006;50:465-77.",
+   "pmid": "16675400",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16675400/"
+  },
+  {
+   "cite": "Kondratov RV, Kondratova AA, Gorbacheva VY, et al. Early aging and age-related pathologies in mice deficient in BMAL1, the core componentof the circadian clock. Genes Dev 2006;20:1868-73.",
+   "pmid": "16847346",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16847346/"
+  },
+  {
+   "cite": "Marcheva B, Ramsey KM, Buhr ED, et al. Disruption of the clock components CLOCK and BMAL1 leads to hypoinsulinaemia and diabetes. Nature 2010;466:627-31.",
+   "pmid": "20562852",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20562852/"
+  },
+  {
+   "cite": "Takahashi JS. Transcriptional architecture of the mammalian circadian clock. Nat Rev Genet 2017;18:164-179.",
+   "pmid": "27990019",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27990019/"
+  }
+ ]
+}

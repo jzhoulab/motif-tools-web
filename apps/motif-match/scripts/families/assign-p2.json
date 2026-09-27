@@ -1,0 +1,552 @@
+{
+  "assignments": {
+    "E2F": "E2F",
+    "E2F1": "E2F",
+    "E2F2": "E2F",
+    "E2F3": "E2F",
+    "E2F4": "E2F",
+    "E2F5": "E2F",
+    "E2F6": "E2F",
+    "E2F7": "E2F",
+    "E2F8": "E2F",
+    "E4F1": "ZNF_OTHER",
+    "EBF": "EBF",
+    "EBF1": "EBF",
+    "EBF2": "EBF",
+    "EBF3": "EBF",
+    "EBF4": "EBF",
+    "EGR": "EGR",
+    "EGR1": "EGR",
+    "EGR2": "EGR",
+    "EGR3": "EGR",
+    "EGR4": "EGR",
+    "EHF": "ETS_EHF",
+    "ELF": "ETS_EHF",
+    "ELF1": "ETS_EHF",
+    "ELF2": "ETS_EHF",
+    "ELF3": "ETS_EHF",
+    "ELF4": "ETS_EHF",
+    "ELF5": "ETS_EHF",
+    "ELK": "ETS_CLASS1",
+    "ELK1": "ETS_CLASS1",
+    "ELK3": "ETS_CLASS1",
+    "ELK4": "ETS_CLASS1",
+    "EMX": "HD_Q50",
+    "EMX1": "HD_Q50",
+    "EMX2": "HD_Q50",
+    "EN": "HD_Q50",
+    "EN1": "HD_Q50",
+    "EN2": "HD_Q50",
+    "EOMES": "TBX",
+    "EPAS1": "HIF_ARNT",
+    "ERF": "ETS_CLASS1",
+    "ERG": "ETS_CLASS1",
+    "ESR1": "ESR",
+    "ESR2": "ESR",
+    "ESRRA": "ESRR",
+    "ESRRB": "ESRR",
+    "ESRRG": "ESRR",
+    "ESX1": "HD_Q50",
+    "ETS": "ETS_CLASS1",
+    "ETS1": "ETS_CLASS1",
+    "ETS2": "ETS_CLASS1",
+    "ETV": "ETS_CLASS1",
+    "ETV1": "ETS_CLASS1",
+    "ETV2": "ETV2_ETV6",
+    "ETV3": "ETS_CLASS1",
+    "ETV3L": "ETS_CLASS1",
+    "ETV4": "ETS_CLASS1",
+    "ETV5": "ETS_CLASS1",
+    "ETV6": "ETV2_ETV6",
+    "ETV7": "ETV2_ETV6",
+    "EVX1": "HD_Q50",
+    "EVX2": "HD_Q50",
+    "FAM200B": "ZNF_SCAN_OTHER",
+    "FBXL19": "MBD_CXXC",
+    "FERD3L": "NEUROD_ATOH",
+    "FEV": "ETS_CLASS1",
+    "FEZF": "ZNF_OTHER",
+    "FEZF1": "ZNF_OTHER",
+    "FEZF2": "ZNF_OTHER",
+    "FIGLA": "NEUROD_ATOH",
+    "FIZ1": "ZNF_OTHER",
+    "FLI": "ETS_CLASS1",
+    "FLI1": "ETS_CLASS1",
+    "FLYWCH1": "ZNF_SCAN_OTHER",
+    "FOS": "AP1",
+    "FOSB": "AP1",
+    "FOSL": "AP1",
+    "FOSL1": "AP1",
+    "FOSL2": "AP1",
+    "FOXA": "FOX",
+    "FOXA1": "FOX",
+    "FOXA2": "FOX",
+    "FOXA3": "FOX",
+    "FOXB": "FOX",
+    "FOXB1": "FOX",
+    "FOXB2": "FOX",
+    "FOXC": "FOX",
+    "FOXC1": "FOX",
+    "FOXC2": "FOX",
+    "FOXD": "FOX",
+    "FOXD1": "FOX",
+    "FOXD2": "FOX",
+    "FOXD3": "FOX",
+    "FOXE1": "FOX",
+    "FOXF1": "FOX",
+    "FOXF2": "FOX",
+    "FOXG": "FOX",
+    "FOXG1": "FOX",
+    "FOXH": "FOX",
+    "FOXH1": "FOX",
+    "FOXI1": "FOX",
+    "FOXJ": "FOX",
+    "FOXJ1": "FOX",
+    "FOXJ2": "FOX_FHL",
+    "FOXJ3": "FOX_FHL",
+    "FOXK": "FOX",
+    "FOXK1": "FOX",
+    "FOXK2": "FOX",
+    "FOXL": "FOX",
+    "FOXL1": "FOX",
+    "FOXL2": "FOX",
+    "FOXM1": "FOX",
+    "FOXN": "FOX_FHL",
+    "FOXN1": "FOX_FHL",
+    "FOXN2": "FOX_FHL",
+    "FOXN3": "FOX_FHL",
+    "FOXN4": "FOX_FHL",
+    "FOXO": "FOX",
+    "FOXO1": "FOX",
+    "FOXO3": "FOX",
+    "FOXO4": "FOX",
+    "FOXO6": "FOX",
+    "FOXP": "FOX_FHL",
+    "FOXP1": "FOX_FHL",
+    "FOXP2": "FOX_FHL",
+    "FOXP3": "FOX_FHL",
+    "FOXP4": "FOX_FHL",
+    "FOXQ1": "FOX",
+    "FOXR": "FOX",
+    "FOXR1": "FOX",
+    "FOXR2": "FOX",
+    "FOXS1": "FOX",
+    "GABPA": "ETS_CLASS1",
+    "GATA": "GATA",
+    "GATA1": "GATA",
+    "GATA2": "GATA",
+    "GATA3": "GATA",
+    "GATA4": "GATA",
+    "GATA5": "GATA",
+    "GATA6": "GATA",
+    "GATAD2A": "CHROMATIN",
+    "GBX1": "HD_Q50",
+    "GBX2": "HD_Q50",
+    "GCM": "GCM",
+    "GCM1": "GCM",
+    "GCM2": "GCM",
+    "GFI": "GFI",
+    "GFI1": "GFI",
+    "GFI1B": "GFI",
+    "GLI": "GLI",
+    "GLI1": "GLI",
+    "GLI2": "GLI",
+    "GLI3": "GLI",
+    "GLI4": "GLI",
+    "GLIS": "GLI",
+    "GLIS1": "GLI",
+    "GLIS2": "GLI",
+    "GLIS3": "GLI",
+    "GLYR1": "CHROMATIN",
+    "GMEB": "SAND",
+    "GMEB1": "SAND",
+    "GMEB2": "SAND",
+    "GRHL": "GRHL",
+    "GRHL1": "GRHL",
+    "GRHL2": "GRHL",
+    "GRHL3": "GRHL",
+    "GSC": "HD_K50",
+    "GSC2": "HD_K50",
+    "GSX1": "HD_Q50",
+    "GSX2": "HD_Q50",
+    "GTF3A": "GTF3A",
+    "HAND1": "HAND_TWIST",
+    "HAND2": "HAND_TWIST",
+    "HBP1": "HBP1",
+    "HDX": "HD_ATYPICAL",
+    "HES": "HES_HEY",
+    "HES1": "HES_HEY",
+    "HES2": "HES_HEY",
+    "HES4": "HES_HEY",
+    "HES5": "HES_HEY",
+    "HES6": "HES_HEY",
+    "HES7": "HES_HEY",
+    "HESX": "HD_Q50",
+    "HESX1": "HD_Q50",
+    "HEY": "HES_HEY",
+    "HEY1": "HES_HEY",
+    "HEY2": "HES_HEY",
+    "HEYL": "HES_HEY",
+    "HHEX": "HD_ATYPICAL",
+    "HIC": "HIC",
+    "HIC1": "HIC",
+    "HIC2": "HIC",
+    "HIF1A": "HIF_ARNT",
+    "HIF3A": "HIF_ARNT",
+    "HINFP": "HINFP",
+    "HLF": "PAR_BZIP",
+    "HLX": "HD_Q50",
+    "HMBOX": "HD_ATYPICAL",
+    "HMBOX1": "HD_ATYPICAL",
+    "HMG20A": "HMG_OTHER",
+    "HMG20B": "HMG_OTHER",
+    "HMGA1": "HMGA",
+    "HMGA2": "HMGA",
+    "HMX": "HD_Q50",
+    "HMX1": "HD_Q50",
+    "HMX2": "HD_Q50",
+    "HMX3": "HD_Q50",
+    "HNF1A": "HD_HNF1",
+    "HNF1B": "HD_HNF1",
+    "HNF4A": "HNF4",
+    "HNF4G": "HNF4",
+    "HOMEZ": "HD_ATYPICAL",
+    "HOXA": "HD_HOX_ANT",
+    "HOXA1": "HD_HOX_ANT",
+    "HOXA10": "HD_HOX_POST",
+    "HOXA11": "HD_HOX_POST",
+    "HOXA13": "HD_HOX_POST",
+    "HOXA2": "HD_HOX_ANT",
+    "HOXA3": "HD_HOX_ANT",
+    "HOXA4": "HD_HOX_ANT",
+    "HOXA5": "HD_HOX_ANT",
+    "HOXA6": "HD_HOX_ANT",
+    "HOXA7": "HD_HOX_ANT",
+    "HOXA9": "HD_HOX_POST",
+    "HOXB": "HD_HOX_ANT",
+    "HOXB1": "HD_HOX_ANT",
+    "HOXB13": "HD_HOX_POST",
+    "HOXB2": "HD_HOX_ANT",
+    "HOXB3": "HD_HOX_ANT",
+    "HOXB4": "HD_HOX_ANT",
+    "HOXB5": "HD_HOX_ANT",
+    "HOXB6": "HD_HOX_ANT",
+    "HOXB7": "HD_HOX_ANT",
+    "HOXB8": "HD_HOX_ANT",
+    "HOXB9": "HD_HOX_POST",
+    "HOXC": "HD_HOX_ANT",
+    "HOXC10": "HD_HOX_POST",
+    "HOXC11": "HD_HOX_POST",
+    "HOXC12": "HD_HOX_POST",
+    "HOXC13": "HD_HOX_POST",
+    "HOXC4": "HD_HOX_ANT",
+    "HOXC5": "HD_HOX_ANT",
+    "HOXC6": "HD_HOX_ANT",
+    "HOXC8": "HD_HOX_ANT",
+    "HOXC9": "HD_HOX_POST",
+    "HOXD": "HD_HOX_ANT",
+    "HOXD1": "HD_HOX_ANT",
+    "HOXD10": "HD_HOX_POST",
+    "HOXD11": "HD_HOX_POST",
+    "HOXD12": "HD_HOX_POST",
+    "HOXD13": "HD_HOX_POST",
+    "HOXD3": "HD_HOX_ANT",
+    "HOXD4": "HD_HOX_ANT",
+    "HOXD8": "HD_HOX_ANT",
+    "HOXD9": "HD_HOX_POST",
+    "HSF": "HSF",
+    "HSF1": "HSF",
+    "HSF2": "HSF",
+    "HSF4": "HSF",
+    "HSF5": "HSF",
+    "HSFY": "HSF",
+    "HSFY1": "HSF",
+    "HSFY2": "HSF"
+  },
+  "uncertain": [
+    {
+      "symbol": "HOXA",
+      "key": "HD_HOX_ANT",
+      "why": "Bare Vierstra archetype token (e.g. HOXA/ID:Homeodomain) spanning the whole HOXA cluster; defaulted to anterior per instructions."
+    },
+    {
+      "symbol": "HOXB",
+      "key": "HD_HOX_ANT",
+      "why": "Bare archetype token covering the whole HOXB cluster; defaulted to anterior per instructions."
+    },
+    {
+      "symbol": "HOXC",
+      "key": "HD_HOX_ANT",
+      "why": "Bare archetype token covering the whole HOXC cluster; defaulted to anterior per instructions."
+    },
+    {
+      "symbol": "HOXD",
+      "key": "HD_HOX_ANT",
+      "why": "Bare archetype token covering the whole HOXD cluster; defaulted to anterior per instructions."
+    },
+    {
+      "symbol": "HOXB9",
+      "key": "HD_HOX_POST",
+      "why": "Assigned by paralogue number (group 9 = AbdB-like) per task rule, although the HD_HOX_ANT def text lists HOXB1-B9."
+    },
+    {
+      "symbol": "HOXC9",
+      "key": "HD_HOX_POST",
+      "why": "Group 9; ontology def text lists C9 under both ANT (HOXC4-C9) and POST (HOXC9-C13) - paralogue rule wins."
+    },
+    {
+      "symbol": "HOXD9",
+      "key": "HD_HOX_POST",
+      "why": "Group 9; ontology def text lists D9 under both ANT (HOXD1-D9) and POST (HOXD9-D13) - paralogue rule wins."
+    },
+    {
+      "symbol": "ETV2",
+      "key": "ETV2_ETV6",
+      "why": "Dedicated ETV2_ETV6 key named in the task, although the ETS_CLASS1 def text covers ETV1/4/5 and ETV6/7."
+    },
+    {
+      "symbol": "ETV6",
+      "key": "ETV2_ETV6",
+      "why": "Dedicated ETV2_ETV6 key preferred over the ETS_CLASS1 def text, which also lists ETV6/7."
+    },
+    {
+      "symbol": "ETV7",
+      "key": "ETV2_ETV6",
+      "why": "TEL2, closest paralogue of ETV6 (same TEL subfamily); ETS_CLASS1 def text also lists it."
+    },
+    {
+      "symbol": "ETV3",
+      "key": "ETS_CLASS1",
+      "why": "ETV3/METS is a repressor but binds the canonical class-I GGA(A/T) core; kept in ETS_CLASS1 per ontology def."
+    },
+    {
+      "symbol": "ETV3L",
+      "key": "ETS_CLASS1",
+      "why": "ETV3-like paralogue, no experimental motif; assumed identical to ETV3."
+    },
+    {
+      "symbol": "ELF",
+      "key": "ETS_EHF",
+      "why": "Bare ELF archetype token; ELF1-5 all sit in the epithelial ETS_EHF group."
+    },
+    {
+      "symbol": "ELF4",
+      "key": "ETS_EHF",
+      "why": "ELF4/MEF is hematopoietic but belongs to the ELF/EHF structural subfamily listed in ETS_EHF."
+    },
+    {
+      "symbol": "ETS",
+      "key": "ETS_CLASS1",
+      "why": "Bare ETS archetype token; mapped to the generic class-I GGAA archetype."
+    },
+    {
+      "symbol": "ETV",
+      "key": "ETS_CLASS1",
+      "why": "Bare ETV archetype token; class-I ETV1/4/5-like motif assumed."
+    },
+    {
+      "symbol": "FOXJ",
+      "key": "FOX",
+      "why": "Bare FOXJ token; FOXJ1 (canonical) vs FOXJ2/3 (divergent) cannot be distinguished, defaulted to canonical FOX."
+    },
+    {
+      "symbol": "FOXN",
+      "key": "FOX_FHL",
+      "why": "Bare FOXN token; the whole FoxN subfamily is FHL/non-canonical-capable, so placed with the divergent forkheads."
+    },
+    {
+      "symbol": "FOXN2",
+      "key": "FOX_FHL",
+      "why": "Bispecific: binds canonical RYAAAYA as well as the FHL site, so FOX would also be defensible."
+    },
+    {
+      "symbol": "FOXN3",
+      "key": "FOX_FHL",
+      "why": "Bispecific FKH+FHL binder (Newman 2019); grouped with the divergent FoxN forkheads."
+    },
+    {
+      "symbol": "FOXM1",
+      "key": "FOX",
+      "why": "FoxM subfamily contains FHL binders, but FOXM1 database motifs are canonical RYAAAYA."
+    },
+    {
+      "symbol": "FOXK1",
+      "key": "FOX",
+      "why": "Studied in the FHL context but its primary motif is the canonical forkhead site."
+    },
+    {
+      "symbol": "FOXK2",
+      "key": "FOX",
+      "why": "As FOXK1: canonical RYAAAYA primary motif."
+    },
+    {
+      "symbol": "FOXH1",
+      "key": "FOX",
+      "why": "FAST-1/FoxH1 is listed in the FOX def and binds a canonical forkhead core within the ARE."
+    },
+    {
+      "symbol": "FOXR1",
+      "key": "FOX",
+      "why": "No experimental motif; canonical forkhead assumed from domain sequence."
+    },
+    {
+      "symbol": "FOXR2",
+      "key": "FOX",
+      "why": "No experimental motif; canonical forkhead assumed from domain sequence."
+    },
+    {
+      "symbol": "E4F1",
+      "key": "ZNF_OTHER",
+      "why": "GLI-Kruppel-type C2H2 zinc finger with no dedicated entry and no KRAB domain."
+    },
+    {
+      "symbol": "FEZF",
+      "key": "ZNF_OTHER",
+      "why": "Bare FEZF token; Fez-family C2H2 zinc fingers with no dedicated entry."
+    },
+    {
+      "symbol": "FEZF1",
+      "key": "ZNF_OTHER",
+      "why": "C2H2 zinc-finger repressor (Fez family), not a KZFP; no dedicated entry."
+    },
+    {
+      "symbol": "FEZF2",
+      "key": "ZNF_OTHER",
+      "why": "ZNF312; C2H2 zinc finger, not a KZFP; no dedicated entry."
+    },
+    {
+      "symbol": "FIZ1",
+      "key": "ZNF_OTHER",
+      "why": "FLT3-interacting C2H2 zinc finger, not a KZFP; no dedicated entry."
+    },
+    {
+      "symbol": "FBXL19",
+      "key": "MBD_CXXC",
+      "why": "Not a classical TF: an F-box protein whose ZF-CxxC domain reads unmethylated CpG islands (PDB 6ASB)."
+    },
+    {
+      "symbol": "GATAD2A",
+      "key": "CHROMATIN",
+      "why": "NuRD subunit without a sequence-specific DBD; listed explicitly in the CHROMATIN def."
+    },
+    {
+      "symbol": "GLYR1",
+      "key": "CHROMATIN",
+      "why": "NP60/NDF chromatin reader without a classical DBD; listed in the CHROMATIN def."
+    },
+    {
+      "symbol": "HES6",
+      "key": "HES_HEY",
+      "why": "HES6 does not bind the N-box itself (dominant-negative HES partner) but clusters with the HES family."
+    },
+    {
+      "symbol": "ESX1",
+      "key": "HD_Q50",
+      "why": "Paired-like homeodomain that could sit in HD_K50, but the ontology lists ESX1 explicitly under HD_Q50."
+    },
+    {
+      "symbol": "HESX1",
+      "key": "HD_Q50",
+      "why": "Paired-like (Rpx) homeodomain; ontology lists HESX1 under HD_Q50 rather than HD_K50."
+    },
+    {
+      "symbol": "HESX",
+      "key": "HD_Q50",
+      "why": "Bare HESX token, follows HESX1."
+    },
+    {
+      "symbol": "HDX",
+      "key": "HD_ATYPICAL",
+      "why": "Highly divergent homeobox with no validated motif; listed in the HD_ATYPICAL def."
+    },
+    {
+      "symbol": "HSF5",
+      "key": "HSF",
+      "why": "No experimental motif; assigned to HSF by domain and the HSF def listing HSF5."
+    },
+    {
+      "symbol": "HSFY",
+      "key": "HSF",
+      "why": "Bare HSFY token; Y-linked HSF paralogues assumed to keep the nGAAn HSE."
+    },
+    {
+      "symbol": "HSFY1",
+      "key": "HSF",
+      "why": "Y-linked HSF paralogue; HSE assumed from domain."
+    },
+    {
+      "symbol": "HSFY2",
+      "key": "HSF",
+      "why": "Y-linked HSF paralogue identical to HSFY1."
+    },
+    {
+      "symbol": "HIF3A",
+      "key": "HIF_ARNT",
+      "why": "HIF3A/IPAS binds the HRE with ARNT but is largely a negative regulator."
+    },
+    {
+      "symbol": "GLI4",
+      "key": "GLI",
+      "why": "GLI4/ZNF361-like has no validated motif; grouped with GLI per the ontology def."
+    },
+    {
+      "symbol": "EVX1",
+      "key": "HD_Q50",
+      "why": "ParaHox even-skipped homologue; ontology lists EVX1/2 under HD_Q50 rather than HD_CDX_PDX."
+    },
+    {
+      "symbol": "EVX2",
+      "key": "HD_Q50",
+      "why": "As EVX1."
+    },
+    {
+      "symbol": "FAM200B",
+      "key": "ZNF_SCAN_OTHER",
+      "why": "Transposase-derived protein of uncertain DNA specificity; listed in the ZNF_SCAN_OTHER def."
+    },
+    {
+      "symbol": "FLYWCH1",
+      "key": "ZNF_SCAN_OTHER",
+      "why": "FLYWCH-type zinc finger with limited literature; listed in the ZNF_SCAN_OTHER def."
+    },
+    {
+      "symbol": "HBP1",
+      "key": "HBP1",
+      "why": "Own single-factor family in the ontology; retained as such."
+    },
+    {
+      "symbol": "FOSL",
+      "key": "AP1",
+      "why": "Bare FOSL token (FOSL1/FOSL2) - AP-1 TRE site."
+    }
+  ],
+  "proposals": [
+    {
+      "key": "FOX_FKHI",
+      "name": "Forkhead alternate/FkhI-DIV archetype",
+      "class": "Forkhead",
+      "def": "Forkhead factors whose motif is the non-canonical FHL/alternate site GACGC rather than RYAAAYA: FOXN1, FOXN4, and the alternate-site motifs of the bispecific FOXN2/FOXN3 and FOXJ2/FOXJ3.",
+      "symbols": [
+        "FOXN1",
+        "FOXN4",
+        "FOXN2",
+        "FOXN3",
+        "FOXJ2",
+        "FOXJ3"
+      ],
+      "why": "FOX_FHL currently mixes the FOXP dimeric TGTTTAC-repeat site with the structurally unrelated GACGC FHL site, which are not the same motif."
+    },
+    {
+      "key": "FEZF",
+      "name": "FEZF (Fez-family zinc finger)",
+      "class": "C2H2 zinc finger",
+      "def": "Fez-family C2H2 zinc-finger repressors binding a GC-rich core distinct from KLF/SP and EGR sites. FEZF1, FEZF2 (ZNF312).",
+      "symbols": [
+        "FEZF",
+        "FEZF1",
+        "FEZF2"
+      ],
+      "why": "FEZF1/2 have defined SELEX motifs and are currently dumped into the catch-all ZNF_OTHER."
+    }
+  ]
+}

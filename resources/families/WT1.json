@@ -1,0 +1,77 @@
+{
+ "key": "WT1",
+ "aka": [
+  "Wilms tumor 1",
+  "WT1 site",
+  "WTE (WT1 element)",
+  "EGR-1-like site",
+  "WT1 +KTS / -KTS isoform",
+  "TFClass: three-zinc finger Kruppel-related factors"
+ ],
+ "consensus": "GCGTGGGAGT",
+ "short": "WT1 is the Wilms tumor suppressor, a four-fingered C2H2 zinc-finger protein whose last three fingers are closely related to those of EGR1 and which binds essentially the same GC-rich site. In vitro selection also found a slightly different high-affinity site, GCGTGGGAGT, called the WTE. Alternative splicing inserts three amino acids (lysine-threonine-serine) between fingers three and four, and the +KTS form binds DNA poorly but binds RNA and localizes to splicing-factor compartments, so WT1 is a DNA-binding protein only in part. Expression is restricted to developing kidney and gonad, podocytes, mesothelium and epicardium. The WT1 matrices in motif databases are ChIP-derived and G-rich rather than EGR-like, which matters when reading a hit.",
+ "long": "## The factors\n\nWT1 was isolated as a zinc-finger gene at the Wilms tumor locus on human chromosome 11p13, spanning about 50 kb (Call et al. 1990). The protein has four Cys2-His2 fingers; fingers 2-4 align with the three fingers of EGR1, and finger 1 adds further contacts. Two alternative splice events generate four main isoforms: insertion or omission of exon 5 (17 amino acids) in the N-terminal region, and insertion or omission of the tripeptide lysine-threonine-serine (KTS) between fingers 3 and 4. The KTS insertion is the consequential one. The -KTS protein localizes to nuclear compartments occupied by transcription factors, while the +KTS protein concentrates in splicing-factor domains (Larsson et al. 1995), and +KTS WT1 binds RNA (Caricasole et al. 1996) through a region that overlaps the DNA-binding fingers (Bardeesy and Pelletier 1998). So one gene produces a DNA-binding transcriptional regulator and an RNA-binding protein from the same finger array, and the ratio between them is under splice control. WT1 expression is restricted: nephron progenitors and podocytes in kidney, Sertoli and granulosa cells in gonad, mesothelium, epicardium and spleen, with additional roles in heart and nervous system (Hastie 2017). WT1 has no close paralogue; its nearest relatives by DNA-binding domain are the EGR proteins.\n\n## The motif\n\nWT1 binds the EGR-1 consensus, which was how its sequence specificity was first demonstrated: a bacterially expressed WT1 finger region bound the EGR-1 site (Rauscher et al. 1990). A whole-genome PCR selection later identified a distinct preferred 10-mer, GCGTGGGAGT, termed the WTE, which is similar to but not the same as the EGR-1 consensus GCG(G/T)GGGCG (Nakagama et al. 1995). The difference is the penultimate triplet: GGGAGT in the WTE against GGGCG in the EGR site. The four-finger domain has been solved on DNA by X-ray crystallography and NMR on both 14-bp and 17-bp duplexes, which resolved the position of finger 1 (Stoll et al. 2007). Here the atlas data and the literature do not agree, and the discrepancy is worth stating plainly. The five WT1 matrices collected here are not EGR-like. Both HOCOMOCO models (WT1.H14CORE.0.P.B, GGGGGAGGA; WT1.H14CORE.1.P.B, GCGGGGGAGG) and the JASPAR profile (MA1627.2, CCTCCCCCAC, which is GTGGGGGAGG on the other strand) are G-rich runs with no CACGC, placing them in the GGGAGGG cluster occupied by MAZ, PATZ1, ZNF281, ZNF148 and VEZF1 rather than with EGR. Family cohesion is correspondingly low, 0.57. The remaining two matrices carry no usable signal: the Vierstra archetype AC0095:WT/FOXC is an AT-rich model (ATATATT) whose nearest neighbors are K50-class homeodomain motifs, and the CIS-BP entry M00243_2.00 has 0.1 bits of information. In the other direction, a HOCOMOCO matrix labelled ZBTB17/MIZ1 (ZBT17.H14CORE.0.P.B, GTGGGGGAGGGG) has its nearest neighbor across all four databases in this family - another sign that what these ChIP-derived WT1 models capture is the generic G-rich promoter element, not a WT1-specific sequence.\n\n## Where it acts\n\nWT1 sites sit in GC- and GA-rich promoter-proximal sequence, and the genes WT1 controls are concentrated in the programs it is expressed in: nephron and podocyte differentiation, gonadal development, epicardial and mesothelial identity (Hastie 2017). Because WT1 and EGR1 recognize overlapping sequences, they compete at shared sites, and which one occupies a site is determined by which protein is present - EGR1 only transiently after stimulation, WT1 only in the restricted lineages that express it. The G-rich matrices in the databases, by contrast, point at CpG-island promoters generally, where MAZ-, ZNF281- and SP-family sites are also abundant.\n\n## Biology and disease\n\nWt1-null mice fail at an early step of kidney development, with defective ureteric bud outgrowth and no metanephros, together with gonadal and mesothelial defects (Kreidberg et al. 1993). In humans, germline WT1 mutations cause two distinct syndromes that map onto the protein's two functions. Denys-Drash syndrome arises from germline missense mutations concentrated in the zinc fingers and combines urogenital malformation, nephropathy and Wilms tumor (Pelletier et al. 1991). Frasier syndrome arises from donor splice-site mutations in intron 9 that specifically abolish the +KTS isoform, producing gonadal dysgenesis and progressive glomerulopathy without the same Wilms tumor risk (Barbaux et al. 1997) - direct evidence that the KTS isoform ratio, not just total WT1, matters in vivo. Somatic WT1 mutations occur in a minority of Wilms tumors, and WT1 is also reported to be highly expressed in acute leukemias.\n\n## Reading a hit\n\nBe careful here, because the label and the matrix disagree. The structurally and biochemically characterized WT1 site is EGR-like (the EGR-1 consensus, or the WTE), but every informative WT1 matrix in these databases is a ChIP-derived G-rich model at grade B. A hit to one of those models tells you the sequence belongs to the GGGAGGG family of G-rich promoter elements - shared with MAZ, PATZ1, ZNF281, ZNF148, VEZF1 and at least one ZBTB17 matrix - and does not establish that WT1 binds there. Conversely, a strong hit to an EGR matrix is also a candidate WT1 site, and one Vierstra archetype is labelled AC0519:EGR/WT precisely because the two could not be separated. Ignore the two uninformative entries: AC0095:WT/FOXC is an AT-rich homeodomain-like model, and M00243_2.00 carries essentially no information. Two further constraints are biological rather than sequence-based. WT1 is expressed in few cell types, so in most samples there is no WT1 available to bind. And even in those cell types, roughly half the WT1 protein may be the +KTS isoform, whose documented high-affinity ligand is RNA rather than DNA.",
+ "caveats": "The WT1 label and the WT1 matrices point in different directions. Biochemistry and structure say WT1 binds an EGR-like GC-rich site (the EGR-1 consensus, or the WTE GCGTGGGAGT); but all informative database matrices here are ChIP-derived, grade B, and G-rich (GGGGGAGGA), which places them in the MAZ/ZNF281/VEZF1 cluster instead. Family cohesion is only 0.57, one matrix has 0.1 bits, and one Vierstra archetype labelled WT is an AT-rich homeodomain model. A hit therefore identifies a G-rich promoter element, not WT1 occupancy. Also check that WT1 is expressed at all, and remember the +KTS isoform binds RNA.",
+ "refs": [
+  {
+   "cite": "Call KM, Glaser T, Ito CY, et al. Isolation and characterization of a zinc finger polypeptide gene at the human chromosome 11 Wilms' tumor locus. Cell 1990;60:509-20.",
+   "pmid": "2154335",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2154335/"
+  },
+  {
+   "cite": "Rauscher FJ 3rd, Morris JF, Tournay OE, et al. Binding of the Wilms' tumor locus zinc finger protein to the EGR-1 consensus sequence. Science 1990;250:1259-62.",
+   "pmid": "2244209",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2244209/"
+  },
+  {
+   "cite": "Pelletier J, Bruening W, Kashtan CE, et al. Germline mutations in the Wilms' tumor suppressor gene are associated with abnormal urogenital development in Denys-Drash syndrome. Cell 1991;67:437-47.",
+   "pmid": "1655284",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1655284/"
+  },
+  {
+   "cite": "Kreidberg JA, Sariola H, Loring JM, et al. WT-1 is required for early kidney development. Cell 1993;74:679-91.",
+   "pmid": "8395349",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8395349/"
+  },
+  {
+   "cite": "Nakagama H, Heinrich G, Pelletier J, et al. Sequence and structural requirements for high-affinity DNA binding by the WT1 gene product. Mol Cell Biol 1995;15:1489-98.",
+   "pmid": "7862142",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7862142/"
+  },
+  {
+   "cite": "Larsson SH, Charlieu JP, Miyagawa K, et al. Subnuclear localization of WT1 in splicing or transcription factor domains is regulated by alternative splicing. Cell 1995;81:391-401.",
+   "pmid": "7736591",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7736591/"
+  },
+  {
+   "cite": "Caricasole A, Duarte A, Larsson SH, et al. RNA binding by the Wilms tumor suppressor zinc finger proteins. Proc Natl Acad Sci U S A 1996;93:7562-6.",
+   "pmid": "8755514",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8755514/"
+  },
+  {
+   "cite": "Barbaux S, Niaudet P, Gubler MC, et al. Donor splice-site mutations in WT1 are responsible for Frasier syndrome. Nat Genet 1997;17:467-70.",
+   "pmid": "9398852",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9398852/"
+  },
+  {
+   "cite": "Bardeesy N, Pelletier J. Overlapping RNA and DNA binding domains of the wt1 tumor suppressor gene product. Nucleic Acids Res 1998;26:1784-92.",
+   "pmid": "9512553",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9512553/"
+  },
+  {
+   "cite": "Stoll R, Lee BM, Debler EW, et al. Structure of the Wilms tumor suppressor protein zinc finger domain bound to DNA. J Mol Biol 2007;372:1227-45.",
+   "pmid": "17716689",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17716689/"
+  },
+  {
+   "cite": "Hastie ND. Wilms' tumour 1 (WT1) in development, homeostasis and disease. Development 2017;144:2862-2872.",
+   "pmid": "28811308",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28811308/"
+  },
+  {
+   "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
+   "pmid": "37971293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  }
+ ]
+}

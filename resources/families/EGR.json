@@ -1,0 +1,79 @@
+{
+ "key": "EGR",
+ "aka": [
+  "EGR-1 site",
+  "zif268 site",
+  "NGFI-A",
+  "Krox-24 site",
+  "Krox-20 site",
+  "EGR binding site (EBS)",
+  "GSG element",
+  "TFClass: three-zinc finger Kruppel-related factors"
+ ],
+ "consensus": "GCGTGGGCG",
+ "short": "EGR1 to EGR4 are immediate-early transcription factors whose three C2H2 zinc fingers read a nine-base GC-rich site, GCGTGGGCG, also written GCGGGGGCG. The first of these proteins, EGR1, is better known to structural biologists as Zif268: its complex with DNA was the crystal structure that established how zinc fingers recognize DNA, three bases per finger, and it remains the reference for the C2H2 recognition code. EGR proteins are induced within minutes by growth factors, serum and neuronal activity, so their sites sit in the promoters of rapidly inducible genes. All four paralogues share the same matrix, and the WT1 tumor suppressor binds essentially the same sequence, so a hit names a site rather than a protein.",
+ "long": "## The factors\n\nEGR1, EGR2, EGR3 and EGR4 are four paralogous immediate-early transcription factors, each with three Cys2-His2 zinc fingers and a set of aliases reflecting their independent discovery: EGR1 is also Zif268, NGFI-A, Krox-24 and zif/268; EGR2 is Krox-20; EGR4 is NGFI-C (Christy and Nathans 1989; Patwardhan et al. 1991). Their mRNAs are induced within minutes of exposure to growth factors, serum, mitogens or neuronal activity, which is what \"immediate-early\" means here: the protein is largely absent from unstimulated cells. EGR1 is broadly inducible; EGR2 is prominent in Schwann cells and the developing hindbrain; EGR3 in neurons and muscle spindles; EGR4 is largely restricted to brain. All four bind DNA as monomers. One further protein must be kept in mind: the Wilms tumor suppressor WT1 has a closely related four-finger domain and recognizes essentially the same site (Rauscher et al. 1990). WT1 is a separate family in this atlas, but it is not separable from EGR by sequence alone.\n\n## The motif\n\nThe site is nine base pairs, usually written GCGTGGGCG or GCGGGGGCG; the reverse-complement form, CGCCCACGC, is how several matrices in this atlas are stored (the medoid, CIS-BP M04461_2.00, is CCGCCCACGCA, which is TGCGTGGGCGG read from the other strand). Recognition is the textbook case. The 2.1 A crystal structure of the three Zif268 fingers bound to a consensus site showed the fingers lying in the major groove and wrapping part way around B-DNA, each finger contacting a three-base subsite through residues at positions -1, 3 and 6 of its recognition helix (Pavletich and Pabo 1991); the structure was later refined to 1.6 A (Elrod-Erickson et al. 1996) and became the basis of the general C2H2 code (Wolfe et al. 2000; Zhang et al. 2024). Random-site selection showed that EGR1, EGR2, EGR3 and EGR4 all bind and activate from GCGGGGGCG and from a family of closely related variants, with only modest differences among them (Swirnoff and Milbrandt 1995). The atlas data agree emphatically: 15 matrices, four gene symbols, cohesion 0.90, and the JASPAR profiles for EGR1, EGR2, EGR3 and EGR4 are all the same 11-mer, ACGCCCACGCA. Nothing distinguishes the paralogues. The useful comparison is outward, to the other GC-rich families. EGR's signature is the CACGC / GCGTG triplet immediately adjacent to a GGGCG block; the KLF/SP GC-box, GGGGCGGGG, lacks it, and the KLF/SP in vitro consensus CCACGCCC shares the pentamer CCACG with the reverse complement of the EGR site but places it differently. Where a nine-mer matches both models at comparable scores, sequence cannot decide, and that situation is common.\n\n## Where it acts\n\nEGR sites are promoter-proximal and GC-rich, concentrated near CpG islands and in the promoters of rapidly inducible genes. Because EGR protein appears only after stimulation, occupancy is condition-dependent in a way that the sequence does not reveal: the same site can be empty in a resting cell and bound minutes after serum addition. The classic co-occurrence problem is with the GC-box factors. When the CT/GC-rich element of the human IL-3 promoter (positions -76 to -47) was used as bait in an expression screen, the clones recovered were EGR1, EGR2 and the unrelated zinc-finger protein DB1/VEZF1; in gel-shift assays DB1 bound the element constitutively while EGR1 bound only after T-cell activation (Koyano-Nakagawa et al. 1994). That single experiment is a compact demonstration of both the overlap and its resolution: the same element, different factors, distinguished by condition rather than by sequence. EGR sites also overlap WT1 sites directly, and the two proteins compete at shared sequences.\n\n## Biology and disease\n\nEgr1-null mice are viable but females are infertile because of a specific failure to produce luteinizing hormone beta, identifying EGR1 as the factor required for LH-beta expression (Lee et al. 1996). Egr2/Krox-20 null mice fail to myelinate peripheral nerves, establishing EGR2 as a control point for Schwann cell myelination (Topilko et al. 1994), and human EGR2 mutations cause hereditary myelinopathies in the Charcot-Marie-Tooth and congenital hypomyelinating neuropathy spectrum (Warner et al. 1998). EGR1 has been implicated in growth-factor responses, apoptosis and tumor suppression in various tissues, though the direction of effect is context-dependent and the literature is not settled. EGR3 and EGR4 have narrower documented roles, largely neuronal.\n\n## Reading a hit\n\nA match identifies the EGR site, not an EGR protein - and possibly not even an EGR protein, since WT1 binds the same sequence. The evidence that EGR factors really bind this sequence is unusually good: the HOCOMOCO models for EGR1, EGR2 and EGR3 carry combined ChIP and HT-SELEX or methyl-HT-SELEX evidence at grade A, so the label is in vitro supported, not ChIP-inferred. Two entries in the family are weaker and should not be used alone: EGR4.H14CORE.0.S.B is an eight-position model whose nearest neighbors across the databases lie outside this family, and the Vierstra archetype AC0262:EGR carries only 5.6 bits, too little to call anything. One archetype is explicitly named AC0519:EGR/WT, which is the clustering telling you that the EGR and WT1 motifs merged. Practically: a nine-base GC-rich site is common in promoters, so treat an isolated hit as weak evidence; and because EGR proteins are stimulus-induced, a real site may be unoccupied in whatever cell state you sampled.",
+ "caveats": "EGR1 to EGR4 share one matrix, so a hit names the family at best. Worse, WT1 binds essentially the same nine-base site, and one Vierstra archetype in this family is explicitly labelled EGR/WT - a strong EGR match is also a candidate WT1 site. Overlap with the KLF/SP GC-box is frequent and often unresolvable from sequence. The in vitro evidence behind the EGR label is good (grade-A HT-SELEX and methyl-SELEX models for EGR1-EGR3), but the EGR4 HT-SELEX model and the low-information AC0262 archetype should not be used on their own. Because EGR proteins are stimulus-induced, occupancy depends on cell state, not sequence.",
+ "refs": [
+  {
+   "cite": "Christy B, Nathans D. DNA binding site of the growth factor-inducible protein Zif268. Proc Natl Acad Sci U S A 1989;86:8737-41.",
+   "pmid": "2510170",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2510170/"
+  },
+  {
+   "cite": "Rauscher FJ 3rd, Morris JF, Tournay OE, et al. Binding of the Wilms' tumor locus zinc finger protein to the EGR-1 consensus sequence. Science 1990;250:1259-62.",
+   "pmid": "2244209",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2244209/"
+  },
+  {
+   "cite": "Pavletich NP, Pabo CO. Zinc finger-DNA recognition: crystal structure of a Zif268-DNA complex at 2.1 A. Science 1991;252:809-17.",
+   "pmid": "2028256",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2028256/"
+  },
+  {
+   "cite": "Patwardhan S, Gashler A, Siegel MG, et al. EGR3, a novel member of the Egr family of genes encoding immediate-early transcription factors. Oncogene 1991;6:917-28.",
+   "pmid": "1906159",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1906159/"
+  },
+  {
+   "cite": "Topilko P, Schneider-Maunoury S, Levi G, et al. Krox-20 controls myelination in the peripheral nervous system. Nature 1994;371:796-9.",
+   "pmid": "7935840",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7935840/"
+  },
+  {
+   "cite": "Koyano-Nakagawa N, Nishida J, Baldwin D, et al. Molecular cloning of a novel human cDNA encoding a zinc finger protein that binds to the interleukin-3 promoter. Mol Cell Biol 1994;14:5099-107.",
+   "pmid": "8035792",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8035792/"
+  },
+  {
+   "cite": "Swirnoff AH, Milbrandt J. DNA-binding specificity of NGFI-A and related zinc finger transcription factors. Mol Cell Biol 1995;15:2275-87.",
+   "pmid": "7891721",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7891721/"
+  },
+  {
+   "cite": "Elrod-Erickson M, Rould MA, Nekludova L, et al. Zif268 protein-DNA complex refined at 1.6 A: a model system for understanding zinc finger-DNA interactions. Structure 1996;4:1171-80.",
+   "pmid": "8939742",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8939742/"
+  },
+  {
+   "cite": "Lee SL, Sadovsky Y, Swirnoff AH, et al. Luteinizing hormone deficiency and female infertility in mice lacking the transcription factor NGFI-A (Egr-1). Science 1996;273:1219-21.",
+   "pmid": "8703054",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8703054/"
+  },
+  {
+   "cite": "Warner LE, Mancias P, Butler IJ, et al. Mutations in the early growth response 2 (EGR2) gene are associated with hereditary myelinopathies. Nat Genet 1998;18:382-4.",
+   "pmid": "9537424",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9537424/"
+  },
+  {
+   "cite": "Wolfe SA, Nekludova L, Pabo CO. DNA recognition by Cys2His2 zinc finger proteins. Annu Rev Biophys Biomol Struct 2000;29:183-212.",
+   "pmid": "10940247",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10940247/"
+  },
+  {
+   "cite": "Zhang X, Blumenthal RM, Cheng X. Updated understanding of the protein-DNA recognition code used by C2H2 zinc finger proteins. Curr Opin Struct Biol 2024;87:102836.",
+   "pmid": "38754172",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38754172/"
+  }
+ ]
+}

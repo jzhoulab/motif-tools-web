@@ -1,0 +1,59 @@
+{
+ "key": "CAMTA",
+ "aka": [
+  "CAMTA1",
+  "CAMTA2",
+  "CMTA1",
+  "CMTA2",
+  "calmodulin-binding transcription activator",
+  "CG-1 domain",
+  "CGCG box",
+  "AtSR (plant signal-responsive) family"
+ ],
+ "consensus": "VCGCGB",
+ "short": "CAMTA1 and CAMTA2 (calmodulin-binding transcription activators) are the two human members of a family defined by the CG-1 domain, an N-terminal DNA-binding module unrelated to any other class, followed by a TIG domain, ankyrin repeats and calmodulin-binding IQ motifs. The IQ motifs make the family a direct link from calcium signaling to a DNA-binding domain. The element established for CG-1 is the plant CGCG box, (A/C/G)CGCG(G/T/C); no comparable vertebrate consensus is settled, and the two human motif models are short and only moderately consistent. CAMTA2 also acts as a coactivator recruited by NKX2-5. Loss of CAMTA1 causes ataxia in mice and congenital ataxia in humans, and a WWTR1-CAMTA1 fusion drives epithelioid hemangioendothelioma.",
+ "long": "## The factors\n\nCAMTA stands for calmodulin-binding transcription activator. Humans have two genes, *CAMTA1* and *CAMTA2*, and they are listed in HOCOMOCO under the older symbols CMTA1 and CMTA2 — worth knowing when searching, because the two spellings are not interchangeable in database queries. The domain layout is the same in plants and animals: an N-terminal CG-1 domain, which carries the DNA-binding activity, followed by a TIG (transcription factor immunoglobulin) domain, two ankyrin repeats that mediate protein-protein interaction, and a C-terminal set of IQ motifs that bind calmodulin. The name comes from that last feature: calcium-loaded calmodulin binding to the IQ region is the regulatory input, which makes CAMTAs one of the few direct links from calcium signaling to a sequence-specific DNA-binding domain. The CG-1 domain has no similarity to any other DNA-binding class and was first characterized in plants, where the family is larger — Arabidopsis has six members (AtSR1-6) induced by cold, salt, UV-B, wounding and hormone signals. In humans both genes are expressed most strongly in heart and brain. Notably, CAMTA2 was characterized biochemically not as a direct DNA-binding activator but as a coactivator recruited by the homeodomain factor NKX2-5, so part of the family's activity at chromatin is tethered rather than motif-driven.\n\n## The motif\n\nThe element established for this domain family is the CGCG box, a 6-bp site written (A/C/G)CGCG(G/T/C), defined for the Arabidopsis CG-1 protein AtSR1 by direct binding-site analysis. This is the consensus given above, and it is the only one with clean primary support. It is not, however, what the two human motif models in this family look like. The HOCOMOCO CAMTA2 matrix has a consensus of CGCAATGCG — a GC-rich flank on either side of a central AT, architecturally a short inverted repeat rather than a tandem CGCG — and the CAMTA1 matrix is shorter and weaker still, CGCAtt, with only 9.4 bits of information. The two agree with each other only moderately (family cohesion 0.79), and for the CAMTA1 model the most similar motif anywhere across the four databases lies outside this family rather than inside it.\n\nThe honest reading is that the plant CGCG box and the vertebrate CAMTA models overlap in character — both are CG-rich short elements read by the same conserved domain — but that a single vertebrate consensus is not settled. Both human models carry HOCOMOCO evidence code `PSGI` at grade A, meaning they combine ChIP-seq, HT-SELEX, integrative and other-collection evidence; the in vitro component is what keeps them credible, but the motifs remain low in information content, and there is no published vertebrate CG-1-DNA structure to explain which base contacts matter.\n\n## Where it acts\n\nWith only two models, and both of low information content, there is little reliable information about genomic distribution for the human factors. What is documented is functional context rather than motif context: CAMTA2 acts at cardiac gene promoters through NKX2-5, in opposition to class II histone deacetylases (notably HDAC5), and its nuclear activity is regulated by HDAC5 export. In plants, CGCG boxes are found in promoters of ethylene-signaling, abscisic-acid-signaling and light-perception genes, often in multiple copies — the multiplicity is part of how a weak site becomes functional. A 6-mer consensus like VCGCGB will match hundreds of thousands of positions in a 3-Gb genome, so occurrence carries essentially no information on its own; matches are concentrated in CG-rich promoter sequence for compositional reasons rather than biological ones.\n\n## Biology and disease\n\nThe mouse phenotypes are neurological and cardiac. *Camta1*-null mice develop ataxia with Purkinje cell degeneration, and CAMTA2 overexpression drives cardiac hypertrophy while its loss blunts the hypertrophic response. In humans, intragenic *CAMTA1* rearrangements cause non-progressive congenital ataxia, with or without intellectual disability, and a described *CAMTA1* mutation produces a characterized neuropsychological and neuroimaging phenotype. *CAMTA1* lies within the commonly deleted 1p36 region in neuroblastoma and behaves as a tumor suppressor candidate there, with reduced expression associated with worse outcome. The most striking cancer connection is a fusion: *WWTR1* (TAZ)-*CAMTA1* is the defining driver rearrangement in epithelioid hemangioendothelioma, where the CAMTA1 portion supplies constitutive nuclear localization and transcriptional output to the TAZ coactivator.\n\n## Reading a hit\n\nTreat a CAMTA match as weak evidence. The two available models are short and low in information, they agree with each other only moderately, and for CAMTA1 the nearest neighbour across the databases is outside the family — so a hit may equally reflect a different CG-rich motif. CAMTA1 and CAMTA2 cannot be distinguished from one another. The plant CGCG box is much better characterized than any vertebrate consensus, and transferring it directly to human sequence is an assumption, not a result.\n\nTwo structural cautions about the evidence. First, CAMTA2's best-documented mode of action in mammals is as an NKX2-5 coactivator, so ChIP-derived signal for CAMTA2 may reflect a homeodomain site rather than a CG-1 site — the classic indirect-binding case, where the tagged protein \"has\" the motif of whatever recruits it. Second, both matrices are partly ChIP-derived (`PSGI`), and even at grade A that mixture cannot separate direct from tethered binding. Use a CAMTA hit to raise a hypothesis in a calcium-responsive, heart- or brain-expressed promoter, and verify with a direct binding assay before relying on it.",
+ "caveats": "This is one of the weakest families in the atlas for sequence-based calling. Only two motifs exist, both HOCOMOCO, both low in information content (9.4 and 16.5 bits), cohesion is 0.79, and for the CAMTA1 model the most similar motif across all four databases lies outside the family. The consensus given here, the CGCG box, comes from plant work on the same conserved domain; it is not a validated vertebrate consensus, and the human models do not match it cleanly. CAMTA1 and CAMTA2 are indistinguishable. Because CAMTA2 is documented to act as an NKX2-5 coactivator, ChIP-derived signal may report a homeodomain site rather than a CG-1 site. Confirm with a direct binding assay.",
+ "refs": [
+  {
+   "cite": "Yang T, Poovaiah BW, New Collective Author. A calmodulin-binding/CGCG box DNA-binding protein family involved in multiple signaling pathways in plants. J Biol Chem 2002;277:45049-58.",
+   "pmid": "12218065",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12218065/"
+  },
+  {
+   "cite": "Finkler A, Ashery-Padan R, Fromm H. CAMTAs: calmodulin-binding transcription activators from plants to human. FEBS Lett 2007;581:3893-8.",
+   "pmid": "17689537",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17689537/"
+  },
+  {
+   "cite": "Song K, Backs J, McAnally J, et al. The transcriptional coactivator CAMTA2 stimulates cardiac growth by opposing class II histone deacetylases. Cell 2006;125:453-66.",
+   "pmid": "16678093",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16678093/"
+  },
+  {
+   "cite": "Long C, Grueter CE, Song K, et al. Ataxia and Purkinje cell degeneration in mice lacking the CAMTA1 transcription factor. Proc Natl Acad Sci U S A 2014;111:11521-6.",
+   "pmid": "25049392",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25049392/"
+  },
+  {
+   "cite": "Thevenon J, Lopez E, Keren B, et al. Intragenic CAMTA1 rearrangements cause non-progressive congenital ataxia with or without intellectual disability. J Med Genet 2012;49:400-8.",
+   "pmid": "22693284",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22693284/"
+  },
+  {
+   "cite": "Magnin E, Blagosklonov O, Sylvestre G, et al. Neuropsychological and neuroimaging phenotype induced by a CAMTA1 mutation. Brain Dev 2014;36:711-5.",
+   "pmid": "24145135",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24145135/"
+  },
+  {
+   "cite": "Henrich KO, Bauer T, Schulte J, et al. CAMTA1, a 1p36 tumor suppressor candidate, inhibits growth and activates differentiation programs in neuroblastoma cells. Cancer Res 2011;71:3142-51.",
+   "pmid": "21385898",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21385898/"
+  },
+  {
+   "cite": "Seavey CN, Pobbati AV, Rubin BP. Unraveling the Biology of Epithelioid Hemangioendothelioma, a TAZ-CAMTA1 Fusion Driven Sarcoma. Cancers (Basel) 2022;14.",
+   "pmid": "35740643",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35740643/"
+  }
+ ]
+}

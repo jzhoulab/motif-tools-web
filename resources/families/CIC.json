@@ -1,0 +1,67 @@
+{
+ "key": "CIC",
+ "aka": [
+  "capicua",
+  "CIC octamer",
+  "capicua octamer",
+  "TGAATGAA octamer",
+  "RTK response element",
+  "CIC binding site"
+ ],
+ "consensus": "TGAATGAA",
+ "short": "CIC (capicua) is a single HMG-box repressor and the transcriptional sensor of ERK/MAPK signaling. It binds an eight-base octamer, TGAATGAA or TCAATGAA, and recruits Groucho/TLE and SIN3-histone deacetylase complexes to switch target genes off; MAPK activity removes CIC from those sites and lets them fire. Unusually for an HMG-box protein, the HMG box alone cannot bind DNA - a distant C-terminal motif called C1 is required with it, and the two together form a bipartite recognition surface. CIC is inactivated in most IDH-mutant, 1p/19q-codeleted oligodendrogliomas, with mutations clustering in the C1 domain, and the CIC-DUX4 fusion defines a subset of undifferentiated round cell sarcoma. Its main direct targets are the PEA3/ETS genes ETV1, ETV4 and ETV5.",
+ "long": "## The factors\n\nThis family has one member. CIC is the human ortholog of Drosophila capicua, a large protein\n(roughly 2,500 residues in the long isoform) containing a single HMG box near its N-terminus\nand, far away at the C-terminus, a short conserved motif called C1. CIC is a repressor: it\nrecruits Groucho/TLE in flies and interacts with the SIN3 complex in human cells, repressing\nthrough histone deacetylation. It is broadly expressed, and its defining regulatory feature is\nthat it is the downstream sensor of receptor tyrosine kinase signaling - high ERK/MAPK activity\nboth downregulates CIC protein and abolishes its binding to target genes, which is how the\npathway activates them. Phylogenetically CIC does not sit with SOX or TCF/LEF but forms a\ndistinct HMG-box subfamily together with BBX. The mechanistic surprise is that the CIC HMG box\ndoes not bind DNA on its own. The HMG box and the C1 domain are both necessary for binding\noctameric sites, they do not act by dimerizing, and they require no cofactor, so they appear to\nform a single bipartite DNA-binding surface - a third solution, alongside the SOX and TCF/LEF\nones, to the problem that a lone HMG box binds DNA too weakly.\n\n## The motif\n\nThe literature consensus is the octamer TGAATGAA, with TCAATGAA and related variants also\nfunctional, generally written T(G/C)AATG(A/G)A; on the opposite strand it reads TTCATTCA. These\n\"capicua octamers\" were identified as general response elements for RTK signaling in Drosophila\nand the same binding mechanism operates in human cells. The element bears no resemblance to the\nSOX core AACAAT or to the TCF/LEF element CTTTGWW. Allowing the two degenerate positions,\nTGAATGAA-like octamers are expected a few hundred thousand times in a 3.1 Gb double-stranded\ngenome. The databases, however, do not carry this motif. The only CIC model in JASPAR, HOCOMOCO,\nCIS-BP or the Vierstra archetypes is CIS-BP M00195_2.00, derived from mouse Cic at full DNA-\nbinding-domain identity, with consensus TGCTGAC at 12.7 bits. TGCTGAC is exactly the left half\nof the MAF recognition element, whose palindromic forms are TGCTGACTCAGCA and TGCTGACGTCAGCA,\nand the model's nearest neighbor across all four databases is a MAF-family motif at 0.966\nsimilarity, with no neighbor inside its own family. Two things make that entry implausible as a\ncapicua site: the sequence is a MARE half-site and nothing like TGAATGAA, and a measurement made\non an isolated CIC DNA-binding domain would not be expected to recover the real site, because\nthe HMG box needs the distant C1 domain to bind at all. We therefore do not recommend using this\nmodel to call CIC sites; scan the published octamer instead.\n\n## Where it acts\n\nCIC octamers sit in enhancers and promoters of MAPK effector genes involved in cell-cycle\ncontrol and proliferation, most prominently the PEA3 subfamily of ETS factors, ETV1, ETV4 and\nETV5. In Drosophila the octamers in the huckebein enhancer recruit Groucho, the same elements\nmediate both Torso and EGFR responses in the embryo and a further EGFR response in the wing, and\na simple combination of activator sites plus capicua octamers is enough to generate complex\nexpression patterns. Occupancy is conditional rather than constitutive: CIC binding is lost\nwhere MAPK activity is high, so a genuine site can be unoccupied in the cell you are studying.\n\n## Biology and disease\n\nCIC is mutated in most IDH-mutant, 1p/19q-codeleted oligodendrogliomas, and single amino acid\nsubstitutions found in those tumors prevent CIC from binding its targets; the C1 domain is a\nmutation hotspot, which the bipartite binding mechanism explains. Loss of CIC raises histone\nacetylation and transcription at MAPK target genes and supports mitogen-independent growth, so\nCIC behaves as a tumor suppressor whose inactivation phenocopies EGFR/RAS/MAPK activation. The\nreciprocal case is the CIC-DUX4 fusion produced by t(4;19) or t(10;19), which defines a subset\nof undifferentiated round cell sarcoma resembling Ewing sarcoma and upregulates PEA3 family\ngenes; the C1 domain is preserved in the fusion protein.\n\n## Reading a hit\n\nWith one member there is no paralogue problem inside the family, but three other cautions apply.\nFirst, the octamer is short: a few hundred thousand matches are expected by chance, so a hit is\na candidate, not a site. Second, if your match came from the CIS-BP CIC model, treat it as a\nMAF-family half-MARE rather than a capicua site, and rescan using TGAATGAA/TCAATGAA. Third, the\nreverse complement of the octamer, TTCATTCA, is the unit of the highest-affinity HBP1 binding\nsite TTCATTCATTCA, so TGAATGAA-type matches are ambiguous between CIC and HBP1, both HMG-box\nrepressors. No ChIP-derived CIC motif exists in these collections, so nothing here is\ncontaminated by indirect binding - but equally, nothing here has been validated against CIC ChIP\ndata.\n",
+ "caveats": "The published CIC site and the only database model for CIC disagree completely. The literature octamer is TGAATGAA; the single CIS-BP entry reads TGCTGAC, which is the MAF recognition element half-site, and its nearest neighbors across all four databases are MAF motifs. Since the CIC HMG box cannot bind DNA without the distant C1 domain, a domain-only assay would not be expected to recover the true site, so we treat that model as unusable for calling CIC sites and recommend scanning the octamer directly. Even then the octamer is only eight bases and occurs a few hundred thousand times by chance, its reverse complement is the HBP1 site unit, and CIC occupancy is abolished by high MAPK activity.",
+ "refs": [
+  {
+   "cite": "Ajuria L, Nieva C, Winkler C, et al. Capicua DNA-binding sites are general response elements for RTK signaling in Drosophila. Development 2011;138:915-24.",
+   "pmid": "21270056",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21270056/"
+  },
+  {
+   "cite": "Forés M, Simón-Carrasco L, Ajuria L, et al. A new mode of DNA binding distinguishes Capicua from other HMG-box factors and explains its mutation patterns in cancer. PLoS Genet 2017;13:e1006622.",
+   "pmid": "28278156",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28278156/"
+  },
+  {
+   "cite": "Forés M, Ajuria L, Samper N, et al. Origins of context-dependent gene repression by capicua. PLoS Genet 2015;11:e1004902.",
+   "pmid": "25569482",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25569482/"
+  },
+  {
+   "cite": "Kawamura-Saito M, Yamazaki Y, Kaneko K, et al. Fusion between CIC and DUX4 up-regulates PEA3 family genes in Ewing-like sarcomas with t(4;19)(q35;q13) translocation. Hum Mol Genet 2006;15:2125-37.",
+   "pmid": "16717057",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16717057/"
+  },
+  {
+   "cite": "Bettegowda C, Agrawal N, Jiao Y, et al. Mutations in CIC and FUBP1 contribute to human oligodendroglioma. Science 2011;333:1453-5.",
+   "pmid": "21817013",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21817013/"
+  },
+  {
+   "cite": "Weissmann S, Cloos PA, Sidoli S, et al. The Tumor Suppressor CIC Directly Regulates MAPK Pathway Genes via Histone Deacetylation. Cancer Res 2018;78:4114-4125.",
+   "pmid": "29844126",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29844126/"
+  },
+  {
+   "cite": "Chen T, Zhou L, Yuan Y, et al. Characterization of Bbx, a member of a novel subfamily of the HMG-box superfamily together with Cic. Dev Genes Evol 2014;224:261-8.",
+   "pmid": "25079045",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25079045/"
+  },
+  {
+   "cite": "Kataoka K, Noda M, Nishizawa M. Maf nuclear oncoprotein recognizes sequences related to an AP-1 site and forms heterodimers with both Fos and Jun. Mol Cell Biol 1994;14:700-12.",
+   "pmid": "8264639",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8264639/"
+  },
+  {
+   "cite": "Zhuma T, Tyrrell R, Sekkali B, et al. Human HMG box transcription factor HBP1: a role in hCD2 LCR function. EMBO J 1999;18:6396-406.",
+   "pmid": "10562551",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10562551/"
+  },
+  {
+   "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
+   "pmid": "25215497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  }
+ ]
+}

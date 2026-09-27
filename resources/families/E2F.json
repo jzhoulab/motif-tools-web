@@ -1,0 +1,77 @@
+{
+ "key": "E2F",
+ "aka": [
+  "E2F site",
+  "E2F/DP element",
+  "TTTSSCGC",
+  "cell cycle-dependent element (CDE)",
+  "CDE/CHR module",
+  "E2F-DP winged-helix factors"
+ ],
+ "consensus": "TTTSSCGC",
+ "short": "E2F factors are the transcriptional output of the retinoblastoma (RB) pathway and set the G1/S transition. Eight human genes, E2F1-E2F8, encode a winged-helix DNA-binding domain. E2F1-E2F6 bind DNA only as heterodimers with a DP subunit (TFDP1 or TFDP2); E2F7 and E2F8 carry two tandem winged-helix domains and work without DP. All of them read essentially the same GC-rich eight-base element, written TTTSSCGC and just as often rendered on the other strand as GCGGGAAA. E2F1-E2F3 are activators released when CDKs phosphorylate RB; E2F4-E2F8 repress, E2F4 as part of the DREAM complex that also reads the adjacent CHR element. Sites sit in CpG-island promoters of replication and cell-cycle genes, and the RB-E2F axis is disabled in most human cancers.",
+ "long": "## The factors\n\nHumans have eight E2F genes and two dimerization partners, TFDP1 and TFDP2 (DP1 and DP2).\nE2F1-E2F6 each contribute one winged-helix domain and must heterodimerize with a DP subunit,\nwhich contributes a second winged helix, so the functional unit is a pseudo-symmetric clamp\nbuilt from two different proteins. The crystal structure of the E2F4-DP2 DNA-binding regions\non DNA showed both recognition helices inserted into the major groove of one short GC-rich\nsite. E2F7 and E2F8 are the exceptions: each carries two winged-helix domains in a single\npolypeptide, binds as a homodimer or as an E2F7-E2F8 heterodimer, and needs no DP partner.\nFunction splits along the same lines as pocket-protein binding. E2F1, E2F2 and E2F3a are\nactivators held inactive by RB; E2F4 and E2F5 are repressors that partner p107 and p130\n(RBL1, RBL2); E2F6 lacks the pocket-protein-binding region and represses as part of a\nBmi1-containing polycomb complex; E2F7 and E2F8 are atypical repressors. E2F1-E2F3 peak at\nG1/S, whereas E2F4 is abundant in quiescent cells and accounts for most of the E2F signal in\nchromatin immunoprecipitation (ChIP) experiments, largely through the DREAM complex.\n\n## The motif\n\nThe literature consensus is TTTSSCGC (S = G or C), eight positions. Because the element is\nclose to self-complementary at its center, databases write it on either strand: TTTCCCGC,\nTTTGGCGC, GCGGGAAA and GGCGGGAA are all the same site. The data consensus here, GGCGGGAA, is\nthe reverse complement of TTCCCGCC and does not contradict the literature form. In vitro\nmodels from HT-SELEX are longer and palindromic, TTTTGGCGCCAAAA or TTTTGGCGGGAAA, which\nreflects two overlapping half-sites and the two-subunit clamp; ChIP-derived models collapse to\nthe shorter, GC-skewed GGCGGGAA. The information is concentrated in the central GCGC or GCGG,\nwhere the two recognition helices make direct base contacts, and falls off through the flanking\nT-rich or A-rich tract. Because the core is GC-rich and contains CGCG or GGCGGG, E2F models\noverlap the sequence space of the KLF/SP GC-box (GGGGCGGGG) and of other GC-repeat binders;\nthe Vierstra archetype AC0552:E2F/ZBTB is effectively a GCGCGCGC repeat whose nearest\nneighbours in these data lie outside the family. Across 37 motifs from four databases the\nfamily is cohesive (0.82) and no paralogue is separable: E2F1 through E2F8 and TFDP1 all\nconverge on one model, and E2F7/E2F8 differ only in showing the doubled form expected from\ntheir tandem domains.\n\n## Where it acts\n\nE2F sites are promoter elements, not typical distal enhancer elements. They cluster within a\ncouple of hundred base pairs of the transcription start site in CpG islands, upstream of\nreplication genes (CDC6, the MCM2-7 genes, PCNA, POLA1), nucleotide metabolism genes (TYMS,\nRRM2) and the E2F genes themselves. Genome-wide, E2F1, E2F4 and E2F6 occupy largely the same\npromoters, which is one reason ChIP data do not separate the paralogues, and a large fraction\nof occupied regions contain no canonical consensus at all. The best-characterized composite\nelement is the CDE/CHR module: a GC-rich cell cycle-dependent element (CDE) separated by about\nfour base pairs from a cell cycle genes homology region (CHR, TTYGAA), found in G2/M promoters\nsuch as CDC25C, CDK1, CCNB2 and PLK1. The CHR is bound by LIN54 inside the DREAM/MuvB complex\nand the CDE by an E2F-family protein; the two are functionally coupled, and both are needed for\np53-p21-DREAM repression. E2F sites also sit next to NF-Y CCAAT boxes and SP1 GC-boxes.\n\n## Biology and disease\n\nLoss of E2F1 in mice produces tumors as well as thymic hyperplasia, combined loss of E2F1-E2F3\nblocks proliferation, and E2f7/E2f8 double-knockout embryos die with widespread apoptosis and\npolyploidy. In human cancer the pathway upstream of E2F is disrupted far more often than E2F\nitself: RB1 deletion, CDKN2A loss, CCND1 amplification and CDK4/CDK6 activation all converge on\nreleasing activator E2Fs, and CDK4/6 inhibitors work by restoring RB-mediated E2F repression.\nAdenovirus E1A, HPV E7 and SV40 large T each dissociate E2F from pocket proteins, and HPV E7\nspecifically deregulates CDE/CHR-controlled genes. Deregulated E2F1 can also drive apoptosis,\nwhich is why E2F activity is not simply pro-proliferative.\n\n## Reading a hit\n\nA single E2F match is weak evidence. The element is eight GC-rich bases with little flanking\ninformation, so it occurs frequently by chance and is especially common in CpG-island promoters,\nwhere base composition alone inflates matches. The match tells you nothing about which member\nis bound: all eight E2Fs and both DP proteins share one model, and in a proliferating cell\nseveral are present at once. It also does not tell you whether the site activates or represses,\nsince activator and repressor E2Fs use the same sequence. Confirm you are not looking at a\nKLF/SP GC-box or a generic GC repeat. If the hit is in a G2/M promoter, look for a CHR about\nfour base pairs downstream, which is stronger evidence than the E2F match alone.",
+ "caveats": "Trust an E2F hit as evidence for \"an E2F-family site\" and nothing narrower. The 8-bp GC-rich core gives frequent chance matches, especially inside CpG islands, and it overlaps KLF/SP GC-boxes, MAZ and other GC-repeat models. No paralogue is distinguishable from sequence, and neither activator nor repressor identity is readable. HOCOMOCO ChIP-only models (evidence letter P) are shorter and GC-skewed relative to the HT-SELEX and methyl-HT-SELEX models (S, M), which show the longer palindrome; the discrepancy is a difference in method, not in the factor. Roughly a third to a half of genomic E2F occupancy in ChIP experiments falls on regions without a canonical consensus, so absence of a match does not exclude binding.",
+ "refs": [
+  {
+   "cite": "Zheng N, Fraenkel E, Pabo CO, et al. Structural basis of DNA recognition by the heterodimeric cell cycle transcription factor E2F-DP. Genes Dev 1999;13:666-74.",
+   "pmid": "10090723",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10090723/"
+  },
+  {
+   "cite": "Rubin SM, Gall AL, Zheng N, et al. Structure of the Rb C-terminal domain bound to E2F1-DP1: a mechanism for phosphorylation-induced E2F release. Cell 2005;123:1093-106.",
+   "pmid": "16360038",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16360038/"
+  },
+  {
+   "cite": "Di Stefano L, Jensen MR, Helin K. E2F7, a novel E2F featuring DP-independent repression of a subset of E2F-regulated genes. EMBO J 2003;22:6289-98.",
+   "pmid": "14633988",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/14633988/"
+  },
+  {
+   "cite": "Trimarchi JM, Fairchild B, Wen J, et al. The E2F6 transcription factor is a component of the mammalian Bmi1-containing polycomb complex. Proc Natl Acad Sci U S A 2001;98:1519-24.",
+   "pmid": "11171983",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11171983/"
+  },
+  {
+   "cite": "Litovchick L, Sadasivam S, Florens L, et al. Evolutionarily conserved multisubunit RBL2/p130 and E2F4 protein complex represses human cell cycle-dependent genes in quiescence. Mol Cell 2007;26:539-51.",
+   "pmid": "17531812",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17531812/"
+  },
+  {
+   "cite": "Zwicker J, Lucibello FC, Wolfraim LA, et al. Cell cycle regulation of the cyclin A, cdc25C and cdc2 genes is based on a common mechanism of transcriptional repression. EMBO J 1995;14:4514-22.",
+   "pmid": "7556094",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7556094/"
+  },
+  {
+   "cite": "Müller GA, Quaas M, Schümann M, et al. The CHR promoter element controls cell cycle-dependent gene transcription and binds the DREAM and MMB complexes. Nucleic Acids Res 2012;40:1561-78.",
+   "pmid": "22064854",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22064854/"
+  },
+  {
+   "cite": "Marceau AH, Felthousen JG, Goetsch PD, et al. Structural basis for LIN54 recognition of CHR elements in cell cycle-regulated promoters. Nat Commun 2016;7:12301.",
+   "pmid": "27465258",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27465258/"
+  },
+  {
+   "cite": "Rabinovich A, Jin VX, Rabinovich R, et al. E2F in vivo binding specificity: comparison of consensus versus nonconsensus binding sites. Genome Res 2008;18:1763-77.",
+   "pmid": "18836037",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18836037/"
+  },
+  {
+   "cite": "Xu X, Bieda M, Jin VX, et al. A comprehensive ChIP-chip analysis of E2F1, E2F4, and E2F6 in normal and tumor cells reveals interchangeable roles of E2F family members. Genome Res 2007;17:1550-61.",
+   "pmid": "17908821",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17908821/"
+  },
+  {
+   "cite": "Li J, Ran C, Li E, et al. Synergistic function of E2F7 and E2F8 is essential for cell survival and embryonic development. Dev Cell 2008;14:62-75.",
+   "pmid": "18194653",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18194653/"
+  },
+  {
+   "cite": "Chen HZ, Tsai SY, Leone G. Emerging roles of E2Fs in cancer: an exit from cell cycle control. Nat Rev Cancer 2009;9:785-97.",
+   "pmid": "19851314",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19851314/"
+  }
+ ]
+}

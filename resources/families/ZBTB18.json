@@ -1,0 +1,73 @@
+{
+ "key": "ZBTB18",
+ "aka": [
+  "RP58",
+  "ZNF238",
+  "ZBTB18",
+  "TAZ-1",
+  "C2H2-171",
+  "MRD22",
+  "AACATCTGGA site"
+ ],
+ "consensus": "MACATCTGKM",
+ "short": "ZBTB18, first described as RP58, is a BTB/POZ zinc-finger repressor that binds an E-box-like site, (A/C)ACATCTG(G/T)(A/C), whose CATCTG core reads CAGATG on the opposite strand. It is a C2H2 protein, not a bHLH one, so the E-box it occupies is a site that basic helix-loop-helix activators can also use - which makes competition, not just repression, part of how it works. RP58 concentrates in condensed chromatin and represses target promoters through its POZ domain. In the brain it controls the multipolar-to-bipolar transition of newborn cortical neurons and is required for cerebellar growth; human ZBTB18 mutations cause autosomal dominant intellectual disability and figure in 1q43-q44 deletion syndrome with corpus callosum malformation.",
+ "long": "## The factors\n\nZBTB18 is a one-member family in this atlas. The gene, also known as RP58 and ZNF238, encodes a 522-residue protein with an N-terminal POZ/BTB domain - the feature that first placed it alongside BCL6 - and four C-terminal C2H2 zinc fingers. The POZ domain mediates homodimerization and autonomous repression; it does not contact DNA. An early and still striking observation is that almost all RP58 protein localizes to condensed chromatin regions by immunogold electron microscopy, which was the basis for proposing that this factor links sequence-specific repression to chromosome organization. ZBTB18 is expressed most prominently in the developing and adult central nervous system, in cortical and cerebellar neurons, and also in skeletal muscle and other tissues; it is not a lineage-restricted factor in the way GFI1 or ThPOK are. In neurons it behaves as a differentiation-promoting repressor: it shuts down programs belonging to other cell identities rather than activating neuronal genes directly.\n\n## The motif\n\nThe binding site was determined by cyclic amplification and selection of targets with recombinant protein, giving the high-affinity consensus (A/C)ACATCTG(G/T)(A/C). The internal CATCTG is a CANNTG E-box variant, and read on the opposite strand the same site presents CAGATG as its core. This is worth stating carefully because the two renderings look like different motifs: the JASPAR HT-SELEX matrix MA0698.2 reads TCCAGATGTT and the HOCOMOCO grade-A model reads CCAGATGTG, both of which are the reverse complement of the selected consensus, not a disagreement with it. Note also that the family definition used in this atlas describes the site as \"E-box-like CACATG\"; the experimentally selected core is CATCTG (equivalently CAGATG), with an A at the position where CACATG has a C, so the shorter label is slightly off and should not be used for scanning. Information content is 11-15 bits over nine or ten positions - better than a bare 6 bp E-box but still modest. Four adjacent fingers could cover more sequence than the consensus specifies, and the flanking A/C and G/T degeneracies suggest that only two or three fingers contribute strong base contacts. The family data flags one entry as inconsistent: the CIS-BP model M08257 for ZBTB18 reads CGCAGCTGCG, a canonical CAGCTG bHLH E-box whose nearest neighbors across databases fall in the NEUROD/ATOH family rather than with ZBTB18, and which matches no other ZBTB18 model. With only three matrices in the family, that single outlier drags the measured cohesion down to 0.79.\n\n## Where it acts\n\nZBTB18 acts mainly at promoters of genes belonging to alternative differentiation programs. In developing neurons it represses transcriptional programs linked to non-neuronal cell identity, including programs that correspond to glioblastoma subtypes, and the sites it uses are promoter-proximal E-boxes rather than distal enhancer clusters. Because the core is a CANNTG box with no CpG, matches are not concentrated in CpG islands and occur throughout the genome; a nine-position match with two degenerate positions still arises tens of thousands of times by chance in 3 Gb. The important co-occurrence to keep in mind is with bHLH factors: NEUROG2, NEUROD and ASCL1 bind overlapping CANNTG boxes in the same neuronal promoters, and the sequence alone cannot say which occupied a site.\n\n## Biology and disease\n\nMouse Rp58 mutants show defective cortical development: newborn neurons fail to complete the multipolar-to-bipolar transition needed for radial migration, and cerebellar growth and patterning are disrupted, with abnormal development of both glutamatergic and GABAergic neurons. In humans, heterozygous ZBTB18 loss-of-function and missense variants cause autosomal dominant non-syndromic intellectual disability 22 (MRD22), with developmental delay, seizures and frequent corpus callosum abnormalities; ZBTB18 lies in the critical region of 1q43-q44 deletion syndrome, and its loss is a principal candidate for the corpus callosum and microcephaly phenotypes in that contiguous gene syndrome. Missense variants have been shown to differ in how much they impair DNA binding versus repression, so the allelic series is informative rather than uniform. In glioblastoma, ZBTB18 behaves as a tumor suppressor that is silenced epigenetically, and restoring it represses mesenchymal and lipid-metabolic programs.\n\n## Reading a hit\n\nThe CATCTG/CAGATG core makes this an E-box family, with all the attendant ambiguity. Candidates for any CANNTG match include the bHLH factors of the NEUROD/ATOH, ASCL, NEUROG, TCF3/4/12, MYOD and TWIST groups, and among C2H2 proteins the SNAIL, ZEB and INSM-related repressors. An E-box hit is not evidence of a bHLH factor, and equally it is not evidence of ZBTB18. What tilts the balance toward ZBTB18 is the specific internal composition: CATCTG rather than CACCTG, CAGCTG or CACGTG, with the flanking A and G/T. The best-supported matrix here is JASPAR MA0698.2, which is HT-SELEX-derived and thus direct in vitro evidence, and the HOCOMOCO model is grade A with PSM evidence, so \"ZBTB18 binds this sequence\" is well established. Do not use the CIS-BP entry M08257 (CGCAGCTGCG): it looks like a NEUROD/ATOH-class site, and scanning with it will return bHLH sites labelled as ZBTB18. Finally, since ZBTB18 is one gene, there is no paralogue problem inside the family - but the outside-the-family problem is severe, and a hit should be reported as \"E-box consistent with ZBTB18\" rather than as a ZBTB18 site.",
+ "caveats": "The site is an E-box variant, so the crowd of bHLH factors plus SNAIL, ZEB and INSM-related C2H2 repressors all compete for interpretation of a match; report an E-box, then argue for ZBTB18 from the internal CATCTG composition and the cell type. The commonly quoted \"CACATG\" shorthand for this family is not the selected consensus and should not be scanned. Trust JASPAR MA0698.2 (HT-SELEX) and the HOCOMOCO grade-A model, which are reverse-complement renderings of the same site; discard the CIS-BP entry CGCAGCTGCG, which the cross-database analysis places with NEUROD/ATOH and which accounts for this family's low internal cohesion. Single gene, so no paralogue ambiguity within the family.",
+ "refs": [
+  {
+   "cite": "Aoki K, Meng G, Suzuki K, et al. RP58 associates with condensed chromatin and mediates a sequence-specific transcriptional repression. J Biol Chem 1998;273:26698-704.",
+   "pmid": "9756912",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9756912/"
+  },
+  {
+   "cite": "Ohtaka-Maruyama C, Hirai S, Miwa A, et al. RP58 regulates the multipolar-bipolar transition of newborn neurons in the developing cerebral cortex. Cell Rep 2013;3:458-71.",
+   "pmid": "23395638",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23395638/"
+  },
+  {
+   "cite": "Baubet V, Xiang C, Molczan A, et al. Rp58 is essential for the growth and patterning of the cerebellum and for glutamatergic and GABAergic neuron development. Development 2012;139:1903-9.",
+   "pmid": "22513377",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22513377/"
+  },
+  {
+   "cite": "Xiang C, Frietze KK, Bi Y, et al. RP58 Represses Transcriptional Programs Linked to Nonneuronal Cell Identity and Glioblastoma Subtypes in Developing Neurons. Mol Cell Biol 2021;41:e0052620.",
+   "pmid": "33903225",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33903225/"
+  },
+  {
+   "cite": "Okado H. Nervous system regulated by POZ domain Krüppel-like zinc finger (POK) family transcription repressor RP58. Br J Pharmacol 2021;178:813-826.",
+   "pmid": "32959890",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32959890/"
+  },
+  {
+   "cite": "Heng JI, Viti L, Pugh K, et al. Understanding the impact of ZBTB18 missense variation on transcription factor function in neurodevelopment and disease. J Neurochem 2022;161:219-235.",
+   "pmid": "35083747",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35083747/"
+  },
+  {
+   "cite": "Khadija B, Rjiba K, Dimassi S, et al. Clinical and molecular characterization of 1q43q44 deletion and corpus callosum malformations: 2 new cases and literature review. Mol Cytogenet 2022;15:42.",
+   "pmid": "36192753",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36192753/"
+  },
+  {
+   "cite": "Yang F, Ding Y, Wang Y, et al. A de novo variant in ZBTB18 gene caused autosomal dominant non-syndromic intellectual disability 22 syndrome: A case report and literature review. Medicine (Baltimore) 2024;103:e35908.",
+   "pmid": "38215144",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38215144/"
+  },
+  {
+   "cite": "Fedele V, Dai F, Masilamani AP, et al. Epigenetic Regulation of ZBTB18 Promotes Glioblastoma Progression. Mol Cancer Res 2017;15:998-1011.",
+   "pmid": "28512252",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28512252/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  },
+  {
+   "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
+   "pmid": "37971293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  }
+ ]
+}

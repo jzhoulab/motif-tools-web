@@ -1,0 +1,77 @@
+{
+ "key": "NFKB",
+ "aka": [
+  "kB site",
+  "kappaB site",
+  "NF-kappaB site",
+  "NF-kB element",
+  "Rel/NF-kB",
+  "GGGRNNYYCC"
+ ],
+ "consensus": "GGGRNNYYCC",
+ "short": "The kB site is the element read by the five mammalian Rel/NF-kB proteins: NFKB1 (p105/p50), NFKB2 (p100/p52), RELA (p65), RELB and REL (c-Rel). They bind DNA only as dimers, through a shared Rel-homology region, so the site is pseudo-palindromic and is usually written GGGRNNYYCC, each subunit reading one guanine-rich half. What makes these factors unusual is that they are pre-made and held in the cytoplasm by IkB proteins, then released within minutes by inflammatory cytokines, microbial sensing, antigen receptors or DNA damage. The same kB site can therefore be empty in a resting cell and heavily occupied after stimulation. kB sites lie in promoters and enhancers of cytokine, chemokine, adhesion-molecule and pro-survival genes, and are the usual first evidence that a regulatory region is inflammation-responsive.",
+ "long": "## The factors\n\nHumans have five Rel/NF-kB proteins. RELA (p65), RELB and REL (c-Rel) are synthesised in mature form and carry C-terminal transactivation domains. NFKB1 and NFKB2 are made as the longer precursors p105 and p100 and are processed to p50 and p52, which lack transactivation domains; p50 and p52 homodimers are therefore usually repressive unless they recruit a coactivator such as BCL3. All five share an N-terminal Rel-homology region of roughly 300 residues built from two immunoglobulin-like beta-barrel domains, with a nuclear localisation signal at its C-terminal end. The same region performs both jobs: the N-terminal barrel makes most base-specific contacts and the C-terminal barrel forms the dimer interface. Five subunits allow fifteen dimers in principle; the abundant ones are p50:RELA (the \"classical\" NF-kB of canonical IKK signalling), p50:REL, and p52:RELB, which is the output of the non-canonical, NIK-dependent pathway. RELA and NFKB1 are broadly expressed; REL and RELB are enriched in lymphoid cells and dendritic cells. Activity is controlled after translation rather than by transcription: IkBa, IkBb and IkBe, and the unprocessed p105 and p100 tails, mask the nuclear localisation signals, and signal-induced IKK phosphorylation triggers their degradation. The IkBa/NF-kB crystal structure showed how one IkB simultaneously blocks the NLS and distorts the DNA-binding surface.\n\n## The motif\n\nThe kB site is 9-11 bp and is conventionally written GGGRNNYYCC; a recent structural review writes it GGGRNNNYCC, and the difference is real: the number of central, low-information positions depends on which dimer is bound. Crystal structures of the p50 homodimer, the p52 homodimer, and the p50:p65 heterodimer on the interferon-beta kB site show that each subunit reads one half-site, with conserved arginine, histidine and glutamate residues from loop L1 hydrogen-bonding the 5' GGG triplet. p50 and p52 prefer a 5-bp guanine-rich half-site, giving longer and more nearly symmetric sites such as GGGGATTCCCC; RELA, RELB and c-Rel prefer a 4-bp half-site (GGAA), giving shorter sites such as GGGAATTTCC. All the information sits in the GGG and in the CC of the opposite half; the middle two or three positions are close to free. A protein-binding-microarray and surface-plasmon-resonance survey of eight dimers found three specificity classes rather than five, and showed that dimers readily occupy \"non-traditional\" sites that contain only one good half-site - so NF-kB binding in vitro is more permissive than the palindromic consensus implies. The four databases assembled here agree closely (cohesion 0.83) and their NFKB1, NFKB2, RELA, RELB and REL models differ mainly in half-site length, not in the recognised bases. Two entries, JASPAR RELB (MA1117.2) and CIS-BP M08161, are half-site-only models (ATTCCCC); most of their nearest neighbours in motif space fall outside this family, and they should not be used for scanning.\n\n## Where it acts\n\nkB sites occur in both promoters and enhancers, and are not associated with CpG islands. In a stimulated macrophage or lymphocyte, NF-kB occupies thousands of sites, a small fraction of the hundreds of thousands of consensus matches in the genome; occupancy is largely confined to chromatin already made accessible by lineage-determining factors, so the cell type, not the motif, decides which kB sites are usable. The best-characterised composite element is the interferon-beta enhancer (the PRDII kB site together with IRF3/IRF7 and ATF2/JUN sites), whose assembled enhanceosome has been modelled atomically. More generally, kB sites co-occur with AP-1 (TGASTCA), IRF/ISRE, STAT (GAS) and C/EBP sites at inflammatory enhancers, and in myeloid cells with SPI1/PU.1.\n\n## Biology and disease\n\nNF-kB was found as an activity binding the immunoglobulin kappa light-chain enhancer and was soon recognised as the general transcriptional output of innate and adaptive immune signalling: cytokine and chemokine induction, antigen-receptor responses, lymphoid organogenesis and germinal-centre B-cell programmes through RELB/p52, osteoclast differentiation downstream of RANK, and survival genes including BIRC3 and BCL2L1. Mouse knockouts separate the subunits: loss of Rela causes mid-gestation lethality from TNF-driven hepatocyte apoptosis, Relb-null mice develop multiorgan inflammation with defective dendritic cells, and Nfkb1-null mice have selective B-cell and immune-response defects. In humans, heterozygous loss-of-function NFKB1 variants are among the more frequent monogenic causes of common variable immunodeficiency, and NFKB2 variants cause hypogammaglobulinaemia with adrenal insufficiency. Constitutive NF-kB activity is a defining feature of activated-B-cell diffuse large B-cell lymphoma, Hodgkin lymphoma and multiple myeloma, where NIK and TRAF3 lesions activate the non-canonical pathway.\n\n## Reading a hit\n\nA kB match says a Rel dimer could bind, not that one does. Because NF-kB is regulated by nuclear entry, a kB site in an unstimulated cell is usually unoccupied; a match is therefore a statement about potential, and it should be checked against accessibility or ChIP data from the relevant stimulus and cell type. The element is also common: with four strongly constrained positions and a degenerate centre, 10-bp matches occur many thousands of times per genome, so match count alone carries little weight. The subunits are not separable from sequence. At most, a long, symmetric site with a 5-bp GGGGA half-site slightly favours p50- or p52-containing dimers, and a short GGAA half-site favours RelA, RelB or c-Rel; no model distinguishes RELA from REL. Evidence codes help: the HOCOMOCO NFKB1 and NFKB2 core models carry in vitro SELEX or methyl-SELEX support (PS, PSM), whereas the RELA, RELB and REL models are ChIP-only, grade B, and describe where those proteins were found rather than what they bind directly. Since NF-kB works within enhanceosomes, ChIP-derived NF-kB models can be pulled toward IRF, AP-1 or STAT sequences contributed by partners.",
+ "caveats": "Treat a kB hit as family-level and conditional. It identifies Rel/NF-kB, never which of the five subunits: the databases' NFKB1, NFKB2, RELA, RELB and REL models differ mainly in half-site length. Because NF-kB activity is controlled by nuclear entry rather than by expression, most matches in any given cell state are unoccupied, and a match is not evidence of an active site without accessibility or stimulus-matched ChIP data. The RELA, RELB and REL models in HOCOMOCO are ChIP-derived only (grade B), so partner motifs from enhanceosome co-binders can bleed into them. Avoid the half-site models (JASPAR MA1117.2, CIS-BP M08161) for genome scans; they match promiscuously.",
+ "refs": [
+  {
+   "cite": "Sen R, Baltimore D. Multiple nuclear factors interact with the immunoglobulin enhancer sequences. Cell 1986;46:705-16.",
+   "pmid": "3091258",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3091258/"
+  },
+  {
+   "cite": "Ghosh G, van Duyne G, Ghosh S, et al. Structure of NF-kappa B p50 homodimer bound to a kappa B site. Nature 1995;373:303-10.",
+   "pmid": "7530332",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7530332/"
+  },
+  {
+   "cite": "Müller CW, Rey FA, Sodeoka M, et al. Structure of the NF-kappa B p50 homodimer bound to DNA. Nature 1995;373:311-7.",
+   "pmid": "7830764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7830764/"
+  },
+  {
+   "cite": "Cramer P, Larson CJ, Verdine GL, et al. Structure of the human NF-kappaB p52 homodimer-DNA complex at 2.1 A resolution. EMBO J 1997;16:7078-90.",
+   "pmid": "9384586",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9384586/"
+  },
+  {
+   "cite": "Huxford T, Huang DB, Malek S, et al. The crystal structure of the IkappaBalpha/NF-kappaB complex reveals mechanisms of NF-kappaB inactivation. Cell 1998;95:759-70.",
+   "pmid": "9865694",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9865694/"
+  },
+  {
+   "cite": "Berkowitz B, Huang DB, Chen-Park FE, et al. The x-ray crystal structure of the NF-kappa B p50.p65 heterodimer bound to the interferon beta -kappa B site. J Biol Chem 2002;277:24694-700.",
+   "pmid": "11970948",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11970948/"
+  },
+  {
+   "cite": "Panne D, Maniatis T, Harrison SC. An atomic model of the interferon-beta enhanceosome. Cell 2007;129:1111-23.",
+   "pmid": "17574024",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17574024/"
+  },
+  {
+   "cite": "Hayden MS, Ghosh S. Shared principles in NF-kappaB signaling. Cell 2008;132:344-62.",
+   "pmid": "18267068",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18267068/"
+  },
+  {
+   "cite": "Natoli G. Control of NF-kappaB-dependent transcriptional responses by chromatin organization. Cold Spring Harb Perspect Biol 2009;1:a000224.",
+   "pmid": "20066094",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20066094/"
+  },
+  {
+   "cite": "Siggers T, Chang AB, Teixeira A, et al. Principles of dimer-specific gene regulation revealed by a comprehensive characterization of NF-κB family DNA binding. Nat Immunol 2011;13:95-102.",
+   "pmid": "22101729",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22101729/"
+  },
+  {
+   "cite": "Mulero MC, Wang VY, Huxford T, et al. Genome reading by the NF-κB transcription factors. Nucleic Acids Res 2019;47:9967-9989.",
+   "pmid": "31501881",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31501881/"
+  },
+  {
+   "cite": "Li J, Lei WT, Zhang P, et al. Biochemically deleterious human NFKB1 variants underlie an autosomal dominant form of common variable immunodeficiency. J Exp Med 2021;218.",
+   "pmid": "34473196",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34473196/"
+  }
+ ]
+}

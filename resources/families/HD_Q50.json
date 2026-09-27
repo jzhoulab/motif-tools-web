@@ -1,0 +1,78 @@
+{
+  "key": "HD_Q50",
+  "aka": [
+    "TAATTA site",
+    "Q50-class homeodomain",
+    "DLX/LHX/MSX-type motif",
+    "Antennapedia-class TAAT core",
+    "P3 homeodomain dimer site (TAATNNNATTA)",
+    "Q50 paired-like factors (RAX, VSX, PHOX2, PROP1)",
+    "Homeo domain factors (TFClass)"
+  ],
+  "consensus": "TAATTA",
+  "short": "About half of the roughly 200 human homeodomain proteins carry glutamine at position 50 of the domain and read the palindromic hexamer TAATTA. This family gathers 275 published motifs for 89 gene symbols: DLX1-6, MSX1-3, the LIM-homeodomain proteins LHX1-9 and ISL1/2, ALX1/3/4, ARX, PRRX1/2, EMX, EN, GBX, BARHL, LMX, SHOX, VAX and TLX, plus the paired-like factors VSX1/2, RAX/RAX2, PHOX2A/2B, NOBOX, MIXL1, VENTX, PROP1, DRGX, BSX, OTP and SEBOX and, from another family again, PDX1. Grouping follows the specificity a protein actually has rather than its gene family. Many of these proteins also bind cooperatively as dimers on TAATNNNATTA palindromes, which is where most real discrimination lies; a single TAATTA match carries almost no information.",
+  "long": "## The factors\n\nThe homeodomain is a 60-residue module: three alpha-helices around a hydrophobic core, with helix 3 in the major groove and a flexible N-terminal arm in the adjacent minor groove. The human genome carries about 235 functional homeobox genes, and roughly half of the encoded homeodomains have glutamine at position 50, the last residue of the recognition helix - the residue this family is named for.\n\nEighty-nine gene symbols and 275 motifs are grouped here. The core set is expected: DLX1-6; MSX1-3; the LIM-homeodomain proteins LHX1-6, LHX8/9 and ISL1/2, which contact DNA through the homeodomain but assemble via LIM domains and LDB1; the aristaless-related ALX1/3/4, ARX and PRRX1/2; and EMX, EN, GBX, BARHL, BARX, DBX, GSX, EVX, HMX, LBX, LMX, MEOX, SHOX, TLX, VAX, UNCX, MNX1, HLX, ESX1, HESX1, ISX and NOTO.\n\nThe family also holds proteins whose gene families would suggest otherwise: the paired-like factors VSX1/2, RAX/RAX2, PHOX2A/2B, NOBOX, MIXL1, VENTX, PROP1, DRGX, BSX, OTP and SEBOX, plus PDX1. In standard classifications these sit beside OTX, CRX, PITX and GSC, but they carry glutamine at position 50, not lysine, and their measured motifs are TAATTA-type; the atlas groups by the specificity a protein actually has, so they belong here rather than in HD_K50.\n\n## The motif\n\nPosition 50 is a specificity switch: substituting it in Drosophila Paired transfers the preference of Fushi tarazu or Bicoid onto that protein, and the reciprocal change in Bicoid converts it into an Antennapedia-class binder. Site selection with six different residues at position 50 each gave a distinct specificity, all sharing the TAAT core and differing only in the bases immediately 3' of it.\n\nStructurally, the invariant Asn51 hydrogen-bonds the second adenine of 5'-TAAT-3' while Arg3 and Arg5 of the N-terminal arm read the minor groove there; the position-50 side chain points at the next two. Glutamine accommodates T:A, giving TAATTA and TAATTG; lysine instead contacts C:G, giving TAATCC. Information is confined to those six base pairs, so most models here are 6-8 columns wide.\n\nLonger models are dimeric. Paired-like homeodomains bind palindromes with two TAAT half-sites three base pairs apart (the P3 site, TAATNNNATTA) cooperatively, with up to 300-fold enhancement; residue 50 sets the spacing and the central bases, and the rules for which homeodomains can do this have recently been derived. Thirty-five of the 112 HOCOMOCO models here are 11 bp or longer: ALX4, PHOX2B, PROP1 and MIXL1 TAATTAGATTA, ARX TAATCTAATTAG, LMX1B TTAATTAATT, DRGX and PHOX2A TAATTTAATTA.\n\nParalogues are not separable. Cohesion is 0.84 across 275 models, the medoid is GBX1 (JASPAR MA0889.2), and the data consensus reads CTAATTA - the same site with one flanking base. Real outliers exist: BARHL1/2 prefer TAAACG, HMX1-3 and ISL1/2 give NKX-like TAAGTG models, MEOX1/2 TAATGA, VSX1/2 a distinctive TAATTAGC, and methyl-HT-SELEX models for LHX1/6/8/9, LBX2 and PRRX2 a CpG-containing TAACGA variant. Surveys quantify the point: 168 mouse homeodomains resolve into at least 65 binding activities and 84 Drosophila homeodomains into 11 specificity groups - real variation, but finer than a PWM resolves.\n\n## Where it acts\n\nTAATTA sites sit in AT-rich distal enhancers rather than CpG-island promoters, and occupancy is strongly cell-type restricted. The motif is extremely common: at human base composition this self-complementary 6-mer is expected some two million times in 3.1 Gb, so even restricting to the ~4.5 million mapped DNase I footprints leaves far more matches than any factor occupies. Members share enhancers and compete on the same sites: DLX and MSX are the classic antagonistic pair in craniofacial and limb enhancers, while VSX1/2 and RAX act in retinal progenitors, PHOX2A/2B in autonomic neurons and NOBOX in oocytes. Characterized enhancers usually contain double TAAT cores or several cores within a few hundred base pairs; one archetype here is named EMX/PAX.\n\n## Biology and disease\n\nHuman mutations are typically heterozygous and dosage-sensitive, and produce sharply localized defects. An MSX2 homeodomain substitution causes autosomal dominant craniosynostosis and MSX2 haploinsufficiency enlarged parietal foramina; MSX1 causes selective tooth agenesis, DLX3 tricho-dento-osseous syndrome, recessive ALX3 frontorhiny, SHOX deletion the short stature of Leri-Weill dyschondrosteosis and Turner syndrome, LMX1B nail-patella syndrome, LHX3 combined pituitary hormone deficiency, HESX1 septo-optic dysplasia and ARX X-linked lissencephaly. The paired-like members add PHOX2B in congenital central hypoventilation syndrome and neuroblastoma predisposition, VSX2 in microphthalmia, RAX in anophthalmia and NOBOX in premature ovarian failure. Many pathogenic substitutions lie inside the homeodomain and alter DNA binding or cooperativity directly.\n\n## Reading a hit\n\nA TAATTA match says a Q50-class homeodomain could bind, and little else. No published matrix separates DLX5 from LHX2 or EN1 from MSX1; report the hit as a Q50 homeodomain site, not a gene. The site is too common to be informative on its own, so a bare hit means little without expression data, accessibility and ideally a second TAAT core three to five base pairs away. Evidence that these proteins bind TAATTA is strong: 107 of 112 HOCOMOCO models have in vitro HT-SELEX or methyl-HT-SELEX support and only five are ChIP-only. That is not the same as saying their ChIP peaks sit on TAATTA; peak sets routinely carry other factors' motifs, and two members are flagged for that reason: a ChIP-derived VENTX model reads AATTTGCATA, the POU octamer, and a low-information CIS-BP VSX2 model (TATATT) matches WT1. Six CIS-BP entries (DBX1, DBX2, LHX3, HLX, OTP, SEBOX) are transferred from mouse orthologues, SEBOX at only 79% domain identity; archetype names such as DLX/LHX are majority labels, not claims of separability.",
+  "caveats": "Trust the family, not the member. A TAATTA match identifies a Q50-class homeodomain site; the 89 gene symbols here are not distinguishable by matrix, and the expected genome-wide frequency of the hexamer (order 10^6) means an isolated hit is close to uninformative. Require expression, accessibility and preferably a dimeric TAATNNNATTA arrangement. In vitro support for the motif is strong (107 of 112 HOCOMOCO models have SELEX evidence), but ChIP-derived peaks often carry other proteins' motifs - one VENTX model here is in fact the POU octamer. Membership follows measured specificity, not gene family: VSX1/2, RAX/RAX2, PHOX2A/2B, NOBOX, MIXL1, VENTX, PROP1, DRGX, BSX, OTP, SEBOX and PDX1 are paired-like or CDX/PDX genes that carry Q50 and read TAATTA.",
+  "refs": [
+    {
+      "cite": "Treisman J, Gönczy P, Vashishtha M, et al. A single amino acid can determine the DNA binding specificity of homeodomain proteins. Cell 1989;59:553-62.",
+      "pmid": "2572327",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2572327/"
+    },
+    {
+      "cite": "Hanes SD, Brent R. DNA specificity of the bicoid activator protein is determined by homeodomain recognition helix residue 9. Cell 1989;57:1275-83.",
+      "pmid": "2500253",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2500253/"
+    },
+    {
+      "cite": "Wilson DS, Sheng G, Jun S, et al. Conservation and diversification in homeodomain-DNA interactions: a comparative genetic analysis. Proc Natl Acad Sci U S A 1996;93:6886-91.",
+      "pmid": "8692913",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8692913/"
+    },
+    {
+      "cite": "Kissinger CR, Liu BS, Martin-Blanco E, et al. Crystal structure of an engrailed homeodomain-DNA complex at 2.8 A resolution: a framework for understanding homeodomain-DNA interactions. Cell 1990;63:579-90.",
+      "pmid": "1977522",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1977522/"
+    },
+    {
+      "cite": "Wilson D, Sheng G, Lecuit T, et al. Cooperative dimerization of paired class homeo domains on DNA. Genes Dev 1993;7:2120-34.",
+      "pmid": "7901121",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7901121/"
+    },
+    {
+      "cite": "Cain B, Wasmund C, Rowan FC, et al. Decoding the mechanisms of cooperative DNA binding by the Paired-like homeodomain family. Nat Commun 2026;17.",
+      "pmid": "42675056",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42675056/"
+    },
+    {
+      "cite": "Noyes MB, Christensen RG, Wakabayashi A, et al. Analysis of homeodomain specificities allows the family-wide prediction of preferred recognition sites. Cell 2008;133:1277-89.",
+      "pmid": "18585360",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18585360/"
+    },
+    {
+      "cite": "Berger MF, Badis G, Gehrke AR, et al. Variation in homeodomain DNA binding revealed by high-resolution analysis of sequence preferences. Cell 2008;133:1266-76.",
+      "pmid": "18585359",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18585359/"
+    },
+    {
+      "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+      "pmid": "23332764",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+    },
+    {
+      "cite": "Holland PW, Booth HA, Bruford EA. Classification and nomenclature of all human homeobox genes. BMC Biol 2007;5:47.",
+      "pmid": "17963489",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17963489/"
+    },
+    {
+      "cite": "Bürglin TR, Affolter M. Homeodomain proteins: an update. Chromosoma 2016;125:497-521.",
+      "pmid": "26464018",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26464018/"
+    },
+    {
+      "cite": "Worsley Hunt R, Wasserman WW. Non-targeted transcription factors motifs are a systemic component of ChIP-seq datasets. Genome Biol 2014;15:412.",
+      "pmid": "25070602",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25070602/"
+    }
+  ]
+}

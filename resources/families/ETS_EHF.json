@@ -1,0 +1,70 @@
+{
+ "key": "ETS_EHF",
+ "aka": [
+  "ELF site",
+  "ESE site",
+  "epithelium-specific ETS (ESE) subfamily",
+  "ELF3 / ESE-1 / ESX",
+  "ELF5 / ESE-2",
+  "EHF / ESE-3",
+  "ELF4 / MEF",
+  "ELF2 / NERF",
+  "ETS class II"
+ ],
+ "consensus": "ACCCGGAAGT",
+ "short": "ELF1, ELF2, ELF3, ELF4, ELF5 and EHF are the ELF branch of the ETS family. They bind the same GGA(A/T) core as every other ETS protein through the same winged helix-turn-helix domain, but prefer a C where class I ETS factors prefer an A three bases 5' of the core, giving the ten-base site ACCCGGAAGT. ELF3, ELF5 and EHF are the epithelium-specific \"ESE\" members, expressed in gut, salivary gland, breast, airway, cornea, prostate and bladder epithelium; ELF1, ELF2 and ELF4 are broader, with strong hematopoietic expression. These factors set and maintain epithelial differentiation - mammary alveolar cell fate, intestinal goblet cells, airway CFTR expression - and are recurrently mutated or silenced in carcinomas of the bladder, biliary tract, cervix and breast.",
+ "long": "## The factors\n\nSix human genes make up this group: ELF1, ELF2 (NERF), ELF3 (ESE-1/ESX), ELF4 (MEF), ELF5 (ESE-2)\nand EHF (ESE-3). Each has a single ETS domain of about 85 residues - three alpha-helices on a\nfour-stranded antiparallel beta-sheet, a winged helix-turn-helix - that binds DNA as a monomer,\nwith no obligate dimerization partner of the kind GABPA requires. Binding profiles of all human\nand mouse ETS proteins place the ELF proteins in class II (subclass IIa), separate from the large\nclass I group and from ETV6/ETV7. Expression splits the group in two. ELF3, ELF5 and EHF, together\nwith SPDEF, form the epithelium-specific ETS (\"ESE\") subfamily: ELF3 is highest in\ngastrointestinal tract, salivary gland, bladder, liver and prostate; ELF5 is restricted to\nsalivary gland, breast and bladder with some lung, kidney and skin; EHF covers salivary gland,\nesophagus, prostate, colon, skin, bladder and breast. ELF1, ELF2 and ELF4 are more widely\nexpressed, with prominent hematopoietic and lymphoid expression.\n\n## The motif\n\nThe literature writes the class II site as CCCGGAAGT, differing from the class I consensus\nACCGGAAGT at a single position: the base three steps 5' of the GGA core, where class I strongly\ndisfavors C and the ELF group accepts or prefers it. With the extra 5' adenine that most\nin vitro models here include, the site reads ACCCGGAAGT, which is what the motifs assigned to this\nfamily agree on. The recognition chemistry is identical to the rest of the family: two invariant\narginines in helix H3 hydrogen-bond the two guanines of GGA, a wing lysine contacts DNA 5' of the\ncore and a turn lysine contacts the opposite strand 3' of it, so the core is read directly and the\nflanks through backbone geometry. That makes the discriminating information one or two low-content\npositions, and the six ELF/EHF proteins are not distinguishable from each other by sequence: the\nJASPAR models for EHF (MA0598.4) and ELF3 (MA0640.3) have the identical consensus CACTTCCTG.\nOne variant is worth recognizing. CCGGAAGT contains a CpG, and methylating that CpG blocks ETS\nbinding; the methylation-aware HOCOMOCO models for ELF2, ELF3 and ELF4 in this family instead read\nCAGGAAGT, a form with no CpG. Whether that is cause or coincidence, both forms are in wide use and\na scan should allow CAGGAAG as well as CCGGAAG.\n\n## Where it acts\n\nTwo contexts dominate. ELF1, ELF2 and ELF4 contribute to the redundant ETS occupancy of\nCpG-island promoters, where a strong consensus 20-40 bp upstream of the transcription start site is\nbound interchangeably by many ETS proteins; a hit there is a poor basis for naming a factor. The\nESE members act mostly at epithelial enhancers and tissue-specific promoters, where their sites\nare frequently non-consensus and sit among other epithelial regulators. Documented examples\ninclude EHF at the CFTR promoter in bronchial epithelium, where it acts as a repressor and is\ninduced by inflammatory mediators; EHF across enhancers that define corneal epithelial identity;\nand ELF5 at genes of the mammary alveolar program, including repression of SNAI2. Because the\nmotif is short and its family-discriminating positions weak, cell type - which ELF genes are\nactually expressed - is usually more informative about which protein is bound than the sequence is.\n\n## Biology and disease\n\nThe ESE factors maintain epithelial differentiation. Elf5-null mouse embryos die by about E7.5\nfrom a trophoblast defect, and loss of a single Elf5 allele blocks mammary alveolar development in\npregnancy; ELF5 also holds cells in an epithelial state by repressing SNAI2, and its loss promotes\nepithelial-mesenchymal transition and metastasis in breast cancer models. About 30% of Elf3-null\nembryos die around E11.5 and survivors have abnormal small intestinal epithelium with reduced\ngoblet cells. The consequences in human cancer are mostly loss of function: ELF3 is recurrently\nmutated in roughly 6% of bladder cancers, mucinous ovarian cancers, cholangiocarcinomas and\ngallbladder cancers, about 10% of ampullary carcinomas and about 13% of cervical adenocarcinomas,\nwith a large share of inactivating alleles; EHF is downregulated with promoter methylation in\nprostate cancer. An Ehf knockout phenotype has not been reported.\n\n## Reading a hit\n\nA match identifies an ELF/EHF-type ETS site, and it does so only weakly. The sequence separating\nthis family from class I ETS is a single flanking base, so a hit that scores well for ELF3 will\nalmost always also score well for ETS1, ERG or ELK1, and the reverse; if you need to know which\nprotein is bound, use expression and ChIP data, not the motif. The GGAA core is expected millions\nof times per strand in a 3.1-Gb genome, so context - accessibility, conservation, an epithelial\nenhancer, neighboring sites - has to carry the inference. Evidence quality is uneven within the\nfamily: ELF1, ELF2, ELF3, ELF4 and ELF5 all have in vitro (HT-SELEX or methyl-HT-SELEX) HOCOMOCO\nmodels, but EHF's only HOCOMOCO model here is ChIP-derived, so \"EHF binds this sequence\" rests on\nweaker evidence than for its relatives. Two of the three Vierstra archetypes grouped here\n(AC0452:ELF, AC0645:ELF) have GGAT-containing consensus sequences and match motifs outside this\nfamily better than motifs inside it; treat them as loosely attached. Consensus strings also appear\non either strand - CACTTCCTG and CAGGAAGTG are the same site.",
+ "caveats": "The one base that distinguishes this family from class I ETS is a low-information\nflanking position, so in practice a hit means \"an ETS site\" and not \"an ELF site\", let alone a\nspecific ELF protein; the JASPAR EHF and ELF3 models are literally the same consensus. Which of\nthe six proteins is bound has to come from expression or ChIP, not from sequence. Within the\nfamily, EHF's only HOCOMOCO model here is ChIP-derived rather than in vitro, so its label carries\nless weight than ELF1-ELF5, which have HT-SELEX or methyl-HT-SELEX support. Two of the three\nVierstra ELF archetypes in this family have GGAT-type consensus sequences and their nearest\nneighbours lie outside the family. Allow both CCGGAAG and the CpG-free CAGGAAG form when scanning.",
+ "refs": [
+  {
+   "cite": "Wei GH, Badis G, Berger MF, et al. Genome-wide analysis of ETS-family DNA-binding in vitro and in vivo. EMBO J 2010;29:2147-60.",
+   "pmid": "20517297",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20517297/"
+  },
+  {
+   "cite": "Hollenhorst PC, McIntosh LP, Graves BJ. Genomic and biochemical insights into the specificity of ETS transcription factors. Annu Rev Biochem 2011;80:437-71.",
+   "pmid": "21548782",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21548782/"
+  },
+  {
+   "cite": "Luk IY, Reehorst CM, Mariadason JM. ELF3, ELF5, EHF and SPDEF Transcription Factors in Tissue Homeostasis and Cancer. Molecules 2018;23.",
+   "pmid": "30200227",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30200227/"
+  },
+  {
+   "cite": "Kodandapani R, Pio F, Ni CZ, et al. A new pattern for helix-turn-helix recognition revealed by the PU.1 ETS-domain-DNA complex. Nature 1996;380:456-60.",
+   "pmid": "8602247",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8602247/"
+  },
+  {
+   "cite": "Yin Y, Morgunova E, Jolma A, et al. Impact of cytosine methylation on DNA binding specificities of human transcription factors. Science 2017;356.",
+   "pmid": "28473536",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28473536/"
+  },
+  {
+   "cite": "Oakes SR, Naylor MJ, Asselin-Labat ML, et al. The Ets transcription factor Elf5 specifies mammary alveolar cell fate. Genes Dev 2008;22:581-6.",
+   "pmid": "18316476",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18316476/"
+  },
+  {
+   "cite": "Chakrabarti R, Hwang J, Andres Blanco M, et al. Elf5 inhibits the epithelial-mesenchymal transition in mammary gland development and breast cancer metastasis by transcriptionally repressing Snail2. Nat Cell Biol 2012;14:1212-22.",
+   "pmid": "23086238",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23086238/"
+  },
+  {
+   "cite": "Fossum SL, Mutolo MJ, Tugores A, et al. Ets homologous factor (EHF) has critical roles in epithelial dysfunction in airway disease. J Biol Chem 2017;292:10938-10949.",
+   "pmid": "28461336",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28461336/"
+  },
+  {
+   "cite": "Stephens DN, Klein RH, Salmans ML, et al. The Ets transcription factor EHF as a regulator of cornea epithelial cell identity. J Biol Chem 2013;288:34304-24.",
+   "pmid": "24142692",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24142692/"
+  },
+  {
+   "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
+   "pmid": "32728250",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  }
+ ]
+}

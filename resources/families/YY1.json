@@ -1,0 +1,81 @@
+{
+ "key": "YY1",
+ "aka": [
+  "YY1 site",
+  "Yin Yang 1",
+  "NF-E1",
+  "delta factor",
+  "UCRBP",
+  "CCAT core",
+  "AANATGGCGGC",
+  "Pho/Pleiohomeotic site",
+  "REX1",
+  "ZFP42"
+ ],
+ "consensus": "CGCCATNTT",
+ "short": "YY1 is a ubiquitously expressed zinc-finger protein that binds a short CCAT-centered site, usually written CGCCATNTT or, on the other strand, AANATGGCGGC. It sits at or just inside the transcription start site of a large fraction of CpG-island promoters, works as an activator at some and a repressor at others, and is found on both the enhancer and the promoter side of enhancer-promoter contacts. Two retrogenes derived from YY1, YY2 and ZFP42/REX1, share the same zinc-finger domain; YY2 binds the same consensus more weakly, and REX1 prefers divergent sites that still contain the CCAT core. Because the motif is short and concentrated in CpG islands, a YY1 match is one of the most common hits in promoter sequence.",
+ "long": "## The factors\n\nYY1 (Yin Yang 1) has four C2H2 zinc fingers at its C terminus and belongs to the GLI-Kruppel class;\nits Drosophila counterpart is Pleiohomeotic (Pho). It was described independently in the same period\nas a repressor whose activity is relieved by adenovirus E1A and as an initiator-binding protein that\ndirects and activates transcription in vitro, and it also appears in the older literature as NF-E1,\ndelta factor and UCRBP. It binds DNA as a monomer and is expressed in essentially all cell types.\n\nThe family in these databases has three human members. YY2 and ZFP42 (REX1) are both retrogenes\ngenerated from YY1 in placental mammals, and their zinc-finger domains remain highly similar to\nYY1's. Motif measurements show that YY2 binds the same consensus as YY1 but with much lower\naffinity, while REX1 binds sequences divergent from YY1's that nevertheless share the CCAT core.\nZFP42/REX1 is best known as a pluripotency marker in embryonic stem cells. All three are assigned\nhere to a single family because their matrices are not separable.\n\n## The motif\n\nThe literature core is CCAT. The short consensus most often quoted is CGCCATNTT, and the\nreverse-strand form AANATGGCGGC is what several databases show, including the form used in the\nontology entry for this family. Selection experiments give a longer high-affinity version,\nGCCGCCATTTTG, and the endogenous sites at Peg3 (GGCGCCATNTT) and Xist (CCGCCATNTT) are longer than\nthe classic motif. Substituting three residues in the first zinc finger, to mimic Drosophila Pho,\ncollapses specificity to a bare GCCAT, showing that the four fingers contribute jointly rather than\nmodularly and that the flanking information depends on finger one. The data consensus here,\nCCGCCATYTT, is the same site.\n\nThe cocrystal structure of the YY1 zinc fingers on the adeno-associated virus P5 initiator explains\nan unusual property. Upstream of the start sites the protein contacts both strands, whereas\ndownstream the contacts are essentially restricted to the template strand, leaving the non-template\nstrand free. That asymmetry is what allows YY1 to sit over an initiator, support TBP-independent\ninitiation with a fixed direction, and bind a preformed transcription bubble or a DNA/RNA hybrid.\nFunctionally the site is orientation-sensitive in context: in the c-fos promoter YY1 bends DNA and\nits effect depends on which way the site points. Sequence alone does not distinguish YY1 from YY2,\nand only partially separates ZFP42.\n\n## Where it acts\n\nYY1 is a promoter factor first. Its motif is strongly enriched at CpG-island promoters, where it\nco-occurs with a characteristic set of partners at active promoters, including HCFC1, ZNF143,\nTHAP11 and GABP, and it binds within a few tens of base pairs of the transcription start site far\nmore often than at a distance. It is also present at active enhancers, and the observation that it\noccupies both sides of many enhancer-promoter pairs led to the proposal that YY1 acts as a general\nstructural contributor to enhancer-promoter loops, in loose analogy to CTCF at structural loops.\nYY1 is additionally reported as a CTCF cofactor at the X-inactivation choice, and as the mammalian\nPho counterpart that helps recruit Polycomb complexes, an activity that requires both DNA binding\nand interaction with YAF2. Because the informative site is short and CpG islands are the preferred\ncontext, matches are extremely dense in promoter sequence: a YY1 hit near a TSS is close to the\ndefault expectation rather than a discovery.\n\n## Biology and disease\n\nYY1 is dosage-sensitive in humans: de novo heterozygous variants and deletions cause Gabriele-de\nVries syndrome, an intellectual-disability syndrome with movement abnormalities in which patient\ncells show transcriptional and chromatin dysfunction, consistent with partial loss of a general\npromoter factor rather than a tissue-restricted one. Mouse YY1 mutants show homeotic transformations\nof the axial skeleton and interact genetically with the Polycomb gene Ring1, placing YY1 in the\nPcG-dependent regulation of Hox genes. At the molecular level YY1 has been assigned both activating\nand repressing roles at different promoters, often through the cofactor it recruits (HDACs and\nPolycomb components on one side, coactivators and the basal machinery on the other), which is why\nthe same motif cannot be read as a sign. YY1 is frequently reported as overexpressed in tumors,\nthough the causal claims there are much less settled than the developmental genetics.\n\n## Reading a hit\n\nA YY1 match is common enough that on its own it is close to uninformative, particularly inside a\nCpG island. Treat it as a family-level call: YY1, YY2 and ZFP42 are not separable by sequence, and\nYY2 in particular binds the same consensus. A hit tells you nothing about direction of effect,\nbecause YY1 activates at some promoters and represses at others. Position matters more than score:\na site within tens of base pairs of a TSS, in the orientation seen at initiators, is a more credible\nYY1 element than a stronger match in intergenic DNA. Finally, YY1 has been used as a positive\ncontrol in so many ChIP experiments that the motif is over-represented in derived models generally;\nif a ChIP-derived matrix for some unrelated factor looks like AANATGGCGGC, indirect or\nco-occupancy-driven enrichment at active promoters is the first explanation to consider, not a new\nspecificity.",
+ "caveats": "The site is short, CpG-island-associated and present at a large share of active promoters, so a hit is expected rather than informative and should be weighted by position relative to the TSS. YY1, YY2 and ZFP42/REX1 all descend from the same zinc-finger domain and cannot be told apart from sequence; YY2 binds the identical consensus with lower affinity. A match says nothing about activation versus repression, since YY1 does both depending on the cofactor recruited. And because YY1 sits at essentially all active promoters, an AANATGGCGGC-like motif recovered from another factor's ChIP data is more likely promoter co-occupancy than that factor's own specificity.",
+ "refs": [
+  {
+   "cite": "Shi Y, Seto E, Chang LS, et al. Transcriptional repression by YY1, a human GLI-Krüppel-related protein, and relief of repression by adenovirus E1A protein. Cell 1991;67:377-88.",
+   "pmid": "1655281",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1655281/"
+  },
+  {
+   "cite": "Seto E, Shi Y, Shenk T. YY1 is an initiator sequence-binding protein that directs and activates transcription in vitro. Nature 1991;354:241-5.",
+   "pmid": "1720509",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1720509/"
+  },
+  {
+   "cite": "Houbaviy HB, Usheva A, Shenk T, et al. Cocrystal structure of YY1 bound to the adeno-associated virus P5 initiator. Proc Natl Acad Sci U S A 1996;93:13577-82.",
+   "pmid": "8942976",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8942976/"
+  },
+  {
+   "cite": "Kim Jd, Kim J. YY1's longer DNA-binding motifs. Genomics 2009;93:152-8.",
+   "pmid": "18950698",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18950698/"
+  },
+  {
+   "cite": "Kim JD, Faulk C, Kim J. Retroposition and evolution of the DNA-binding motifs of YY1, YY2 and REX1. Nucleic Acids Res 2007;35:3442-52.",
+   "pmid": "17478514",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17478514/"
+  },
+  {
+   "cite": "Natesan S, Gilman MZ. DNA bending and orientation-dependent function of YY1 in the c-fos promoter. Genes Dev 1993;7:2497-509.",
+   "pmid": "8276234",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8276234/"
+  },
+  {
+   "cite": "Michaud J, Praz V, James Faresse N, et al. HCFC1 is a common component of active human CpG-island promoters and coincides with ZNF143, THAP11, YY1, and GABP transcription factor occupancy. Genome Res 2013;23:907-16.",
+   "pmid": "23539139",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23539139/"
+  },
+  {
+   "cite": "Weintraub AS, Li CH, Zamudio AV, et al. YY1 Is a Structural Regulator of Enhancer-Promoter Loops. Cell 2017;171:1573-1588.e28.",
+   "pmid": "29224777",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29224777/"
+  },
+  {
+   "cite": "Basu A, Wilkinson FH, Colavita K, et al. YY1 DNA binding and interaction with YAF2 is essential for Polycomb recruitment. Nucleic Acids Res 2014;42:2208-23.",
+   "pmid": "24285299",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24285299/"
+  },
+  {
+   "cite": "Donohoe ME, Zhang LF, Xu N, et al. Identification of a Ctcf cofactor, Yy1, for the X chromosome binary switch. Mol Cell 2007;25:43-56.",
+   "pmid": "17218270",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17218270/"
+  },
+  {
+   "cite": "Gabriele M, Vulto-van Silfhout AT, Germain PL, et al. YY1 Haploinsufficiency Causes an Intellectual Disability Syndrome Featuring Transcriptional and Chromatin Dysfunction. Am J Hum Genet 2017;100:907-925.",
+   "pmid": "28575647",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28575647/"
+  },
+  {
+   "cite": "Lorente M, Pérez C, Sánchez C, et al. Homeotic transformations of the axial skeleton of YY1 mutant mice and genetic interaction with the Polycomb group gene Ring1/Ring1A. Mech Dev 2006;123:312-20.",
+   "pmid": "16624538",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16624538/"
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "key": "NFY",
+ "aka": [
+  "CCAAT box",
+  "CBF",
+  "Y box",
+  "CAAT box (NF-Y type)",
+  "NF-Y site",
+  "CP1",
+  "alpha-CP1/HAP2-3-5 (yeast homologues)"
+ ],
+ "consensus": "CCAAT",
+ "short": "NF-Y is a heterotrimer of NFYA, NFYB and NFYC that binds the CCAAT box, one of the most frequent elements in eukaryotic promoters. NFYB and NFYC carry histone-fold domains and pair like H2A/H2B, gripping the DNA backbone and bending it; NFYA supplies the only sequence-specific contacts, inserting an alpha helix into the minor groove to read CCAAT. All three subunits are required for binding, so the three gene symbols describe one molecular entity and one motif. NF-Y is ubiquitous, sits at a fixed distance upstream of transcription start sites, and helps open chromatin for cell-type-specific factors. NF-YA is overexpressed and alternatively spliced in several cancers.",
+ "long": "## The factors\n\nNF-Y, also called CBF and historically CP1, is an obligate heterotrimer. NFYB and NFYC each\ncontain a histone-fold domain (HFD) and first dimerize with each other; the NFYB/NFYC dimer then\nrecruits NFYA, and only the complete trimer binds DNA. Yeast HAP2, HAP3 and HAP5 are the\northologues of NFYA, NFYB and NFYC respectively, and the conservation is high enough that subunits\nare interchangeable across large evolutionary distances. NFYA exists as two major splice isoforms,\nlong and short, differing in the glutamine-rich activation region; the short isoform is enriched\nin embryonic stem cells. NFYB and NFYC are encoded by single genes with essentially constitutive\nexpression, so NF-Y activity is regulated largely through NFYA levels and isoform choice. Because\nall three subunits are needed, a motif labelled NFYA, NFYB or NFYC in these databases refers to\nthe same complex and the same site; the three-way split in this family's data (nine models across\nthree symbols) reflects which subunit was tagged in an experiment, not three specificities.\n\n## The motif\n\nThe consensus is the 5-base CCAAT box, generally quoted with flanking preferences as CCAATCA or,\non the reverse strand, TGATTGG; databases here report both renderings plus CCAATCAG and CATTGGCC.\nThe crystal structure of NF-Y on a 25-bp CCAAT oligonucleotide explained the division of labor.\nThe NFYB/NFYC histone-fold dimer binds the sugar-phosphate backbone over about 25 bp, mimicking\nthe H2A/H2B-DNA interaction in a nucleosome and bending the DNA, but makes no base-specific\ncontacts. NFYA contributes the specificity: a short alpha helix inserts deeply into the minor\ngroove and reads the CCAAT bases directly. This architecture explains two features of the motif.\nFirst, information is concentrated on five bases with modest preferences a few positions to each\nside, giving models of 10-14 bits, and the flanking positions matter partly because they set the\nDNA's bendability rather than because they are read. Second, NF-Y has nucleosome-like,\nnon-sequence-specific affinity in addition to its specific contacts, which is why it behaves like\na chromatin protein as well as a transcription factor. Not every CCAAT box is an NF-Y site: the\nelement was long used as a generic label, and several unrelated families were grouped under\n\"CCAAT-binding protein\", including the C/EBPs and NFI/CTF. Those are different proteins with\ndifferent folds.\n\n## Where it acts\n\nNF-Y is the most positionally constrained factor in this batch. Its CCAAT boxes sit\noverwhelmingly in core and proximal promoters, classically between 60 and 100 bp upstream of the\nmajor transcription start site, and frequently in bidirectional promoters. ChIP-on-chip and later\ngenome-wide work showed that a substantial minority of NF-Y sites nonetheless lie outside core\npromoters. NF-Y is bound to a large fraction of cell cycle gene promoters (cyclin A, CDC25C, CDK1)\noften together with E2F factors, to the Y box of MHC class II promoters where it binds\ncooperatively with the RFX complex about 15-20 bp away, to the CCAAT boxes of heat shock gene\npromoters, and to the globin promoters. It recruits histone acetyltransferases including GCN5/PCAF\nand p300, contacts TBP, and imposes H3K4 trimethylation through Ash2L. In embryonic stem cells NF-Y\nis required to maintain identity and opens chromatin for lineage-determining factors, which makes\nit one of the clearest examples of a ubiquitous factor acting as a chromatin accessibility\nprovider rather than a specificity determinant.\n\n## Biology and disease\n\nNF-Y is essential: loss of NFYA or of the histone-fold subunits is lethal in cells and in mice, and\nNF-Y regulates cell cycle progression, cholesterol and lipid metabolism genes, and the\nendoplasmic-reticulum stress and heat shock programs. Because the CCAAT box is so widespread, the\ndownstream consequences are broad rather than tissue-specific. In disease, the clearest links are\nquantitative: NF-YA is overexpressed, and its isoform ratio shifted, in breast cancer and in lung\nadenocarcinoma, and NF-YA is required for proliferation of epithelial ovarian cancer cells through\nEZH2 upregulation. NF-YA splice isoform status has been reported as a prognostic variable in low\ngrade endometrial cancer. There is no well-established Mendelian disease caused by NFYA, NFYB or\nNFYC mutation, which is consistent with the complex being required in every cell.\n\n## Reading a hit\n\nA CCAAT match is 5 bp of information and occurs roughly a million times in the human genome, so a\nhit in isolation is not evidence. What makes a CCAAT hit credible is position: an NF-Y site 60-100\nbp upstream of an annotated transcription start site, ideally with a preferred flank (CCAATCA or\nits reverse complement TGATTGG), is a reasonable prediction, while the same 5-mer in an intron or\na distal enhancer is usually noise. The paralogue problem is unusual here and easy: there are no\nparalogues to separate, because NFYA, NFYB and NFYC are three subunits of one complex. Treat all\nthree labels as synonyms for NF-Y. The main real confusion is with other families historically\ncalled CCAAT-binding. C/EBP factors bind ATTGC-containing palindromes, not CCAAT, and NFI/CTF,\nwhose old name is literally \"CCAAT box transcription factor\", binds TTGGC(N5)GCCAA; its GCCAA\nhalf-site contains a CCAAT-like string and will cross-score on loose CCAAT models. If a scan\nreturns both NF-Y and NFI matches at the same position, they are competing explanations. Finally,\nnote that every HOCOMOCO model in this family is ChIP-only (evidence code P, grade B) and the\nlabel agreement scores are correspondingly moderate; the structural and biochemical evidence for\nNFYA reading CCAAT is strong, but these particular matrices are peak-derived.",
+ "caveats": "CCAAT is 5 bp and occurs about a million times in the genome, so only position makes a hit credible: NF-Y sites cluster 60-100 bp upstream of transcription start sites. NFYA, NFYB and NFYC are subunits of one obligate trimer, so the three labels denote one motif, not three specificities, and only NFYA makes base contacts. The recurring confusion is with other families once called CCAAT-binding: NFI/CTF's GCCAA half-site and C/EBP sites will cross-score on loose CCAAT models and are competing explanations, not corroboration. All HOCOMOCO models here are ChIP-derived (grade B), though the structure independently confirms CCAAT reading.",
+ "refs": [
+  {
+   "cite": "Dorn A, Bollekens J, Staub A, et al. A multiplicity of CCAAT box-binding proteins. Cell 1987;50:863-72.",
+   "pmid": "3476205",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3476205/"
+  },
+  {
+   "cite": "Nardini M, Gnesutta N, Donati G, et al. Sequence-specific transcription factor NF-Y displays histone-like DNA binding and H2B-like ubiquitination. Cell 2013;152:132-43.",
+   "pmid": "23332751",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332751/"
+  },
+  {
+   "cite": "Romier C, Cocchiarella F, Mantovani R, et al. The NF-YB/NF-YC structure gives insight into DNA binding and transcription regulation by CCAAT factor NF-Y. J Biol Chem 2003;278:1336-45.",
+   "pmid": "12401788",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12401788/"
+  },
+  {
+   "cite": "Dolfini D, Gatta R, Mantovani R. NF-Y and the transcriptional activation of CCAAT promoters. Crit Rev Biochem Mol Biol 2012;47:29-49.",
+   "pmid": "22050321",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22050321/"
+  },
+  {
+   "cite": "Testa A, Donati G, Yan P, et al. Chromatin immunoprecipitation (ChIP) on chip experiments uncover a widespread distribution of NF-Y binding CCAAT sites outside of core promoters. J Biol Chem 2005;280:13606-15.",
+   "pmid": "15647281",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15647281/"
+  },
+  {
+   "cite": "Oldfield AJ, Yang P, Conway AE, et al. Histone-fold domain protein NF-Y promotes chromatin accessibility for cell type-specific master transcription factors. Mol Cell 2014;55:708-22.",
+   "pmid": "25132174",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25132174/"
+  },
+  {
+   "cite": "Caretti G, Salsi V, Vecchi C, et al. Dynamic recruitment of NF-Y and histone acetyltransferases on cell-cycle promoters. J Biol Chem 2003;278:30435-40.",
+   "pmid": "12771133",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12771133/"
+  },
+  {
+   "cite": "Bellorini M, Lee DK, Dantonel JC, et al. CCAAT binding NF-Y-TBP interactions: NF-YB and NF-YC require short domains adjacent to their histone fold motifs for association with TBP basic residues. Nucleic Acids Res 1997;25:2174-81.",
+   "pmid": "9153318",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9153318/"
+  },
+  {
+   "cite": "Villard J, Peretti M, Masternak K, et al. A functionally essential domain of RFX5 mediates activation of major histocompatibility complex class II promoters by promoting cooperative binding between RFX and NF-Y. Mol Cell Biol 2000;20:3364-76.",
+   "pmid": "10779326",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10779326/"
+  },
+  {
+   "cite": "Santoro C, Mermod N, Andrews PC, et al. A family of human CCAAT-box-binding proteins active in transcription and DNA replication: cloning and expression of multiple cDNAs. Nature 1988;334:218-24.",
+   "pmid": "3398920",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3398920/"
+  },
+  {
+   "cite": "Dolfini D, Andrioletti V, Mantovani R. Overexpression and alternative splicing of NF-YA in breast cancer. Sci Rep 2019;9:12955.",
+   "pmid": "31506469",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31506469/"
+  },
+  {
+   "cite": "Garipov A, Li H, Bitler BG, et al. NF-YA underlies EZH2 upregulation and is essential for proliferation of human epithelial ovarian cancer cells. Mol Cancer Res 2013;11:360-9.",
+   "pmid": "23360797",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23360797/"
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "key": "HD_CDX_PDX",
+ "aka": [
+  "CDX",
+  "caudal-type homeobox",
+  "CDX2 site",
+  "TTTATG",
+  "CTTTAT",
+  "GCCATAAA",
+  "PDX1",
+  "IPF1",
+  "IDX1",
+  "STF1",
+  "ParaHox factors",
+  "Xlox"
+ ],
+ "consensus": "TTTATG",
+ "short": "This family groups the caudal-related factors CDX1, CDX2 and CDX4 with PDX1, all encoded by ParaHox genes - an ancient cluster that is the evolutionary sister of the Hox cluster. The CDX proteins read TTTATG, usually extended to TTTATGGC, a site distinct enough to be recognizable. PDX1 is a different case: its in vitro motif is plain TAATTA, indistinguishable from the generic Q50 homeodomain site, so PDX1 specificity in vivo comes from partners rather than from the sequence it prefers. CDX2 patterns the posterior gut and is the standard immunohistochemical marker of intestinal epithelium; PDX1 is required for pancreas development and its loss causes pancreatic agenesis and MODY4.",
+ "long": "## The factors\n\nFour human proteins: CDX1, CDX2 and CDX4, the vertebrate relatives of *Drosophila* caudal, and PDX1 (also IPF1, IDX1, STF1), the vertebrate Xlox gene. All four are ParaHox genes. The ParaHox cluster - Gsx, Xlox/PDX1 and Cdx - is an evolutionary sister of the Hox cluster, which explains why these proteins carry ordinary 60-residue three-helix homeodomains with the same helix 3 recognition chemistry as HOX proteins, and no second DNA-binding domain. CDX1 and CDX2 are expressed throughout the intestinal epithelium, CDX2 most strongly and persisting into adulthood; CDX4 is largely embryonic, with a role in hematopoiesis; PDX1 is restricted to the pancreatic buds and then to beta cells, duodenum and antral stomach. Unlike most families in this group, specificity here does not come from an extra domain in the same polypeptide - it comes either from the extended site that the CDX homeodomain itself prefers, or, for PDX1, from a protein complex.\n\n## The motif\n\nThe CDX site is written in the literature as TTTAT(G/A) and in these databases as an extended TTTATGGC, equivalently GCCATAAA on the other strand. CDX2 and CDX1 HT-SELEX models both read TTTATggC, CDX4 gives TTTTATGaC, and the JASPAR models for CDX1, CDX2 and CDX4 render the reverse complement GC(a)ATAAAA. The 5' TTTAT is the homeodomain core - the same TAAT-type element every Q50 homeodomain reads, here with a 3' extension - and the discriminating information sits in the GGC/TGC that follows. Methyl-HT-SELEX models for CDX1, CDX2 and CDX4 instead read TTTACGAC, a CpG-containing variant, so a subset of CDX sites is methylation-sensitive. The pooled consensus is TTTATggC with cohesion 0.84. PDX1 is the exception, and it is worth being explicit about it: the A-grade HOCOMOCO model PDX1.H14CORE.1.PSM.A reads cTAATtA and JASPAR MA0132.3 reads TAATTA - a bare Q50 homeodomain site with no extension at all. The nearest neighbours of those models across all four databases lie in the anterior HOX/Q50 groups, and the data flags them as such. A second PDX1 model, the ChIP-derived PDX1.H14CORE.0.P.B, reads TGATTgATGg, whose nearest neighbours are in the TALE family; that is almost certainly the PBX half-site, because PDX1 works in a trimeric complex with PBX1b and MEIS2/MRG1 on the elastase enhancer, so PBX-type sequence is expected in PDX1 ChIP peaks. Neither flagged model means the database entry is wrong; both mean the label is more specific than the sequence.\n\n## Where it acts\n\nCDX sites sit in intestine-specific promoters and enhancers - sucrase-isomaltase, lactase-phlorizin hydrolase, the CDX1 and CDX2 genes themselves - and in posterior HOX cluster enhancers, where CDX factors feed into anteroposterior patterning. The site is 6-8 bp and AT-rich, so exact TTTATGGC matches are expected in the 10^4-10^5 range in 3.1 Gb and most are not occupied. PDX1 sites are concentrated in beta-cell enhancers, for insulin, GCK and SLC2A2, and in acinar enhancers, where PDX1 acts with PBX1 and MEIS2; PDX1 also co-occurs with NKX6-1, NKX2-2, NEUROD1, FOXA2 and the HNF factors, so an islet regulatory element typically carries several of these motifs together. Because CDX and PDX1 are expressed in adjacent but different gut segments, genomic context and tissue usually resolve which factor is plausible.\n\n## Biology and disease\n\nCdx2 heterozygous mice show homeotic shifts of the axial skeleton and develop intestinal tumors with gastric-type mucosa, and Cdx2 is required for intestinal identity. In humans, CDX1 and CDX2 are ectopically expressed in intestinal metaplasia of the stomach and in gastric carcinoma, and CDX2 immunohistochemistry is routine for identifying intestinal-lineage adenocarcinoma. Ectopic CDX2 perturbs HOX gene expression in murine progenitors and is associated with acute myeloid leukemia. PDX1 loss is severe: Pdx1-null mice fail to form a pancreas, a homozygous frameshift in human IPF1/PDX1 causes pancreatic agenesis with neonatal diabetes, and heterozygous mutations cause MODY4.\n\n## Reading a hit\n\nA TTTATGGC-type match is reasonable evidence for a CDX factor, but it cannot distinguish CDX1, CDX2 and CDX4, whose models are interchangeable; use expression, since CDX2 dominates in adult intestine. Do not use this family's PDX1 models as evidence for PDX1 specifically. TAATTA matches every Q50 homeodomain in the genome, so a TAATTA hit is a homeodomain hit and nothing more, and the ChIP-derived TGATTGATGG model is better read as a PBX/TALE site that happens to lie in PDX1 peaks. In practice, a PDX1 claim should rest on islet chromatin data and co-occurring beta-cell motifs, not on the motif alone. Four of the 17 members of this family are flagged as having nearest neighbours in another family, all four of them PDX1 or short TAAT models - this is a systematic pattern here, not a one-off.",
+ "caveats": "CDX1, CDX2 and CDX4 share one motif; a hit identifies the CDX group, not a member. PDX1 is the real hazard: its in vitro motif is plain TAATTA, indistinguishable from the whole Q50 homeodomain group, and its ChIP-derived model reads a PBX/TALE half-site, consistent with PDX1 acting in a complex with PBX1 and MEIS2. Four of 17 members of this family have nearest neighbours in the HOX/Q50 or TALE families, all of them PDX1 or bare TAAT models, so treat PDX1 matches as unassignable without islet chromatin evidence. CDX sites are short and AT-rich, so chance matches are common.",
+ "refs": [
+  {
+   "cite": "Brooke NM, Garcia-Fernàndez J, Holland PW. The ParaHox gene cluster is an evolutionary sister of the Hox gene cluster. Nature 1998;392:920-2.",
+   "pmid": "9582071",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9582071/"
+  },
+  {
+   "cite": "Treisman J, Gönczy P, Vashishtha M, et al. A single amino acid can determine the DNA binding specificity of homeodomain proteins. Cell 1989;59:553-62.",
+   "pmid": "2572327",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2572327/"
+  },
+  {
+   "cite": "Berger MF, Badis G, Gehrke AR, et al. Variation in homeodomain DNA binding revealed by high-resolution analysis of sequence preferences. Cell 2008;133:1266-76.",
+   "pmid": "18585359",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18585359/"
+  },
+  {
+   "cite": "Noyes MB, Christensen RG, Wakabayashi A, et al. Analysis of homeodomain specificities allows the family-wide prediction of preferred recognition sites. Cell 2008;133:1277-89.",
+   "pmid": "18585360",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18585360/"
+  },
+  {
+   "cite": "Chawengsaksophak K, James R, Hammond VE, et al. Homeosis and intestinal tumours in Cdx2 mutant mice. Nature 1997;386:84-7.",
+   "pmid": "9052785",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9052785/"
+  },
+  {
+   "cite": "Silberg DG, Swain GP, Suh ER, et al. Cdx1 and cdx2 expression during intestinal development. Gastroenterology 2000;119:961-71.",
+   "pmid": "11040183",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11040183/"
+  },
+  {
+   "cite": "Almeida R, Silva E, Santos-Silva F, et al. Expression of intestine-specific transcription factors, CDX1 and CDX2, in intestinal metaplasia and gastric carcinomas. J Pathol 2003;199:36-40.",
+   "pmid": "12474224",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12474224/"
+  },
+  {
+   "cite": "Rawat VP, Thoene S, Naidu VM, et al. Overexpression of CDX2 perturbs HOX gene expression in murine progenitors depending on its N-terminal domain and is closely correlated with deregulated HOX gene expression in human acute myeloid leukemia. Blood 2008;111:309-19.",
+   "pmid": "17855634",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17855634/"
+  },
+  {
+   "cite": "Jonsson J, Carlsson L, Edlund T, et al. Insulin-promoter-factor 1 is required for pancreas development in mice. Nature 1994;371:606-9.",
+   "pmid": "7935793",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7935793/"
+  },
+  {
+   "cite": "Stoffers DA, Zinkin NT, Stanojevic V, et al. Pancreatic agenesis attributable to a single nucleotide deletion in the human IPF1 gene coding sequence. Nat Genet 1997;15:106-10.",
+   "pmid": "8988180",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8988180/"
+  },
+  {
+   "cite": "Stoffers DA, Ferrer J, Clarke WL, et al. Early-onset type-II diabetes mellitus (MODY4) linked to IPF1. Nat Genet 1997;17:138-9.",
+   "pmid": "9326926",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9326926/"
+  },
+  {
+   "cite": "Swift GH, Liu Y, Rose SD, et al. An endocrine-exocrine switch in the activity of the pancreatic homeodomain protein PDX1 through formation of a trimeric complex with PBX1b and MRG1 (MEIS2). Mol Cell Biol 1998;18:5109-20.",
+   "pmid": "9710595",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9710595/"
+  }
+ ]
+}

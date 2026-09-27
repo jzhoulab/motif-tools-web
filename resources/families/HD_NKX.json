@@ -1,0 +1,79 @@
+{
+ "key": "HD_NKX",
+ "aka": [
+  "TAAGTG",
+  "CACTTA",
+  "NK-2 element",
+  "NKE (NKX2-5 element)",
+  "TTF-1 site",
+  "CACTTGA",
+  "NK-class homeodomain",
+  "tinman/vnd-type site"
+ ],
+ "consensus": "TAAGTG",
+ "short": "NKX proteins are homeodomain transcription factors related to Drosophila tinman and vnd, and they are the main exception to the rule that homeodomains read a TAAT core. NKX2-1 (TTF-1), NKX2-2 to NKX2-8, NKX3-1 and NKX3-2 prefer TAAGTG (read as CACTTA on the other strand), a specificity recognized as unusual when TTF-1 was first cloned. The family collects 51 motifs for 16 genes, including NKX1-1/1-2, NKX6-1 to NKX6-3 and NANOG. It is the least cohesive homeodomain family in this atlas because the NKX6 proteins in fact read a conventional TAAT core rather than TAAGTG, so the label covers two different sites.",
+ "long": "## The factors\n\nNKX genes are the vertebrate NK-class homeobox genes, orthologues of Drosophila tinman (heart) and vnd/NK-2 (ventral nervous system). Sixteen symbols and 51 motifs are grouped here: NKX1-1 and NKX1-2; NKX2-1 (also called TTF-1 or TITF1), NKX2-2, NKX2-3, NKX2-4, NKX2-5, NKX2-6 and NKX2-8; NKX3-1 and NKX3-2; NKX6-1, NKX6-2 and NKX6-3; plus NANOG and unassigned NKX archetypes. Each is restricted to a small number of lineages: NKX2-1 to thyroid and lung, NKX2-5 to heart, NKX2-2 and NKX6-1 to pancreatic endocrine progenitors and ventral neural tube, NKX3-1 to prostate epithelium, NKX3-2 (BAPX1) to axial skeleton, NANOG to pluripotent cells. All bind DNA as monomeric homeodomains; none of them needs a dedicated DNA-binding partner, although NKX2-5 and GATA4 co-activate shared targets.\n\n## The motif\n\nThe consensus is TAAGTG. Randomized-site selection with the NKX2-5 homeodomain gave high-affinity sites of the form 5'-TNNAGTG-3' and only intermediate or weak binding to 5'-C(A/T)TTAATTN-3', the conventional TAAT-type site, which is the cleanest demonstration that NKX proteins prefer a different core. The TTF-1/NKX2-1 site is often written CAAGTG, which is the same sequence read the other way.\n\nThe structural reason is not position 50. Every NKX homeodomain has glutamine there, the residue that in other families specifies TAATTA; the NMR structure of the vnd/NK-2 homeodomain on DNA confirms Gln50 together with the canonical Asn51 hydrogen bond and minor-groove contacts from Lys3 and Arg5. What differs is elsewhere in the recognition helix, notably position 54, which is tyrosine in NKX2-1, NKX2-5 and NKX3-1 but methionine or alanine in TAATTA-reading homeodomains. This is why the position-50 rule, which explains TAATTA versus TAATCC, does not explain TAAGTG.\n\nThe family is internally split, and this is its most important practical feature. NKX2-x and NKX3-x models are TAAGTG: NKX3-2 (the medoid, HOCOMOCO NKX32.H14CORE.0.PSM.A) TAAGTG, NKX3-1 TTAAGTGG, NKX2-3 TTAAGTG, NKX2-8 TTAAGTG, NKX2-1 and NKX2-2 TTGAGTG. The NKX6 models are not: NKX6-1 and NKX6-2 give TTAATTA and NKX6-3 gives ATTAATGAC, ordinary TAAT-core sites. NANOG models are TAATGG-like. Family cohesion is accordingly 0.74, the lowest of the homeodomain families here, and NKX6-2's CIS-BP model is flagged as resembling anterior HOX - correctly, since TAATTA is what it is. Within each subgroup the paralogues are indistinguishable: no matrix separates NKX2-1 from NKX2-4, or NKX3-1 from NKX3-2. Several models here are dimeric or extended, such as NKX3-2 TTAAGTGGCACTTAA (two half-sites in inverted orientation) and NKX6-1 ATTAATGGGHWTTTAAT.\n\n## Where it acts\n\nSites sit in lineage-specific enhancers and in promoters of tissue-defining genes: TTF-1 was purified on thyroid-specific gene promoters, NKX2-5 acts on cardiac structural gene enhancers, and NKX6-1 acts downstream of NKX2-2 in beta-cell formation. TAAGTG is a common hexamer, expected on the order of two million times in 3.1 Gb at human base composition, so genome-wide match counts are large and uninformative; accessibility and expression do the work. NKX2-5 sites frequently co-occur with GATA and TBX motifs in cardiac enhancers, NKX6-1 with PDX1 and other pancreatic homeodomain sites.\n\n## Biology and disease\n\nHeterozygous NKX2-5 mutations cause atrial septal defect with progressive atrioventricular conduction block, and Nkx2-5 null mouse embryos arrest at the heart-tube stage. NKX2-1 haploinsufficiency causes brain-lung-thyroid syndrome (choreoathetosis, congenital hypothyroidism, pulmonary disease), while the NKX2-1 locus at 14q13 is focally amplified in lung adenocarcinoma. NKX3-1 is a prostate tumor suppressor whose expression is lost early in prostate carcinogenesis. NKX6-1 is required for pancreatic beta-cell formation, NKX3-2 for axial skeletal development, and NANOG for maintenance of pluripotency in the epiblast and in embryonic stem cells.\n\n## Reading a hit\n\nA TAAGTG match indicates an NKX2/NKX3-type site and no particular gene. A TAAT-type match labelled NKX6 is a generic homeodomain site and should be read as such. This family also carries the clearest indirect-binding problems in the homeodomain set: 6 of its 17 HOCOMOCO models are ChIP-only, and two of them are flagged as matching other families entirely. The NANOG ChIP-derived model reads CCTTTGTNATGCAAA - the octamer ATGCAAAT, which is the POU/OCT4 motif, exactly what indirect capture of a co-occupied partner looks like for a factor that shares enhancers with OCT4 and SOX2. An NKX2-5 ChIP model reads GTGHTGACAG and matches the TBX family. Six CIS-BP entries in this family are transferred from mouse orthologues, one of them (NKX2-6) inferred at 93% DNA-binding-domain identity rather than measured. Prefer the HT-SELEX-derived models when testing whether a sequence is an NKX site.",
+ "caveats": "Treat a TAAGTG hit as \"an NKX2/NKX3-type site\", not as a named factor; paralogues within each subgroup are indistinguishable. The family label spans two different motifs - NKX2 and NKX3 proteins read TAAGTG, but NKX6-1/6-2/6-3 read an ordinary TAAT core - which is why cohesion is only 0.74 and why one NKX6-2 model is flagged as HOX-like. ChIP-only evidence is a real risk here: 6 of 17 HOCOMOCO models are ChIP-derived, and two are flagged as belonging elsewhere, including a NANOG model that is actually the OCT4 octamer. Six CIS-BP motifs are inherited from mouse proteins. Expect roughly two million genome-wide matches, so require accessibility and expression.",
+ "refs": [
+  {
+   "cite": "Guazzi S, Price M, De Felice M, et al. Thyroid nuclear factor 1 (TTF-1) contains a homeodomain and displays a novel DNA binding specificity. EMBO J 1990;9:3631-9.",
+   "pmid": "1976511",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1976511/"
+  },
+  {
+   "cite": "Chen CY, Schwartz RJ. Identification of novel DNA binding targets and regulatory domains of a murine tinman homeodomain factor, nkx-2.5. J Biol Chem 1995;270:15628-33.",
+   "pmid": "7797561",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7797561/"
+  },
+  {
+   "cite": "Gruschus JM, Tsao DH, Wang LH, et al. The three-dimensional structure of the vnd/NK-2 homeodomain-DNA complex by NMR spectroscopy. J Mol Biol 1999;289:529-45.",
+   "pmid": "10356327",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10356327/"
+  },
+  {
+   "cite": "Wilson DS, Sheng G, Jun S, et al. Conservation and diversification in homeodomain-DNA interactions: a comparative genetic analysis. Proc Natl Acad Sci U S A 1996;93:6886-91.",
+   "pmid": "8692913",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8692913/"
+  },
+  {
+   "cite": "Berger MF, Badis G, Gehrke AR, et al. Variation in homeodomain DNA binding revealed by high-resolution analysis of sequence preferences. Cell 2008;133:1266-76.",
+   "pmid": "18585359",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18585359/"
+  },
+  {
+   "cite": "Schott JJ, Benson DW, Basson CT, et al. Congenital heart disease caused by mutations in the transcription factor NKX2-5. Science 1998;281:108-11.",
+   "pmid": "9651244",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9651244/"
+  },
+  {
+   "cite": "Lyons I, Parsons LM, Hartley L, et al. Myogenic and morphogenetic defects in the heart tubes of murine embryos lacking the homeo box gene Nkx2-5. Genes Dev 1995;9:1654-66.",
+   "pmid": "7628699",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7628699/"
+  },
+  {
+   "cite": "Krude H, Schütz B, Biebermann H, et al. Choreoathetosis, hypothyroidism, and pulmonary alterations due to human NKX2-1 haploinsufficiency. J Clin Invest 2002;109:475-80.",
+   "pmid": "11854319",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11854319/"
+  },
+  {
+   "cite": "Shen MM, Abate-Shen C. Roles of the Nkx3.1 homeobox gene in prostate organogenesis and carcinogenesis. Dev Dyn 2003;228:767-78.",
+   "pmid": "14648854",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/14648854/"
+  },
+  {
+   "cite": "Sander M, Sussel L, Conners J, et al. Homeobox gene Nkx6.1 lies downstream of Nkx2.2 in the major pathway of beta-cell formation in the pancreas. Development 2000;127:5533-40.",
+   "pmid": "11076772",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11076772/"
+  },
+  {
+   "cite": "Jauch R, Ng CK, Saikatendu KS, et al. Crystal structure and DNA binding of the homeodomain of the stem cell transcription factor Nanog. J Mol Biol 2008;376:758-70.",
+   "pmid": "18177668",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18177668/"
+  },
+  {
+   "cite": "Worsley Hunt R, Wasserman WW. Non-targeted transcription factors motifs are a systemic component of ChIP-seq datasets. Genome Biol 2014;15:412.",
+   "pmid": "25070602",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25070602/"
+  }
+ ]
+}

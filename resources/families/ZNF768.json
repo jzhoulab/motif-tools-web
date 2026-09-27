@@ -1,0 +1,54 @@
+{
+ "key": "ZNF768",
+ "aka": [
+  "MIR core element",
+  "ZNF768 site",
+  "CCTCTCTG half-site"
+ ],
+ "consensus": "GCTGTGTGNNNNNNNNNNNNNNNNNNNNCCTCTCTG",
+ "short": "ZNF768 is a C2H2 zinc-finger protein whose binding site sits in the core region of mammalian-wide interspersed repeats (MIRs), an old family of SINE retrotransposons. The site is bipartite: GCTGTGTG and CCTCTCTG separated by about twenty unconstrained bases, so the two halves are usually reported separately and most motif databases hold only one of them. ZNF768 binding is concentrated in euchromatin and at promoters of expressed genes, and its own N-terminus contains a heptad repeat array structurally reminiscent of the RNA polymerase II C-terminal domain, which is where the frequent comparison to MYC-box-like repeats comes from. The literature is recent and small: two primary characterizations plus mouse work linking it to RAS-induced senescence and p53.",
+ "long": "## The factors\n\nZNF768 is a single human gene with no paralogue that shares its specificity, and the entire family here consists of its own matrices. The protein has a C-terminal C2H2 zinc-finger array and, unusually, an N-terminal region built from a heptad repeat array that is structurally related to the C-terminal domain (CTD) of the largest subunit of RNA polymerase II. That array evolved in placental mammals, is absent in marsupials and monotremes, and varies in length between species, which raises the possibility that it performs CTD-like scaffolding functions in gene regulation. The resemblance of these repeats to MYC homology boxes is the origin of the \"MYC-box-like\" description attached to this family in some annotations; the description refers to the protein's repeats rather than to a MYC-type DNA element, and no E-box-like binding has been reported. ZNF768 is broadly expressed, is a phosphoprotein, and is destabilized when RAS signalling is activated.\n\n## The motif\n\nThe characterized site is bipartite. Affinity purification and genome-wide mapping identified specific binding to GCTGTGTG followed, about twenty base pairs later, by CCTCTCTG, with the intervening sequence unconstrained. This spacing is the reason the four databases disagree so visibly. The two ChIP-derived HOCOMOCO matrices, 23 and 21 base pairs long, are adjacent windows on the same long site and even share their overlapping flank: one contains CTCAGAGAGG (the reverse complement of CCTCTCTGAG) and the other ends in CACACAGC (the reverse complement of GCTGTGTG). The CIS-BP matrix and the Vierstra archetype both read CTTAACCTCTCTGAG, essentially the CCTCTCTG half with its native MIR flank, and JASPAR MA1731.2 reduces it to the eight-base CCTCTCTG core. No matrix in any of the four databases spans the whole bipartite element, because standard motif discovery does not model a twenty-base gap. The family consensus quoted here therefore writes the gap explicitly; the dataConsensus CTTAACCTCTCTGAG is the 3' half only. Because the site is embedded in a repeat family, the \"flanks\" that motif discovery recovers are MIR consensus sequence rather than base contacts, and should not be read as specificity determinants.\n\n## Where it acts\n\nZNF768 occupancy tracks MIRs, and MIRs are old enough to be widely fixed and heavily fragmented, with hundreds of thousands of copies in the human genome. Binding is preferentially associated with euchromatin and with promoter regions of genes that are actively expressed, and in the two cell lines examined (the B-cell line Raji and the osteosarcoma line U2OS) it marked genes expressed in a cell-type-specific manner. Mass spectrometry of ZNF768 complexes recovered the Elongator components ELP1, ELP2 and ELP3 along with other nuclear factors, pointing to a role at expressed genes rather than in silencing. MIR-derived sequences are independently known to act as enhancers and to be rewired during changes in pluripotency, so the sequence class is regulatorily active with or without ZNF768. There is no named composite element pairing ZNF768 with another factor.\n\n## Biology and disease\n\nThe functional literature is small and recent, and it is worth saying plainly that the connection between the DNA motif and the phenotypes below has not been closed. ZNF768 protein is destabilized when oncogenic RAS is activated, and its levels fall in replicative, stress-induced and oncogene-induced senescence. Depleting ZNF768 impairs proliferation and induces senescence, altering expression of cell-cycle effectors and established p53 targets; overexpressing it helps cells bypass RAS-induced senescence, and it interacts with p53 and suppresses p53 phosphorylation and activity. ZNF768 is amplified or overexpressed in a range of tumours. Mouse work supports this axis from both directions: ZNF768 loss amplifies p53 action and reduces lung tumorigenesis, and a Cre-inducible ZNF768 overexpression model has been generated. None of these studies identifies the MIR-embedded motif as the mediator, so the relationship between the binding site and the senescence phenotype is currently an open question rather than an established mechanism. There is no human Mendelian disease linked to ZNF768.\n\n## Reading a hit\n\nExpect a hit here to be a hit on a MIR. Because the recognized sequence lies in a repeat core, a match tells you first that you are in a MIR element and only second that ZNF768 might bind, and the two statements are not interchangeable: the great majority of MIR copies are not occupied. Only one half of the bipartite site is modelled by most matrices, and CCTCTCTG on its own is an eight-base CT-rich word that overlaps other CT-rich families, so a single-half match in non-repeat sequence is weak. Check whether the two halves occur with the expected spacing. All the direct evidence in this family is ChIP-derived (HOCOMOCO evidence code P for both matrices), with no HT-SELEX support, so direct binding by the purified protein is not independently confirmed here. Repeat-derived motifs are also a known source of artefacts in occupancy data, including spurious apparent binding at repetitive and organellar sequences, so verify mappability before interpreting a hit.",
+ "caveats": "Two structural problems. The site is bipartite with an unconstrained twenty-base gap, and no database matrix models it, so every available matrix covers one half; scores are not comparable and half-site matches are weak. And the site lives inside MIR SINEs, which means a match mainly reports the presence of a MIR, not occupancy: MIR copies number in the hundreds of thousands and only a small subset is bound. Evidence in this family is ChIP-only (HOCOMOCO codes P, grade B), with no in vitro confirmation of direct binding to the motif, and the recovered flanks are MIR consensus sequence rather than demonstrated base contacts. The senescence and p53 biology is not yet tied to the motif.",
+ "refs": [
+  {
+   "cite": "Rohrmoser M, Kluge M, Yahia Y, et al. MIR sequences recruit zinc finger protein ZNF768 to expressed genes. Nucleic Acids Res 2019;47:700-715.",
+   "pmid": "30476274",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30476274/"
+  },
+  {
+   "cite": "Villot R, Poirier A, Bakan I, et al. ZNF768 links oncogenic RAS to cellular senescence. Nat Commun 2021;12:4841.",
+   "pmid": "34404770",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34404770/"
+  },
+  {
+   "cite": "de Tribolet-Hardy J, Thorball CW, Forey R, et al. Genetic features and genomic targets of human KRAB-zinc finger proteins. Genome Res 2023;33:1409-1423.",
+   "pmid": "37730438",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37730438/"
+  },
+  {
+   "cite": "Zhang X, Blumenthal RM, Cheng X. Updated understanding of the protein-DNA recognition code used by C2H2 zinc finger proteins. Curr Opin Struct Biol 2024;87:102836.",
+   "pmid": "38754172",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38754172/"
+  },
+  {
+   "cite": "Marinov GK, Ramalingam V, Greenleaf WJ, et al. An updated compendium and reevaluation of the evidence for nuclear transcription factor occupancy over the mitochondrial genome. PLoS One 2025;20:e0318796.",
+   "pmid": "40163815",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40163815/"
+  },
+  {
+   "cite": "Cipta NO, Zeng Y, Wong KW, et al. Rewiring of SINE-MIR enhancer topology and Esrrb modulation in expanded and naive pluripotency. Genome Biol 2025;26:107.",
+   "pmid": "40296153",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40296153/"
+  },
+  {
+   "cite": "Poirier A, Utecht T, Villot R, et al. ZNF768 loss amplifies p53 action and reduces lung tumorigenesis in mice. Oncogene 2025;44:1793-1804.",
+   "pmid": "40133474",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40133474/"
+  },
+  {
+   "cite": "Poirier A, Tribouillard L, Kordahi M, et al. Generation and characterization of a Cre-inducible ZNF768 overexpression mouse model. Sci Rep 2025;15:19792.",
+   "pmid": "40473701",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40473701/"
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "key": "RUNX",
+ "aka": [
+  "RUNX site",
+  "core site",
+  "core-binding factor site",
+  "CBF site",
+  "PEBP2 site",
+  "AML1 site",
+  "TGYGGT",
+  "ACCRCA"
+ ],
+ "consensus": "TGYGGT",
+ "short": "RUNX sites are read by RUNX1, RUNX2 and RUNX3 through the Runt domain, a 128-residue immunoglobulin-like fold in the same structural class as NF-kB and p53. The core is a six-base element, TGYGGT, written ACCRCA on the other strand, and it is the retroviral enhancer \"core\" site originally described for core-binding factor. None of the three proteins binds efficiently alone: all require the non-DNA-binding subunit CBFB, which clamps the Runt domain into its DNA-bound conformation and raises affinity substantially. RUNX1 is the hematopoietic member and one of the most frequent targets of chromosomal translocation in leukemia; RUNX2 controls osteoblast differentiation and RUNX3 gut and immune programmes. The three paralogues are indistinguishable by sequence preference.",
+ "long": "## The factors\n\nRUNX1 (AML1, CBFA2), RUNX2 (CBFA1) and RUNX3 (CBFA3) each carry one Runt domain near their N terminus. The domain is about 128 residues and adopts an s-type immunoglobulin fold, placing RUNX in the same structural superfamily as NF-kB, NFAT, STAT and p53 rather than with any classical helix-turn-helix family. It binds DNA as a monomer, but not effectively on its own: the shared subunit CBFB (CBFbeta, PEBP2beta) makes no DNA contact yet is required in practice. Two crystal structures of the Runt domain-CBFB-DNA ternary complex showed how - CBFB stabilises the DNA-bound conformation of the domain's C-terminal \"tail\" and \"wing\", which together clamp the phosphate backbone across both grooves, and the extended tail contributes most of the NF-kB-like base-specific major-groove contacts. Expression is largely complementary: RUNX1 in hematopoietic stem and progenitor cells and lymphocytes, RUNX2 in osteoblasts, chondrocytes and some epithelia, RUNX3 in gut epithelium, sensory neurons and T and NK cells. All three interact with CBFB and with the same corepressor and coactivator machinery, so which one is present is usually a matter of cell type rather than of DNA sequence.\n\n## The motif\n\nThe core is six bases. Binding-site selection with core-binding factor gave the consensus PyGPyGGTPy, most compactly written TGYGGT, and its reverse complement ACCRCA is equally common in the literature. The Y at position three is the one genuinely ambiguous base, and it explains a discrepancy visible in these databases: ChIP-derived models for all three paralogues read TGTGGTT (ACCACA), whereas HT-SELEX and methyl-SELEX models for RUNX2 and RUNX3, the JASPAR RUNX2 model, and the Vierstra archetypes read TGCGGTT (ACCGCA). Both are correct readings of TGYGGT; in vitro selection favours the C variant, genomic occupancy the T variant. Structurally, the guanines of the GG step are read by arginine and lysine side chains from the Runt domain tail in the major groove, while the flanking T and the distorted, bent B-form geometry of the site account for the rest of the specificity. Six informative positions is little, and the databases compensate in two ways. Several models are tandem repeats of the core (AACCGCAAAAACCGCA, GTGGTTTTTGTGGTTT), which reflects the real tendency of RUNX enhancers to carry paired sites rather than any dimeric binding by the protein. Others extend one or two positions into the flank. No model distinguishes RUNX1, RUNX2 and RUNX3 - family cohesion is 0.86 and the three ChIP-derived HOCOMOCO consensuses are character-for-character identical. Note also that one CIS-BP RUNX1 entry was measured on the mouse protein, whose Runt domain is identical to the human one at 100% identity.\n\n## Where it acts\n\nRUNX motifs are enhancer features more than promoter features, and are not enriched in CpG islands. In hematopoietic cells RUNX1 occupies tens of thousands of sites, and its motif is one of the commonest in the accessible chromatin of blood lineages; RUNX2 shows the same pattern in osteoblasts. The characteristic arrangement is a composite with ETS. Cooperative binding of ETS1 and core-binding factor to adjacent sites was described at the T-cell receptor enhancers, and genome-wide work later showed that the ETS-RUNX composite is what distinguishes ETS1's T-cell-specific enhancer occupancy from its redundant, consensus-driven occupancy at housekeeping promoters. RUNX sites also co-occur with GATA (the GATA-RUNX pairing at hematopoietic enhancers), with SPI1/PU.1 in myeloid cells, with TCF/LEF and with AP-1.\n\n## Biology and disease\n\nRunx1-null mice fail definitive hematopoiesis and die in mid-gestation with central nervous system hemorrhage; the Cbfb knockout reproduces this, which was the genetic demonstration that the partner subunit is required in vivo. Runx2-null mice have no bone formation at all because osteoblasts arrest before maturation, and heterozygous loss-of-function mutations in human RUNX2 cause cleidocranial dysplasia. RUNX3 silencing by promoter hypermethylation and loss of expression was linked causally to gastric carcinoma. RUNX1 is among the most frequently rearranged genes in human leukemia: t(8;21) creates RUNX1-RUNX1T1 in acute myeloid leukemia, t(12;21) creates ETV6-RUNX1 in the commonest subtype of childhood B-cell acute lymphoblastic leukemia, and inv(16) fuses CBFB to MYH11; germline RUNX1 mutations cause familial platelet disorder with predisposition to myeloid malignancy. Most of these lesions keep an intact Runt domain and convert RUNX1 into a repressor at its normal sites.\n\n## Reading a hit\n\nTGYGGT is short. Expect roughly one match every few hundred base pairs per strand, so an isolated hit is close to meaningless; weight matches by clustering, by conservation, and above all by the presence of a partner site. An adjacent ETS core (GGAA/GGAT) within a few base pairs, or a nearby GATA site, turns a weak RUNX match into a plausible composite element. The hit cannot name the paralogue, and it cannot distinguish RUNX from CBFB-containing complexes generally, since CBFB has no motif of its own - a \"CBFB site\" in any database is a RUNX site. Decide which variant to scan with deliberately: an in vitro TGCGGT model will score differently from a ChIP-derived TGTGGT model on the same sequence, and neither is wrong. The HOCOMOCO RUNX1, RUNX2 and RUNX3 primary models are ChIP-only (grade B); because RUNX travels in composites with ETS and GATA, ChIP-derived RUNX models can absorb flanking partner information, and conversely ETS models derived from T-cell ChIP can absorb the RUNX core.",
+ "caveats": "A six-base core means chance matches dominate: treat a lone TGYGGT as no evidence and look for a composite, most often an ETS core within a few base pairs or a nearby GATA site. The three paralogues cannot be told apart - the ChIP-derived RUNX1, RUNX2 and RUNX3 models here are identical, so a hit is RUNX-family and the responsible protein follows from cell type. CBFB has no motif of its own, so any database entry labelled for it is a RUNX motif. Be deliberate about the variant: in vitro models read TGCGGT, ChIP models TGTGGT, and they score real sequence differently. All three primary HOCOMOCO models are ChIP-only.",
+ "refs": [
+  {
+   "cite": "Melnikova IN, Crute BE, Wang S, et al. Sequence specificity of the core-binding factor. J Virol 1993;67:2408-11.",
+   "pmid": "8445737",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8445737/"
+  },
+  {
+   "cite": "Wotton D, Ghysdael J, Wang S, et al. Cooperative binding of Ets-1 and core binding factor to DNA. Mol Cell Biol 1994;14:840-50.",
+   "pmid": "8264651",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8264651/"
+  },
+  {
+   "cite": "Okuda T, van Deursen J, Hiebert SW, et al. AML1, the target of multiple chromosomal translocations in human leukemia, is essential for normal fetal liver hematopoiesis. Cell 1996;84:321-30.",
+   "pmid": "8565077",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8565077/"
+  },
+  {
+   "cite": "Wang Q, Stacy T, Miller JD, et al. The CBFbeta subunit is essential for CBFalpha2 (AML1) function in vivo. Cell 1996;87:697-708.",
+   "pmid": "8929538",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8929538/"
+  },
+  {
+   "cite": "Komori T, Yagi H, Nomura S, et al. Targeted disruption of Cbfa1 results in a complete lack of bone formation owing to maturational arrest of osteoblasts. Cell 1997;89:755-64.",
+   "pmid": "9182763",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9182763/"
+  },
+  {
+   "cite": "Mundlos S, Otto F, Mundlos C, et al. Mutations involving the transcription factor CBFA1 cause cleidocranial dysplasia. Cell 1997;89:773-9.",
+   "pmid": "9182765",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9182765/"
+  },
+  {
+   "cite": "Nagata T, Gupta V, Sorce D, et al. Immunoglobulin motif DNA recognition and heterodimerization of the PEBP2/CBF Runt domain. Nat Struct Biol 1999;6:615-9.",
+   "pmid": "10404214",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10404214/"
+  },
+  {
+   "cite": "Tahirov TH, Inoue-Bungo T, Morii H, et al. Structural analyses of DNA recognition by the AML1/Runx-1 Runt domain and its allosteric control by CBFbeta. Cell 2001;104:755-67.",
+   "pmid": "11257229",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11257229/"
+  },
+  {
+   "cite": "Bravo J, Li Z, Speck NA, et al. The leukemia-associated AML1 (Runx1)--CBF beta complex functions as a DNA-induced molecular clamp. Nat Struct Biol 2001;8:371-8.",
+   "pmid": "11276260",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11276260/"
+  },
+  {
+   "cite": "Li QL, Ito K, Sakakura C, et al. Causal relationship between the loss of RUNX3 expression and gastric cancer. Cell 2002;109:113-24.",
+   "pmid": "11955451",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11955451/"
+  },
+  {
+   "cite": "Hollenhorst PC, Chandler KJ, Poulsen RL, et al. DNA specificity determinants associate with distinct transcription factor functions. PLoS Genet 2009;5:e1000778.",
+   "pmid": "20019798",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20019798/"
+  },
+  {
+   "cite": "Sood R, Kamikubo Y, Liu P. Role of RUNX1 in hematological malignancies. Blood 2017;129:2070-2082.",
+   "pmid": "28179279",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28179279/"
+  }
+ ]
+}

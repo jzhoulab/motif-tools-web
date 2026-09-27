@@ -1,0 +1,83 @@
+{
+ "key": "ZEB",
+ "aka": [
+  "ZEB1",
+  "ZEB2",
+  "TCF8",
+  "deltaEF1",
+  "AREB6",
+  "ZFHX1A",
+  "SIP1",
+  "ZFHX1B",
+  "SMADIP1",
+  "E2-box",
+  "Z-box",
+  "CACCTG box"
+ ],
+ "consensus": "CACCTG",
+ "short": "ZEB1 and ZEB2 are large C2H2 zinc-finger repressors that bind the E-box-like sequence CACCTG, written CAGGTG when read on the other strand. Each protein carries two widely separated zinc-finger clusters, either of which can engage a site, so one molecule can hold two boxes at once. ZEB proteins contain no basic helix-loop-helix domain, yet they compete for the same CAGGTG boxes that bHLH activators use, so an E-box hit does not imply a bHLH factor. Both paralogues repress epithelial genes, E-cadherin (CDH1) above all, and are central to epithelial-mesenchymal transition. Loss-of-function mutations cause posterior polymorphous corneal dystrophy (ZEB1) and Mowat-Wilson syndrome (ZEB2), and high ZEB1 marks poorly differentiated carcinomas.",
+ "long": "## The factors\n\nHumans have two paralogues: ZEB1 (also TCF8, deltaEF1, AREB6, ZFHX1A) and ZEB2 (SIP1, ZFHX1B, SMADIP1), each roughly 1,100-1,200 residues. Their architecture is atypical. Instead of one contiguous finger array, each protein carries two widely separated C2H2 clusters - three to four fingers near the N terminus and three near the C terminus - flanking a central region that includes a degenerate homeodomain which does not itself bind DNA. Remacle and colleagues showed that each cluster binds a target site on its own, so a single molecule works with two hands and can occupy two sites simultaneously. ZEB proteins do not dimerize through a leucine zipper or a helix-loop-helix; repression is delivered by recruited partners, chiefly CtBP through a central interaction domain, plus NuRD and HDAC complexes. ZEB2 was independently isolated as a SMAD-interacting protein, and both paralogues couple TGF-beta signaling to transcription. ZEB1 is expressed in mesenchymal tissue, T cells and corneal endothelium; ZEB2 in neural crest derivatives, the central nervous system and blood. Both are induced during epithelial-mesenchymal transition (EMT) and are restrained post-transcriptionally by the miR-200 microRNA family.\n\n## The motif\n\nThe literature writes the site CACCTG, or equivalently CAGGTG on the opposite strand: a 6 bp member of the CANNTG E-box class, sometimes called the E2-box or Z-box. Essentially all the information sits in those six positions. Each three-finger cluster reads about one base triplet per finger from the major groove, which accounts for a footprint of roughly 6 bp and for the absence of strong flanking preference. The family data matches this: the CIS-BP and JASPAR models are rendered CACCTG and CTCACCTG while the HOCOMOCO models read CAGGTG and CAGGTGAG, which is the same motif on the other strand (the reverse complement of CAGGTGAG is CTCACCTG). This is a strand convention, not a disagreement. Information content is low, 10-12 bits, and the ZEB1 and ZEB2 models are effectively interchangeable, with cross-database similarities of 0.94-0.99, so sequence alone cannot tell the two paralogues apart. Because each protein has two independent hands, tandem CACCT(G) boxes bind more strongly than a single box, and validated targets such as CDH1 carry two or more; no fixed spacing is required.\n\n## Where it acts\n\nZEB sites occur in proximal promoters of epithelial structural genes - the E-pal element of CDH1 is the textbook case - and in large numbers of distal enhancers in mesenchymal and carcinoma cells. CACCTG contains no CpG, so it is not depleted by genome-wide CpG loss: a strict 6 bp match occurs roughly once every 2 kb counting both strands, on the order of a million times in the human genome. Occupancy is therefore set by chromatin state and competition, not by site availability. ZEB1 ChIP-seq peaks overlap extensively with SNAI1/SNAI2 peaks and with bHLH factor peaks, because all of them use the same box. Functional partners include SMAD2/SMAD3 (especially for ZEB2), CtBP, NuRD and, in some settings, YAP; the best-characterized regulatory circuit is the mutual repression between ZEB1 and the miR-200 family.\n\n## Biology and disease\n\nZEB1 and ZEB2 repress epithelial genes including CDH1, EPCAM, CRB3 and LGL2, and are required for EMT in gastrulation, neural crest migration and organ fibrosis. Mouse deltaEF1 (Zeb1) mutants show skeletal defects and impaired thymocyte development. Zeb1 also couples EMT to cellular senescence through the CDKN2A locus, so loss of Zeb1 in mouse embryonic fibroblasts triggers premature senescence. In humans, heterozygous ZEB1 mutations cause posterior polymorphous corneal dystrophy type 3, with ectopic COL4A3 expression in corneal endothelium, while truncating mutations and deletions of ZEB2 cause Mowat-Wilson syndrome (intellectual disability, microcephaly, Hirschsprung disease and a distinctive face). In carcinomas, ZEB1 expression tracks with loss of apicobasal polarity and dedifferentiation. One honest qualification: ZEB-driven EMT is firmly established in culture and in development, but in human tumors the transition is usually partial, and how much full EMT contributes to metastasis is still argued; current consensus statements describe a spectrum of hybrid epithelial-mesenchymal states rather than a binary switch.\n\n## Reading a hit\n\nA CACCTG/CAGGTG match is among the least specific hits a scan can return. Plausible binders include the bHLH E-proteins TCF3, TCF4 and TCF12, MYOD and MYF, TWIST and HAND, NEUROD and ATOH, MAX and USF, and the C2H2 repressors SNAI1-3, SCRT1/2 and ZBTB18. An E-box hit therefore does not imply a bHLH factor. Nothing in the 6 bp core distinguishes ZEB from these alternatives; only context does. Two boxes within a short window, in a mesenchymal or TGF-beta-stimulated cell type, and near an epithelial gene, is a reasonable circumstantial case for ZEB. A single isolated box is not. Note also the evidence types: the HOCOMOCO ZEB1 and ZEB2 models are ChIP-seq-derived (evidence code P, grade B) and the JASPAR ZEB1 matrix MA0103.4 is ChIP-seq-derived, so they report where ZEB was found, not necessarily what ZEB binds directly; the CIS-BP entries for both genes are direct rather than inferred. Low label agreement in the family data (0.2-0.4) means the nearest neighbours of these matrices across databases are often non-ZEB E-box models, which is expected rather than a sign of error.",
+ "caveats": "Trust the family, not the member, and not even the family without context. The 6 bp CACCTG core is shared with bHLH activators, SNAIL/SCRATCH, INSM and ZBTB18, so a hit licenses \"E-box\" and nothing more; ZEB1 and ZEB2 motifs are indistinguishable from each other at 0.94-0.99 similarity. The site is common enough to occur roughly a million times by chance in the genome, so single matches carry almost no evidence. HOCOMOCO ZEB1/ZEB2 and JASPAR MA0103.4 are ChIP-derived and can reflect indirect or co-binding. Paired boxes, an epithelial target gene and a mesenchymal or TGF-beta context are what make a ZEB call defensible.",
+ "refs": [
+  {
+   "cite": "Remacle JE, Kraft H, Lerchner W, et al. New mode of DNA binding of multi-zinc finger transcription factors: deltaEF1 family members bind with two hands to two target sites. EMBO J 1999;18:5073-84.",
+   "pmid": "10487759",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10487759/"
+  },
+  {
+   "cite": "Sekido R, Murai K, Kamachi Y, et al. Two mechanisms in the action of repressor deltaEF1: binding site competition with an activator and active repression. Genes Cells 1997;2:771-83.",
+   "pmid": "9544704",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9544704/"
+  },
+  {
+   "cite": "Comijn J, Berx G, Vermassen P, et al. The two-handed E box binding zinc finger protein SIP1 downregulates E-cadherin and induces invasion. Mol Cell 2001;7:1267-78.",
+   "pmid": "11430829",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11430829/"
+  },
+  {
+   "cite": "Higashi Y, Moribe H, Takagi T, et al. Impairment of T cell development in deltaEF1 mutant mice. J Exp Med 1997;185:1467-79.",
+   "pmid": "9126927",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9126927/"
+  },
+  {
+   "cite": "Krafchak CM, Pawar H, Moroi SE, et al. Mutations in TCF8 cause posterior polymorphous corneal dystrophy and ectopic expression of COL4A3 by corneal endothelial cells. Am J Hum Genet 2005;77:694-708.",
+   "pmid": "16252232",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16252232/"
+  },
+  {
+   "cite": "Wakamatsu N, Yamada Y, Yamada K, et al. Mutations in SIP1, encoding Smad interacting protein-1, cause a form of Hirschsprung disease. Nat Genet 2001;27:369-70.",
+   "pmid": "11279515",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11279515/"
+  },
+  {
+   "cite": "Aigner K, Dampier B, Descovich L, et al. The transcription factor ZEB1 (deltaEF1) promotes tumour cell dedifferentiation by repressing master regulators of epithelial polarity. Oncogene 2007;26:6979-88.",
+   "pmid": "17486063",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17486063/"
+  },
+  {
+   "cite": "Burk U, Schubert J, Wellner U, et al. A reciprocal repression between ZEB1 and members of the miR-200 family promotes EMT and invasion in cancer cells. EMBO Rep 2008;9:582-9.",
+   "pmid": "18483486",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18483486/"
+  },
+  {
+   "cite": "Liu Y, El-Naggar S, Darling DS, et al. Zeb1 links epithelial-mesenchymal transition and cellular senescence. Development 2008;135:579-88.",
+   "pmid": "18192284",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18192284/"
+  },
+  {
+   "cite": "Nieto MA, Huang RY, Jackson RA, et al. EMT: 2016. Cell 2016;166:21-45.",
+   "pmid": "27368099",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27368099/"
+  },
+  {
+   "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
+   "pmid": "37971293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  },
+  {
+   "cite": "Rauluseviciute I, Riudavets-Puig R, Blanc-Mathieu R, et al. JASPAR 2024: 20th anniversary of the open-access database of transcription factor binding profiles. Nucleic Acids Res 2024;52:D174-D182.",
+   "pmid": "37962376",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37962376/"
+  }
+ ]
+}

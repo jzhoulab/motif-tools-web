@@ -1,0 +1,71 @@
+{
+ "key": "ZNF_OTHER",
+ "aka": [
+  "other C2H2 zinc fingers",
+  "non-KRAB C2H2 zinc fingers",
+  "unassigned ZNF",
+  "tandem zinc fingers (other)",
+  "ZXD",
+  "NET family zinc fingers"
+ ],
+ "short": "The remainder of the C2H2 zinc-finger class: factors that are neither KRAB zinc-finger proteins nor members of a family with its own entry. Ninety-six named genes appear here, from well-studied cases such as ZNF335, ZNF341, ZFAT and ZFTA to dozens of ZNF numbers with almost no literature. What they share is the fold, and little else: the 168 matrices in this entry are mutually unrelated, with a cohesion of 0.38 and a median length of 12 bp. The evidence behind them is nonetheless much better than for the KRAB group, with 39 of 93 HOCOMOCO models at the top grade and many supported in vitro. A hit here identifies one named protein at best, never a family motif.",
+ "long": "## The factors\n\nAbout 700 human proteins carry C2H2 zinc fingers, the largest structural class of transcription factors in the genome, and roughly half also carry a KRAB, SCAN, BTB or SET domain (Vaquerizas et al. 2009; Schmitges et al. 2016; Lambert et al. 2018). This entry holds most of the remainder that lack a dedicated family: 96 named genes plus two generic archetype labels, heterogeneous in every respect other than the fold. A few are well characterized. ZNF335/NIF-1 is a component of a vertebrate-specific trithorax H3K4-methylation complex. ZNF341 is a nuclear transcription factor that binds the STAT3 promoter. ZFTA, formerly C11orf95, is best known as a fusion partner in ependymoma. Others carry different modules: ZXDA, ZXDB and ZXDC; ZFP64 and ZFP91; ZNF423, a relative of the EBF-binding zinc fingers; MZF1, which has a SCAN domain but is filed here; and the NET-family proteins ZNF503 and ZNF703, with only one or two fingers. Most of the rest, from ZNF16 through ZNF865, received their motifs from bulk C2H2 screens rather than individual study (Najafabadi et al. 2015; Schmitges et al. 2016). Zinc fingers with distinctive, well-mapped sites — CTCF, EGR, WT1, KLF/SP, MAZ, VEZF1, ZNF143, ZNF263, ZNF281, ZNF384, ZNF410 and ZNF768 — have their own entries and are not included here.\n\n## The motif\n\nThere is no family consensus; cohesion is 0.38 and the representative (CIS-BP M08388, CCCGGCCTCC) is only a centroid. Median consensus length is 12 bp and median information content 13.9 bits, with 59 matrices at 15 bp or more, 33 at 20 bp or more, and 26 above 20 bits. In practice they fall into three groups. First, long element-like matrices: ZNF146 (OZF) CTTTTTTATGGCTGCATAGTATTCC at 41 bits, with ZNF260 giving nearly the same sequence, so those two are not distinguishable; also ZNF280A TCTCTCCAGTGTGAATTCTCTGAT and ZNF121 CCTGGGCAACATAGCAAGACCCC. Second, simple-repeat matrices, which look informative but are not specific: ZNF646 and ZNF865 are both (TG)n at 31 and 27 bits, and ZNF48 is a GA repeat. Third, and hardest, short GC-rich matrices: ZNF740 GTGGGGGGGG, ZNF395 and SLC2A4RG both GCCGGCCGG, ZNF575 GCTGCGGCAGCAG, RLF CCGCCGCTTTT, ZXDA GCAGGGGC and ZXDB CAGGGG. These are near-indistinguishable from one another and from the SP/KLF, MAZ, VEZF1, ZNF281, EGR and GLI motifs, each of which has its own entry. Twenty-one matrices have their nearest neighbour outside the family: four are essentially a KLF/SP GC-box (three ZNF574 models and the archetype AC0466), two the SIX homeodomain motif (both ZNF32 models), two the BCL11 motif (both ZNF296 models), and single cases point to ZNF281, VEZF1, GLI, YY1, EBF, ZIC, PRDM, NFKB, ETS, ETV2/ETV6, posterior HOX and ZNF384. The clearest single case is basonuclin 2: the JASPAR BNC2 matrix is TGAGTCA, the canonical AP-1 site, at 0.99 similarity to the AP-1 entry.\n\n## Where it acts\n\nMostly promoters and promoter-proximal regions. The GC-rich majority lands in CpG islands, joining a crowded pool of interchangeable GC-box models; the small number of long, element-like matrices lands in repeat-rich sequence. Systematic profiling of 166 poorly characterized human transcription factors found that nearly half associate with known promoters and enhancers, often co-localizing at conserved motif matches, while the other half bind largely non-overlapping sites in repeat-rich closed chromatin (Razavi et al. 2026). Members of this entry are split across both behaviours and mostly unassigned.\n\n## Biology and disease\n\nThree members have clear, mapped human phenotypes. Biallelic ZNF335 mutations cause severe microcephaly with small somatic size and neonatal death; Znf335-null mice are embryonic lethal, the protein is required for neural progenitor self-renewal and neuronal differentiation, and it directly regulates REST/NRSF (Yang et al. 2012). Loss-of-function mutations in ZNF341 cause a recessive form of hyper-IgE syndrome: ZNF341 binds the STAT3 promoter, and its loss lowers basal STAT3 mRNA and protein, abolishes STAT3 autoinduction, and removes T helper 17 cells while leaving an excess of T helper 2 cells (Béziat et al. 2018). ZFTA is the 5' partner of the recurrent ZFTA(C11orf95)-RELA fusion that drives oncogenic NF-kB signalling in supratentorial ependymoma; the driver is the fusion, not the wild-type factor (Parker et al. 2014). For most members here no loss-of-function phenotype has been published, which reflects absence of study rather than absence of function; these are the proteins recent systematic efforts were designed to characterize (Jolma et al. 2026).\n\n## Reading a hit\n\nIdentify the protein, then ask whether the matrix can carry the identification. Three checks settle most cases. Is it GC-rich and shorter than about 12 bp? Then it is one of many interchangeable GC-box models and should not be attributed to a specific protein without orthogonal evidence. Is it a simple repeat, as for ZNF646, ZNF865 or ZNF48? Then it is not a motif in any useful sense. Does it have a high-similarity neighbour in a different family? Twenty-one matrices do, and for those the label should be treated as unresolved. Evidence here is comparatively good: 39 of 93 HOCOMOCO models are grade A and many carry in vitro codes (S or M) alongside ChIP, so a grade-A model with both kinds of support, such as ZFAT's GCAGATTCGTCA or ZFTA's GTGGCCCC, deserves more weight than a grade-C ChIP-only model such as ZNF711's. Two CIS-BP models, for ZNF652 and ZNF691, are transferred from mouse orthologues at 0.97 to 0.99 DNA-binding-domain identity, a safe transfer. Finally, because many of these proteins co-localize at the same conserved sites, a match in an occupied promoter does not tell you which zinc finger made the contact.",
+ "caveats": "This entry is the leftover of a structural class, not a motif: 96 named proteins, 168 matrices, cohesion 0.38, no consensus. Read a hit as naming one protein at best. Short GC-rich members are interchangeable with each other and with the SP/KLF, MAZ, VEZF1, ZNF281, EGR and GLI motifs, and simple-repeat members such as ZNF646, ZNF865 and ZNF48 carry no factor-specific information. Twenty-one matrices most closely resemble a motif from another family; the clearest is the JASPAR BNC2 model, which is the AP-1 site. Evidence is better than in the KRAB group, with 39 of 93 HOCOMOCO models at grade A, so check the evidence code before trusting any label.",
+ "refs": [
+  {
+   "cite": "Vaquerizas JM, Kummerfeld SK, Teichmann SA, et al. A census of human transcription factors: function, expression and evolution. Nat Rev Genet 2009;10:252-63.",
+   "pmid": "19274049",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19274049/"
+  },
+  {
+   "cite": "Lambert SA, Jolma A, Campitelli LF, et al. The Human Transcription Factors. Cell 2018;172:650-665.",
+   "pmid": "29425488",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29425488/"
+  },
+  {
+   "cite": "Schmitges FW, Radovani E, Najafabadi HS, et al. Multiparameter functional diversity of human C2H2 zinc finger proteins. Genome Res 2016;26:1742-1752.",
+   "pmid": "27852650",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27852650/"
+  },
+  {
+   "cite": "Najafabadi HS, Mnaimneh S, Schmitges FW, et al. C2H2 zinc finger proteins greatly expand the human regulatory lexicon. Nat Biotechnol 2015;33:555-62.",
+   "pmid": "25690854",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25690854/"
+  },
+  {
+   "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
+   "pmid": "25215497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  },
+  {
+   "cite": "Yang YJ, Baltus AE, Mathew RS, et al. Microcephaly gene links trithorax and REST/NRSF to control neural stem cell proliferation and differentiation. Cell 2012;151:1097-112.",
+   "pmid": "23178126",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23178126/"
+  },
+  {
+   "cite": "Béziat V, Li J, Lin JX, et al. A recessive form of hyper-IgE syndrome by disruption of ZNF341-dependent STAT3 transcription and activity. Sci Immunol 2018;3.",
+   "pmid": "29907691",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29907691/"
+  },
+  {
+   "cite": "Parker M, Mohankumar KM, Punchihewa C, et al. C11orf95-RELA fusions drive oncogenic NF-κB signalling in ependymoma. Nature 2014;506:451-5.",
+   "pmid": "24553141",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24553141/"
+  },
+  {
+   "cite": "Jolma A, Laverty KU, Fathi A, et al. An expanded codebook of human transcription factor DNA-binding specificity. Nature 2026;657:275-283.",
+   "pmid": "42557334",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42557334/"
+  },
+  {
+   "cite": "Razavi R, Fathi A, Yellan I, et al. Extensive binding of poorly characterized human transcription factors to genomic dark matter. Nat Commun 2026;17.",
+   "pmid": "42557260",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42557260/"
+  },
+  {
+   "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
+   "pmid": "37971293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  }
+ ]
+}

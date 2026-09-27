@@ -1,0 +1,62 @@
+{
+ "key": "PUR",
+ "aka": [
+  "PUR element",
+  "Pur-alpha",
+  "Pur-beta",
+  "PURA/PURB",
+  "GGN-repeat element",
+  "purine-rich single-strand element"
+ ],
+ "consensus": "GGNNGAGGGAGARRRR",
+ "short": "PURA and PURB (Pur-alpha and Pur-beta) are PUR-repeat proteins that bind purine-rich DNA and RNA, with a strong preference for single strands rather than duplex. The PUR element was defined as a repeated purine-rich sequence upstream of the human c-MYC P1 promoter, at a site of DNA bending inside a replication initiation zone, and was given the consensus GGNNGAGGGAGARRRR. The PUR repeats fold into a Whirly-like domain, and Pur-alpha can unwind double-stranded DNA rather than simply read it. These proteins act mostly as repressors, best characterized on the smooth muscle alpha-actin promoter, where they bind the GGN-repeat strand of core enhancer elements. De novo PURA variants cause PURA syndrome, a neurodevelopmental disorder with neonatal hypotonia, seizures and severe developmental delay.",
+ "long": "## The factors\n\nThree PUR-repeat genes exist in humans: PURA (Pur-alpha), PURB (Pur-beta) and the less studied\nPURG. PURA and PURB are broadly expressed, with PURA especially abundant in brain. The proteins are\nbuilt from tandem PUR repeats; crystallography of Pur-alpha showed that two repeats pack together\ninto a single Whirly-like domain, a fold otherwise associated with plant single-stranded\nnucleic-acid-binding proteins, presenting an unusual continuous binding surface rather than the\ndiscrete base-reading elements of a zinc finger or helix-turn-helix. A third repeat mediates\ndimerization between molecules. This architecture explains the central functional fact about the\nfamily: PUR proteins are not conventional double-stranded sequence-specific transcription factors.\nThey bind purine-rich single-stranded DNA and RNA with high affinity, and Pur-alpha can actively\nunwind duplex DNA rather than reading it intact. Pur-alpha also binds RNA, including\ntrinucleotide-repeat transcripts, and localizes to stress granules, so its functions extend beyond\ntranscription into RNA handling and, in the original work, into DNA replication.\n\n## The motif\n\nThe literature element comes from mapping a site of DNA bending 1.6 kb upstream of the human c-MYC\nP1 start site, near the center of a reported replication initiation zone. Methylation interference\nmapped specific guanosine contacts in a 24-mer, and the derived consensus was GGNNGAGGGAGARRRR, a\nsixteen-base purine-rich element found at replication origins and in gene flanking regions from\nyeast to human. In practice the element is usually described more loosely as a GGN repeat, and\nbinding is strand-selective: the purine-rich strand is bound, the complementary\npyrimidine-rich strand is not. There is no half-site grammar, no spacing rule, and no palindrome.\nThe data here disagree with this, and the disagreement is worth stating plainly. This family\ncontains exactly one motif, the HOCOMOCO model PURB.H14CORE.0.B.B, whose consensus is ACCCAC, six\nbases and only 7.6 bits of information. Its reverse complement, GTGGGT, is GT-rich rather than\npurine-rich in the GGN sense, it is far shorter than the published PUR element, its evidence code\nB marks it as imported from another collection rather than derived from HOCOMOCO's own ChIP-seq or\nSELEX data, and its nearest neighbours across all four databases lie outside this family (best\ncross-family similarity 0.73, label agreement 0). There is no PURA motif in these databases at all,\nand with a single member the family has no internal cohesion to measure. The honest position is\nthat the published PUR element is a single-strand, purine-rich sequence that a position-weight\nmatrix over double-stranded DNA is the wrong tool for, and that the one matrix available under this\nkey should not be treated as a validated model of PUR binding.\n\n## Where it acts\n\nDocumented PUR-protein sites are promoter-proximal and, in the original work, at replication\norigins. The best-characterized regulatory target is the mouse and human smooth muscle alpha-actin\npromoter, where Pur-alpha and Pur-beta bind the GGN-repeat-containing strands of several cis\nelements within a core enhancer and repress transcription. Knockdown showed Pur-beta to be the\ndominant repressor in fibroblasts, with the combined action of both proteins needed for full\nrepression, and the two proteins had indistinguishable binding affinity and specificity in vitro\nbut distinct protein-interaction profiles, which is how cell-type-specific behavior arises from a\nshared site. PUR proteins also occur at the c-MYC upstream region where the element was found, and\nPur-alpha associates with RNA and with cytoplasmic granules in neurons, so not all of its binding\nis chromatin-associated.\n\n## Biology and disease\n\nPura-null mice are viable at birth but develop severe neurological abnormalities with arrested\npostnatal brain development and impaired proliferation of neuronal and hematopoietic precursors.\nIn humans, de novo PURA variants and 5q31.3 microdeletions that remove PURA cause PURA syndrome:\nprofound neonatal hypotonia, feeding difficulty, seizures or seizure-like movements, and severe\ndevelopmental delay with little or no speech. Genotype-phenotype studies across dozens of affected\nindividuals place missense changes in the PUR repeats among the more severe alleles, consistent\nwith loss of nucleic-acid binding. PURB has no established monogenic disease association.\n\n## Reading a hit\n\nDo not read a hit under this key as evidence of PUR binding. The only matrix available is a\nsix-base, 7.6-bit model that does not resemble the published purine-rich PUR element and whose\nclosest relatives in the motif databases belong to other families. More fundamentally, PUR proteins\nprefer single-stranded purine-rich DNA and can unwind duplex, so scanning double-stranded genomic\nsequence with a PWM is not a test of PUR binding even in principle. If you care about PUR proteins\nat a locus, the useful evidence is a long GGN-rich or polypurine tract on one strand, ideally at a\nsite with known single-strand character, plus direct biochemical or crosslinking data. Treat any\nautomated PURB annotation in a scan result as a placeholder.",
+ "caveats": "This is the weakest family in the atlas. It contains one motif, a six-base 7.6-bit HOCOMOCO model for PURB imported from another collection, with no PURA motif and no internal cohesion. That model (ACCCAC) does not match the published purine-rich PUR element, GGNNGAGGGAGARRRR, and its nearest neighbours in all four databases lie in other families. PUR proteins bind single-stranded purine-rich DNA and RNA and can unwind duplex DNA, so a double-stranded PWM scan is not a valid test of their binding. A hit here should be treated as an annotation placeholder, not as evidence that PURA or PURB binds the sequence.",
+ "refs": [
+  {
+   "cite": "Bergemann AD, Johnson EM. The HeLa Pur factor binds single-stranded DNA at a specific element conserved in gene flanking regions and origins of DNA replication. Mol Cell Biol 1992;12:1257-65.",
+   "pmid": "1545807",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1545807/"
+  },
+  {
+   "cite": "Graebsch A, Roche S, Niessing D. X-ray structure of Pur-alpha reveals a Whirly-like fold and an unusual nucleic-acid binding surface. Proc Natl Acad Sci U S A 2009;106:18521-6.",
+   "pmid": "19846792",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19846792/"
+  },
+  {
+   "cite": "Weber J, Bao H, Hartlmüller C, et al. Structural basis of nucleic-acid recognition and double-strand unwinding by the essential neuronal protein Pur-alpha. Elife 2016;5.",
+   "pmid": "26744780",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26744780/"
+  },
+  {
+   "cite": "Knapp AM, Ramsey JE, Wang SX, et al. Nucleoprotein interactions governing cell type-dependent repression of the mouse smooth muscle alpha-actin promoter by single-stranded DNA-binding proteins Pur alpha and Pur beta. J Biol Chem 2006;281:7907-18.",
+   "pmid": "16436378",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16436378/"
+  },
+  {
+   "cite": "Johnson EM, Daniel DC, Gordon J. The pur protein family: genetic and structural features in development and disease. J Cell Physiol 2013;228:930-7.",
+   "pmid": "23018800",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23018800/"
+  },
+  {
+   "cite": "Hunt D, Leventer RJ, Simons C, et al. Whole exome sequencing in family trios reveals de novo mutations in PURA as a cause of severe neurodevelopmental delay and learning disability. J Med Genet 2014;51:806-13.",
+   "pmid": "25342064",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25342064/"
+  },
+  {
+   "cite": "Lalani SR, Zhang J, Schaaf CP, et al. Mutations in PURA cause profound neonatal hypotonia, seizures, and encephalopathy in 5q31.3 microdeletion syndrome. Am J Hum Genet 2014;95:579-83.",
+   "pmid": "25439098",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25439098/"
+  },
+  {
+   "cite": "Reijnders MRF, Janowski R, Alvi M, et al. PURA syndrome: clinical delineation and genotype-phenotype study in 32 individuals with review of published literature. J Med Genet 2018;55:104-113.",
+   "pmid": "29097605",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29097605/"
+  },
+  {
+   "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
+   "pmid": "37971293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  }
+ ]
+}

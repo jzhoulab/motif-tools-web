@@ -1,0 +1,280 @@
+{
+ "assignments": {
+  "UBP1": "GRHL",
+  "UNCX": "HD_Q50",
+  "USF": "USF",
+  "USF1": "USF",
+  "USF2": "USF",
+  "USF3": "USF",
+  "VAX1": "HD_Q50",
+  "VAX2": "HD_Q50",
+  "VDR": "RXR_HETERO",
+  "VENTX": "HD_Q50",
+  "VEZF": "VEZF1",
+  "VEZF1": "VEZF1",
+  "VSX": "HD_Q50",
+  "VSX1": "HD_Q50",
+  "VSX2": "HD_Q50",
+  "WT": "WT1",
+  "WT1": "WT1",
+  "XBP": "ATF6_CREB3",
+  "XBP1": "ATF6_CREB3",
+  "XPA": "ZNF_SCAN_OTHER",
+  "YBX1": "CSD",
+  "YY": "YY1",
+  "YY1": "YY1",
+  "YY2": "YY1",
+  "ZBED": "ZBED",
+  "ZBED1": "ZBED",
+  "ZBED2": "ZBED",
+  "ZBED4": "ZBED",
+  "ZBED5": "ZBED",
+  "ZBTB": "ZBTB_OTHER",
+  "ZBTB1": "ZBTB_OTHER",
+  "ZBTB11": "ZBTB_OTHER",
+  "ZBTB12": "ZBTB_OTHER",
+  "ZBTB14": "ZBTB_OTHER",
+  "ZBTB16": "ZBTB_OTHER",
+  "ZBTB17": "ZBTB17",
+  "ZBTB18": "ZBTB18",
+  "ZBTB2": "ZBTB_OTHER",
+  "ZBTB20": "ZBTB_OTHER",
+  "ZBTB22": "ZBTB_OTHER",
+  "ZBTB24": "ZBTB_OTHER",
+  "ZBTB26": "ZBTB_OTHER",
+  "ZBTB3": "ZBTB_OTHER",
+  "ZBTB32": "ZBTB_OTHER",
+  "ZBTB33": "ZBTB33",
+  "ZBTB37": "ZBTB_OTHER",
+  "ZBTB40": "ZBTB_OTHER",
+  "ZBTB41": "ZBTB_OTHER",
+  "ZBTB42": "ZBTB_OTHER",
+  "ZBTB43": "ZBTB_OTHER",
+  "ZBTB44": "ZBTB_OTHER",
+  "ZBTB45": "ZBTB_OTHER",
+  "ZBTB47": "ZBTB_OTHER",
+  "ZBTB48": "TELOBOX",
+  "ZBTB49": "ZBTB_OTHER",
+  "ZBTB5": "ZBTB_OTHER",
+  "ZBTB6": "ZBTB_OTHER",
+  "ZBTB7A": "ZBTB7",
+  "ZBTB7B": "ZBTB7",
+  "ZBTB7C": "ZBTB7",
+  "ZBTB8A": "ZBTB_OTHER",
+  "ZBTB8B": "ZBTB_OTHER",
+  "ZEB": "ZEB",
+  "ZEB1": "ZEB",
+  "ZEB2": "ZEB",
+  "ZFAT": "ZNF_OTHER",
+  "ZFHX2": "HD_ATYPICAL",
+  "ZFHX3": "HD_ATYPICAL",
+  "ZFP": "ZNF_OTHER",
+  "ZFP1": "KRAB_ZNF",
+  "ZFP14": "KRAB_ZNF",
+  "ZFP28": "KRAB_ZNF",
+  "ZFP3": "ZNF_OTHER",
+  "ZFP335": "ZNF_OTHER",
+  "ZFP37": "KRAB_ZNF",
+  "ZFP41": "ZNF_OTHER",
+  "ZFP42": "YY1",
+  "ZFP57": "ZFP57",
+  "ZFP64": "ZNF_OTHER",
+  "ZFP69": "KRAB_ZNF",
+  "ZFP69B": "KRAB_ZNF",
+  "ZFP809": "KRAB_ZNF",
+  "ZFP82": "KRAB_ZNF",
+  "ZFP90": "KRAB_ZNF",
+  "ZFP91": "ZNF_OTHER",
+  "ZFP961": "KRAB_ZNF",
+  "ZFPM1": "CHROMATIN",
+  "ZFTA": "ZNF_OTHER",
+  "ZFX": "ZFX",
+  "ZGLP1": "GATA",
+  "ZHX1": "HD_ATYPICAL",
+  "ZIC": "ZIC",
+  "ZIC1": "ZIC",
+  "ZIC2": "ZIC",
+  "ZIC3": "ZIC",
+  "ZIC4": "ZIC",
+  "ZIC5": "ZIC",
+  "ZIK1": "KRAB_ZNF",
+  "ZIM2": "KRAB_ZNF",
+  "ZIM3": "KRAB_ZNF",
+  "ZKSCAN": "ZSCAN",
+  "ZKSCAN1": "ZNF24",
+  "ZKSCAN2": "ZSCAN",
+  "ZKSCAN3": "ZNF24",
+  "ZKSCAN4": "ZSCAN",
+  "ZKSCAN5": "ZSCAN",
+  "ZKSCAN7": "ZSCAN",
+  "ZKSCAN8": "ZSCAN",
+  "ZSCAN": "ZSCAN",
+  "ZSCAN1": "ZSCAN",
+  "ZSCAN12": "ZSCAN",
+  "ZSCAN16": "ZSCAN",
+  "ZSCAN2": "ZSCAN",
+  "ZSCAN21": "ZNF24",
+  "ZSCAN22": "ZNF24",
+  "ZSCAN23": "ZSCAN",
+  "ZSCAN25": "ZSCAN",
+  "ZSCAN26": "ZSCAN",
+  "ZSCAN29": "ZNF24",
+  "ZSCAN30": "ZSCAN",
+  "ZSCAN31": "ZSCAN",
+  "ZSCAN4": "ZNF24",
+  "ZSCAN5": "ZSCAN",
+  "ZSCAN5A": "ZSCAN",
+  "ZSCAN5C": "ZSCAN",
+  "ZSCAN9": "ZSCAN",
+  "ZXDA": "ZNF_OTHER",
+  "ZXDB": "ZNF_OTHER",
+  "ZXDC": "ZNF_OTHER",
+  "ZZZ3": "CHROMATIN"
+ },
+ "uncertain": [
+  {
+   "symbol": "ZKSCAN1",
+   "key": "ZNF24",
+   "why": "Borderline ZSCAN vs ZNF24: the ZNF24 def explicitly names ZKSCAN1, so it is routed there rather than to the generic ZSCAN bulk."
+  },
+  {
+   "symbol": "ZKSCAN3",
+   "key": "ZNF24",
+   "why": "Borderline ZSCAN vs ZNF24: explicitly named in the ZNF24 def as a SCAN-ZF with a defined promoter motif."
+  },
+  {
+   "symbol": "ZSCAN4",
+   "key": "ZNF24",
+   "why": "Borderline ZSCAN vs ZNF24: named in the ZNF24 def, though its 2C/telomere motif is quite distinct from ZNF24's."
+  },
+  {
+   "symbol": "ZSCAN21",
+   "key": "ZNF24",
+   "why": "Borderline ZSCAN vs ZNF24: named in the ZNF24 def."
+  },
+  {
+   "symbol": "ZSCAN22",
+   "key": "ZNF24",
+   "why": "Borderline ZSCAN vs ZNF24: named in the ZNF24 def."
+  },
+  {
+   "symbol": "ZSCAN29",
+   "key": "ZNF24",
+   "why": "Borderline ZSCAN vs ZNF24: named in the ZNF24 def."
+  },
+  {
+   "symbol": "ZFP",
+   "key": "ZNF_OTHER",
+   "why": "Bare archetype token with no paralogue; routed like the bare 'ZNF' token, although most ZFP### genes are KZFPs (KRAB_ZNF is the alternative)."
+  },
+  {
+   "symbol": "ZFP809",
+   "key": "KRAB_ZNF",
+   "why": "Mouse KRAB-ZFP whose motif is the MLV proline-tRNA primer binding site, so ZFP_TE is arguably more specific; KRAB domain confirmed (G3X9G7)."
+  },
+  {
+   "symbol": "ZFP69",
+   "key": "KRAB_ZNF",
+   "why": "Carries both a SCAN box and a KRAB domain (Q49AA0); KRAB takes precedence over ZSCAN here."
+  },
+  {
+   "symbol": "ZFPM1",
+   "key": "CHROMATIN",
+   "why": "FOG-1 is a GATA cofactor with multitype zinc fingers that bind GATA protein, not DNA; grouped like GATAD2A in the CHROMATIN def, though a ChIP-derived motif would read as WGATAA (GATA)."
+  },
+  {
+   "symbol": "ZFTA",
+   "key": "ZNF_OTHER",
+   "why": "C11orf95 zinc finger, no KRAB; DNA binding is characterised mainly in the ZFTA-RELA fusion context (FUSION would apply only to the fusion motif)."
+  },
+  {
+   "symbol": "ZFAT",
+   "key": "ZNF_OTHER",
+   "why": "Large C2H2 + AT-hook factor with no KRAB domain and no well-defined published motif."
+  },
+  {
+   "symbol": "ZBTB14",
+   "key": "ZBTB_OTHER",
+   "why": "ZF5 binds a GC-box-like site unlike other BTB-ZF motifs, but the BTB-ZF routing rule sends every unnamed ZBTB here."
+  },
+  {
+   "symbol": "ZBTB16",
+   "key": "ZBTB_OTHER",
+   "why": "PLZF has a well-defined motif of its own but no dedicated key; routed by the BTB-ZF rule."
+  },
+  {
+   "symbol": "ZXDA",
+   "key": "ZNF_OTHER",
+   "why": "ZXD family (MHC-II/CIITA-associated) has no dedicated key; see the ZXD proposal."
+  },
+  {
+   "symbol": "ZXDB",
+   "key": "ZNF_OTHER",
+   "why": "ZXD family, no dedicated key; see the ZXD proposal."
+  },
+  {
+   "symbol": "ZXDC",
+   "key": "ZNF_OTHER",
+   "why": "ZXD family, no dedicated key; see the ZXD proposal."
+  },
+  {
+   "symbol": "ZGLP1",
+   "key": "GATA",
+   "why": "Single GATA-type zinc finger (GATA-like protein 1); grouped with GATA on domain identity, but no experimental motif exists."
+  },
+  {
+   "symbol": "WT",
+   "key": "WT1",
+   "why": "Bare archetype token; WT1 is also listed inside the EGR def, so EGR is the alternative home."
+  },
+  {
+   "symbol": "WT1",
+   "key": "WT1",
+   "why": "Dedicated WT1 key preferred over EGR, whose def also lists WT1."
+  },
+  {
+   "symbol": "UBP1",
+   "key": "GRHL",
+   "why": "CP2/TFCP2-family (not a grainyhead proper) but explicitly listed in the GRHL def."
+  },
+  {
+   "symbol": "XPA",
+   "key": "ZNF_SCAN_OTHER",
+   "why": "DNA-repair zinc finger, not a sequence-specific TF; explicitly listed in the ZNF_SCAN_OTHER def."
+  },
+  {
+   "symbol": "ZBED5",
+   "key": "ZBED",
+   "why": "Buster1 transposase-derived BED finger; ZBED key per its def, although its motif is transposon-derived like CENPB_POGO members."
+  },
+  {
+   "symbol": "ZFP3",
+   "key": "ZNF_OTHER",
+   "why": "No KRAB domain in UniProt Q96NJ6 or HGNC KRAB gene group despite the ZFP name, so not KRAB_ZNF."
+  },
+  {
+   "symbol": "ZFP41",
+   "key": "ZNF_OTHER",
+   "why": "No KRAB domain (Q8N8Y5); small C2H2 factor with no published motif."
+  },
+  {
+   "symbol": "ZFP64",
+   "key": "ZNF_OTHER",
+   "why": "No KRAB domain (Q9NTW7); NOTCH-pathway C2H2 factor."
+  }
+ ],
+ "proposals": [
+  {
+   "key": "ZXD",
+   "name": "ZXD family (ZXDA/ZXDB/ZXDC)",
+   "class": "C2H2 zinc finger",
+   "def": "X-linked ZXD-family C2H2 factors with a shared 10-finger architecture acting on MHC class II promoters (ZXDC partners CIITA). ZXDA, ZXDB, ZXDC.",
+   "symbols": [
+    "ZXDA",
+    "ZXDB",
+    "ZXDC"
+   ],
+   "why": "Three close paralogues with a distinctive shared architecture and a common MHC-II promoter role; currently dissolved into the ZNF_OTHER catch-all."
+  }
+ ]
+}

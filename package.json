@@ -9,6 +9,11 @@
     "test": "npm run test --workspaces --if-present",
     "build": "npm run build --workspaces --if-present",
     "build:site": "node site/build.mjs",
-    "deploy": "npm run build && npm run build:site && npx wrangler deploy"
+    "deploy": "npm run build && npm run build:site && npx wrangler deploy",
+    "families:neighbors": "node apps/motif-match/scripts/families/neighbors.mjs",
+    "families:assign": "node apps/motif-match/scripts/families/assign.mjs",
+    "families:build": "node apps/motif-match/scripts/families/build.mjs",
+    "families": "npm run families:assign && npm run families:build",
+    "build:network": "node apps/motif-match/scripts/build-network.mjs"
   }
 }

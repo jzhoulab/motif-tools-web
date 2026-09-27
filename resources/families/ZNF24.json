@@ -1,0 +1,69 @@
+{
+ "key": "ZNF24",
+ "aka": [
+  "ZNF191",
+  "Zfp191",
+  "ZSCAN3",
+  "KOX17",
+  "HUMTH01 TCAT-binding factor",
+  "ZKSCAN1",
+  "ZKSCAN3",
+  "ZSCAN29",
+  "ZSCAN4"
+ ],
+ "short": "A small group of SCAN-domain C2H2 zinc fingers with defined, experimentally supported binding sites at promoters and microsatellites: ZNF24 (also known as ZNF191 and ZSCAN3), ZSCAN4, ZSCAN21, ZSCAN22, ZSCAN29, ZKSCAN1 and ZKSCAN3. They are grouped by domain architecture and a promoter-proximal style of binding, not by a shared motif: the seven proteins read at least five unrelated sequences. ZNF24 binds a TCAT tetranucleotide repeat, ZSCAN4 a CA-repeat core, ZSCAN29 an inverted pair of GTCTAC hexamers, ZKSCAN3 GGCTAGCCC and ZKSCAN1 CCTACTATG. Reported functions are equally varied, from repressing VEGFA transcription to repressing autophagy genes and protecting telomeres in early embryos.",
+ "long": "## The factors\n\nSeven proteins, all C2H2 zinc fingers with an N-terminal SCAN domain, an approximately 80-residue leucine-rich module that mediates self-association and selective association with other SCAN proteins (Williams et al. 1999). The NMR structure of the MZF1 SCAN domain is a domain-swapped dimer of five-helix monomers, with helix 3 forming the core of the interface and a dissociation constant near 600 nM (Peterson et al. 2006), so these factors are expected to act at least partly as dimers. ZKSCAN1 (7q22.1, formerly ZNF139/ZNF36) and ZKSCAN3 (6p22.1, formerly ZNF306) additionally carry a KRAB domain and can recruit TRIM28. ZNF24 (18q12.2) has been published under several names, including ZNF191, mouse Zfp191 and the alias ZSCAN3, and is 94% identical to its mouse orthologue (Li et al. 2006). SCAN genes generally sit in tandem clusters and carry between 3 and 14 fingers (Edelstein and Collins 2005). The wider SCAN group is split across this atlas: other ZSCAN and ZKSCAN genes have a separate entry, and MZF1 itself is filed under other C2H2 zinc fingers.\n\n## The motif\n\nNot one motif. Cohesion is 0.44, and the 24 matrices form roughly seven tight per-protein clusters. Every matrix has a near-identical partner in the family (median best within-family similarity 0.96), but that partner is almost always the same protein measured again in another database. ZNF24 reads a TCAT tetranucleotide repeat: JASPAR MA1124.1 and CIS-BP M08093 both give CATTCATTCATTC and the HOCOMOCO model is TGAATGAATGAATG, the reverse complement. That agrees with the literature, in which ZNF191/ZNF24 binds the polymorphic intronic TCAT repeat HUMTH01 of the tyrosine hydroxylase gene, and allele length changes both the amount and the pattern of binding (Albanese et al. 2001). ZSCAN29 reads GTCTACAC; its methyl-SELEX model is ATAAACGTCTACAC and the related unnamed archetype AC0339 reads GCGTAGACGTCTACAC, that is GTAGAC followed by GTCTAC, an inverted repeat of the same hexamer. That is the arrangement a SCAN-mediated dimer contacting two half-sites would produce, but no structure or mutagenesis has tested it. ZSCAN4 reads GCACACVCTGAAA, whose core is a CA repeat, consistent with mouse Zscan4 recognizing a subset of (CA)n microsatellites (Srinivasan et al. 2020). ZKSCAN3 reads GGCTAGCCC, ZKSCAN1 CCTACTATG (its JASPAR entry gives the reverse complement), ZSCAN22 the CT-rich CCTCCTCCCTCAGAC, and ZSCAN21 a weak nine-bit CTCAGCACT. Two pairs are inseparable: ZSCAN1, in the other SCAN entry, matches the ZSCAN4 motif at 0.95, and a grade-A HOCOMOCO model for the KRAB zinc finger ZNF500 is GCGTCTACACTANCC, the ZSCAN29 site.\n\n## Where it acts\n\nTCAT and CA repeats are ubiquitous microsatellites, so ZNF24- and ZSCAN4-type matches are common and mostly lie outside regulatory elements. ZNF24 has one precisely mapped functional site, an 11 bp element in the proximal VEGFA promoter (Jia et al. 2013). ZKSCAN3 occupies the promoters of more than 60 autophagy and lysosome genes, with MAP1LC3B and WIPI2 confirmed as direct targets, and responds to starvation in the opposite direction to TFEB (Chauhan et al. 2013). Mouse Zscan4 is restricted to two-cell embryos and a small, transient subpopulation of embryonic stem cells, where it localizes to telomeres and to nuclease-resistant, histone-dense microsatellite regions (Zalzman et al. 2010; Srinivasan et al. 2020).\n\n## Biology and disease\n\nZfp191-null mouse embryos are severely growth-retarded and die around embryonic day 7.5, and no homozygous embryonic stem cell lines can be derived; tyrosine hydroxylase expression is unaffected, so the phenotype is a proliferation defect rather than a TH defect (Li et al. 2006). ZNF24 represses VEGFA: overexpression produces VEGF-like vascular defects in zebrafish that VEGF rescues, reduces tumour angiogenesis in a breast cancer xenograft, and ZNF24 and VEGF levels are inversely correlated in human breast tumours (Jia et al. 2013). Silencing ZKSCAN3 induces autophagy and lysosome biogenesis (Chauhan et al. 2013). Zscan4 knockdown shortens telomeres, raises sister chromatid exchange and karyotype abnormalities, and drives embryonic stem cells to crisis by passage eight (Zalzman et al. 2010); its loss also increases DNA damage in two-cell embryos in a transcription-dependent manner (Srinivasan et al. 2020).\n\n## Reading a hit\n\nWhich protein the hit belongs to matters much more than the family label. Repeat-based matches, ZNF24's (TCAT)n and ZSCAN4's (CA)n core, will number in the tens of thousands genome-wide and are not evidence of occupancy; for ZNF24, repeat length is part of the signal, so genotype the repeat rather than scoring a fixed-width matrix. ZSCAN4 and ZSCAN1 share a motif, and so do ZSCAN29 and ZNF500, making those labels interchangeable from sequence alone. The evidence is mixed: five of the seven HOCOMOCO models are ChIP-only (evidence code P), while ZSCAN4 and ZSCAN29 have in vitro support (codes SM and M). The ZSCAN21 model carries about nine bits and should not be scanned by itself. The ZSCAN22 matrix is CT-rich and hard to separate from the many other CT- and GC-rich zinc-finger matrices in this atlas.",
+ "caveats": "This entry holds seven proteins with at least five unrelated motifs; cohesion is 0.44 and there is no family consensus, so read a hit as a hit to the named protein. Two of the motifs, ZNF24's TCAT repeat and ZSCAN4's CA-repeat core, are microsatellites that match tens of thousands of loci by chance. ZSCAN4 cannot be distinguished from ZSCAN1, nor ZSCAN29 from the KRAB zinc finger ZNF500. Five of seven HOCOMOCO models are ChIP-only, so for those the enriched sequence may belong to a partner rather than the tagged protein. The ZSCAN21 model is too weak to scan on its own.",
+ "refs": [
+  {
+   "cite": "Williams AJ, Blacklow SC, Collins T. The zinc finger-associated SCAN box is a conserved oligomerization domain. Mol Cell Biol 1999;19:8526-35.",
+   "pmid": "10567577",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10567577/"
+  },
+  {
+   "cite": "Peterson FC, Hayes PL, Waltner JK, et al. Structure of the SCAN domain from the tumor suppressor protein MZF1. J Mol Biol 2006;363:137-47.",
+   "pmid": "16950398",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16950398/"
+  },
+  {
+   "cite": "Edelstein LC, Collins T. The SCAN domain family of zinc finger transcription factors. Gene 2005;359:1-17.",
+   "pmid": "16139965",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16139965/"
+  },
+  {
+   "cite": "Albanèse V, Biguet NF, Kiefer H, et al. Quantitative effects on gene silencing by allelic variation at a tetranucleotide microsatellite. Hum Mol Genet 2001;10:1785-92.",
+   "pmid": "11532988",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11532988/"
+  },
+  {
+   "cite": "Li J, Chen X, Yang H, et al. The zinc finger transcription factor 191 is required for early embryonic development and cell proliferation. Exp Cell Res 2006;312:3990-8.",
+   "pmid": "17064688",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17064688/"
+  },
+  {
+   "cite": "Jia D, Hasso SM, Chan J, et al. Transcriptional repression of VEGF by ZNF24: mechanistic studies and vascular consequences in vivo. Blood 2013;121:707-15.",
+   "pmid": "23212515",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23212515/"
+  },
+  {
+   "cite": "Chauhan S, Goodwin JG, Chauhan S, et al. ZKSCAN3 is a master transcriptional repressor of autophagy. Mol Cell 2013;50:16-28.",
+   "pmid": "23434374",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23434374/"
+  },
+  {
+   "cite": "Zalzman M, Falco G, Sharova LV, et al. Zscan4 regulates telomere elongation and genomic stability in ES cells. Nature 2010;464:858-63.",
+   "pmid": "20336070",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20336070/"
+  },
+  {
+   "cite": "Srinivasan R, Nady N, Arora N, et al. Zscan4 binds nucleosomal microsatellite DNA and protects mouse two-cell embryos from DNA damage. Sci Adv 2020;6:eaaz9115.",
+   "pmid": "32219172",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32219172/"
+  },
+  {
+   "cite": "Schmitges FW, Radovani E, Najafabadi HS, et al. Multiparameter functional diversity of human C2H2 zinc finger proteins. Genome Res 2016;26:1742-1752.",
+   "pmid": "27852650",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27852650/"
+  }
+ ]
+}

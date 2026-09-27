@@ -1,0 +1,77 @@
+{
+ "key": "NR5A",
+ "aka": [
+  "SFRE",
+  "SF-1 response element",
+  "SF-1 / Ad4BP / STF-1 / ELP (NR5A1)",
+  "LRH-1 / FTF / CPF (NR5A2)",
+  "FTZ-F1 box factors",
+  "Monomeric nuclear receptor half-site"
+ ],
+ "consensus": "TCAAGGTCA",
+ "short": "NR5A1 (steroidogenic factor 1, SF-1) and NR5A2 (liver receptor homolog 1, LRH-1) are the mammalian relatives of Drosophila FTZ-F1. Like the NR4A receptors they bind DNA as monomers rather than dimers, occupying one AGGTCA half-site plus a short 5' extension read by a separate protein surface called the A box, which gives the nine-base SF-1 response element TCAAGGTCA. NR5A1 drives adrenal and gonadal development and the steroidogenic enzyme genes; NR5A2 works in liver, pancreas, intestine and the early embryo. The two proteins have indistinguishable motifs but almost non-overlapping tissue distributions, so cell type, not sequence, tells them apart. The element differs from the NR4A site at a single base and is contained inside the NR6A1 direct repeat.",
+ "long": "## The factors\n\nThe subfamily has two human members: NR5A1 (SF-1, Ad4BP, STF-1, ELP) and NR5A2 (LRH-1, FTF, CPF, hB1F), both mammalian homologs of the Drosophila regulator FTZ-F1 (Lala et al. 1992). Their DNA-binding domain is the usual pair of C4 zinc modules plus a carboxy-terminal extension carrying the A box, or FTZ-F1 box, and a terminal helix required for a stable complex on DNA (Little et al. 2006). The ligand-binding domain has a large hydrophobic pocket: crystal structures identify bound phosphatidylinositols, making these receptors phospholipid sensors rather than true orphans (Krylova et al. 2005), although LRH-1 adopts an active conformation with the pocket essentially empty (Sablin et al. 2003). The paralogues occupy largely non-overlapping tissues: NR5A1 in adrenal cortex, gonadal somatic cells, pituitary gonadotropes, spleen and ventromedial hypothalamus; NR5A2 in liver, pancreas, intestine and the preimplantation embryo. Six motifs are collected here, two each from JASPAR, HOCOMOCO and CIS-BP; HOCOMOCO files the NR5A1 model under the symbol STF1.\n\n## The motif\n\nThe element is usually written (T)CAAGGTCA, the SF-1 response element or SFRE: one AGGTCA half-site with a short 5' extension, bound by a single receptor molecule. Domain swaps placed SF-1 and NGFI-B (NR4A1) in the same monomeric paradigm, zinc modules on the half-site and A box in the minor groove 5' of it; the SF-1 sequence requires an amino group in the minor groove and the SF-1 A box supplies an asparagine (Wilson et al. 1993). The consequence for sequence analysis is stark: the NR4A element is AAAGGTCA and the NR5A element is CAAGGTCA, a difference of one base. The collected models are tight: both HOCOMOCO models, STF1.H14CORE.0.PSM.A and NR5A2.H14CORE.0.PSM.A, are tCAAGGtCA and the CIS-BP NR5A1 model is CAAGGtCA, so the paralogues cannot be separated by sequence. Three entries need care. JASPAR Nr5A2 (MA0505.3) is written TGACCTTGA, the reverse complement of TCAAGGTCA and so the same element on the other strand. CIS-BP M05589_2.00 is TCAAGGTCATGACCTTGA, 21 bits, a head-to-head pair of SF-1 elements with no spacer; its best within-family similarity is only 0.71, so it is an outlier. And JASPAR NR5A1 (MA1540.3) is the 12-mer AGTTCAAGGTCA, which can be read either as the SF-1 element with an extended 5' flank or as a DR0 pair of AGTTCA and AGGTCA half-sites. That ambiguity is real rather than an artifact: the DR0 bound by NR6A1 is AAGTTCAAGGTCA, and its 3' nine bases are exactly the SF-1 element, so every NR6A1 site contains an SFRE match.\n\n## Where it acts\n\nSF-1 sites sit in promoters of the steroidogenic machinery, including STAR, CYP11A1, CYP17A1, CYP19A1 and HSD3B2, and of hypothalamic-pituitary-gonadal genes such as INHA, MC2R and NR0B1/DAX1; SF-1 cooperates with SOX9 at the anti-Mullerian hormone promoter and is antagonized by DAX-1, which binds the protein rather than DNA (Ferraz-de-Souza et al. 2011). LRH-1 acts on bile acid and cholesterol genes such as CYP7A1, CYP8B1 and NR0B2/SHP and on pancreatic and intestinal programs. An eight- to nine-base element is expected tens of thousands of times in a mammalian genome, so almost every match lies in a cell expressing neither receptor. Cell type is the strongest filter here, and an unusually effective one: the two cistromes barely overlap because the tissues do not.\n\n## Biology and disease\n\nSf1-null mice lack adrenal glands and gonads entirely, undergo male-to-female sex reversal and have an abnormal ventromedial hypothalamus (Luo et al. 1994). The first reported human NR5A1 mutation was a heterozygous DNA-binding-domain change causing 46,XY sex reversal with adrenal failure (Achermann et al. 1999); the spectrum now includes 46,XY differences of sex development without adrenal insufficiency, hypospadias, male infertility and primary ovarian insufficiency (Ferraz-de-Souza et al. 2011). SF-1 is overexpressed, and the gene amplified, in adrenocortical tumors, more frequently in children than in adults (Almeida et al. 2010). Mouse embryos lacking Nr5a2 die early with defects in cholesterol homeostasis (Pare et al. 2004), and common variants at NR5A2 on 1q32.1 are an established pancreatic cancer susceptibility signal (Petersen et al. 2010).\n\n## Reading a hit\n\nA monomeric half-site is much harder to call than a spaced dimer. A DR3, DR4 or DR5 element constrains two half-sites plus a defined spacer, 13-15 positions, and the arrangement is itself evidence; the SFRE constrains eight or nine positions, six of which are the AGGTCA half-site shared across the nuclear receptor superfamily, leaving two or three bases of family-level information and no spacer to check. One substitution turns an SFRE into an NR4A NBRE, and any NR6A1 DR0 contains an SFRE, so a hit may belong to a different family or be one half of a genuine dimeric site. Prediction improves substantially when dimer configuration can be modeled, which is not possible here (Sandelin and Wasserman 2005). The sequence evidence is strong: both HOCOMOCO models are grade A with ChIP-seq, HT-SELEX and methyl-HT-SELEX support, so TCAAGGTCA is well supported as directly bound, unlike the ChIP-only models common elsewhere in this atlas. What a hit cannot do is name the receptor. Use expression: outside adrenal, gonad, gonadotrope and hypothalamus an SF-1 call is implausible, as is an LRH-1 call outside liver, pancreas, intestine and early embryo. Note also that databases report this element on either strand, as TCAAGGTCA or TGACCTTGA.",
+ "caveats": "The motif is well measured but weakly diagnostic. Both HOCOMOCO models carry grade-A in vitro support, so TCAAGGTCA really is bound directly, yet it constrains only eight or nine positions, six of them the AGGTCA half-site used across the nuclear receptor superfamily. One substitution converts it into the NR4A element AAAGGTCA, and every NR6A1 DR0 contains an exact SFRE, so family assignment from sequence alone is unreliable. NR5A1 and NR5A2 have identical motifs; only tissue distinguishes them, which in practice works well because their expression barely overlaps. Watch for presentation differences across databases: one JASPAR model is the reverse complement, one CIS-BP model is a head-to-head pair of elements, and HOCOMOCO files NR5A1 under the symbol STF1.",
+ "refs": [
+  {
+   "cite": "Lala DS, Rice DA, Parker KL. Steroidogenic factor I, a key regulator of steroidogenic enzyme expression, is the mouse homolog of fushi tarazu-factor I. Mol Endocrinol 1992;6:1249-58.",
+   "pmid": "1406703",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1406703/"
+  },
+  {
+   "cite": "Wilson TE, Fahrner TJ, Milbrandt J. The orphan receptors NGFI-B and steroidogenic factor 1 establish monomer binding as a third paradigm of nuclear receptor-DNA interaction. Mol Cell Biol 1993;13:5794-804.",
+   "pmid": "8395013",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8395013/"
+  },
+  {
+   "cite": "Luo X, Ikeda Y, Parker KL. A cell-specific nuclear receptor is essential for adrenal and gonadal development and sexual differentiation. Cell 1994;77:481-90.",
+   "pmid": "8187173",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8187173/"
+  },
+  {
+   "cite": "Achermann JC, Ito M, Ito M, et al. A mutation in the gene encoding steroidogenic factor-1 causes XY sex reversal and adrenal failure in humans. Nat Genet 1999;22:125-6.",
+   "pmid": "10369247",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10369247/"
+  },
+  {
+   "cite": "Sablin EP, Krylova IN, Fletterick RJ, et al. Structural basis for ligand-independent activation of the orphan nuclear receptor LRH-1. Mol Cell 2003;11:1575-85.",
+   "pmid": "12820970",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12820970/"
+  },
+  {
+   "cite": "Paré JF, Malenfant D, Courtemanche C, et al. The fetoprotein transcription factor (FTF) gene is essential to embryogenesis and cholesterol homeostasis and is regulated by a DR4 element. J Biol Chem 2004;279:21206-16.",
+   "pmid": "15014077",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15014077/"
+  },
+  {
+   "cite": "Krylova IN, Sablin EP, Moore J, et al. Structural analyses reveal phosphatidyl inositols as ligands for the NR5 orphan receptors SF-1 and LRH-1. Cell 2005;120:343-55.",
+   "pmid": "15707893",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15707893/"
+  },
+  {
+   "cite": "Sandelin A, Wasserman WW. Prediction of nuclear hormone receptor response elements. Mol Endocrinol 2005;19:595-606.",
+   "pmid": "15563547",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15563547/"
+  },
+  {
+   "cite": "Little TH, Zhang Y, Matulis CK, et al. Sequence-specific deoxyribonucleic acid (DNA) recognition by steroidogenic factor 1: a helix at the carboxy terminus of the DNA binding domain is necessary for complex stability. Mol Endocrinol 2006;20:831-43.",
+   "pmid": "16339274",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16339274/"
+  },
+  {
+   "cite": "Almeida MQ, Soares IC, Ribeiro TC, et al. Steroidogenic factor 1 overexpression and gene amplification are more frequent in adrenocortical tumors from children than from adults. J Clin Endocrinol Metab 2010;95:1458-62.",
+   "pmid": "20080844",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20080844/"
+  },
+  {
+   "cite": "Petersen GM, Amundadottir L, Fuchs CS, et al. A genome-wide association study identifies pancreatic cancer susceptibility loci on chromosomes 13q22.1, 1q32.1 and 5p15.33. Nat Genet 2010;42:224-8.",
+   "pmid": "20101243",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20101243/"
+  },
+  {
+   "cite": "Ferraz-de-Souza B, Lin L, Achermann JC. Steroidogenic factor-1 (SF-1, NR5A1) and human disease. Mol Cell Endocrinol 2011;336:198-205.",
+   "pmid": "21078366",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21078366/"
+  }
+ ]
+}

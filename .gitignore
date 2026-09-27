@@ -8,3 +8,6 @@ dist/
 # assembled site output
 site/dist/
 .wrangler/
+
+# family pipeline cache (rebuild with npm run families:neighbors)
+apps/motif-match/scripts/families/.cache/

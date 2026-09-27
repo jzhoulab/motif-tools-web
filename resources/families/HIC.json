@@ -1,0 +1,75 @@
+{
+ "key": "HIC",
+ "aka": [
+  "HIC1",
+  "HIC2",
+  "hypermethylated in cancer 1",
+  "HRG22",
+  "ZBTB29",
+  "ZBTB30",
+  "HiRE",
+  "HIC1 responsive element",
+  "GGCA core"
+ ],
+ "consensus": "SNGSGGGCAMCC",
+ "short": "HIC1 (hypermethylated in cancer 1) and HIC2 are BTB/POZ zinc-finger repressors with five Kruppel-like C2H2 fingers. Their optimal site, defined by site selection, is (C/G)NG(C/G)GGGCA(C/A)CC, with a GGCA core read by fingers 3 and 4; databases usually render the same element on the opposite strand as TGCC(A/G), which is why the family is often listed with a short TGCC consensus. The BTB domain blocks binding to a single site but supports cooperative binding to several, so genuine targets carry multiple sites. HIC1 sits at 17p13.3, is induced by p53, is frequently silenced by promoter hypermethylation in tumors, and represses SIRT1; heterozygous mouse mutants develop tumors.",
+ "long": "## The factors\n\nTwo paralogues: HIC1 and HIC2 (also HRG22). Each has an N-terminal BTB/POZ domain, a central region containing a conserved GLDLSKK motif that binds CtBP, and five Kruppel-like C2H2 zinc fingers at the C terminus. HIC1 was cloned from 17p13.3, a region frequently deleted or hypermethylated in human tumors and deleted in Miller-Dieker syndrome, and was identified as a p53-inducible gene. The BTB domain has an unusual and important effect on DNA binding: it inhibits binding of the full-length protein to an isolated site while mediating cooperative binding to probes carrying several concatemerized sites, a property shared with other BTB/POZ proteins. Repression works through CtBP and through recruitment of HDAC-containing complexes, and HIC1 also localizes to distinct nuclear bodies, into which it can sequester other proteins. HIC1 is widely expressed in adult tissues and silenced epigenetically in tumors; HIC2 is expressed in the developing cardiovascular system and is much less studied. There is no evidence that the two heterodimerize preferentially over homodimerizing.\n\n## The motif\n\nSelection and amplification of binding sites with recombinant HIC1 gave the optimal sequence 5'-(C/G)NG(C/G)GGGCA(C/A)CC-3'. In silico and functional follow-up narrowed the essential element to a GGCA core contacted by zinc fingers 3 and 4, so of the five fingers only two carry most of the base-specific contacts - which explains why the informative region is short even though the domain could cover more sequence. The database matrices all describe this same element on the complementary strand, which is why they look different at first glance: JASPAR Hic1 (MA0739.2) reads ATGCCAAC, JASPAR HIC2 (MA0738.2) and CIS-BP M02902 read ATGCCC, the HOCOMOCO HIC1 grade-A model reads ATGCCA, and the Vierstra archetype AC0477:HIC reads ATGCCCAC. Reverse-complementing ATGCCCAC gives GTGGGCAT, which contains the GGGCA of the selected consensus. This is a strand convention, not a conflict, but it does mean the widely quoted \"TGCC(A/G)\" form of the consensus is a four- or five-base fragment of a longer selected site and is far too short to scan with. Information content of the database models is low, 7-11 bits. HIC1 and HIC2 models are 0.98 similar and cannot be separated by sequence. One archetype in the family, AC0435:HIC reading GGCAACC, matches the main HIC cluster poorly (0.74) and should be treated as a divergent model rather than an independent confirmation.\n\n## Where it acts\n\nHIC1 sites occur in promoters of genes it represses, and because the full-length protein needs cooperativity, functional HIC1 elements usually come in clusters - a single TGCC match in a promoter is not a HIC1 element in any meaningful sense. Validated targets include SIRT1, ATOH1, EPHA2 and Wnt-responsive genes; HIC1 also attenuates Wnt signaling by a non-DNA route, recruiting TCF4 and beta-catenin into nuclear bodies away from their target promoters. The element is GC-rich and CpG-containing, so matches concentrate in CpG-island promoters, the same territory as SP/KLF and other GC-box readers. HIC2 sites, where studied, are in cardiovascular differentiation genes.\n\n## Biology and disease\n\nHic1-null mice die perinatally with developmental defects - acrania, exencephaly and limb abnormalities - that overlap the structures affected in Miller-Dieker syndrome, consistent with HIC1 contributing to that contiguous gene deletion phenotype. Heterozygous Hic1 mice are viable but develop a sex-dependent spectrum of malignant tumors, with age-dependent hypermethylation and silencing of the remaining wild-type allele, which is a textbook demonstration of an epigenetically inactivated tumor suppressor. Mechanistically, HIC1 binds and represses the SIRT1 promoter; because SIRT1 deacetylates p53, loss of HIC1 raises SIRT1 and blunts p53-dependent responses to DNA damage, forming a regulatory circuit with p53 that also explains why HIC1 is p53-inducible. HIC1 promoter hypermethylation is among the more common epigenetic lesions across human carcinomas, medulloblastoma and leukemia. HIC2 has been shown to control isoform switching during cardiovascular maturation and lies in the distal 22q11 region, but its human disease role is not established.\n\n## Reading a hit\n\nThe honest summary is that a short TGCC-type match is close to worthless on its own. The informative element is longer, the database matrices capture only 7-11 bits of it, and the sequence is GC-rich and CpG-island-associated, so it overlaps the recognition space of SP1-SP4, the KLFs and other C2H2 GC-box factors. Two things make a HIC call more credible: multiple sites in the same promoter, which is what the BTB-dependent cooperativity requires, and a target gene or cell context in which HIC1 is expressed rather than methylated. Within the family, HIC1 and HIC2 are indistinguishable at 0.98 similarity, and the Vierstra archetypes are named AC0435:HIC and AC0477:HIC without a paralogue assignment, so a hit identifies the pair. On provenance, the better entries are in vitro: JASPAR MA0739.2 and MA0738.2 are HT-SELEX matrices and the HOCOMOCO HIC1 model is grade A with PSM evidence. Two weaker entries deserve flags - JASPAR MA0739.2 is derived from mouse Hic1 rather than the human protein, a cross-species transfer that is unproblematic here given how conserved the fingers are but should be recorded; and the HOCOMOCO HIC2 model carries ChIP-only evidence (code P, grade B) and matches the rest of the family poorly (0.75), so it is the entry most likely to reflect indirect binding.",
+ "caveats": "The short TGCC(A/G) form quoted for this family is a fragment of a longer selected consensus, (C/G)NG(C/G)GGGCA(C/A)CC, rendered on the other strand; the database matrices hold only 7-11 bits, are GC-rich and CpG-island-associated, and therefore overlap SP/KLF and other GC-box motifs. Single matches are not interpretable: the BTB domain blocks binding to isolated sites and supports cooperative binding to clustered ones, so look for several sites in one promoter. HIC1 and HIC2 are indistinguishable (0.98 similarity) and the Vierstra archetypes do not assign a paralogue. Note JASPAR MA0739.2 is a mouse Hic1 matrix, and the HOCOMOCO HIC2 model is ChIP-only and a poor fit to the rest of the family.",
+ "refs": [
+  {
+   "cite": "Wales MM, Biel MA, el Deiry W, et al. p53 activates expression of HIC-1, a new candidate tumour suppressor gene on 17p13.3. Nat Med 1995;1:570-7.",
+   "pmid": "7585125",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7585125/"
+  },
+  {
+   "cite": "Pinte S, Stankovic-Valentin N, Deltour S, et al. The tumor suppressor gene HIC1 (hypermethylated in cancer 1) is a sequence-specific transcriptional repressor: definition of its consensus binding sequence and analysis of its DNA binding and repressive properties. J Biol Chem 2004;279:38313-24.",
+   "pmid": "15231840",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15231840/"
+  },
+  {
+   "cite": "Carter MG, Johns MA, Zeng X, et al. Mice deficient in the candidate tumor suppressor gene Hic1 exhibit developmental defects of structures affected in the Miller-Dieker syndrome. Hum Mol Genet 2000;9:413-9.",
+   "pmid": "10655551",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10655551/"
+  },
+  {
+   "cite": "Chen WY, Zeng X, Carter MG, et al. Heterozygous disruption of Hic1 predisposes mice to a gender-dependent spectrum of malignant tumors. Nat Genet 2003;33:197-202.",
+   "pmid": "12539045",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12539045/"
+  },
+  {
+   "cite": "Chen WY, Wang DH, Yen RC, et al. Tumor suppressor HIC1 directly regulates SIRT1 to modulate p53-dependent DNA-damage responses. Cell 2005;123:437-48.",
+   "pmid": "16269335",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16269335/"
+  },
+  {
+   "cite": "Valenta T, Lukas J, Doubravska L, et al. HIC1 attenuates Wnt signaling by recruitment of TCF-4 and beta-catenin to the nuclear bodies. EMBO J 2006;25:2326-37.",
+   "pmid": "16724116",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16724116/"
+  },
+  {
+   "cite": "Rood BR, Leprince D. Deciphering HIC1 control pathways to reveal new avenues in cancer therapeutics. Expert Opin Ther Targets 2013;17:811-27.",
+   "pmid": "23566242",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23566242/"
+  },
+  {
+   "cite": "Dykes IM, van Bueren KL, Scambler PJ. HIC2 regulates isoform switching during maturation of the cardiovascular system. J Mol Cell Cardiol 2018;114:29-37.",
+   "pmid": "29061339",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29061339/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  },
+  {
+   "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
+   "pmid": "32728250",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  },
+  {
+   "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
+   "pmid": "37971293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  }
+ ]
+}

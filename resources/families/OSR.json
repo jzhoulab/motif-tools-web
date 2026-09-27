@@ -1,0 +1,67 @@
+{
+ "key": "OSR",
+ "aka": [
+  "OSR1",
+  "OSR2",
+  "odd-skipped related",
+  "Odd family zinc fingers",
+  "ODD1",
+  "Odd1",
+  "odd-skipped (Drosophila odd)"
+ ],
+ "consensus": "GCTACTGT",
+ "short": "OSR1 and OSR2 (odd-skipped related 1 and 2) are the two vertebrate members of the Odd family of C2H2 zinc-finger proteins, homologs of Drosophila odd-skipped. OSR1 carries three tandem C2H2 fingers and OSR2 five, and both bind the 8-mer GCTACTGT, established by in vitro selection. Despite the C2H2 class label, this motif is not GC-rich — the central TACTG carries most of the information. Both proteins are mesenchymal and developmentally restricted: OSR1 is required for the metanephric mesenchyme and hence for kidney formation, OSR2 for palatal shelf growth, and loss of either causes a distinct mouse malformation. A knock-in experiment showed the two coding sequences are functionally interchangeable, so their different phenotypes reflect where they are expressed rather than what they bind.",
+ "long": "## The factors\n\nOSR1 and OSR2 (odd-skipped related 1 and 2) are the two vertebrate members of the Odd family of C2H2 zinc-finger proteins, named for *Drosophila* odd-skipped (*odd*), which together with *sob* and *bowl* forms a related fly group. The two human proteins are small and consist of little besides their finger array: OSR1 has three tandem C2H2 fingers (residues 175-253), while OSR2 has five (172-306), the fifth degenerate. That difference matters for the motif, since more fingers means more base pairs contacted. OSR2 additionally has isoforms differing at the N-terminus. Both act mainly as repressors in reporter assays and both are mesenchymal: OSR1 in intermediate mesoderm, the metanephric mesenchyme that gives rise to the kidney, and in cardiac and lateral plate mesenchyme; OSR2 in palatal mesenchyme and tooth germ. Neither is broadly expressed in adult tissues, and neither has a large paralogue set — with two genes, this is a two-member family in the strictest sense. A knock-in experiment in mice showed that Osr1 and Osr2 coding sequences are functionally interchangeable when expressed from each other's locus, so their distinct phenotypes come from expression pattern rather than from different biochemistry.\n\n## The motif\n\nThe consensus supported by the data is GCTACTGT, an 8-mer derived from in vitro selection (HT-SELEX and methyl-HT-SELEX). Six of the eight models here — from JASPAR, CIS-BP, HOCOMOCO and the Vierstra archetypes — give GCTACTG or GCTACTGT, and family cohesion is 0.92, so this is a well-agreed motif.\n\nIt is worth stating plainly that this contradicts a common shorthand. C2H2 zinc-finger factors are often assumed to read GC-rich sequence, and this family is sometimes described that way, but GCTACTGT is not GC-rich; the central TACTG is the most distinctive part, and the informative positions span a mixed-composition 7-8-mer. Anyone scanning with a GC-rich expectation will look in the wrong places.\n\nTwo orientation and length details follow from the structure. The JASPAR OSR2 profile MA1646.2 has a consensus of CAGAAGC, which is the reverse complement of GCTTCTG — the same core with one substitution, reported on the opposite strand; databases are not consistent about strand here. And the longest model in the family, the HOCOMOCO OSR2 methyl-HT-SELEX matrix (tGCTACTGaagtaGC, 15 bp, 18.2 bits), reads as an inverted repeat: GCTACTG at the 5' end and, on the other strand at the 3' end, GCTACTT. That arrangement is consistent with OSR2's larger finger array or with two-site occupancy, but no structure of either protein on DNA has been reported, so which fingers make which contacts is not established. OSR1 and OSR2 are not distinguishable from sequence.\n\n## Where it acts\n\nBecause both factors are mesenchymal and developmentally restricted, the sites that matter are developmental enhancers in mesenchyme rather than housekeeping promoters, and the motif is not CpG-island associated. No named composite element exists for this family, and no well-characterized partner motif has been established — a genuine gap rather than an omission. An exact 8-mer of this composition is expected on the order of tens of thousands of times in the human genome, which puts OSR matches firmly in the \"too common to mean anything alone\" category.\n\n## Biology and disease\n\nThe mouse phenotypes are clean and non-overlapping. *Osr1*-null embryos fail to form the metanephric mesenchyme and have no kidney, along with heart and urogenital defects; conditional and lineage work has since shown that Osr1-expressing mesenchymal cells also initiate lymph node formation. *Osr2*-null mice have cleft palate, caused by reduced proliferation and disturbed patterning of the palatal shelf mesenchyme, and Osr2 also functions in tooth germ development. Human Mendelian disease links are weaker than the mouse data would suggest; the clearest reported human connection is regulatory rather than coding, with enhancer variation at *OSR2* associated with susceptibility to mandibular incisor agenesis.\n\n## Reading a hit\n\nA GCTACTGT match identifies the family, not the member. The mouse knock-in result makes this more than a technical caveat: the two proteins are biochemically interchangeable, so there is no reason to expect sequence to separate them, and any call between OSR1 and OSR2 has to come from expression data.\n\nThree practical points. First, check strand — at least one database profile in this family is reported as the reverse complement (CAGAAGC), so a single-strand scan will miss half the matches. Second, weigh the evidence: the strongest models here are in vitro (HOCOMOCO codes `SM` for OSR1 and `PSM` for OSR2, the latter grade A), so the claim that these proteins bind this sequence is well supported and not a ChIP-only inference; the weakest, OSR2.H14CORE.1.M.C, is grade C and much longer, and the extra flanking positions in it should not be treated as a requirement. Third, the motif is short and common, so a hit is only informative in a mesenchymal context where one of the two genes is actually expressed. Outside kidney, palate, tooth and related mesenchyme, a match is very unlikely to be occupied.",
+ "caveats": "The motif itself is well agreed (cohesion 0.92, six of eight models giving GCTACTG/GCTACTGT, with in vitro HOCOMOCO evidence at codes SM and PSM), so family assignment is sound. What it cannot do is name the protein: OSR1 and OSR2 read the same site, and a mouse knock-in showed their coding sequences are functionally interchangeable, so only expression data can separate them. The 8-mer is common enough to occur tens of thousands of times by chance, and both genes are restricted to developing mesenchyme, so matches outside kidney, palate, tooth or related mesenchyme are unlikely to be occupied. Check strand: one JASPAR profile reports the reverse complement (CAGAAGC). Do not expect a GC-rich site here.",
+ "refs": [
+  {
+   "cite": "Hart MC, Wang L, Coulter DE. Comparison of the structure and expression of odd-skipped and two related genes that encode a new family of zinc finger proteins in Drosophila. Genetics 1996;144:171-82.",
+   "pmid": "8878683",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8878683/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  },
+  {
+   "cite": "Yin Y, Morgunova E, Jolma A, et al. Impact of cytosine methylation on DNA binding specificities of human transcription factors. Science 2017;356.",
+   "pmid": "28473536",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28473536/"
+  },
+  {
+   "cite": "UniProt entries Q8TAX0 (OSR1_HUMAN) and Q8N2R0 (OSR2_HUMAN), zinc-finger annotation. UniProt Consortium, accessed September 2026.",
+   "url": "https://www.uniprot.org/uniprotkb/Q8N2R0/entry"
+  },
+  {
+   "cite": "Wang Q, Lan Y, Cho ES, et al. Odd-skipped related 1 (Odd 1) is an essential regulator of heart and urogenital development. Dev Biol 2005;288:582-94.",
+   "pmid": "16223478",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16223478/"
+  },
+  {
+   "cite": "James RG, Kamei CN, Wang Q, et al. Odd-skipped related 1 is required for development of the metanephric kidney and regulates formation and differentiation of kidney precursor cells. Development 2006;133:2995-3004.",
+   "pmid": "16790474",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16790474/"
+  },
+  {
+   "cite": "Lan Y, Ovitt CE, Cho ES, et al. Odd-skipped related 2 (Osr2) encodes a key intrinsic regulator of secondary palate growth and morphogenesis. Development 2004;131:3207-16.",
+   "pmid": "15175245",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15175245/"
+  },
+  {
+   "cite": "Gao Y, Lan Y, Ovitt CE, et al. Functional equivalence of the zinc finger transcription factors Osr1 and Osr2 in mouse development. Dev Biol 2009;328:200-9.",
+   "pmid": "19389375",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19389375/"
+  },
+  {
+   "cite": "Vallecillo-García P, Orgeur M, Comai G, et al. A local subset of mesenchymal cells expressing the transcription factor Osr1 orchestrates lymph node initiation. Immunity 2023;56:1204-1219.e8.",
+   "pmid": "37160119",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37160119/"
+  },
+  {
+   "cite": "Fan L, Zhang X, Mao J, et al. Enhancer Regulation of OSR2 in Mandibular Incisor Agenesis Susceptibility. J Dent Res 2026:220345261451773.",
+   "pmid": "42470271",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42470271/"
+  }
+ ]
+}

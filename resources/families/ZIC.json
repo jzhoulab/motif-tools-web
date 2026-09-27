@@ -1,0 +1,76 @@
+{
+ "key": "ZIC",
+ "aka": [
+  "ZIC-binding site",
+  "Zic/Gli/Glis superfamily site",
+  "CCTGCTGNG",
+  "CACAGCAGGGGGT",
+  "odd-paired-related (opa) site"
+ ],
+ "consensus": "GACCCCCCGCTGTG",
+ "short": "ZIC1 to ZIC5 are five-fingered C2H2 zinc-finger proteins whose DNA-binding domains are the closest relatives of GLI outside the GLIS subfamily, and which read a GLI-like site. In vitro selection gives an optimal ZIC site almost identical to the GLI consensus but bound with lower affinity; modern high-throughput measurements extend it to GACCCCCCGCTGTG, whose reverse complement, CACAGCAGGGGGT, is how several databases write the same motif. ZIC proteins also bind GLI zinc fingers directly and can raise or lower GLI-dependent transcription. They act mainly in dorsal neural tube, neural crest, somites and cerebellum, and human mutations cause holoprosencephaly (ZIC2), X-linked heterotaxy (ZIC3) and Dandy-Walker malformation (ZIC1 with ZIC4).",
+ "long": "## The factors\n\nThe ZIC family has five human members, ZIC1 to ZIC5, each with a tandem array of C2H2 zinc fingers\nthat is more similar to the GLI fingers than to any other vertebrate zinc-finger class. ZIC1 and\nZIC4 are a divergently transcribed pair on chromosome 3q24; ZIC2 and ZIC5 are a similar pair on\n13q32; ZIC3 sits alone on Xq26. They bind as monomers. In addition to binding DNA, ZIC proteins\nassociate physically with GLI zinc fingers and, depending on cell type, either enhance or suppress\nGLI-dependent transactivation, so part of their activity is exerted as a GLI cofactor rather than\nthrough their own site. Expression is largely neural and paraxial: dorsal neural tube and roof\nplate, neural crest, somites, and, postnatally, cerebellar granule cells. ZIC2 is also expressed in\nearly epiblast and embryonic stem cells.\n\n## The motif\n\nThe first systematic definition of the ZIC site used gel-shift-based target selection with ZIC1,\nZIC2 and ZIC3 and recovered a sequence almost identical to the GLI binding sequence, but bound with\nlower affinity than GLI; consistently, reporter activation by ZIC proteins depended less on the\npresence of a GLI site than GLI1 activation did, and ZIC proteins activated many promoters lacking\none. Circular-dichroism comparisons of ZIC, GLI and GLIS finger domains on DNA support a shared\nrecognition mode.\n\nHigh-throughput SELEX extends the site to a 13-14 base element usually written GACCCCCCGCTGTG. Its\n5' half, GACCCCCC, is the GLIS-like version of the GLI core, and the 3' extension GCTGTG is what\ndistinguishes ZIC from GLI and GLIS in practice. Several databases write the same element on the\nother strand, as CACAGCAGGGGGT or the shorter CNCAGCAGG, and the ontology form CCTGCTGNG is the\nreverse complement of that short core; none of these is a different motif. The data consensus here,\nCNCAGCAGGGGGCC, is the reverse-strand form of the full site. One real subtlety is visible in the\ncollection: the HT-SELEX and methyl-HT-SELEX versions of the ZIC motif differ at a central CpG\n(CAGCGGGGGG versus CAGCAGGGGG), so cytosine methylation shifts the measured preference at that\nposition, and different database entries for the same protein can look inconsistent for that reason.\nNo experiment distinguishes ZIC1 from ZIC2, ZIC3, ZIC4 or ZIC5 by sequence; the JASPAR\nZic1::Zic2 entry is modeled as a dimer but its consensus is the same short core.\n\n## Where it acts\n\nZIC sites are enhancer elements. In mouse embryonic stem cells ZIC2 occupies thousands of\nenhancers, is required for their activity, and cooperates with the Mediator and elongation\nmachinery; later work describes ZIC2 acting first as a priming factor on closed chromatin during\nneural induction and then as an activator at established enhancers. In the cerebellum and dorsal\nneural tube ZIC occupancy overlaps with GLI-responsive elements, which is expected given the shared\ncore, and ZIC and GLI compete or cooperate at the same sequences. Because the informative part of\nthe site is roughly nine to thirteen bases with a GC-rich core, matches are common in GC-rich\nregulatory DNA, and the motif overlaps in scoring space with GLI, GLIS and, at the CAGCAGG core,\nwith simple CAG-repeat and E-box-adjacent sequence.\n\n## Biology and disease\n\nGli/Zic factors together pattern the vertebrate neural plate by defining domains of differentiation,\nwith ZIC activity dorsal to the SHH-dependent ventral domains. Heterozygous ZIC2 loss-of-function\ncauses holoprosencephaly type 5, characteristically with a middle-interhemispheric variant and\ndistinctive facial features; ZIC3 mutations cause X-linked heterotaxy with complex congenital heart\ndefects and laterality reversal; heterozygous deletion of the linked ZIC1 and ZIC4 pair causes\nDandy-Walker malformation, and mouse work shows that combined Zic1 and Zic4 loss disturbs several\ndevelopmental programs in the cerebellar anlage rather than one. ZIC5 was identified in Xenopus as a\nneural-crest regulator. Beyond development, ZIC family members are recurrently deregulated in\ntumors, most consistently by promoter hypermethylation and silencing.\n\n## Reading a hit\n\nTreat a ZIC match as \"ZIC family\", never as a specific paralogue: all five members share one motif.\nThen treat it cautiously as \"ZIC rather than GLI\". The two families were defined on essentially the\nsame 5' core, and separating them depends on the 3' GCTGTG extension, which carries relatively\nlittle information; a short or weak match can belong to either, and a ZIC hit inside a\nHedgehog-responsive enhancer is as likely to be a GLI site. Note also that a real ZIC effect need\nnot require a ZIC site at all, since ZIC proteins act as GLI cofactors and in reporter assays\nactivate promoters lacking the site. The GC-rich core makes the motif frequent in GC-rich\nregulatory DNA, so isolated matches are weak evidence. In the data behind this family, one Vierstra\narchetype labelled ZIC (AC0536) has the consensus GACCACCC and matches the GLI family better than\nits own; that is the expected failure mode for this pair, not a claim that the label is wrong.",
+ "caveats": "The five ZIC paralogues are indistinguishable by sequence, so a hit names the family only. The larger problem is the GLI boundary: ZIC and GLI were defined on nearly the same core, ZIC binds the GLI consensus in vitro (with lower affinity), and the two are separated only by a weakly informative 3' extension, so weak matches cannot be assigned to one family. One Vierstra archetype labelled ZIC in these data in fact scores closest to GLI. In vitro entries for the same ZIC protein can also disagree at a central CpG because the methyl-SELEX and standard SELEX preferences differ there. Finally, ZIC can act on GLI-dependent transcription without occupying its own site.",
+ "refs": [
+  {
+   "cite": "Mizugishi K, Aruga J, Nakata K, et al. Molecular properties of Zic proteins as transcriptional regulators and their relationship to GLI proteins. J Biol Chem 2001;276:2180-8.",
+   "pmid": "11053430",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11053430/"
+  },
+  {
+   "cite": "Koyabu Y, Nakata K, Mizugishi K, et al. Physical and functional interactions between Zic and Gli proteins. J Biol Chem 2001;276:6889-92.",
+   "pmid": "11238441",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11238441/"
+  },
+  {
+   "cite": "Brewster R, Lee J, Ruiz i Altaba A. Gli/Zic factors pattern the neural plate by defining domains of cell differentiation. Nature 1998;393:579-83.",
+   "pmid": "9634234",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9634234/"
+  },
+  {
+   "cite": "Sakai-Kato K, Ishiguro A, Mikoshiba K, et al. CD spectra show the relational style between Zic-, Gli-, Glis-zinc finger protein and DNA. Biochim Biophys Acta 2008;1784:1011-9.",
+   "pmid": "18298960",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18298960/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  },
+  {
+   "cite": "Yin Y, Morgunova E, Jolma A, et al. Impact of cytosine methylation on DNA binding specificities of human transcription factors. Science 2017;356.",
+   "pmid": "28473536",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28473536/"
+  },
+  {
+   "cite": "Luo Z, Gao X, Lin C, et al. Zic2 is an enhancer-binding factor required for embryonic stem cell specification. Mol Cell 2015;57:685-694.",
+   "pmid": "25699711",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25699711/"
+  },
+  {
+   "cite": "Grinberg I, Northrup H, Ardinger H, et al. Heterozygous deletion of the linked genes ZIC1 and ZIC4 is involved in Dandy-Walker malformation. Nat Genet 2004;36:1053-5.",
+   "pmid": "15338008",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15338008/"
+  },
+  {
+   "cite": "Blank MC, Grinberg I, Aryee E, et al. Multiple developmental programs are altered by loss of Zic1 and Zic4 to cause Dandy-Walker malformation cerebellar pathogenesis. Development 2011;138:1207-16.",
+   "pmid": "21307096",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21307096/"
+  },
+  {
+   "cite": "Barratt KS, Arkell RM. ZIC2 in Holoprosencephaly. Adv Exp Med Biol 2018;1046:269-299.",
+   "pmid": "29442327",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29442327/"
+  },
+  {
+   "cite": "Bellchambers HM, Ware SM. ZIC3 in Heterotaxy. Adv Exp Med Biol 2018;1046:301-327.",
+   "pmid": "29442328",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29442328/"
+  },
+  {
+   "cite": "Houtmeyers R, Souopgui J, Tejpar S, et al. The ZIC gene family encodes multi-functional proteins essential for patterning and morphogenesis. Cell Mol Life Sci 2013;70:3791-811.",
+   "pmid": "23443491",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23443491/"
+  }
+ ]
+}

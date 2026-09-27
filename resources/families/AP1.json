@@ -1,0 +1,77 @@
+{
+ "key": "AP1",
+ "aka": [
+  "AP-1 site",
+  "TRE",
+  "TPA response element",
+  "TPA-responsive element",
+  "Fos/Jun site",
+  "phorbol ester response element"
+ ],
+ "consensus": "TGASTCA",
+ "short": "AP-1 is the collective name for dimers of the JUN proteins (JUN, JUNB, JUND) with the FOS proteins (FOS, FOSB, FOSL1, FOSL2), together with the related basic region-leucine zipper partners ATF3, JDP2 and BATF/BATF2/BATF3. They bind the seven-base TPA response element TGA(C/G)TCA, two TGAC half-sites read one per subunit, and also the one-base-longer cyclic-AMP response element TGACGTCA. FOS and JUN were among the first proto-oncogenes described, and AP-1 activity rises within minutes of growth-factor, cytokine, ultraviolet or oxidative stimulation. The site is one of the most frequently occupied sequences in accessible chromatin, concentrated in distal enhancers, where AP-1 binding helps keep regions open for other factors. Because every member reads the same seven bases, a match names the family rather than the protein.",
+ "long": "## The factors\n\nAP-1 is a dimer pool rather than a single protein. The JUN subfamily (JUN, JUNB, JUND) and the FOS subfamily (FOS, FOSB, FOSL1/FRA-1, FOSL2/FRA-2) are basic region-leucine zipper (bZIP) factors: a roughly 60-residue module in which a basic region lies along the DNA major groove and an adjacent leucine-rich heptad repeat forms a parallel two-stranded coiled coil with the partner subunit. Fos proteins barely homodimerize and need a Jun partner; Jun homodimerizes weakly and prefers Fos, a bias the c-Fos-c-Jun crystal structure traced to an asymmetric network of interhelical electrostatic contacts in the zipper. Three further groups join the same pool and read the same site: ATF3, JDP2, and the immune bZIPs BATF, BATF2 and BATF3. JUN, JUND, FOSL1, FOSL2 and ATF3 are broadly expressed; FOS and FOSB are immediate-early genes whose transcription rises within minutes of stimulation; BATF and BATF3 are largely confined to lymphoid and dendritic lineages. Measuring DNA specificity for 102 bZIP dimers showed that about 72% of heterodimer motifs are simply the partners' half-sites joined, which is why this pool behaves as one motif.\n\n## The motif\n\nThe classical site is the 7 bp TPA response element (TRE), TGA(C/G)TCA, written TGASTCA. It is two TGAC half-sites in opposed orientations sharing a central base, one read by each subunit. TGACTCA and TGAGTCA are exact reverse complements, so these are not two variants but one site seen from either strand. The 8 bp cyclic-AMP response element (CRE), TGACGTCA, is the same half-site pair with one extra base between them, and Jun-, ATF3-, JDP2- and BATF-containing dimers bind it as well. Information sits almost entirely on TGA and TCA; the central base and the flanks are weakly constrained, although an A or T immediately outside each half-site is common, giving the ATGACTCAT of many models. In the crystal structure the coiled coil is flexibly joined to the basic regions and the heterodimer does not occupy the asymmetric TGAGTCA in a unique orientation, which is the structural reason no base distinguishes the Fos half from the Jun half. The 77 models gathered here bear this out: the JASPAR dimer matrices FOS::JUN, FOSL2::JUNB, FOSL2::JUND and BATF::JUN each have a same-family neighbour at 0.99 similarity or better. The consensus derived from these models is ATGACTCA, but the highest-information members - BATF3, BATF2, FOS, JUNB, JDP2 and ATF3 - are the 8 bp ATGACGTCAT. That split follows evidence type rather than biology: in vitro selection recovers the CRE as the higher-affinity site for these dimers, whereas ChIP-derived models recover the 7 bp TRE, which is what cells actually occupy. BATF models carry a second element, a TTTC placed two or three bases from the TRE: the AP-1-IRF composite element (AICE) through which BATF dimers recruit IRF4 or IRF8.\n\n## Where it acts\n\nAP-1 sites are enriched at distal enhancers rather than in CpG-island promoters, and AP-1-like footprints are among the most frequently recovered classes in genome-wide DNase I footprint maps. The site is genuinely common: a 7-mer of this composition is expected roughly 4 x 10^5 times in 3.1 Gb of human sequence, so most matches are not functional. AP-1 occupancy is better described as collaborative than instructive: AP-1 binding raises local accessibility and licenses glucocorticoid receptor binding at shared elements, and AP-1 motifs are among the sequences that lineage-determining factors use to prime enhancers in macrophages and B cells. Named composites include the AICE with IRF4 and IRF8, the NFAT-AP-1 composite of the IL2 and CSF2 enhancers, and glucocorticoid receptor tethering sites.\n\n## Biology and disease\n\nAP-1 converts short-lived signals - growth factors, cytokines, ultraviolet light, oxidative stress - into transcription, and its targets span proliferation, differentiation, apoptosis, wound repair and bone remodeling. Mice lacking c-fos are osteopetrotic because osteoclasts fail to form, and have hematopoietic defects; c-jun-null embryos die in mid-gestation with hepatic failure. Batf3-null mice lack CD8-alpha-positive (cDC1) dendritic cells and prime cytotoxic T cells poorly. In cancer AP-1 acts in both directions depending on tissue and member: JUN is amplified in dedifferentiated liposarcoma, FOS and FOSB are recurrently rearranged in epithelioid hemangioma, and FOSL1 is elevated in many epithelial tumors, while JUNB and JUND can be growth-suppressive.\n\n## Reading a hit\n\nA TGASTCA match identifies the family, not the member: nothing in the sequence separates FOS from FOSB or FOSL1/2, or JUN from JUNB or JUND, and the ATF3, JDP2 and BATF models are equally close. At seven informative bases a single occurrence in a promoter is not evidence of regulation; ask instead whether it falls in accessible chromatin in your cell type. The site is also hard to separate from its siblings. If your match is TGACGTCA, the CREB/ATF family is at least as likely, and ATF6/CREB3 if the 3-prime flank is GTGG. If GC extensions flank the core, as in TGCTGACTCAGCA, read MAF; if only the 3-prime side is GC, as in TGACTCAGC, read NFE2/BACH. ChIP-derived AP-1 models are also prone to indirect recovery: a JUN-like motif is one of a handful repeatedly enriched in ChIP-seq datasets for unrelated factors, accounting for up to 45% of peaks in some sets. One CIS-BP entry labelled ATF3 in this family (M07822) is a CACGTG E-box whose nearest neighbours are USF motifs; treat it as out of place here.",
+ "caveats": "An AP-1 match is one of the safest family calls in this atlas and one of the least informative member calls. All 13 proteins share the motif, so a hit licenses \"an AP-1-family dimer could bind here\" and nothing more; it does not say which subunits, whether the site is occupied, or whether occupancy activates or represses. The 7 bp core occurs a few hundred thousand times in the genome, so require accessibility, conservation or allelic evidence before calling a site functional. Half of the models here come from ChIP-seq, and AP-1 motifs are a well-documented contaminant of ChIP-seq peaks for unrelated factors, so an AP-1 motif under someone else's peak is not evidence that the two proteins interact.",
+ "refs": [
+  {
+   "cite": "Lee W, Mitchell P, Tjian R. Purified transcription factor AP-1 interacts with TPA-inducible enhancer elements. Cell 1987;49:741-52.",
+   "pmid": "3034433",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3034433/"
+  },
+  {
+   "cite": "Hai T, Curran T. Cross-family dimerization of transcription factors Fos/Jun and ATF/CREB alters DNA binding specificity. Proc Natl Acad Sci U S A 1991;88:3720-4.",
+   "pmid": "1827203",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1827203/"
+  },
+  {
+   "cite": "Wang ZQ, Ovitt C, Grigoriadis AE, et al. Bone and haematopoietic defects in mice lacking c-fos. Nature 1992;360:741-5.",
+   "pmid": "1465144",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1465144/"
+  },
+  {
+   "cite": "Hilberg F, Aguzzi A, Howells N, et al. c-jun is essential for normal mouse development and hepatogenesis. Nature 1993;365:179-81.",
+   "pmid": "8371760",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8371760/"
+  },
+  {
+   "cite": "Glover JN, Harrison SC. Crystal structure of the heterodimeric bZIP transcription factor c-Fos-c-Jun bound to DNA. Nature 1995;373:257-61.",
+   "pmid": "7816143",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7816143/"
+  },
+  {
+   "cite": "Hildner K, Edelson BT, Purtha WE, et al. Batf3 deficiency reveals a critical role for CD8alpha+ dendritic cells in cytotoxic T cell immunity. Science 2008;322:1097-100.",
+   "pmid": "19008445",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19008445/"
+  },
+  {
+   "cite": "Heinz S, Benner C, Spann N, et al. Simple combinations of lineage-determining transcription factors prime cis-regulatory elements required for macrophage and B cell identities. Mol Cell 2010;38:576-89.",
+   "pmid": "20513432",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20513432/"
+  },
+  {
+   "cite": "Biddie SC, John S, Sabo PJ, et al. Transcription factor AP1 potentiates chromatin accessibility and glucocorticoid receptor binding. Mol Cell 2011;43:145-55.",
+   "pmid": "21726817",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21726817/"
+  },
+  {
+   "cite": "Glasmacher E, Agrawal S, Chang AB, et al. A genomic regulatory element that directs assembly and function of immune-specific AP-1-IRF complexes. Science 2012;338:975-80.",
+   "pmid": "22983707",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22983707/"
+  },
+  {
+   "cite": "Worsley Hunt R, Wasserman WW. Non-targeted transcription factors motifs are a systemic component of ChIP-seq datasets. Genome Biol 2014;15:412.",
+   "pmid": "25070602",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25070602/"
+  },
+  {
+   "cite": "Rodríguez-Martínez JA, Reinke AW, Bhimsaria D, et al. Combinatorial bZIP dimers display complex DNA-binding specificity landscapes. Elife 2017;6.",
+   "pmid": "28186491",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28186491/"
+  },
+  {
+   "cite": "Bejjani F, Evanno E, Zibara K, et al. The AP-1 transcriptional complex: Local switch or remote command?. Biochim Biophys Acta Rev Cancer 2019;1872:11-23.",
+   "pmid": "31034924",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31034924/"
+  }
+ ]
+}

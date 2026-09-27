@@ -1,0 +1,71 @@
+{
+ "key": "ZNF_UNNAMED",
+ "aka": [
+  "unnamed ZNF archetype",
+  "generic C2H2 archetype",
+  "Vierstra archetype",
+  "AC#### ZNF",
+  "ZNF (unspecified)",
+  "unlabelled zinc-finger matrix"
+ ],
+ "short": "Not a motif but a label gap. The Vierstra footprint atlas groups redundant matrices from several databases into archetypes, each named after the factor groups whose motifs clustered into it. For 256 of the 693 archetypes in this atlas that name collapses to a generic token, ZNF, ZFP, ZBTB, ZSCAN or ZKSCAN, so the only claim being made is that some C2H2 zinc finger binds here. These 256 matrices are long, high-information and almost entirely unrelated to one another: not one has a close match to another member of this entry. A hit means you matched a specific, reproducible zinc-finger matrix whose protein was never named, and the useful next step is to find that matrix's nearest named neighbour.",
+ "long": "## The factors\n\nNone is named, and that is the point of the entry. Human C2H2 zinc fingers number around 700, the largest structural class of transcription factors in the genome, and roughly half carry a KRAB, SCAN, BTB or SET domain in addition to their finger array (Schmitges et al. 2016; Lambert et al. 2018). Specificities for most of them were determined in bulk screens rather than by individual study (Najafabadi et al. 2015; Schmitges et al. 2016), and several hundred putative human transcription factors had no motif of any kind until very recently (Jolma et al. 2026). An archetype is a cluster of similar matrices drawn from several source collections, built to remove redundancy before annotating DNase I footprints genome-wide; the reference footprint atlas delineated about 4.5 million footprints across 243 human cell and tissue types and used archetypes as the motif vocabulary for them (Vierstra et al. 2020). An archetype identifier encodes accession, factor-group label and structural class, as in AC0403:ZNF:C2H2_ZF. Here the label field is generic for all 256 members: ZNF for 226, ZBTB for 12, ZFP for 9, ZSCAN for 5, ZKSCAN for 2, and mixed generic tokens for 2. The class field is C2H2_ZF for 248 of them. The only assertion any of these names carries is the protein fold.\n\n## The motif\n\nThere is no consensus: 256 matrices here are 256 different things. Median consensus length is 14 bp, with 116 members at 15 bp or longer and 40 at 20 bp or longer; median information content is 15.3 bits, with 50 members above 20 bits and a maximum of 45.9 bits over 28 bp. Cohesion is 0.33, the lowest kind of value in this atlas, and the diagnostic number is starker still: of the 218 members that have any within-entry neighbour, not one scores above 0.9 similarity and 184 score below 0.7. The listed representative AC0620 (CCTCAGCCTCC) is a centroid, not a consensus. What an individual matrix is, however, is often recoverable from the data even though the label withholds it. AC0403 (TTGCGCCACTGCACTCCAGCCTGGGCAA, 45.9 bits) is essentially the CIS-BP matrix for ZNF496; AC0286 (AGTGGCTTTTTCTACCTCACAATACAAC, 43.3 bits) is essentially the CIS-BP matrix for ZNF737; AC0408 is the CIS-BP matrix attributed to ZNF445 and AC0339 is the ZSCAN29 site, an inverted pair of GTCTAC hexamers. More generally, 206 of the 250 archetypes that have a cross-family neighbour match it at 0.9 or better, so an unnamed archetype is usually a named protein's motif with the name dropped. Base composition is 55% GC overall, and the long, high-information members have the profile expected of transposable-element sequence read by KRAB zinc fingers (Imbeault et al. 2017).\n\n## Where it acts\n\nArchetypes were built to annotate accessible, footprinted DNA, so an archetype in this set was seen in DNase I cleavage data in at least some of the 243 profiled cell and tissue types (Vierstra et al. 2020). That is real evidence that a protein occupies some of its matches, without saying which protein. Beyond that, distribution follows the matrix. The GC- and CT-rich members, of which the representative CCTCAGCCTCC is one, will accumulate at promoters and CpG islands and will be difficult to separate from the SP/KLF, MAZ, VEZF1 and E2F pools. The long AT-containing members will accumulate in repeat-rich intronic and intergenic DNA. Many zinc fingers of this kind bind within closed chromatin at protein-specific sets of repeats and are therefore systematically under-represented in accessibility-based catalogues (Razavi et al. 2026).\n\n## Biology and disease\n\nThis entry cannot support a biological claim, and treating it as though it could is the main way to misuse it. The processes the underlying proteins control are described in the entries that do have names: transposable-element silencing and its domestication for the KRAB zinc fingers, imprinting for ZFP57, promoter regulation for the SCAN and BTB groups. What can be said is that the gap is closing. Systematic in vitro and in vivo screens have produced motifs for just over half of 332 previously uncharacterized human transcription factors, adding roughly 130 distinct motifs to the known vocabulary, most of them associated with a single protein (Jolma et al. 2026). Some archetypes here will become assignable to one of those proteins, but the archetype label will not change until the clustering is rebuilt.\n\n## Reading a hit\n\nDo not report \"a ZNF motif\". Report the archetype accession, its length and its information content, then do three things. First, look for the nearest named matrix in JASPAR, HOCOMOCO or CIS-BP: for 82% of the members here that neighbour scores 0.9 or better, and it usually supplies the protein name the archetype lacks. Second, check the repeat annotation, because a matrix longer than about 20 bp is frequently a fragment of a transposable element, in which case matches are element copies rather than independent regulatory sites. Third, look at base composition: a GC- or CT-rich archetype cannot be separated from the general GC-box pool and should not be attributed to a specific protein. Two members are explicitly flagged as belonging elsewhere, AC0408 to the ZFP57 entry and AC0339 to the ZNF24/ZSCAN29 motif. And keep the semantics straight: the archetype name is a statement about which matrices clustered together, never a claim that a protein called ZNF binds this sequence.",
+ "caveats": "This is a label gap, not a motif family: 256 archetypes whose names carry no information beyond \"C2H2 zinc finger\". Cohesion is 0.33 and no member resembles another above 0.9 similarity, so there is no consensus and the representative matrix is only a centroid. A hit tells you which archetype you matched and nothing about which protein. Resolve it by finding the nearest named matrix, which scores 0.9 or better for 206 of the 250 members that have a cross-family neighbour. Check the repeat track, since many of the long members are transposable-element sequence and their matches are element copies. GC- and CT-rich members cannot be separated from the general GC-box pool.",
+ "refs": [
+  {
+   "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
+   "pmid": "32728250",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  },
+  {
+   "cite": "Lambert SA, Jolma A, Campitelli LF, et al. The Human Transcription Factors. Cell 2018;172:650-665.",
+   "pmid": "29425488",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29425488/"
+  },
+  {
+   "cite": "Schmitges FW, Radovani E, Najafabadi HS, et al. Multiparameter functional diversity of human C2H2 zinc finger proteins. Genome Res 2016;26:1742-1752.",
+   "pmid": "27852650",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27852650/"
+  },
+  {
+   "cite": "Najafabadi HS, Mnaimneh S, Schmitges FW, et al. C2H2 zinc finger proteins greatly expand the human regulatory lexicon. Nat Biotechnol 2015;33:555-62.",
+   "pmid": "25690854",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25690854/"
+  },
+  {
+   "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
+   "pmid": "25215497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  },
+  {
+   "cite": "Rauluseviciute I, Riudavets-Puig R, Blanc-Mathieu R, et al. JASPAR 2024: 20th anniversary of the open-access database of transcription factor binding profiles. Nucleic Acids Res 2024;52:D174-D182.",
+   "pmid": "37962376",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37962376/"
+  },
+  {
+   "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
+   "pmid": "37971293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  },
+  {
+   "cite": "Imbeault M, Helleboid PY, Trono D. KRAB zinc-finger proteins contribute to the evolution of gene regulatory networks. Nature 2017;543:550-554.",
+   "pmid": "28273063",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28273063/"
+  },
+  {
+   "cite": "Jolma A, Laverty KU, Fathi A, et al. An expanded codebook of human transcription factor DNA-binding specificity. Nature 2026;657:275-283.",
+   "pmid": "42557334",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42557334/"
+  },
+  {
+   "cite": "Razavi R, Fathi A, Yellan I, et al. Extensive binding of poorly characterized human transcription factors to genomic dark matter. Nat Commun 2026;17.",
+   "pmid": "42557260",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42557260/"
+  },
+  {
+   "cite": "Wolfe SA, Nekludova L, Pabo CO. DNA recognition by Cys2His2 zinc finger proteins. Annu Rev Biophys Biomol Struct 2000;29:183-212.",
+   "pmid": "10940247",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10940247/"
+  }
+ ]
+}

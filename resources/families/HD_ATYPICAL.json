@@ -1,0 +1,77 @@
+{
+ "key": "HD_ATYPICAL",
+ "aka": [
+  "atypical homeodomain",
+  "composite homeodomain proteins",
+  "multiple-homeodomain proteins",
+  "ZHX / ZFHX / HOMEZ / TSHZ / HMBOX / HHEX group",
+  "ATBF1 (ZFHX3)",
+  "HOT1 (HMBOX1)",
+  "zinc fingers and homeoboxes"
+ ],
+ "short": "This family collects homeodomains that do not behave like homeodomains. Instead of one small domain in a compact protein, these factors bury one to five divergent homeodomains inside large multidomain proteins, usually alongside many C2H2 zinc fingers: ZHX1-3, ZFHX2 and ZFHX3, HOMEZ, TSHZ1-3, HMBOX1, HDX, HHEX, and the SATB-type CUT-plus-homeodomain proteins. Several were discovered as something else entirely, an AT-rich enhancer-binding protein, a telomere repeat-binding protein, a chromatin scaffold protein. Their motifs are correspondingly heterogeneous: there is no single family consensus, several database models carry almost no information, and where a good motif exists it may be read by the zinc fingers rather than by the homeodomain. Useful as a bucket, not as an identifier.",
+ "long": "## The factors\n\nWhat unites these proteins is architecture, not sequence preference. Domain annotation gives the flavour.\nZHX1 and ZHX3 are 873 and 956 residues with five annotated homeobox regions each plus two C2H2 zinc\nfingers; ZHX2 has four homeoboxes. ZFHX3, originally named ATBF1, is 3,703 residues carrying four\nhomeodomains and 23 zinc fingers; ZFHX2 is 2,572 residues with three homeodomains and 12 zinc fingers.\nHOMEZ is a 550-residue protein with three homeodomains and a leucine-zipper-like region and no zinc\nfingers at all. TSHZ2 and TSHZ3, vertebrate teashirt proteins, have five zinc fingers and a single\nhomeodomain annotated as atypical. HDX has two homeodomains; HMBOX1 has one, embedded in a POU-like\narrangement. HHEX is the outlier in the other direction, a 270-residue protein with a single homeodomain,\nbut it homo-oligomerises through a proline-rich region rather than working as a monomer. SATB1 and SATB2\npair a divergent homeodomain with two CUT domains. Several of these proteins were characterised before\nanyone called them homeodomain factors: ZFHX3/ATBF1 as the AT-motif binding factor of the human\nalpha-fetoprotein enhancer, HMBOX1 as HOT1, a direct double-stranded telomere repeat-binding protein,\nSATB1 as a matrix-attachment-region binding protein with \"unusual binding site recognition\", and ZHX1 as an\nNF-Y-interacting repressor.\n\n## The motif\n\nThere is no single consensus, and the entry deliberately does not offer one. The three best-supported\nmodels are as follows. HOMEZ, from HT-SELEX, reads TAATCGTTT, about 13 bits: a recognisable TAAT core with\nan unusual CGTTT extension, and it is reproduced independently in CIS-BP as TATAATCGTTTT and as a footprint\narchetype, so it is probably real. HMBOX1 gives CTAGTTA, equivalently TAACTAG, supported by both in vitro\nselection and ChIP; this is a TAAT-like core with an inverted 3' half. Notably it does not resemble the\nTTAGGG telomeric repeat that HOT1/HMBOX1 was reported to bind directly, and that discrepancy is not\nresolved in the literature. TSHZ2 gives a 15-base CATCAAATGGAATC with high information content and grade A\nevidence, and it contains no TAAT core whatever; the most economical reading is that the zinc fingers do\nthe binding, as they do for *Drosophila* teashirt, and the atypical homeodomain contributes little. The\nremaining models are close to empty: ZFHX2 is a bare TAATTA at 5.5 bits, ZFHX3 reduces to AAT at 2.5 bits,\nHHEX to AT at 1.9, ZHX1 to AC at 1.3, HDX to a single T. Family cohesion is 0.55, the lowest of the\nhomeodomain groups, which is the expected signature of a bucket.\n\n## Where it acts\n\nGenuinely varied, and for several members not well mapped. HMBOX1/HOT1 localises to telomeres and\nassociates with actively processed telomere ends. ZHX proteins act as promoter-proximal repressors in\ncomplexes with NF-Y. ZFHX3/ATBF1 was defined at an AT-rich enhancer element and binds AT-rich sequence\ngenerally, which is one reason its motif carries so little information. SATB1 occupies base-unpairing\nregions and matrix attachment regions and organises chromatin loops in T cells rather than acting at a\nshort consensus. TSHZ3 works at neuronal target genes in cortical projection neurons. The general pattern\nis that occupancy for these proteins is determined by protein-protein interaction and by regional DNA\ncharacter, AT-richness or repeat content, more than by a short high-information consensus, which is exactly\nwhy motif-based prediction performs poorly for them.\n\n## Biology and disease\n\nSeveral members have solid human genetics. Somatic mutation and deletion of ZFHX3/ATBF1 occur recurrently\nin prostate cancer. Deletion of TSHZ3 causes an autism syndrome with defects in cortical projection\nneurons. De novo mutations in ADNP, another large protein with a homeodomain in unusual company, cause a\nSWI/SNF-related autism syndrome. HHEX, as PRH/Hex, is required for formation of the vertebrate body axis,\nthe haematopoietic and vascular systems, liver, thyroid and forebrain, and it can both repress and activate\ntargets and additionally regulate nuclear export of specific mRNAs. HMBOX1/HOT1 is a positive regulator of\ntelomere length: depletion shortens and overexpression lengthens telomeres, and it promotes chromatin\nassociation of telomerase. SATB1 controls thymocyte development through higher-order chromatin\norganisation.\n\n## Reading a hit\n\nThis is the family where a motif hit licenses the least. Of the 13 models, five carry under 6 bits and\nthree carry under 3 bits, which means they cannot be scanned meaningfully at all; a \"hit\" for the CIS-BP\nZHX1 or HDX model is not information. The CIS-BP HHEX model is inherited across species: it was measured on\na *Caenorhabditis elegans* protein at 77% DNA-binding-domain identity and transferred to human HHEX, not\nmeasured on the human protein. The CIS-BP ZFHX2 model is a bare TAATTA whose nearest neighbours across all\nfour databases are Q50 homeodomain motifs, and the ZHX1 model's nearest neighbours are CpG-binding\nMBD/CXXC motifs; both are flagged in the underlying data as probably belonging elsewhere. Only HOMEZ,\nHMBOX1 and TSHZ2 rest on direct in vitro selection for the human protein, and for TSHZ2 the motif is\nprobably the zinc fingers' rather than the homeodomain's. Read a hit here as a statement about sequence\ncomposition, and go to expression and ChIP data before naming a protein.",
+ "caveats": "Treat this family as a bucket label, not an identification. Five of the 13 models carry under 6 bits and three under 3 bits, so they are not scannable; matches to them are noise. The CIS-BP HHEX model is transferred from a C. elegans protein at 77% DNA-binding-domain identity rather than measured on human HHEX. The CIS-BP ZFHX2 and ZHX1 models sit closer to Q50 homeodomain and MBD/CXXC motifs respectively than to anything in this family. Only HOMEZ, HMBOX1 and TSHZ2 have credible human in vitro motifs, and the TSHZ2 site contains no TAAT core and is likely read by its zinc fingers. For most members, occupancy is driven by partners and by AT-rich or repeat context, not by the consensus.",
+ "refs": [
+  {
+   "cite": "Bürglin TR, Affolter M. Homeodomain proteins: an update. Chromosoma 2016;125:497-521.",
+   "pmid": "26464018",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26464018/"
+  },
+  {
+   "cite": "Bayarsaihan D, Enkhmandakh B, Makeyev A, et al. Homez, a homeobox leucine zipper gene specific to the vertebrate lineage. Proc Natl Acad Sci U S A 2003;100:10358-63.",
+   "pmid": "12925734",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12925734/"
+  },
+  {
+   "cite": "Kappei D, Butter F, Benda C, et al. HOT1 is a mammalian direct telomere repeat-binding protein contributing to telomerase recruitment. EMBO J 2013;32:1681-701.",
+   "pmid": "23685356",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23685356/"
+  },
+  {
+   "cite": "Morinaga T, Yasuda H, Hashimoto T, et al. A human alpha-fetoprotein enhancer-binding protein, ATBF1, contains four homeodomains and seventeen zinc fingers. Mol Cell Biol 1991;11:6041-9.",
+   "pmid": "1719379",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1719379/"
+  },
+  {
+   "cite": "Sun X, Frierson HF, Chen C, et al. Frequent somatic mutations of the transcription factor ATBF1 in human prostate cancer. Nat Genet 2005;37:407-12.",
+   "pmid": "15750593",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15750593/"
+  },
+  {
+   "cite": "Caubit X, Gubellini P, Andrieux J, et al. TSHZ3 deletion causes an autism syndrome and defects in cortical projection neurons. Nat Genet 2016;48:1359-1369.",
+   "pmid": "27668656",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27668656/"
+  },
+  {
+   "cite": "Helsmoortel C, Vulto-van Silfhout AT, Coe BP, et al. A SWI/SNF-related autism syndrome caused by de novo mutations in ADNP. Nat Genet 2014;46:380-4.",
+   "pmid": "24531329",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24531329/"
+  },
+  {
+   "cite": "Yamada K, Printz RL, Osawa H, et al. Human ZHX1: cloning, chromosomal location, and interaction with transcription factor NF-Y. Biochem Biophys Res Commun 1999;261:614-21.",
+   "pmid": "10441475",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10441475/"
+  },
+  {
+   "cite": "Bedford FK, Ashworth A, Enver T, et al. HEX: a novel homeobox gene expressed during haematopoiesis and conserved between mouse and human. Nucleic Acids Res 1993;21:1245-9.",
+   "pmid": "8096636",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8096636/"
+  },
+  {
+   "cite": "Soufi A, Jayaraman PS. PRH/Hex: an oligomeric transcription factor and multifunctional regulator of cell fate. Biochem J 2008;412:399-413.",
+   "pmid": "18498250",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18498250/"
+  },
+  {
+   "cite": "Dickinson LA, Joh T, Kohwi Y, et al. A tissue-specific MAR/SAR DNA-binding protein with unusual binding site recognition. Cell 1992;70:631-45.",
+   "pmid": "1505028",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1505028/"
+  },
+  {
+   "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
+   "pmid": "25215497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  }
+ ]
+}

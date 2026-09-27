@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && mv dist/index.html dist/motif-match.html",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node scripts/families/check.mjs"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^4.22.0",

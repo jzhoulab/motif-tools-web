@@ -1,0 +1,73 @@
+{
+ "key": "ARID",
+ "aka": [
+  "AT-rich interaction domain",
+  "ARID / BRIGHT",
+  "Bright (ARID3A)",
+  "Dead ringer-related",
+  "ARID3B",
+  "ARID5A / MRF1",
+  "ARID5B / MRF2 / Desrt"
+ ],
+ "consensus": "ATTAAT",
+ "short": "ARID stands for AT-rich interaction domain, and this family is restricted to the four human ARID proteins that really do read AT-rich sequence: ARID3A (Bright), ARID3B, ARID5A and ARID5B. Eight motifs converge on a five to eight base-pair AT core - ATTAAT for ARID3B, ATTAAA for ARID3A, AATATT for ARID5A - so the whole family occupies one narrow, information-poor patch of sequence space and is very hard to separate from homeodomain TAAT sites or from AT-rich DNA generally. The many other ARID-domain proteins, including ARID1A and ARID1B in BAF and ARID2 in PBAF, bind DNA without sequence preference and are deliberately excluded from this family.",
+ "long": "## The factors\n\nThe domain was discovered twice in the same year. Bright, a B cell-specific trans-activator, was purified as the protein binding the matrix-associating regions flanking the immunoglobulin heavy-chain enhancer and was recognized as defining a new DNA-binding protein family; the Drosophila protein Dead ringer provided the first structure, and its DNA-binding module was named the AT-rich interaction domain. Bright is now called ARID3A. The human genome encodes fifteen ARID-domain proteins in seven subfamilies, but only four are filed here: ARID3A and ARID3B, which together with ARID3C form a subfamily carrying an extended ARID plus a REKLES self-association domain, and ARID5A and ARID5B, the shortest members, which consist of little more than the domain itself.\n\nThe exclusion of the rest is deliberate and well founded. Systematic comparison of ARID-family proteins showed that sequence-specific AT-rich binding is a property of the ARID3 and ARID5 subfamilies, while the large ARID-containing subunits of chromatin remodellers - ARID1A and ARID1B in BAF, ARID2 in PBAF, and the yeast Swi1 equivalent - bind DNA with no detectable sequence specificity. Those proteins are chromatin regulators that happen to contain a structurally similar domain; scanning a genome for a motif attributed to them is not meaningful, and where such a model exists in the atlas, as for ARID1A, it is filed in the CHROMATIN bucket instead. ARID4A/4B and the JARID/KDM5 demethylases are likewise absent.\n\n## The motif\n\nAll eight models agree on the same thing and none of them says very much. ARID3B reads ATTAAT in CIS-BP and tATTAAT in JASPAR; ARID3A reads ATTAAA in JASPAR and the five-base AThAA in CIS-BP; ARID5A reads AATATTa and tAATATTg. Information content runs from 9.6 to 11.8 bits for the useful models, and the trimmed consensus is a five- to seven-base AT-only core. Structurally this is expected: the ARID fold contacts the major groove of AT-rich DNA through a helix-turn-helix-like core, with flanking regions contributing affinity, and recent work shows that ARID5A uses intrinsically disordered extensions on either side of the core domain for its DNA and RNA recognition rather than achieving specificity within the domain alone.\n\nTwo entries should be set aside. The Vierstra archetype AC0374 for ARID5B reads ttdGTATTGT, which is only 0.59 similar to anything else in the family. The CIS-BP model M01661 for ARID5B is the three-base ATa at 3.3 bits and carries no information at all. Four of the five CIS-BP models are transferred from other species - three from Mus musculus, one from Microcebus murinus - but all at 100 percent DNA-binding-domain identity, so the transfers are sound even if the models are short.\n\nFamily cohesion is 0.69, which looks respectable, but the discriminating number is the comparison between within-family and out-of-family nearest neighbours: bestOther values run from 0.74 to 0.84, meaning the closest matching model in some other family is nearly as similar as the closest match inside this one. The competitors are obvious - homeodomain families reading TAAT, the HMGA AT-hook models, and any AT-rich model at all.\n\n## Where it acts\n\nBright/ARID3A was found at nuclear-matrix-attachment regions flanking the immunoglobulin heavy-chain intronic enhancer, and it acts there in a strongly context-dependent way, requiring the right surrounding sequence and partner proteins to activate. ARID5B works at Sox9-regulated genes in chondrocytes, where it recruits the histone demethylase PHF2, and more recently has been shown to coordinate HDAC-mediated repression, so both ARID5 proteins are best thought of as sequence-biased recruiters of chromatin enzymes rather than as classical activators. AT-rich cores of this length are extremely abundant, so in practice the location of a real ARID site is set by chromatin context and partner occupancy, not by the motif.\n\n## Biology and disease\n\nARID5B is the medically prominent member: common germline variants at the ARID5B locus are among the strongest known inherited risk factors for childhood acute lymphoblastic leukaemia, identified by genome-wide association and repeatedly replicated. Targeted deletion of the mouse orthologue, originally named Desrt, causes growth retardation and abnormal development of the reproductive organs, and Arid5b is required for normal chondrogenesis. ARID5A is an immune regulator that stabilises IL-6 messenger RNA - a reminder that ARID-domain proteins can be RNA-binding as well as DNA-binding. ARID3A/Bright has regulatory roles across human and mouse haematopoiesis, including B cell development and stem cell function.\n\n## Reading a hit\n\nTreat a hit in this family as evidence of AT-rich sequence and little more. A five- to seven-base AT core will occur on the order of a million times in the human genome, and it cannot be distinguished from a homeodomain TAAT site, an AT-hook target, or an AT-rich stretch of no consequence. Do not attempt to assign a hit to a particular paralogue: ARID3A, ARID3B and ARID5A models are mutually similar at 0.89 to 0.98. Require expression and, ideally, occupancy data before calling any ARID site, and be aware that an ARID motif call has no bearing on ARID1A, ARID1B, ARID2 or the KDM5 proteins, whose ARID domains are not sequence-specific.",
+ "caveats": "Every model in this family is a short AT-only core, so a match carries almost no information: expect on the order of a million genome-wide hits and no way to distinguish an ARID site from a homeodomain TAAT site, an AT-hook target or plain AT-rich DNA. Out-of-family nearest neighbours score 0.74 to 0.84, nearly as high as within-family ones. Individual paralogues cannot be separated. Two ARID5B entries are unusable: the CIS-BP model is three bases at 3.3 bits, and the Vierstra archetype disagrees with everything else. Four CIS-BP models are cross-species transfers, though all at 100 percent domain identity. Only ARID3 and ARID5 proteins belong here; other ARID-domain proteins bind DNA non-specifically.",
+ "refs": [
+  {
+   "cite": "Herrscher RF, Kaplan MH, Lelsz DL, et al. The immunoglobulin heavy-chain matrix-associating regions are bound by Bright: a B cell-specific trans-activator that describes a new DNA-binding protein family. Genes Dev 1995;9:3067-82.",
+   "pmid": "8543152",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8543152/"
+  },
+  {
+   "cite": "Iwahara J, Clubb RT. Solution structure of the DNA binding domain from Dead ringer, a sequence-specific AT-rich interaction domain (ARID). EMBO J 1999;18:6084-94.",
+   "pmid": "10545119",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10545119/"
+  },
+  {
+   "cite": "Patsialou A, Wilsker D, Moran E. DNA-binding properties of ARID family proteins. Nucleic Acids Res 2005;33:66-80.",
+   "pmid": "15640446",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15640446/"
+  },
+  {
+   "cite": "Wilsker D, Patsialou A, Zumbrun SD, et al. The DNA-binding properties of the ARID-containing subunits of yeast and mammalian SWI/SNF complexes. Nucleic Acids Res 2004;32:1345-53.",
+   "pmid": "14982958",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/14982958/"
+  },
+  {
+   "cite": "Korn SM, Schlundt A. Structures and nucleic acid-binding preferences of the eukaryotic ARID domain. Biol Chem 2022;403:731-747.",
+   "pmid": "35119801",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35119801/"
+  },
+  {
+   "cite": "von Ehr J, Oberstrass L, Yazgan E, et al. Arid5a uses disordered extensions of its core ARID domain for distinct DNA- and RNA-recognition and gene regulation. J Biol Chem 2024;300:107457.",
+   "pmid": "38866324",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38866324/"
+  },
+  {
+   "cite": "Treviño LR, Yang W, French D, et al. Germline genomic variants associated with childhood acute lymphoblastic leukemia. Nat Genet 2009;41:1001-5.",
+   "pmid": "19684603",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19684603/"
+  },
+  {
+   "cite": "Lahoud MH, Ristevski S, Venter DJ, et al. Gene targeting of Desrt, a novel ARID class DNA-binding protein, causes growth retardation and abnormal development of reproductive organs. Genome Res 2001;11:1327-34.",
+   "pmid": "11483573",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11483573/"
+  },
+  {
+   "cite": "Hata K, Takashima R, Amano K, et al. Arid5b facilitates chondrogenesis by recruiting the histone demethylase Phf2 to Sox9-regulated genes. Nat Commun 2013;4:2850.",
+   "pmid": "24276541",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24276541/"
+  },
+  {
+   "cite": "Ratliff ML, Templeton TD, Ward JM, et al. The Bright Side of Hematopoiesis: Regulatory Roles of ARID3a/Bright in Human and Mouse Hematopoiesis. Front Immunol 2014;5:113.",
+   "pmid": "24678314",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24678314/"
+  },
+  {
+   "cite": "Kutschat AP, Frommelt F, Santini BL, et al. Leukemia risk factor ARID5B coordinates HDAC-mediated transcriptional repression. Nucleic Acids Res 2026;54.",
+   "pmid": "42328790",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42328790/"
+  }
+ ]
+}

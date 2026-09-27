@@ -1,0 +1,77 @@
+{
+ "key": "SAND",
+ "aka": [
+  "SAND domain",
+  "KDWK family",
+  "GME (glucocorticoid modulatory element)",
+  "PIF site",
+  "parvovirus initiation factor site",
+  "Sp100/AIRE/NucP41-75/DEAF1 domain"
+ ],
+ "consensus": "ACGY-N(1-9)-RCGY",
+ "short": "The SAND domain is a small DNA-binding fold named after the four proteins in which it was first recognized: Sp100, AIRE, NucP41/75 and DEAF1. Sequence-specific binding depends on a conserved KDWK motif on the domain's surface, and only some SAND proteins have it. The best-defined members are GMEB1 and GMEB2, which bind as a heterodimer, also known as parvovirus initiation factor, to two CpG-containing tetranucleotide half-sites with flexible spacing: ACGY-N(1-9)-RCGY, with an optimum spacer of six bases. Binding is abolished by methylation of the CpG in either half-site. AIRE and the speckled proteins SP100 and SP140 lack the KDWK motif and are recruited through chromatin rather than sequence, so motif models attributed to them should be treated as descriptions of where they were found.",
+ "long": "## The factors\n\nSAND is a fold, not a functional group. The domain was named from Sp100, AIRE-1, NucP41/75 and\nDEAF1, and its NMR structure showed a novel alpha-beta fold whose DNA-binding activity maps to a\nconserved surface motif, KDWK, which gives the family its alternative name. Human SAND proteins\nfall into distinct groups. GMEB1 and GMEB2 (p96 and p79) were identified twice over: as the\nheterodimer that binds the glucocorticoid modulatory element upstream of the tyrosine\naminotransferase gene, and as parvovirus initiation factor, the host factor required for\nminute virus of mice origin nicking. They carry the KDWK motif, bind DNA cooperatively, and are\nubiquitously expressed. DEAF1 (NUDR) is a related KDWK protein that binds TTCG-containing repeats;\nnotably, it has no motif in any of the four databases used here despite being named in this\nfamily's definition. The speckled proteins SP100, SP110, SP140 and SP140L are nuclear-body\ncomponents that combine a SAND domain with PHD fingers and bromodomains and act as chromatin\nreaders in immune cells. AIRE, the autoimmune regulator, is the most important special case: its\nSAND domain lacks the KDWK residues required for sequence-specific DNA contact and instead mediates\nhomodimerization, while its two PHD fingers read histone H3, PHD1 binding H3 tails that are\nunmethylated at lysine 4. AIRE is essentially restricted to medullary thymic epithelial cells.\n\n## The motif\n\nFor GMEB1/GMEB2 the site is well defined and unusual. Degenerate oligonucleotide selection showed\nthat the heterodimer, and each homodimer, binds two tetranucleotide half-sites conforming to\nACGY-N(1-9)-RCGY, with an optimum spacer of six bases; the spacing is genuinely flexible, so the\nelement is a pair of short half-sites at variable distance rather than a fixed-width motif. The\ninvariant feature is the CpG in each half-site, and 5-methylation of those cytosines abolishes\nbinding completely, which makes GMEB an unusual example of a factor whose occupancy is directly\nmethylation-sensitive at its core. Because CpG is suppressed in vertebrate genomes, such sites\nshould be rare, yet over half of a sample of 100 human promoters contained at least one, often\nwithin 100 bases of the start site. The models in these databases capture only part of this\ngrammar. Most GMEB matrices collapse the pair into a single half-site region: the representative\nmodel here is TACGTAA, and JASPAR's GMEB1 and GMEB2 matrices are tACGTa and TACGTAA. One CIS-BP\nmodel, M05735_2.00, does show the doubled form (TACGTACGGTACGTA), which is the two half-sites\nresolved. The consequence for scanning is severe: a six- or seven-base ACGT-centered model sits in\nthe middle of the sequence space used by bZIP factors, since TACGTA, TGACGT and CACGTG all contain\nACGT, and the data reflect this directly. Two GMEB1 models have a higher similarity to their\nbest out-of-family neighbour than to any in-family motif, and the family's cohesion is only 0.70\nacross 15 motifs. The remaining models are not ACGT elements at all: the ChIP-derived GMEB models\nare GCGTCAGCGCG-like, the HOCOMOCO SP100 model is AACGGTTA and the SP140 model is GTCGTCACTA, each\nwith zero label agreement, and the Vierstra AIRE archetype (AC0160) is a CCAAT-containing element\nrather than anything resembling a SAND site.\n\n## Where it acts\n\nGMEB sites are promoter-proximal and, by construction, CpG-containing, so they concentrate in\nCpG-island promoters where their methylation sensitivity could make them responsive to DNA\nmethylation state. The glucocorticoid modulatory element itself modulates the sensitivity of a\nglucocorticoid-responsive promoter rather than driving it, so GMEB acts as a modifier of another\nfactor's output. AIRE acts in a completely different regime: in medullary thymic epithelial cells\nit associates with super-enhancers and with thousands of promoters of tissue-restricted antigen\ngenes, and its principal mechanism is releasing stalled RNA polymerase II rather than recruiting it\nto a specific sequence. SP140 occupies and maintains repressed loci in macrophages, including\nlineage-inappropriate developmental genes.\n\n## Biology and disease\n\nBiallelic loss-of-function mutations in AIRE cause autoimmune polyendocrinopathy-candidiasis-ectodermal\ndystrophy (APECED, also APS-1), a monogenic autoimmune disease; Aire-deficient mice lose promiscuous\nexpression of thousands of tissue-restricted antigens in the thymus and develop multi-organ\nautoimmunity, which established the central-tolerance model of negative selection. Missense\nmutations in the SAND domain of DEAF1 cause intellectual disability with severe speech impairment\nand behavioral problems. Variants at SP140 and SP110 are associated with Crohn disease, multiple\nsclerosis and chronic lymphocytic leukemia, and SP110 mutations cause hepatic venoocclusive disease\nwith immunodeficiency. GMEB proteins have no established monogenic disease link, but they are\nrequired for parvovirus DNA replication.\n\n## Reading a hit\n\nThe central caution is that this key mixes proteins that read sequence with proteins that do not. A\nmatch to a GMEB model is a real, if weak, claim: look for the second CpG half-site within nine bases\nand check the methylation state, because an unmethylated CpG is part of the site rather than\nincidental. A match to an AIRE, SP100 or SP140 model is much harder to interpret. None of these\nproteins has the KDWK motif required for sequence-specific SAND binding, their models here come from\nintegrative and ChIP-based evidence, their nearest neighbours lie in other families, and in AIRE's\ncase the archetype is a CCAAT-type element. The general risk for the ACGT-centered GMEB models is\nconfusion with bZIP sites, which share the same four-base core and are far more abundant; a TACGTA\nmatch in a promoter is more likely to be a CRE-like or MAF-like element than a GMEB site.",
+ "caveats": "Split this family in two before trusting anything. GMEB1 and GMEB2 have the KDWK motif and a real, if unusual, site: two CpG-containing half-sites with a 1-9 base spacer, abolished by CpG methylation. But the matrices compress this to a six- or seven-base ACGT core that overlaps bZIP space, and two GMEB1 models here match an out-of-family motif better than any relative. AIRE, SP100 and SP140 lack the KDWK residues needed for sequence-specific SAND binding; their models come from ChIP and integrative evidence, carry zero label agreement, and the Vierstra AIRE archetype is a CCAAT-type element. Treat those as records of where the protein was found. DEAF1 has no motif here at all.",
+ "refs": [
+  {
+   "cite": "Bottomley MJ, Collard MW, Huggenvik JI, et al. The SAND domain structure defines a novel DNA-binding fold in transcriptional regulation. Nat Struct Biol 2001;8:626-33.",
+   "pmid": "11427895",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11427895/"
+  },
+  {
+   "cite": "Christensen J, Cotmore SF, Tattersall P. Two new members of the emerging KDWK family of combinatorial transcription modulators bind as a heterodimer to flexibly spaced PuCGPy half-sites. Mol Cell Biol 1999;19:7741-50.",
+   "pmid": "10523663",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10523663/"
+  },
+  {
+   "cite": "Burnett E, Christensen J, Tattersall P. A consensus DNA recognition motif for two KDWK transcription factors identifies flexible-length, CpG-methylation sensitive cognate binding sites in the majority of human promoters. J Mol Biol 2001;314:1029-39.",
+   "pmid": "11743720",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11743720/"
+  },
+  {
+   "cite": "Oshima H, Szapary D, Simons SS Jr. The factor binding to the glucocorticoid modulatory element of the tyrosine aminotransferase gene is a novel and ubiquitous heteromeric complex. J Biol Chem 1995;270:21893-901.",
+   "pmid": "7665613",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7665613/"
+  },
+  {
+   "cite": "Huggenvik JI, Michelson RJ, Collard MW, et al. Characterization of a nuclear deformed epidermal autoregulatory factor-1 (DEAF-1)-related (NUDR) transcriptional regulator protein. Mol Endocrinol 1998;12:1619-39.",
+   "pmid": "9773984",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9773984/"
+  },
+  {
+   "cite": "Vulto-van Silfhout AT, Rajamanickam S, Jensik PJ, et al. Mutations affecting the SAND domain of DEAF1 cause intellectual disability with severe speech impairment and behavioral problems. Am J Hum Genet 2014;94:649-61.",
+   "pmid": "24726472",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24726472/"
+  },
+  {
+   "cite": "Nagamine K, Peterson P, Scott HS, et al. Positional cloning of the APECED gene. Nat Genet 1997;17:393-8.",
+   "pmid": "9398839",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9398839/"
+  },
+  {
+   "cite": "Anderson MS, Venanzi ES, Klein L, et al. Projection of an immunological self shadow within the thymus by the aire protein. Science 2002;298:1395-401.",
+   "pmid": "12376594",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12376594/"
+  },
+  {
+   "cite": "Org T, Chignola F, Hetényi C, et al. The autoimmune regulator PHD finger binds to non-methylated histone H3K4 to activate gene expression. EMBO Rep 2008;9:370-6.",
+   "pmid": "18292755",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18292755/"
+  },
+  {
+   "cite": "Giraud M, Yoshida H, Abramson J, et al. Aire unleashes stalled RNA polymerase to induce ectopic gene expression in thymic epithelial cells. Proc Natl Acad Sci U S A 2012;109:535-40.",
+   "pmid": "22203960",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22203960/"
+  },
+  {
+   "cite": "Bansal K, Yoshida H, Benoist C, et al. The transcriptional regulator Aire binds to and activates super-enhancers. Nat Immunol 2017;18:263-273.",
+   "pmid": "28135252",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28135252/"
+  },
+  {
+   "cite": "Fraschilla I, Jeffrey KL. The Speckled Protein (SP) Family: Immunity's Chromatin Readers. Trends Immunol 2020;41:572-585.",
+   "pmid": "32386862",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32386862/"
+  }
+ ]
+}

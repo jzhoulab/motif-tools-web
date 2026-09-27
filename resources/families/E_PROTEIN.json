@@ -1,0 +1,80 @@
+{
+ "key": "E_PROTEIN",
+ "aka": [
+  "E-protein site",
+  "class A E-box",
+  "CAGGTG",
+  "CAGCTG",
+  "muE5",
+  "kappaE2",
+  "E2A site",
+  "E47 site",
+  "HEB site"
+ ],
+ "consensus": "CACCTG",
+ "short": "TCF3 (E2A/E12/E47), TCF4 (E2-2) and TCF12 (HEB) are the broadly expressed class I bHLH proteins that serve as the general dimerization partners for tissue-restricted bHLH factors - MYOD in muscle, ASCL and NEUROD in neurons, TWIST in mesenchyme, TAL1 in blood - and are sequestered by ID proteins. They bind the class-A E-box, written CACCTG or equivalently CAGGTG, and also CAGCTG. Because most functional sites are heterodimeric, only one half-site is read by the E-protein itself. E2A loss abolishes B-cell development; TCF4 haploinsufficiency causes Pitt-Hopkins syndrome, TCF12 loss causes coronal craniosynostosis, and TCF3 is a recurrent fusion partner in pre-B leukaemia.",
+ "long": "## The factors\n\nThe E-proteins are TCF3 (E2A, whose splice isoforms are E12 and E47), TCF4 (E2-2, ITF2) and TCF12 (HEB, HTF4). They are class I basic helix-loop-helix proteins: broadly expressed, lacking a leucine zipper, and defined by the fact that they are the general dimerization partners for the class II, tissue-restricted bHLH factors. The HLH motif itself was recognized by comparing the immunoglobulin enhancer-binding E12/E47 proteins with Drosophila daughterless, MyoD and MYC, and the following paper showed the central property directly: heterodimers between different HLH proteins form readily and bind a common DNA sequence. That is what E-proteins do. TCF3, TCF4 and TCF12 heterodimerize with MYOD and MYF5 in muscle, ASCL1, NEUROD and ATOH in neural tissue, TWIST1 and HAND in mesenchyme, TAL1 and LYL1 in blood, PTF1A in pancreas, and OLIG proteins in glia, as well as with each other. They are also the targets of the ID proteins (ID1-ID4), which have an HLH but no basic region and therefore sequester E-proteins into non-binding dimers. This family also collects TCFL5, a more distant protein, and the ontology lists TCF15; in the current data, motifs exist for TCF3, TCF4, TCF12 and TCFL5. The atlas assigns 13 motifs here (5 JASPAR, 4 HOCOMOCO, 4 CIS-BP), cohesion 0.87, representative TCF4 (MA0830.3).\n\n## The motif\n\nE-proteins read the class-A E-box, most often written CACCTG or, equivalently, CAGGTG - these are the same six base pairs read from opposite strands, which is worth keeping in mind when comparing database consensus strings. The other class-A variant, CAGCTG, is also bound; together the preference is CAG[C/G]TG on one strand. The immunoglobulin enhancer sites that defined the family, muE5 and kappaE2, are of this type. The E47 crystal structure showed how the site is read: a parallel four-helix bundle with one basic helix per monomer in the major groove, a glutamate contacting the CA of each half-site and an arginine the guanine on the complementary strand - the same chemistry as MAX, with the residue at one position determining class A versus class B preference. Because heterodimers are the functional unit, the real in vivo site is often asymmetric: one half-site is read by the E-protein and the other by the tissue partner, so MyoD-E47 and TAL1-TCF3 sites differ from E-protein homodimer sites mainly in one half. Systematic binding-site selection comparing MyoD and E2A complexes established this early, and it is the reason paralogue assignment from sequence fails here. In the atlas data, TCF3, TCF4 and TCF12 models are mutually similar at 0.96-0.995, so they are one motif. Two entries are not: the TCFL5 models read tCACGCGC, which is not an E-box, and the JASPAR Tcf12 model MA0521.3 is a bare CAGCTG whose nearest neighbour across all four databases lies outside this family. These two account for the modest cohesion score.\n\n## Where it acts\n\nE-protein sites are found at both promoters and enhancers, but the striking pattern is that their genomic distribution is essentially that of whichever partner is expressed. In B cells, TCF3 occupies the immunoglobulin heavy- and light-chain enhancers and the B-lineage gene set; in muscle, E-protein occupancy coincides with MyoD enhancers; in the T-lineage, TCF12 and TCF3 sit at TAL1 and thymocyte enhancers. Because CAGCTG and CACCTG contain no CpG, they are not depleted in mammalian DNA and occur very frequently - a 6-bp palindrome is expected roughly every 4 kb. The practical consequence is that E-proteins appear in an unusually large number of ChIP datasets, both as the tagged factor and as the apparent motif inside someone else's peaks, because they are physically present at almost every class-II bHLH site in every tissue that expresses one.\n\n## Biology and disease\n\nE2A/TCF3-null mice lack B cells entirely and fail to initiate immunoglobulin gene rearrangement, which established E-proteins as required for lymphoid specification rather than merely modulatory. Human disease follows the paralogues. TCF4 haploinsufficiency causes Pitt-Hopkins syndrome, a severe neurodevelopmental disorder with epilepsy and autonomic dysfunction, and common TCF4 variants are among the strongest transcription-factor associations with schizophrenia. TCF12 loss-of-function, acting through its partnership with TWIST1, is a frequent cause of coronal craniosynostosis. TCF3 is a recurrent fusion partner in pre-B acute lymphoblastic leukaemia, where the t(1;19) translocation joins the TCF3 activation domain to the PBX1 homeodomain. ID protein overexpression, which titrates E-proteins away from DNA, is a common feature of tumours and of proliferating progenitors.\n\n## Reading a hit\n\nA CACCTG or CAGCTG match identifies a class-A E-box. It does not identify an E-protein, and it certainly does not identify which one: TCF3, TCF4 and TCF12 share a single motif. Worse, the same core is read by MYOD, NEUROD/ATOH, ASCL, TWIST/HAND, TAL1/LYL1, TFAP4, ZEB1/2 and SNAI-associated E-boxes. Most real E-protein sites are occupied by a heterodimer, so only one half of the match belongs to the E-protein at all. Treat an E-protein motif inside someone else's ChIP peaks as expected co-occupancy rather than evidence of indirect binding artifact - and treat an E-protein ChIP peak as most likely marking the partner's locus. The TCFL5 models here are not E-boxes and should not be scanned as such.",
+ "caveats": "TCF3, TCF4 and TCF12 share one motif at 0.96-0.995 similarity, so a hit names the E-proteins at best, never a paralogue. The class-A core is also read by MYOD, NEUROD/ATOH, ASCL, TWIST/HAND, TAL1/LYL1, TFAP4 and ZEB, contains no CpG and is not depleted, so it occurs by chance every few kilobases. Most genuine sites are heterodimeric, meaning half the match belongs to the partner. E-proteins consequently show up in a very large number of ChIP datasets as the apparent motif inside other factors' peaks; that is real co-occupancy, not necessarily mislabelling. The TCFL5 models assigned here read tCACGCGC, which is not an E-box, and one JASPAR Tcf12 model is a bare CAGCTG whose nearest neighbours lie outside this family.",
+ "refs": [
+  {
+   "cite": "Murre C, McCaw PS, Baltimore D. A new DNA binding and dimerization motif in immunoglobulin enhancer binding, daughterless, MyoD, and myc proteins. Cell 1989;56:777-83.",
+   "pmid": "2493990",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2493990/"
+  },
+  {
+   "cite": "Murre C, McCaw PS, Vaessin H, et al. Interactions between heterologous helix-loop-helix proteins generate complexes that bind specifically to a common DNA sequence. Cell 1989;58:537-44.",
+   "pmid": "2503252",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2503252/"
+  },
+  {
+   "cite": "Benezra R, Davis RL, Lockshon D, et al. The protein Id: a negative regulator of helix-loop-helix DNA binding proteins. Cell 1990;61:49-59.",
+   "pmid": "2156629",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2156629/"
+  },
+  {
+   "cite": "Blackwell TK, Weintraub H. Differences and similarities in DNA-binding preferences of MyoD and E2A protein complexes revealed by binding site selection. Science 1990;250:1104-10.",
+   "pmid": "2174572",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2174572/"
+  },
+  {
+   "cite": "Kamps MP, Murre C, Sun XH, et al. A new homeobox gene contributes the DNA binding domain of the t(1;19) translocation protein in pre-B ALL. Cell 1990;60:547-55.",
+   "pmid": "1967983",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1967983/"
+  },
+  {
+   "cite": "Ellenberger T, Fass D, Arnaud M, et al. Crystal structure of transcription factor E47: E-box recognition by a basic region helix-loop-helix dimer. Genes Dev 1994;8:970-80.",
+   "pmid": "7926781",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7926781/"
+  },
+  {
+   "cite": "Zhuang Y, Soriano P, Weintraub H. The helix-loop-helix gene E2A is required for B cell formation. Cell 1994;79:875-84.",
+   "pmid": "8001124",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8001124/"
+  },
+  {
+   "cite": "Bain G, Maandag EC, Izon DJ, et al. E2A proteins are required for proper B cell development and initiation of immunoglobulin gene rearrangements. Cell 1994;79:885-92.",
+   "pmid": "8001125",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8001125/"
+  },
+  {
+   "cite": "Massari ME, Murre C. Helix-loop-helix proteins: regulators of transcription in eucaryotic organisms. Mol Cell Biol 2000;20:429-40.",
+   "pmid": "10611221",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10611221/"
+  },
+  {
+   "cite": "Amiel J, Rio M, de Pontual L, et al. Mutations in TCF4, encoding a class I basic helix-loop-helix transcription factor, are responsible for Pitt-Hopkins syndrome, a severe epileptic encephalopathy associated with autonomic dysfunction. Am J Hum Genet 2007;80:988-93.",
+   "pmid": "17436254",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17436254/"
+  },
+  {
+   "cite": "Sharma VP, Fenwick AL, Brockop MS, et al. Mutations in TCF12, encoding a basic helix-loop-helix partner of TWIST1, are a frequent cause of coronal craniosynostosis. Nat Genet 2013;45:304-7.",
+   "pmid": "23354436",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23354436/"
+  },
+  {
+   "cite": "Wang LH, Baker NE. E Proteins and ID Proteins: Helix-Loop-Helix Partners in Development and Disease. Dev Cell 2015;35:269-80.",
+   "pmid": "26555048",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26555048/"
+  }
+ ]
+}

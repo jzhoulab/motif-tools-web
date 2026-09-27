@@ -1,0 +1,67 @@
+{
+ "key": "CSD",
+ "aka": [
+  "Cold-shock domain",
+  "CSD",
+  "YBX1 / YB-1",
+  "Y-box binding protein 1",
+  "NSEP1",
+  "CspA-related fold"
+ ],
+ "consensus": "GATGGTAC",
+ "short": "A one-protein family. YBX1 (YB-1) carries a cold-shock domain, the eukaryotic descendant of the bacterial CspA nucleic-acid-binding fold, and it is at least as much an RNA-binding protein as a transcription factor: it packages messenger RNA, unwinds RNA secondary structure and prefers single-stranded nucleic acid over duplex DNA. Three motifs agree closely with one another - cohesion is 0.95, the highest in this part of the atlas - and all read the same eight base pairs, GATGGTAC, or its reverse complement GTACCATC. Note that this in vitro site is not the classical Y box, CTGATTGGC, with which YB-1 is historically identified; the two should not be conflated.",
+ "long": "## The factors\n\nThe cold-shock domain is one of the oldest nucleic-acid-binding folds, a five-stranded beta-barrel of the OB-fold class, conserved from the bacterial cold-shock proteins such as CspA into eukaryotes. Human cold-shock-domain proteins include the Y-box family YBX1, YBX2 and YBX3, the unrelated CSDE1/UNR and the LIN28 proteins, but only YBX1 contributes motifs to this atlas, so the family is effectively a single-protein entry.\n\nYBX1 was cloned in 1988 as the complementary DNA encoding a protein that binds the Y box of the major histocompatibility complex class II promoter - hence the name Y-box binding protein 1. The Y box itself is an inverted CCAAT element, and Y-box sequences were subsequently shown to be required for basal expression of other promoters, notably the human multidrug resistance gene MDR1. Domain architecture is an alanine/proline N-terminal region, the single cold-shock domain, and a long charged C-terminal region with alternating basic and acidic clusters that does most of the RNA binding and mediates mRNP packaging.\n\nFunctionally YBX1 is dual. It acts as a transcription factor at some promoters, but the bulk of the cellular protein is cytoplasmic and bound to messenger RNA, where it packages transcripts, unwinds secondary structure and thereby restrains stress granule assembly. In vitro, YB-1 binds single-stranded nucleic acids in preference to duplex DNA and even displays a 3' to 5' exonuclease activity. Any interpretation of a YBX1 motif has to be made against that background.\n\n## The motif\n\nThe three models are essentially the same site read on the two strands. HOCOMOCO YBOX1.H14CORE.0.SM.B gives GTACCATC at 13.0 bits with evidence code SM - HT-SELEX plus methyl-HT-SELEX, so genuine in vitro support - though graded B. The CIS-BP model M04661 and the Vierstra archetype AC0342 both give GATGGtAC, the reverse complement, at 9.9 and 8.8 bits. Pairwise similarity within the family reaches 0.98, and out-of-family similarity stays at 0.63 to 0.65 - the widest margin between within-family and out-of-family matches anywhere in this group of entries. On the internal statistics, this is a clean, well-behaved eight-base-pair motif.\n\nThe complication is historical rather than statistical. The site these models describe is built around a CCAT/ATGG core; the classical Y box that gave YBX1 its name is built around CCAAT, one base longer. The atlas ontology labels this family with the Y box CTGATTGGC, and that string does not match the models the family actually contains. Both observations can be true - YB-1 was purified on a Y-box probe, and in vitro selection recovered a CCAT-centred site - but they are not interchangeable, and a scan using these models is not a scan for Y boxes. If your interest is in Y-box or CCAAT-element regulation, the NFY family is the appropriate place to look.\n\nStructural work explains why the duplex-DNA numbers are modest. The solution structure of the YB-1 cold-shock domain identified the canonical aromatic surface that binds nucleic acid, and a later structure of the domain on DNA showed that binding is regulated by phosphorylation, with the phosphorylated protein altering its engagement of the duplex. Comparative work shows the domain discriminates RNA from DNA largely through non-bonded interactions rather than hydrogen-bond readout, which is another way of saying that base identity is not read as strictly as in a classical DNA-binding domain.\n\n## Where it acts\n\nReported YBX1 promoter targets cluster in proliferation and stress-response genes and in drug-resistance genes such as MDR1, and the protein is recruited to MHC class II and other CCAAT-containing promoters. But most YBX1 in a cell is on messenger RNA, not chromatin, and the genomic occupancy that has been mapped is correspondingly broad. In practice a YBX1 site is defined by the promoter it sits in and the partners present rather than by the eight base pairs alone.\n\n## Biology and disease\n\nYBX1 is essential in mouse: knockout embryos fail in early development with defective neural tube formation and reduced proliferation. In human cancer YBX1 is one of the most consistently overexpressed nucleic-acid-binding proteins, associated with proliferation, drug resistance, epithelial-mesenchymal transition and poor prognosis across many tumour types, and it has been pursued as a therapeutic target. Much of that activity is post-transcriptional - mRNA stabilisation and translational control, including roles in m6A-dependent regulation - rather than transcriptional, which is a further reason not to read YBX1 biology off a DNA motif scan.\n\n## Reading a hit\n\nThe motif is technically sound and the family is internally consistent, so a strong GATGGTAC match is a defensible YBX1 candidate site - but only a candidate. Three cautions apply. First, eight base pairs with 10 to 13 bits will still match tens of thousands of times genome-wide, so require promoter context and YBX1 expression. Second, do not treat the hit as a Y box or a CCAAT element; it is neither, and NFY is the family that reads CCAAT. Third, remember what YBX1 mostly does: it binds single-stranded nucleic acid and RNA in preference to duplex DNA, so a sequence match is weak evidence of chromatin occupancy and no evidence at all of transcriptional function. Corroborate with ChIP or footprint data before assigning a regulatory role.",
+ "caveats": "This family is one protein, YBX1, and its three models are the same eight base pairs on opposite strands, so the high cohesion of 0.95 reflects redundancy rather than breadth of support. The models describe a CCAT-centred site, not the CCAAT-based classical Y box CTGATTGGC that the family is named for, and they should not be used to find Y-box or CCAAT elements - that is NFY's motif. The HOCOMOCO model has genuine HT-SELEX and methyl-HT-SELEX support but is graded B. Most importantly, YB-1 prefers single-stranded nucleic acids and RNA over duplex DNA and is largely a cytoplasmic mRNA-packaging protein, so a DNA motif match is weak evidence of occupancy and none of function.",
+ "refs": [
+  {
+   "cite": "Didier DK, Schiffenbauer J, Woulfe SL, et al. Characterization of the cDNA encoding a protein binding to the major histocompatibility complex class II Y box. Proc Natl Acad Sci U S A 1988;85:7322-6.",
+   "pmid": "3174636",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3174636/"
+  },
+  {
+   "cite": "Goldsmith ME, Madden MJ, Morrow CS, et al. A Y-box consensus sequence is required for basal expression of the human multidrug resistance (mdr1) gene. J Biol Chem 1993;268:5856-60.",
+   "pmid": "8095499",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8095499/"
+  },
+  {
+   "cite": "Kloks CP, Spronk CA, Lasonder E, et al. The solution structure and DNA-binding properties of the cold-shock domain of the human Y-box protein YB-1. J Mol Biol 2002;316:317-26.",
+   "pmid": "11851341",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11851341/"
+  },
+  {
+   "cite": "Izumi H, Imamura T, Nagatani G, et al. Y box-binding protein-1 binds preferentially to single-stranded nucleic acids and exhibits 3'-->5' exonuclease activity. Nucleic Acids Res 2001;29:1200-7.",
+   "pmid": "11222770",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11222770/"
+  },
+  {
+   "cite": "Kljashtorny V, Nikonov S, Ovchinnikov L, et al. The Cold Shock Domain of YB-1 Segregates RNA from DNA by Non-Bonded Interactions. PLoS One 2015;10:e0130318.",
+   "pmid": "26147853",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26147853/"
+  },
+  {
+   "cite": "Zhang J, Fan JS, Li S, et al. Structural basis of DNA binding to human YB-1 cold shock domain regulated by phosphorylation. Nucleic Acids Res 2020;48:9361-9371.",
+   "pmid": "32710623",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32710623/"
+  },
+  {
+   "cite": "Budkina KS, Zlobin NE, Kononova SV, et al. Cold Shock Domain Proteins: Structure and Interaction with Nucleic Acids. Biochemistry (Mosc) 2020;85:S1-S19.",
+   "pmid": "32087051",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32087051/"
+  },
+  {
+   "cite": "Budkina K, El Hage K, Clément MJ, et al. YB-1 unwinds mRNA secondary structures in vitro and negatively regulates stress granule assembly in HeLa cells. Nucleic Acids Res 2021;49:10061-10081.",
+   "pmid": "34469566",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34469566/"
+  },
+  {
+   "cite": "Uchiumi T, Fotovati A, Sasaguri T, et al. YB-1 is important for an early stage embryonic development: neural tube formation and cell proliferation. J Biol Chem 2006;281:40440-9.",
+   "pmid": "17082189",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17082189/"
+  },
+  {
+   "cite": "Dinh NTM, Nguyen TM, Park MK, et al. Y-Box Binding Protein 1: Unraveling the Multifaceted Role in Cancer Development and Therapeutic Potential. Int J Mol Sci 2024;25.",
+   "pmid": "38255791",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38255791/"
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "key": "NR2F_COUP",
+ "aka": [
+  "COUP-TF",
+  "COUP element",
+  "chicken ovalbumin upstream promoter transcription factor",
+  "COUP-TFI (EAR3)",
+  "COUP-TFII (ARP1)",
+  "EAR2",
+  "DR1",
+  "NR2F"
+ ],
+ "consensus": "AGGTCAnAGGTCA",
+ "short": "COUP-TFI (NR2F1), COUP-TFII (NR2F2) and EAR2 (NR2F6) are orphan nuclear receptors that bind DNA as homodimers, most often on a DR1: two AGGTCA half-sites in the same orientation separated by one base pair. Their distinguishing property is not a private consensus but promiscuity - the same dimer accommodates direct repeats with several spacings, plus inverted and everted arrangements of the same hexamer - which is how COUP-TFs compete with vitamin D, thyroid hormone and retinoic acid receptors for shared elements and repress them. The three paralogues share one motif and are also not separable from RXR homodimers, HNF4/TR2-TR4 or ERR sites. COUP-TFII specifies venous identity and is required for angiogenesis; NR2F1 mutations cause an optic atrophy and intellectual disability syndrome.",
+ "long": "## The factors\n\nThree paralogues: NR2F1 (COUP-TFI, EAR3), NR2F2 (COUP-TFII, ARP1) and NR2F6 (EAR2). COUP-TF was purified as a factor binding upstream of the chicken ovalbumin gene and cloned as a member of the steroid receptor superfamily (Wang et al. 1989); NR2F1 and NR2F2 are among the most conserved nuclear receptors known (Lin et al. 2011). Each has a C4 double-zinc-finger DNA-binding domain (DBD) with a C-terminal extension and a ligand-binding domain; they bind as homodimers and can heterodimerize with RXR. The ligand-free COUP-TFII ligand-binding domain, solved at 1.48 A, is in an autorepressed conformation, with helix alpha10 folded into the ligand pocket and the activation function-2 helix occupying the coactivator groove; retinoic acid at concentrations above physiological levels releases this, so COUP-TFII is ligand-regulatable but has no established endogenous ligand (Kruse et al. 2008). NR2F1 is expressed in brain, eye, inner ear and neural crest derivatives, NR2F2 in mesenchyme, venous endothelium and reproductive tract, NR2F6 broadly including lymphocytes. Twenty-one models fall in this family (JASPAR 7, HOCOMOCO 8, CIS-BP 3, Vierstra 3).\n\n## The motif\n\nThe core arrangement is a DR1: AGGTCA-n-AGGTCA, 13 bp, seen in the data as AGGTCAAAGGTCA (JASPAR NR2F1 MA1537.2, HOCOMOCO COT1.H14CORE.1.PSM.A). The family's data consensus is the shorter AaAGGTCA, an extended single half-site, because many models here are half-sites with a 5' A or AA rather than full dimeric elements.\n\nA counting convention trips people up constantly and is worth stating plainly. The original characterisation described COUP-TF elements as direct repeats of GGTCA with a 2 bp spacing; modern usage calls the identical element a DR1, a direct repeat of AGGTCA with a 1 bp spacing. The two descriptions differ only in whether the half-site is defined as a 5-mer or a 6-mer. Compare like with like before concluding that two sources disagree.\n\nThe real signature of this family is tolerance of geometry. Aligning natural COUP-TF elements showed that besides the predominant direct repeat, functional sites vary in both orientation and spacing of the GGTCA motif; the functional DNA-binding form is a dimer needing two half-sites, and the dimer undergoes a substantial structural adaptation to accommodate these variants. The consequence is that COUP-TF can occupy the response elements of the vitamin D, thyroid hormone and retinoic acid receptors and down-regulate their hormonal induction (Cooney et al. 1992). The models in this collection reproduce that range: DR1 (NR2F1 MA1537.2), DR2 (NR2F6 MA0728.1, gAGGTCAAaAGGTCA), IR1 (NR2F1 MA1538.1 and NR2F6 MA1539.1, aAGGTCAnTGACCTt), IR2 (NR2F6.H14CORE.3.SM.B, AAGGTCAatGacC) and bare half-sites (AGGTCA, AAGGTCA).\n\nNothing here separates the paralogues: NR2F1, NR2F2 and NR2F6 models are 0.96-0.99 similar to each other. Worse, they are barely separable from other families - members' best match outside this family runs 0.89-0.98, and two of the three Vierstra archetypes assigned here are labelled NR2F/RXRG and NR2F/RXRA because COUP-TF and RXR footprints cluster together. Protein-binding microarrays did detect a polarity preference within the DR1 for COUP-TFII, as for HNF4A and RXRA homodimers (Fang et al. 2012), but that is a quantitative preference, not a discriminator you can apply to a single hit.\n\n## Where it acts\n\nMostly distal enhancers in mesenchyme and endothelium, with NR2F2 marking venous rather than arterial endothelium. Functionally many COUP-TF sites are repressive, and the mechanism documented in detail is competition: occupying a DR element that another receptor needs (Cooney et al. 1992). COUP-TF motifs co-occur with SOX, FOX and GATA sites in neural and cardiovascular enhancers, and because the element is a plain DR1 they overlap physically with RXR-heterodimer and HNF4 elements in the same regions.\n\n## Biology and disease\n\nNr2f2-null mouse embryos die around E10.5 with defective angiogenesis and heart development (Pereira et al. 1999). Deleting COUP-TFII in endothelium makes veins acquire arterial characteristics, including neuropilin 1 and Notch pathway markers, while ectopic expression fuses veins and arteries - COUP-TFII maintains vein identity by repressing Notch signalling (You et al. 2005). In tumour models COUP-TFII promotes growth and metastasis by supporting tumour angiogenesis (Qin et al. 2010). In humans, heterozygous NR2F1 point mutations and deletions cause Bosch-Boonstra-Schaaf optic atrophy syndrome, combining optic atrophy or hypoplasia with developmental delay and intellectual disability (Bosch et al. 2014), and rare NR2F2 variants cause congenital heart defects, notably atrioventricular septal defects (Al Turki et al. 2014).\n\n## Reading a hit\n\nA DR1 hit licenses very little. It does not name the paralogue, and it does not even name the family: RXR homodimers, PPAR:RXR, HNF4A and the TR2/TR4 heterodimer all use DR1, and their matrices in this atlas sit within 0.89-0.98 of the models here. Report the geometry you actually see - spacing and orientation - and state the counting convention you used, because a DR1 under one convention is a 2 bp-spaced repeat under another. Given about 11 informative positions in a 13 bp element, near-consensus DR1s occur tens of thousands of times per haploid genome, far more than any COUP-TF cistrome. Half-site-only models (eight of the twenty-one here read AGGTCA, gGGTCa, AAGGTCA or AaAGGTCA) should not be scanned genome-wide. Evidence codes help a little: NR2F1 and NR2F6 have grade A HOCOMOCO models with combined ChIP, HT-SELEX and methyl-SELEX support (PSM), so direct binding is not in doubt; what a hit cannot tell you is which NR2F protein, or whether a different DR1-binding receptor was there instead.",
+ "caveats": "This is one of the least discriminating motifs in the atlas. NR2F1, NR2F2 and NR2F6 models are 0.96-0.99 similar to each other, and their best matches outside the family run 0.89-0.98 - RXR homodimers, PPAR:RXR, HNF4A and TR2/TR4 all bind the same DR1. Two of the three Vierstra archetypes here are named NR2F/RXRG and NR2F/RXRA for that reason. Eight of the twenty-one models are single half-sites. COUP-TF also binds DR, IR and everted arrangements with several spacings, so geometry constrains the candidates less than it does for most nuclear receptor families. Treat a hit as evidence that some DR1-binding nuclear receptor could bind, and use expression and chromatin data to go further.",
+ "refs": [
+  {
+   "cite": "Wang LH, Tsai SY, Cook RG, et al. COUP transcription factor is a member of the steroid receptor superfamily. Nature 1989;340:163-6.",
+   "pmid": "2739739",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2739739/"
+  },
+  {
+   "cite": "Cooney AJ, Tsai SY, O'Malley BW, et al. Chicken ovalbumin upstream promoter transcription factor (COUP-TF) dimers bind to different GGTCA response elements, allowing COUP-TF to repress hormonal induction of the vitamin D3, thyroid hormone, and retinoic acid receptors. Mol Cell Biol 1992;12:4153-63.",
+   "pmid": "1324415",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1324415/"
+  },
+  {
+   "cite": "Pereira FA, Qiu Y, Zhou G, et al. The orphan nuclear receptor COUP-TFII is required for angiogenesis and heart development. Genes Dev 1999;13:1037-49.",
+   "pmid": "10215630",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10215630/"
+  },
+  {
+   "cite": "You LR, Lin FJ, Lee CT, et al. Suppression of Notch signalling by the COUP-TFII transcription factor regulates vein identity. Nature 2005;435:98-104.",
+   "pmid": "15875024",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15875024/"
+  },
+  {
+   "cite": "Kruse SW, Suino-Powell K, Zhou XE, et al. Identification of COUP-TFII orphan nuclear receptor as a retinoic acid-activated receptor. PLoS Biol 2008;6:e227.",
+   "pmid": "18798693",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18798693/"
+  },
+  {
+   "cite": "Qin J, Chen X, Xie X, et al. COUP-TFII regulates tumor growth and metastasis by modulating tumor angiogenesis. Proc Natl Acad Sci U S A 2010;107:3687-92.",
+   "pmid": "20133706",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20133706/"
+  },
+  {
+   "cite": "Lin FJ, Qin J, Tang K, et al. Coup d'Etat: an orphan takes control. Endocr Rev 2011;32:404-21.",
+   "pmid": "21257780",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21257780/"
+  },
+  {
+   "cite": "Fang B, Mane-Padros D, Bolotin E, et al. Identification of a binding motif specific to HNF4 by comparative analysis of multiple nuclear receptors. Nucleic Acids Res 2012;40:5343-56.",
+   "pmid": "22383578",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22383578/"
+  },
+  {
+   "cite": "Bosch DG, Boonstra FN, Gonzaga-Jauregui C, et al. NR2F1 mutations cause optic atrophy with intellectual disability. Am J Hum Genet 2014;94:303-9.",
+   "pmid": "24462372",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24462372/"
+  },
+  {
+   "cite": "Al Turki S, Manickaraj AK, Mercer CL, et al. Rare variants in NR2F2 cause congenital heart defects in humans. Am J Hum Genet 2014;94:574-85.",
+   "pmid": "24702954",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24702954/"
+  }
+ ]
+}

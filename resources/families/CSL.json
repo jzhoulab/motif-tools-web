@@ -1,0 +1,78 @@
+{
+ "key": "CSL",
+ "aka": [
+  "RBPJ site",
+  "RBP-Jkappa site",
+  "CBF1 site",
+  "Su(H) site",
+  "LAG-1 site",
+  "Notch response element",
+  "SPS (Su(H)-paired site)"
+ ],
+ "consensus": "GTGGGAA",
+ "short": "CSL is the DNA-binding transcription factor at the end of the Notch pathway, named for its three orthologues: CBF1/RBPJ in mammals, Suppressor of Hairless in Drosophila and LAG-1 in C. elegans. Humans have one broadly expressed gene, RBPJ, plus the pancreas-restricted paralogue RBPJL. RBPJ binds the seven-base element GTGGGAA, often written on the other strand as TTCCCAC, and does so whether or not Notch is active: without a Notch intracellular domain it recruits corepressors, and with one it assembles an activating ternary complex with Mastermind-like coactivators. Some Notch targets carry two sites in a head-to-head pair with fixed spacing, an SPS, which allows two Notch complexes to dimerize. Notch signaling through RBPJ controls lateral inhibition, T-cell specification and vascular development, and is constitutively activated in T-cell acute lymphoblastic leukemia.",
+ "long": "## The factors\n\nThere is essentially one CSL protein per genome. In humans the gene is RBPJ (older names RBP-J,\nRBPSUH, CBF1); the paralogue RBPJL (RBPSUHL) is restricted to pancreatic acinar cells, where it\nreplaces RBPJ in the PTF1 complex. RBPJ is expressed in nearly every tissue. It is not a\nNotch-specific protein in the sense of being present only when Notch is: RBPJ is constitutive,\nand Notch activation changes what RBPJ does rather than whether it exists. The DNA-binding\nmodule has three parts: an N-terminal domain with a Rel-homology-like fold, a beta-trefoil\ndomain (BTD) and a C-terminal domain. The crystal structure of CSL on DNA showed that the\nRel-like domain and the BTD grip the site from opposite faces, with the BTD doing double duty as\nthe docking site for the RAM peptide of the Notch intracellular domain (NICD). On Notch\nactivation, NICD binds RBPJ and recruits a Mastermind-like coactivator (MAML1-3) to form the\nternary complex; in the absence of NICD, RBPJ binds corepressors such as SPEN/SHARP and\nassociated histone deacetylases and demethylases. So the same protein on the same sequence can\nrepress or activate.\n\n## The motif\n\nThe literature consensus is GTGGGAA, usually written with a 5' pyrimidine as YGTGGGAA, and its\nreverse-strand form is TTCCCAC. Only about six or seven positions carry information, and the\nmodels in these databases are short accordingly: the representative motif here is TTCCCA, which\nis simply the reverse complement of TGGGAA with the 5' GT trimmed off, and JASPAR's RBPJ matrix\n(TGGGAA) is the same element on the forward strand. The GGG at the center is the least tolerant\npart of the site. Only one symbol, RBPJ, appears across all four databases, so there is no\nparalogue problem inside the family, and the four models agree closely (cohesion 0.93). The\ndifficulty is external. TGGGAA and its complement TTCCCA sit inside the purine-rich sequence\nspace used by ETS cores (GGAA), NFAT (GGAAA) and the half-sites of NF-kB and STAT models, and\nthe label-agreement statistics for all four RBPJ motifs are low (0.3) precisely because their\nnearest neighbours across the four databases frequently belong to those families. A separate\nfeature is site architecture rather than sequence: some Notch-responsive promoters carry two\nCSL sites in head-to-head orientation with a spacer of roughly 15-17 bp, the Su(H)-paired site\nor SPS, first described in the Drosophila Enhancer of split complex. The spacing and orientation\nmatter because they allow the ankyrin repeat domains of two Notch molecules to contact each\nother across the DNA, which sharpens the response. No PWM captures an SPS; you have to look for\ntwo matches at the right distance and orientation.\n\n## Where it acts\n\nRBPJ sites are found in both promoters and enhancers, and the best-studied targets are the HES\nand HEY families (HES1, HES5, HEY1, HEY2), DTX1, NRARP, and, in lymphoid cells, PTCRA, IL2RA and\nMYC. Genome-wide, RBPJ and Notch1 occupy thousands of sites, and occupancy is dynamic: in\nDrosophila, Su(H) binding at target enhancers is transient and only partly overlaps its\nNotch-independent binding, and in mammalian cells RBPJ occupancy at many sites increases on\nNotch activation rather than being fixed. Conversely, a subset of sites is occupied by CSL\nwithout Notch and functions in default repression, keeping targets off in cells that have not\nreceived a signal. RBPJ co-occurs with lineage factors that determine which of its sites are\nused: TCF/LEF and GATA3 in T cells, ETS and RUNX factors at lymphoid enhancers, and PTF1A\nthrough RBPJL in pancreas.\n\n## Biology and disease\n\nRbpj-null mouse embryos die around embryonic day 10 with defects in somitogenesis and\nvasculature, phenocopying loss of Notch1 more closely than any single ligand mutant. Through\nNotch, RBPJ drives lateral inhibition in neurogenesis, T-cell versus B-cell specification,\narterial-venous specification and intestinal secretory-versus-absorptive choice. Activating\nNOTCH1 mutations that stabilize NICD are the commonest genetic lesion in T-cell acute\nlymphoblastic leukemia, and the resulting Notch1/RBPJ complexes bind a largely conserved set of\nenhancers in human and mouse leukemia cells. Notch loss of function causes disease as well:\nNOTCH3 in CADASIL, JAG1 and NOTCH2 in Alagille syndrome, and inactivating NOTCH1 mutations in\nsquamous carcinomas, where the pathway is tumor-suppressive. RBPJ itself is mutated in Adams-Oliver\nsyndrome.\n\n## Reading a hit\n\nThe important caution is interpretive, not statistical: a match to the RBPJ motif, and even\nmeasured RBPJ occupancy, does not mean Notch signaling is active at that site. RBPJ binds\nconstitutively and represses in the unsignaled state, so the sequence marks a potential Notch\nresponse element, not a signaled one. To claim active signaling you need evidence for NICD or\nMAML at the site, or a change in output on gamma-secretase inhibition. The site is also short:\nsix or seven informative bases occur often by chance, and the purine-rich core is easily\nconfused with ETS, NFAT or NF-kB half-sites, which is what the low label-agreement scores in\nthese data reflect. Two matches in head-to-head orientation about 15-17 bp apart are much\nstronger evidence than one.",
+ "caveats": "One factor, RBPJ, so a hit does not have a paralogue problem inside the family; the risk is outside it. The informative core is only six or seven bases and overlaps ETS, NFAT and NF-kB purine-rich half-sites, which is why all four RBPJ models here score low label agreement against the other databases. The HOCOMOCO model (SUH.H14CORE.0.P.B) is ChIP-derived, so it reports where RBPJ was found, not what RBPJ binds in isolation. Most importantly, RBPJ occupies sites constitutively and represses without Notch, so neither a sequence match nor a ChIP peak licenses the conclusion that Notch signaling is active.",
+ "refs": [
+  {
+   "cite": "Kovall RA, Hendrickson WA. Crystal structure of the nuclear effector of Notch signaling, CSL, bound to DNA. EMBO J 2004;23:3441-51.",
+   "pmid": "15297877",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15297877/"
+  },
+  {
+   "cite": "Wilson JJ, Kovall RA. Crystal structure of the CSL-Notch-Mastermind ternary complex bound to DNA. Cell 2006;124:985-96.",
+   "pmid": "16530045",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16530045/"
+  },
+  {
+   "cite": "Nam Y, Sliz P, Pear WS, et al. Cooperative assembly of higher-order Notch complexes functions as a switch to induce transcription. Proc Natl Acad Sci U S A 2007;104:2103-8.",
+   "pmid": "17284587",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17284587/"
+  },
+  {
+   "cite": "Bailey AM, Posakony JW. Suppressor of hairless directly activates transcription of enhancer of split complex genes in response to Notch receptor activity. Genes Dev 1995;9:2609-22.",
+   "pmid": "7590239",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7590239/"
+  },
+  {
+   "cite": "Castro B, Barolo S, Bailey AM, et al. Lateral inhibition in proneural clusters: cis-regulatory logic and default repression by Suppressor of Hairless. Development 2005;132:3333-44.",
+   "pmid": "15975935",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15975935/"
+  },
+  {
+   "cite": "Ong CT, Cheng HT, Chang LW, et al. Target selectivity of vertebrate notch proteins. Collaboration between discrete domains and CSL-binding site architecture determines activation probability. J Biol Chem 2006;281:5106-19.",
+   "pmid": "16365048",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16365048/"
+  },
+  {
+   "cite": "Krejcí A, Bray S. Notch activation stimulates transient and selective binding of Su(H)/CSL to target enhancers. Genes Dev 2007;21:1322-7.",
+   "pmid": "17545467",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17545467/"
+  },
+  {
+   "cite": "Castel D, Mourikis P, Bartels SJ, et al. Dynamic binding of RBPJ is determined by Notch signaling status. Genes Dev 2013;27:1059-71.",
+   "pmid": "23651858",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23651858/"
+  },
+  {
+   "cite": "Wang H, Zou J, Zhao B, et al. Genome-wide analysis reveals conserved and divergent features of Notch1/RBPJ binding in human and murine T-lymphoblastic leukemia cells. Proc Natl Acad Sci U S A 2011;108:14908-13.",
+   "pmid": "21737748",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21737748/"
+  },
+  {
+   "cite": "Bray SJ. Notch signalling in context. Nat Rev Mol Cell Biol 2016;17:722-735.",
+   "pmid": "27507209",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27507209/"
+  },
+  {
+   "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
+   "pmid": "25215497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  },
+  {
+   "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
+   "pmid": "32728250",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  }
+ ]
+}

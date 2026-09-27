@@ -1,0 +1,82 @@
+{
+ "key": "IRF",
+ "aka": [
+  "ISRE",
+  "interferon-stimulated response element",
+  "IRF-E",
+  "IRF element",
+  "PRD I / PRD III (interferon-beta promoter)",
+  "EICE (composite with PU.1/SPIB)",
+  "AICE (composite with BATF-JUN)",
+  "ICSBP (IRF8)",
+  "Pip (IRF4)",
+  "ISGF3-gamma (IRF9)",
+  "tryptophan cluster factors"
+ ],
+ "consensus": "AANTGAAA",
+ "short": "The nine human interferon regulatory factors, IRF1 through IRF9, bind DNA with an N-terminal winged helix-turn-helix domain studded with five conserved tryptophans. Each domain reads only a short AANTGAAA half-site, so functional elements are tandem repeats of it: the interferon-stimulated response element (ISRE), written RNGAAANNGAAACT or, on the other strand, AGTTTCNNTTTC. The same half-site also appears in two named composites - the EICE with PU.1 or SPIB, and the AICE with BATF-JUN - which is how IRF4 and IRF8, weak DNA binders on their own, reach their targets. IRFs drive the type I and type II interferon responses, myeloid and lymphoid development, and plasma cell differentiation; IRF6 is the non-immune outlier, acting in epithelium, where mutations cause orofacial clefting.",
+ "long": "## The factors\n\nNine IRF genes exist in humans, IRF1 to IRF9 (an IRF10 is present in birds and fish but not in\nmammals). Each encodes an N-terminal DNA-binding domain of roughly 115 residues characterized by a\ncluster of five conserved tryptophans - the \"tryptophan cluster\" that defines the family - folded as\na variant helix-turn-helix. Most members also carry a C-terminal IRF-association domain that\nmediates homodimers, IRF-IRF heterodimers, and complexes with non-IRF partners: STAT2 for IRF9,\nBATF-JUN for IRF4 and IRF8, PU.1 and SPIB for IRF4 and IRF8. Functionally the family splits along\nlines that sequence does not see. IRF1 and IRF2 are broadly expressed and act as an\ninterferon-inducible activator/repressor pair on the same sites. IRF3 is constitutive and\ncytoplasmic until phosphorylated on virus sensing, whereupon it dimerizes and drives type I\ninterferon genes; IRF7 amplifies that response and is highly expressed in plasmacytoid dendritic\ncells. IRF9 is the constitutive DNA-binding subunit of ISGF3. IRF4 and IRF8 are lymphoid and myeloid,\nwith low intrinsic DNA affinity; IRF5 acts in myeloid cells and B cells. IRF6 is the outlier -\nepithelial, expressed in skin and oral periderm, with no established role in interferon signaling.\n\n## The motif\n\nThe unit is a short half-site, AANTGAAA, of which only about four bases (the GAAA) are read\nstrongly. The crystal structure of the IRF1 domain on the PRD I element of the interferon-beta\npromoter showed why: the recognition helix lies obliquely in the major groove, contacts a short GAAA\ncore through three of the five conserved tryptophans, and bends the DNA toward the protein. Because\nso little sequence is read per domain, affinity and specificity come from repetition, and the IRF2\nstructure showed cooperative binding to a tandem GAAA repeat driven by DNA distortion. The canonical\nelement is therefore the ISRE, written RNGAAANNGAAACT; the data consensus for this family,\nCGAAACCGAAACT, is the same element read on the opposite strand, whose reverse complement\nAGTTTCGGTTTCG is the familiar AGTTTCNNTTTC form. Two composites reuse the same half-site with a\ndifferent partner. The EICE, GGAAGTGAAAC, is a PU.1 or SPIB site fused to an IRF half-site; the\nAICE joins an IRF half-site to an AP-1 site, either as AICE1 (TTTCNNNNTGASTCA, four bases of spacer)\nor AICE2 (GAAATGASTCA, directly abutting). Paralogue resolution from sequence is close to zero: the\nin vitro models for all nine IRFs are near-identical GAAA repeats, and what separates them in vivo is\nwhich partner they cooperate with, not which bases they read.\n\n## Where it acts\n\nISREs sit predominantly in promoters of interferon-stimulated genes, usually within a few hundred\nbase pairs of the transcription start site, and in virus-inducible enhancers such as the\ninterferon-beta enhanceosome, where PRD I and PRD III are IRF elements. In lymphoid and myeloid\ncells, IRF4 and IRF8 occupancy is overwhelmingly composite: EICEs at immunoglobulin light-chain\nenhancers, where DNA-bound and Ser148-phosphorylated PU.1 raises IRF4 affinity 20- to 40-fold, and\nAICEs with BATF-JUN in T cells and dendritic cells. AICE affinity grades the response to signal\nstrength: high-affinity AICEs remain occupied under weak T-cell receptor stimulation while\nlow-affinity ones only under strong stimulation. ISGF3, the STAT1-STAT2-IRF9 trimer, accounts for\nmost ISRE occupancy in a type I interferon response, with the STAT1-STAT2 pair on the 5' GGAA and\nIRF9 on the second repeat. IRF6 works instead in epithelial enhancers of the periderm and keratinocyte programs.\n\n## Biology and disease\n\nIRFs are the transcriptional output of innate immune sensing and are also lineage regulators.\nHuman IRF8 mutations cause dendritic cell immunodeficiency, with biallelic loss abolishing monocytes\nand dendritic cells. IRF4 is required for plasma cell\ndifferentiation, and multiple myeloma lines die when IRF4 is depleted whether or not IRF4 itself is\nmutated. A common IRF5 haplotype that alters splicing and expression is a reproducible risk factor\nfor systemic lupus erythematosus. IRF6 mutations cause Van der Woude syndrome (cleft lip or palate\nwith lower lip pits) and popliteal pterygium syndrome, the clearest case of an IRF acting outside\nimmunity.\n\n## Reading a hit\n\nA single AANTGAAA half-site is not evidence of anything: with roughly six specified bases it is\nexpected on the order of a million times per strand in a 3.1-Gb genome. Require the tandem repeat,\nor a composite. The most common misreading is confusion with STAT. A STAT homodimer site (GAS) is an\ninverted repeat, TTCNNNGAA, with the two half-sites facing each other; an ISRE is a direct repeat,\nGAAANNGAAAC, with both half-sites in the same orientation - and its reverse-complement spelling\nAGTTTCNNTTTC superficially resembles a GAS. The two families genuinely overlap in biology as well,\nbecause ISGF3 contains STAT1 and STAT2, so ISRE-shaped matrices appear under both labels; one\nfootprint archetype grouped in this family is named AC0672:IRF/STAT precisely because the clustering\ncould not separate them. Evidence for this family is comparatively good - most HOCOMOCO models here\ncarry in vitro HT-SELEX or methyl-HT-SELEX support, and most JASPAR profiles here are SELEX-derived - but two\nChIP-derived entries have absorbed a partner's site. HOCOMOCO's ChIP-based IRF8 model\n(IRF8.H14CORE.0.P.B, consensus AGDGGAAGTGAAAGT) contains GGAAGTGAAA, an EICE whose 5' half is a PU.1\nsite, not an IRF site; and one CIS-BP model here (M07978, TGHGGAAATGARTCA) is AICE2-shaped, an IRF\nhalf-site abutting an AP-1 heptamer, and its best match across the databases lies outside the IRF\nfamily. In\nmyeloid or B-lineage data, check for an adjacent GGAA or TGASTCA before concluding that an IRF acted\nalone.",
+ "caveats": "A hit identifies an IRF-type element, not an IRF protein: all nine paralogues select\nnear-identical GAAA repeats in vitro, and their specificity in cells comes from partners (PU.1/SPIB\nat an EICE, BATF-JUN at an AICE, STAT2 in ISGF3), not from the bases they read. A lone AANTGAAA\nhalf-site is far too short to be meaningful; insist on a tandem repeat or a composite. Expect\ncross-talk with the STAT family in both directions, since ISGF3 contains STAT1 and STAT2 and reads\nthe ISRE - one footprint archetype here is named IRF/STAT. Most models in this family have in vitro\nsupport, but the ChIP-derived IRF8 model contains an embedded PU.1 half-site and one CIS-BP model in\nthis family is actually an AICE, half AP-1. Neither should be read as intrinsic IRF specificity.",
+ "refs": [
+  {
+   "cite": "Escalante CR, Yie J, Thanos D, et al. Structure of IRF-1 with bound DNA reveals determinants of interferon regulation. Nature 1998;391:103-6.",
+   "pmid": "9422515",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9422515/"
+  },
+  {
+   "cite": "Fujii Y, Shimizu T, Kusumoto M, et al. Crystal structure of an IRF-DNA complex reveals novel DNA recognition and cooperative binding to a tandem repeat of core sequences. EMBO J 1999;18:5028-41.",
+   "pmid": "10487755",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10487755/"
+  },
+  {
+   "cite": "Tamura T, Yanai H, Savitsky D, et al. The IRF family transcription factors in immunity and oncogenesis. Annu Rev Immunol 2008;26:535-84.",
+   "pmid": "18303999",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18303999/"
+  },
+  {
+   "cite": "Rengachari S, Groiss S, Devos JM, et al. Structural basis of STAT2 recognition by IRF9 reveals molecular insights into ISGF3 function. Proc Natl Acad Sci U S A 2018;115:E601-E609.",
+   "pmid": "29317535",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29317535/"
+  },
+  {
+   "cite": "Escalante CR, Brass AL, Pongubala JM, et al. Crystal structure of PU.1/IRF-4/DNA ternary complex. Mol Cell 2002;10:1097-105.",
+   "pmid": "12453417",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12453417/"
+  },
+  {
+   "cite": "Eisenbeis CF, Singh H, Storb U. Pip, a novel IRF family member, is a lymphoid-specific, PU.1-dependent transcriptional activator. Genes Dev 1995;9:1377-87.",
+   "pmid": "7797077",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7797077/"
+  },
+  {
+   "cite": "Glasmacher E, Agrawal S, Chang AB, et al. A genomic regulatory element that directs assembly and function of immune-specific AP-1-IRF complexes. Science 2012;338:975-80.",
+   "pmid": "22983707",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22983707/"
+  },
+  {
+   "cite": "Iwata A, Durai V, Tussiwand R, et al. Quality of TCR signaling determined by differential affinities of enhancers for the composite BATF-IRF4 transcription factor complex. Nat Immunol 2017;18:563-572.",
+   "pmid": "28346410",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28346410/"
+  },
+  {
+   "cite": "Kondo S, Schutte BC, Richardson RJ, et al. Mutations in IRF6 cause Van der Woude and popliteal pterygium syndromes. Nat Genet 2002;32:285-9.",
+   "pmid": "12219090",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12219090/"
+  },
+  {
+   "cite": "Hambleton S, Salem S, Bustamante J, et al. IRF8 mutations and human dendritic-cell immunodeficiency. N Engl J Med 2011;365:127-38.",
+   "pmid": "21524210",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21524210/"
+  },
+  {
+   "cite": "Shaffer AL, Emre NC, Lamy L, et al. IRF4 addiction in multiple myeloma. Nature 2008;454:226-31.",
+   "pmid": "18568025",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18568025/"
+  },
+  {
+   "cite": "Graham RR, Kozyrev SV, Baechler EC, et al. A common haplotype of interferon regulatory factor 5 (IRF5) regulates splicing and expression and is associated with increased risk of systemic lupus erythematosus. Nat Genet 2006;38:550-5.",
+   "pmid": "16642019",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16642019/"
+  }
+ ]
+}

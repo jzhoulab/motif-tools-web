@@ -1,0 +1,79 @@
+{
+ "key": "MYOD",
+ "aka": [
+  "myogenic regulatory factors (MRF)",
+  "MRF4/Myf family",
+  "muscle E-box",
+  "MyoD site",
+  "MEF1 site",
+  "myogenin site",
+  "musculin/MyoR (MSC)",
+  "class II bHLH (TFClass: MyoD-related factors)"
+ ],
+ "consensus": "CAGCTG",
+ "short": "The four myogenic regulatory factors — MYOD1, MYF5, MYF6 (MRF4) and MYOG — plus the related repressor MSC (musculin/MyoR) are class II basic helix-loop-helix proteins restricted to the skeletal muscle lineage. They bind DNA as heterodimers with the ubiquitous class I E-proteins TCF3, TCF4 and TCF12, reading the E-box CAGCTG with a preference for A/T-rich flanks (AACAGCTGTT). MYOD1 was the first transcription factor shown to reprogram cell identity: transfecting it alone converts fibroblasts into myoblasts. Whether a myogenic bHLH activates muscle genes depends less on where it binds than on three residues in its basic region — the \"myogenic code\" — so an occupied E-box and an active one are not the same thing.",
+ "long": "## The factors\n\nFour myogenic regulatory factors (MRFs) define this family: MYOD1, MYF5, MYF6 (MRF4) and MYOG (myogenin). The atlas also places MSC (musculin, also called MyoR and ABF-1) here, on motif similarity. All are class II bHLH proteins of about 68 residues in the DNA-binding domain, and all work as heterodimers with the broadly expressed class I E-proteins TCF3 (E12/E47), TCF4 and TCF12; MYOD1 can homodimerise in vitro, but the heterodimer is the active species in cells. MYOD1 and MYF5 act as determination factors and are largely interchangeable for that job, while MYOG and MYF6 act later in differentiation. Expression is restricted to the skeletal muscle lineage: MYF5 in early somitic and satellite-cell progenitors, MYOD1 in activated myoblasts and satellite cells, MYOG and MYF6 in differentiating and mature fibres. MSC is the odd member — a muscle-restricted bHLH that antagonises MyoD rather than cooperating with it, so a site assigned to this family can be an activating or a repressing site depending on which protein is present. MYOD1's historical importance is that transfecting it alone converts fibroblasts into myoblasts, the first demonstration that one transcription factor can switch cell identity.\n\n## The motif\n\nThe core is the E-box CANNTG, and the myogenic version is CAGCTG, usually written with its A/T-rich flanks as AACAGCTGTT. The data agree: the representative model is the Vierstra archetype `AC0075:MYOD/MYOG:bHLH` with consensus AACAGCTGTC, and JASPAR MSC, MYF6 and CIS-BP MYOG models all read AACAGCTGTT. Each monomer reads one CAN half-site through a basic-region glutamate and arginine, which is why CA...TG is fixed while the central two bases are loosely specified. Binding-site selection with MyoD and E2A complexes showed exactly this: both recognise CA--TG but differ in their flanking and internal preferences, consistent with independent half-site recognition.\n\nThe interesting part of the myogenic story is not the sequence but three residues in the protein. Replacing MyoD's helices or loop with the equivalent *Drosophila* achaete-scute sequence leaves both DNA binding and muscle-gene activation intact; replacing the basic region preserves DNA binding but abolishes activation. Transferring just three MyoD residues (Ala114, Thr115 and Lys124) into E12 confers myogenic specificity. The crystal structure of the MyoD bHLH-DNA complex then showed that Ala114 and Thr115 are buried at the protein-DNA interface, not exposed for coactivator contacts, and may instead fix the conformation of Arg111. So the \"myogenic code\" is a DNA-proximal effect, and binding is necessary but not sufficient: functional selection of transcriptionally active MyoD sites recovered sequences resembling real muscle promoters rather than the optimal in vitro binding site.\n\nTwo caveats about CAGCTG follow from this. First, genome-wide comparison of MYOD and NEUROD2 found CAGCTG shared between them, with CAGGTG (CACCTG on the other strand) as the MYOD-preferred motif and CAGATG as the NEUROD2-preferred one, and only the factor-specific sites tracked with transcription. JASPAR's MYOD1 MA0499.3 is indeed a GCACCTGTC-type model. Second, none of the four MRFs is distinguishable from the others: cohesion is 0.88 and the family is one motif.\n\n## Where it acts\n\nMRF sites sit in distal muscle enhancers and promoters — the MCK enhancer, the myogenin promoter, desmin, myosin heavy-chain and troponin loci — and are AT-rich rather than CpG-island-associated. Genome-wide, MYOD1 occupies far more sites than it activates, including many in non-muscle chromatin, and occupancy is largely limited to E-boxes that are already accessible; the cell's chromatin state, not the motif, picks the target set. Characteristic co-occurring motifs are MEF2 (an A/T-rich site often within a helical turn or two of the E-box in muscle enhancers), SRF/CArG, TEAD/MCAT, SIX and PBX/MEIS; MYOD1 also binds with PBX1 at some promoters. A \"muscle E-box pair\" of two CAGCTG sites is common in MRF-dependent enhancers but has no fixed spacing rule.\n\n## Biology and disease\n\nMice lacking both *Myod1* and *Myf5* form no skeletal muscle and no myoblasts, whereas single mutants are near-normal, showing the two are redundant determination factors. *Myog*-null mice reach birth but have a severe deficit of differentiated fibres and die perinatally. MSC/MyoR was identified as a muscle-restricted bHLH that inhibits MyoD-driven myogenesis. In human disease, the MRFs are both markers and drivers of rhabdomyosarcoma: MYOD1 and MYOG immunostaining is diagnostic, and a recurrent somatic MYOD1 p.Leu122Arg substitution defines an aggressive subset of embryonal/spindle-cell tumours. That mutation is instructive for motif work — it lies in the basic region and redirects MYOD1 to MYC consensus sequences, converting a differentiation factor into a proliferative one.\n\n## Reading a hit\n\nA CAGCTG match with A/T flanks is consistent with an MRF site but cannot name the factor, and cannot separate MRFs from E-protein homodimers, ASCL1/2, NHLH1/2, ATOH8, TCF21 or TWIST2, all of which give CAGCTG models. The A/T flank preference is real but worth only a bit or two. The strongest in vitro support in this family is `MYOD1.H14CORE.1.PSM.A` (grade A, ChIP plus HT-SELEX plus methyl-SELEX), so \"MyoD binds CAGCTG\" is well grounded; the MSC label is shakier, because the HOCOMOCO in vitro model `MUSC.H14CORE.0.SM.B` reads CATATGGT, a NeuroD/Atonal-type site, and is flagged as matching the TWIST/HAND family instead. One CIS-BP MYF5 model is inferred from the mouse protein (90% DBD identity), which is benign but should be noted. Because CAGCTG is one of the commonest six-mers in the genome, treat an isolated hit as a hypothesis requiring muscle expression, accessibility or conservation.",
+ "caveats": "CAGCTG is among the most frequent six-mers in mammalian genomes and is read by E-protein homodimers, ASCL1/2, NHLH1/2, ATOH8, TCF21 and TWIST2 as well as by the MRFs, so a match places a site in the broad class II bHLH space rather than in muscle. The four MRFs share one motif and cannot be distinguished; nor can the activator MYOD1 be distinguished from the repressor MSC, whose in vitro model in HOCOMOCO is a CATATG site that clusters with TWIST/HAND instead. Binding also does not imply activation: the myogenic code governs activation, not affinity. Muscle-lineage expression and open chromatin are required to make a hit meaningful.",
+ "refs": [
+  {
+   "cite": "Davis RL, Weintraub H, Lassar AB. Expression of a single transfected cDNA converts fibroblasts to myoblasts. Cell 1987;51:987-1000.",
+   "pmid": "3690668",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3690668/"
+  },
+  {
+   "cite": "Davis RL, Cheng PF, Lassar AB, et al. The MyoD DNA binding domain contains a recognition code for muscle-specific gene activation. Cell 1990;60:733-46.",
+   "pmid": "2155707",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2155707/"
+  },
+  {
+   "cite": "Davis RL, Weintraub H. Acquisition of myogenic specificity by replacement of three amino acid residues from MyoD into E12. Science 1992;256:1027-30.",
+   "pmid": "1317057",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1317057/"
+  },
+  {
+   "cite": "Blackwell TK, Weintraub H. Differences and similarities in DNA-binding preferences of MyoD and E2A protein complexes revealed by binding site selection. Science 1990;250:1104-10.",
+   "pmid": "2174572",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2174572/"
+  },
+  {
+   "cite": "Ma PC, Rould MA, Weintraub H, et al. Crystal structure of MyoD bHLH domain-DNA complex: perspectives on DNA recognition and implications for transcriptional activation. Cell 1994;77:451-9.",
+   "pmid": "8181063",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8181063/"
+  },
+  {
+   "cite": "Huang J, Blackwell TK, Kedes L, et al. Differences between MyoD DNA binding and activation site requirements revealed by functional random sequence selection. Mol Cell Biol 1996;16:3893-900.",
+   "pmid": "8668207",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8668207/"
+  },
+  {
+   "cite": "Rudnicki MA, Schnegelsberg PN, Stead RH, et al. MyoD or Myf-5 is required for the formation of skeletal muscle. Cell 1993;75:1351-9.",
+   "pmid": "8269513",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8269513/"
+  },
+  {
+   "cite": "Hasty P, Bradley A, Morris JH, et al. Muscle deficiency and neonatal death in mice with a targeted mutation in the myogenin gene. Nature 1993;364:501-6.",
+   "pmid": "8393145",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8393145/"
+  },
+  {
+   "cite": "Lu J, Webb R, Richardson JA, et al. MyoR: a muscle-restricted basic helix-loop-helix transcription factor that antagonizes the actions of MyoD. Proc Natl Acad Sci U S A 1999;96:552-7.",
+   "pmid": "9892671",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9892671/"
+  },
+  {
+   "cite": "Cao Y, Yao Z, Sarkar D, et al. Genome-wide MyoD binding in skeletal muscle cells: a potential for broad cellular reprogramming. Dev Cell 2010;18:662-74.",
+   "pmid": "20412780",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20412780/"
+  },
+  {
+   "cite": "Kohsaka S, Shukla N, Ameur N, et al. A recurrent neomorphic mutation in MYOD1 defines a clinically aggressive subset of embryonal rhabdomyosarcoma associated with PI3K-AKT pathway mutations. Nat Genet 2014;46:595-600.",
+   "pmid": "24793135",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24793135/"
+  },
+  {
+   "cite": "Fong AP, Yao Z, Zhong JW, et al. Genetic and epigenetic determinants of neurogenesis and myogenesis. Dev Cell 2012;22:721-35.",
+   "pmid": "22445365",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22445365/"
+  }
+ ]
+}

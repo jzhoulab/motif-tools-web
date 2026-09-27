@@ -1,0 +1,71 @@
+{
+ "key": "CTCFL",
+ "aka": [
+  "BORIS",
+  "Brother of the Regulator of Imprinted Sites",
+  "CTCF-like",
+  "CTCFL/BORIS",
+  "cancer-testis antigen 27 (CT27)"
+ ],
+ "consensus": "CCASYAGRKGGCRSYR",
+ "short": "CTCFL, usually called BORIS, is the single paralogue of CTCF. The two proteins share an almost identical eleven-zinc-finger array and therefore the same DNA sequence preference, so the CTCFL matrices in motif databases are simply shorter, noisier versions of the CTCF core. What differs is the protein outside the fingers and, above all, where and when it is made: CTCFL is normally confined to a narrow window of male germ-cell development, and is re-expressed in many tumors, where it is used as a cancer-testis antigen. A CTCFL motif match is a CTCF-family match; deciding which of the two proteins is bound requires expression data or an antibody, not sequence.",
+ "long": "## The factors\n\nCTCFL (also BORIS, for Brother of the Regulator of Imprinted Sites) was identified as a paralogue of CTCF whose exons encode the same eleven-zinc-finger domain, and therefore the same DNA-binding potential, attached to entirely different amino- and carboxy-terminal regions (Loukinov et al. 2002). It is the only CTCF paralogue in mammals. Expression is the main distinction. CTCFL is normally restricted to the testis, appearing transiently in male germ cells before the onset of meiosis, at a stage that coincides with erasure of methylation marks; immunohistochemistry on testis sections places it alongside Stra8-positive cells and shows that it overlaps in time with ubiquitously expressed CTCF rather than strictly replacing it (Sleutels et al. 2012). Outside the germ line, CTCFL is silent in normal somatic tissue but is aberrantly activated in a wide range of tumors, which is why it is catalogued as a cancer-testis antigen. Neither protein needs to dimerize to bind DNA; the N and C termini of CTCFL differ from those of CTCF, and it is these regions - not the fingers - that give the two proteins different partners and different outputs.\n\n## The motif\n\nBecause the zinc-finger arrays are effectively the same, so is the sequence preference: CTCFL binds the CTCF core. The three CTCFL matrices in this atlas make the point. HOCOMOCO's CTCFL.H14CORE.0.P.B (CCRCCAGGGGGCGC) and CIS-BP's M07930_2.00 (GCGCCCCCTGGCGG, the reverse-complement orientation of the same sequence) both reproduce the CCASYAGRKGGC core that CTCF reads through zinc fingers 3-7, and JASPAR's CTCFL profile (MA1102.3) is only 8 positions long (CAGGGGGC) - a fragment of that core, not a distinct motif. What is *not* captured by any of these matrices is the upstream module that CTCF's fingers 9-11 read, so the CTCFL models are on average shorter and carry less information than the CTCF ones (11.7-15.7 bits here versus up to 22.5 bits for CTCF). That is a property of the models, not evidence of a different specificity. The practical statement is blunt: no position-weight matrix separates CTCFL from CTCF, and none should be expected to. What can be distinguished is site *architecture* rather than site sequence. Comparing CTCF and BORIS occupancy genome-wide, Pugacheva et al. (2015) found that BORIS is largely confined to a subset of regulatory elements containing clustered CTCF motifs, which they called 2xCTS elements, whereas single-motif sites (1xCTS) are bound by CTCF alone; 2xCTS elements are preferentially active promoters and enhancers in both germ cells and BORIS-positive cancer cells. So the discriminating feature is the presence of two adjacent core motifs, not the sequence of either one.\n\n## Where it acts\n\nIn germ cells and in BORIS-expressing cancer lines, CTCFL occupies a minority of the CTCF site repertoire, concentrated at the clustered 2xCTS class at active promoters and enhancers, and enriched in regions that escape the histone-to-protamine transition (Pugacheva et al. 2015). Its binding in germ cells is accompanied by testis-specific transcriptional regulators that selectively occupy the BORIS-bound subset (Rivero-Hinojosa et al. 2017). Nucleosome composition matters: CTCFL binding to CTCF-like consensus sites in vivo depends on the local histone variant context, which is one reason its occupancy does not simply mirror CTCF's despite the shared fingers (Sleutels et al. 2012). In cancer, BORIS binding has been mapped to the promoters of cancer-testis antigen genes MAGEA2, MAGEA3 and MAGEA4, where it accompanies their transcriptional activation in lung cancer (Bhan et al. 2011).\n\n## Biology and disease\n\nThe germ-line role is the well-supported one: transient CTCFL expression during pre-meiotic male germ-cell development, coincident with epigenetic reprogramming, and regulation of testis-specific genes. Its disease relevance is as an ectopically activated gene. Conditional expression of BORIS in normal cells is sufficient to demethylate and derepress MAGE-A1 and to reactivate other cancer-testis genes (Vatolin et al. 2005), and BORIS occupancy at MAGEA promoters tracks their activation in tumors (Bhan et al. 2011). CTCF and CTCFL are both altered in cancer, but in opposite directions - CTCF behaves as a haploinsufficient tumor suppressor while CTCFL is typically gained or de-repressed (Marshall et al. 2014; Debaugny and Skok 2020). Claims that BORIS acts as a simple antagonist of CTCF have not held up cleanly, since the two are co-expressed in germ cells and co-occupy 2xCTS sites.\n\n## Reading a hit\n\nTreat a CTCFL match as a CTCF-family match. The sequence cannot tell you which paralogue is bound, and in almost every human tissue the answer is CTCF, because CTCFL is not expressed: check CTCFL mRNA in your cell type before entertaining it at all. All three database CTCFL matrices derive from chromatin immunoprecipitation in cells where CTCF is also present, so they inherit CTCF's specificity by construction; the HOCOMOCO model carries ChIP-only evidence at grade B. If you have a reason to care about CTCFL specifically, the informative feature is not the motif but whether the region contains two closely spaced core motifs, since the clustered configuration is what BORIS occupancy tracks. And because JASPAR's CTCFL profile is only 8 bp, it will match far more often than a full CTCF core model - do not read those extra hits as CTCFL-specific sites.",
+ "caveats": "CTCFL and CTCF share an almost identical zinc-finger array, so no matrix can separate them and a CTCFL hit is really a CTCF-core hit. In normal somatic tissue CTCFL is not expressed, so the biologically relevant binder is CTCF unless you have expression evidence otherwise. All three database CTCFL models are derived from ChIP in CTCF-containing cells, and JASPAR's is only 8 bp long, which makes it match promiscuously. If CTCFL is genuinely the question, look for two clustered core motifs rather than for a CTCFL-specific sequence, and confirm with an antibody or CTCFL expression data.",
+ "refs": [
+  {
+   "cite": "Loukinov DI, Pugacheva E, Vatolin S, et al. BORIS, a novel male germ-line-specific protein associated with epigenetic reprogramming events, shares the same 11-zinc-finger domain with CTCF, the insulator protein involved in reading imprinting marks in the soma. Proc Natl Acad Sci U S A 2002;99:6806-11.",
+   "pmid": "12011441",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12011441/"
+  },
+  {
+   "cite": "Vatolin S, Abdullaev Z, Pack SD, et al. Conditional expression of the CTCF-paralogous transcriptional factor BORIS in normal cells results in demethylation and derepression of MAGE-A1 and reactivation of other cancer-testis genes. Cancer Res 2005;65:7751-62.",
+   "pmid": "16140943",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16140943/"
+  },
+  {
+   "cite": "Bhan S, Negi SS, Shao C, et al. BORIS binding to the promoters of cancer testis antigens, MAGEA2, MAGEA3, and MAGEA4, is associated with their transcriptional activation in lung cancer. Clin Cancer Res 2011;17:4267-76.",
+   "pmid": "21558405",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21558405/"
+  },
+  {
+   "cite": "Sleutels F, Soochit W, Bartkuhn M, et al. The male germ cell gene regulator CTCFL is functionally different from CTCF and binds CTCF-like consensus sites in a nucleosome composition-dependent manner. Epigenetics Chromatin 2012;5:8.",
+   "pmid": "22709888",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22709888/"
+  },
+  {
+   "cite": "Marshall AD, Bailey CG, Rasko JE. CTCF and BORIS in genome regulation and cancer. Curr Opin Genet Dev 2014;24:8-15.",
+   "pmid": "24657531",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24657531/"
+  },
+  {
+   "cite": "Pugacheva EM, Rivero-Hinojosa S, Espinoza CA, et al. Comparative analyses of CTCF and BORIS occupancies uncover two distinct classes of CTCF binding genomic regions. Genome Biol 2015;16:161.",
+   "pmid": "26268681",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26268681/"
+  },
+  {
+   "cite": "Rivero-Hinojosa S, Kang S, Lobanenkov VV, et al. Testis-specific transcriptional regulators selectively occupy BORIS-bound CTCF target regions in mouse male germ cells. Sci Rep 2017;7:41279.",
+   "pmid": "28145452",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28145452/"
+  },
+  {
+   "cite": "Hashimoto H, Wang D, Horton JR, et al. Structural Basis for the Versatile and Methylation-Dependent Binding of CTCF to DNA. Mol Cell 2017;66:711-720.e3.",
+   "pmid": "28529057",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28529057/"
+  },
+  {
+   "cite": "Debaugny RE, Skok JA. CTCF and CTCFL in cancer. Curr Opin Genet Dev 2020;61:44-52.",
+   "pmid": "32334335",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32334335/"
+  },
+  {
+   "cite": "Rauluseviciute I, Riudavets-Puig R, Blanc-Mathieu R, et al. JASPAR 2024: 20th anniversary of the open-access database of transcription factor binding profiles. Nucleic Acids Res 2024;52:D174-D182.",
+   "pmid": "37962376",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37962376/"
+  },
+  {
+   "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
+   "pmid": "37971293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  }
+ ]
+}

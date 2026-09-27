@@ -1,0 +1,67 @@
+{
+ "key": "HINFP",
+ "aka": [
+  "HiNF-P",
+  "MIZF",
+  "ZNF743",
+  "histone H4 cell cycle element",
+  "Site II (H4 promoter)",
+  "CGGAC core"
+ ],
+ "consensus": "CGGACGTT",
+ "short": "HINFP, also called HiNF-P and originally cloned as MIZF, is a seven-finger C2H2 zinc-finger protein that reads a short CGGAC core, usually written CGGACGTT. Its best-characterized job is at the replication-dependent histone H4 genes, where it binds a conserved cell-cycle element in the proximal promoter and, using the cyclin E/CDK2 substrate NPAT/p220 as coactivator, switches on H4 transcription at the G1-to-S transition. It is the endpoint of a linear pathway from growth-factor-induced cyclin E/CDK2 activity to histone synthesis. The same protein was independently identified as a partner of the methyl-CpG-binding protein MBD2 and acts as a repressor in that context, so the motif can mean activation or repression depending on the promoter.",
+ "long": "## The factors\n\nHINFP is a single gene with no paralogue sharing its specificity. The protein has seven C2H2 zinc fingers; deletion analysis showed that five of the seven are required for DNA binding, so the array is used as one continuous reading head rather than as separable modules. It was discovered twice. As MIZF it was pulled out as a binding partner of MBD2, a methyl-CpG-binding protein, and characterized as a sequence-specific repressor that recruits MBD2-associated silencing activity. As HiNF-P it was purified as the factor required for E2F-independent activation of the replication-dependent histone H4 multigene family. The activating function depends on a coactivator rather than on a dimerization partner: HINFP binds NPAT/p220, a substrate of cyclin E/CDK2, and NPAT phosphorylation at the G1 restriction point converts the bound HINFP into an activator. HINFP is broadly expressed and conserved; the Drosophila homolog exists and is functional.\n\n## The motif\n\nThe site is short. Cyclic amplification and selection of targets gave the consensus CGGACGTT, with a conserved CGGAC core that is the invariant part; the trailing GTT positions are preferred but not essential. Written on the other strand this is AACGTCCG, which is the orientation most database matrices use, and the family's dataConsensus GCGGACG is simply the core with an extra 5' guanine. Only about six to eight positions carry information, and the core sits within a CpG dinucleotide context, which matters because methylation of that CpG is relevant to the MBD2 connection. One feature of the data is worth flagging: the strongest archetype in this family, the Vierstra AC0649 matrix, reads GCGGACGTTCAACGTCCGC, which is two CGGAC cores in inverted orientation separated by five base pairs. Whether that reflects a genuine preference for a palindromic arrangement or simply the frequent occurrence of paired sites in the sequences used to build the archetype is not settled in the literature; treat the single core as the unit and the palindrome as a common arrangement. HINFP has no close paralogue, so there is no within-family ambiguity, but the CGGAC core is short enough to be a substring of longer GC-rich motifs from other families.\n\n## Where it acts\n\nHINFP sites are proximal promoter elements. The canonical location is Site II of the human histone H4 genes, a conserved element a short distance upstream of the start site that is present across the replication-dependent H4 multigene family; chromatin immunoprecipitation and genomic footprinting confirmed occupancy in vivo. In the nucleus this activity is spatially concentrated: the H4 gene clusters assemble into histone locus bodies, subnuclear structures where HINFP, NPAT and the histone genes co-localize during S phase. Beyond histone genes, database searches identified the CGGACGTT word in many human promoters, and HINFP was shown to bind and repress the RB1 promoter through it. The motif is common enough that most genomic matches are not functional elements, and published HINFP ChIP-derived matrices in HOCOMOCO differ noticeably from the in vitro word, which is a sign that some of those peak sets contain indirect or low-specificity binding.\n\n## Biology and disease\n\nThe HINFP-NPAT axis is the link between the cyclin E/CDK2 restriction point and the burst of histone gene transcription that packages newly replicated DNA. Reducing HINFP slows entry into S phase; in mouse, Hinfp is required for early embryonic cell cycles, maternal Hinfp protein sustains pre-implantation development, and the histone H4 deficiency caused by Hinfp loss is made worse by removing p53, indicating that cells sense the shortfall as a checkpoint problem. In Drosophila, loss of Hinfp derepresses most transposable elements and causes DNA damage in somatic tissues; the key mediator is Histone1, the linker histone, whose expression collapses without Hinfp, so higher-order chromatin assembly fails. The same work found that Hinfp loss enhances Ras-driven tissue growth and ageing phenotypes. On the repression side, MIZF/HINFP-mediated silencing of RB1 was described during myogenic differentiation. There is no established Mendelian HINFP disease, and cancer associations are indirect, mostly through the histone gene/cell-cycle axis.\n\n## Reading a hit\n\nA match to CGGACGTT is only moderate evidence. Ask first whether the hit is in a proximal promoter, and second whether it is at a replication-dependent histone gene, where the prior probability of function is far higher than anywhere else. Isolated CGGAC cores in enhancers or gene bodies are usually chance matches. Because the protein has no paralogue, a real site means HINFP, but the converse trap is that the core is a substring of longer GC-rich words, so check whether a better-scoring motif from another family covers the same position. Direction of effect cannot be read from the sequence: the same element activates histone H4 genes with NPAT and represses RB1 with MBD2. The in vitro-supported HOCOMOCO matrix is the safer choice; the ChIP-derived ones in this family are internally inconsistent.",
+ "caveats": "The core is short, so chance matches are frequent and a hit outside a proximal promoter usually means little. The strongest prior is a replication-dependent histone H4 promoter. HINFP has no paralogue, so a genuine site implicates one protein, but the CGGAC core sits inside many longer GC-rich motifs and can be claimed by other families. Evidence quality within the family is uneven: the in vitro matrix and the SELEX-derived consensus agree, while two ChIP-derived HOCOMOCO matrices give noticeably different words, one of them with low information content, which suggests indirect or poorly resolved binding in those peak sets. Finally, the motif does not predict direction, since HINFP both activates and represses.",
+ "refs": [
+  {
+   "cite": "Sekimata M, Takahashi A, Murakami-Sekimata A, et al. Involvement of a novel zinc finger protein, MIZF, in transcriptional repression by interacting with a methyl-CpG-binding protein, MBD2. J Biol Chem 2001;276:42632-8.",
+   "pmid": "11553631",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11553631/"
+  },
+  {
+   "cite": "Mitra P, Xie RL, Medina R, et al. Identification of HiNF-P, a key activator of cell cycle-controlled histone H4 genes at the onset of S phase. Mol Cell Biol 2003;23:8110-23.",
+   "pmid": "14585971",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/14585971/"
+  },
+  {
+   "cite": "Sekimata M, Homma Y. Sequence-specific transcriptional repression by an MBD2-interacting zinc finger protein MIZF. Nucleic Acids Res 2004;32:590-7.",
+   "pmid": "14752047",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/14752047/"
+  },
+  {
+   "cite": "Sekimata M, Homma Y. Regulation of Rb gene expression by an MBD2-interacting zinc finger protein MIZF during myogenic differentiation. Biochem Biophys Res Commun 2004;325:653-9.",
+   "pmid": "15541338",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15541338/"
+  },
+  {
+   "cite": "Xie R, Medina R, Zhang Y, et al. The histone gene activator HINFP is a nonredundant cyclin E/CDK2 effector during early embryonic cell cycles. Proc Natl Acad Sci U S A 2009;106:12359-64.",
+   "pmid": "19590016",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19590016/"
+  },
+  {
+   "cite": "Ghule PN, Xie RL, Colby JL, et al. p53 checkpoint ablation exacerbates the phenotype of Hinfp dependent histone H4 deficiency. Cell Cycle 2015;14:2501-8.",
+   "pmid": "26030398",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26030398/"
+  },
+  {
+   "cite": "Ghule PN, Xie RL, Colby JL, et al. Maternal expression and early induction of histone gene transcription factor Hinfp sustains development in pre-implantation embryos. Dev Biol 2016;419:311-320.",
+   "pmid": "27609454",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27609454/"
+  },
+  {
+   "cite": "Nirala NK, Li Q, Ghule PN, et al. Hinfp is a guardian of the somatic genome by repressing transposable elements. Proc Natl Acad Sci U S A 2021;118.",
+   "pmid": "34620709",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34620709/"
+  },
+  {
+   "cite": "Ghule PN, Boyd JR, Kabala F, et al. Spatiotemporal higher-order chromatin landscape of human histone gene clusters at histone locus bodies during the cell cycle in breast cancer progression. Gene 2023;872:147441.",
+   "pmid": "37094694",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37094694/"
+  },
+  {
+   "cite": "Fritz AJ, Ghule PN, Toor R, et al. Spatiotemporal Epigenetic Control of the Histone Gene Chromatin Landscape during the Cell Cycle. Crit Rev Eukaryot Gene Expr 2023;33:85-97.",
+   "pmid": "37017672",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37017672/"
+  }
+ ]
+}

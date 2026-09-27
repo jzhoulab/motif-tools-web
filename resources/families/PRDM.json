@@ -1,0 +1,76 @@
+{
+ "key": "PRDM",
+ "aka": [
+  "PR/SET domain zinc fingers",
+  "PRDI-BF1 site (PRDM1)",
+  "BLIMP1 site",
+  "PRDM9 13-mer hotspot motif",
+  "Meisetz (PRDM9)",
+  "C2H2 zinc finger factors"
+ ],
+ "short": "PRDM proteins are zinc-finger transcription factors defined by an N-terminal PR domain, a variant of the SET methyltransferase fold, followed by a tandem array of C2H2 zinc fingers that does the DNA binding. The family is heterogeneous and does not share one motif: each member's finger array reads its own sequence, and those sequences are unrelated to one another. The best-characterized members are PRDM1/BLIMP1, which binds an interferon-regulatory-factor-like AAAGTGAAAG site and drives plasma-cell differentiation; PRDM9, whose rapidly evolving finger array selects meiotic recombination hotspots and underlies a mouse hybrid-sterility phenotype; PRDM14, in naive pluripotency; and PRDM16, in brown adipocyte and craniofacial development. A hit labelled PRDM should be interpreted per member, never as a family-level call.",
+ "long": "## The factors\n\nThe PRDM proteins take their name from the PR domain, a diverged SET domain of about 130 residues,\nfollowed by a variable number of C2H2 zinc fingers. Humans have roughly 19 PRDM genes. This family\ngroups the ones for which a motif has actually been measured: PRDM1, PRDM4, PRDM5, PRDM6, PRDM9,\nPRDM10, PRDM13, PRDM14, PRDM15 and PRDM16. MECOM (historically PRDM3) is kept as a separate family\nhere because its two zinc-finger clusters behave differently from a single array.\n\nOnly some PR domains are catalytically active. PRDM9 is a genuine histone H3 lysine-4\ntrimethyltransferase, first described in mouse as Meisetz, and that activity is required for meiotic\nprophase. For most other members the PR domain has no demonstrated methyltransferase activity and acts\nas a protein-interaction surface; PRDM1/BLIMP1, for instance, works by recruiting histone deacetylase\nand methyltransferase cofactors rather than by modifying histones itself. Expression is mostly\nrestricted. PRDM1 appears in plasma cells, effector T cells, keratinocytes, primordial germ cells and\nplacenta; PRDM9 essentially only in meiotic germ cells; PRDM14 in embryonic stem cells and germ cells;\nPRDM16 in brown and beige adipocytes, craniofacial mesenchyme and hematopoietic stem cells. Few PRDMs\nare broadly expressed, so the plausible member behind a hit is usually decided by cell type rather than\nby sequence.\n\n## The motif\n\nThere is no family consensus, and the data in this atlas show that plainly: member motifs range from the\nGTTTCAAG core of PRDM4, through the IRF-like AAAGTGAAAG of PRDM1, to GGTCTCTAAC for PRDM14 and G-rich\nmodels for PRDM9 and PRDM16. Cohesion across the family is low, about 0.5, and the medoid motif\n(ACTTTCACT, the PRDM1 site on the reverse strand) is simply the most central member, not a shared\nelement.\n\nPRDM1/BLIMP1 is the clearest case. Its zinc fingers read an approximately 10-bp site built on a GAAAG\ncore; the optimal selected sequence is close to AAAGTGAAAG, which overlaps a subset of\ninterferon-stimulated response elements, so BLIMP1 and IRF1/IRF2 compete for the same DNA with\ncomparable affinities. In vivo, several motif variants are needed to capture BLIMP1 occupancy, and\nbinding is sensitive to CpG methylation. The reverse-complement rendering ACTTTCACTTT is the same site\nand is what several database entries display.\n\nPRDM9 is different in kind. Its DNA-binding module is a minisatellite-encoded tandem array of roughly a\ndozen C2H2 fingers, one of the fastest-evolving coding sequences in mammals, polymorphic within humans\nand between mouse strains. Human hotspots are enriched for a degenerate 13-mer, CCNCCNTNNCCNC, which\nthe common human A allele recognizes; crystal structures of the human PRDM9 finger array on DNA explain\nthe base contacts, and the C allele reads a different sequence. Because the array differs between\nalleles, no single PRDM9 matrix is correct for all individuals, and the JASPAR and CIS-BP PRDM9 models\nare approximations of one allele's preference at best.\n\n## Where it acts\n\nPRDM1 sites sit in promoters of genes it represses, including IRF-dependent immune programs, in both\nCpG-poor and CpG-island promoters, with the methylation-sensitive variants biased to the latter. PRDM9\nsites are the defining feature of meiotic double-strand-break hotspots: tens of thousands of them,\ntypically 1-2 kb wide, mostly outside promoters, and in mouse directed away from functional elements\nsuch as transcription start sites. PRDM14 and PRDM15 sites are concentrated at enhancers and promoters\nof pluripotency and signaling genes in stem cells. PRDM16 sites are found at brown-fat enhancers, where\nPRDM16 acts less as an autonomous sequence reader than as a partner of adipogenic factors, which matters\nfor interpreting its ChIP-derived motif.\n\n## Biology and disease\n\nPRDM1 knockout blocks plasma-cell formation and specification of primordial germ cells; in humans PRDM1\nis inactivated by mutation and deletion in diffuse large B-cell lymphoma, where it behaves as a tumor\nsuppressor. PRDM9-null mice are sterile with arrested meiosis; PRDM9 allele identity changes hotspot\nusage in human families; and one PRDM9 allele is the mouse hybrid-sterility gene, with sterility\nreversible by swapping the finger array. PRDM14 loss destabilizes naive pluripotency and PRDM15 loss\ndoes the same through WNT and MAPK-ERK targets. PRDM16 loss impairs brown-fat identity and causes\ncardiomyopathy in 1p36 deletion syndrome; PRDM5 loss-of-function causes brittle cornea syndrome; PRDM6\nvariants cause nonsyndromic patent ductus arteriosus. PRDM10 and PRDM16 also appear as fusion partners\nin soft-tissue tumors and leukemia.\n\n## Reading a hit\n\nTreat a PRDM hit as a hit on one named member. Sequence cannot tell you which PRDM bound, because the\nmembers do not share a motif and the family label spans unrelated sites. Check which member the\nunderlying matrix is labelled with, then whether that member is expressed in your cell type. For PRDM1\nthe site is short and IRF-like, so an IRF or ISRE explanation is at least as likely as BLIMP1 unless\nBLIMP1 is present. For PRDM9 a match is meaningless outside meiotic germ cells, and allele-dependent\neven there. Several PRDM entries rest on ChIP-only evidence, where the motif may belong to a partner:\nthe HOCOMOCO PRDM13 model matches a SNAI-type CAGGTG E-box and the PRDM16 model resembles an EBF site,\nand both are flagged as inconsistent with their labels by their nearest neighbours across databases.",
+ "caveats": "This family has no shared motif, so a family-level hit means little; only the member-specific matrix matters. Cohesion across members is about 0.5, and two entries contradict their labels: the HOCOMOCO PRDM13 model (GCAGGTGG) is a SNAI-type E-box and the PRDM16 model (TCCCCTGGGA) resembles an EBF site, both from ChIP-only data where an indirect or partner motif is the simpler explanation. PRDM1 evidence is strong and includes in vitro selection, but the site overlaps IRF elements, so IRF1, IRF2 or an ISRE is a competing interpretation. PRDM9 matrices describe one allele of a polymorphic finger array and are interpretable only in meiotic germ cells. Short G-rich PRDM models match frequently by chance.",
+ "refs": [
+  {
+   "cite": "Turner CA Jr, Mack DH, Davis MM. Blimp-1, a novel zinc finger-containing protein that can drive the maturation of B lymphocytes into immunoglobulin-secreting cells. Cell 1994;77:297-306.",
+   "pmid": "8168136",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8168136/"
+  },
+  {
+   "cite": "Keller AD, Maniatis T. Identification and characterization of a novel repressor of beta-interferon gene expression. Genes Dev 1991;5:868-79.",
+   "pmid": "1851123",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1851123/"
+  },
+  {
+   "cite": "Kuo TC, Calame KL. B lymphocyte-induced maturation protein (Blimp)-1, IFN regulatory factor (IRF)-1, and IRF-2 can bind to the same regulatory sites. J Immunol 2004;173:5556-63.",
+   "pmid": "15494505",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15494505/"
+  },
+  {
+   "cite": "Doody GM, Care MA, Burgoyne NJ, et al. An extended set of PRDM1/BLIMP1 target genes links binding motif type to dynamic repression. Nucleic Acids Res 2010;38:5336-50.",
+   "pmid": "20421211",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20421211/"
+  },
+  {
+   "cite": "Pasqualucci L, Compagno M, Houldsworth J, et al. Inactivation of the PRDM1/BLIMP1 gene in diffuse large B cell lymphoma. J Exp Med 2006;203:311-7.",
+   "pmid": "16492805",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16492805/"
+  },
+  {
+   "cite": "Hayashi K, Yoshida K, Matsui Y. A histone H3 methyltransferase controls epigenetic events required for meiotic prophase. Nature 2005;438:374-8.",
+   "pmid": "16292313",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16292313/"
+  },
+  {
+   "cite": "Myers S, Freeman C, Auton A, et al. A common sequence motif associated with recombination hot spots and genome instability in humans. Nat Genet 2008;40:1124-9.",
+   "pmid": "19165926",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19165926/"
+  },
+  {
+   "cite": "Baudat F, Buard J, Grey C, et al. PRDM9 is a major determinant of meiotic recombination hotspots in humans and mice. Science 2010;327:836-40.",
+   "pmid": "20044539",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20044539/"
+  },
+  {
+   "cite": "Patel A, Horton JR, Wilson GG, et al. Structural basis for human PRDM9 action at recombination hot spots. Genes Dev 2016;30:257-65.",
+   "pmid": "26833727",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26833727/"
+  },
+  {
+   "cite": "Davies B, Hatton E, Altemose N, et al. Re-engineering the zinc fingers of PRDM9 reverses hybrid sterility in mice. Nature 2016;530:171-176.",
+   "pmid": "26840484",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26840484/"
+  },
+  {
+   "cite": "Seale P, Bjork B, Yang W, et al. PRDM16 controls a brown fat/skeletal muscle switch. Nature 2008;454:961-7.",
+   "pmid": "18719582",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18719582/"
+  },
+  {
+   "cite": "Hohenauer T, Moore AW. The Prdm family: expanding roles in stem cells and development. Development 2012;139:2267-82.",
+   "pmid": "22669819",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22669819/"
+  }
+ ]
+}

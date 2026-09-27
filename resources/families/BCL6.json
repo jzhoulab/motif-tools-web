@@ -1,0 +1,75 @@
+{
+ "key": "BCL6",
+ "aka": [
+  "BCL6",
+  "BCL6B",
+  "BAZF",
+  "LAZ3",
+  "ZBTB27",
+  "ZBTB28",
+  "BCL6 binding site",
+  "STAT-like GAS element",
+  "TTCCTAGAA"
+ ],
+ "consensus": "TTCCTAGAA",
+ "short": "BCL6 and its paralogue BCL6B (BAZF) are BTB/POZ zinc-finger repressors that bind a nine-base site, TTCCTAGAA, which is a TTCNNNGAA element of the same class that STAT dimers use. That overlap is not incidental: BCL6 represses interleukin-4-induced, STAT6-dependent genes by occupying sites that STAT6 would otherwise use, so the same sequence can be an activating STAT element or a repressed BCL6 element depending on which protein is present. BCL6 is required for germinal center formation and for follicular helper T cells, and its deregulation by chromosomal translocation or promoter mutation occurs in a large fraction of diffuse large B-cell lymphomas. A hit to this motif is ambiguous between BCL6, BCL6B and the STAT family.",
+ "long": "## The factors\n\nTwo paralogues: BCL6 (also LAZ3, ZBTB27) and BCL6B (BAZF, ZBTB28). Both have the standard BTB-ZF architecture - an N-terminal BTB/POZ domain, a central region with PEST and RD2 repression motifs, and six C-terminal C2H2 zinc fingers. The BTB domain obligately homodimerizes, and the dimer creates a lateral groove at the interface into which the SMRT and NCOR corepressors dock through a short peptide; the crystal structure of that complex explained how one BTB dimer recruits corepressor and provided the target site for the small-molecule BCL6 inhibitors and degraders developed since. Repression is therefore corepressor-dependent and also involves BCOR and HDAC recruitment. BCL6 is expressed at high levels in germinal center B cells and in follicular helper T cells, at lower levels in macrophages and other tissues; BCL6B is expressed in endothelium, some T-cell subsets and neural tissue and is much less studied. The two proteins bind DNA as dimers, and the six fingers give a footprint consistent with a nine- to twelve-base site.\n\n## The motif\n\nThe site is written in the literature as TTCCTAGAA, sometimes generalized to TTCCT(A/C)GAA. Parsed as TTC-CTA-GAA it is a TTCNNNGAA element - structurally the same family of sites that STAT dimers occupy as gamma-interferon activated sequences (GAS elements). All the matrices here are consistent with that once strand is taken into account: the HOCOMOCO grade-A BCL6 model reads GCTTTCGAGGAAT and JASPAR MA0463.3 reads GCTTTCGAGGAA, whose reverse complements are TTCCTCGAAAGC, while the BCL6B HT-SELEX models read TGCTTTCTAGGAATTCA, reverse-complementing to TTCCTAGAAAGCA. So BCL6 models favor TTCCTCGAA and BCL6B models TTCCTAGAA; both fit TTCCTNGAA, and the difference at that one central position is the only sequence feature that even hints at a paralogue distinction. It is not enough to act on: the BCL6 and BCL6B models are 0.91-0.97 similar, and the Vierstra archetype for the family is named AC0665:BCL/BCL6B, an explicit statement that the two were not separable. Information content is high for a C2H2 family - the BCL6B matrices reach nearly 30 bits because they include long flanks - but much of that comes from the flanking bases selected in vitro rather than from the core, and long high-information matrices of this kind tend to overfit. One entry in the family contradicts the rest outright: CIS-BP M00227, labelled BCL6, reads TAATTAA and its nearest cross-database neighbors are PRD-like homeodomain motifs. It does not belong with the other BCL6 models.\n\n## Where it acts\n\nBCL6 binds promoters and enhancers of genes that must be held off during the germinal center reaction: DNA damage response and checkpoint genes (TP53, CDKN1A, ATR), differentiation genes (PRDM1), and cytokine and chemokine genes. In T cells it represses the Th1, Th2 and Th17 programs while promoting the follicular helper program. Because the site is a GAS-type element, BCL6 sites overlap physically with STAT sites at shared loci - the germline immunoglobulin epsilon (Iepsilon) promoter is the worked example, where BCL6 occupancy blocks STAT6-driven transcription and IgE class switching. TTCCTNGAA is AT-rich, CpG-free and about nine informative bases, so chance occurrences are frequent; occupancy is set by BCL6 abundance, which is itself tightly controlled by phosphorylation-triggered degradation and by MYC-driven transcription in the germinal center.\n\n## Biology and disease\n\nBcl6-null mice form no germinal centers, cannot mount high-affinity antibody responses, and develop a lethal inflammatory syndrome with eosinophilia and Th2-skewed cytokine production - a phenotype that connects directly to the STAT6 antagonism. Bcl6 is also required for follicular helper T cell development, and enforced Bcl6 expression drives T cells into that program. In human disease, BCL6 is the most frequently translocated locus in diffuse large B-cell lymphoma: chromosomal rearrangements juxtapose heterologous promoters to the BCL6 coding sequence and prevent its normal downregulation, and point mutations in the BCL6 promoter region have the same effect. BCL6 is also deregulated in follicular lymphoma and in some T-cell lymphomas. The BTB lateral groove has been exploited pharmacologically, with peptide and small-molecule inhibitors and BTB-directed degraders in development. BCL6B has no comparable disease association and is best described as an understudied paralogue.\n\n## Reading a hit\n\nThe central caution is the STAT overlap. A TTCNNNGAA match is compatible with BCL6, with BCL6B, and with STAT1, STAT3, STAT4, STAT5A/B and (with the N4 spacing) STAT6; the sequence does not distinguish a repressed BCL6 site from an activated STAT site, and at some loci the same element is both at different times. If your interest is signaling, do not read a BCL6 motif hit as evidence against STAT involvement, or vice versa - the correct inference is that the locus is contested. Within the family, BCL6 and BCL6B are not separable; the slight preference of BCL6 models for a central C and BCL6B models for a central A is within the noise of a single position. Evidence quality is otherwise good: HOCOMOCO BCL6 and BCL6B core models are grade A with PSM evidence, and JASPAR MA0463.3 and MA0731.1 are HT-SELEX, so direct binding is well supported. Two practical exclusions: discard CIS-BP M00227 (TAATTAA), which is a homeodomain-like site mislabelled as BCL6, and be wary of scoring with the full 17-position BCL6B matrix, whose extreme information content comes largely from in vitro-selected flanks that are unlikely to be conserved in real promoters. Cell context is the strongest supporting evidence: a germinal center B cell or follicular helper T cell makes a BCL6 call reasonable.",
+ "caveats": "The site is a TTCNNNGAA GAS element, so a match is ambiguous between BCL6, BCL6B and the STAT family; BCL6 is documented to repress STAT6-dependent genes by competing for overlapping sites, so a hit indicates a contested element rather than a settled assignment. BCL6 and BCL6B motifs are 0.91-0.97 similar and the Vierstra archetype merges them by name. The nine-base core is AT-rich and CpG-free and occurs often by chance. Two specific data problems: CIS-BP M00227 labelled BCL6 is a homeodomain-like TAATTAA site that does not belong in this family, and the 17-position BCL6B HT-SELEX matrix draws much of its information from selected flanks.",
+ "refs": [
+  {
+   "cite": "Ye BH, Lista F, Lo Coco F, et al. Alterations of a zinc finger-encoding gene, BCL-6, in diffuse large-cell lymphoma. Science 1993;262:747-50.",
+   "pmid": "8235596",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8235596/"
+  },
+  {
+   "cite": "Chang CC, Ye BH, Chaganti RS, et al. BCL-6, a POZ/zinc-finger protein, is a sequence-specific transcriptional repressor. Proc Natl Acad Sci U S A 1996;93:6947-52.",
+   "pmid": "8692924",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8692924/"
+  },
+  {
+   "cite": "Dent AL, Shaffer AL, Yu X, et al. Control of inflammation, cytokine expression, and germinal center formation by BCL-6. Science 1997;276:589-92.",
+   "pmid": "9110977",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9110977/"
+  },
+  {
+   "cite": "Ye BH, Cattoretti G, Shen Q, et al. The BCL-6 proto-oncogene controls germinal-centre formation and Th2-type inflammation. Nat Genet 1997;16:161-70.",
+   "pmid": "9171827",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9171827/"
+  },
+  {
+   "cite": "Harris MB, Chang CC, Berton MT, et al. Transcriptional repression of Stat6-dependent interleukin-4-induced genes by BCL-6: specific regulation of iepsilon transcription and immunoglobulin E switching. Mol Cell Biol 1999;19:7264-75.",
+   "pmid": "10490661",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10490661/"
+  },
+  {
+   "cite": "Ahmad KF, Melnick A, Lax S, et al. Mechanism of SMRT corepressor recruitment by the BCL6 BTB domain. Mol Cell 2003;12:1551-64.",
+   "pmid": "14690607",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/14690607/"
+  },
+  {
+   "cite": "Nurieva RI, Chung Y, Martinez GJ, et al. Bcl6 mediates the development of T follicular helper cells. Science 2009;325:1001-5.",
+   "pmid": "19628815",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19628815/"
+  },
+  {
+   "cite": "Siggs OM, Beutler B. The BTB-ZF transcription factors. Cell Cycle 2012;11:3358-69.",
+   "pmid": "22894929",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22894929/"
+  },
+  {
+   "cite": "Beaulieu AM, Sant'Angelo DB. The BTB-ZF family of transcription factors: key regulators of lineage commitment and effector function development in the immune system. J Immunol 2011;187:2841-7.",
+   "pmid": "21900183",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21900183/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  },
+  {
+   "cite": "Yin Y, Morgunova E, Jolma A, et al. Impact of cytosine methylation on DNA binding specificities of human transcription factors. Science 2017;356.",
+   "pmid": "28473536",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28473536/"
+  }
+ ]
+}

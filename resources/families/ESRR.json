@@ -1,0 +1,64 @@
+{
+ "key": "ESRR",
+ "aka": [
+  "ERRE",
+  "ERR response element",
+  "estrogen-related receptor element",
+  "extended half-site",
+  "SFRE (SF-1 response element)",
+  "TCAAGGTCA",
+  "NR3B",
+  "ERRalpha/beta/gamma site"
+ ],
+ "consensus": "TNAAGGTCA",
+ "short": "The estrogen-related receptors ERRalpha (ESRRA), ERRbeta (ESRRB) and ERRgamma (ESRRG) are orphan nuclear receptors with no established natural ligand; their activity is set by coactivators such as PGC-1alpha rather than by a hormone. Unlike most nuclear receptors they bind DNA as monomers, on a single AGGTCA half-site carrying a three-base 5' extension: TNAAGGTCA, usually seen as TCAAGGTCA. The extension is read by a C-terminal extension of the DNA-binding domain in the minor groove, and it is what allows a monomer to bind with high affinity. The three paralogues share one motif and are not distinguishable from sequence. ERR sites sit at nuclear-encoded mitochondrial and oxidative-metabolism genes, at pluripotency enhancers, and in the placenta and inner ear.",
+ "long": "## The factors\n\nThree paralogues make up subfamily NR3B: ESRRA (ERRalpha, NR3B1), ESRRB (ERRbeta, NR3B2) and ESRRG (ERRgamma, NR3B3). They were found by homology to the estrogen receptor but are not activated by estradiol; no endogenous ligand is established, the ligand-binding pocket is small and largely filled, and transcriptional output is controlled by coactivator availability, chiefly PGC-1alpha and PGC-1beta (Giguere 2008). Architecturally they resemble other nuclear receptors - a C4 double-zinc-finger DNA-binding domain (DBD) and a ligand-binding domain - but they bind DNA as monomers, and can also homodimerize. ERRalpha is broadly expressed with highest levels in heart, kidney, skeletal muscle and brown adipose tissue; ERRgamma is enriched in heart, brain and kidney; ERRbeta is the most restricted, appearing in extraembryonic ectoderm and trophoblast, the inner ear and pluripotent stem cells. Ten motif models fall here (JASPAR 3, HOCOMOCO 3, CIS-BP 3, Vierstra 1), covering all three genes.\n\n## The motif\n\nThe ERR response element is an extended half-site, not a repeat. Binding-site selection with ERRalpha defined it as TNAAGGTCA: the canonical nuclear receptor hexamer AGGTCA preceded by three bases, of which the two immediately 5' are almost always AA (Sladek et al. 1997). In practice the models here read TCAAGGTCA or CAAGGTCA, and the family's data consensus is CAAGGTCA.\n\nThe 5' extension is functional, not decorative. The solution structure of the ERRbeta DBD bound to its site showed that monomeric high-affinity binding requires base-specific minor-groove contacts from a modified guanosine-binding AT-hook in the C-terminal extension (CTE) that flanks the core DBD; the CTE is stabilized by packing against the DBD surface that other receptors use for dimerization, a pseudo-dimer interface (Gearhart et al. 2003). That is the structural reason why ERRs need three extra 5' bases while a GR or ER dimer needs a second hexamer instead. Dimeric arrangements do occur: the CIS-BP ESRRG model M03412 is two extended half-sites in tandem (AAGGTCAttTcAAGGTCA), the highest-information model in the family at 22 bits.\n\nSpacing and orientation are what separate this family from its neighbours, and they separate it imperfectly. An inverted AGGTCA repeat with a 3 bp spacer is an ERE; direct repeats with 1-5 bp spacers are RXR-heterodimer elements; a single 5'-extended half-site is an ERR element - but it is also the SF-1/LRH-1 response element (SFRE), and the Vierstra archetype in this family is labelled ESRRA/NR5A for exactly that reason. ERRalpha and ERRbeta also bind and activate through consensus EREs, while ERbeta does not reciprocate (Vanacker et al. 1999). The family data marks one CIS-BP model labelled ESRRA (M07988) as a full ERE belonging with ESR. ESRRA, ESRRB and ESRRG themselves are indistinguishable: their models are 0.96-0.99 similar to one another.\n\n## Where it acts\n\nERR sites are found at both promoters and distal enhancers, with a strong bias towards nuclear-encoded mitochondrial genes: oxidative phosphorylation subunits, TCA cycle enzymes and fatty-acid beta-oxidation genes, where ERRalpha works with PGC-1alpha. The founding example was an ERRE in the promoter of the medium-chain acyl-CoA dehydrogenase gene (Sladek et al. 1997). Genome-wide mapping in heart showed ERRalpha and ERRgamma occupying an overlapping program of cardiac metabolic and contractile genes (Dufour et al. 2007). At such promoters ERR elements co-occur with NRF1, GABPA and YY1 sites. In mouse embryonic stem cells Esrrb sits at pluripotency enhancers with OCT4, SOX2 and NANOG, and is itself a direct Nanog target that can substitute for Nanog (Festuccia et al. 2012).\n\n## Biology and disease\n\nThe ERRs are best understood as regulators of oxidative capacity. Esrra-null mice are lean, resistant to diet-induced obesity and impaired in cold adaptation; ERRalpha and ERRgamma together are required for the perinatal switch of the heart to fatty-acid oxidation. Esrrb-null embryos die from placental failure with abnormal chorion development (Luo et al. 1997). In humans, recessive ESRRB mutations cause nonsyndromic hearing loss DFNB35 (Collin et al. 2008). ERRalpha expression is associated with poor outcome in breast cancer, where it supports the metabolic and biosynthetic demands of proliferation and interacts with ERBB2 signalling (Deblois and Giguere 2013). ERRgamma has been studied in prostate cancer and hepatic gluconeogenesis, and inverse agonists of ERRalpha are in preclinical development.\n\n## Reading a hit\n\nThe practical warning is length. TCAAGGTCA is a 9-mer with roughly eight informative positions, so an exact match occurs on the order of 10^4 times in the haploid human genome by chance alone, and near-matches many times more. A hit therefore carries very little weight on its own, and far less than a 13-15 bp dimeric element would. Measure the 5' extension explicitly: without the AA at positions -2 and -3 you have a bare half-site that anything in the superfamily could touch, and with an inverted second hexamer three bases downstream you have an ERE instead. A match cannot distinguish ESRRA, ESRRB and ESRRG, nor reliably distinguish ERRs from NR5A1/NR5A2, whose element is the same 9-mer. All three HOCOMOCO models here are grade A with combined ChIP, HT-SELEX and methyl-SELEX evidence (PSM), so direct binding to this sequence is well supported; the uncertainty is about which family member and which site is used, not about the sequence.",
+ "caveats": "The ERR element is a 9 bp extended half-site, which is short: expect on the order of 10^4 chance matches per haploid genome, so a hit alone is weak evidence. It does not distinguish ESRRA, ESRRB and ESRRG, whose models are 0.96-0.99 similar, and it does not distinguish ERRs from NR5A1/NR5A2, which use the same TCAAGGTCA element - the Vierstra archetype here is labelled ESRRA/NR5A. Cross-recognition with the estrogen receptor is real, not just a labelling artefact: ERRs activate through consensus EREs, and one CIS-BP model labelled ESRRA in this family is a full ERE flagged as belonging with ESR. Require the 5' AA extension before calling an ERR site.",
+ "refs": [
+  {
+   "cite": "Sladek R, Bader JA, Giguère V. The orphan nuclear receptor estrogen-related receptor alpha is a transcriptional regulator of the human medium-chain acyl coenzyme A dehydrogenase gene. Mol Cell Biol 1997;17:5400-9.",
+   "pmid": "9271417",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9271417/"
+  },
+  {
+   "cite": "Luo J, Sladek R, Bader JA, et al. Placental abnormalities in mouse embryos lacking the orphan nuclear receptor ERR-beta. Nature 1997;388:778-82.",
+   "pmid": "9285590",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9285590/"
+  },
+  {
+   "cite": "Vanacker JM, Pettersson K, Gustafsson JA, et al. Transcriptional targets shared by estrogen receptor- related receptors (ERRs) and estrogen receptor (ER) alpha, but not by ERbeta. EMBO J 1999;18:4270-9.",
+   "pmid": "10428965",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10428965/"
+  },
+  {
+   "cite": "Gearhart MD, Holmbeck SM, Evans RM, et al. Monomeric complex of human orphan estrogen related receptor-2 with DNA: a pseudo-dimer interface mediates extended half-site recognition. J Mol Biol 2003;327:819-32.",
+   "pmid": "12654265",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12654265/"
+  },
+  {
+   "cite": "Dufour CR, Wilson BJ, Huss JM, et al. Genome-wide orchestration of cardiac functions by the orphan nuclear receptors ERRalpha and gamma. Cell Metab 2007;5:345-56.",
+   "pmid": "17488637",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17488637/"
+  },
+  {
+   "cite": "Collin RW, Kalay E, Tariq M, et al. Mutations of ESRRB encoding estrogen-related receptor beta cause autosomal-recessive nonsyndromic hearing impairment DFNB35. Am J Hum Genet 2008;82:125-38.",
+   "pmid": "18179891",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18179891/"
+  },
+  {
+   "cite": "Giguère V. Transcriptional control of energy homeostasis by the estrogen-related receptors. Endocr Rev 2008;29:677-96.",
+   "pmid": "18664618",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18664618/"
+  },
+  {
+   "cite": "Festuccia N, Osorno R, Halbritter F, et al. Esrrb is a direct Nanog target gene that can substitute for Nanog function in pluripotent cells. Cell Stem Cell 2012;11:477-90.",
+   "pmid": "23040477",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23040477/"
+  },
+  {
+   "cite": "Deblois G, Giguère V. Oestrogen-related receptors in breast cancer: control of cellular metabolism and beyond. Nat Rev Cancer 2013;13:27-36.",
+   "pmid": "23192231",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23192231/"
+  }
+ ]
+}

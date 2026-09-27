@@ -1,0 +1,81 @@
+{
+ "key": "MYT1",
+ "aka": [
+  "MYT/NZF family site",
+  "AAAGTTT",
+  "neural zinc finger factor site",
+  "NZF-1",
+  "NZF-2",
+  "NZF-3",
+  "MyT1",
+  "MYT3",
+  "PLP1 promoter element",
+  "CCHHC zinc finger"
+ ],
+ "consensus": "AAAGTTT",
+ "short": "MYT1, MYT1L and ST18 are the three human members of the MYT/NZF family, which uses an unusual non-classical zinc finger (described as C2HC or CCHHC, not the C2H2 fold of most zinc-finger transcription factors) arranged in two widely separated clusters of fingers. Each cluster binds DNA independently and recognizes the same short AT-rich element, reported as AAAGTTT, and affinity rises sharply when two copies are present, so the functional element is effectively bipartite. The family matters most in neurons: MYT1L is one of the three factors that convert fibroblasts to induced neurons, where it works by repressing non-neuronal programs. MYT1L haploinsufficiency causes a human neurodevelopmental syndrome with obesity. The available motif models for this family are weak.",
+ "long": "## The factors\n\nMYT1 was cloned in 1992 by its binding to cis-regulatory elements of the myelin proteolipid protein\ngene and named myelin transcription factor I. Its zinc fingers do not belong to the classical C2H2\nclass: the original description assigned them a Cys-X5-Cys-X12-His-X4-Cys arrangement (C2HC), while\nlater structural work on the same domain in this family describes it as a non-classical CCHHC-type\nfinger, and both names appear in the literature. MYT1 has six such fingers arranged in two widely\nseparated clusters. Critically, each cluster binds DNA independently and recognizes the same\nsequence, which led to the proposal that one protein can bridge a proximal and a distal site in the\nsame promoter.\n\nHumans have three members: MYT1 (also MyT1, NZF-2, PLPB1), MYT1L (MYT2) and ST18 (MYT3). ST18 was\ncloned as the third member of the neural zinc finger factor family, NZF-3; unlike MyT1 and NZF-1,\nwhich activate transcription in reporter assays, NZF-3 represses. Expression across mouse nervous\nsystem development is broadly overlapping but not identical among the three. MYT1 and MYT1L are the\nneural members in practice; MYT1 and ST18 are additionally expressed in pancreatic islet beta cells.\nOnly MYT1 and MYT1L have motif models in the databases behind this family; ST18 is assigned here on\ndomain grounds.\n\n## The motif\n\nThe consensus reported for these proteins is AAAGTTT, and the key measurement is that a single copy\nbinds, but a bipartite element containing two copies of the consensus is bound with markedly higher\nrelative affinity. That is the expected behavior for a protein with two independent finger clusters\nof identical specificity, and it means the real recognition unit is a pair of short AT-rich cores\nrather than one longer site. Recognition chemistry has been examined for the NZF-1 finger domain,\nwhere hydrogen bonding contributes to base discrimination.\n\nThe motifs actually available are thin. HOCOMOCO's MYT1 model, the only one in this family with an A\ngrade, has the consensus AAACTTTTBNAAA and rests on HT-SELEX plus integrative evidence; its MYT1L\nmodel is ChIP-only at grade C with the consensus AAAGTT; and the CIS-BP human MYT1L motif is not\nmeasured on a human protein at all but inherited from a Caenorhabditis elegans relative at 79%\nDNA-binding-domain identity. The data consensus for the family, AAAGTT, therefore reflects six\nweakly informative positions, one of them from a nematode. A six- or seven-base AT-rich core carries\nroughly the same information as a TATA box, which sets a hard ceiling on what any MYT PWM can\nresolve.\n\n## Where it acts\n\nMYT1L occupancy, mapped during fibroblast-to-neuron reprogramming, is unusual in two ways: the\nbinding sites are largely the same in neurons and in fibroblasts, and they are preferentially in\nalready-open chromatin. In other words this factor is not selecting sites by cell-type-specific\naccessibility; its targets are distributed across the somatic lineage programs it represses. Sites\nare found at promoters and in accessible regulatory regions of genes belonging to non-neuronal\nlineages, including several components of Notch signaling such as Hes1. Because the core is short and\nAT-rich, matches are dense in AT-rich intergenic and intronic DNA and overlap in scoring space with\nother AT-preferring models, including homeodomain and forkhead sites and poly-A tracts.\n\n## Biology and disease\n\nMYT1L is one of the three transcription factors, with ASCL1 and POU3F2/BRN2, that convert mouse\nfibroblasts into functional induced neurons, and it is dispensable for the initial steps but\nimportant for the quality and stability of the resulting neurons. Its mechanism is repressive: MYT1L\ndirectly represses many different somatic lineage programs while sparing the neuronal program, and it\ndoes so by recruiting a SIN3B-containing complex through an N-terminal domain. That makes it a\ncounterexample to the assumption that developmental repressors are lineage-specific.\n\nIn humans, heterozygous MYT1L deletions and truncating variants (2p25.3) cause MYT1L syndrome:\nintellectual disability, autistic features and obesity. Mouse models reproduce the behavioral and\nmetabolic phenotype, including obesity, and human neuron models show maturation defects, some of\nwhich have been reversed pharmacologically in these systems. On the metabolic side, the Myt factors\nact together in beta cells, where their combined loss allows over-activation of stress-response genes\nand impairs postnatal beta-cell proliferation and function. ST18 has been studied mainly outside the\nnervous system, as a candidate tumor suppressor and in beta-cell function.\n\n## Reading a hit\n\nBe conservative. The motif is a short AT-rich core, so matches are common by chance and cannot be\ndistinguished from other AT-preferring factors on sequence alone; a single AAAGTTT is weak evidence\neven in an otherwise plausible context. A tandem pair of cores in one element is a better signal,\nbecause affinity for the bipartite arrangement is substantially higher. A hit does not identify the\nparalogue: MYT1, MYT1L and ST18 share one specificity and the databases cannot separate them, and\nST18 has no measured human matrix here at all. Two provenance problems are worth stating plainly:\nthe CIS-BP human MYT1L motif is a cross-species transfer from a C. elegans protein, and the HOCOMOCO\nMYT1L model is ChIP-only at the lowest quality grade. Given that MYT1L's binding sites are mostly in\npre-existing open chromatin and that its repressive function works through a recruited SIN3B complex,\na MYT1L ChIP peak without a motif is a normal observation rather than an anomaly, and a motif hit\nwithout accessibility is not worth much.",
+ "caveats": "The evidence base is weak for a whole family. The recognition unit is a six- to seven-base AT-rich core, which occurs constantly by chance and overlaps homeodomain, forkhead and poly-A signals; only a tandem pair of cores is a meaningfully specific element. MYT1, MYT1L and ST18 cannot be separated by sequence, and ST18 has no human matrix here. The CIS-BP human MYT1L motif is transferred from a Caenorhabditis elegans protein at 79% DNA-binding-domain identity, and the HOCOMOCO MYT1L model is ChIP-only at grade C; only the MYT1 model has in vitro support. Since MYT1L binds mostly in already-open chromatin and represses via a recruited SIN3B complex, peaks without motifs are expected.",
+ "refs": [
+  {
+   "cite": "Kim JG, Hudson LD. Novel member of the zinc finger superfamily: A C2-HC finger that recognizes a glia-specific gene. Mol Cell Biol 1992;12:5632-9.",
+   "pmid": "1280325",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1280325/"
+  },
+  {
+   "cite": "Yee KS, Yu VC. Isolation and characterization of a novel member of the neural zinc finger factor/myelin transcription factor family with transcriptional repression activity. J Biol Chem 1998;273:5366-74.",
+   "pmid": "9478997",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9478997/"
+  },
+  {
+   "cite": "Besold AN, Amick DL, Michel SL. A role for hydrogen bonding in DNA recognition by the non-classical CCHHC type zinc finger, NZF-1. Mol Biosyst 2014;10:1753-6.",
+   "pmid": "24820620",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24820620/"
+  },
+  {
+   "cite": "Armstrong RC, Kim JG, Hudson LD. Expression of myelin transcription factor I (MyTI), a \"zinc-finger\" DNA-binding protein, in developing oligodendrocytes. Glia 1995;14:303-21.",
+   "pmid": "8530187",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8530187/"
+  },
+  {
+   "cite": "Matsushita F, Kameyama T, Kadokawa Y, et al. Spatiotemporal expression pattern of Myt/NZF family zinc finger transcription factors during mouse nervous system development. Dev Dyn 2014;243:588-600.",
+   "pmid": "24214099",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24214099/"
+  },
+  {
+   "cite": "Vierbuchen T, Ostermeier A, Pang ZP, et al. Direct conversion of fibroblasts to functional neurons by defined factors. Nature 2010;463:1035-41.",
+   "pmid": "20107439",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20107439/"
+  },
+  {
+   "cite": "Wapinski OL, Vierbuchen T, Qu K, et al. Hierarchical mechanisms for direct reprogramming of fibroblasts to neurons. Cell 2013;155:621-35.",
+   "pmid": "24243019",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24243019/"
+  },
+  {
+   "cite": "Mall M, Kareta MS, Chanda S, et al. Myt1l safeguards neuronal identity by actively repressing many non-neuronal fates. Nature 2017;544:245-249.",
+   "pmid": "28379941",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28379941/"
+  },
+  {
+   "cite": "Wöhr M, Fong WM, Janas JA, et al. Myt1l haploinsufficiency leads to obesity and multifaceted behavioral alterations in mice. Mol Autism 2022;13:19.",
+   "pmid": "35538503",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35538503/"
+  },
+  {
+   "cite": "Chen J, Lambo ME, Ge X, et al. A MYT1L syndrome mouse model recapitulates patient phenotypes and reveals altered brain development due to disrupted neuronal maturation. Neuron 2021;109:3775-3792.e14.",
+   "pmid": "34614421",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34614421/"
+  },
+  {
+   "cite": "Weigel B, Tegethoff JF, Grieder SD, et al. MYT1L haploinsufficiency in human neurons and mice causes autism-associated phenotypes that can be reversed by genetic and pharmacologic intervention. Mol Psychiatry 2023;28:2122-2135.",
+   "pmid": "36782060",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36782060/"
+  },
+  {
+   "cite": "Hu R, Walker E, Huang C, et al. Myt Transcription Factors Prevent Stress-Response Gene Overactivation to Enable Postnatal Pancreatic β Cell Proliferation, Function, and Survival. Dev Cell 2020;53:390-405.e10.",
+   "pmid": "32359405",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32359405/"
+  }
+ ]
+}

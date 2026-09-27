@@ -1,0 +1,69 @@
+{
+ "key": "ZBED",
+ "aka": [
+  "BED-type zinc finger",
+  "BED finger",
+  "ZBED1 / hDREF",
+  "DREF / DRE site",
+  "hAT-transposase-derived zinc finger",
+  "ZBED2",
+  "ZBED4",
+  "ZBED5"
+ ],
+ "consensus": "TATCGCGACAT",
+ "short": "BED fingers are zinc-coordinating DNA-binding modules named for the two proteins in which they were first recognized, Drosophila BEAF and DREF, and they are shared with the hAT superfamily of DNA transposases. Vertebrate ZBED genes arose from at least two independent domestication events of hAT elements, so this is a second family of transposase recognition modules turned into host transcription factors. Nine motifs cover four proteins. Only ZBED1, the human DREF orthologue hDREF, has a strong and reproducible site: all four of its models converge on TATCGCGACAT, a relative of the Drosophila DNA replication-related element TATCGATA. ZBED2, ZBED4 and ZBED5 contribute short, weaker and partly conflicting models.",
+ "long": "## The factors\n\nThe BED finger was described in 2000 as a small zinc-binding DNA-binding domain found in two otherwise unrelated groups of proteins: chromatin boundary-element-binding proteins, of which the Drosophila factors BEAF and DREF gave the domain its name, and hAT-superfamily transposases. Vertebrate ZBED genes are the domesticated descendants of the transposase side of that split. A phylogenetic survey showed they derive from at least two independent domestication events in jawed vertebrate ancestors and form two monophyletic clades: one containing ZBED2, ZBED3, ZBED4, ZBEDX and ZBED6, the other containing ZBED1, with ZBED5 separate again and related to Buster DNA transposons. The family is an unusually clear demonstration that one class of transposon-derived protein module can be recruited repeatedly and independently into quite different host regulatory pathways.\n\nFour proteins carry motifs here. ZBED1 is hDREF, the human orthologue of Drosophila DREF, a 694-residue protein that shares only about 22 percent identity with the fly factor; it self-associates through its hATC domain, and that self-association is required both for nuclear accumulation and for DNA binding. ZBED2 is expressed in keratinocytes and aberrantly in pancreatic ductal adenocarcinoma. ZBED4 is a cone photoreceptor and Muller cell protein of the human retina. ZBED5 is the Buster1-derived member. ZBED6, the best-known domesticated ZBED of all - it is encoded inside an intron of ZC3H11A and represses IGF2 - contributes no motif to this family and is not filed here.\n\n## The motif\n\nZBED1 dominates the family. Its CIS-BP, JASPAR, HOCOMOCO and Vierstra models all read essentially the same eleven to twelve base pairs, TATCGCGACAT, with pairwise similarities of 0.98 to 1.00 and 17 to 19 bits of information - by some distance the best-supported site in this entry, and the source of the family consensus. Its relationship to the fly element is informative but not exact: Drosophila DREF binds as a homodimer to the palindromic DNA replication-related element TATCGATA, while the human in vitro models centre on a TATCG core followed by CGACAT. In human cells, hDRE-like sequences were found within 200 base pairs upstream of the transcription start site in 22 of 79 ribosomal protein genes, and hDREF binds them both in vitro and in chromatin.\n\nThe remaining models are short and much weaker. ZBED2 gives CGAAACC in JASPAR and CGAAaCt in HOCOMOCO, which agree with each other (similarity 0.92) but carry only about 10 bits. ZBED5 gives the six-base GGwACC. ZBED4 is the problem case: HOCOMOCO reports acCaGAACCAg while JASPAR reports CCCGCcCCGC, and the two are unrelated. Independent in vitro selection with recombinant Zbed4 recovered poly-G tracts and GC-box core signatures, which supports the JASPAR model and not the HOCOMOCO one. Overall family cohesion is 0.57, and that number is misleading: it reflects four nearly identical ZBED1 models plus three unrelated short models rather than a graded family.\n\n## Where it acts\n\nZBED1/hDREF sites sit in promoters of proliferation-associated genes, prominently ribosomal protein genes, where they act as positive elements; hDREF expression and ribosomal protein gene expression both rise from late G1 into S phase, and knocking hDREF down reduces both ribosomal protein transcript levels and proliferation in normal human fibroblasts. ZBED2 acts at promoters co-occupied with IRF1, where it behaves as a sequence-specific repressor of interferon-stimulated genes by antagonising IRF1-mediated activation. ZBED4's sites, on the present evidence, are G-rich and GC-box-like and therefore fall in the same promoter-proximal compartment as the SP/KLF factors.\n\n## Biology and disease\n\nhDREF is required for normal proliferation, and its self-association mutants fail to enter the nucleus. ZBED2 is preferentially expressed in the squamous molecular subtype of pancreatic ductal adenocarcinoma and is associated with inferior survival; it represses the pancreatic progenitor programme, enhances motility and promotes invasion, and blunts the growth arrest that follows interferon signalling. ZBED4 is expressed in cones and Muller glia of human retina but only in Muller cells in mouse, a species difference worth remembering before transferring mouse data. ZBED6, outside this family, regulates IGF2 and muscle growth and explains a major porcine growth quantitative trait locus - the textbook example of a domesticated transposon becoming a physiologically important repressor.\n\n## Reading a hit\n\nTrust the ZBED1 model and treat the rest with caution. TATCGCGACAT is eleven informative base pairs and will be genuinely rare, so a good match in a promoter, particularly a ribosomal protein or other growth gene promoter, is a reasonable ZBED1/hDREF call. The short ZBED2, ZBED4 and ZBED5 models are six to ten base pairs and will match constantly; they need expression and occupancy evidence before they mean anything. For ZBED4, prefer the GC-rich JASPAR model over the HOCOMOCO one, and note that a GC-box-like match cannot be attributed to ZBED4 rather than to any SP/KLF factor. Finally, a BED-finger hit does not distinguish the domesticated factor from an active hAT transposase carrying the same recognition module.",
+ "caveats": "Only ZBED1 has a reproducible, information-rich site; the other three members contribute short models of six to ten base pairs that will match frequently by chance. ZBED4 is internally inconsistent: the HOCOMOCO model (acCaGAACCAg) and the JASPAR model (CCCGCcCCGC) are unrelated, and published in vitro selection favours the GC-rich JASPAR version, so the HOCOMOCO ZBED4 model should be treated as unsupported here. The family cohesion figure of 0.57 is an artefact of four near-duplicate ZBED1 models sitting beside three unrelated ones. ZBED6, the best-studied domesticated ZBED, contributes no motif and cannot be scanned for. Nothing in a BED-finger match separates a domesticated ZBED from an active hAT transposase.",
+ "refs": [
+  {
+   "cite": "Aravind L. The BED finger, a novel DNA-binding domain in chromatin-boundary-element-binding proteins and transposases. Trends Biochem Sci 2000;25:421-3.",
+   "pmid": "10973053",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10973053/"
+  },
+  {
+   "cite": "Hayward A, Ghazal A, Andersson G, et al. ZBED evolution: repeated utilization of DNA transposons as regulators of diverse host functions. PLoS One 2013;8:e59940.",
+   "pmid": "23533661",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23533661/"
+  },
+  {
+   "cite": "Markljung E, Jiang L, Jaffe JD, et al. ZBED6, a novel transcription factor derived from a domesticated DNA transposon regulates IGF2 expression and muscle growth. PLoS Biol 2009;7:e1000256.",
+   "pmid": "20016685",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20016685/"
+  },
+  {
+   "cite": "Matsukage A, Hirose F, Yoo MA, et al. The DRE/DREF transcriptional regulatory system: a master key for cell proliferation. Biochim Biophys Acta 2008;1779:81-9.",
+   "pmid": "18155677",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18155677/"
+  },
+  {
+   "cite": "Yamashita D, Sano Y, Adachi Y, et al. hDREF regulates cell proliferation and expression of ribosomal protein genes. Mol Cell Biol 2007;27:2003-13.",
+   "pmid": "17220279",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17220279/"
+  },
+  {
+   "cite": "Yamashita D, Komori H, Higuchi Y, et al. Human DNA replication-related element binding factor (hDREF) self-association via hATC domain is necessary for its nuclear accumulation and DNA binding. J Biol Chem 2007;282:7563-75.",
+   "pmid": "17209048",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17209048/"
+  },
+  {
+   "cite": "Somerville TDD, Xu Y, Wu XS, et al. ZBED2 is an antagonist of interferon regulatory factor 1 and modifies cell identity in pancreatic cancer. Proc Natl Acad Sci U S A 2020;117:11471-11482.",
+   "pmid": "32385160",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32385160/"
+  },
+  {
+   "cite": "Mokhonov VV, Theendakara VP, Gribanova YE, et al. Sequence-specific binding of recombinant Zbed4 to DNA: insights into Zbed4 participation in gene transcription and its association with other proteins. PLoS One 2012;7:e35317.",
+   "pmid": "22693546",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22693546/"
+  },
+  {
+   "cite": "Saghizadeh M, Akhmedov NB, Yamashita CK, et al. ZBED4, a BED-type zinc-finger protein in the cones of the human retina. Invest Ophthalmol Vis Sci 2009;50:3580-8.",
+   "pmid": "19369242",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19369242/"
+  },
+  {
+   "cite": "Sinzelle L, Izsvák Z, Ivics Z. Molecular domestication of transposable elements: from detrimental parasites to useful host genes. Cell Mol Life Sci 2009;66:1073-93.",
+   "pmid": "19132291",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19132291/"
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "key": "HD_ONECUT",
+ "aka": [
+  "ONECUT",
+  "HNF6",
+  "HNF-6alpha",
+  "OC-1 / OC-2 / OC-3",
+  "HNF6 site",
+  "TATTGATT",
+  "ATCGAT",
+  "single-CUT homeodomain class",
+  "ONECUT1/2/3"
+ ],
+ "consensus": "TATTGATTT",
+ "short": "ONECUT1 (HNF6), ONECUT2 and ONECUT3 bind DNA with a single CUT domain joined to a divergent homeodomain, and the two modules together read TATTGATT, often followed by a run of T. The same proteins also bind ATCGAT, the core preferred by the CUX proteins, and both forms appear across JASPAR, HOCOMOCO and CIS-BP. This is the most internally consistent family in the CUT class: cohesion is 0.92 and the three paralogues cannot be told apart from sequence. ONECUT1 is a liver, pancreas and biliary factor whose loss disrupts bile duct and endocrine pancreas development and causes human diabetes; ONECUT2 has become a target of interest in treatment-resistant and neuroendocrine prostate cancer.",
+ "long": "## The factors\n\nThree human genes: ONECUT1 (HNF6, HNF-6alpha), ONECUT2 (OC-2) and ONECUT3 (OC-3). ONECUT1 was identified as a liver-enriched factor with an architecture no other homeodomain protein had at the time - a single CUT domain rather than the three CUT repeats of CUX1, followed by a homeodomain of a novel type. The ONECUT homeodomain differs from the canonical fold at positions that normally contact DNA, and it depends on the CUT domain for high-affinity binding, so the functional unit is bipartite. ONECUT1 is expressed in hepatocytes, biliary epithelium, pancreas and parts of the nervous system; ONECUT2 overlaps in liver and pancreas and is also expressed in retina and prostate; ONECUT3 is the least studied and is largely neural. The three are partly redundant, most clearly in retina, where Onecut1 and Onecut2 together, but neither alone, are required for early retinal cell fates.\n\n## The motif\n\nThe crystal structure of the bipartite DNA-binding domain of ONECUT1 bound to the HNF6 site of the transthyretin promoter shows the CUT domain and the homeodomain engaging adjacent stretches of the duplex, and the comparison with the DNA-free protein and with the OCT1 POU domain explains how the same protein can bind DNA in two distinct modes that use different coactivators. That structural duality shows up directly in the motif data. One set of models reads TATTGATT with a 3' T-rich extension - HOCOMOCO HNF6.H14CORE.0.PM.A gives TATTGATT, ONEC3.H14CORE.0.S.B gives TATtGATTT, and the JASPAR ONECUT1 and ONECUT3 models are the reverse complements AAATCAATA and AAAAATCAATAa. A second set reads ATCGAT, sometimes doubled: HNF6.H14CORE.2.S.B gives tATCGATcGAT, ONEC2.H14CORE.2.S.B gives TATCGATCG, and the JASPAR ONECUT2 model is GATCGATA. A ChIP-derived ONECUT2 model even resolves into six tandem ATTGAT repeats at 28 bits, which reflects clustered sites rather than a single long element. The pooled consensus is TATTGATT with cohesion 0.92, the highest in the CUT class. No position distinguishes ONECUT1, ONECUT2 and ONECUT3.\n\n## Where it acts\n\nONECUT1 sites sit in liver and pancreas promoters and enhancers. Genome-scale location analysis of human liver and pancreatic islets put ONECUT1/HNF6 alongside HNF1A and HNF4A on a largely overlapping set of promoters, with the three factors binding each other's genes, so an ONECUT hit in a hepatic or islet regulatory region very often sits within a few hundred base pairs of HNF1 and HNF4 sites. In the developing pancreas, ONECUT1 acts upstream of NEUROG3. Because the informative core is about 8 bp and AT-rich, exact TATTGATT matches are expected on the order of 10^5 times in 3.1 Gb; the ATCGAT form is rarer, since CpG is depleted several-fold in the genome outside CpG islands. Tandem arrangements of ATTGAT, as in the archetype and ChIP-derived models, are a more distinctive signal than a single copy.\n\n## Biology and disease\n\nHnf6-null mice fail to form a normal biliary tract, with gallbladder agenesis and abnormal intrahepatic bile ducts, and show disrupted pancreatic endocrine differentiation through loss of Ngn3 expression. In humans, biallelic and heterozygous ONECUT1 variants cause diabetes, ranging from neonatal diabetes with pancreatic hypoplasia to a MODY-like presentation, placing ONECUT1 in the same clinical territory as HNF1A, HNF1B and PDX1. ONECUT2 has emerged as a driver in prostate cancer: it suppresses the androgen receptor program and promotes neuroendocrine differentiation, and it is the target of active inhibitor development in castration-resistant and neuroendocrine disease. In retina, combined loss of Onecut1 and Onecut2 depletes horizontal cells and alters retinal ganglion cell production.\n\n## Reading a hit\n\nA TATTGATT match, and especially a tandem ATTGATTGAT arrangement, is good evidence for a ONECUT factor, but it cannot say which of the three; the in vitro models are interchangeable. An ATCGAT-only match is genuinely ambiguous between ONECUT and CUX, and one Vierstra archetype is labelled CUX/ONECUT for exactly that reason - resolve it with expression data, not with the motif. Evidence quality here is good: the HOCOMOCO A-grade models HNF6.H14CORE.0.PM.A and ONEC2.H14CORE.1.PM.A carry methyl-HT-SELEX (M) support, so the sequence claim does not rest on ChIP alone. Be cautious with the 28-bit tandem-repeat model, which will only match clustered sites and will miss ordinary single occurrences.",
+ "caveats": "The three ONECUT paralogues share one motif, so a hit identifies the family only; use tissue expression to guess which one. ONECUT and CUX both prefer ATCGAT, and one Vierstra archetype is labelled CUX/ONECUT, so an ATCGAT-only match cannot be assigned between the two families. The TATTGATT core is short and AT-rich, giving roughly 10^5 expected chance matches genome-wide, so a single hit without footprint or expression support is weak. One ChIP-derived ONECUT2 model is a six-fold tandem repeat and behaves very differently from the single-site models - check which model produced your hit before interpreting its score.",
+ "refs": [
+  {
+   "cite": "Lemaigre FP, Durviaux SM, Truong O, et al. Hepatocyte nuclear factor 6, a transcription factor that contains a novel type of homeodomain and a single cut domain. Proc Natl Acad Sci U S A 1996;93:9460-4.",
+   "pmid": "8790352",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8790352/"
+  },
+  {
+   "cite": "Iyaguchi D, Yao M, Watanabe N, et al. DNA recognition mechanism of the ONECUT homeodomain of transcription factor HNF-6. Structure 2007;15:75-83.",
+   "pmid": "17223534",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17223534/"
+  },
+  {
+   "cite": "Andrés V, Chiara MD, Mahdavi V. A new bipartite DNA-binding domain: cooperative interaction between the cut repeat and homeo domain of the cut homeo proteins. Genes Dev 1994;8:245-57.",
+   "pmid": "7905452",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7905452/"
+  },
+  {
+   "cite": "Jacquemin P, Durviaux SM, Jensen J, et al. Transcription factor hepatocyte nuclear factor 6 regulates pancreatic endocrine cell differentiation and controls expression of the proendocrine gene ngn3. Mol Cell Biol 2000;20:4445-54.",
+   "pmid": "10825208",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10825208/"
+  },
+  {
+   "cite": "Clotman F, Lannoy VJ, Reber M, et al. The onecut transcription factor HNF6 is required for normal development of the biliary tract. Development 2002;129:1819-28.",
+   "pmid": "11934848",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11934848/"
+  },
+  {
+   "cite": "Odom DT, Zizlsperger N, Gordon DB, et al. Control of pancreas and liver gene expression by HNF transcription factors. Science 2004;303:1378-81.",
+   "pmid": "14988562",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/14988562/"
+  },
+  {
+   "cite": "Sapkota D, Chintala H, Wu F, et al. Onecut1 and Onecut2 redundantly regulate early retinal cell fates during development. Proc Natl Acad Sci U S A 2014;111:E4086-95.",
+   "pmid": "25228773",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25228773/"
+  },
+  {
+   "cite": "Philippi A, Heller S, Costa IG, et al. Mutations and variants of ONECUT1 in diabetes. Nat Med 2021;27:1928-1940.",
+   "pmid": "34663987",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34663987/"
+  },
+  {
+   "cite": "Rotinen M, You S, Yang J, et al. ONECUT2 is a targetable master regulator of lethal prostate cancer that suppresses the androgen axis. Nat Med 2018;24:1887-1898.",
+   "pmid": "30478421",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30478421/"
+  },
+  {
+   "cite": "Guo H, Ci X, Ahmed M, et al. ONECUT2 is a driver of neuroendocrine prostate cancer. Nat Commun 2019;10:278.",
+   "pmid": "30655535",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30655535/"
+  },
+  {
+   "cite": "Nepveu A. Role of the multifunctional CDP/Cut/Cux homeodomain transcription factor in regulating differentiation, cell growth and development. Gene 2001;270:1-15.",
+   "pmid": "11403998",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11403998/"
+  },
+  {
+   "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
+   "pmid": "32728250",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  }
+ ]
+}

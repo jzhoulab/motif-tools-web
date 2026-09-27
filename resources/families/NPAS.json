@@ -1,0 +1,76 @@
+{
+ "key": "NPAS",
+ "aka": [
+  "NPAS4 / NXF",
+  "NPAS3 / MOP6",
+  "NPAS1 / MOP5",
+  "Neuronal PAS factors",
+  "E-box variant (CGTG core)",
+  "bHLH-PAS factors"
+ ],
+ "short": "NPAS3 and NPAS4 are neuronal bHLH-PAS transcription factors, relatives of CLOCK, HIF and AHR that heterodimerize with the same shared beta subunits ARNT and ARNT2 and read E-box-like sites built around a CGTG core. NPAS4 is an immediate-early gene induced by neuronal activity rather than by growth factors, and it controls the number of inhibitory synapses formed on excitatory neurons. NPAS3 is a broader brain factor whose disruption segregates with schizophrenia in one family. This is the thinnest family in the group: only three motif models exist, all derived from chromatin immunoprecipitation, and the NPAS4 and NPAS3 models do not actually resemble each other. A match here is best treated as a generic E-box variant unless neuronal, activity-dependent evidence supports more.",
+ "long": "## The factors\n\nNPAS1 (MOP5) and NPAS3 (MOP6) were cloned together as bHLH-PAS proteins with expression largely restricted to the central nervous system (Zhou et al. 1997). NPAS4, also called NXF, was identified separately as a neuron-specific bHLH-PAS factor that competes with SIM2 at the drebrin promoter (Ooe et al. 2004). All share the class domain layout, a basic helix-loop-helix domain followed by PAS-A and PAS-B, and none binds DNA usefully alone. Co-immunoprecipitation from mouse brain recovers ARNT2 as the major NPAS4 partner with ARNT1 as a minor band; both heterodimers are active in reporter assays, and ARNT1 mRNA is found in some NPAS4-expressing regions lacking ARNT2 (Ooe et al. 2009). ARNT is therefore the shared beta subunit here exactly as it is for HIF and AHR. NPAS4 is an immediate-early gene, unusual in being induced by calcium influx and neuronal activity rather than by growth factors, and its expression is confined to neurons. NPAS3 is more broadly distributed in brain. NPAS1 has no motif model in JASPAR, HOCOMOCO, CIS-BP or the Vierstra archetypes, so it does not appear in this family's data even though it belongs to the group by domain. The family holds only three motifs, one from JASPAR and two from HOCOMOCO.\n\n## The motif\n\nThere is no single well-established consensus, and the two members do not share one, so this entry gives no family consensus string. For NPAS4 both available models center on a short CGTG core with a 5' T and a 3' A: HOCOMOCO NPAS4.H14CORE.0.P.B is TCGTGa and JASPAR Npas4 (MA1995.2) is TCGTGAC. That is an E-box-like half-site pair but not a canonical E-box: the position carrying C in CACGTG, or T in the HRE TACGTG, is absent from the core. Read through the pairing rules established for this class, in which the ARNT-type subunit contributes the 3' GTG half-site and the partner supplies the 5' half (Swanson et al. 1995), the NPAS4 model is best understood as ARNT's GTG plus a non-canonical NPAS4 half-site. NPAS3 is different. Its single model, NPAS3.H14CORE.0.P.C, is gkACGTGc, an ordinary ACGTG site, and its nearest neighbor across all four databases lies outside this family: similarity 0.97 to a motif in another family versus 0.81 to the other NPAS models. The pooled consensus for the family, TCGTGa, is essentially the NPAS4 model alone. Recent systematic profiling of prototypical bHLH-PAS proteins including NPAS4 reports footprints of 12-15 bp in which preferences for bases flanking the core, together with DNA shape, carry the discriminating information rather than the core itself (Bersten et al. 2026). The practical consequence is that a 6-7 bp core model for these factors cannot be specific.\n\n## Where it acts\n\nNPAS4 works at activity-regulated promoters and enhancers in neurons, where its induction follows depolarization within minutes and its targets include genes that set the number and distribution of inhibitory synapses on excitatory cells (Lin et al. 2008). In hippocampal CA3 it drives a transcriptional program required for contextual memory formation (Ramamoorthi et al. 2011). Two features limit where these sites matter: expression is restricted to neurons and occupancy requires activity, so in resting neurons and all non-neural tissue nearly all matches are unoccupied. The genome-wide picture is less settled than for the other bHLH-PAS families, and a prominent genome-wide study of NPAS4 heterodimers was retracted in 2024 (Cell 2024), so published site counts and partner-specific cistromes for this family should be treated as provisional. Both HOCOMOCO models here derive from ChIP-seq rather than from in vitro selection.\n\n## Biology and disease\n\nLoss of Npas4 in mice reduces the number of inhibitory synapses formed on excitatory neurons and removes an activity-dependent brake on excitation (Lin et al. 2008); conditional deletion in CA3 impairs contextual fear memory (Ramamoorthi et al. 2011). The factor has since been linked to seizure susceptibility, social behavior and cognitive flexibility (Sun and Lin 2016). For NPAS3, a balanced translocation that disrupts the gene segregates with schizophrenia in an affected family (Kamnasaran et al. 2003), and Npas3-null mice show abnormal neurodevelopment, altered neurotrophin and reelin signaling, and behavioral abnormalities (Brunskill et al. 2005). Neither gene is an established cancer driver.\n\n## Reading a hit\n\nThis family has the weakest evidence base of the bHLH-PAS groups in the atlas. All three models are ChIP-derived (HOCOMOCO evidence letter P, grades B and C), so they support \"this region was occupied in cells\" rather than \"this protein binds this sequence\"; there is no HT-SELEX or methyl-HT-SELEX model for either factor. Because the NPAS4 and NPAS3 models do not resemble each other, a hit should be reported against the specific model, not the family: a match to the NPAS3 model is in practice a match to a generic ACGTG E-box and is closer to the HIF/ARNT class than to NPAS4. The NPAS4 core is five informative base pairs and occurs by chance very often. Cell type and stimulus are more informative than the score: a site is only plausible in neurons and after activity. A hit cannot separate NPAS4 from NPAS3, nor either from HIF, AHR, SIM or ARNT homodimer complexes reading overlapping cores, and it says nothing about which beta subunit, ARNT1 or ARNT2, was present.",
+ "caveats": "Trust this family less than the other bHLH-PAS groups. Only three models exist, all from ChIP-seq at grade B or C, so none is in vitro evidence of direct binding, and indirect or tethered binding cannot be excluded. The two members do not share a motif: the NPAS3 model is a generic ACGTG E-box whose nearest neighbors sit in another family, while the NPAS4 model is a short TCGTG core. Report the model, not the family. NPAS1 has no model at all. A prominent genome-wide study of NPAS4 heterodimers was retracted in 2024, so cistrome-level claims for NPAS4 are provisional. Neuronal identity and recent activity are stronger evidence than any match score.",
+ "refs": [
+  {
+   "cite": "Swanson HI, Chan WK, Bradfield CA. DNA binding specificities and pairing rules of the Ah receptor, ARNT, and SIM proteins. J Biol Chem 1995;270:26292-302.",
+   "pmid": "7592839",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7592839/"
+  },
+  {
+   "cite": "Zhou YD, Barnard M, Tian H, et al. Molecular characterization of two mammalian bHLH-PAS domain proteins selectively expressed in the central nervous system. Proc Natl Acad Sci U S A 1997;94:713-8.",
+   "pmid": "9012850",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9012850/"
+  },
+  {
+   "cite": "Kamnasaran D, Muir WJ, Ferguson-Smith MA, et al. Disruption of the neuronal PAS3 gene in a family affected with schizophrenia. J Med Genet 2003;40:325-32.",
+   "pmid": "12746393",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12746393/"
+  },
+  {
+   "cite": "Ooe N, Saito K, Mikami N, et al. Identification of a novel basic helix-loop-helix-PAS factor, NXF, reveals a Sim2 competitive, positive regulatory role in dendritic-cytoskeleton modulator drebrin gene expression. Mol Cell Biol 2004;24:608-16.",
+   "pmid": "14701734",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/14701734/"
+  },
+  {
+   "cite": "Brunskill EW, Ehrman LA, Williams MT, et al. Abnormal neurodevelopment, neurosignaling and behaviour in Npas3-deficient mice. Eur J Neurosci 2005;22:1265-76.",
+   "pmid": "16190882",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16190882/"
+  },
+  {
+   "cite": "Lin Y, Bloodgood BL, Hauser JL, et al. Activity-dependent regulation of inhibitory synapse development by Npas4. Nature 2008;455:1198-204.",
+   "pmid": "18815592",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18815592/"
+  },
+  {
+   "cite": "Ooe N, Saito K, Kaneko H. Characterization of functional heterodimer partners in brain for a bHLH-PAS factor NXF. Biochim Biophys Acta 2009;1789:192-7.",
+   "pmid": "19284974",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19284974/"
+  },
+  {
+   "cite": "Ramamoorthi K, Fropf R, Belfort GM, et al. Npas4 regulates a transcriptional program in CA3 required for contextual memory formation. Science 2011;334:1669-75.",
+   "pmid": "22194569",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22194569/"
+  },
+  {
+   "cite": "Sun X, Lin Y. Npas4: Linking Neuronal Activity to Memory. Trends Neurosci 2016;39:264-275.",
+   "pmid": "26987258",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26987258/"
+  },
+  {
+   "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
+   "pmid": "37971293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  },
+  {
+   "cite": "Retraction notice to: Genomic decoding of neuronal depolarization by stimulus-specific NPAS4 heterodimers. Cell 2024;187:3785.",
+   "pmid": "38870944",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38870944/"
+  },
+  {
+   "cite": "Bersten DC, McDougal DP, Sullivan AE, et al. Multimodal bHLH-PAS DNA binding controls specificity and drives obesity. Nucleic Acids Res 2026;54.",
+   "pmid": "41495897",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41495897/"
+  }
+ ]
+}

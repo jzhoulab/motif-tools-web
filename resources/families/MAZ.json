@@ -1,0 +1,76 @@
+{
+ "key": "MAZ",
+ "aka": [
+  "MAZ site",
+  "ME1a1",
+  "Myc-associated zinc finger protein",
+  "Pur-1",
+  "ZF87",
+  "PATZ1",
+  "MAZR",
+  "ZNF278",
+  "ZSG",
+  "TFClass: more than 3 adjacent zinc finger factors"
+ ],
+ "consensus": "GGGAGGG",
+ "short": "MAZ, the Myc-associated zinc finger protein, and PATZ1 are broadly expressed C2H2 zinc-finger proteins that bind short G-rich runs, written GGGAGGG or GGGGAGGGG and read as CCCTCCCC on the opposite strand. MAZ was cloned as the protein binding ME1a1, an element between the c-MYC P1 and P2 promoters. Interest in the motif increased when MAZ turned out to be a second insulator-type element: it colocalizes with CTCF at chromatin boundaries, contacts the cohesin subunit RAD21, and deleting MAZ motifs at the Hox clusters disrupts boundaries much as deleting CTCF motifs does. The single-base difference from the SP1 GC-box, an A where the GC-box has a C, is the only sequence discriminator, and it is thin.",
+ "long": "## The factors\n\nMAZ is a 477-residue protein with six Cys2-His2 zinc fingers, an N-terminal proline-rich region and several polyalanine tracts. It was cloned by screening with a concatemerized copy of ME1a1, a 16-bp element lying between the c-MYC P1 and P2 transcription start sites that is required for P2 activity, and was implicated in both transcriptional initiation and termination at c-MYC (Bossone et al. 1992). Older aliases include Pur-1 and ZF87. PATZ1 is grouped here because its motif is not separable from MAZ's. PATZ1 (also MAZR, ZNF278, ZSG) is a POK-family protein: a BTB/POZ domain, an AT-hook and a C-terminal zinc-finger array. The BTB domain forms a homodimer whose crystal structure has been determined, and PATZ1 is ubiquitously expressed with a documented role in T-lymphocyte development, where it targets the CD8 gene, and in interactions with p53 (Piepoli et al. 2020). Both proteins are broadly expressed, unlike most of the restricted factors elsewhere in this atlas.\n\n## The motif\n\nThe site is short: GGGAGGG, often extended to GGGGAGGGG, and CCCTCCCC on the complementary strand. The data here agree - the medoid (CIS-BP M08290_2.00) is CCCCTCCCC and JASPAR MAZ (MA1522.2) is CCCCTCCC. Why so short for a six-finger protein? Mutational analysis showed that only two consecutive zinc fingers are essential for MAZ to engage its element, just as only two of Sp1's three are essential for the GC-box (Song et al. 2001); the additional fingers are not all contributing base contacts, so the footprint is 7-9 bp rather than 18. The same study states the two respective sites explicitly: GGGCGG for Sp1, GGGAGGG for MAZ. That single-base difference - A where the GC-box has C - is the practical discriminator between this family and KLF/SP, and it is a thin one. Against the other G-rich families it is thinner still. The HOCOMOCO VEZF1 model VEZF1.H14CORE.0.P.C (GGGGGAGGGGG) has its nearest neighbor across all four databases inside this family, so VEZF1's motif is effectively MAZ's. ZNF281 and ZNF148 models (GGGGGAGGGG) differ only by context, and the ChIP-derived WT1 models fall in the same cluster. Within the family, the labels are not clean either: JASPAR's PATZ1 profile (MA1961.2) is GGGGGCGGGGG, which is a GC-box and will behave like an SP1 matrix, not like a MAZ matrix. None of the four HOCOMOCO models for MAZ or PATZ1 carries in vitro evidence; all are ChIP-only at grade B or C, and for two of them the best-matching matrix elsewhere in the databases scores higher than the best match inside the family.\n\n## Where it acts\n\nMAZ and PATZ1 sites are promoter-proximal and concentrated in GC-rich, CpG-island promoters, starting with c-MYC itself. The more interesting location is chromatin boundaries. A genome-wide CRISPR knockout screen for genes required for CTCF boundary activity at the HoxA cluster identified MAZ; MAZ colocalizes with CTCF at chromatin borders, interacts with the cohesin subunit RAD21, and deletion of MAZ motifs disrupts gene expression and intra-domain contacts in a way that resembles deletion of CTCF motifs (Ortabozkoyun et al. 2022). A follow-up study extended this to a small array of zinc-finger proteins that specify distinct Hox boundaries: PATZ1 was required for the thoracolumbar boundary in differentiating motor neurons and in the mouse skeleton, and ZNF263 for cervicothoracic boundaries, each acting with cohesin, with or without CTCF (Ortabozkoyun et al. 2024). So a G-rich site next to a CTCF site is not necessarily noise.\n\n## Biology and disease\n\nMAZ's documented functions center on c-MYC promoter regulation and on insulation: MAZ knockout disrupts local contacts within topologically associating domains and the expression of genes inside them (Ortabozkoyun et al. 2022). PATZ1 has a wider documented range, reviewed for its physiological functions and disease involvement (Fedele et al. 2017): repression of CD8 in lymphocyte development, interaction with p53, and suppression of differentiation with effects on metabolism in human embryonic stem cells (Huang et al. 2024). The clearest disease link in the family is through PATZ1 gene fusions. EWSR1::PATZ1 defines a rare round-cell sarcoma that was newly categorized in the 2020 World Health Organization classification of soft tissue and bone tumors (Yagi et al. 2024), and MN1::PATZ1 fusions occur in a rare class of CNS neuroepithelial tumors. Note that in a fusion the PATZ1 contribution is usually the zinc-finger array, so the motif is still relevant even when the protein is chimeric.\n\n## Reading a hit\n\nThree cautions. First, the site is short and G-rich, so GGGAGGG occurs constantly by chance, and especially inside CpG islands and G-rich repeats; an isolated match is weak evidence of anything. Second, the family cannot be separated from its neighbors by sequence. A hit here is also a plausible ZNF281, ZNF148, VEZF1 or ChIP-derived WT1 site, and is one base away from an SP1/KLF GC-box. If the question is which protein binds, sequence will not answer it. Third, check which matrix matched: all HOCOMOCO models in this family rest on ChIP-seq alone, and the JASPAR PATZ1 matrix is a GC-box that will pull in SP-family sites. What does make a hit worth following up is context. A G-rich motif immediately adjacent to a CTCF site at a developmental cluster is the configuration in which MAZ and PATZ1 have demonstrable boundary function, and there the motif deletion experiments give the label real support.",
+ "caveats": "A seven-base G-rich site carries little information and occurs frequently by chance, so treat an isolated hit as weak. The family is also not separable from ZNF281/ZNF148, VEZF1 or the ChIP-derived WT1 models - the HOCOMOCO VEZF1 matrix's nearest neighbor across all four databases lies inside this family - and it differs from the SP1 GC-box by a single base. All four HOCOMOCO models here are ChIP-only at grade B or C, and JASPAR's PATZ1 profile is in fact a GC-box. Context helps more than score: a G-rich motif beside a CTCF site at a Hox-type boundary is where MAZ and PATZ1 have demonstrated function.",
+ "refs": [
+  {
+   "cite": "Bossone SA, Asselin C, Patel AJ, et al. MAZ, a zinc finger protein, binds to c-MYC and C2 gene sequences regulating transcriptional initiation and termination. Proc Natl Acad Sci U S A 1992;89:7452-6.",
+   "pmid": "1502157",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1502157/"
+  },
+  {
+   "cite": "Merchant JL, Iyer GR, Taylor BR, et al. ZBP-89, a Krüppel-like zinc finger protein, inhibits epidermal growth factor induction of the gastrin promoter. Mol Cell Biol 1996;16:6644-53.",
+   "pmid": "8943318",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8943318/"
+  },
+  {
+   "cite": "Song J, Ugai H, Ogawa K, et al. Two consecutive zinc fingers in Sp1 and in MAZ are essential for interactions with cis-elements. J Biol Chem 2001;276:30429-34.",
+   "pmid": "11395515",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11395515/"
+  },
+  {
+   "cite": "Fedele M, Crescenzi E, Cerchia L. The POZ/BTB and AT-Hook Containing Zinc Finger 1 (PATZ1) Transcription Regulator: Physiological Functions and Disease Involvement. Int J Mol Sci 2017;18.",
+   "pmid": "29186807",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29186807/"
+  },
+  {
+   "cite": "Piepoli S, Alt AO, Atilgan C, et al. Structural analysis of the PATZ1 BTB domain homodimer. Acta Crystallogr D Struct Biol 2020;76:581-593.",
+   "pmid": "32496219",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32496219/"
+  },
+  {
+   "cite": "Ortabozkoyun H, Huang PY, Cho H, et al. CRISPR and biochemical screens identify MAZ as a cofactor in CTCF-mediated insulation at Hox clusters. Nat Genet 2022;54:202-212.",
+   "pmid": "35145304",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35145304/"
+  },
+  {
+   "cite": "Huang M, Liao X, Wang X, et al. POZ/BTB and AT hook containing zinc finger 1 (PATZ1) suppresses differentiation and regulates metabolism in human embryonic stem cells. Int J Biol Sci 2024;20:1142-1159.",
+   "pmid": "38385086",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38385086/"
+  },
+  {
+   "cite": "Yagi T, Suzuki O, Matsuoka H, et al. A case of pelvic EWSR1-PATZ1 fusion sarcoma treated with carbon ion radiotherapy. Radiol Case Rep 2024;19:2674-2678.",
+   "pmid": "38645952",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38645952/"
+  },
+  {
+   "cite": "Ortabozkoyun H, Huang PY, Gonzalez-Buendia E, et al. Members of an array of zinc-finger proteins specify distinct Hox chromatin boundaries. Mol Cell 2024;84:3406-3422.e6.",
+   "pmid": "39173638",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39173638/"
+  },
+  {
+   "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
+   "pmid": "37971293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  },
+  {
+   "cite": "Rauluseviciute I, Riudavets-Puig R, Blanc-Mathieu R, et al. JASPAR 2024: 20th anniversary of the open-access database of transcription factor binding profiles. Nucleic Acids Res 2024;52:D174-D182.",
+   "pmid": "37962376",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37962376/"
+  }
+ ]
+}

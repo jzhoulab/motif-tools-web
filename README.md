@@ -76,6 +76,42 @@ databases:
 node apps/motif-match/scripts/build-network.mjs   # ~15s; writes resources/motif-network.json
 ```
 
+### Motif family atlas
+
+Every bundled DNA motif is assigned to one of ~165 curated **motif families** — a
+family being a set of matrices it is reasonable to treat as *the same motif*,
+usually one DNA-binding-domain family whose paralogues cannot be separated by
+sequence. Each family has a short referenced entry published at
+[motif.zhoulab.io/families/](https://motif.zhoulab.io/families/), and the Match
+map colours, labels and searches by these families.
+
+The pipeline is offline and reproducible:
+
+```bash
+npm run families:neighbors   # ~20s; caches each motif's nearest relatives
+npm run families:assign      # ontology + per-symbol tables -> motif-family-assignment.json
+npm run families:build       # + resources/families/*.json -> motif-families{,.app}.json
+npm run build:network        # rebuild the map so it carries the new families
+```
+
+| file | what it is |
+| --- | --- |
+| `apps/motif-match/scripts/families/ontology.json` | the family list: key, display name, DBD class, definition |
+| `apps/motif-match/scripts/families/assign-p*.json` | curated gene symbol → family tables (1,455 symbols) |
+| `apps/motif-match/scripts/families/aliases.mjs` | normalises HOCOMOCO/Vierstra shorthands to HGNC symbols |
+| `resources/families/<KEY>.json` | the written entry: short paragraph, long review, caveats, references |
+| `resources/motif-family-assignment.json` | per-motif family + label-quality flags (generated) |
+| `resources/motif-families.json` | merged atlas used by the site generator (generated) |
+
+**Labels are claims, not facts.** The factor name on a motif is an assertion
+about what binds it, and it can be wrong: ChIP-derived matrices may belong to a
+partner protein, 83 CIS-BP entries are inherited from a non-human orthologue
+(down to 55% DNA-binding-domain identity), and Vierstra archetype names describe
+the majority of a cluster rather than one protein. `assign.mjs` therefore
+compares every motif with all 4,231 others and records where the evidence and
+the label disagree — those flags are carried into both the map and the atlas
+pages rather than being smoothed over.
+
 ### Tests
 
 The numerical implementations are validated against reference implementations:

@@ -1,0 +1,63 @@
+{
+ "key": "PAR_BZIP",
+ "aka": [
+  "PAR bZIP",
+  "D-box",
+  "albumin D-site",
+  "D-site binding protein site",
+  "E4BP4 site",
+  "NFIL3 site",
+  "PAR-related bZIP"
+ ],
+ "consensus": "TTACGTAA",
+ "short": "The PAR bZIP group contains three proline- and acidic-amino-acid-rich basic region-leucine zipper activators - DBP (albumin D-site binding protein), HLF (hepatic leukemia factor) and TEF - together with NFIL3 (E4BP4), which lacks the PAR domain, represses rather than activates, and yet reads the same site. That site is the palindrome TTACGTAA, written in much of the literature as TTATG(T/C)AA. It differs from the cyclic-AMP response element at only the outermost bases of each half-site, TTAC in place of TGAC. DBP, HLF and TEF accumulate with circadian rhythms in liver and suprachiasmatic nucleus, and NFIL3 oscillates in antiphase, so the same element can be activated or repressed depending on time of day. This is the most internally consistent bZIP family in the collection, and its four members are indistinguishable by sequence.",
+ "long": "## The factors\n\nPAR stands for proline- and acidic-amino-acid-rich, the character of the region N-terminal to the basic region in DBP, HLF and TEF (also called VBP). All three are bZIP activators. NFIL3, better known as E4BP4, is grouped with them because its DNA-binding specificity is the same, but it is structurally distinct: it has no PAR domain and it carries a repression rather than an activation function, so the two halves of this family do opposite things at identical sites. Expression is informative. DBP, HLF and TEF accumulate with high-amplitude circadian rhythms in tissues where clock gene expression cycles strongly, notably liver and the suprachiasmatic nucleus, while remaining near-constant in most other brain regions. NFIL3 cycles in antiphase to DBP, which makes the pair a repressor-activator switch running on one element. NFIL3 is broadly expressed and prominent in immune cells; HLF is largely restricted, and in human hematopoiesis its expression marks the stem cell state. Dimerization matters for interpretation: the bZIP class heterodimerizes extensively, and systematic interaction surveys show these networks are highly partner-specific and have been rewired repeatedly over evolution, so which sites a PAR protein occupies depends on the partner it has.\n\n## The motif\n\nThe palindrome is TTACGTAA: two TTAC half-sites in opposed orientation, one per subunit, usually with A, T or G immediately outside, giving GTTACGTAAT and ATTACGTAAC in the highest-information models here. Much of the older literature writes the site as TTATG(T/C)AA; that form is the same element with one half-site degenerate, and both appear in this collection - HOCOMOCO and JASPAR HLF and NFIL3 models read TTATGTAAC and TTATGCAAC, while the DBP and TEF models read TTACGTAA. The distinction from the cyclic-AMP response element is two bases and no more: TTAC against TGAC at the outer edge of each half-site, with the ACGT core shared. That difference is real but slim, and truncated matrices lose it. This family is unusually coherent. Across 15 models from four databases its internal cohesion is 0.94, the highest of the bZIP families here, and every JASPAR and CIS-BP model in the family sits above 0.97 similarity to another member. Four of the six HOCOMOCO models carry in vitro evidence (HT-SELEX or methyl-SELEX), so the claim that these proteins bind this sequence directly rests on more than ChIP. No member is distinguishable, and the family data flags no member as belonging elsewhere and contains no cross-species inferred model. The one model that drifts is CIS-BP M04016 for HLF, GTGACGTAA, which is half a PAR site and half a CRE; the same is true of CIS-BP M04034 for NFIL3, ATGACGTAAT.\n\n## Where it acts\n\nThe founding site is the D-site of the rat albumin promoter, from which DBP takes its name, and the family's best-characterized targets are hepatic metabolic genes, including cytochrome P450 enzymes and pyridoxal kinase. DBP, HLF and TEF have similar circadian and tissue-specific expression but measurably different promoter preferences, so a shared matrix does not imply a shared target list. Because occupancy is rhythmic and NFIL3 occupies the same elements at the opposite phase, a site can be an activator target in one part of the day and a repressor target twelve hours later; a static motif scan cannot express this. In immune cells NFIL3 acts at lineage-specification loci rather than at metabolic promoters. On frequency: the AT-rich 8-mer is expected of order 10^5 times in 3.1 Gb of human sequence, so an isolated match carries little weight.\n\n## Biology and disease\n\nSingle knockouts of Dbp, Hlf or Tef in mice are mild, which is the expected signature of factors that share an element. Mice lacking all three are viable but highly susceptible to spontaneous and audiogenic generalized seizures that are frequently lethal; the mechanism was traced to reduced expression of pyridoxal kinase and hence lower brain pyridoxal phosphate, serotonin and dopamine. NFIL3 has non-redundant immune roles: it is required for commitment to the natural killer cell lineage, where it directly regulates Eomes and Id2, and for the development of a common innate lymphoid cell precursor. HLF is the 3-prime partner of the t(17;19) TCF3-HLF fusion in a rare and aggressive pro-B acute lymphoblastic leukemia, in which the HLF bZIP supplies dimerization and DNA binding to a chimeric activator. In normal human hematopoiesis, HLF expression defines the stem cell compartment.\n\n## Reading a hit\n\nA TTACGTAA match is a clean family call by the standards of this class, because the family is cohesive, its models agree across databases, and several rest on in vitro binding data. It is not a member call at all, and here that matters more than usual: DBP, HLF and TEF activate while NFIL3 represses, so the same match is consistent with opposite outcomes, and which applies depends on cell type and on time of day. Check the outer bases before accepting the family. TTAC is PAR bZIP; TGAC is AP-1, CREB/ATF or ATF6/CREB3, and the shared ACGT core means a matrix scan will happily return CREs under a PAR model and vice versa. Two CIS-BP models filed here, for HLF and NFIL3, are themselves half-PAR and half-CRE hybrids. The 8-mer is AT-rich and common, so require accessibility or phase-resolved occupancy data before calling a site functional. Finally, treat a hit in a non-liver, non-immune, non-clock tissue with caution: expression, not sequence, is what limits this family's activity.",
+ "caveats": "Of the eight bZIP families in this atlas, this is the one whose motif models agree best with each other and with in vitro binding data, and no member is flagged as belonging elsewhere. The limits are elsewhere. The site differs from a cyclic-AMP response element by only the outermost base of each half-site, so truncated or low-information matrices will not separate them, and two CIS-BP models here are already half-CRE hybrids. The 8-mer is AT-rich and occurs of order 100,000 times genome-wide. Most importantly, a hit does not indicate direction: DBP, HLF and TEF activate, NFIL3 represses, they occupy the same element in antiphase across the day, and sequence cannot distinguish them.",
+ "refs": [
+  {
+   "cite": "Inaba T, Roberts WM, Shapiro LH, et al. Fusion of the leucine zipper gene HLF to the E2A gene in human acute B-lineage leukemia. Science 1992;257:531-4.",
+   "pmid": "1386162",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1386162/"
+  },
+  {
+   "cite": "Fonjallaz P, Ossipow V, Wanner G, et al. The two PAR leucine zipper proteins, TEF and DBP, display similar circadian and tissue-specific expression, but have different target promoter preferences. EMBO J 1996;15:351-62.",
+   "pmid": "8617210",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8617210/"
+  },
+  {
+   "cite": "Mitsui S, Yamaguchi S, Matsuo T, et al. Antagonistic role of E4BP4 and PAR proteins in the circadian oscillatory mechanism. Genes Dev 2001;15:995-1006.",
+   "pmid": "11316793",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11316793/"
+  },
+  {
+   "cite": "Cowell IG. E4BP4/NFIL3, a PAR-related bZIP factor with many roles. Bioessays 2002;24:1023-9.",
+   "pmid": "12386933",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12386933/"
+  },
+  {
+   "cite": "Gachon F, Fonjallaz P, Damiola F, et al. The loss of circadian PAR bZip transcription factors results in epilepsy. Genes Dev 2004;18:1397-412.",
+   "pmid": "15175240",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15175240/"
+  },
+  {
+   "cite": "Reinke AW, Baek J, Ashenberg O, et al. Networks of bZIP protein-protein interactions diversified over a billion years of evolution. Science 2013;340:730-4.",
+   "pmid": "23661758",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23661758/"
+  },
+  {
+   "cite": "Male V, Nisoli I, Kostrzewski T, et al. The transcription factor E4bp4/Nfil3 controls commitment to the NK lineage and directly regulates Eomes and Id2 expression. J Exp Med 2014;211:635-42.",
+   "pmid": "24663216",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24663216/"
+  },
+  {
+   "cite": "Yu X, Wang Y, Deng M, et al. The basic leucine zipper transcription factor NFIL3 directs the development of a common innate lymphoid cell precursor. Elife 2014;3.",
+   "pmid": "25310240",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25310240/"
+  },
+  {
+   "cite": "Lehnertz B, Chagraoui J, MacRae T, et al. HLF expression defines the human hematopoietic stem cell state. Blood 2021;138:2642-2654.",
+   "pmid": "34499717",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34499717/"
+  }
+ ]
+}

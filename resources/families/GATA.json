@@ -1,0 +1,77 @@
+{
+ "key": "GATA",
+ "aka": [
+  "WGATAA",
+  "GATA box",
+  "GATA element",
+  "GATA-E-box composite element",
+  "double GATA site",
+  "C4 zinc finger (GATA-type) factors"
+ ],
+ "consensus": "WGATAA",
+ "short": "GATA factors are zinc-finger transcription factors that bind the six-base core WGATAA (usually AGATAA or TGATAA) through a single C4-type zinc finger plus a basic tail. Humans have six canonical members, GATA1-6, in two expression groups: GATA1/2/3 in blood, lymphocytes and mammary epithelium, GATA4/5/6 in heart, gut and gonad. The atypical protein TRPS1 carries one GATA-type finger and binds the same core as a repressor. Sites are short and very common, and are often read in pairs or next to an E-box occupied by TAL1. GATA binding sites underlie globin gene switching, cardiac septation and T-helper-2 commitment, and the factors are mutated in congenital heart disease, HDR syndrome and breast cancer.",
+ "long": "## The factors\n\nSix canonical human GATA proteins (GATA1-6) share a pair of C4-type zinc fingers. Only the\nC-terminal finger, with its adjacent basic tail, is required for sequence-specific binding; the\nN-terminal finger stabilizes binding to certain palindromic and double sites and is the docking\nsurface for the cofactors ZFPM1/ZFPM2 (FOG1/FOG2). GATA proteins bind DNA as monomers, not as\nobligate dimers, although two molecules can occupy adjacent sites on the same or opposite faces\nof the helix. Expression splits the family in two: GATA1 (erythroid, megakaryocytic, mast,\neosinophil), GATA2 (hematopoietic stem and progenitor cells, endothelium) and GATA3\n(T lymphocytes, mammary luminal epithelium, kidney, parathyroid, inner ear) versus GATA4, GATA5\nand GATA6 (heart, endoderm-derived gut, lung, liver, gonad, pancreas). TRPS1 is an outlier: it\nhas a single GATA-type finger, binds the same core, and represses rather than activates. ZGLP1\nis annotated as GATA-like but its measured specificity in these databases (ATGATCGAT) is not the\nGATA core, and it clusters here only weakly.\n\n## The motif\n\nThe literature consensus is WGATAA, sometimes written (A/T)GATA(A/G) to include the less common\n3' G. The NMR structure of the chicken GATA-1 finger-plus-tail bound to DNA showed that the core\nmodule contacts GAT in the major groove while the basic C-terminal tail wraps into the minor\ngroove to read the 3' AA and the 5' W; this is why the invariant information sits on GATA and\nfalls off sharply outside it. Only about 6 bp carry real information, so a GATA PWM is one of the\nleast specific vertebrate models in routine use. Many database entries are written on the reverse\nstrand as TTATCT or CTTATCT, which is the same site; the data consensus here, AGATAAg, is simply\nthe forward-strand form of the same six-base core. Extended versions exist. Tandem sites in the\narrangement GATAA-N(n)-TTATC are common in real regulatory elements and give the double-GATA\narchetype seen in footprint clustering. The GATA-E-box composite element places WGATAA 8-10 bp\nfrom a CAGNTG E-box and is bound by the TAL1/E47/LMO2/LDB1/GATA1 pentameric complex; JASPAR\nmodels this as a GATA1::TAL1 dimer motif. No experiment distinguishes GATA1 from GATA2 from\nGATA6 by sequence: their in vitro and ChIP-derived models are effectively the same matrix.\n\n## Where it acts\n\nGATA sites are enhancer elements far more than promoter elements, and they are not associated\nwith CpG islands. Because WGATAA occurs roughly once every few kilobases by chance, the human\ngenome contains on the order of a million matches and only a small fraction are occupied in any\ncell type. Occupancy is set by chromatin: GATA1 and GATA2 mark erythroid enhancers, GATA3 marks\nluminal breast and Th2 enhancers, GATA4 and GATA6 mark cardiac and gut enhancers, and the same\nsequence is invisible in the wrong lineage. GATA2 and GATA1 exchange at many of the same sites\nduring erythroid maturation, the so-called GATA switch. Frequent neighbors are the E-box of TAL1,\nKLF1 CACCC boxes, RUNX1, SP1, FOXA1 and estrogen receptor (in breast), and NKX2-5, TBX5 and MEF2\n(in heart). GATA3 and GATA4 both behave as chromatin-opening factors at a subset of their sites.\n\n## Biology and disease\n\nGata1-null mouse embryonic stem cells arrest at the proerythroblast stage and die of apoptosis,\nand a megakaryocyte-selective knockdown causes thrombocytopenia. In humans, GATA1 exon 2\nmutations producing the short GATA1s isoform cause transient abnormal myelopoiesis and Down\nsyndrome-associated acute megakaryoblastic leukemia; other GATA1 mutations cause X-linked\ndyserythropoietic anemia and thrombocytopenia. GATA2 haploinsufficiency causes MonoMAC syndrome\nand familial MDS/AML. GATA3 is required for and sufficient to drive Th2 cytokine expression in\nCD4 T cells; heterozygous mutations cause HDR syndrome (hypoparathyroidism, deafness, renal\ndysplasia), and GATA3 is one of the most frequently mutated genes in luminal breast cancer.\nGATA4 mutations cause septal defects and interact genetically with TBX5. TRPS1 loss causes\ntricho-rhino-phalangeal syndrome; TRPS1 immunostaining is now used as a breast-carcinoma marker.\n\n## Reading a hit\n\nA WGATAA match tells you the family and nothing about the member. Treat any claim that a site is\n\"the GATA1 site\" rather than \"a GATA site\" as an inference from expression or ChIP data, not from\nsequence. Because the informative core is six bases, isolated matches in a random background are\nexpected and carry almost no evidence by themselves; a hit becomes interesting when it is\nconserved, sits in open chromatin of a tissue that expresses a GATA factor, or is doubled or\npaired with an E-box. Two specific confusions are worth knowing. AT-rich homeodomain sites\n(TAAT-containing) and the reverse-complement TTATCT can score on loose GATA models, and vice\nversa. And the CIS-BP human TRPS1 motif is not measured on human TRPS1: it is transferred from a\nDrosophila protein at 63% DNA-binding-domain identity, so the model's fine structure should not\nbe read as TRPS1-specific even though TRPS1 genuinely binds GATA cores. HOCOMOCO GATA models\ngraded A are backed by both ChIP-seq and in vitro SELEX (evidence codes PSM), which is stronger\nsupport than ChIP alone.",
+ "caveats": "The core is only 6 bp, so chance matches are abundant and a single hit is weak evidence. All six canonical paralogues share one matrix; sequence cannot assign a member, and neither can ChIP-seq in a cell expressing several of them. Reverse-strand renderings (CTTATCT) and AT-rich homeodomain sites are the two commonest misreadings. The CIS-BP TRPS1 model is inferred from a Drosophila protein, and the HOCOMOCO ZGLP1 model does not match the GATA core despite ZGLP1's GATA-like domain annotation. Vierstra archetypes labelled GATA/TAL describe a composite element, not a claim that GATA and TAL1 motifs are separable.",
+ "refs": [
+  {
+   "cite": "Omichinski JG, Clore GM, Schaad O, et al. NMR structure of a specific DNA complex of Zn-containing DNA binding domain of GATA-1. Science 1993;261:438-46.",
+   "pmid": "8332909",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8332909/"
+  },
+  {
+   "cite": "Chen Y, Bates DL, Dey R, et al. DNA binding by GATA transcription factor suggests mechanisms of DNA looping and long-range gene regulation. Cell Rep 2012;2:1197-206.",
+   "pmid": "23142663",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23142663/"
+  },
+  {
+   "cite": "Pevny L, Simon MC, Robertson E, et al. Erythroid differentiation in chimaeric mice blocked by a targeted mutation in the gene for transcription factor GATA-1. Nature 1991;349:257-60.",
+   "pmid": "1987478",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1987478/"
+  },
+  {
+   "cite": "Wadman IA, Osada H, Grütz GG, et al. The LIM-only protein Lmo2 is a bridging molecule assembling an erythroid, DNA-binding complex which includes the TAL1, E47, GATA-1 and Ldb1/NLI proteins. EMBO J 1997;16:3145-57.",
+   "pmid": "9214632",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9214632/"
+  },
+  {
+   "cite": "Anderson KP, Crable SC, Lingrel JB. Multiple proteins binding to a GATA-E box-GATA motif regulate the erythroid Krüppel-like factor (EKLF) gene. J Biol Chem 1998;273:14347-54.",
+   "pmid": "9603943",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9603943/"
+  },
+  {
+   "cite": "Zheng W, Flavell RA. The transcription factor GATA-3 is necessary and sufficient for Th2 cytokine gene expression in CD4 T cells. Cell 1997;89:587-96.",
+   "pmid": "9160750",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9160750/"
+  },
+  {
+   "cite": "Garg V, Kathiriya IS, Barnes R, et al. GATA4 mutations cause human congenital heart defects and reveal an interaction with TBX5. Nature 2003;424:443-7.",
+   "pmid": "12845333",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12845333/"
+  },
+  {
+   "cite": "Nesbit MA, Bowl MR, Harding B, et al. Characterization of GATA3 mutations in the hypoparathyroidism, deafness, and renal dysplasia (HDR) syndrome. J Biol Chem 2004;279:22624-34.",
+   "pmid": "14985365",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/14985365/"
+  },
+  {
+   "cite": "Malik TH, Von Stechow D, Bronson RT, et al. Deletion of the GATA domain of TRPS1 causes an absence of facial hair and provides new insights into the bone disorder in inherited tricho-rhino-phalangeal syndromes. Mol Cell Biol 2002;22:8592-600.",
+   "pmid": "12446778",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12446778/"
+  },
+  {
+   "cite": "Malik TH, Shoichet SA, Latham P, et al. Transcriptional repression and developmental functions of the atypical vertebrate GATA protein TRPS1. EMBO J 2001;20:1715-25.",
+   "pmid": "11285235",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11285235/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  },
+  {
+   "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
+   "pmid": "25215497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  }
+ ]
+}

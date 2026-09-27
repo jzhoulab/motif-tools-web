@@ -1,0 +1,78 @@
+{
+ "key": "STAT",
+ "aka": [
+  "GAS",
+  "gamma-interferon activation site",
+  "IFN-gamma activated sequence",
+  "STAT-binding element",
+  "SIE (sis-inducible element)",
+  "ISRE (via ISGF3)",
+  "APRE (acute phase response element)"
+ ],
+ "consensus": "TTCNNNGAA",
+ "short": "The seven human STAT proteins - STAT1, STAT2, STAT3, STAT4, STAT5A, STAT5B and STAT6 - sit latent in the cytoplasm until a receptor-associated JAK kinase phosphorylates a single C-terminal tyrosine. Two phosphorylated monomers then pair through reciprocal SH2-phosphotyrosine contacts and clamp around DNA at a gamma-interferon activation site (GAS): the short inverted repeat TTCNNNGAA. Spacing is almost the only sequence feature that distinguishes them, with STAT6 preferring a four-base spacer and the rest a three-base spacer, so a GAS match names the family and not the member. STATs convert essentially every cytokine, interferon and several growth factor signals into transcription, and germline or somatic STAT mutations cause immunodeficiency, allergy, growth failure and leukemia.",
+ "long": "## The factors\n\nSeven genes: STAT1, STAT2, STAT3, STAT4, STAT5A, STAT5B and STAT6. All share one architecture - an\nN-terminal domain, a coiled-coil, a DNA-binding domain built on an immunoglobulin fold like those of\nNF-kappaB and p53, a linker, an SH2 domain, and a C-terminal transactivation domain carrying the\nconserved tyrosine. The protein is latent in the cytoplasm; a receptor-associated JAK phosphorylates\nthat tyrosine, and two monomers pair by reciprocal contacts between the SH2 domain of one and the\nphosphotyrosine tail of the other, producing a C-shaped clamp that encircles the DNA. The\nphosphotyrosine site of the SH2 domain is structurally coupled to the DNA-binding domain, so\ndimerization and DNA binding are not independent. Which STAT is active is set by the cytokine, not by\nthe DNA: STAT1 homodimers by interferon gamma, STAT1-STAT2 plus IRF9 (ISGF3) by type I interferons,\nSTAT3 by the IL-6 family, STAT4 by IL-12, STAT5A and STAT5B by the IL-2 family, growth hormone,\nprolactin and erythropoietin, and STAT6 by IL-4 and IL-13. STAT5A and STAT5B have no measured\ndifference in DNA-binding specificity.\n\n## The motif\n\nThe GAS element is TTCNNNGAA: two TTC/GAA half-sites facing each other across a three-base spacer,\noften written TT(N)5AA. Spacer width is the only substantial selectivity available. STAT6 prefers\nfour spacer bases, TTCNNNNGAA, but still binds three-base sites reasonably well; STAT1 and STAT5\nprefer three, and STAT5A tolerates four weakly; none of them binds a lone half-site. In reporter\nassays, a five-base TT-to-AA spacing is generally permissive, four favors STAT3-containing complexes\nand six favors IL-4-activated complexes. Within the three-base class, STAT1, STAT3, STAT4 and STAT5\nare not separable by sequence, and the consensus that the models here agree on, TTCCTGGAA, is\ncompatible with all of them. Two further arrangements matter in practice. First, tetramers: contacts\nbetween N-terminal domains let two dimers bind tandem, individually weak GAS sites cooperatively, so\ngenuine STAT5 targets are often clusters of poor matches rather than one good one, and scanning for a\nsingle strong site will miss them. Second, ISGF3: when STAT1 and STAT2 act with IRF9 they read an\nISRE rather than a GAS, with the STAT pair on the 5' GGAA and IRF9 on the second GAAA repeat. That is\nwhy several STAT-labelled models here look like ISREs - HOCOMOCO STAT1.H14CORE.1.P.B\n(TCAGTTTCRTTTTCC), HOCOMOCO STAT2.H14CORE.0.P.B (GGAAANHGAAACTGA) and JASPAR STAT1::STAT2.\n\n## Where it acts\n\nSTAT occupancy is signal-dependent and transient: sites become occupied within minutes of cytokine\nexposure and are vacated as the STAT is dephosphorylated and exported. Targets are both\ncytokine-inducible promoters and, more often, enhancers, where STATs cooperate with the\nlineage-defining factors of the responding cell. The practical consequence is that a GAS match in an\nunstimulated cell type usually corresponds to nothing: the motif is present in the genome whether or\nnot the pathway is on. Type I interferon signaling shifts the element as well as the factor, from GAS\nto ISRE, so the same STAT1 protein leaves different footprints depending on which interferon acted.\n\n## Biology and disease\n\nHuman genetics has produced an unusually clear catalogue. Gain-of-function STAT1 mutations impair\nIL-17 immunity and cause chronic mucocutaneous candidiasis. Dominant-negative mutations in the STAT3\nDNA-binding domain cause hyper-IgE (Job) syndrome - a disease of DNA binding specifically, since the\nmutant protein dimerizes but cannot read its site. Somatic STAT3 mutations, mostly in the SH2 domain,\noccur in large granular lymphocytic leukemia, and activating STAT5B mutations recur in T-cell\nleukemias. Loss-of-function STAT5B mutations cause growth hormone insensitivity with severe short\nstature and immune dysfunction. Germline gain-of-function STAT6 mutations cause severe early-onset\nallergic disease. Together these establish that STAT dosage and DNA-binding competence, not just\npathway activation, are rate-limiting in vivo.\n\n## Reading a hit\n\nBe conservative. TTCNNNGAA specifies only six bases, so it is expected on the order of several\nhundred thousand times per strand in a 3.1-Gb genome; STAT matches are among the least specific in\nthis atlas, and this family is the least internally cohesive of the ETS/IRF/STAT group. The evidence\nbehind the models is also weaker than elsewhere: every HOCOMOCO model assigned here is ChIP-derived\n(evidence letter P, grade B) with no in vitro HT-SELEX or methyl-HT-SELEX model, all nine JASPAR\nmodels are ChIP-seq, six of them from mouse rather than human experiments (Stat2, Stat4, Stat5a,\nStat5b, Stat6, Stat5a::Stat5b), and two CIS-BP entries are transferred from mouse proteins on\nDNA-binding-domain similarity - one of which is the motif this atlas selects as the family\nrepresentative. \"This protein binds this sequence\" therefore rests largely on in vivo co-occupancy\nplus older in vitro studies. Expect confusion with IRF: the ISRE-shaped STAT models cross-match IRF\nmotifs, and in this atlas most nearest neighbours of STAT1.H14CORE.1.P.B, STAT2.H14CORE.0.P.B and\nJASPAR STAT1::STAT2 are labelled IRF, while the JASPAR mouse Stat2 model's best match anywhere lies\noutside the STAT family. The discriminator is orientation: a GAS is an inverted repeat (TTC facing\nGAA), an ISRE is a direct repeat of GAAA. Finally, no STAT paralogue can be named from sequence -\nSTAT5A versus STAT5B is impossible - so use the cytokine, the time point and the cell type.",
+ "caveats": "A GAS match names the family, never the member: STAT1, STAT3, STAT4 and STAT5 read\nthe same three-spacer inverted repeat, STAT5A and STAT5B have no measured specificity difference, and\nonly STAT6's preference for a four-base spacer gives partial leverage. The element is short enough to\noccur hundreds of thousands of times by chance, and occupancy is signal-dependent, so a hit in an\nunstimulated cell type usually means nothing. Evidence is weaker here than for most families: all\nHOCOMOCO models assigned to STAT are ChIP-only, all JASPAR models are ChIP-seq and two-thirds of\nthem are mouse, and two CIS-BP entries - including the family representative - are inferred from\nmouse proteins. Expect overlap with IRF, since ISGF3 (STAT1-STAT2-IRF9) reads the ISRE, not a GAS.",
+ "refs": [
+  {
+   "cite": "Chen X, Vinkemeier U, Zhao Y, et al. Crystal structure of a tyrosine phosphorylated STAT-1 dimer bound to DNA. Cell 1998;93:827-39.",
+   "pmid": "9630226",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9630226/"
+  },
+  {
+   "cite": "Becker S, Groner B, Müller CW. Three-dimensional structure of the Stat3beta homodimer bound to DNA. Nature 1998;394:145-51.",
+   "pmid": "9671298",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9671298/"
+  },
+  {
+   "cite": "Ehret GB, Reichenbach P, Schindler U, et al. DNA binding specificity of different STAT proteins. Comparison of in vitro specificity with natural target sites. J Biol Chem 2001;276:6675-88.",
+   "pmid": "11053426",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11053426/"
+  },
+  {
+   "cite": "Seidel HM, Milocco LH, Lamb P, et al. Spacing of palindromic half sites as a determinant of selective STAT (signal transducers and activators of transcription) DNA binding and transcriptional activity. Proc Natl Acad Sci U S A 1995;92:3041-5.",
+   "pmid": "7708771",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7708771/"
+  },
+  {
+   "cite": "Vinkemeier U, Cohen SL, Moarefi I, et al. DNA binding of in vitro activated Stat1 alpha, Stat1 beta and truncated Stat1: interaction between NH2-terminal domains stabilizes binding of two dimers to tandem DNA sites. EMBO J 1996;15:5616-26.",
+   "pmid": "8896455",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8896455/"
+  },
+  {
+   "cite": "Rengachari S, Groiss S, Devos JM, et al. Structural basis of STAT2 recognition by IRF9 reveals molecular insights into ISGF3 function. Proc Natl Acad Sci U S A 2018;115:E601-E609.",
+   "pmid": "29317535",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29317535/"
+  },
+  {
+   "cite": "Villarino AV, Kanno Y, O'Shea JJ. Mechanisms and consequences of Jak-STAT signaling in the immune system. Nat Immunol 2017;18:374-384.",
+   "pmid": "28323260",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28323260/"
+  },
+  {
+   "cite": "Minegishi Y, Saito M, Tsuchiya S, et al. Dominant-negative mutations in the DNA-binding domain of STAT3 cause hyper-IgE syndrome. Nature 2007;448:1058-62.",
+   "pmid": "17676033",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17676033/"
+  },
+  {
+   "cite": "Liu L, Okada S, Kong XF, et al. Gain-of-function human STAT1 mutations impair IL-17 immunity and underlie chronic mucocutaneous candidiasis. J Exp Med 2011;208:1635-48.",
+   "pmid": "21727188",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21727188/"
+  },
+  {
+   "cite": "Kofoed EM, Hwa V, Little B, et al. Growth hormone insensitivity associated with a STAT5b mutation. N Engl J Med 2003;349:1139-47.",
+   "pmid": "13679528",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/13679528/"
+  },
+  {
+   "cite": "Koskela HL, Eldfors S, Ellonen P, et al. Somatic STAT3 mutations in large granular lymphocytic leukemia. N Engl J Med 2012;366:1905-13.",
+   "pmid": "22591296",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22591296/"
+  },
+  {
+   "cite": "Baris S, Benamar M, Chen Q, et al. Severe allergic dysregulation due to a gain of function mutation in the transcription factor STAT6. J Allergy Clin Immunol 2023;152:182-194.e7.",
+   "pmid": "36758835",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36758835/"
+  }
+ ]
+}

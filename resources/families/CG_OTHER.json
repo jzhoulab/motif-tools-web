@@ -1,0 +1,76 @@
+{
+  "key": "CG_OTHER",
+  "aka": [
+    "other / unclassified",
+    "unassigned motifs",
+    "no assigned structural family",
+    "residual bucket",
+    "LCOR / LCORL (psq-type helix-turn-helix)",
+    "LRRFIP1 / GCF2 (GC-binding factor 2)"
+  ],
+  "short": "This is not a motif family. It is the residual category for motifs whose factor has no assigned structural family in this ontology, and in the current data it holds three matrices for three proteins. Two are the paralogous corepressors LCOR and LCORL, which carry a psq-type helix-turn-helix rather than a homeodomain and whose models are 4-5 bit A-rich strings that carry almost no information. The third is LRRFIP1, cloned as GC-binding factor 2, whose only model is a GC-rich matrix derived from ChIP-seq alone and resembles neither of the others. Internal cohesion is 0.60 and no member has a same-family neighbour that it matches. Read a hit here as unassigned rather than as shared biology, and re-report it to whichever named family the sequence actually matches.",
+  "long": "## The factors\n\nThree motifs, three proteins. The definition is broader than the contents: it also covers chromatin regulators without a classical DNA-binding domain and unlabelled archetypes, but both of those have entries of their own, so what lands here is proteins believed to bind DNA whose domain has no family of its own.\n\nTwo of the three are paralogues. LCOR, ligand-dependent corepressor, is recruited to agonist-bound nuclear receptors through a single LXXLL motif and represses both by binding histone deacetylases directly and by recruiting CtBP corepressors through two consensus motifs; it attenuates receptor signalling rather than activating a programme of its own. LCORL is its larger relative. Both carry a psq-type helix-turn-helix - the pipsqueak fold, a member of the homeodomain-like superfamily - which is a real DNA-binding domain, but this atlas has no pipsqueak family and the fold is not a homeodomain, so neither protein has anywhere else to go.\n\nThe third, LRRFIP1, entered the literature as GCF2, found by cross-hybridisation with the cDNA of the GC-rich repressor GCF and shown to bind and repress epidermal growth factor receptor promoter fragments through a major site at nucleotides -249 to -233. It has no recognised DNA-binding domain; the part of it that has been solved is a dimeric coiled coil, and its best-documented activity is cytosolic, as a nucleic-acid-binding protein that drives interferon-beta production through beta-catenin.\n\n## The motif\n\nThere is no consensus for this bucket and none should be quoted. The CnAAa string the pipeline reports is only the medoid of three unrelated matrices, and the medoid is the weakest of the three.\n\nThe three entries: CIS-BP M02433, labelled LCOR, reads CnAAa and carries 4.1 bits; its provenance record marks it as taken from a Meleagris gallopavo - wild turkey - protein whose DNA-binding domain is 100 percent identical to the human one. CIS-BP M01304, labelled LCORL, reads cchAAa and carries 4.9 bits. The two match each other at 0.97, but each also matches a motif in another family at 0.83-0.84: at five bits an A-rich matrix is not distinguishable from anything else A-rich. LCORL turns up again in the forkhead entry as part of the Vierstra archetype AC0014:FOXR/LCORL, a 3.4-bit AAa matrix pooled with genuine forkhead models. The third entry, HOCOMOCO LRRF1.H14CORE.0.P.B for LRRFIP1, reads aaGCTCGC with 9.6 bits. Its evidence code is P alone - ChIP-seq, with no in vitro assay - and grade B means two experiments of that one type. It has no same-family neighbour anywhere in its top thirty; its best match outside the bucket is only 0.66. Family cohesion is 0.60.\n\nThe pipeline treats residual buckets as places where membership says nothing about what a matrix should look like, so it suppresses the suspect flag and reports a resemblance instead; the reported zero suspect motifs is a property of that rule, not a sign that these three belong together.\n\n## Where it acts\n\nNot established as a cis-element for any of the three. LCOR and LCORL act as corepressors recruited by nuclear receptors, so their functional footprint on the genome is at oestrogen, glucocorticoid and related receptor sites, and finding CNAAA under a peak tells you nothing about which receptor brought the corepressor there. The one mapped element for LRRFIP1 is the GC-rich region of the EGFR promoter around -240; its ChIP-derived matrix will pick out promoter-proximal GC-rich sequence, as most ChIP-only GC-rich models do whatever protein they are labelled with. A five- or six-base A-rich matrix of the kind LCOR and LCORL contribute matches several million times in 3.1 Gb on either strand, so a scan against them returns noise at any threshold that returns anything.\n\n## Biology and disease\n\nNone of the three has a Mendelian disease attributed to it, but the biology is real. LCOR primes interferon responses in mammary epithelium; miR-199a represses it to protect normal and cancerous mammary stem cells from interferon-induced differentiation and senescence, and that axis is active in poorly differentiated ER-negative breast tumours and associated with poor outcome. LCORL sits in the NCAPG-LCORL interval, one of the most reproducible loci for body size and stature in human and livestock association studies; knockout mice are born small, stay lean, eat less, have reduced circulating IGF-1 and show improved glucose tolerance. LRRFIP1 represses the EGFR and RhoA promoters as GCF2, regulates Wnt/beta-catenin signalling through a specific spliced isoform, and acts in innate immunity as a cytosolic sensor of double-stranded RNA and DNA.\n\n## Reading a hit\n\nDo not report a match here as a match to a family motif. Report the matrix instead, then ask what it is. If the hit is M02433 or M01304, the honest reading is that a four- to five-bit A-rich matrix matched, which is no evidence, and the LCOR matrix is in any case a cross-species transfer from a bird. If it is LRRF1.H14CORE.0.P.B, read it as a GC-rich model built from ChIP-seq alone and compare the sequence against the GC-box families - KLF/SP, MAZ, EGR, NRF1 - before crediting LRRFIP1 with the site. More generally, a residual category exists so that well-supported families are not diluted by unresolved single cases, and a hit in it should be read as unassigned. For LCOR and LCORL the informative question is not what they bind but which nuclear receptor recruited them; for LRRFIP1 it is which GC-box family the sequence belongs to, and whether the protein was in the nucleus at all.",
+  "caveats": "Treat this as an administrative category, not a biological one. It holds three matrices for three proteins whose medoid similarity is 0.60, and the group has no shared consensus: two are 4-5 bit A-rich matrices for the corepressors LCOR and LCORL, one of them transferred from a wild turkey protein, and the third is a 9.6-bit GC-rich model for LRRFIP1 supported by ChIP-seq alone at grade B. No member has a same-family neighbour it actually matches. The reported zero suspect motifs reflects a pipeline rule that suppresses the flag inside residual buckets, not internal agreement. Do not build a consensus, a logo or a representative matrix for this group, and re-report any hit to the named family the sequence matches.",
+  "refs": [
+    {
+      "cite": "Kageyama R, Pastan I. Molecular cloning and characterization of a human DNA binding factor that represses transcription. Cell 1989;59:815-25.",
+      "pmid": "2556218",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2556218/"
+    },
+    {
+      "cite": "Reed AL, Yamazaki H, Kaufman JD, et al. Molecular cloning and characterization of a transcription regulator with homology to GC-binding factor. J Biol Chem 1998;273:21594-602.",
+      "pmid": "9705290",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9705290/"
+    },
+    {
+      "cite": "Fernandes I, Bastien Y, Wai T, et al. Ligand-dependent nuclear receptor corepressor LCoR functions by histone deacetylase-dependent and -independent mechanisms. Mol Cell 2003;11:139-50.",
+      "pmid": "12535528",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12535528/"
+    },
+    {
+      "cite": "Yang P, An H, Liu X, et al. The cytosolic nucleic acid sensor LRRFIP1 mediates the production of type I interferon via a beta-catenin-dependent pathway. Nat Immunol 2010;11:487-94.",
+      "pmid": "20453844",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20453844/"
+    },
+    {
+      "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
+      "pmid": "25215497",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+    },
+    {
+      "cite": "Labbé P, Faure E, Lecointe S, et al. The alternatively spliced LRRFIP1 Isoform-1 is a key regulator of the Wnt/β-catenin transcription pathway. Biochim Biophys Acta Mol Cell Res 2017;1864:1142-1152.",
+      "pmid": "28322931",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28322931/"
+    },
+    {
+      "cite": "Celià-Terrassa T, Liu DD, Choudhury A, et al. Normal and cancerous mammary stem cells evade interferon-induced constraint through the miR-199a-LCOR axis. Nat Cell Biol 2017;19:711-723.",
+      "pmid": "28530657",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28530657/"
+    },
+    {
+      "cite": "Lambert SA, Jolma A, Campitelli LF, et al. The Human Transcription Factors. Cell 2018;172:650-665.",
+      "pmid": "29425488",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29425488/"
+    },
+    {
+      "cite": "Takimoto M. Multidisciplinary Roles of LRRFIP1/GCF2 in Human Biological Systems and Diseases. Cells 2019;8.",
+      "pmid": "30709060",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30709060/"
+    },
+    {
+      "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
+      "pmid": "32728250",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+    },
+    {
+      "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
+      "pmid": "37971293",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+    },
+    {
+      "cite": "Wyler SC, Gahlot S, Bideyan L, et al. LCoRL Regulates Growth and Metabolism. Endocrinology 2024;165.",
+      "pmid": "39467326",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39467326/"
+    }
+  ]
+}

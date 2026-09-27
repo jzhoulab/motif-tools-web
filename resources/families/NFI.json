@@ -1,0 +1,77 @@
+{
+ "key": "NFI",
+ "aka": [
+  "NF-1 site",
+  "CTF site",
+  "CAAT box transcription factor",
+  "TGGCA-binding protein",
+  "NF-I half-site",
+  "SMAD/NF-1 DNA-binding domain factors"
+ ],
+ "consensus": "TTGGC(N5)GCCAA",
+ "short": "Nuclear factor I proteins bind a 15-bp palindrome, TTGGC followed by five variable bases and GCCAA. Four human genes, NFIA, NFIB, NFIC and NFIX, encode DNA-binding domains that are about 85% identical, so they bind as homodimers or heterodimers in any combination and cannot be told apart from sequence. The domain adopts a SMAD MH1-like fold with a bound zinc ion, which is why the family is classified with SMAD rather than with any CCAAT-box factor. The full palindrome is highly informative, but NFI also occupies single TTGGC half-sites. NFI factors keep stem cell populations in glia, retina, skin and muscle on track, and are mutated in human overgrowth and brain malformation syndromes.",
+ "long": "## The factors\n\nFour human genes, NFIA, NFIB, NFIC and NFIX, each produce several splice isoforms. The\nN-terminal region carries both the DNA-binding and the dimerization functions; the C-terminal\nregions differ and carry the transactivation or repression activity. Because the DNA-binding\ndomains are roughly 85% identical, all six pairwise heterodimers form in addition to the four\nhomodimers, and the effective factor in a cell is usually a mixture. A crystal and solution study\nof NFI-X bound to its consensus palindrome showed a MH1-like fold with a structural Zn2+ site, an\nobligate dimeric assembly, and the base contacts that set specificity; the authors present it as\nprototypic for the whole family given the DBD identity. This places NFI in the same structural\nclass as the SMADs, which is why TFClass and the archetype labels used here call the group\n\"SMAD/NF-1\". Expression is broad but graded: NFIA and NFIB dominate in developing CNS and glia,\nNFIX in neural stem cells, muscle and hematopoiesis, NFIC in tooth and kidney. NFI was originally\npurified as a host factor required for adenovirus type 2 DNA replication, and independently as\n\"CTF\" (CCAAT box transcription factor) and as the chicken \"TGGCA protein\"; all three are the same\nfamily.\n\n## The motif\n\nThe consensus is the 15-bp palindrome TTGGC(N5)GCCAA, equivalently written TGGC(N5)GCCA. Each\nmonomer reads one TTGGC half-site, so the information sits almost entirely on the two half-sites;\nthe five central bases are a spacer and contribute little. Spacing is the strict part. Early\nbinding studies varying the gap showed that NFI tolerates very little change in spacer length,\nwhich is what you expect from a rigid dimer whose two DNA-contacting elements are fixed distances\napart; the JASPAR and HOCOMOCO full-site models accordingly run 14-17 columns with the spacer\ndegenerate. Full-site models reach 15-26 bits, among the most informative in these collections.\nHalf-site models also exist and are legitimate: NFI binds single TTGGC/TGCCAA sites with lower\naffinity, and several database entries for all four paralogues are 5-7 bp half-sites carrying only\n8-12 bits. No paralogue is distinguishable from any other by sequence. The name \"CCAAT box\ntranscription factor\" is a historical trap: the NFI half-site GCCAA contains the letters of a\nCCAAT box read on one strand, and NFI was long listed among CCAAT-binding proteins, but NFI and\nNF-Y are unrelated proteins with different folds and different optimal sites. If a scan returns\nboth, they are separate hypotheses, not confirmations of each other.\n\n## Where it acts\n\nNFI sites are found at promoters and at enhancers, and NFI proteins are enriched at distal\nregulatory elements in stem and progenitor populations. NFI binding is closely tied to chromatin\naccessibility: in skin stem cells NFI factors occupy super-enhancers and provide access for\nlineage factors while suppressing alternative fates, and in retinal progenitors NFI factors\ncontrol mitotic exit and late-born cell specification. NFI also binds nucleosomal DNA more\nreadily than many factors, consistent with a role early in opening elements. Recurring partners\ninclude FOXA1 in prostate, the glucocorticoid and progesterone receptors at the MMTV promoter\n(where NFI and the receptor compete for overlapping DNA), SOX factors in glia, and MYOD in\nmuscle. Because the full palindrome is long, genome-wide scans recover a manageable number of\nstrong matches, but half-site matches are effectively everywhere.\n\n## Biology and disease\n\nMouse knockouts give distinct phenotypes despite the shared motif: Nfia loss causes corpus\ncallosum agenesis and hydrocephalus, Nfib loss impairs lung maturation and forebrain\ndevelopment, Nfic loss blocks tooth root formation, and Nfix loss affects brain, muscle and\nhematopoiesis. The human syndromes mirror them. NFIA haploinsufficiency causes a CNS malformation\nsyndrome with corpus callosum hypoplasia, macrocephaly and urinary tract defects. NFIX variants\ncause two different disorders depending on whether the transcript escapes nonsense-mediated\ndecay: missense or deletion alleles affecting the DNA-binding/dimerization domain cause Malan\n(Sotos-like) overgrowth syndrome, while alleles producing stable truncated protein cause\nMarshall-Smith syndrome. NFIB is amplified and drives progression and metastasis in small cell\nlung cancer, and NFIB works with CARM1 in that setting; NFIB fusions also occur in adenoid cystic\ncarcinoma via MYB-NFIB translocation.\n\n## Reading a hit\n\nA full TTGGC(N5)GCCAA match is good evidence that some NFI dimer can bind, and it is specific\nenough that chance matches are uncommon. It is no evidence at all about which paralogue, and\nbecause heterodimers are the rule, \"which paralogue\" may not even be a well-posed question in a\ncell expressing three of them; assign from expression data. Half-site hits are a different\nproposition: TTGGC or TGCCAA alone carries under 12 bits and will occur by chance many times in\nany window you look at, so half-site models should be treated as weak. Two confusions are worth\nflagging. First, the GCCAA half-site overlaps the letters of a CCAAT box, and NFI's old name CTF\ninvites the false inference that an NFI hit is an NF-Y hit; the true NF-Y site is CCAAT read in a\ndifferent context and the proteins are unrelated. Second, NFI's MH1-like fold means archetype and\nclass labels place it with SMAD, which can look like a mislabeling but is structurally correct.\nHOCOMOCO NFI models graded A generally rest on both ChIP-seq and in vitro selection (evidence\ncodes PS or PSM), so the full-site matrices here are well supported.",
+ "caveats": "The four paralogues share one matrix and freely heterodimerize, so a hit identifies NFI, never NFIA versus NFIB versus NFIC versus NFIX. Full-palindrome matches are trustworthy; half-site models (TTGGC or GCCAA alone, under 12 bits) are not, and several database entries for this family are half-sites. Spacer length matters more than spacer sequence, so a match with a shifted gap is probably not a site. Do not equate the GCCAA half-site with the CCAAT box of NF-Y despite NFI's historical name CTF; the two proteins are unrelated. The SMAD/NF-1 class label reflects the shared MH1-like fold and is not an error.",
+ "refs": [
+  {
+   "cite": "Tiberi M, Lapi M, Gourlay LJ, et al. Structural basis of Nuclear Factor 1-X DNA recognition provides prototypic insight into the NFI family. Nat Commun 2025;16:10170.",
+   "pmid": "41261119",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41261119/"
+  },
+  {
+   "cite": "Leegwater PA, van Driel W, van der Vliet PC. Recognition site of nuclear factor I, a sequence-specific DNA-binding protein from HeLa cells that stimulates adenovirus DNA replication. EMBO J 1985;4:1515-21.",
+   "pmid": "4040852",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/4040852/"
+  },
+  {
+   "cite": "Gronostajski RM. Site-specific DNA binding of nuclear factor I: effect of the spacer region. Nucleic Acids Res 1987;15:5545-59.",
+   "pmid": "3039460",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3039460/"
+  },
+  {
+   "cite": "Santoro C, Mermod N, Andrews PC, et al. A family of human CCAAT-box-binding proteins active in transcription and DNA replication: cloning and expression of multiple cDNAs. Nature 1988;334:218-24.",
+   "pmid": "3398920",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3398920/"
+  },
+  {
+   "cite": "Gronostajski RM. Roles of the NFI/CTF gene family in transcription and development. Gene 2000;249:31-45.",
+   "pmid": "10831836",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10831836/"
+  },
+  {
+   "cite": "Brüggemeier U, Rogge L, Winnacker EL, et al. Nuclear factor I acts as a transcription factor on the MMTV promoter but competes with steroid hormone receptors for DNA binding. EMBO J 1990;9:2233-9.",
+   "pmid": "2162764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2162764/"
+  },
+  {
+   "cite": "Adam RC, Yang H, Ge Y, et al. NFI transcription factors provide chromatin access to maintain stem cell identity while preventing unintended lineage fate choices. Nat Cell Biol 2020;22:640-650.",
+   "pmid": "32393888",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32393888/"
+  },
+  {
+   "cite": "Clark BS, Stein-O'Brien GL, Shiau F, et al. Single-Cell RNA-Seq Analysis of Retinal Development Identifies NFI Factors as Regulating Mitotic Exit and Late-Born Cell Specification. Neuron 2019;102:1111-1126.e5.",
+   "pmid": "31128945",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31128945/"
+  },
+  {
+   "cite": "Lu W, Quintero-Rivera F, Fan Y, et al. NFIA haploinsufficiency is associated with a CNS malformation syndrome and urinary tract defects. PLoS Genet 2007;3:e80.",
+   "pmid": "17530927",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17530927/"
+  },
+  {
+   "cite": "Malan V, Rajan D, Thomas S, et al. Distinct effects of allelic NFIX mutations on nonsense-mediated mRNA decay engender either a Sotos-like or a Marshall-Smith syndrome. Am J Hum Genet 2010;87:189-98.",
+   "pmid": "20673863",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20673863/"
+  },
+  {
+   "cite": "Steele-Perkins G, Butz KG, Lyons GE, et al. Essential role for NFI-C/CTF transcription-replication factor in tooth root development. Mol Cell Biol 2003;23:1075-84.",
+   "pmid": "12529411",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12529411/"
+  },
+  {
+   "cite": "Semenova EA, Kwon MC, Monkhorst K, et al. Transcription Factor NFIB Is a Driver of Small Cell Lung Cancer Progression in Mice and Marks Metastatic Disease in Patients. Cell Rep 2016;16:631-43.",
+   "pmid": "27373156",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27373156/"
+  }
+ ]
+}

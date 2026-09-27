@@ -1,0 +1,79 @@
+{
+ "key": "REST",
+ "aka": [
+  "RE1",
+  "NRSE",
+  "neuron-restrictive silencer element",
+  "NRSF",
+  "RE1-silencing transcription factor",
+  "repressor element 1",
+  "XBR",
+  "REST4"
+ ],
+ "consensus": "TTCAGCACCACGGACAGCGCC",
+ "short": "REST, also called NRSF, is a single zinc-finger protein that recognizes RE1 (the neuron- restrictive silencer element), a 21-base-pair site that is one of the longest and most information- rich transcription-factor motifs in the human genome. Eight of its nine zinc fingers read two half-sites separated by a two-base spacer, which is why the element is long and unusually specific. REST recruits SIN3-HDAC and CoREST-LSD1 complexes to silence neuronal genes in non-neuronal cells, and is removed or degraded as neurons differentiate. Human and mouse genomes contain roughly one to two thousand canonical RE1s, many spread by transposable elements, plus a larger set of weaker non-canonical variants. Unusually for a PWM, a strong RE1 match is good evidence of real REST binding.",
+ "long": "## The factors\n\nThis family has one member. REST (RE1-silencing transcription factor) was identified twice in 1995:\nas NRSF, a coordinate repressor of multiple neuron-specific genes, and as REST, a silencer protein\nthat restricts type II sodium channel expression to neurons. It contains nine C2H2 zinc fingers,\neight of which form the DNA-binding array, plus a separate C-terminal finger. REST is not itself a\ncatalytic repressor; it carries two repression domains that dock different corepressor machinery, an\nN-terminal region that binds SIN3A with HDAC1 and HDAC2, and a C-terminal region that binds\nCoREST/RCOR1, which in turn brings the demethylase LSD1/KDM1A and associated activities such as\nG9a, CTDSP1 and MeCP2. REST is expressed broadly in non-neuronal tissue and in neural stem cells,\nand its protein level falls sharply at neuronal differentiation. A truncated splice variant, REST4,\nlacks most of the finger array. There is no paralogue in these databases, so the family and the\nprotein coincide.\n\n## The motif\n\nThe canonical RE1/NRSE is written TTCAGCACCACGGACAGCGCC, 21 base pairs. It is best read as two\nhalf-sites, a left half around TTCAGCACC and a right half around GGACAGCGCC, separated by a\ntwo-nucleotide spacer that carries almost no information. Separate groups of zinc fingers engage the\ntwo halves, which is the structural reason a single monomer can specify 19 informative positions;\nby contrast most vertebrate factors specify six to ten. The spacer explains a discrepancy readers\nwill notice: the canonical string has AC at those two positions, while the JASPAR and HOCOMOCO\nmatrices show a weak preference for at, and the data consensus for this family is\nTCAGCACCatGGACAGCgcC. These are the same element, differing only where the model is uninformative.\nNon-canonical RE1s are common and functionally important. They include half-site RE1s, in which only\nthe left or right half is present; compound elements with expanded spacers; and single-substitution\nvariants throughout. Binding-affinity work shows that canonical motifs give strong occupancy at\ntargets shared by all cell types, whereas atypical motifs give weak occupancy at cell- and\ntissue-specific targets, and, unexpectedly, that the weak sites are the most evolutionarily\nconstrained.\n\n## Where it acts\n\nRE1 elements sit in promoters, first introns and distal regions of neuronal genes: ion channels,\nsynaptic vesicle proteins, neurotransmitter receptors, neuronal microRNAs and splicing factors.\nPosition-specific scoring searches of the human genome recover on the order of 1,300 canonical RE1s\n(about 1,000 in mouse), and a comparative-genomics model built from conserved occurrences produced\n842 high-confidence human sites at 733 genes; larger surveys that admit weaker matches reach a few\nthousand. The number is small for a vertebrate motif, which is the practical consequence of the\nelement's length. RE1s are present in all sequenced vertebrate genomes and absent from invertebrates\nand protochordates, as is REST itself. A substantial fraction lie in repeats, and many RE1s fall\ninto closely related families associated with transposable elements, implying that transposon-\nmediated duplication carried the element to new target genes during vertebrate evolution. The REST\ncistrome is not conserved in detail: it is substantially larger in human than in mouse embryonic\nstem cells.\n\n## Biology and disease\n\nREST silences neuronal genes in non-neuronal cells and keeps them repressed in progenitors,\nreleasing them as neurons mature. Its regulation is therefore mostly post-transcriptional, through\nsplicing to REST4 and through ubiquitin-dependent degradation at differentiation. The first\nmammalian ChIP-sequencing experiment was performed on NRSF, and the resulting maps established the\ntight coupling between the motif and occupancy that makes this factor unusual.\n\nSeveral diseases turn on REST dosage. Wild-type huntingtin sequesters REST in the cytoplasm; mutant\nhuntingtin fails to, so REST enters the nucleus, occupies RE1s and represses target genes including\nBDNF, contributing to Huntington disease pathology. In the ageing human cortex, nuclear REST rises\nand is required for stress resistance, and is lost in Alzheimer disease. Germline truncating REST\nmutations predispose to Wilms tumor, and REST loss or degradation has been reported in epithelial\ntumors, so it behaves as a tumor suppressor in some contexts while its gain of function drives\npathology in others.\n\n## Reading a hit\n\nThis is the family where a PWM hit means the most. With about 19 informative positions, a full-length\ncanonical RE1 match essentially does not occur by chance in a three-gigabase genome, and the great\nmajority of strong matches are occupied wherever REST is expressed. There is no paralogue problem:\nthe motif belongs to one protein. Two caveats remain. First, half-site and other non-canonical RE1s\nscore poorly and will be missed by a threshold tuned to the canonical element, yet they carry the\ncell-type-specific part of the regulon, so a negative result at a neuronal gene is weak evidence.\nSecond, occupancy is not the same as repression: REST is bound at many sites in cells where the\ntarget is expressed anyway, and the functional output depends on which corepressor complex is\nrecruited and on REST protein level, which falls in neurons. Because the element is long and\ndistinctive, ChIP-derived REST models are relatively clean, and an RE1-like motif appearing in\nanother factor's ChIP data usually means that factor is part of a REST corepressor complex.",
+ "caveats": "This is the best case for trusting a PWM hit: a full canonical 21-bp RE1 has roughly 19 informative positions, has no paralogue competing for the label, and is rare enough that chance matches are negligible. The failure mode is the opposite of usual: thresholds set for the canonical element miss half-site and other non-canonical RE1s, which are numerous, weakly bound and carry the tissue-specific part of the regulon. A hit also does not imply repression, since REST occupies sites in cells where the target is expressed and its protein level and corepressor choice determine the output. Conversely, an RE1-like motif recovered from another factor's ChIP data usually means that factor sits in a REST corepressor complex.",
+ "refs": [
+  {
+   "cite": "Schoenherr CJ, Anderson DJ. The neuron-restrictive silencer factor (NRSF): a coordinate repressor of multiple neuron-specific genes. Science 1995;267:1360-3.",
+   "pmid": "7871435",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7871435/"
+  },
+  {
+   "cite": "Chong JA, Tapia-Ramírez J, Kim S, et al. REST: a mammalian silencer protein that restricts sodium channel gene expression to neurons. Cell 1995;80:949-57.",
+   "pmid": "7697725",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7697725/"
+  },
+  {
+   "cite": "Johnson R, Gamblin RJ, Ooi L, et al. Identification of the REST regulon reveals extensive transposable element-mediated binding site duplication. Nucleic Acids Res 2006;34:3862-77.",
+   "pmid": "16899447",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16899447/"
+  },
+  {
+   "cite": "Mortazavi A, Leeper Thompson EC, Garcia ST, et al. Comparative genomics modeling of the NRSF/REST repressor network: from single conserved sites to genome-wide repertoire. Genome Res 2006;16:1208-21.",
+   "pmid": "16963704",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16963704/"
+  },
+  {
+   "cite": "Bruce AW, López-Contreras AJ, Flicek P, et al. Functional diversity for REST (NRSF) is defined by in vivo binding affinity hierarchies at the DNA sequence level. Genome Res 2009;19:994-1005.",
+   "pmid": "19401398",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19401398/"
+  },
+  {
+   "cite": "Bruce AW, Donaldson IJ, Wood IC, et al. Genome-wide analysis of repressor element 1 silencing transcription factor/neuron-restrictive silencing factor (REST/NRSF) target genes. Proc Natl Acad Sci U S A 2004;101:10458-63.",
+   "pmid": "15240883",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15240883/"
+  },
+  {
+   "cite": "Johnson DS, Mortazavi A, Myers RM, et al. Genome-wide mapping of in vivo protein-DNA interactions. Science 2007;316:1497-502.",
+   "pmid": "17540862",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17540862/"
+  },
+  {
+   "cite": "Rockowitz S, Zheng D. Significant expansion of the REST/NRSF cistrome in human versus mouse embryonic stem cells: potential implications for neural development. Nucleic Acids Res 2015;43:5730-43.",
+   "pmid": "25990720",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25990720/"
+  },
+  {
+   "cite": "Zuccato C, Tartari M, Crotti A, et al. Huntingtin interacts with REST/NRSF to modulate the transcription of NRSE-controlled neuronal genes. Nat Genet 2003;35:76-83.",
+   "pmid": "12881722",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12881722/"
+  },
+  {
+   "cite": "Lu T, Aron L, Zullo J, et al. REST and stress resistance in ageing and Alzheimer's disease. Nature 2014;507:448-54.",
+   "pmid": "24670762",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24670762/"
+  },
+  {
+   "cite": "Mahamdallie SS, Hanks S, Karlin KL, et al. Mutations in the transcriptional repressor REST predispose to Wilms tumor. Nat Genet 2015;47:1471-4.",
+   "pmid": "26551668",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26551668/"
+  },
+  {
+   "cite": "Thiel G, Ekici M, Rössler OG. RE-1 silencing transcription factor (REST): a regulator of neuronal development and neuronal/endocrine function. Cell Tissue Res 2015;359:99-109.",
+   "pmid": "25092546",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25092546/"
+  }
+ ]
+}

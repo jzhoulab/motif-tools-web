@@ -1,0 +1,77 @@
+{
+ "key": "PLAG",
+ "aka": [
+  "PLAG1 bipartite site",
+  "ZAC1 site (PLAGL1)",
+  "LOT1 (PLAGL1)",
+  "PLAGL2 site",
+  "GRGGC(N)6-8GGG",
+  "pleomorphic adenoma gene family"
+ ],
+ "consensus": "GRGGCNNNNNNGGG",
+ "short": "The PLAG proteins - PLAG1, PLAGL1 (also called ZAC1 or LOT1) and PLAGL2 - are C2H2 zinc-finger factors with seven fingers that read a bipartite G-rich site: a GRGGC core and a GGG cluster separated by roughly six to eight base pairs. Finger 3 contacts the G-cluster and fingers 6 and 7 contact the core, so the two halves are read by different parts of one protein. PLAG1 is the classic translocation target in salivary-gland pleomorphic adenoma, where promoter swapping with CTNNB1 or LIFR switches it on; PLAGL2 is also transforming, while PLAGL1/ZAC1 is an imprinted, maternally silenced growth suppressor whose loss of imprinting causes transient neonatal diabetes. All three activate IGF2.",
+ "long": "## The factors\n\nThree human genes make up this family. PLAG1 (8q12) was identified as the gene activated by promoter\nswapping in pleomorphic adenomas of the salivary gland carrying t(3;8)(p21;q12), which fuses the CTNNB1\npromoter to the PLAG1 coding region; a second recurrent translocation, t(5;8)(p13;q12), puts PLAG1 under\nthe LIFR promoter. PLAGL1 (6q24), independently named ZAC1 for zinc finger with apoptosis and cell-cycle\narrest and LOT1 for lost on transformation, and PLAGL2 (20q11) complete the set. All three carry seven\nCys2-His2 zinc fingers in a conserved N-terminal DNA-binding domain plus a C-terminal\nserine/threonine/proline-rich transactivation domain, and all bind DNA as monomers. The DNA-binding\ndomains are highly similar in sequence, which is the central problem for interpreting a hit. PLAG1 and\nPLAGL2 are broadly expressed in embryonic tissues and largely silenced after birth; PLAGL1 is expressed\nfrom the paternal allele only, in pituitary, brain, pancreatic islets and many embryonic tissues.\nPLAG1 activity is further tuned by SUMOylation of its transactivation domain.\n\n## The motif\n\nThe literature consensus is bipartite: GRGGC(N)6-8GGG, a GRGGC core and a GGG G-cluster separated by six\nto eight unconstrained bases. The spacer length is permissive, which is unusual and means the element is\nbetter described as two half-sites with flexible spacing than as a fixed-width matrix. Mutational and\nbinding work assigned the two halves to different fingers: finger 3 engages the G-cluster, fingers 6 and\n7 engage the GRGGC core, so a single molecule bridges the gap.\n\nThe data in this atlas are consistent with that but compress it. The JASPAR PLAG1 model\n(GGGGCCCAAGGGGG, 14 bp) and the equivalent CIS-BP and Vierstra models (CCCCCTTGGGCCCC) span the whole\nbipartite element with the short end of the spacer; the PLAGL2 and PLAGL models collapse to an 8-bp\nGGGCCCCC, effectively just the G-rich halves. The atlas medoid, GGGCCCCC, is therefore shorter than the\nliterature consensus rather than in conflict with it: fixed-width position weight matrices cannot\nrepresent a variable spacer, so the databases store the tightest-spaced version. Expect real sites to be\nlonger and more variably spaced than any of these matrices.\n\nThe three paralogues are not equivalent in vitro. PLAG1 and PLAGL2 bind the same bipartite site and both\ntransform NIH3T3 cells, whereas PLAGL1/ZAC1 binds a distinguishable, more homogeneously G-rich sequence\nand arrests rather than promotes growth. The CIS-BP PLAGL1 model here is a 4-bp CCCC inferred from mouse\nPlagl1 at 88% DNA-binding-domain identity, so it carries almost no information and should not be used\nfor scanning.\n\n## Where it acts\n\nPLAG-family sites are G-rich and land preferentially in GC-rich, CpG-island promoters. The best-validated\ntarget is IGF2: PLAG1 and PLAGL2 both bind the IGF2 P3 promoter region and up-regulate it, and IGF2\ninduction accompanies PLAG1- and PLAGL2-driven transformation. PLAGL1/ZAC1 sits at the top of an\nimprinted gene network that includes IGF2, H19, CDKN1C, DLK1 and MEST, and coordinates their expression\nduring embryonic growth. Because the sites are G-rich, they overlap the binding preferences of KLF/SP\nfactors, EGR, MAZ, PATZ1 and other GC-box readers, and PLAG matches are common in the CpG-island\npromoters of housekeeping genes where none of these factors is necessarily the functional occupant.\n\n## Biology and disease\n\nPLAG1 is the defining oncogene of salivary-gland pleomorphic adenoma and also of lipoblastoma, where\nHMGA2-PLAG1 and related fusions (including CHCHD7-PLAG1) again act by promoter substitution rather than\nby making a chimeric protein. PLAGL2 is amplified and overexpressed in glioma and colorectal cancer and\npromotes proliferation partly through WNT-dependent and partly through IGF2/ASCL2-dependent routes.\nPLAGL1/ZAC1 has the opposite behaviour: it induces apoptosis and G1 arrest, is imprinted with maternal\nsilencing, and relaxation of that imprint at the 6q24 HYMAI/PLAGL1 locus causes transient neonatal\ndiabetes mellitus. Zac1-null mice are growth-restricted, consistent with a network role in embryonic\ngrowth. Outside disease, a regulatory variant at the bovine PLAG1-CHCHD7 interval is one of the largest\nsingle-locus effects on stature and carcass weight in cattle, a reminder that PLAG1 dosage controls\ngrowth in normal physiology.\n\n## Reading a hit\n\nA PLAG match is a G-rich, GC-box-like element, so the honest conclusion from sequence alone is \"a G-rich\npromoter element,\" not \"a PLAG site.\" KLF, SP, EGR, MAZ, PATZ1 and ZNF263 all compete for the same\nmatches, and G-rich matrices produce many chance hits in CpG islands. Within the family, PLAG1 and\nPLAGL2 cannot be told apart by sequence; PLAGL1 is somewhat distinguishable in vitro, but the PLAGL1\nmatrices available here are too short (4-8 bp) to exploit that. Because the true element is bipartite\nwith a 6-8 bp variable spacer, a fixed-width matrix will miss wider-spaced real sites and may score\ncontiguous G-runs that are not functional sites. Check for the two halves explicitly if the call\nmatters. Expression is the strongest discriminator: PLAG1 and PLAGL2 are largely embryonic, so in adult\ntissue a PLAG match is more likely to be a generic GC-box unless a fusion or amplification is known.",
+ "caveats": "The real element is bipartite with a variable 6-8 bp spacer, which no fixed-width matrix can represent, so the matrices here are truncated or tightest-spaced versions and will both miss wide sites and over-call plain G-runs. Matches overlap KLF/SP, EGR, MAZ and other GC-box factors, and G-rich models hit CpG-island promoters frequently by chance. PLAG1 and PLAGL2 share a specificity and cannot be separated by sequence; PLAGL1/ZAC1 differs in vitro, but its models here (CCCC, TGGGGCCA) are too short to use, and the CIS-BP PLAGL1 entry is inferred from mouse at 88% DBD identity. PLAG1 and PLAGL2 are largely embryonic, so adult-tissue matches deserve extra scepticism.",
+ "refs": [
+  {
+   "cite": "Kas K, Voz ML, Röijer E, et al. Promoter swapping between the genes for a novel zinc finger protein and beta-catenin in pleiomorphic adenomas with t(3;8)(p21;q12) translocations. Nat Genet 1997;15:170-4.",
+   "pmid": "9020842",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9020842/"
+  },
+  {
+   "cite": "Spengler D, Villalba M, Hoffmann A, et al. Regulation of apoptosis and cell cycle arrest by Zac1, a novel zinc finger protein expressed in the pituitary gland and the brain. EMBO J 1997;16:2814-25.",
+   "pmid": "9184226",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9184226/"
+  },
+  {
+   "cite": "Voz ML, Agten NS, Van de Ven WJ, et al. PLAG1, the main translocation target in pleomorphic adenoma of the salivary glands, is a positive regulator of IGF-II. Cancer Res 2000;60:106-13.",
+   "pmid": "10646861",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10646861/"
+  },
+  {
+   "cite": "Kamiya M, Judson H, Okazaki Y, et al. The cell cycle control gene ZAC/PLAGL1 is imprinted--a strong candidate gene for transient neonatal diabetes. Hum Mol Genet 2000;9:453-60.",
+   "pmid": "10655556",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10655556/"
+  },
+  {
+   "cite": "Arima T, Drewell RA, Arney KL, et al. A conserved imprinting control region at the HYMAI/ZAC domain is implicated in transient neonatal diabetes mellitus. Hum Mol Genet 2001;10:1475-83.",
+   "pmid": "11448939",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11448939/"
+  },
+  {
+   "cite": "Hensen K, Van Valckenborgh IC, Kas K, et al. The tumorigenic diversity of the three PLAG family members is associated with different DNA binding capacities. Cancer Res 2002;62:1510-7.",
+   "pmid": "11888928",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11888928/"
+  },
+  {
+   "cite": "Varrault A, Gueydan C, Delalbre A, et al. Zac1 regulates an imprinted gene network critically involved in the control of embryonic growth. Dev Cell 2006;11:711-22.",
+   "pmid": "17084362",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17084362/"
+  },
+  {
+   "cite": "Nishimura S, Watanabe T, Mizoshita K, et al. Genome-wide association study identified three major QTL for carcass weight including the PLAG1-CHCHD7 QTN for stature in Japanese Black cattle. BMC Genet 2012;13:40.",
+   "pmid": "22607022",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22607022/"
+  },
+  {
+   "cite": "Utsunomiya YT, Milanesi M, Utsunomiya ATH, et al. A PLAG1 mutation contributed to stature recovery in modern cattle. Sci Rep 2017;7:17140.",
+   "pmid": "29215042",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29215042/"
+  },
+  {
+   "cite": "Fischer AD, Veronese Paniagua DA, Swaminathan S, et al. The oncogenic function of PLAGL2 is mediated via ASCL2 and IGF2 and a Wnt-independent mechanism in colorectal cancer. Am J Physiol Gastrointest Liver Physiol 2023;325:G196-G211.",
+   "pmid": "37310750",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37310750/"
+  },
+  {
+   "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
+   "pmid": "25215497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  },
+  {
+   "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
+   "pmid": "32728250",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  }
+ ]
+}

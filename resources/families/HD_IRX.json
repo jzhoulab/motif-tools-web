@@ -1,0 +1,76 @@
+{
+ "key": "HD_IRX",
+ "aka": [
+  "IRX",
+  "Iroquois",
+  "Iro-C",
+  "IrxA/IrxB cluster factors",
+  "Mirror site",
+  "ACA core",
+  "ACANNTGT",
+  "Mohawk response element (MRE)",
+  "MKX",
+  "TALE homeodomain (Iroquois class)"
+ ],
+ "consensus": "ACATGT",
+ "short": "IRX1 through IRX6, with the related factor MKX (Mohawk), form the Iroquois branch of the TALE homeodomain superclass - homeodomains carrying three extra residues between helices 1 and 2. Unlike most homeodomain proteins they do not read a TAAT core. Their recognition unit is a short ACA, and the functional site is an inverted repeat of it, so models in these databases range from the half-site CATGT up to long palindromes such as ACATGnnnnnCATGT. The IRX genes sit in two clusters, IRX1/2/4 and IRX3/5/6, and pattern the heart, limb, kidney and nervous system. IRX3 is best known outside developmental biology as the gene connected by long-range enhancer contacts to the obesity-associated variants inside FTO.",
+ "long": "## The factors\n\nThe Iroquois genes are one of the five branches of the TALE superclass, which is defined by a three-amino-acid insertion between helices 1 and 2 of the homeodomain. Humans have six, arranged in two clusters that arose by duplication: IRX1, IRX2 and IRX4 on chromosome 5, and IRX3, IRX5 and IRX6 on chromosome 16. Each protein carries a TALE homeodomain plus a C-terminal Iro box. MKX (Mohawk) is an IRX-related TALE homeodomain protein assigned to this family in the motif data; it acts as a repressor and recruits the Sin3A/HDAC corepressor complex. Iroquois proteins form homodimers and heterodimers, which is part of how a very short recognition core is turned into a usable site. Expression is broad but regional: IRX1/2/4 and IRX3/5 are prominent in heart, limb bud, kidney, lung and neural tube, with IRX4 largely ventricle-specific; MKX is expressed in tendon and the precursors of skeletal muscle, cartilage and bone.\n\n## The motif\n\nThis family is the clearest example in the atlas of a homeodomain that has abandoned the TAAT core. In vitro site selection with *Drosophila* Mirror defined an Iroquois-binding sequence recognized by the other fly Iroquois proteins and by vertebrate IRX factors, and used in vivo to mediate repression. Bacterial one-hybrid selection with the mouse MKX homeodomain gave a monomeric core of just three bases, A-C-A, and the minimal Mohawk response element in the Mkx promoter is a conserved inverted repeat of that core - the same architecture the human IRX models show. Because the reverse complement of ACA is TGT, the inverted repeat is ACA-TGT, most compactly ACATGT, which is itself palindromic. The databases capture this at several spacings: CIS-BP M05319 gives tACAtGaatattCaTGTa and HOCOMOCO IRX3.H14CORE.2.S.C gives ACAtGnaaaaaCATGTa (ACATG and CATGT separated by five to seven bases), the Vierstra archetype AC0476 gives ACacGawaawtCaTGT, AC0460 gives the tandem ACAtgACA, and the shortest models collapse to the half-site CATGTt or aACATG. The pooled consensus is therefore the half-site CATGTt with cohesion 0.77 - a number that reflects spacer variability, not disagreement about the core. Two methyl-HT-SELEX models for IRX3 and IRX5 instead read ACGCGTaA, a CpG-containing palindrome, so methylation status may matter for a subset of sites. IRX1-6 are not distinguishable from one another by sequence.\n\n## Where it acts\n\nIRX sites occur in developmental enhancers rather than housekeeping promoters, and because the core is 3 bp the useful signal is always the paired arrangement plus its spacing. An exact ACATGT is expected on the order of 10^6 times in 3.1 Gb, so single-half-site matches should not be acted on. The longer palindromic forms with a 5-7 bp AT-rich spacer are much more discriminating. The best-documented regulatory context is the FTO/IRX3 locus, where obesity-associated variants in FTO introns make long-range functional contacts with the IRX3 promoter, so IRX3 rather than FTO is the effector gene. In heart, Irx3 and Irx5 act on conduction-system and repolarization genes and have both cooperative and antagonistic roles, giving a regional readout from the same motif.\n\n## Biology and disease\n\nIrx3/Irx5 double mutants in mouse have cardiac morphogenetic defects and abnormal postnatal cardiac physiology, and Irx4 loss affects ventricular identity. Homozygous loss-of-function mutations in human IRX5 cause Hamamy syndrome, with craniofacial anomalies and impaired germ cell migration attributable to reduced SDF1/CXCL12. Variants in the FTO first intron act on IRX3 to influence body mass, and IRX3 and IRX5 have also been implicated in adipocyte browning. Mkx-null mice have tendon hypoplasia, and MKX loss de-represses Sox6 and shifts skeletal muscle away from slow fiber gene expression.\n\n## Reading a hit\n\nTreat a bare CATGT or ACATG match as noise: 5 bp is not enough, and CATG is also the core of several unrelated motifs. What is interpretable is a paired ACATG...CATGT arrangement, ideally with the AT-rich spacer the high-information models show. The hit identifies the Iroquois branch, not a paralogue - all six IRX models are the same. Two members of this family in CIS-BP are cross-species transfers, one from *Drosophila melanogaster* at 98% DNA-binding-domain identity and one from mouse, and both are extremely low information (aAACA and AcA); do not treat them as independent human evidence. The MKX model here is graded A in HOCOMOCO with integrative and in vitro support but is still only five informative bases.",
+ "caveats": "The recognition core is three bases, so short matches are essentially uninformative and only paired ACATG...CATGT arrangements with their AT-rich spacer are worth interpreting. IRX1-6 share one model, so a hit identifies the Iroquois branch and never a paralogue. Two CIS-BP members are inherited from non-human proteins (one from Drosophila at 98% DBD identity, one from mouse) and carry almost no information. Spacer length varies between models, so scores depend heavily on which matrix you used. Because the CATG core is shared with unrelated motifs, expect a high false-positive rate without footprint or expression support.",
+ "refs": [
+  {
+   "cite": "Bürglin TR. Analysis of TALE superclass homeobox genes (MEIS, PBC, KNOX, Iroquois, TGIF) reveals a novel domain conserved between plants and animals. Nucleic Acids Res 1997;25:4173-80.",
+   "pmid": "9336443",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9336443/"
+  },
+  {
+   "cite": "Cavodeassi F, Modolell J, Gómez-Skarmeta JL. The Iroquois family of genes: from body building to neural patterning. Development 2001;128:2847-55.",
+   "pmid": "11532909",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11532909/"
+  },
+  {
+   "cite": "Bilioni A, Craig G, Hill C, et al. Iroquois transcription factors recognize a unique motif to mediate transcriptional repression in vivo. Proc Natl Acad Sci U S A 2005;102:14671-6.",
+   "pmid": "16203991",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16203991/"
+  },
+  {
+   "cite": "Anderson DM, George R, Noyes MB, et al. Characterization of the DNA-binding properties of the Mohawk homeobox transcription factor. J Biol Chem 2012;287:35351-35359.",
+   "pmid": "22923612",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22923612/"
+  },
+  {
+   "cite": "Gaborit N, Sakuma R, Wylie JN, et al. Cooperative and antagonistic roles for Irx3 and Irx5 in cardiac morphogenesis and postnatal physiology. Development 2012;139:4007-19.",
+   "pmid": "22992950",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22992950/"
+  },
+  {
+   "cite": "Smemo S, Tena JJ, Kim KH, et al. Obesity-associated variants within FTO form long-range functional connections with IRX3. Nature 2014;507:371-5.",
+   "pmid": "24646999",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24646999/"
+  },
+  {
+   "cite": "Bonnard C, Strobl AC, Shboul M, et al. Mutations in IRX5 impair craniofacial development and germ cell migration via SDF1. Nat Genet 2012;44:709-13.",
+   "pmid": "22581230",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22581230/"
+  },
+  {
+   "cite": "Berger MF, Badis G, Gehrke AR, et al. Variation in homeodomain DNA binding revealed by high-resolution analysis of sequence preferences. Cell 2008;133:1266-76.",
+   "pmid": "18585359",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18585359/"
+  },
+  {
+   "cite": "Noyes MB, Christensen RG, Wakabayashi A, et al. Analysis of homeodomain specificities allows the family-wide prediction of preferred recognition sites. Cell 2008;133:1277-89.",
+   "pmid": "18585360",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18585360/"
+  },
+  {
+   "cite": "Yin Y, Morgunova E, Jolma A, et al. Impact of cytosine methylation on DNA binding specificities of human transcription factors. Science 2017;356.",
+   "pmid": "28473536",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28473536/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  }
+ ]
+}

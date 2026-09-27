@@ -1,0 +1,79 @@
+{
+ "key": "ETS_CLASS1",
+ "aka": [
+  "ETS site",
+  "EBS",
+  "ETS-binding site",
+  "GGAA core",
+  "ETS class I",
+  "PEA3 site",
+  "TCF site",
+  "Tryptophan cluster factors / Ets-related factors (TFClass)"
+ ],
+ "consensus": "ACCGGAAGT",
+ "short": "ETS proteins are a family of 28 human transcription factors that each bind DNA through a single ~85-residue winged helix-turn-helix domain and read a nine-base site whose informative part is the four-base core GGA(A/T). The class I members - ETS1 and ETS2, ERG, FLI1, FEV, the PEA3 proteins ETV1/4/5, the ternary complex factors ELK1/3/4, the repressors ERF and ETV3, and GABPA - select essentially the same sequence, ACCGGAAGT, so a match names the class rather than a protein. These sites sit just upstream of a large fraction of human promoters and, in enhancers, next to RUNX, GATA, PAX and SRF sites. Class I also contains every ETS gene recurrently rearranged in cancer: ERG in prostate cancer, FLI1 and ERG in Ewing sarcoma, ETV1 and ETV4 in both.",
+ "long": "## The factors\n\nThe human genome contains 28 ETS genes. All encode one copy of the ETS domain: about 85 residues\nfolded as a winged helix-turn-helix, three alpha-helices packed on a four-stranded antiparallel\nbeta-sheet, that binds DNA as a monomer. Profiling the DNA-binding preference of every human and\nmouse ETS protein split the family into four classes, and class I is by far the largest: the ETS\nsubfamily (ETS1, ETS2), the ERG subfamily (ERG, FLI1, FEV), the PEA3 proteins (ETV1, ETV4,\nETV5), the ternary complex factors (ELK1, ELK3, ELK4), the repressors ERF and ETV3, and GABPA.\nGABPA is the structural exception: it functions only in complex with the ankyrin-repeat subunit\nGABPB, which it recruits using the ETS domain plus a carboxy-terminal extension. Several class I\nproteins carry autoinhibitory segments flanking the ETS domain that are relieved by partner\nbinding. Expression ranges from near-ubiquitous (GABPA, ELK1, ERF, ETV3) through\nlymphoid-enriched (ETS1), endothelial and hematopoietic (ERG, FLI1), to narrowly restricted\n(FEV). SPDEF is grouped here in this atlas, but biochemically it is the sole class IV factor and\nprefers a GGAT core.\n\n## The motif\n\nThe site is nine base pairs, ACCGGAAGT, and nearly all of its information is in the GGA(A/T)\ncore. Two invariant arginines in recognition helix H3 hydrogen-bond the two core guanines; a\nconserved tyrosine (Tyr395 in ETS1) supports the interface; a lysine in the wing contacts DNA 5'\nof the core and a lysine in the H2-H3 turn contacts the opposite strand 3' of it. The core is\nread base by base, the flanks indirectly, through sequence-dependent backbone geometry. The\nflanks separate subfamilies, and separate them weakly: class I prefers A three bases 5' of the core and disfavors C there, the ELF/EHF group\nprefers C at that position (CCCGGAAGT), SPI1/SPIB/SPIC use a purine-rich 5' flank (AGAGGAAGTG),\nand SPDEF alone prefers GGAT. Quantitatively, different ETS proteins vary only about ten-fold in\naffinity for the same consensus, whereas one protein's affinity across variant sites spans five-\nto eighty-fold; sequence therefore grades site quality much better than it identifies a\nparalogue, and no class I member is separable from another by motif alone. The CCGG contains a\nCpG, and methylating it blocks binding. Tandem arrangements are a distinct case: GGAA\nmicrosatellites of four or more consecutive repeats are the response elements of the EWS-FLI1\nfusion, and some models grouped here (JASPAR MA0149.1, archetype AC0561) are GGAA repeats rather\nthan single sites.\n\n## Where it acts\n\nETS occupancy follows two logics. At promoters it is largely redundant: a strong CCGGAAGT sits\n20-40 bp upstream of the transcription start site in CpG-island housekeeping promoters - roughly\na quarter of human promoters carry an ETS site near the start site - and different ETS proteins\nbind interchangeably, with most GABPA-occupied promoters in Jurkat cells also occupied by ETS1.\nThese sites lie in hypomethylated CpG islands, so the CpG in the core stays unmethylated. At\ndistal, DNase-sensitive enhancers, occupancy is factor-specific, the sequence departs from\nconsensus, and specificity comes from composite elements: ETS1 with RUNX1 at AGGA(A/T)GTGG, which\nbinds more than 30-fold cooperatively and marks over a thousand ETS1-specific regions in T cells;\nETS with GATA in hemogenic endothelium, where FLI1, GATA2 and SCL cross-regulate through\nneighboring sites; ETS1 with PAX5 at the mb-1 promoter, where Gln22 of the PAX5 paired domain\nhydrogen-bonds Tyr395 of ETS1; the ternary complex factors with SRF at serum response elements;\nand ERG with the androgen receptor in prostate cancer, where the two share about 44% of sites.\nThe ETS-IRF composite element (EICE) belongs to the SPI1 subfamily and is described there.\n\n## Biology and disease\n\nClass I factors run housekeeping transcription, growth-factor responses and lineage programs.\nGabpa-null mouse embryos die before implantation, consistent with GABPA's occupancy of\nhousekeeping promoters. Ets1 loss impairs T-cell and natural killer cell development. ERG and\nFLI1 are required for endothelial and hematopoietic specification. The clinical weight of the\nclass is oncogenic rearrangement: TMPRSS2-ERG and related fusions place ERG, ETV1, ETV4 or ETV5\nunder androgen control in roughly half of prostate cancers, and EWSR1-FLI1 or EWSR1-ERG defines\nEwing sarcoma, where the fusion's prion-like EWSR1 domain converts GGAA microsatellites into de\nnovo enhancers.\n\n## Reading a hit\n\nTreat a single match as weak evidence. The four-base GGAA core is expected about 12 million times\nper strand in a 3.1-Gb genome and the full nine-mer ACCGGAAGT on the order of 10,000 times per\nstrand by base-composition arithmetic; CCGG-containing words are rarer than that because the\ngenome is CpG-depleted, but the site is still common enough that isolated hits mean little\nwithout context: conservation, accessibility, a nearby partner site, or a promoter position close\nto the start site. A hit identifies an ETS site, not an ETS protein: ETS1, ERG, FLI1, ELK1\nand GABPA are not distinguishable from sequence. ChIP-derived models carry partner signal:\nHOCOMOCO's ChIP-based ETS1 model (ETS1.H14CORE.1.P.B) has consensus ACAGGAAGTGG, whose trailing\nGTGG is the RUNX1 half-site of the ETS1-RUNX1 composite, and several other ChIP-derived ETS\nmodels converge on CAGGAAG rather than the in vitro CCGGAAGT. Half of the JASPAR entries grouped\nhere (16 of 32) are CAP-SELEX heterodimer models such as ERF::SREBF2 or ETV5::FIGLA, where much\nof the matrix is the partner's site, not an ETS site. Finally, consensus strings are stored on\neither strand: GABPA's JASPAR model reads CACTTCCTGT, the reverse complement of ACAGGAAGTG.",
+ "caveats": "A hit tells you the family, not the member: all class I ETS proteins select the\nsame nine-mer in vitro and differ only in weak flanking preferences, so a \"FLI1 site\" and an\n\"ERG site\" are the same sequence. The core is short and frequent, so a match outside an\naccessible, conserved or composite context is expected by chance. Sixteen of the 32 JASPAR models\nhere are CAP-SELEX heterodimers whose matrices are partly a bHLH, FOX, HOX or SREBF site; four\nmodels here are GGAA repeats rather than single sites and will hit any GGAA microsatellite; and the\nChIP-derived HOCOMOCO models (evidence letter P) include RUNX-extended and CAGGAAG variants that\nreflect partners and indirect binding rather than intrinsic ETS specificity. SPDEF is placed in\nthis family here but reads GGAT and is biochemically its own class.",
+ "refs": [
+  {
+   "cite": "Hollenhorst PC, McIntosh LP, Graves BJ. Genomic and biochemical insights into the specificity of ETS transcription factors. Annu Rev Biochem 2011;80:437-71.",
+   "pmid": "21548782",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21548782/"
+  },
+  {
+   "cite": "Wei GH, Badis G, Berger MF, et al. Genome-wide analysis of ETS-family DNA-binding in vitro and in vivo. EMBO J 2010;29:2147-60.",
+   "pmid": "20517297",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20517297/"
+  },
+  {
+   "cite": "Sharrocks AD. The ETS-domain transcription factor family. Nat Rev Mol Cell Biol 2001;2:827-37.",
+   "pmid": "11715049",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11715049/"
+  },
+  {
+   "cite": "Kodandapani R, Pio F, Ni CZ, et al. A new pattern for helix-turn-helix recognition revealed by the PU.1 ETS-domain-DNA complex. Nature 1996;380:456-60.",
+   "pmid": "8602247",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8602247/"
+  },
+  {
+   "cite": "Batchelor AH, Piper DE, de la Brousse FC, et al. The structure of GABPalpha/beta: an ETS domain- ankyrin repeat heterodimer bound to DNA. Science 1998;279:1037-41.",
+   "pmid": "9461436",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9461436/"
+  },
+  {
+   "cite": "Hollenhorst PC, Shah AA, Hopkins C, et al. Genome-wide analyses reveal properties of redundant and specific promoter occupancy within the ETS gene family. Genes Dev 2007;21:1882-94.",
+   "pmid": "17652178",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17652178/"
+  },
+  {
+   "cite": "Hollenhorst PC, Chandler KJ, Poulsen RL, et al. DNA specificity determinants associate with distinct transcription factor functions. PLoS Genet 2009;5:e1000778.",
+   "pmid": "20019798",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20019798/"
+  },
+  {
+   "cite": "Kim WY, Sieweke M, Ogawa E, et al. Mutual activation of Ets-1 and AML1 DNA binding by direct interaction of their autoinhibitory domains. EMBO J 1999;18:1609-20.",
+   "pmid": "10075931",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10075931/"
+  },
+  {
+   "cite": "Garvie CW, Hagman J, Wolberger C. Structural studies of Ets-1/Pax5 complex formation on DNA. Mol Cell 2001;8:1267-76.",
+   "pmid": "11779502",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11779502/"
+  },
+  {
+   "cite": "Pimanda JE, Ottersbach K, Knezevic K, et al. Gata2, Fli1, and Scl form a recursively wired gene-regulatory circuit during early hematopoietic development. Proc Natl Acad Sci U S A 2007;104:17692-7.",
+   "pmid": "17962413",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17962413/"
+  },
+  {
+   "cite": "Tomlins SA, Rhodes DR, Perner S, et al. Recurrent fusion of TMPRSS2 and ETS transcription factor genes in prostate cancer. Science 2005;310:644-8.",
+   "pmid": "16254181",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16254181/"
+  },
+  {
+   "cite": "Gangwal K, Sankar S, Hollenhorst PC, et al. Microsatellites as EWS/FLI response elements in Ewing's sarcoma. Proc Natl Acad Sci U S A 2008;105:10149-54.",
+   "pmid": "18626011",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18626011/"
+  }
+ ]
+}

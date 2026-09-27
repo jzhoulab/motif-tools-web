@@ -1,0 +1,76 @@
+{
+ "key": "AP2",
+ "aka": [
+  "AP-2 site",
+  "TFAP2",
+  "AP-2 box",
+  "GCCNNNGGC element",
+  "helix-span-helix (HSH) factors"
+ ],
+ "consensus": "GCC(N3)GGC",
+ "short": "The five human TFAP2 proteins (TFAP2A-E, historically AP-2 alpha through epsilon) bind a pseudo-palindrome made of GCC and GGC triplets separated by exactly three bases. Each subunit contributes a basic region that inserts a loop into the major groove, and the two subunits are held together by a helix-span-helix domain; the factors are constitutive dimers even off DNA, and all paralogue combinations heterodimerize. The site is GC-rich and sits in GC-rich promoters and neural crest enhancers. TFAP2 factors behave as pioneer factors during neural crest specification, and mutations cause branchio-oculo-facial syndrome (TFAP2A) and Char syndrome (TFAP2B). A hit identifies the family, not a paralogue.",
+ "long": "## The factors\n\nFive human genes encode this family: TFAP2A, TFAP2B, TFAP2C, TFAP2D and TFAP2E, still widely\ncalled AP-2 alpha, beta, gamma, delta and epsilon. Each protein has an N-terminal proline- and\nglutamine-rich activation domain, a basic region, and a C-terminal helix-span-helix (HSH)\ndimerization domain: two amphipathic helices separated by a long span. The HSH domain drives\ndimerization on its own and can be transplanted onto a foreign basic region, but it cannot bind\nDNA without an adjacent basic region. AP-2 is a dimer in solution as well as on DNA, and all of\nthe paralogue pairs can heterodimerize; in neural crest development TFAP2A switches partners from\nTFAP2C to TFAP2B as specification proceeds, and the two heterodimers open different sets of\nelements. Expression is restricted rather than housekeeping: TFAP2A and TFAP2B in neural crest,\nsurface ectoderm, facial mesenchyme and kidney; TFAP2C in trophoblast, germ cells and luminal\nbreast epithelium; TFAP2D mainly in retina and midbrain; TFAP2E in olfactory epithelium. TFAP2D\nis the outlier, with a divergent basic region and weaker transactivation.\n\n## The motif\n\nThe functional element is a pseudo-palindrome of two triplets, GCC and GGC, with a three-base\nspacer: GCC(N3)GGC. Older literature writes the same site as GCCYGCRGGC or in specific promoters\nas GCCTGAGGC and CCCCAGGC, and databases here report both a 9-mer form (GCCTGAGGC, GCCTCAGGC) and\nan extended 11-12-mer form (GCCCTBAGGGCA), which is the same core with an extra C/G pair on each\nflank. The data consensus for this family, GCCTCAGGGCA, is that extended form; it does not\nconflict with GCC(N3)GGC but simply includes flanking positions that are only partly informative.\nThe crystal structure of the TFAP2A DBD-HSH tandem domain on DNA explains the geometry: the two\nflat amphipathic HSH helices stack against each other through hydrophobic contacts, and a\nstabilized loop from each DBD inserts into one of two neighboring major grooves. Because the two\nloops are a fixed distance apart, spacer length, not just spacer sequence, determines binding: a\nthree-base gap is strongly preferred and altering it costs affinity. This makes the informative\npositions the GCC and GGC triplets, with the central three bases nearly free (commonly written\nYAG or TCA/TGA). The five paralogues are not separable from sequence. Every model in this family's\ndata, across all four source databases, converges on the same GCC-N3-GGC pattern with 7-15 bits.\n\n## Where it acts\n\nAP-2 sites are GC-rich, so they are enriched in GC-rich and CpG-island promoters, where they can\nbe hard to distinguish from SP/KLF GC-boxes on loose models. The functionally important sites,\nhowever, are largely distal: TFAP2A occupies thousands of enhancers at the neural plate border and\nin specified neural crest, acting as a pioneer factor that remodels chromatin ahead of the\nlineage program. In melanocytes TFAP2 paralogues bind in parallel with MITF at pigmentation genes.\nIn luminal breast cancer cells TFAP2C co-occupies enhancers with estrogen receptor and FOXA1 and\nregulates ESR1 itself. Co-occurring motifs therefore depend on the tissue: SOX and PAX motifs in\nneural crest, MITF E-boxes in melanocytes, ERE and forkhead sites in breast. AP-2 sites are common\nenough in GC-rich sequence that a genome-wide scan returns very large numbers of matches; the\nconstraint on real occupancy is TFAP2 expression, which is narrow.\n\n## Biology and disease\n\nTfap2a-null mice fail cranial neural tube closure and have severe craniofacial defects, matching\nAP-2's expression in ectoderm and migrating cranial neural crest. In humans, heterozygous TFAP2A\nmutations, mostly missense changes in the basic region and HSH domain, cause branchio-oculo-facial\nsyndrome: cervical and infra-auricular skin defects, ocular anomalies, cleft lip or palate, and\nsometimes inner ear malformation and deafness. Mutations in TFAP2B cause Char syndrome, a dominant\ncondition combining patent ductus arteriosus, a distinctive face and hand anomalies, with a\ngenotype-phenotype relationship that tracks with how much DNA binding is lost. TFAP2C is amplified\nand overexpressed in a subset of breast cancers, where it governs the luminal epithelial phenotype\nand hormone response and higher expression predicts worse outcome on anti-hormonal therapy.\nTFAP2A and TFAP2C are also required in trophoblast and germ cell programs. A structural survey of\ndisease mutations concluded that reduced or abolished DNA binding is the primary mechanism in\nTFAP2-associated disease.\n\n## Reading a hit\n\nA GCC(N3)GGC match tells you that a TFAP2 dimer could bind, and nothing about which one. The five\nparalogues share one matrix; assign a member from expression, and remember that the biologically\nactive species is often a heterodimer, so the question may have no single answer. Check the spacer\nbefore believing a match: GCC and GGC separated by two or four bases is a much weaker site than one\nseparated by three, and permissive scanning tools will happily report the wrong spacing. Because\nthe site is GC-rich, the main false-positive risk is confusion with other GC-binding families. A\nloose AP-2 model will score on SP1/KLF GC-boxes (GGGGCGGGG) and on CpG-island sequence generally;\nconversely, GC-box models score on AP-2 sites. Require the discontinuous GCC...GGC arrangement\nrather than a continuous GC run before calling a hit AP-2. The evidence base here is comparatively\nclean: HOCOMOCO models for AP2A and AP2C are grade A with combined ChIP-seq and in vitro selection\n(PSM), and the AP2B and AP2E models rest on in vitro selection alone (SM), so the family's\nspecificity does not depend on ChIP data. The one provenance caveat is the CIS-BP TFAP2D entry,\nwhich is transferred from a mouse protein at 80% DNA-binding-domain identity.",
+ "caveats": "All five TFAP2 paralogues share one matrix and heterodimerize freely, so a hit identifies the family only. The three-base spacer is part of the motif: check it, because loose scans report mis-spaced matches. The biggest practical risk is GC-richness. AP-2 models cross-score with SP/KLF GC-boxes and with CpG-island sequence, so a GC-rich promoter hit needs the discontinuous GCC...GGC arrangement to be credible. Genome-wide matches vastly outnumber occupied sites because TFAP2 expression is narrow. In vitro evidence supports the core specificity; the CIS-BP TFAP2D model is inferred from mouse at 80% domain identity.",
+ "refs": [
+  {
+   "cite": "Williams T, Admon A, Lüscher B, et al. Cloning and expression of AP-2, a cell-type-specific transcription factor that activates inducible enhancer elements. Genes Dev 1988;2:1557-69.",
+   "pmid": "3063603",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3063603/"
+  },
+  {
+   "cite": "Williams T, Tjian R. Analysis of the DNA-binding and activation properties of the human transcription factor AP-2. Genes Dev 1991;5:670-82.",
+   "pmid": "2010091",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2010091/"
+  },
+  {
+   "cite": "Williams T, Tjian R. Characterization of a dimerization motif in AP-2 and its function in heterologous DNA-binding proteins. Science 1991;251:1067-71.",
+   "pmid": "1998122",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1998122/"
+  },
+  {
+   "cite": "Liu K, Xiao Y, Gan L, et al. Structural basis for specific DNA sequence motif recognition by the TFAP2 transcription factors. Nucleic Acids Res 2023;51:8270-8282.",
+   "pmid": "37409559",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37409559/"
+  },
+  {
+   "cite": "Mitchell PJ, Timmons PM, Hébert JM, et al. Transcription factor AP-2 is expressed in neural crest cell lineages during mouse embryogenesis. Genes Dev 1991;5:105-19.",
+   "pmid": "1989904",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1989904/"
+  },
+  {
+   "cite": "Schorle H, Meier P, Buchert M, et al. Transcription factor AP-2 essential for cranial closure and craniofacial development. Nature 1996;381:235-8.",
+   "pmid": "8622765",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8622765/"
+  },
+  {
+   "cite": "Rothstein M, Simoes-Costa M. Heterodimerization of TFAP2 pioneer factors drives epigenomic remodeling during neural crest specification. Genome Res 2020;30:35-48.",
+   "pmid": "31848212",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31848212/"
+  },
+  {
+   "cite": "Seberg HE, Van Otterloo E, Loftus SK, et al. TFAP2 paralogs regulate melanocyte differentiation in parallel with MITF. PLoS Genet 2017;13:e1006636.",
+   "pmid": "28249010",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28249010/"
+  },
+  {
+   "cite": "Milunsky JM, Maher TA, Zhao G, et al. TFAP2A mutations result in branchio-oculo-facial syndrome. Am J Hum Genet 2008;82:1171-7.",
+   "pmid": "18423521",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18423521/"
+  },
+  {
+   "cite": "Satoda M, Zhao F, Diaz GA, et al. Mutations in TFAP2B cause Char syndrome, a familial form of patent ductus arteriosus. Nat Genet 2000;25:42-6.",
+   "pmid": "10802654",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10802654/"
+  },
+  {
+   "cite": "Cyr AR, Kulak MV, Park JM, et al. TFAP2C governs the luminal epithelial phenotype in mammary development and carcinogenesis. Oncogene 2015;34:436-44.",
+   "pmid": "24469049",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24469049/"
+  },
+  {
+   "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
+   "pmid": "25215497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "key": "NFE2_BACH",
+ "aka": [
+  "ARE",
+  "antioxidant response element",
+  "EpRE",
+  "electrophile response element",
+  "NF-E2 site",
+  "CsMBE",
+  "CNC-sMaf binding element",
+  "half-MARE",
+  "NRF2 site"
+ ],
+ "consensus": "TGACTCAGCA",
+ "short": "This family covers the cap-n-collar (CNC) basic region-leucine zipper activators NFE2, NFE2L1 (NRF1) and NFE2L2 (NRF2) together with the BTB-bZIP repressors BACH1 and BACH2. None of them binds DNA alone: each must heterodimerize with a small Maf protein (MAFF, MAFG or MAFK). The resulting element is the antioxidant or electrophile response element, TGACTCAGCA, an AP-1-like TGAC half-site read by the CNC or BACH subunit joined to a GC-extended half read by the small Maf. It is therefore a one-sided version of the Maf recognition element. NRF2 drives the cytoprotective gene battery and is constitutively activated by KEAP1 loss in several cancers; NFE2 is required for platelet formation; BACH1 is a heme sensor and BACH2 a lymphocyte regulator. Members cannot be distinguished from sequence.",
+ "long": "## The factors\n\nThe CNC subfamily takes its name from the Drosophila cap-n-collar protein and comprises NFE2 (p45), NFE2L1 (NRF1), NFE2L2 (NRF2) and NFE2L3 (NRF3). The BTB-bZIP proteins BACH1 and BACH2 read the same element but carry a BTB domain and act as repressors. A defining property of both sets is that they cannot bind DNA as monomers or as homodimers: every functional complex is a heterodimer with one of the small Maf proteins, which supply half of the DNA contact. Regulation differs by member. NRF2 is continuously ubiquitinated through a KEAP1-CUL3 complex and degraded; electrophiles and oxidants modify reactive KEAP1 cysteines, NRF2 escapes degradation and accumulates in the nucleus. BACH1 is a heme sensor: heme binding releases Bach1 from MAREs and promotes its nuclear export, handing the same sites to CNC activators. Expression is uneven. NFE2 is restricted to erythroid and megakaryocytic cells, NFE2L1 and NFE2L2 are broad, BACH1 is broad, and BACH2 is concentrated in B and T lymphocytes. NFE2L3 has no motif model in any of the four source collections and so appears nowhere in this atlas. One naming hazard: NFE2L1 is routinely called NRF1, but an unrelated factor, nuclear respiratory factor 1 (gene symbol NRF1), shares that abbreviation and binds a GC-rich palindrome unrelated to this element.\n\n## The motif\n\nThe element was originally defined functionally, as the core required for antioxidant-inducible transcription of rat glutathione S-transferase Ya and NAD(P)H:quinone reductase: 5'-(A/G)TGACNNNGC-3'. In the sequences that actually occur, the variable middle is almost always TCA, giving the 10 or 11 base consensus TGACTCAGCA, sometimes written with the 5-prime A as ATGACTCAGCA. Read the other way round it is TGCTGAGTCAT, the consensus derived from the 21 models collected here: the same element on the opposite strand, with models differing in how much flank they retain. The small Maf subunit reads the GC extension through Arg57 and Asn61 of the Maf basic region, the same residues that read both flanks of a full MARE. The CNC subunit reads the other half, and the residue that makes the difference is Ala502 of NRF2, which sits where Maf proteins have a tyrosine; replacing it with tyrosine makes NRF2-MafG bind like a MafG homodimer and shifts its target gene set. So the ARE is a MARE with one flank removed, and a single residue in the CNC partner explains why. Common variants include an AT-rich 3-prime extension (GCATTT or GCANTTT) present in many small-Maf-partnered models, and a truncated TGACTCAT form that is simply the AP-1 TRE and carries no Maf-side information at all. JASPAR BACH1 MA1633.2 and the CIS-BP NFE2L1 model are of this second kind, which is why their nearest neighbours fall outside the family. No member is distinguishable: NFE2, NFE2L1, NFE2L2, BACH1 and BACH2 give one motif, and the small Maf partner is likewise unidentifiable.\n\n## Where it acts\n\nAREs occur at promoters and enhancers of the cytoprotective battery: NQO1, GCLC and GCLM, HMOX1, TXN, GPX2, SLC7A11, glutathione S-transferases, and proteasome subunit genes. ChIP-seq of Nrf2 in Keap1-null mouse embryonic fibroblasts, integrated with expression data, defined 645 basal and 654 inducible direct targets with 244 in common, so the responsive set is a few hundred genes rather than thousands. The erythroid NF-E2 site of the beta-globin HS2 enhancer is a tandem ARE and MARE. The same elements are occupied competitively: a BACH-small Maf dimer keeps them repressed until heme or an electrophile replaces the repressor with an activator, so occupancy and output are decoupled. Co-occurrence with AP-1 sites is common because the core is shared.\n\n## Biology and disease\n\nNRF2 is the main transcriptional response to electrophiles and oxidants, and the pathway protects against chemical carcinogenesis, emphysema and inflammatory injury in mouse models. The same pathway is subverted in tumours: KEAP1 mutations and NFE2L2 mutations in the KEAP1-binding Neh2 domain constitutively activate NRF2 in non-small-cell lung cancer and elsewhere, where it supports growth and confers chemotherapy and radiation resistance. NFE2/p45-null mice fail to produce platelets despite intact thrombopoietin signaling, and somatic NFE2 mutations occur in myeloproliferative neoplasms. BACH2 haploinsufficiency causes a human immunodeficiency with defective B and T cell function, a phenotype linked to loss of a super-enhancer-driven expression level.\n\n## Reading a hit\n\nEvery model in this family is, by construction, a heterodimer motif: the CNC and BACH proteins cannot bind DNA alone, so roughly half the information in any NRF2 or BACH1 matrix belongs to a small Maf. A ChIP-derived NRF2 motif is therefore not evidence that NRF2 contacts those GC bases. The practical test is the 3-prime GC. TGACTCAGC is an ARE; TGACTCA alone is an AP-1 TRE and cannot be assigned here; GC on both sides is a full MARE and belongs to MAF. Because the families are nested this way, a 7 or 8 base match is not separable among AP-1, NFE2/BACH and MAF. Two entries in this collection carry motifs that do not belong: CIS-BP M08184, labelled BACH1, is a CACGTG E-box whose nearest neighbours are USF motifs, and JASPAR BACH2 MA1470.2 is a long CRE-like AANCATGACGTCATGNTT that matches outside the family. Six of the eight HOCOMOCO models here are ChIP-only (evidence P, grade B); only the NFE2 and BACH2 models add in vitro support. Finally, a hit says nothing about direction: the same element is bound by BACH1 or BACH2 to repress and by NRF2 or NFE2 to activate, and sequence cannot tell you which is present.",
+ "caveats": "Read every matrix in this family as a heterodimer motif, because the CNC and BACH proteins do not bind DNA without a small Maf; half of the information is the partner's. The family is nested between two siblings: remove the 3-prime GC and you have an AP-1 TRE, add GC on the 5-prime side and you have a full MARE, so short matches cannot be assigned. Member identity is unavailable, and so is direction, since activators (NFE2, NRF1, NRF2) and repressors (BACH1, BACH2) compete for the same sites. Two entries here carry motifs that belong elsewhere, one an E-box and one a long CRE. NFE2L3 has no model in any source database, and NFE2L1 shares the abbreviation NRF1 with an unrelated factor.",
+ "refs": [
+  {
+   "cite": "Rushmore TH, Morton MR, Pickett CB. The antioxidant responsive element. Activation by oxidative stress and identification of the DNA consensus sequence required for functional activity. J Biol Chem 1991;266:11632-9.",
+   "pmid": "1646813",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1646813/"
+  },
+  {
+   "cite": "Igarashi K, Kataoka K, Itoh K, et al. Regulation of transcription by dimerization of erythroid factor NF-E2 p45 with small Maf proteins. Nature 1994;367:568-72.",
+   "pmid": "8107826",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8107826/"
+  },
+  {
+   "cite": "Moi P, Chan K, Asunis I, et al. Isolation of NF-E2-related factor 2 (Nrf2), a NF-E2-like basic leucine zipper transcriptional activator that binds to the tandem NF-E2/AP1 repeat of the beta-globin locus control region. Proc Natl Acad Sci U S A 1994;91:9926-30.",
+   "pmid": "7937919",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7937919/"
+  },
+  {
+   "cite": "Shivdasani RA, Rosenblatt MF, Zucker-Franklin D, et al. Transcription factor NF-E2 is required for platelet formation independent of the actions of thrombopoietin/MGDF in megakaryocyte development. Cell 1995;81:695-704.",
+   "pmid": "7774011",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7774011/"
+  },
+  {
+   "cite": "Oyake T, Itoh K, Motohashi H, et al. Bach proteins belong to a novel family of BTB-basic leucine zipper transcription factors that interact with MafK and regulate transcription through the NF-E2 site. Mol Cell Biol 1996;16:6083-95.",
+   "pmid": "8887638",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8887638/"
+  },
+  {
+   "cite": "Itoh K, Wakabayashi N, Katoh Y, et al. Keap1 represses nuclear activation of antioxidant responsive elements by Nrf2 through binding to the amino-terminal Neh2 domain. Genes Dev 1999;13:76-86.",
+   "pmid": "9887101",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9887101/"
+  },
+  {
+   "cite": "Sun J, Brand M, Zenke Y, et al. Heme regulates the dynamic exchange of Bach1 and NF-E2-related factors in the Maf transcription factor network. Proc Natl Acad Sci U S A 2004;101:1461-6.",
+   "pmid": "14747657",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/14747657/"
+  },
+  {
+   "cite": "Singh A, Misra V, Thimmulappa RK, et al. Dysfunctional KEAP1-NRF2 interaction in non-small-cell lung cancer. PLoS Med 2006;3:e420.",
+   "pmid": "17020408",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17020408/"
+  },
+  {
+   "cite": "Kimura M, Yamamoto T, Zhang J, et al. Molecular basis distinguishing the DNA binding profile of Nrf2-Maf heterodimer from that of Maf homodimer. J Biol Chem 2007;282:33681-33690.",
+   "pmid": "17875642",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17875642/"
+  },
+  {
+   "cite": "Malhotra D, Portales-Casamar E, Singh A, et al. Global mapping of binding sites for Nrf2 identifies novel targets in cell survival response through ChIP-Seq profiling and network analysis. Nucleic Acids Res 2010;38:5718-34.",
+   "pmid": "20460467",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20460467/"
+  },
+  {
+   "cite": "Afzali B, Grönholm J, Vandrovcova J, et al. BACH2 immunodeficiency illustrates an association between super-enhancers and haploinsufficiency. Nat Immunol 2017;18:813-823.",
+   "pmid": "28530713",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28530713/"
+  },
+  {
+   "cite": "Yamamoto M, Kensler TW, Motohashi H. The KEAP1-NRF2 System: a Thiol-Based Sensor-Effector Apparatus for Maintaining Redox Homeostasis. Physiol Rev 2018;98:1169-1203.",
+   "pmid": "29717933",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29717933/"
+  }
+ ]
+}

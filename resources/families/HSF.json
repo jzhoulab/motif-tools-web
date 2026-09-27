@@ -1,0 +1,77 @@
+{
+ "key": "HSF",
+ "aka": [
+  "HSE",
+  "heat shock element",
+  "nGAAn repeat",
+  "HSF site",
+  "Hsp70 HSE",
+  "winged-helix HSF domain"
+ ],
+ "consensus": "nTTCnnGAAnnTTCn",
+ "short": "Heat shock factors bind the heat shock element (HSE), an array of the 5-base unit nGAAn in alternating orientation: nTTCn-nGAAn-nTTCn and longer runs. The DNA-binding domain is a winged helix, and HSF proteins trimerize through a coiled coil so that three subunits each read one 5-base unit, with further trimers loading cooperatively onto longer arrays. Humans have HSF1, HSF2, HSF4, HSF5 and the Y-linked HSFY1/HSFY2. HSF1 is the stress-inducible member, held inactive as a monomer until proteotoxic stress triggers trimerization. HSEs drive heat shock protein genes, and HSF1 activity also supports malignant transformation; HSF4 mutations cause congenital cataract.",
+ "long": "## The factors\n\nHuman HSF1 is the stress-responsive member, kept as an inactive monomer by intramolecular\ncoiled-coil interactions and by chaperone binding, and converted on proteotoxic stress into a\nDNA-binding trimer that is further tuned by phosphorylation, acetylation and SUMOylation. HSF2 is\ndevelopmentally and differentiation-regulated, binds many of the same elements, and forms\nheterotrimers with HSF1. HSF4 is expressed mainly in lens and other epithelia and, unlike HSF1, is\nconstitutively trimeric and can act as a repressor at HSF1 targets. HSF5 is poorly characterized\nand largely testis-restricted. HSFY1 and HSFY2 lie in multicopy on the Y chromosome within the\nAZFb interval and are expressed in testis. All members share an N-terminal winged-helix DNA-binding\ndomain followed by hydrophobic repeats (HR-A/B) that mediate trimerization; the domain is among the\nmost conserved DNA-binding domains in eukaryotes.\n\n## The motif\n\nThe recognition unit is 5 bases, nGAAn, and a functional heat shock element is an inverted array of\nat least three of them. The classical rendering is nTTCnnGAAnnTTCn; the two permutations,\nhead-to-head and tail-to-tail repeats of the 5-bp unit, bind with similar affinity and with\nstriking two-fold symmetry, which was the original evidence that the unit and not a longer\npalindrome is the recognition module. HSF binds arrays cooperatively, so four, five or six units\ngive progressively higher affinity and are common in strongly inducible promoters. The crystal\nstructure of an HSF DNA-binding domain showed a three-helix bundle capped by a four-stranded\nantiparallel beta sheet, a winged-helix variant of the helix-turn-helix motif, and the human HSF1\nstructure in complex with DNA showed how the trimer positions three such domains around the helix.\nEach domain reads GAA in the major groove, so the information sits on the GAA/TTC triplets while\nthe two flanking bases of each unit are nearly free. That is why database models for HSF1, HSF2 and\nHSF4 look like TTCTAGAA-cg-TTC or aGAA-cg-TTCTAGAA: they are the same three-unit array written with\ndifferent phase and strand. The HSFY and HSF5 models are different in a real way, favoring TTCGAA\nand CGTTCGAA arrangements, so the family separates loosely into an HSF1/2/4 group and an\nHSFY/HSF5 group; overall cohesion (0.66) is the lowest in this batch. Within the HSF1/2/4 group no\nmember is distinguishable from sequence.\n\n## Where it acts\n\nHSEs are promoter-proximal at the classic targets: HSPA1A/HSPA1B, HSP90AA1, DNAJB1, HSPB1 and the\nother chaperone and co-chaperone genes carry clustered HSEs within a few hundred bases of the\nstart site, usually with a paused RNA polymerase already engaged so that induction is a release\nstep rather than a recruitment step. HSF1 is also found at thousands of distal enhancers, and the\nenhancer repertoire differs between stress types: heat shock and oxidative stress drive HSF1 and\nHSF2 to partly distinct gene and enhancer sets. GAGA-type factors and, in mammals, SP1 and NF-Y\noccupy the same promoters; NF-Y binds the CCAAT boxes of several heat shock promoters. In cancer\ncells, HSF1 occupies a large set of non-chaperone genes that is distinct from the classical heat\nshock program, and in tumor stroma it drives a separate program in cancer-associated fibroblasts.\nHSF1 also localizes to sex chromatin during meiotic repression.\n\n## Biology and disease\n\nHsf1-null mice are viable but lack thermotolerance, show tissue-specific failure of stress-inducible\nchaperone expression, and develop demyelination and protein aggregate accumulation in the CNS;\nHsf1 is also required for oocyte meiosis. HSF1 activity extends lifespan in C. elegans together\nwith chaperones, linking the pathway to proteostasis in aging. In cancer, HSF1 supports malignant\ntransformation through a transcriptional program distinct from the heat shock response, high\nnuclear HSF1 predicts poor outcome in breast cancer, and loss of Hsf1 suppresses lymphoma in\np53-deficient mice. HSF4 mutations in the DNA-binding domain cause autosomal dominant lamellar and\nMarner cataract, and a homozygous splice mutation causes recessive congenital cataract; Hsf4-null\nmice develop cataract with reduced gamma-S-crystallin. HSF2 contributes to inducible hsp expression\nthrough heterotrimerization with HSF1 rather than acting alone. HSFY copy loss accompanies AZFb\ndeletions in azoospermia, though targeted studies argue HSFY genes are not themselves required for\nspermatocyte maturation, so the association may be positional.\n\n## Reading a hit\n\nA three-unit HSE is reasonably informative, and models here reach 17-21 bits, so a good match is\nworth following up. Two specific traps make this family riskier than that number suggests. First,\nnGAAn arrays overlap other purine-rich motifs. A GGAA core is the ETS recognition sequence and\nGGAAA is the NFAT core, so loose HSF models score on ETS and NFAT sites and vice versa; one\nVierstra archetype in this family is explicitly labelled HSF/NFATC for that reason. A single\nnGAAn unit is worthless as evidence. Second, and more concretely, several ChIP-derived HSF1 models\nin these collections are not HSEs at all but resemble the tRNA internal B-box promoter element\n(GTTCGAANNC): consensus strings such as GGGTTCGAATCCC appear in CIS-BP, HOCOMOCO and Vierstra\nentries labelled HSF1 or HSF, and these are the entries whose label agreement with the rest of the\nfamily is lowest. Treat a GGGTTCGAATCC-like match as a possible tRNA gene rather than an HSE. The\nevidence codes help: HSF1, HSF2 and HSF4 grade-A or grade-B models built on SELEX plus methyl-SELEX\n(PSM, SM) give the canonical three-unit HSE, while the B-box-like models are ChIP-only (P). Finally,\na genuine HSE hit does not mean the gene is stress-inducible, because HSF2 and HSF4 occupy the same\nelements constitutively and HSF4 can repress there.",
+ "caveats": "The 5-base unit nGAAn is useless alone; require at least three alternating units. nGAAn arrays cross-score with ETS (GGAA) and NFAT (GGAAA) sites, and one archetype here is labelled HSF/NFATC for that reason. Several ChIP-only models labelled HSF1 or HSF match the tRNA B-box (GGGTTCGAATCC) rather than an HSE and have the lowest label agreement in the family; a hit of that shape may be a tRNA gene. The family also splits into an HSF1/2/4 group and a distinct HSFY/HSF5 group, and cohesion is the lowest in this batch. A hit does not imply stress-inducibility, since HSF2 and HSF4 bind the same elements constitutively.",
+ "refs": [
+  {
+   "cite": "Perisic O, Xiao H, Lis JT. Stable binding of Drosophila heat shock factor to head-to-head and tail-to-tail repeats of a conserved 5 bp recognition unit. Cell 1989;59:797-806.",
+   "pmid": "2590940",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2590940/"
+  },
+  {
+   "cite": "Xiao H, Perisic O, Lis JT. Cooperative binding of Drosophila heat shock factor to arrays of a conserved 5 bp unit. Cell 1991;64:585-93.",
+   "pmid": "1899357",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1899357/"
+  },
+  {
+   "cite": "Harrison CJ, Bohm AA, Nelson HC. Crystal structure of the DNA binding domain of the heat shock transcription factor. Science 1994;263:224-7.",
+   "pmid": "8284672",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8284672/"
+  },
+  {
+   "cite": "Neudegger T, Verghese J, Hayer-Hartl M, et al. Structure of human heat-shock transcription factor 1 in complex with DNA. Nat Struct Mol Biol 2016;23:140-6.",
+   "pmid": "26727489",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26727489/"
+  },
+  {
+   "cite": "Akerfelt M, Morimoto RI, Sistonen L. Heat shock factors: integrators of cell stress, development and lifespan. Nat Rev Mol Cell Biol 2010;11:545-55.",
+   "pmid": "20628411",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20628411/"
+  },
+  {
+   "cite": "Himanen SV, Puustinen MC, Da Silva AJ, et al. HSFs drive transcription of distinct genes and enhancers during oxidative stress and heat shock. Nucleic Acids Res 2022;50:6102-6115.",
+   "pmid": "35687139",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35687139/"
+  },
+  {
+   "cite": "Zhang Y, Huang L, Zhang J, et al. Targeted disruption of hsf1 leads to lack of thermotolerance and defines tissue-specific regulation for stress-inducible Hsp molecular chaperones. J Cell Biochem 2002;86:376-93.",
+   "pmid": "12112007",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12112007/"
+  },
+  {
+   "cite": "Mendillo ML, Santagata S, Koeva M, et al. HSF1 drives a transcriptional program distinct from heat shock to support highly malignant human cancers. Cell 2012;150:549-62.",
+   "pmid": "22863008",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22863008/"
+  },
+  {
+   "cite": "Bu L, Jin Y, Shi Y, et al. Mutant DNA-binding domain of HSF4 is associated with autosomal dominant lamellar and Marner cataract. Nat Genet 2002;31:276-8.",
+   "pmid": "12089525",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12089525/"
+  },
+  {
+   "cite": "Ostling P, Björk JK, Roos-Mattjus P, et al. Heat shock factor 2 (HSF2) contributes to inducible expression of hsp genes through interplay with HSF1. J Biol Chem 2007;282:7077-86.",
+   "pmid": "17213196",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17213196/"
+  },
+  {
+   "cite": "Kichine E, Rozé V, Di Cristofaro J, et al. HSFY genes and the P4 palindrome in the AZFb interval of the human Y chromosome are not required for spermatocyte maturation. Hum Reprod 2012;27:615-24.",
+   "pmid": "22158087",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22158087/"
+  },
+  {
+   "cite": "Gaëta BA, Sharp SJ, Stewart TS. Saturation mutagenesis of the Drosophila tRNA(Arg) gene B-Box intragenic promoter element: requirements for transcription activation and stable complex formation. Nucleic Acids Res 1990;18:1541-8.",
+   "pmid": "2109308",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2109308/"
+  }
+ ]
+}

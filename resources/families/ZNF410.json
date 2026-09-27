@@ -1,0 +1,54 @@
+{
+ "key": "ZNF410",
+ "aka": [
+  "APA-1",
+  "ZNF410 site",
+  "CHD4 upstream element"
+ ],
+ "consensus": "CATCCCATAATA",
+ "short": "ZNF410 is a five-finger C2H2 zinc-finger protein that recognizes a long, information-rich element, and it is the clearest known case of a mammalian transcription factor with essentially one target gene. Two conserved clusters near CHD4, which encodes the ATPase of the NuRD chromatin remodeling complex, together carry 27 copies of the motif; comparable clusters occur nowhere else in the genome. Removing ZNF410 lowers CHD4 protein by about 60 percent, which is enough to de-repress the fetal haemoglobin genes without obvious toxicity, and the factor was found in CRISPR screens for fetal haemoglobin silencers. Matches to the motif are therefore biologically meaningful mainly when they fall in those clusters, and isolated hits elsewhere rarely correspond to occupied, functional sites.",
+ "long": "## The factors\n\nZNF410 is a single, conserved protein with no close paralogue in the human genome: a tandem array of five C2H2 zinc fingers flanked by N- and C-terminal regions that are not themselves DNA-binding domains. It is broadly expressed. The pentadactyl array is the whole of the sequence-reading apparatus, and crystallographic and solution work shows it binds DNA as a monomer with 1:1 stoichiometry. An unusual regulatory feature sits outside the fingers: AlphaFold modeling combined with small-angle X-ray scattering indicates that an acidic, serine/threonine-rich hairpin loop in the N-terminal region folds back onto the DNA-binding face of the finger array, mimicking the charge and shape of DNA. Full-length ZNF410 binds DNA less tightly than the isolated finger array, both in vitro and in cells, consistent with the loop having to be displaced before binding. This is an autoinhibitory mechanism layered on top of ordinary sequence specificity.\n\n## The motif\n\nThe element is long for a five-finger protein: a 15-base-pair site, usually written from the CHD4 clusters as CATCCCATAATA with two or three further specified positions at the 5' end (reverse complement TATTATGGGATG). All four databases in this family agree closely on it, and the family is among the most cohesive in the atlas. Five fingers contacting fifteen base pairs is the canonical three-base-pairs-per-finger arrangement, and the element contains no internal repeat or half-site: it is read in one pass, with no spacing rule and no dimerization. Information content is high and spread across the whole word, with the central CCCAT and the 3' AATA both contributing; the AT-rich 3' end is what distinguishes this motif from the many GC-rich promoter motifs it would otherwise resemble. Because ZNF410 has no paralogue, there is no paralogue ambiguity within the family: a strong match means ZNF410 or nothing.\n\n## Where it acts\n\nIn erythroid cells, ZNF410 chromatin occupancy is concentrated almost entirely at CHD4. Two regulatory elements, one upstream of the promoter and one intronic, carry 27 ZNF410 motifs between them; no other locus in the human or mouse genome has a comparable cluster, and the two clusters are conserved across mammals. Deleting them reproduces the effect of deleting ZNF410 itself, so essentially all of the factor's relevant output runs through this one gene. Occurrences of the isolated motif do exist elsewhere in the genome, and weak ZNF410 signal has been reported at some of them, but they do not measurably affect transcription. Mechanistically this is thought to be a matter of local concentration: a tight array of sites builds enough occupancy to activate, while single sites do not. The clusters sit in an open, CpG-island-adjacent promoter context rather than in tissue-specific enhancers.\n\n## Biology and disease\n\nZNF410 came out of CRISPR screens of transcription factors for regulators of fetal haemoglobin (HbF). It is not a direct repressor of HBG1/HBG2; it activates CHD4, and CHD4/NuRD in turn silences the gamma-globin genes. Knocking out ZNF410, or its mouse homolog Zfp410, drops CHD4 protein by roughly 60 percent and raises HbF substantially in adult-type erythroid cultures and in xenotransplantation, without the cellular or organismal toxicity seen when CHD4 itself is removed. That partial, buffered effect is why ZNF410 attracted interest as a therapeutic target for sickle cell disease and beta-thalassaemia, alongside BCL11A and the HBG promoter BCL11A site. Outside erythropoiesis the phenotype is mild, consistent with a factor whose only strong target is a chromatin-remodeler subunit. There is no established human disease caused by ZNF410 mutation, and no recurrent cancer association.\n\n## Reading a hit\n\nA strong match to this 15-base-pair word is good evidence for ZNF410 specifically, because the protein has no paralogue and the motif is long. What a hit does not license is the inference that the site is used. The lesson of this family is that a single occurrence of even a high-information motif is usually not a functional element; what mattered at CHD4 was 27 of them in two clusters. If your hit is a lone site, treat it as a sequence match rather than a regulatory element unless you have occupancy or perturbation data. Conversely, if you find a dense cluster of ZNF410 motifs at a locus, that is worth following up, and genome-wide scans for such clusters have been used to argue that CHD4 really is unique. The database matrices here are a mixture of in vitro (HT-SELEX/methyl-SELEX) and derived archetypes and agree well, so matrix choice matters little.",
+ "caveats": "Trust a hit for the protein but not for function. ZNF410 has no close paralogue, the motif is 15 base pairs long, and the in vitro and ChIP matrices agree, so a strong match is genuinely ZNF410's word rather than a shared GC-rich site. The problem is the opposite of the usual one: isolated matches occur throughout the genome and are largely inert, because ZNF410 needs the dense clusters found only at CHD4 to produce an effect. Do not read a single hit as a regulatory element, and be wary of published ZNF410 peak lists that include weak non-CHD4 sites. Full-length ZNF410 also binds more weakly than its isolated finger array, so in vitro affinities overstate cellular occupancy.",
+ "refs": [
+  {
+   "cite": "Lan X, Ren R, Feng R, et al. ZNF410 Uniquely Activates the NuRD Component CHD4 to Silence Fetal Hemoglobin Expression. Mol Cell 2021;81:239-254.e8.",
+   "pmid": "33301730",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33301730/"
+  },
+  {
+   "cite": "Vinjamur DS, Yao Q, Cole MA, et al. ZNF410 represses fetal globin by singular control of CHD4. Nat Genet 2021;53:719-728.",
+   "pmid": "33859416",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33859416/"
+  },
+  {
+   "cite": "Tumburu L, Thein SL. Targeting ZNF410 as a potential β-hemoglobinopathy therapy. Nat Genet 2021;53:589-590.",
+   "pmid": "33859418",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33859418/"
+  },
+  {
+   "cite": "Kaur G, Ren R, Hammel M, et al. Allosteric autoregulation of DNA binding via a DNA-mimicking protein domain: a biophysical study of ZNF410-DNA interaction using small angle X-ray scattering. Nucleic Acids Res 2023;51:1674-1686.",
+   "pmid": "36660822",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36660822/"
+  },
+  {
+   "cite": "Khandros E, Blobel GA. Elevating fetal hemoglobin: recently discovered regulators and mechanisms. Blood 2024;144:845-852.",
+   "pmid": "38728575",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38728575/"
+  },
+  {
+   "cite": "Zhang X, Xia F, Zhang X, et al. C2H2 Zinc Finger Transcription Factors Associated with Hemoglobinopathies. J Mol Biol 2024;436:168343.",
+   "pmid": "37924864",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37924864/"
+  },
+  {
+   "cite": "Zhang X, Blumenthal RM, Cheng X. Updated understanding of the protein-DNA recognition code used by C2H2 zinc finger proteins. Curr Opin Struct Biol 2024;87:102836.",
+   "pmid": "38754172",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38754172/"
+  },
+  {
+   "cite": "Jiang Y, Ye Y, Zhang X, et al. Identification and characterization of CHD4-associated eRNA as a novel modulator of fetal hemoglobin levels in β-thalassemia. Biochem Biophys Res Commun 2024;701:149555.",
+   "pmid": "38325179",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38325179/"
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "key": "HMGA",
+ "aka": [
+  "HMGA (AT-hook)",
+  "AT-hook",
+  "HMG-I / HMG-Y (HMGA1)",
+  "HMGI-C (HMGA2)",
+  "architectural transcription factor",
+  "AT-rich minor-groove binder"
+ ],
+ "consensus": "ATTTTTA",
+ "short": "HMGA1 and HMGA2 have no sequence specificity worth scanning for. They bind the minor groove of AT-rich DNA through short basic peptides called AT-hooks, which were described from the outset as recognizing DNA structure rather than base sequence, and they will bind essentially any run of A and T. The family holds three motifs, and the data show what that means: the HMGA1 models are ATTTTTA in JASPAR and TAaAATAtAtA in HOCOMOCO, the HMGA2 model is four bases at 2.2 bits, and not one of the three has another model in this family as its nearest neighbour. All three resemble models in other families more than they resemble each other. Do not treat a match here as a binding site.",
+ "long": "## The factors\n\nHMGA1 and HMGA2 are small, extremely basic, intrinsically disordered nuclear proteins of about 100 residues. They are architectural chromatin factors, among the most abundant non-histone proteins in embryonic and transformed cells, and they work by bending, straightening and unwinding DNA and by making the surrounding chromatin more permissive. HMGA1 exists as two main splice variants, historically called HMG-I and HMG-Y, which differ by an eleven-residue internal segment; HMGA2 was originally called HMGI-C. Both carry three AT-hooks in the N-terminal two-thirds and an acidic C-terminal tail.\n\nThe AT-hook itself was defined in 1990 from the mammalian HMG-I proteins as a novel peptide motif for recognizing DNA structure, built around a short palindromic core of the form Arg-Gly-Arg-Pro flanked by lysines and arginines. It was subsequently found in a wide variety of otherwise unrelated DNA-binding proteins - chromatin remodellers, transcription factors and others - where it typically serves as an auxiliary anchor rather than as the specificity-determining module. That is the key point for this page: the AT-hook is an affinity device, not a recognition device.\n\n## The motif\n\nA crystal structure of an HMGA AT-hook bound to AT-rich DNA shows the peptide lying in the narrow minor groove, making van der Waals and water-mediated contacts with the floor of the groove, and the same site can be occupied competitively by small-molecule minor-groove binders. Minor-groove width and narrowness are what the hook reads; the identity of the individual A and T bases is largely irrelevant, and a run of A:T base pairs in almost any arrangement will do. There is no discriminating base pair in the sense that a zinc-finger or homeodomain motif has one.\n\nThe three atlas models reflect this exactly. JASPAR MA2124.1 for HMGA1 gives ATTTTTA at 11.9 bits. HOCOMOCO HMGA1.H14CORE.0.P.B gives TAaAATAtAtA at 12.4 bits, but its evidence code is P - ChIP-only - and its grade is B, so there is no in vitro support for it in the atlas. The CIS-BP model M00751 for HMGA2 is the four-base Aata at 2.2 bits, transferred from mouse at 100 percent domain identity, and carries no usable information.\n\nThe diagnostic statistic is the nearest-neighbour analysis. For all three models the within-family nearest neighbour is undefined - no model in this family is another's closest match - while the best out-of-family similarity is 0.72 for the HOCOMOCO model, 0.81 for the JASPAR model and 0.80 for the CIS-BP model. Every model here looks more like something in another family than like its own family-mates. Reported cohesion of 0.54 flatters the situation. An ATTTTTA-style heptamer is not distinguishable from a homeodomain TAAT site, an ARID AT core, a FOX forkhead flank, or unremarkable AT-rich intergenic sequence; at human base composition a given AT-only heptamer is expected several hundred thousand times in the genome.\n\n## Where it acts\n\nBecause binding is structural, HMGA proteins are found across AT-rich DNA, in nuclear scaffold and matrix-attachment regions, in nucleosome-poor and linker DNA, and at the AT-rich flanks of enhancers. Where they matter functionally, it is through cooperation. The textbook case is the interferon-beta enhancer, where HMG I(Y) is required for NF-kB-dependent virus induction and then for assembly of the complete enhanceosome together with ATF-2/c-Jun and IRF proteins: HMGA bends the DNA into the geometry the other factors need, and its own contribution to sequence recognition is nil. The generalisation is that an HMGA site is defined by its partners, not by its sequence, which is why HMGA occupancy maps are broad and shallow rather than peaked.\n\n## Biology and disease\n\nHMGA2 is the mouse pygmy gene: the pygmy phenotype was mapped to disruption of Hmgi-c, giving small, lean mice and establishing HMGA2 as a growth regulator. In humans, HMGA2 variants and microdeletions cause Silver-Russell syndrome and related growth-restriction phenotypes, and common variants at the locus are associated with adult height. HMGA2 is also one of the most recurrent fusion partners in benign mesenchymal tumours: translocations at 12q14-15 in lipoma, uterine leiomyoma and related lesions repeatedly truncate HMGA2 after its AT-hooks, generating fusions such as HMGA2-SETBP1 that remove the acidic tail while retaining DNA binding. HMGA1 is re-expressed in most aggressive carcinomas, is a driver in breast cancer, and is also involved in insulin receptor regulation and metabolic disease.\n\n## Reading a hit\n\nEffectively, do not read it. If you scan with these models, expect several hundred thousand matches, no ability to separate HMGA1 from HMGA2, and no ability to separate either from any other AT-preferring factor or from bulk AT-rich sequence. HMGA occupancy cannot be predicted from sequence at the resolution a motif scan implies, and a strong score here carries no information about function. If an AT-rich region genuinely matters in your data, the useful questions are whether it is a matrix-attachment or nucleosome-depleted region and which sequence-specific factors bind alongside - HMGA is the geometry, not the address.",
+ "caveats": "HMGA proteins are not sequence-specific: the AT-hook reads minor-groove structure, and any run of A and T will bind. Say it plainly - a match here is not a binding site. All three models are mutually dissimilar enough that none is another's nearest neighbour, while each has an out-of-family match at 0.72 to 0.81, so the family does not cohere. The HOCOMOCO HMGA1 model is ChIP-only (grade B) with no in vitro support in the atlas; the CIS-BP HMGA2 model is four bases at 2.2 bits and unusable. Expect hundreds of thousands of genome-wide matches, indistinguishable from homeodomain, ARID and forkhead AT preferences or from bulk AT-rich sequence.",
+ "refs": [
+  {
+   "cite": "Reeves R, Nissen MS. The A.T-DNA-binding domain of mammalian high mobility group I chromosomal proteins. A novel peptide motif for recognizing DNA structure. J Biol Chem 1990;265:8573-82.",
+   "pmid": "1692833",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1692833/"
+  },
+  {
+   "cite": "Aravind L, Landsman D. AT-hook motifs identified in a wide variety of DNA-binding proteins. Nucleic Acids Res 1998;26:4413-21.",
+   "pmid": "9742243",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9742243/"
+  },
+  {
+   "cite": "Nué-Martinez JJ, Maturana M, Lagartera L, et al. Crystal structure of the HMGA AT-hook 1 domain bound to the minor groove of AT-rich DNA and inhibition by antikinetoplastid drugs. Sci Rep 2024;14:26173.",
+   "pmid": "39478017",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39478017/"
+  },
+  {
+   "cite": "Thanos D, Maniatis T. The high mobility group protein HMG I(Y) is required for NF-kappa B-dependent virus induction of the human IFN-beta gene. Cell 1992;71:777-89.",
+   "pmid": "1330326",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1330326/"
+  },
+  {
+   "cite": "Thanos D, Maniatis T. Virus induction of human IFN beta gene expression requires the assembly of an enhanceosome. Cell 1995;83:1091-100.",
+   "pmid": "8548797",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8548797/"
+  },
+  {
+   "cite": "Zhou X, Benson KF, Ashar HR, et al. Mutation responsible for the mouse pygmy phenotype in the developmentally regulated factor HMGI-C. Nature 1995;376:771-4.",
+   "pmid": "7651535",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7651535/"
+  },
+  {
+   "cite": "Reeves R. Molecular biology of HMGA proteins: hubs of nuclear function. Gene 2001;277:63-81.",
+   "pmid": "11602345",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11602345/"
+  },
+  {
+   "cite": "Maharaj AV, Cottrell E, Thanasupawat T, et al. Characterization of HMGA2 variants expands the spectrum of Silver-Russell syndrome. JCI Insight 2024;9.",
+   "pmid": "38516887",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38516887/"
+  },
+  {
+   "cite": "Sgarra R, Pegoraro S, Ros G, et al. High Mobility Group A (HMGA) proteins: Molecular instigators of breast cancer onset and progression. Biochim Biophys Acta Rev Cancer 2018;1869:216-229.",
+   "pmid": "29518471",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29518471/"
+  },
+  {
+   "cite": "Panagopoulos I, Gorunova L, Bjerkehagen B, et al. The recurrent chromosomal translocation t(12;18)(q14~15;q12~21) causes the fusion gene HMGA2-SETBP1 and HMGA2 expression in lipoma and osteochondrolipoma. Int J Oncol 2015;47:884-90.",
+   "pmid": "26202160",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26202160/"
+  }
+ ]
+}

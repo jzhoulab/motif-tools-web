@@ -1,0 +1,74 @@
+{
+ "key": "GFI",
+ "aka": [
+  "GFI1",
+  "GFI1B",
+  "Gfi-1",
+  "Gfi-1b",
+  "growth factor independence 1",
+  "ZNF163",
+  "SNAG-domain repressor site",
+  "AATC core"
+ ],
+ "consensus": "TAAATCACWGC",
+ "short": "GFI1 and GFI1B are six-fingered C2H2 zinc-finger repressors of blood cell development that bind a well-defined AATC-core site, TAAATCAC(A/T)GC. Only fingers 3, 4 and 5 make the sequence-specific contacts; repression comes from the N-terminal SNAG peptide, which docks into LSD1 and pulls in the LSD1/CoREST complex. GFI1 acts in granulocyte, T-cell and hematopoietic stem cell programs, GFI1B in erythroid and megakaryocyte programs, and the two proteins bind indistinguishable sequences, so a motif hit identifies the pair rather than one member. Dominant-negative GFI1 mutations cause severe congenital neutropenia; dominant-negative GFI1B mutations cause gray platelet syndrome. The site is AT-rich, information-dense and unusually specific for a C2H2 motif.",
+ "long": "## The factors\n\nTwo paralogues: GFI1 (growth factor independence 1) and GFI1B, each about 330-420 residues, with six C-terminal C2H2 zinc fingers and a 20-residue N-terminal SNAG domain. Gfi-1 was found as the target of provirus integration in rat T-cell lymphoma lines that had been selected for interleukin-2-independent growth, which is how it got its name. The SNAG peptide is the repression module: it inserts into the substrate-binding pocket of the histone demethylase LSD1 (KDM1A) and thereby recruits the LSD1/CoREST/HDAC complex to GFI-bound sites, so both proteins work as sequence-specific adaptors for a chromatin-modifying machine rather than as intrinsic repressors. They bind DNA as monomers; the two paralogues share the same DNA-binding surface but differ outside it, and they are largely non-overlapping in expression. GFI1 is expressed in hematopoietic stem cells, granulocyte-monocyte progenitors, T cells and inner ear sensory cells; GFI1B in erythroid and megakaryocytic cells. Because they cross-repress each other's genes, their expression domains are largely exclusive despite identical sequence preference.\n\n## The motif\n\nThe site was defined by random-oligonucleotide selection with recombinant GFI1 as TAAATCAC(A/T)GCA, with an AATC core whose bases are the most sensitive to mutation; methylation interference and mutant probes confirmed the internal hierarchy, and deletion mapping showed that only zinc fingers 3, 4 and 5 are needed for sequence-specific binding - three adjacent fingers reading roughly nine bases of major groove, which matches the length of the informative region. The family data agrees closely. JASPAR renders GFI1 as AAATCACTGC and Gfi1B as AAATCACAGC; the Vierstra archetype AC0241:GFI/GFI1B reads AAATCACWGC; and the HOCOMOCO grade-A models are written GCTGTGATTT, which is the reverse complement of the same site rather than a different motif. At 12-15 bits this is one of the more informative C2H2 motifs, and the AT-rich AATC core is distinctive enough that false positives are less of a problem than for E-box or GC-box families. Two entries in the data are less useful: a CIS-BP GFI1 model reduced to AATC alone (2.6 bits) and a second Vierstra archetype, AC0394:GFI, reading ATATCAC, which matches the main GFI cluster poorly (0.72). One long HOCOMOCO GFI1B model, AGTGVNNTGCAGTGATTT, looks like two core sites in opposite orientation separated by a variable spacer; whether that reflects a genuine dimeric arrangement or a selection artifact is not settled, and the single-site models are the safer default. GFI1 and GFI1B motifs are 0.96 similar and cannot be separated from sequence.\n\n## Where it acts\n\nGFI sites sit in promoters and enhancers of lineage-restricted blood genes rather than in CpG islands; the motif is AT-rich and therefore under-represented in CpG-island promoters. The best-validated target is ELANE (ELA2, neutrophil elastase), which GFI1 represses in granulocyte progenitors; GFI1 and GFI1B also bind their own and each other's regulatory regions, producing a cross-antagonistic circuit that helps keep the myeloid and erythroid programs apart. Genome-wide, GFI1 co-occupies myeloid enhancers with PU.1/SPI1, RUNX1, and the LSD1/CoREST complex, and GFI1B with GATA1 and TAL1 in erythroid and megakaryocytic cells. Because occupancy depends on LSD1 recruitment, GFI-bound sites are typically nucleosome-depleted regions marked by H3K4 methylation that is then removed.\n\n## Biology and disease\n\nGfi1-null mice have severe neutropenia with an accumulation of atypical immature myeloid cells and heightened inflammatory responses. In humans, heterozygous dominant-negative GFI1 mutations (the recurrent N382S substitution in zinc finger 5) cause severe congenital neutropenia and derepress ELA2, tying the human disease directly to loss of DNA binding. Gfi1b-null mouse embryos die around midgestation with arrested erythroid and megakaryocytic differentiation, and in humans a dominant-negative GFI1B truncation causes gray platelet syndrome, with macrothrombocytopenia and platelets deficient in alpha-granules. Both genes appear in leukemia: GFI1 levels modulate the course of myeloid leukemia and a low-expression GFI1 variant is associated with acute myeloid leukemia risk, while GFI1B is recurrently affected in myelodysplastic contexts. The clinical genetics of both genes are dominated by dominant-negative alleles rather than simple haploinsufficiency, which is consistent with a protein that occupies sites and recruits a corepressor.\n\n## Reading a hit\n\nThis is one of the better-behaved families in the C2H2 world. The AATC-core site is long, AT-rich and information-dense, so a strong match is meaningful and unlikely to be a coincidence in a short query. What a match does not tell you is which paralogue: GFI1 and GFI1B read the same sequence, and the Vierstra archetype name AC0241:GFI/GFI1B is an explicit statement that the two were not separable. Use expression to decide - a granulocyte or T-cell context favors GFI1, an erythroid or megakaryocytic one GFI1B. Evidence types are mostly good: HOCOMOCO GFI1 and GFI1B core models are grade A with PSM evidence (ChIP plus HT-SELEX plus methyl-HT-SELEX), and JASPAR MA0038.3 for GFI1 is HT-SELEX, so the in vitro basis is solid. Two entries warrant care: JASPAR MA0483.2 is a ChIP-seq-derived matrix for mouse Gfi1B, so it carries both a cross-species and an indirect-binding caveat, and the 4 bp CIS-BP GFI1 entry is too degenerate to scan with usefully.",
+ "caveats": "The motif itself is trustworthy - long, AT-rich, 12-15 bits, defined in vitro by site selection and reproduced by HT-SELEX - so a strong match is usually a real GFI-family site. What it cannot do is name the paralogue: GFI1 and GFI1B motifs are 0.96 similar and one Vierstra archetype merges them by name. Resolve the ambiguity with cell type, not sequence. Avoid the 4 bp CIS-BP GFI1 entry (AATC, 2.6 bits), which will match everywhere, and treat the mouse ChIP-derived JASPAR Gfi1B matrix as the weakest member. The extended double-site HOCOMOCO GFI1B model should not be assumed to represent obligate dimeric binding.",
+ "refs": [
+  {
+   "cite": "Gilks CB, Bear SE, Grimes HL, et al. Progression of interleukin-2 (IL-2)-dependent rat T cell lymphoma lines to IL-2-independent growth following activation of a gene (Gfi-1) encoding a novel zinc finger protein. Mol Cell Biol 1993;13:1759-68.",
+   "pmid": "8441411",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8441411/"
+  },
+  {
+   "cite": "Zweidler-Mckay PA, Grimes HL, Flubacher MM, et al. Gfi-1 encodes a nuclear zinc finger protein that binds DNA and functions as a transcriptional repressor. Mol Cell Biol 1996;16:4024-34.",
+   "pmid": "8754800",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8754800/"
+  },
+  {
+   "cite": "Grimes HL, Chan TO, Zweidler-McKay PA, et al. The Gfi-1 proto-oncoprotein contains a novel transcriptional repressor domain, SNAG, and inhibits G1 arrest induced by interleukin-2 withdrawal. Mol Cell Biol 1996;16:6263-72.",
+   "pmid": "8887656",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8887656/"
+  },
+  {
+   "cite": "Saleque S, Kim J, Rooke HM, et al. Epigenetic regulation of hematopoietic differentiation by Gfi-1 and Gfi-1b is mediated by the cofactors CoREST and LSD1. Mol Cell 2007;27:562-72.",
+   "pmid": "17707228",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17707228/"
+  },
+  {
+   "cite": "Karsunky H, Zeng H, Schmidt T, et al. Inflammatory reactions and severe neutropenia in mice lacking the transcriptional repressor Gfi1. Nat Genet 2002;30:295-300.",
+   "pmid": "11810106",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11810106/"
+  },
+  {
+   "cite": "Person RE, Li FQ, Duan Z, et al. Mutations in proto-oncogene GFI1 cause human neutropenia and target ELA2. Nat Genet 2003;34:308-12.",
+   "pmid": "12778173",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12778173/"
+  },
+  {
+   "cite": "Saleque S, Cameron S, Orkin SH. The zinc-finger proto-oncogene Gfi-1b is essential for development of the erythroid and megakaryocytic lineages. Genes Dev 2002;16:301-6.",
+   "pmid": "11825872",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11825872/"
+  },
+  {
+   "cite": "Monteferrario D, Bolar NA, Marneth AE, et al. A dominant-negative GFI1B mutation in the gray platelet syndrome. N Engl J Med 2014;370:245-53.",
+   "pmid": "24325358",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24325358/"
+  },
+  {
+   "cite": "Möröy T, Vassen L, Wilkes B, et al. From cytopenia to leukemia: the role of Gfi1 and Gfi1b in blood formation. Blood 2015;126:2561-9.",
+   "pmid": "26447191",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26447191/"
+  },
+  {
+   "cite": "Yin Y, Morgunova E, Jolma A, et al. Impact of cytosine methylation on DNA binding specificities of human transcription factors. Science 2017;356.",
+   "pmid": "28473536",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28473536/"
+  },
+  {
+   "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
+   "pmid": "32728250",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  }
+ ]
+}

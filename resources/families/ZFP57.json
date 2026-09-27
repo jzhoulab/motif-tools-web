@@ -1,0 +1,67 @@
+{
+ "key": "ZFP57",
+ "aka": [
+  "ZFP57 site",
+  "imprinting control region hexamer",
+  "methylated TGCCGC",
+  "ZNF445",
+  "ZKSCAN15",
+  "germline DMR hexamer"
+ ],
+ "consensus": "TGCCGC",
+ "short": "ZFP57 is a KRAB zinc-finger protein that reads a six-base sequence, TGCCGC, but only when the CpG inside it is methylated. That combination of a short site and a methylation requirement lets it mark the methylated parental allele at imprinting control regions, the germline-methylated switches that restrict about two dozen loci to expression from one parent's chromosome. ZFP57 binds together with the corepressor TRIM28/KAP1 and DNA methyltransferases, shielding those regions from the wave of demethylation that follows fertilization. The larger zinc finger ZNF445 reads the same element and covers most of the same regions, which is why loss of ZFP57 alone produces imprinting defects with incomplete penetrance. In humans, recessive ZFP57 mutations cause transient neonatal diabetes with hypomethylation at multiple imprinted loci.",
+ "long": "## The factors\n\nZFP57 (6p22.1, formerly C6orf40) is a KRAB zinc-finger protein with a short tandem array of C2H2 fingers, of which only the first two are needed for sequence recognition. Like other KZFPs it carries an N-terminal KRAB domain that binds the corepressor TRIM28/KAP1, and in mouse embryonic stem cells ZFP57 and KAP1 occupy imprinting control regions (ICRs) together with DNA methyltransferases and the hemimethylated-DNA-binding protein NP95/UHRF1 (Quenneville et al. 2011). ZFP57 is a maternal-zygotic effect gene: protein and transcript are supplied by the oocyte and the gene is also expressed in the embryo (Li et al. 2008). ZNF445 (3p21.31, also catalogued as ZKSCAN15/ZSCAN47) is a much larger zinc finger that binds the same regions, can be traced back to the origins of imprinting, and is expressed earlier in the embryo than ZNF/ZFP57 (Takahashi et al. 2019). This entry holds five matrices for the two proteins; a sixth label, the Vierstra archetype AC0364, is annotated only as \"ZFP\".\n\n## The motif\n\nThe literature consensus is the hexamer TGCCGC carrying a methylated CpG. A 1.0 Angstrom crystal structure of the two relevant Zfp57 fingers on fully methylated DNA shows finger 1 contacting the 5' half (TGC) and finger 2 the 3' half (CGC). The two 5-methylcytosines are read asymmetrically: one packs against Arg178, which simultaneously contacts the neighbouring 3' guanine in a 5mC-Arg-G arrangement, while the other is read through a layer of ordered water. Affinity falls for unmodified DNA and for the oxidation products of 5mC, and two point mutations found in patients abolish binding (Liu et al. 2012). The atlas matrices agree with this. JASPAR MA1583.2 is TGCCGCA; HOCOMOCO, CIS-BP and the Vierstra archetype all give GCGGCA, which is the reverse complement of TGCCGC, so the apparent disagreement with the literature consensus is only a choice of strand. Family cohesion is 0.76, the highest value among the zinc-finger entries in this group and the level expected of a genuinely single motif. One member does not fit: the CIS-BP model for ZNF445 (M07674) is a 29 bp, 31-bit matrix unrelated to the hexamer, and nothing else in the atlas resembles it.\n\n## Where it acts\n\nICRs, also called germline differentially methylated regions, number on the order of 20 to 25 in human and mouse and include the regions controlling SNRPN, KCNQ1OT1, H19/IGF2, GNAS and PLAGL1. ZFP57 and KAP1 bind only the H3K9me3-bearing, DNA-methylated allele, so occupancy is monoallelic by construction (Quenneville et al. 2011). Binding is not confined to ICRs: several tens of additional methylated loci carry the hexamer and lose methylation when ZFP57 is deleted in ES cells, and allele-specific ZFP57 binding also occurs at non-imprinted monoallelically expressed regions (Strogantsev et al. 2015). Real ICRs usually contain a cluster of hexamers rather than one copy, and clustering discriminates far better than any single match.\n\n## Biology and disease\n\nMice lacking only zygotic Zfp57 show partial neonatal lethality; removing maternal and zygotic function together is close to fully embryonic lethal, and maternal methylation imprints fail to be established at the Snrpn region (Li et al. 2008). In humans, recessive ZFP57 mutations cause transient neonatal diabetes mellitus with mosaic hypomethylation at multiple imprinted loci, the first heritable multi-locus imprinting disorder compatible with life (Mackay et al. 2008), with long-term clinical follow-up reported later (Boonen et al. 2013). Penetrance is incomplete, which is what motivated the search that found ZNF445: in mice Zfp445 and Zfp57 together maintain all but one ICR, and in humans ZNF445 is intolerant of loss-of-function variation, suggesting it carries more of the load than ZFP57 (Takahashi et al. 2019).\n\n## Reading a hit\n\nA six-base site occurs by chance roughly once every few kilobases per strand, so an isolated TGCCGC match licenses no conclusion. Three things make a hit interesting: the CpG is methylated in your sample, several copies cluster within a few hundred bases, and the interval overlaps an annotated germline DMR. Position-weight-matrix scanning cannot see methylation, so a scan returns candidate sites only. ZFP57 and ZNF445 cannot be separated from sequence. Neither can every GCGGC-containing zinc-finger motif: the HOCOMOCO model for ZNF729, a KRAB zinc finger with no known imprinting role, is TGCGGCAG, and its nearest neighbour anywhere in the atlas is the ZFP57 matrix. The HOCOMOCO ZFP57 model itself is ChIP-derived (evidence code P, grade B), so confidence that this protein binds this sequence rests on the structure and biochemistry in the primary papers rather than on the motif model.",
+ "caveats": "A TGCCGC match is a candidate, not a site. The hexamer is short enough to appear roughly a million times in the genome, and the property that makes it functional, CpG methylation, is invisible to motif scanning. Treat a hit as meaningful only with methylation data, clustered copies, or germline-DMR annotation. The motif does not distinguish ZFP57 from ZNF445, and short GCGGC-containing motifs of unrelated KRAB zinc fingers such as ZNF729 score almost as well. The ZFP57 models in HOCOMOCO and the Vierstra set are ChIP-derived or unnamed; the in vitro and structural support comes from the primary literature, not from these matrices.",
+ "refs": [
+  {
+   "cite": "Quenneville S, Verde G, Corsinotti A, et al. In embryonic stem cells, ZFP57/KAP1 recognize a methylated hexanucleotide to affect chromatin and DNA methylation of imprinting control regions. Mol Cell 2011;44:361-72.",
+   "pmid": "22055183",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22055183/"
+  },
+  {
+   "cite": "Liu Y, Toh H, Sasaki H, et al. An atomic model of Zfp57 recognition of CpG methylation within a specific DNA sequence. Genes Dev 2012;26:2374-9.",
+   "pmid": "23059534",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23059534/"
+  },
+  {
+   "cite": "Li X, Ito M, Zhou F, et al. A maternal-zygotic effect gene, Zfp57, maintains both maternal and paternal imprints. Dev Cell 2008;15:547-57.",
+   "pmid": "18854139",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18854139/"
+  },
+  {
+   "cite": "Mackay DJ, Callaway JL, Marks SM, et al. Hypomethylation of multiple imprinted loci in individuals with transient neonatal diabetes is associated with mutations in ZFP57. Nat Genet 2008;40:949-51.",
+   "pmid": "18622393",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18622393/"
+  },
+  {
+   "cite": "Takahashi N, Coluccio A, Thorball CW, et al. ZNF445 is a primary regulator of genomic imprinting. Genes Dev 2019;33:49-54.",
+   "pmid": "30602440",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30602440/"
+  },
+  {
+   "cite": "Strogantsev R, Krueger F, Yamazawa K, et al. Allele-specific binding of ZFP57 in the epigenetic regulation of imprinted and non-imprinted monoallelic expression. Genome Biol 2015;16:112.",
+   "pmid": "26025256",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26025256/"
+  },
+  {
+   "cite": "Boonen SE, Mackay DJ, Hahnemann JM, et al. Transient neonatal diabetes, ZFP57, and hypomethylation of multiple imprinted loci: a detailed follow-up. Diabetes Care 2013;36:505-12.",
+   "pmid": "23150280",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23150280/"
+  },
+  {
+   "cite": "Imbeault M, Helleboid PY, Trono D. KRAB zinc-finger proteins contribute to the evolution of gene regulatory networks. Nature 2017;543:550-554.",
+   "pmid": "28273063",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28273063/"
+  },
+  {
+   "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
+   "pmid": "37971293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  },
+  {
+   "cite": "Rauluseviciute I, Riudavets-Puig R, Blanc-Mathieu R, et al. JASPAR 2024: 20th anniversary of the open-access database of transcription factor binding profiles. Nucleic Acids Res 2024;52:D174-D182.",
+   "pmid": "37962376",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37962376/"
+  }
+ ]
+}

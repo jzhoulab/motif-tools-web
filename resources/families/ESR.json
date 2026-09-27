@@ -1,0 +1,74 @@
+{
+ "key": "ESR",
+ "aka": [
+  "ERE",
+  "estrogen response element",
+  "estrogen-responsive element",
+  "vitellogenin ERE",
+  "ERalpha/ERbeta site",
+  "IR3 (AGGTCA-type)",
+  "NR3A",
+  "steroid hormone receptors (TFClass)"
+ ],
+ "consensus": "AGGTCAnnnTGACCT",
+ "short": "The estrogen receptors ERalpha (ESR1) and ERbeta (ESR2) are estradiol-activated nuclear receptors that bind DNA as homodimers on the estrogen response element, a 15 bp inverted repeat of the hexamer AGGTCA with a 3 bp spacer: AGGTCAnnnTGACCT, usually quoted as its 13 bp core GGTCAnnnTGACC. The element differs from the glucocorticoid-type half-site by only two base pairs, and the same 3 bp spacing and dimer geometry are shared with the steroid receptors, so the half-site sequence rather than the architecture is what marks it as estrogenic. ESR1 and ESR2 cannot be told apart by sequence. These sites drive the estrogen program in breast, uterus, bone and liver, and they are the regulatory target of tamoxifen, aromatase inhibitors and fulvestrant.",
+ "long": "## The factors\n\nTwo paralogues: ESR1 (ERalpha) and ESR2 (ERbeta), subfamily NR3A. Both have an N-terminal AF-1 region, a C4 double-zinc-finger DNA-binding domain (DBD), a hinge and a ligand-binding domain that binds 17beta-estradiol and, with different consequences, tamoxifen, raloxifene and fulvestrant. They bind as homodimers and can form ERalpha/ERbeta heterodimers. ERalpha is the dominant form in breast epithelium, uterus, liver, adipose, bone and hypothalamus; ERbeta is lower and more restricted, with ovarian granulosa cells, prostate, colon and some immune cells the usual examples, and much of its biology remains contested (Hewitt and Korach 2018). Nine motif models fall in this family (JASPAR 2, HOCOMOCO 4, CIS-BP 2, Vierstra 1), all labelled ESR1 or ESR2.\n\n## The motif\n\nThe estrogen response element (ERE) is an inverted repeat of AGGTCA with three intervening bases: 5'-AGGTCAnnnTGACCT-3', frequently written as the 13 bp core GGTCAnnnTGACC. It was first defined functionally in the 5' flanking region of the Xenopus vitellogenin A2 gene (Klein-Hitpass et al. 1986) and reviewed in detail by Gruber et al. (2004). The crystal structure of the ERalpha DBD bound to a consensus palindrome showed a symmetrical dimer reading two 6 bp half-sites separated by three base pairs, and explained how the receptor discriminates its own half-site from the glucocorticoid half-site, which differs by only two base pairs (Schwabe et al. 1993). Three residues in the first zinc finger decide which of the two half-sites a receptor reads, and swapping them interconverts glucocorticoid and estrogen specificity (Umesono and Evans 1989).\n\nSpacing is the other half of the rule. A 3 bp spacer with the half-sites pointing at each other is an ERE; the same AGGTCA hexamers arranged as direct repeats separated by 1-5 bp are elements for RXR heterodimers instead, and a single extended half-site with a 5' A/T extension is an ERR or NR5A element. The models here are consistent with this: the data consensus is AGGTCAcvnTGnCCt, a 15 bp inverted repeat whose 3' half-site is noticeably more degenerate than the 5' half in ChIP-derived matrices. Common variants are EREs with one or two mismatches, ERE half-sites flanked by SP1 or AP-1 sites, and no ERE at all where ERalpha works by tethering to AP-1 or SP1.\n\nESR1 and ESR2 are not distinguishable: their models are 0.86-1.00 similar and the Vierstra archetype in this family, AC0122, is labelled ESR/ESRRA because estrogen and estrogen-related receptor motifs cluster together. The confusion runs both ways and is partly biological rather than a labelling error: the CIS-BP ESR1 model M07985 is an extended monomeric half-site (cCAAGGTCA), an ERR-type element, and the family data flags it as belonging with ESRR, while a CIS-BP ESRRA model is a full ERE. ERRalpha and ERRbeta do activate transcription through consensus EREs, whereas ERbeta activity is restricted to the ERE (Vanacker et al. 1999).\n\n## Where it acts\n\nNear-consensus 15 bp EREs are abundant: a genome-wide screen found roughly 70,000 across the human and mouse genomes, enriched near transcription start sites, with only about 1% conserved in the flanking regions of orthologous genes (Bourdeau et al. 2004). Actual ERalpha occupancy is far smaller and mostly distal: genome-wide mapping in MCF-7 cells placed authentic binding sites predominantly in enhancers rather than promoters (Carroll et al. 2006). FOXA1 is required for most of that occupancy and reprogramming FOXA1 redistributes ERalpha (Hurtado et al. 2011); GATA3, TFAP2C and PGR also shape it. ER binding sites differ between tumours and that differential binding tracks clinical outcome (Ross-Innes et al. 2012). Many peaks contain only a half-site, consistent with indirect or tethered recruitment.\n\n## Biology and disease\n\nEREs carry the estrogen response in mammary and uterine epithelium, bone remodelling, hepatic lipid handling and hypothalamic feedback on gonadotropins. Esr1-null mice are infertile with hypoplastic uterus and anovulatory ovaries; Esr2-null mice have milder, largely ovarian phenotypes. About three quarters of breast cancers are ER-positive and are treated by blocking the receptor or depleting its ligand. Acquired ESR1 ligand-binding-domain mutations, chiefly Y537S and D538G, are recurrent in endocrine-resistant metastatic breast cancer and make the receptor constitutively active (Robinson et al. 2013); because they do not change the DBD, the motif itself is unaltered, and the consequence is where and how much the receptor binds rather than what it binds.\n\n## Reading a hit\n\nA full 15 bp ERE is a reasonably specific signal for the estrogen/ERR branch, but it cannot tell ESR1 from ESR2, and it overlaps with ERRalpha and ERRbeta, which bind consensus EREs. Check the spacing and orientation before naming anything: AGGTCA inverted with a 3 bp gap is an ERE, direct repeats are RXR-heterodimer elements, and a lone AGGTCA with a 5' AA is an ERR element. With about 10 informative positions, exact consensus 13-mers occur on the order of 10^3 times per haploid genome and near-matches tens of thousands of times, so most hits are not bound in any given cell. Two of the four HOCOMOCO models here are bare half-sites (AGGTCA, TGACCT) and all four are ChIP-derived (evidence code P), which in this family means they can include tethering signal; there is no in vitro (S/M) model for either receptor in this set. A ChIP peak with no ERE is expected, not anomalous.",
+ "caveats": "A full inverted-repeat ERE is among the more specific nuclear receptor signals, but it marks the estrogen/ERR branch rather than a receptor: ESR1 and ESR2 are indistinguishable by sequence, and ERRalpha and ERRbeta bind consensus EREs too. One CIS-BP model labelled ESR1 in this family is actually an extended ERR-type half-site and is flagged as such. All four HOCOMOCO models here are ChIP-derived, with no in vitro entry for either receptor, so they may carry signal from tethered recruitment via AP-1 or SP1; conversely, many genuine ER peaks contain only a half-site. Near-consensus EREs number in the tens of thousands genome-wide, so pair a hit with accessibility or ChIP evidence.",
+ "refs": [
+  {
+   "cite": "Klein-Hitpass L, Schorpp M, Wagner U, et al. An estrogen-responsive element derived from the 5' flanking region of the Xenopus vitellogenin A2 gene functions in transfected human cells. Cell 1986;46:1053-61.",
+   "pmid": "3463433",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3463433/"
+  },
+  {
+   "cite": "Umesono K, Evans RM. Determinants of target gene specificity for steroid/thyroid hormone receptors. Cell 1989;57:1139-46.",
+   "pmid": "2500251",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2500251/"
+  },
+  {
+   "cite": "Schwabe JW, Chapman L, Finch JT, et al. The crystal structure of the estrogen receptor DNA-binding domain bound to DNA: how receptors discriminate between their response elements. Cell 1993;75:567-78.",
+   "pmid": "8221895",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8221895/"
+  },
+  {
+   "cite": "Vanacker JM, Pettersson K, Gustafsson JA, et al. Transcriptional targets shared by estrogen receptor- related receptors (ERRs) and estrogen receptor (ER) alpha, but not by ERbeta. EMBO J 1999;18:4270-9.",
+   "pmid": "10428965",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10428965/"
+  },
+  {
+   "cite": "Gruber CJ, Gruber DM, Gruber IM, et al. Anatomy of the estrogen response element. Trends Endocrinol Metab 2004;15:73-8.",
+   "pmid": "15036253",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15036253/"
+  },
+  {
+   "cite": "Bourdeau V, Deschênes J, Métivier R, et al. Genome-wide identification of high-affinity estrogen response elements in human and mouse. Mol Endocrinol 2004;18:1411-27.",
+   "pmid": "15001666",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15001666/"
+  },
+  {
+   "cite": "Carroll JS, Meyer CA, Song J, et al. Genome-wide analysis of estrogen receptor binding sites. Nat Genet 2006;38:1289-97.",
+   "pmid": "17013392",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17013392/"
+  },
+  {
+   "cite": "Hurtado A, Holmes KA, Ross-Innes CS, et al. FOXA1 is a key determinant of estrogen receptor function and endocrine response. Nat Genet 2011;43:27-33.",
+   "pmid": "21151129",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21151129/"
+  },
+  {
+   "cite": "Ross-Innes CS, Stark R, Teschendorff AE, et al. Differential oestrogen receptor binding is associated with clinical outcome in breast cancer. Nature 2012;481:389-93.",
+   "pmid": "22217937",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22217937/"
+  },
+  {
+   "cite": "Robinson DR, Wu YM, Vats P, et al. Activating ESR1 mutations in hormone-resistant metastatic breast cancer. Nat Genet 2013;45:1446-51.",
+   "pmid": "24185510",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24185510/"
+  },
+  {
+   "cite": "Hewitt SC, Korach KS. Estrogen Receptors: New Directions in the New Millennium. Endocr Rev 2018;39:664-675.",
+   "pmid": "29901737",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29901737/"
+  }
+ ]
+}

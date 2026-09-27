@@ -1,0 +1,78 @@
+{
+ "key": "HD_PAIRED",
+ "aka": [
+  "PAX paired domain",
+  "paired box",
+  "PRD domain",
+  "Paired plus homeo domain (TFClass)",
+  "P3 site",
+  "BSAP site (PAX5)",
+  "e5 sequence (PAX5)"
+ ],
+ "consensus": "GTCACGC(A/T)TGA",
+ "short": "The paired domain is a bipartite DNA-binding domain, unique to the nine human PAX proteins, that reads an unusually long site: a GTCACGC(A/T)TGA core set inside a footprint of roughly 15 to 20 base pairs. Two helix-turn-helix subdomains, PAI and RED, grip adjacent stretches of the double helix, so the recognition surface is far larger than that of a single homeodomain. PAX3, PAX4, PAX6 and PAX7 additionally carry a complete homeodomain that contributes an independent TAAT half site, making their composite elements longer still. PAX sites are therefore among the most information-rich transcription factor motifs in the genome. These factors specify the eye, thyroid, kidney, pancreatic beta cells, B lymphocytes and muscle progenitors, and paired-domain mutations cause aniridia, Waardenburg syndrome and renal-coloboma syndrome.",
+ "long": "## The factors\n\nNine human genes, PAX1 to PAX9, each encode a paired domain of about 128 residues. They fall into four\nsubgroups by what else they contain: PAX1 and PAX9 (paired domain plus octapeptide), PAX2, PAX5 and PAX8\n(plus octapeptide and a vestigial partial homeodomain), PAX3 and PAX7 (plus octapeptide and a complete\nhomeodomain), and PAX4 and PAX6 (paired domain plus complete homeodomain). The paired domain binds DNA as\na monomer; no dimerisation is required. It is built from two independently folding helix-turn-helix units,\nthe N-terminal PAI subdomain and the C-terminal RED subdomain, joined by a linker that tracks the minor\ngroove. Expression is tissue-restricted rather than ubiquitous: PAX5 in B lymphocytes, PAX8 in thyroid and\nkidney, PAX6 in eye, pancreas and central nervous system, PAX3 and PAX7 in neural crest and muscle\nsatellite cells, PAX4 in pancreatic beta cells.\n\n## The motif\n\nThe core paired-domain site is GTCACGC(A/T)TGA, about 11 bp, sitting inside a 15 to 20 bp contacted\nregion. Crystal structures of a *Drosophila* Prd paired domain at 2.5 A and of the human PAX6 paired\ndomain at higher resolution showed how the information is distributed: the PAI helix 3 inserts into the\nmajor groove and reads the 5' GTCAC half, the beta-hairpin and N-terminal beta-turn make extensive\nminor-groove contacts, and the RED subdomain reaches the 3' end of the site. Most of the affinity and most\nof the specificity lie in the 5' GTCACGC; RED contributes additional 3' contacts and is dispensable at\nsome sites. Alternative splicing of PAX6 exon 5a inserts 14 residues into PAI, inactivates it, and\nswitches the protein to a RED-dominated specificity, so one gene encodes two different sequence\npreferences. The homeodomain of PAX3, PAX4, PAX6 and PAX7 adds a separate TAAT half site and dimerises\ncooperatively on palindromic P3-type elements, TAAT-N2/3-ATTA. All three shapes appear in the assembled\ndata: paired-domain models such as CGTCACGCATGACTGC for PAX9, pure homeodomain palindromes such as\nTAATCGATTA for PAX3 and PAX7, and a composite CGTCACGCTWATTA that fuses both in 14 bp. Paralogues within\na subgroup are not separable: PAX1 and PAX9, and PAX2, PAX5 and PAX8, have motifs matching each other at\n0.96 or better.\n\n## Where it acts\n\nPAX proteins work at both promoters and distal enhancers, and their long sites make named composite\nelements unusually tractable. The best characterised is the B-cell-specific mb-1 (CD79A) promoter, where\nPAX5 bound to its paired-domain site recruits ETS-family proteins into a ternary complex on an adjacent\nGGAA core; the PAX5 half of that element is degenerate on its own and depends on the partner. PAX6 acts at\nlens crystallin promoters and at pancreatic and retinal enhancers. In alveolar rhabdomyosarcoma the\nPAX3-FOXO1 fusion occupies myogenic enhancers through the retained paired domain plus homeodomain.\nBecause the full site is long, genome-wide occurrence by chance is low relative to 6 to 8 bp motifs, and\noccupancy is strongly cell-type restricted; the same sequence is largely unoccupied in tissues that do not\nexpress the relevant PAX gene.\n\n## Biology and disease\n\nHeterozygous PAX6 loss causes aniridia and a spectrum of anterior-segment eye malformations, and the\nmouse *Small eye* mutant is the orthologous allele. PAX3 mutations cause Waardenburg syndrome types 1 and\n3; PAX2 mutations cause renal-coloboma syndrome; PAX8 mutations cause congenital hypothyroidism from\nthyroid dysgenesis. Mice lacking Pax5 arrest B-cell development at the pro-B stage and show posterior\nmidbrain patterning defects. In cancer, t(2;13) and t(1;13) translocations fuse PAX3 or PAX7 to FOXO1 in\nalveolar rhabdomyosarcoma; PAX5 is recurrently altered in B-cell acute lymphoblastic leukaemia; PAX8 is\nused diagnostically in thyroid, renal and ovarian tumours.\n\n## Reading a hit\n\nA full GTCACGC(A/T)TGA match is one of the more trustworthy motif hits available, because 11 informative\npositions are rare by chance. It tells you the subgroup, not the protein: nothing in the sequence\nseparates PAX2 from PAX5 or PAX8. Short matches are much weaker evidence. The homeodomain-only models are\ngeneric paired-like homeodomain sites: the JASPAR PAX4 entry MA0068.2 is CTAATTAG and its nearest\nneighbours across all four databases are PRD-like homeobox motifs, not PAX motifs, and a CIS-BP PAX3 entry\nis a bare TAATTG whose neighbours are Q50 homeodomain motifs. Several Vierstra footprint archetypes\nlabelled PAX carry no paired-domain information at all (GTGCACAC, TCCCCGGGC, CCACCCS, GTTT); these name\nthe factor group whose footprints clustered, and the cluster can be driven by co-occurring factors. This\nis the least cohesive family in the set, at 0.57.",
+ "caveats": "Trust long paired-domain matches; distrust short ones. The family pools three different motif shapes, paired domain, homeodomain half site, and composite, and only the first is PAX-diagnostic. Within the PAX1/PAX9 and PAX2/PAX5/PAX8 subgroups the motifs are interchangeable, so a hit names a subgroup at best. Homeodomain-only models labelled PAX4 or PAX3 are indistinguishable from PRD-like and Q50 homeodomain sites and are flagged in the underlying data as probably belonging elsewhere. Several PAX-labelled footprint archetypes contain no recognisable paired-domain sequence and should not be used to call PAX occupancy. Occupancy is strongly restricted to tissues that express the gene.",
+ "refs": [
+  {
+   "cite": "Xu W, Rould MA, Jun S, et al. Crystal structure of a paired domain-DNA complex at 2.5 A resolution reveals structural basis for Pax developmental mutations. Cell 1995;80:639-50.",
+   "pmid": "7867071",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7867071/"
+  },
+  {
+   "cite": "Xu HE, Rould MA, Xu W, et al. Crystal structure of the human Pax6 paired domain-DNA complex reveals specific roles for the linker region and carboxy-terminal subdomain in DNA binding. Genes Dev 1999;13:1263-75.",
+   "pmid": "10346815",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10346815/"
+  },
+  {
+   "cite": "Czerny T, Schaffner G, Busslinger M. DNA sequence recognition by Pax proteins: bipartite structure of the paired domain and its binding site. Genes Dev 1993;7:2048-61.",
+   "pmid": "8406007",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8406007/"
+  },
+  {
+   "cite": "Epstein JA, Glaser T, Cai J, et al. Two independent and interactive DNA-binding subdomains of the Pax6 paired domain are regulated by alternative splicing. Genes Dev 1994;8:2022-34.",
+   "pmid": "7958875",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7958875/"
+  },
+  {
+   "cite": "Wilson D, Sheng G, Lecuit T, et al. Cooperative dimerization of paired class homeo domains on DNA. Genes Dev 1993;7:2120-34.",
+   "pmid": "7901121",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7901121/"
+  },
+  {
+   "cite": "Jun S, Desplan C. Cooperative interactions between paired domain and homeodomain. Development 1996;122:2639-50.",
+   "pmid": "8787739",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8787739/"
+  },
+  {
+   "cite": "Fitzsimmons D, Hodsdon W, Wheat W, et al. Pax-5 (BSAP) recruits Ets proto-oncogene family proteins to form functional ternary complexes on a B-cell-specific promoter. Genes Dev 1996;10:2198-211.",
+   "pmid": "8804314",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8804314/"
+  },
+  {
+   "cite": "Ton CC, Hirvonen H, Miwa H, et al. Positional cloning and characterization of a paired box- and homeobox-containing gene from the aniridia region. Cell 1991;67:1059-74.",
+   "pmid": "1684738",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1684738/"
+  },
+  {
+   "cite": "Tassabehji M, Read AP, Newton VE, et al. Waardenburg's syndrome patients have mutations in the human homologue of the Pax-3 paired box gene. Nature 1992;355:635-6.",
+   "pmid": "1347148",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1347148/"
+  },
+  {
+   "cite": "Urbánek P, Wang ZQ, Fetka I, et al. Complete block of early B cell differentiation and altered patterning of the posterior midbrain in mice lacking Pax5/BSAP. Cell 1994;79:901-12.",
+   "pmid": "8001127",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8001127/"
+  },
+  {
+   "cite": "Barr FG, Galili N, Holick J, et al. Rearrangement of the PAX3 paired box gene in the paediatric solid tumour alveolar rhabdomyosarcoma. Nat Genet 1993;3:113-7.",
+   "pmid": "8098985",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8098985/"
+  },
+  {
+   "cite": "Blake JA, Ziman MR. Pax genes: regulators of lineage specification and progenitor cell maintenance. Development 2014;141:737-51.",
+   "pmid": "24496612",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24496612/"
+  }
+ ]
+}

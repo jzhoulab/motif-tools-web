@@ -1,0 +1,72 @@
+{
+ "key": "ZBTB17",
+ "aka": [
+  "MIZ1",
+  "Miz-1",
+  "Myc-interacting zinc finger protein 1",
+  "ZNF151",
+  "ZNF60",
+  "ZBTB17",
+  "core-promoter MIZ1 site"
+ ],
+ "short": "ZBTB17, universally called MIZ1, is a BTB/POZ protein with an unusually long array of C2H2 zinc fingers that binds core-promoter regions around transcription start sites. On its own it activates genes including the cyclin-dependent kinase inhibitors CDKN2B (p15INK4b) and CDKN1A (p21); when MYC binds its C-terminal helix, the same sites are converted into repressed ones, which is the main route by which MYC turns genes off. MIZ1 is therefore best understood as a promoter-anchored platform rather than as a classical enhancer-binding factor. There is no reliable in vitro sequence model for MIZ1: the two available matrices are both ChIP-derived and mutually inconsistent, one resembling a WT1-type GC/GA-rich site and the other a homeodomain ATCGAT site.",
+ "long": "## The factors\n\nZBTB17/MIZ1 is a single-gene family. It encodes a roughly 800-residue protein with an N-terminal POZ/BTB domain and a long C-terminal array of a dozen or more C2H2 zinc fingers, plus a short amphipathic helix near the C terminus. It was isolated in a two-hybrid screen for MYC-interacting proteins and named Myc-interacting zinc finger protein 1. The MYC interaction is the defining feature: it requires the helix-loop-helix region of MYC and the C-terminal helix of MIZ1, and it converts MIZ1 from an activator into a component of a repressive complex, in part by recruiting DNA methyltransferases and other corepressors and in part through the POZ domain, whose integrity is required for MYC to override MIZ1. MIZ1 binds DNA as a POZ-mediated oligomer and is broadly expressed. Beyond MYC it partners with the related MYCN and with TGF-beta-driven SMAD complexes; MIZ1 without MYC has a growth-arrest function.\n\n## The motif\n\nThis entry has to be honest about a gap. The original characterization localized MIZ1 binding to the initiator regions of the adenovirus major late promoter and the cyclin D1 promoter - that is, to sequence at and immediately around the transcription start site - and subsequent genome-wide work has consistently placed MIZ1 at core promoters. Core promoters are defined more by composition and position than by a compact recognizable word, and no position weight matrix in the surveyed collections has been derived from an in vitro binding experiment with MIZ1. The family contains exactly two matrices and they do not agree; measured cohesion is 0.11, the lowest value in this part of the atlas, and both entries are flagged as inconsistent with their label. The HOCOMOCO model ZBT17.H14CORE.0.P.B reads GTGGGGGAGGGG. It carries evidence code P (ChIP-seq only) at grade B, and its nearest cross-database neighbors sit in the WT1 family, which is to say it looks like a generic G-rich/GA-rich promoter element rather than something specific. The JASPAR model MA2102.1 reads AATCGATT. It is ChIP-seq-derived from the GTRD collection, and its nearest neighbors are paired-class homeodomain motifs - ATCGAT is a recognizable CUX/homeodomain-type word - with no counterpart anywhere in the MIZ1 literature. Of the two, the G-rich HOCOMOCO model is the less implausible, because G-rich runs are common at the CpG-island core promoters where MIZ1 is found; but \"less implausible\" is not the same as validated, and a reader should not treat either matrix as MIZ1's intrinsic specificity. If you need to find candidate MIZ1 sites, the more defensible predictor is position - within a few dozen base pairs of an annotated start site in a CpG-island promoter - rather than either matrix.\n\n## Where it acts\n\nMIZ1 is a core-promoter factor. Its occupancy is concentrated in a narrow window around transcription start sites of CpG-island promoters, and the functional consequence of MIZ1 binding at a promoter depends on whether MYC is present at the same site. Documented MIZ1-bound promoters include CDKN2B (p15INK4b), CDKN1A (p21), CDKN2A, and, in the Schwann cell system, the H3K36me2 demethylase gene Kdm8. Genome-wide, MYC-dependent repression at high MYC levels maps preferentially to MIZ1-bound promoters, and the resulting repressed set is what distinguishes tumor-specific MYC expression profiles from the shared activated set. MIZ1-dependent repression also couples the circadian clock to the cell cycle, with MYC/MIZ1 repressing clock genes.\n\n## Biology and disease\n\nMiz1-null mouse embryos die during gastrulation, so the gene is required early. Conditional deletions give tissue-specific phenotypes, including a Schwann cell proliferation defect that leads to peripheral nerve demyelination. The main biomedical interest is as the partner through which MYC represses transcription. MIZ1-mediated repression of CDKN2B is the mechanism by which MYC blocks the TGF-beta-induced cell-cycle arrest program, and TGF-beta signaling itself adjusts the balance between MYC, MIZ1 and SMAD proteins at that promoter. Because MIZ1 is required for MYC-driven repression but not for MYC-driven activation, MIZ1 has been used experimentally to separate the two arms of MYC function in tumors, and MYC mutants unable to bind MIZ1 are impaired in transformation in several models. MIZ1 is not itself a recurrently mutated cancer gene at appreciable frequency.\n\n## Reading a hit\n\nTreat any ZBTB17 motif hit as unreliable evidence about MIZ1. Both matrices are ChIP-derived with no in vitro backing, so they report where the factor was found under one set of conditions, not what it binds; and the two disagree with each other so completely that at most one of them can be describing MIZ1. If you matched MA2102.1 (AATCGATT), the more likely explanation is that you found a CUX- or paired-homeodomain-type site, either co-bound in the original ChIP or captured as a passenger motif in the peak set. If you matched the HOCOMOCO G-rich model, you have found a G-rich promoter element that many C2H2 factors - WT1, SP/KLF, MAZ, ZBTB7 - could also read. In neither case does the hit license the conclusion that MIZ1 binds there. The productive question for MIZ1 is positional and contextual: is the site a CpG-island core promoter, is the gene a cell-cycle inhibitor or clock gene, and is MYC bound at the same promoter? MIZ1 ChIP-seq with a validated antibody, or the pattern of MYC-dependent repression, is far more informative than sequence. Since ZBTB17 is a single gene, there is no paralogue problem here - the problem is that the motif itself is not established.",
+ "caveats": "Do not trust either matrix. ZBTB17 has only two entries in the surveyed collections, both ChIP-derived with no in vitro support, and they are mutually incompatible: the HOCOMOCO model (evidence P, grade B) reads a G-rich GTGGGGGAGGGG that the cross-database analysis places with WT1, and JASPAR MA2102.1 reads AATCGATT, a homeodomain/CUX-type word with no basis in the MIZ1 literature. Family cohesion is 0.11. The literature instead describes MIZ1 as binding core-promoter and initiator regions, which no compact PWM captures well. Predict candidate MIZ1 sites from position in a CpG-island core promoter and from MYC co-occupancy, not from motif score.",
+ "refs": [
+  {
+   "cite": "Peukert K, Staller P, Schneider A, et al. An alternative pathway for gene regulation by Myc. EMBO J 1997;16:5672-86.",
+   "pmid": "9312026",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9312026/"
+  },
+  {
+   "cite": "Staller P, Peukert K, Kiermaier A, et al. Repression of p15INK4b expression by Myc through association with Miz-1. Nat Cell Biol 2001;3:392-9.",
+   "pmid": "11283613",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11283613/"
+  },
+  {
+   "cite": "Seoane J, Pouponnot C, Staller P, et al. TGFbeta influences Myc, Miz-1 and Smad to control the CDK inhibitor p15INK4b. Nat Cell Biol 2001;3:400-8.",
+   "pmid": "11283614",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11283614/"
+  },
+  {
+   "cite": "Adhikary S, Peukert K, Karsunky H, et al. Miz1 is required for early embryonic development during gastrulation. Mol Cell Biol 2003;23:7648-57.",
+   "pmid": "14560010",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/14560010/"
+  },
+  {
+   "cite": "Walz S, Lorenzin F, Morton J, et al. Activation and repression by oncogenic MYC shape tumour-specific gene expression profiles. Nature 2014;511:483-7.",
+   "pmid": "25043018",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25043018/"
+  },
+  {
+   "cite": "Shostak A, Ruppert B, Ha N, et al. MYC/MIZ1-dependent gene repression inversely coordinates the circadian clock with cell cycle and proliferation. Nat Commun 2016;7:11807.",
+   "pmid": "27339797",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27339797/"
+  },
+  {
+   "cite": "Fuhrmann D, Mernberger M, Nist A, et al. Miz1 Controls Schwann Cell Proliferation via H3K36(me2) Demethylase Kdm8 to Prevent Peripheral Nerve Demyelination. J Neurosci 2018;38:858-877.",
+   "pmid": "29217679",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29217679/"
+  },
+  {
+   "cite": "Baluapuri A, Wolf E, Eilers M. Target gene-independent functions of MYC oncoproteins. Nat Rev Mol Cell Biol 2020;21:255-267.",
+   "pmid": "32071436",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32071436/"
+  },
+  {
+   "cite": "Rauluseviciute I, Riudavets-Puig R, Blanc-Mathieu R, et al. JASPAR 2024: 20th anniversary of the open-access database of transcription factor binding profiles. Nucleic Acids Res 2024;52:D174-D182.",
+   "pmid": "37962376",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37962376/"
+  },
+  {
+   "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
+   "pmid": "37971293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  },
+  {
+   "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
+   "pmid": "32728250",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  }
+ ]
+}

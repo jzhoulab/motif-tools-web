@@ -1,0 +1,77 @@
+{
+ "key": "HD_K50",
+ "aka": [
+  "TAATCC site",
+  "K50 homeodomain",
+  "bicoid-type site",
+  "OTX/CRX/PITX motif",
+  "GGATTA element",
+  "P3 dimer site TAATCCGATTA"
+ ],
+ "consensus": "TAATCC",
+ "short": "A small group of homeodomains carries lysine instead of glutamine at position 50 of the domain, and that single substitution changes the two base pairs read 3' of the invariant TAAT core from TA to CC. The result is TAATCC, the bicoid-type site. In human the true K50 set is nine genes: OTX1, OTX2, CRX and DMBX1, PITX1, PITX2 and PITX3, and GSC and GSC2. They are tightly consistent - 34 motifs, all converging on TAATCC, with cooperative dimers on TAATCCGATTA - and unusually well supported in vitro. Paired-like factors that share their gene families but carry glutamine at position 50, such as RAX, VSX2, PHOX2B and NOBOX, read TAATTA and are covered by HD_Q50 instead.",
+ "long": "## The factors\n\nThe homeodomain is a 60-residue three-helix module whose recognition helix sits in the major groove while a flexible N-terminal arm reads the adjacent minor groove. Bicoid, the Drosophila anterior morphogen, is the founding member of the K50 class, defined by lysine at position 50 - the last residue of the recognition helix - and unique among homeodomains in also carrying arginine at position 54, which it needs for RNA binding.\n\nIn human the class is small and well defined: OTX1, OTX2, CRX and DMBX1 (the OTX group), PITX1, PITX2 and PITX3, and GSC and GSC2. These nine genes contribute 34 motifs across JASPAR, HOCOMOCO, CIS-BP and the footprint archetypes. The only other member is ANHX, a divergent homeobox gene that has alanine rather than lysine at position 50 and whose two reported motifs (TTGACAAG) are not K50 sites at all.\n\nMembership here follows measured specificity, not gene family. Many proteins classified as paired-like alongside OTX, PITX and GSC - VSX1/2, RAX/RAX2, PHOX2A/2B, NOBOX, MIXL1, VENTX, PROP1, DRGX, BSX, OTP and SEBOX - carry glutamine at position 50 and their motifs are TAATTA-type; they are grouped with the Q50 homeodomains in HD_Q50. Expression of the K50 proteins is narrow and lineage-defining: CRX and OTX2 in photoreceptors and retina, OTX1/OTX2 in forebrain and eye, PITX1-3 in pituitary, anterior eye segment and hindlimb, GSC and GSC2 in craniofacial mesenchyme and mesendoderm, DMBX1 in midbrain.\n\n## The motif\n\nThe consensus is TAATCC (equivalently GGATTA on the opposite strand). Every homeodomain recognizes the 5'-TAAT-3' core through a hydrogen bond from the invariant Asn51 to its second adenine plus minor-groove contacts from N-terminal arm arginines; residue 50 discriminates the two base pairs immediately 3' of it. Site selection with six different residues at position 50 gave six distinct specificities differing at exactly those positions, through water-mediated hydrogen bonds and van der Waals contacts; lysine contacts the C:G pairs that glutamine cannot. Swapping residue 50 in Bicoid converts it into an Antennapedia-class TAATTA binder; the reverse swap in Paired confers Bicoid specificity. Solution structures of the native Bicoid homeodomain on TAATCC and of PITX2 on DNA show the K50, N51 and R54 side chains remaining mobile within the interface, and the PITX2 structure rationalizes the homeodomain substitutions that cause Axenfeld-Rieger syndrome.\n\nOnly about six base pairs carry information, so monomeric models are short: all nine genes give 5-7 bp TAATCC/GGATTA matrices, and the family medoid is the footprint archetype AC0061 (PITX/OTX) at exactly TAATCC. This is a tight family: cohesion 0.90, data consensus exactly TAATCC, no member flagged as resembling another family.\n\nThe longer models are dimeric. Paired-like homeodomains bind cooperatively on palindromes whose half-sites are three base pairs apart (the P3 site, TAATNNNATTA), and residue 50 sets the central bases, so the K50 version is TAATCGGATTA or TAATCCGATTA. That is exactly what the OTX1, OTX2 and OTX archetype models show; the PITX1 and PITX3 models instead carry two GGATTA half-sites. Residue-level rules for cooperativity across the 36 human paired-like factors have recently been derived, and blindness-causing CRX homeodomain mutations have been shown to alter cooperative dimerization rather than monomeric affinity.\n\nWithin the family, individual paralogues are not separable: no matrix distinguishes OTX2 from CRX, or PITX1 from PITX2 from PITX3. K50 versus Q50 is the only specificity distinction that sequence supports.\n\n## Where it acts\n\nThese sites concentrate in tissue-specific distal enhancers and in promoters of terminal differentiation genes. The best-mapped case is photoreceptors, where CRX occupies thousands of sites at rod and cone gene promoters and enhancers, typically with NRL and NR2E3 motifs nearby. TAATCC is common in absolute terms - roughly two million expected copies in 3.1 Gb at human base composition - so location and cell type do the discriminating, not the 6-mer. The dimeric TAATCCGATTA is about a thousand-fold rarer, with a few thousand expected copies, and is correspondingly more informative.\n\n## Biology and disease\n\nThis small family carries a striking dominant disease load. CRX mutations cause cone-rod dystrophy and Leber congenital amaurosis; heterozygous OTX2 mutations cause microphthalmia and anophthalmia; PITX2 mutations cause Axenfeld-Rieger syndrome; PITX1 mutation causes asymmetric lower-limb malformation; GSC mutation causes SAMS syndrome (short stature, auditory canal atresia, mandibular hypoplasia and skeletal abnormalities). Many of these substitutions fall inside the homeodomain and alter DNA binding or dimerization directly, which is why the in vitro motifs and cooperativity rules have clinical relevance.\n\n## Reading a hit\n\nA TAATCC match is one of the better-behaved homeodomain calls, but it is still a class-level call: it says a K50 homeodomain could bind, not whether OTX2, CRX, PITX2 or GSC bound it, and in retina at least two of those are usually present. Evidence quality here is uniformly good - all 12 HOCOMOCO models have HT-SELEX or methyl-HT-SELEX support, none is ChIP-only, none of the 34 motifs is a cross-species transfer, and no member is flagged as belonging to a different family. Two things to watch. The ANHX entries read TTGACAAG and should not be scanned as K50 sites. And one CIS-BP CRX model carries only 2.3 bits of information, with consensus TAAT, so it will match almost any AT-rich sequence; prefer the JASPAR or HOCOMOCO CRX models. Finally, if your hit is TAATTA rather than TAATCC, you are looking at the Q50 family - which includes paired-like proteins whose names (RAX, VSX2, PHOX2B, NOBOX, PROP1) might otherwise lead you to expect a K50 site.",
+ "caveats": "A TAATCC match identifies a K50-type homeodomain site, not a protein: OTX1/2, CRX, DMBX1, PITX1-3 and GSC/GSC2 share one motif. Expect roughly two million matches genome-wide, so condition on expression and accessibility; the dimeric TAATCCGATTA is about a thousand-fold rarer and far more informative. Evidence is unusually clean for a homeodomain family - all 12 HOCOMOCO models have in vitro SELEX support, none is ChIP-only, nothing is a cross-species transfer and nothing is flagged as belonging elsewhere. Two exceptions: the ANHX motifs (TTGACAAG) are not K50 sites, and one CIS-BP CRX model carries only 2.3 bits. A TAATTA hit belongs to HD_Q50, which holds the paired-like factors that carry Q50.",
+ "refs": [
+  {
+   "cite": "Hanes SD, Brent R. DNA specificity of the bicoid activator protein is determined by homeodomain recognition helix residue 9. Cell 1989;57:1275-83.",
+   "pmid": "2500253",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2500253/"
+  },
+  {
+   "cite": "Treisman J, Gönczy P, Vashishtha M, et al. A single amino acid can determine the DNA binding specificity of homeodomain proteins. Cell 1989;59:553-62.",
+   "pmid": "2572327",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2572327/"
+  },
+  {
+   "cite": "Wilson DS, Sheng G, Jun S, et al. Conservation and diversification in homeodomain-DNA interactions: a comparative genetic analysis. Proc Natl Acad Sci U S A 1996;93:6886-91.",
+   "pmid": "8692913",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8692913/"
+  },
+  {
+   "cite": "Baird-Titus JM, Clark-Baldwin K, Dave V, et al. The solution structure of the native K50 Bicoid homeodomain bound to the consensus TAATCC DNA-binding site. J Mol Biol 2006;356:1137-51.",
+   "pmid": "16406070",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16406070/"
+  },
+  {
+   "cite": "Chaney BA, Clark-Baldwin K, Dave V, et al. Solution structure of the K50 class homeodomain PITX2 bound to DNA and implications for mutations that cause Rieger syndrome. Biochemistry 2005;44:7497-511.",
+   "pmid": "15895993",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15895993/"
+  },
+  {
+   "cite": "Wilson D, Sheng G, Lecuit T, et al. Cooperative dimerization of paired class homeo domains on DNA. Genes Dev 1993;7:2120-34.",
+   "pmid": "7901121",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7901121/"
+  },
+  {
+   "cite": "Cain B, Wasmund C, Rowan FC, et al. Decoding the mechanisms of cooperative DNA binding by the Paired-like homeodomain family. Nat Commun 2026;17.",
+   "pmid": "42675056",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42675056/"
+  },
+  {
+   "cite": "Zheng Y, Stormo GD, Chen S. Aberrant homeodomain-DNA cooperative dimerization underlies distinct developmental defects in two dominant CRX retinopathy models. Genome Res 2025;35:242-256.",
+   "pmid": "39715683",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39715683/"
+  },
+  {
+   "cite": "Freund CL, Gregory-Evans CY, Furukawa T, et al. Cone-rod dystrophy due to mutations in a novel photoreceptor-specific homeobox gene (CRX) essential for maintenance of the photoreceptor. Cell 1997;91:543-53.",
+   "pmid": "9390563",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9390563/"
+  },
+  {
+   "cite": "Semina EV, Reiter R, Leysens NJ, et al. Cloning and characterization of a novel bicoid-related homeobox transcription factor gene, RIEG, involved in Rieger syndrome. Nat Genet 1996;14:392-9.",
+   "pmid": "8944018",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8944018/"
+  },
+  {
+   "cite": "Ragge NK, Brown AG, Poloschek CM, et al. Heterozygous mutations of OTX2 cause severe ocular malformations. Am J Hum Genet 2005;76:1008-22.",
+   "pmid": "15846561",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15846561/"
+  },
+  {
+   "cite": "Corbo JC, Lawrence KA, Karlstetter M, et al. CRX ChIP-seq reveals the cis-regulatory architecture of mouse photoreceptors. Genome Res 2010;20:1512-25.",
+   "pmid": "20693478",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20693478/"
+  }
+ ]
+}

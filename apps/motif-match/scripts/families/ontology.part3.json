@@ -1,0 +1,22 @@
+[
+{"key":"NRF1","name":"NRF1","class":"Other","def":"Palindromic GCGCATGCGC at nuclear-encoded mitochondrial gene promoters. NRF1."},
+{"key":"GCM","name":"GCM (glial cells missing)","class":"GCM","def":"GCM box ATGCGGGT. GCM1, GCM2."},
+{"key":"PLAG","name":"PLAG / PLAGL","class":"C2H2 zinc finger","def":"GRGGC(N6-8)GGG bipartite sites. PLAG1, PLAGL1/ZAC1, PLAGL2."},
+{"key":"OVOL","name":"OVOL (OVO-like)","class":"C2H2 zinc finger","def":"CCGTTA core. OVOL1, OVOL2, OVOL3."},
+{"key":"CASZ1","name":"CASZ1 (castor)","class":"C2H2 zinc finger","def":"Castor-type multi-zinc-finger factor; AT-rich composite site. CASZ1."},
+{"key":"CAMTA","name":"CAMTA","class":"CG-1","def":"CGCG box bound by the calmodulin-binding CG-1 domain. CMTA1/CAMTA1, CAMTA2."},
+{"key":"OSR","name":"OSR1 / OSR2","class":"C2H2 zinc finger","def":"Odd-skipped related zinc fingers; GC-rich sites. OSR1, OSR2."},
+{"key":"CIC","name":"CIC (capicua)","class":"Sox","def":"HMG-box repressor binding TGAATGAA octamer. CIC."},
+{"key":"HBP1","name":"HBP1","class":"Sox","def":"HMG-box factor binding an AT-rich site at cell-cycle promoters. HBP1."},
+{"key":"PUR","name":"PURA / PURB","class":"Other","def":"PUR-repeat GGN-rich single-strand-capable binders. PURA, PURB."},
+{"key":"LIN54","name":"LIN54 / DREAM (CHR)","class":"CRC/tesmin","def":"Cell-cycle genes homology region TTYGAA. LIN54 in the DREAM/LIN complex."},
+{"key":"CDC5L","name":"CDC5L","class":"Myb/SANT","def":"Myb-like repeat factor with a spliceosomal role; MBS-like site. CDC5L."},
+{"key":"TELOBOX","name":"Telobox (TERF1/TERF2/ZBTB48)","class":"Myb/SANT","def":"Telomeric TTAGGG repeat binders. TERF1, TERF2, ZBTB48/TZAP."},
+{"key":"RBP_INFERRED","name":"RNA-binding proteins with inferred DNA motifs","class":"RNA-binding","def":"Factors whose motif comes from an RNA-binding assay or from inference, so the DNA motif should be read with caution: CPEB1, MBNL1/2, LIN28B, and similar."},
+{"key":"CHROMATIN","name":"Chromatin regulators without a classical DBD","class":"Other","def":"Motifs attributed to cofactors, readers and writers that have no sequence-specific DBD of their own: BPTF, PHF1, DPF1/2, MYSM1, KMT2A/B, SETBP1, TOPORS, GATAD2A, ZZZ3, GLYR1, TCF20, SP140L, NAIF1."},
+{"key":"ZNF_SCAN_OTHER","name":"Other SCAN / SSX / MSANT factors","class":"Other","def":"Small families with limited literature: MSANTD1/3/4, DNTTIP1, FLYWCH1, FAM200B, ELYS/AHCTF1, XPA, BANP, MYPOP."},
+{"key":"NFKB_LIKE","name":"Other Rel-homology archetypes","class":"Rel","def":"Rel-homology-region archetypes that cannot be assigned to NF-kB or NFAT."},
+{"key":"SPZ1","name":"SPZ1","class":"bHLH","def":"Testis-specific bHLH-Zip factor. SPZ1."},
+{"key":"TFAP2_LIKE","name":"AP-2-like archetypes","class":"AP-2","def":"AP-2-family archetypes without a specific TFAP2 paralogue assignment."},
+{"key":"FUSION","name":"Fusion oncoprotein motifs","class":"Other","def":"Motifs from fusion proteins, e.g. EWSR1-FLI1 GGAA microsatellite binding."}
+]

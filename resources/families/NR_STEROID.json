@@ -1,0 +1,77 @@
+{
+ "key": "NR_STEROID",
+ "aka": [
+  "GRE",
+  "glucocorticoid response element",
+  "ARE",
+  "androgen response element",
+  "PRE",
+  "progesterone response element",
+  "MRE",
+  "GBS (GR binding sequence)",
+  "IR3",
+  "NR3C",
+  "steroid hormone receptors (TFClass)"
+ ],
+ "consensus": "AGAACAnnnTGTTCT",
+ "short": "The steroid receptors - glucocorticoid receptor (GR/NR3C1), mineralocorticoid receptor (MR/NR3C2), progesterone receptor (PGR) and androgen receptor (AR) - are hormone-activated transcription factors that bind DNA as homodimers on a 15 bp inverted repeat: two copies of the hexamer AGAACA facing each other across a 3 bp spacer, written AGAACAnnnTGTTCT. All four receptors read essentially the same element, so a match identifies the steroid-receptor group and not a particular receptor. Which receptor occupies a site in a given cell is decided by hormone availability, receptor expression, pioneer factors such as FOXA1 and pre-existing chromatin accessibility, not by sequence. These elements carry the transcriptional response to cortisol, aldosterone, progesterone and androgens, and they are the DNA end of drugs from dexamethasone to the antiandrogens used in prostate cancer.",
+ "long": "## The factors\n\nFour receptors share this element: GR (NR3C1), MR (NR3C2), PGR and AR, the oxosteroid branch of the nuclear receptor superfamily. Each has an N-terminal activation region, a C4 double-zinc-finger DNA-binding domain (DBD), a flexible hinge and a C-terminal ligand-binding domain that binds cortisol, aldosterone, progesterone or dihydrotestosterone respectively. DNA binding is by a homodimer: the first zinc finger contributes the recognition helix that enters the major groove of one half-site, and a loop in the second zinc finger (the D-box) forms the interface between the two subunits. GR and MR are expressed in most tissues; PGR is largely restricted to uterus, breast, ovary and parts of the brain, AR to prostate, seminal vesicle, muscle, skin and bone. The four collections here contribute 21 models, labelled AR, NR3C1, NR3C2 and PGR.\n\n## The motif\n\nThe response element is an inverted repeat of a hexamer with a 3 bp spacer, abbreviated IR3: AGAACA nnn TGTTCT, 15 bp and almost exactly palindromic. Information is concentrated in the two hexamers; the three spacer bases are weakly constrained but not free, and selection in a receptor-competitive setting showed that spacer and flanking positions are chosen asymmetrically and contribute to receptor preference rather than to raw affinity (Nelson et al. 1999). The crystal structure of the GR DBD dimer on DNA established how the recognition helix reads the half-site (Luisi et al. 1991). Which hexamer a receptor reads is set by three residues in the first zinc finger: swapping them converts GR specificity to that of the estrogen receptor, which reads AGGTCA instead, while five residues in the stem of the second finger set the tolerated half-site spacing (Umesono and Evans 1989).\n\nThe models here have a systematically degenerate 5' half-site. The GR and MR matrices from JASPAR and HOCOMOCO read AG(A/T)ACAnnnTGTTCC, often written in the literature as GGTACAnnnTGTTCT, which is why the family's data consensus is AGWACAtnaTGTtCc rather than the symmetrical form quoted above; both describe the same element, one from selected high-affinity sites and one from averaged genomic occupancy. AR has one partly private variant: some natural androgen-selective elements are direct rather than inverted repeats of the hexamer with a 3 bp gap (ADR3), and the AR DBD binds them head-to-head using an extended dimer interface (Shaffer et al. 2004; Denayer et al. 2010). In practice this discriminates weakly. Single base changes inside the hexamer alter GR conformation and activity, not only affinity, so the element behaves as a sequence-specific allosteric ligand (Meijsing et al. 2009; Weikum et al. 2017). Several HOCOMOCO models here are single half-sites (TGTTC, AGAACA, GWACA) carrying 4-8 bits; alone they have almost no specificity.\n\n## Where it acts\n\nSteroid receptor sites are overwhelmingly distal enhancers rather than promoters, and are strongly cell-type restricted. Up to 95% of de novo GR binding after hormone falls in chromatin that was already accessible, so the cistrome is largely pre-specified by cell identity, with sequence a secondary contribution (John et al. 2011). AR occupancy depends on tissue-specific pioneer factors: FOXA1 both opens AR sites and masks others, and its depletion redistributes AR binding wholesale (Sahu et al. 2011; Pihlajamaa et al. 2014). Composite arrangements are common - a GRE next to AP-1, NF-kB, STAT5 or FOX sites, and in liver next to CEBP and HNF4 motifs. GR also represses genes from a distinct negative element (nGRE) that is not an IR3 and is bound by two non-dimerizing monomers (Hudson et al. 2013), and can act without touching DNA by tethering to AP-1 and NF-kB.\n\n## Biology and disease\n\nThese elements carry the metabolic and anti-inflammatory programs of cortisol, salt and water handling by aldosterone, the uterine and mammary response to progesterone, and male sexual development and prostate growth. GR-null mice die perinatally from failure of lung maturation. Loss-of-function NR3C1 variants cause generalized glucocorticoid resistance; NR3C2 loss causes pseudohypoaldosteronism type 1, and an NR3C2 gain-of-function variant causes early-onset hypertension. AR loss-of-function causes androgen insensitivity syndrome, and CAG-repeat expansion in AR causes spinal and bulbar muscular atrophy. In cancer, AR amplification, point mutation and the AR-V7 splice variant drive castration-resistant prostate cancer, PGR status is a standard breast cancer biomarker, and glucocorticoids acting through GR remain part of lymphoid leukemia regimens.\n\n## Reading a hit\n\nA match says a steroid receptor could bind, not which one. The full-length GR, MR, PGR and AR matrices in this collection mostly sit within 0.89-1.00 of each other, so sequence cannot assign the receptor; ligand, receptor expression, cell type and cofactors can. Because roughly 10-12 of the 15 positions carry information, exact consensus IR3s are rare (order 10^2 per haploid genome) but sites within one or two mismatches number in the tens of thousands, far more than are occupied in any one cell type, so intersect hits with accessibility data. Check the evidence code on HOCOMOCO models: in vitro entries (S, M, SM) support direct binding, while ChIP-only entries (P) can absorb neighbouring signal - ANDR.H14CORE.2.P.B here is a single half-ARE fused to an AT-rich element and matches other families better than its own. A GR or AR ChIP peak with no IR3 is not necessarily a failure: tethering to AP-1 and NF-kB is a documented mode of action.",
+ "caveats": "Trust a good IR3 hit as evidence for the family, not for a receptor: the GR, MR, PGR and AR matrices here are near-identical, and even AR's direct-repeat preference separates them only weakly. Because the element tolerates mismatches, near-consensus sites occur tens of thousands of times genome-wide while only a fraction are ever bound, so a scan hit without accessibility, hormone treatment or ChIP support is weak evidence. Half-site-only models (TGTTC, AGAACA) should not be scanned genome-wide. ChIP-derived models can include a partner's signal, and these receptors also regulate genes by tethering to other factors, so motif presence is neither necessary nor sufficient.",
+ "refs": [
+  {
+   "cite": "Umesono K, Evans RM. Determinants of target gene specificity for steroid/thyroid hormone receptors. Cell 1989;57:1139-46.",
+   "pmid": "2500251",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2500251/"
+  },
+  {
+   "cite": "Luisi BF, Xu WX, Otwinowski Z, et al. Crystallographic analysis of the interaction of the glucocorticoid receptor with DNA. Nature 1991;352:497-505.",
+   "pmid": "1865905",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1865905/"
+  },
+  {
+   "cite": "Nelson CC, Hendy SC, Shukin RJ, et al. Determinants of DNA sequence specificity of the androgen, progesterone, and glucocorticoid receptors: evidence for differential steroid receptor response elements. Mol Endocrinol 1999;13:2090-107.",
+   "pmid": "10598584",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10598584/"
+  },
+  {
+   "cite": "Shaffer PL, Jivan A, Dollins DE, et al. Structural basis of androgen receptor binding to selective androgen response elements. Proc Natl Acad Sci U S A 2004;101:4758-63.",
+   "pmid": "15037741",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15037741/"
+  },
+  {
+   "cite": "Meijsing SH, Pufall MA, So AY, et al. DNA binding site sequence directs glucocorticoid receptor structure and activity. Science 2009;324:407-10.",
+   "pmid": "19372434",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19372434/"
+  },
+  {
+   "cite": "Denayer S, Helsen C, Thorrez L, et al. The rules of DNA recognition by the androgen receptor. Mol Endocrinol 2010;24:898-913.",
+   "pmid": "20304998",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20304998/"
+  },
+  {
+   "cite": "John S, Sabo PJ, Thurman RE, et al. Chromatin accessibility pre-determines glucocorticoid receptor binding patterns. Nat Genet 2011;43:264-8.",
+   "pmid": "21258342",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21258342/"
+  },
+  {
+   "cite": "Sahu B, Laakso M, Ovaska K, et al. Dual role of FoxA1 in androgen receptor binding to chromatin, androgen signalling and prostate cancer. EMBO J 2011;30:3962-76.",
+   "pmid": "21915096",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21915096/"
+  },
+  {
+   "cite": "Hudson WH, Youn C, Ortlund EA. The structural basis of direct glucocorticoid-mediated transrepression. Nat Struct Mol Biol 2013;20:53-8.",
+   "pmid": "23222642",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23222642/"
+  },
+  {
+   "cite": "Pihlajamaa P, Sahu B, Lyly L, et al. Tissue-specific pioneer factors associate with androgen receptor cistromes and transcription programs. EMBO J 2014;33:312-26.",
+   "pmid": "24451200",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24451200/"
+  },
+  {
+   "cite": "Weikum ER, Knuesel MT, Ortlund EA, et al. Glucocorticoid receptor control of transcription: precision and plasticity via allostery. Nat Rev Mol Cell Biol 2017;18:159-174.",
+   "pmid": "28053348",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28053348/"
+  }
+ ]
+}

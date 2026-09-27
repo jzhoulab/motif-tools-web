@@ -1,0 +1,77 @@
+{
+ "key": "SRF",
+ "aka": [
+  "CArG box",
+  "serum response element",
+  "SRE",
+  "CC(A/T)6GG",
+  "CCW6GG",
+  "MADS-box (SRF type)"
+ ],
+ "consensus": "CCW6GG",
+ "short": "The CArG box is the site of a single protein, serum response factor, which binds as a homodimer through a MADS box - the same fold MEF2 uses, reading a different sequence. The element is CC(A/T)6GG: a ten-base near-palindrome in which the outer CC and GG carry the specificity and the six central A/T positions are effectively free, giving a well-defined but degenerate site. SRF is expressed almost everywhere and is constitutively bound to many of its sites; what changes with signalling is not occupancy but which coactivator family it recruits - the ETS-domain TCF proteins downstream of MAP kinase, or the actin-regulated MRTF proteins downstream of Rho. Both bind the same CArG box, so the motif does not tell you which programme is running.",
+ "long": "## The factors\n\nSRF is one protein, encoded by one gene, and this family has one member. Its DNA-binding and dimerisation function sits in a MADS box of about 57 residues with two extensions: an N-terminal one that MEF2 lacks, and a C-terminal B-box that docks one class of cofactor. The crystal structure of the SRF core on a serum response element showed that the dimer binds an alpha-helix into the widened major groove of each half-site and that the recognised feature is as much DNA shape as base identity - the intrinsic and induced bend of the CArG box is what SRF reads. SRF is broadly and constitutively expressed, and its activity is set by cofactors rather than by its own abundance or nuclear entry. Two families compete for it. The ternary complex factors ELK1, ELK4 (SAP-1) and ELK3 dock on the B-box through a short peptide and simultaneously contact an adjacent ETS site with their own ETS domain; they are activated by ERK and p38 phosphorylation, and the ternary-complex structure showed that the B-box contact dominates their recruitment. The myocardin-related transcription factors MRTFA (MKL1/MAL), MRTFB and MYOCD instead bind the MADS domain itself, and MRTFA and MRTFB are sequestered by monomeric actin until Rho-driven actin polymerisation releases them.\n\n## The motif\n\nThe CArG box is CC(A/T)6GG, ten bases, a near-palindrome. Nearly all of the information is in the outer CCW and WGG; the six central positions are constrained only to be A or T, which is why the element is often described as heavily degenerate - one genome-wide survey characterised it as a 1,216-fold degenerate cis element once CArG-like variants are included. Contacts from the MADS helix reach the guanines of the GG step and the adjacent bases, and basic residues clamp the phosphate backbone across the bend. Literature and data agree here: the four models (JASPAR, HOCOMOCO, CIS-BP and one Vierstra archetype) converge on CCATATATGG, with family cohesion 0.93, the highest in this batch. The useful contrast is with MEF2, the other vertebrate MADS family: both read a ten-base A/T-cored near-palindrome, but SRF requires CC and GG at the ends where MEF2 requires CTA and TAG. That difference is small in edit distance but large in practice; a few in vitro MEF2 models in these collections drift into CArG-like CCAAATATGG, so the database boundary is less clean than the protein boundary. One further practical point: the cofactor switch does not change the motif. A TCF-driven serum response element, such as the c-fos SRE, is a CArG box plus a nearby ETS site; an MRTF-driven CArG box, such as those in cytoskeletal genes, is frequently a CArG box with no ETS site at all. The presence or absence of the flanking ETS site, not the CArG itself, is what distinguishes the two.\n\n## Where it acts\n\nCArG boxes are predominantly proximal promoter elements, usually within a few hundred base pairs of the transcription start site, which sets SRF apart from the enhancer-biased MEF2. They are not CpG-island features. A comparative-genomics screen of conserved CArG elements near human and mouse orthologous transcription start sites recovered more than 100 candidate targets and validated 60 of 89 tested; 26 of those encode cytoskeletal, contractile or adhesion proteins. The characteristic composite is the serum response element itself - CArG plus an ETS site - at immediate-early genes including FOS and EGR1. In smooth muscle, CArG and CArG-like elements cluster in the promoters of ACTA2, MYH11, TAGLN and CNN1.\n\n## Biology and disease\n\nSRF sits at the junction of growth-factor signalling and the actin cytoskeleton. Deleting Srf in the mouse blocks mesoderm formation and is lethal in early gastrulation; conditional deletion in the developing heart produces myocardial defects and embryonic lethality. In fibroblasts, the immediate transcriptional response to serum is dominated by Rho-actin signalling to the MRTF coactivators rather than by the TCF arm, and conversely the TCF arm handles much of the ERK-driven immediate-early response. The target set explains the phenotypes: smooth muscle contractile genes, cytoskeletal and focal-adhesion genes, and the immediate-early genes. SRF has been implicated in cardiac hypertrophy and dilated cardiomyopathy, in vascular smooth-muscle phenotypic switching in atherosclerosis, and, through MRTFA, in tumour-cell migration and mechanotransduction. Sun and colleagues described SRF as an ancient regulator of the actin cytoskeleton.\n\n## Reading a hit\n\nA CArG hit is more interpretable than most, for three reasons: there is only one protein in the family, so there is no paralogue problem; the site is ten bases with four well-constrained positions; and SRF is expressed nearly everywhere, so a match is not disqualified by cell type. The limits are the degeneracy and the position bias. CCW6GG still occurs often by chance, and the A/T core means AT-rich regions produce false positives, so a match carries much more weight in a proximal promoter than in random intergenic DNA. Note one artefact of how this atlas is built: because SRF is a single-member family, every SRF model's nearest neighbours in motif space are mostly outside the family - label agreement is 0.3 for all four - and those neighbours are MEF2 and other MADS motifs. That is a property of a singleton family, not a sign the labels are wrong. Finally, the hit says nothing about which cofactor arm is active: for that, look for an ETS site within roughly 20 bp (TCF-type), or its absence at a cytoskeletal gene (MRTF-type).",
+ "caveats": "Unusually for this atlas, there is no paralogue problem: SRF is the only member, so a CArG hit names the protein. The real limits are degeneracy and position. CC(A/T)6GG constrains only four bases, so chance matches are frequent and AT-rich sequence inflates them; weight a hit far more heavily in a proximal promoter, where real CArG boxes concentrate, than in intergenic DNA. A hit also says nothing about which coactivator arm is active, since TCF and MRTF use the same element - look for an adjacent ETS site to distinguish them. The low label-agreement values on all four SRF models reflect the family being a singleton surrounded by MEF2 and other MADS motifs, not mislabelling.",
+ "refs": [
+  {
+   "cite": "Treisman R. Identification of a protein-binding site that mediates transcriptional response of the c-fos gene to serum factors. Cell 1986;46:567-74.",
+   "pmid": "3524858",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3524858/"
+  },
+  {
+   "cite": "Norman C, Runswick M, Pollock R, et al. Isolation and properties of cDNA clones encoding SRF, a transcription factor that binds to the c-fos serum response element. Cell 1988;55:989-1003.",
+   "pmid": "3203386",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3203386/"
+  },
+  {
+   "cite": "Pollock R, Treisman R. Human SRF-related proteins: DNA-binding properties and potential regulatory targets. Genes Dev 1991;5:2327-41.",
+   "pmid": "1748287",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1748287/"
+  },
+  {
+   "cite": "Shore P, Sharrocks AD. The MADS-box family of transcription factors. Eur J Biochem 1995;229:1-13.",
+   "pmid": "7744019",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7744019/"
+  },
+  {
+   "cite": "Pellegrini L, Tan S, Richmond TJ. Structure of serum response factor core bound to DNA. Nature 1995;376:490-8.",
+   "pmid": "7637780",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7637780/"
+  },
+  {
+   "cite": "Arsenian S, Weinhold B, Oelgeschläger M, et al. Serum response factor is essential for mesoderm formation during mouse embryogenesis. EMBO J 1998;17:6289-99.",
+   "pmid": "9799237",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9799237/"
+  },
+  {
+   "cite": "Hassler M, Richmond TJ. The B-box dominates SAP-1-SRF interactions in the structure of the ternary complex. EMBO J 2001;20:3018-28.",
+   "pmid": "11406578",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11406578/"
+  },
+  {
+   "cite": "Miralles F, Posern G, Zaromytidou AI, et al. Actin dynamics control SRF activity by regulation of its coactivator MAL. Cell 2003;113:329-42.",
+   "pmid": "12732141",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12732141/"
+  },
+  {
+   "cite": "Wang Z, Wang DZ, Hockemeyer D, et al. Myocardin and ternary complex factors compete for SRF to control smooth muscle gene expression. Nature 2004;428:185-9.",
+   "pmid": "15014501",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15014501/"
+  },
+  {
+   "cite": "Parlakian A, Tuil D, Hamard G, et al. Targeted inactivation of serum response factor in the developing heart results in myocardial defects and embryonic lethality. Mol Cell Biol 2004;24:5281-9.",
+   "pmid": "15169892",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15169892/"
+  },
+  {
+   "cite": "Sun Q, Chen G, Streb JW, et al. Defining the mammalian CArGome. Genome Res 2006;16:197-207.",
+   "pmid": "16365378",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16365378/"
+  },
+  {
+   "cite": "Esnault C, Stewart A, Gualdrini F, et al. Rho-actin signaling to the MRTF coactivators dominates the immediate transcriptional response to serum in fibroblasts. Genes Dev 2014;28:943-58.",
+   "pmid": "24732378",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24732378/"
+  }
+ ]
+}

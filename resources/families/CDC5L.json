@@ -1,0 +1,66 @@
+{
+ "key": "CDC5L",
+ "aka": [
+  "CDC5",
+  "CEF1",
+  "cdc5+ (S. pombe)",
+  "Prp19/CDC5L complex",
+  "MAC / AtCDC5 (Arabidopsis)",
+  "Myb/SANT-like repeat factor"
+ ],
+ "short": "CDC5L is the human orthologue of fission yeast Cdc5, a protein with two N-terminal Myb/SANT-like repeats whose main established job is not transcription at all: it is an essential component of the spliceosomal Prp19/CDC5L complex required for the second catalytic step of pre-mRNA splicing, and it is visible in cryo-EM structures of the human spliceosome. A site-specific DNA-binding activity was reported for the N-terminal region, and CDC5L also promotes G2/M progression and participates in the ATR-dependent S-phase checkpoint. Its motif evidence is weak: the two models in these databases disagree completely with each other, and one is inherited from an Arabidopsis protein rather than measured on human CDC5L. Treat any hit with caution.",
+ "long": "## The factors\n\nCDC5L (also CDC5, CEF1) was named for Schizosaccharomyces pombe cdc5+, cloned in 1994 as an essential gene\nwhose product has homology to c-MYB. The protein carries two Myb/SANT-like repeats near the N terminus -\nfewer than the three repeats of c-MYB itself - followed by a long low-complexity C-terminal region with a\nlatent transcriptional activation domain. A mammalian homologue was shown to regulate G2 progression and\nmitotic entry. There is a single human gene and no close paralogue, so within this family there is no\nmember ambiguity; the ambiguity is about whether the protein functions as a DNA-binding transcription\nfactor at all.\n\nThe best-established function is in splicing. CDC5L is the scaffold of a multiprotein complex in nuclear\nextract - the CDC5L/Prp19 complex, containing PRPF19, PLRG1, BCAS2, CTNNBL1, HSPA8 and others - that joins\nthe spliceosome in an ATP-dependent step and is required for the second catalytic step of pre-mRNA\nsplicing. Immunodepleting it blocks splicing product formation without preventing spliceosome assembly.\nThe complex is resolved in cryo-EM structures of the human catalytic spliceosome. CDC5L also interacts\nwith ATR and is required for the S-phase cell-cycle checkpoint. Orthologues behave similarly: Arabidopsis\nCDC5 (AtCDC5) is part of the MOS4-associated complex (MAC) with MOS4 and PRL1, which is required for plant\ninnate immunity and for splicing and microRNA biogenesis; AtCDC5 was shown to have DNA-binding activity,\nwhich is where the plant-derived motif in these databases comes from. CDC5L is broadly and constitutively\nexpressed, as befits a core splicing factor.\n\n## The motif\n\nThere is no reliable consensus for human CDC5L, and this entry does not assert one. A 12-bp sequence bound\nspecifically and with high affinity by the N-terminal region of human Cdc5 was identified in 2000, together\nwith human genomic fragments containing similar sequences that bound with comparable specificity, and the\ninteraction could activate transcription in a reporter. That paper explicitly noted that previous attempts\nby others had failed to find a preferential binding site for Cdc5-family proteins, which sets the\nexpectation for how well-determined this specificity is.\n\nThe two models in this atlas disagree with one another, and the disagreement is the single most important\nfact about this family. The CIS-BP model, M02698, has consensus GCGCTGAGC - and it is not measured on the\nhuman protein: it is transferred from Arabidopsis thaliana CDC5 at 87% DNA-binding-domain identity. The\nVierstra archetype AC0311:CDC5L:Myb/SANT has consensus GATTTAACATA, an AT-rich sequence with no resemblance\nto the CIS-BP model. Family cohesion is 0.21, essentially no agreement, and neither model's best match in\nany other family exceeds about 0.72. There are no JASPAR or HOCOMOCO models. So the honest description is\nthat this family contains two mutually inconsistent models, one of which is a cross-species inference and\nthe other of which is a footprint-derived archetype named for a factor whose footprints may reflect\nsomething else entirely.\n\n## Where it acts\n\nThere is no well-mapped genomic distribution for human CDC5L binding sites. The 2000 study recovered human\ngenomic fragments containing sequences related to its 12-bp site and suggested these are specific,\nlow-abundance sequences rather than a common promoter element, but genome-wide occupancy data for CDC5L as\na DNA-binding factor are essentially absent. Because CDC5L is abundant, nuclear and associated with\nco-transcriptional splicing machinery, it is highly likely to crosslink to actively transcribed gene\nbodies and promoters in ChIP experiments without binding DNA sequence-specifically. That is precisely the\nsituation in which a footprint- or ChIP-derived \"CDC5L motif\" is likely to be the motif of whatever else\noccupies those regions. In Arabidopsis, AtCDC5 acts through the MAC complex on defence gene expression and\non splicing, again a mixture of direct and indirect routes.\n\n## Biology and disease\n\nLoss of Cdc5 function is lethal in fission yeast, and CDC5L depletion in mammalian cells delays G2/M\nprogression, consistent with an essential role. The S-phase checkpoint function requires the CDC5L-ATR\ninteraction, linking it to the DNA damage response. In the Arabidopsis system, MAC components including\nAtCDC5 are required for SNC1-mediated innate immunity and for correct splicing under stress. In human\ndisease, CDC5L is reported as overexpressed in several cancers, but the mechanistic accounts are\ninconsistent and mostly correlative, and it is not established whether any such effect runs through DNA\nbinding rather than through splicing. There is no monogenic human disease attributed to CDC5L. The\nliterature is thin on the transcription-factor side and rich on the splicing side, and motif databases\nreflect the former more confidently than the evidence supports.\n\n## Reading a hit\n\nDo not read a CDC5L hit as evidence that CDC5L binds your sequence. The two available models are mutually\ncontradictory (cohesion 0.21), which alone should prevent a specific call. The CIS-BP model is inherited\nfrom Arabidopsis CDC5 at 87% DNA-binding-domain identity, so it reports a plant protein's preference, and\na GCGCTGAGC match in human sequence is at least as likely to be a coincidence or another Myb/SANT-type or\nCRE-adjacent element. The Vierstra archetype is a footprint cluster labelled CDC5L; footprint archetypes\nare named after the factor group that dominated a cluster, not after a demonstrated binder, and CDC5L's\nabundance at transcribed regions makes an indirect explanation plausible. There is no paralogue problem,\nbut there is a class problem: CDC5L's demonstrated essential activity is in splicing, and a DNA match\ngives you no purchase on that. If a CDC5L hit matters to your analysis, verify it directly rather than\nrelying on the database label.",
+ "caveats": "The two models in this family contradict each other: CIS-BP gives GCGCTGAGC and the Vierstra archetype gives GATTTAACATA, with cohesion of only 0.21 and no JASPAR or HOCOMOCO model to arbitrate. The CIS-BP entry is not measured on human CDC5L at all - it is transferred from Arabidopsis thaliana CDC5 at 87% DNA-binding-domain identity - and the Vierstra entry is a footprint cluster named for CDC5L rather than a demonstrated binding preference. A 12-bp human Cdc5 site was reported once, but earlier attempts to find any preferential site for Cdc5-family proteins failed. CDC5L's established essential role is in pre-mRNA splicing, and as an abundant nuclear protein at transcribed regions it is a good candidate for indirect crosslinking. Treat any hit as unverified.",
+ "refs": [
+  {
+   "cite": "Ohi R, McCollum D, Hirani B, et al. The Schizosaccharomyces pombe cdc5+ gene encodes an essential protein with homology to c-Myb. EMBO J 1994;13:471-83.",
+   "pmid": "8313892",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8313892/"
+  },
+  {
+   "cite": "Bernstein HS, Coughlin SR. A mammalian homolog of fission yeast Cdc5 regulates G2 progression and mitotic entry. J Biol Chem 1998;273:4666-71.",
+   "pmid": "9468527",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9468527/"
+  },
+  {
+   "cite": "Lei XH, Shen X, Xu XQ, et al. Human Cdc5, a regulator of mitotic entry, can act as a site-specific DNA binding protein. J Cell Sci 2000;113 Pt 24:4523-31.",
+   "pmid": "11082045",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11082045/"
+  },
+  {
+   "cite": "Ajuh P, Kuster B, Panov K, et al. Functional analysis of the human CDC5L complex and identification of its components by mass spectrometry. EMBO J 2000;19:6569-81.",
+   "pmid": "11101529",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11101529/"
+  },
+  {
+   "cite": "Palma K, Zhao Q, Cheng YT, et al. Regulation of plant innate immunity by three proteins in a complex conserved across the plant and animal kingdoms. Genes Dev 2007;21:1484-93.",
+   "pmid": "17575050",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17575050/"
+  },
+  {
+   "cite": "Zhang N, Kaur R, Akhter S, et al. Cdc5L interacts with ATR and is required for the S-phase cell-cycle checkpoint. EMBO Rep 2009;10:1029-35.",
+   "pmid": "19633697",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19633697/"
+  },
+  {
+   "cite": "Jia T, Zhang B, You C, et al. The Arabidopsis MOS4-Associated Complex Promotes MicroRNA Biogenesis and Precursor Messenger RNA Splicing. Plant Cell 2017;29:2626-2643.",
+   "pmid": "28947490",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28947490/"
+  },
+  {
+   "cite": "Zhan X, Yan C, Zhang X, et al. Structure of a human catalytic step I spliceosome. Science 2018;359:537-545.",
+   "pmid": "29301961",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29301961/"
+  },
+  {
+   "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
+   "pmid": "25215497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  },
+  {
+   "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
+   "pmid": "32728250",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  }
+ ]
+}

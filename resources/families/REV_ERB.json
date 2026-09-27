@@ -1,0 +1,83 @@
+{
+ "key": "REV_ERB",
+ "aka": [
+  "REV-ERB",
+  "Rev-ErbA",
+  "NR1D1",
+  "NR1D2",
+  "REV-ERBalpha",
+  "REV-ERBbeta",
+  "EAR-1",
+  "RVR",
+  "EAR-1R",
+  "RevDR2",
+  "RevRE",
+  "RORE"
+ ],
+ "consensus": "AGGTCANNAGGTCA",
+ "short": "REV-ERBalpha (NR1D1) and REV-ERBbeta (NR1D2) are nuclear receptors that lack the helix-12 activation surface and act only as repressors, recruiting the NCoR-HDAC3 complex and binding heme as a ligand. They read the same DNA as the RORs: an AGGTCA half-site with a 5' AT-rich extension (the RORE, or RevRE), and preferentially a direct repeat of two such sites separated by 2 bp, called RevDR2, on which they bind as homodimers. Together with the RORs they form the second feedback loop of the mammalian circadian clock, alternately repressing and activating Bmal1 at the same sites. Loss of both paralogues disrupts circadian behavior and causes hepatic steatosis and metabolic derangement.",
+ "long": "## The factors\n\nREV-ERB is a two-member nuclear-receptor group: NR1D1 (REV-ERBalpha, historically EAR-1) and NR1D2 (REV-ERBbeta, historically RVR or EAR-1R). The *NR1D1* gene lies on the opposite strand of, and overlapping, the thyroid hormone receptor gene *THRA*, which is how it acquired the name \"Rev-ErbA\". Both proteins have the standard receptor architecture — an N-terminal region, a two-module zinc-binding DNA-binding domain (DBD) with a C-terminal extension (CTE), and a ligand-binding domain (LBD) — but with one decisive difference from most of the superfamily: the LBD lacks helix 12 and therefore has no AF-2 surface. REV-ERBs cannot activate transcription. They are dedicated repressors that recruit the NCoR-HDAC3 corepressor complex, and their LBD binds heme as a physiological ligand, so their activity tracks cellular heme and redox state. Both paralogues are widely expressed, with high levels in liver, skeletal muscle, adipose tissue, brown fat, brain and macrophages, and both are strongly rhythmic, peaking in the early rest phase. NR1D1 protein is short-lived and its abundance oscillates far more than that of most clock proteins.\n\n## The motif\n\nREV-ERBs read the same element as the RORs. A single REV-ERB monomer binds an AGGTCA half-site carrying a 5-6 bp AT-rich 5' extension — the RORE, also called the RevRE in the older REV-ERB literature. Higher-affinity binding requires two such sites arranged as a direct repeat separated by exactly 2 bp, the element named RevDR2, on which REV-ERB binds as a homodimer. The literature writes the core of RevDR2 as AGGTCANNAGGTCA; the motif models collected here retain the AT-rich extensions as well and therefore run 14-18 bp, with a pooled consensus of ANTAGGTCAGTAGGTCA. This is not a disagreement about the element, only about how much flanking sequence a model keeps.\n\nThe structural basis is well defined. The crystal structure of the REV-ERBalpha DBD plus CTE bound to RevDR2 shows each zinc module inserting its recognition helix into the major groove of AGGTCA while the CTE runs along the minor groove of the AT-rich extension; the 2-bp spacing is what allows a second protein-DNA interface to form next to the classical one, which is why DR2 and not DR1 or DR4 is the preferred repeat. The same CTE-plus-minor-groove mechanism was described for the monomeric receptor NGFI-B.\n\nNeither paralogue is distinguishable from the other, and neither is reliably distinguishable from ROR. The Vierstra archetype AC0123:NR1D/RORC names both groups precisely because their motifs clustered together.\n\n## Where it acts\n\nRevDR2 and RORE sites occur in promoters and enhancers and are not enriched in CpG islands. The canonical target is the *Bmal1* (*ARNTL*) promoter, where two ROREs are occupied by RORs during the day and by REV-ERBs at night; *Cry1*, *Npas2* and *Nfil3* carry the same arrangement. In the circadian cis-regulatory grammar, the RORE supplies the late-night phase component and works in combination with E-boxes (CLOCK:BMAL1) and D-boxes. In liver and macrophages, REV-ERBalpha also occupies thousands of tissue-specific enhancers together with lineage factors; in liver these are predominantly HNF6 sites.\n\n## Biology and disease\n\nREV-ERB is the repressive arm of the second circadian feedback loop. *Nr1d1*-null mice have a shortened free-running period and altered clock gene amplitude; deleting both paralogues disrupts circadian behavior far more severely and deranges lipid metabolism, with hepatic steatosis and altered bile acid and glucose handling. REV-ERBs also gate inflammatory gene expression in macrophages and set the timing of muscle mitochondrial function. Because the LBD binds heme, synthetic REV-ERB agonists and ROR inverse agonists have been developed as metabolic and immunological tools, and REV-ERB agonists shift wheel-running rhythms and reduce fat mass in mice.\n\n## Reading a hit\n\nA RevDR2 or RORE match tells you the site belongs to the ROR/REV-ERB group. It does not tell you which of the four proteins binds it, and the ROR-versus-REV-ERB distinction matters biologically because the two have opposite signs: RORs recruit coactivators, REV-ERBs recruit NCoR-HDAC3. The two loops compete for identical sequence; the discrimination is temporal and cell-type dependent, not sequence-encoded. Treat the family boundary between the `ROR` and `REV_ERB` entries in this atlas as a labelling convention, not a specificity claim.\n\nTwo further cautions. A single AGGTCA is not a REV-ERB site — that hexamer is shared with ESRRA, NR5A, NR4A and the RXR heterodimer partners — so score the full extended element, and prefer the tandem form when you have it, since RevDR2 is far less likely to occur by chance than a 10-mer monomeric site. Second, ChIP-derived motifs for this family should be read carefully: in mouse liver most REV-ERBalpha ChIP-seq peaks arise from tethering to HNF6 rather than from direct RORE binding, so ChIP-only models (HOCOMOCO evidence code `P`, e.g. NR1D1.H14CORE.0.P.B) can carry a partner's specificity. The in vitro models here (evidence `SM`) are the ones that support a direct binding claim.",
+ "caveats": "REV-ERB and ROR sites are the same sequence. A hit here is a ROR/REV-ERB call; nothing in the motif separates NR1D1 from NR1D2, or either from RORA/RORB/RORC, and the Vierstra archetype AC0123:NR1D/RORC says so explicitly. Because the two groups have opposite transcriptional sign, that ambiguity is consequential — resolve it with expression and phase data, not the motif. Require the AT-rich extension; a bare AGGTCA is shared across the superfamily. The tandem RevDR2 form is much more specific than the monomeric site. Finally, ChIP-derived models (HOCOMOCO code P) may reflect tethering: in liver, most REV-ERBalpha peaks are HNF6 sites rather than direct ROREs.",
+ "refs": [
+  {
+   "cite": "Harding HP, Lazar MA. The orphan receptor Rev-ErbA alpha activates transcription via a novel response element. Mol Cell Biol 1993;13:3113-21.",
+   "pmid": "8474464",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8474464/"
+  },
+  {
+   "cite": "Harding HP, Lazar MA. The monomer-binding orphan receptor Rev-Erb represses transcription as a dimer on a novel direct repeat. Mol Cell Biol 1995;15:4791-802.",
+   "pmid": "7651396",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7651396/"
+  },
+  {
+   "cite": "Zhao Q, Khorasanizadeh S, Miyoshi Y, et al. Structural elements of an orphan nuclear receptor-DNA complex. Mol Cell 1998;1:849-61.",
+   "pmid": "9660968",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9660968/"
+  },
+  {
+   "cite": "Meinke G, Sigler PB. DNA-binding mechanism of the monomeric orphan nuclear receptor NGFI-B. Nat Struct Biol 1999;6:471-7.",
+   "pmid": "10331876",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10331876/"
+  },
+  {
+   "cite": "Preitner N, Damiola F, Lopez-Molina L, et al. The orphan nuclear receptor REV-ERBalpha controls circadian transcription within the positive limb of the mammalian circadian oscillator. Cell 2002;110:251-60.",
+   "pmid": "12150932",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12150932/"
+  },
+  {
+   "cite": "Ueda HR, Chen W, Adachi A, et al. A transcription factor response element for gene expression during circadian night. Nature 2002;418:534-9.",
+   "pmid": "12152080",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12152080/"
+  },
+  {
+   "cite": "Guillaumond F, Dardente H, Giguère V, et al. Differential control of Bmal1 circadian transcription by REV-ERB and ROR nuclear receptors. J Biol Rhythms 2005;20:391-403.",
+   "pmid": "16267379",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16267379/"
+  },
+  {
+   "cite": "Yin L, Wu N, Curtin JC, et al. Rev-erbalpha, a heme sensor that coordinates metabolic and circadian pathways. Science 2007;318:1786-9.",
+   "pmid": "18006707",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18006707/"
+  },
+  {
+   "cite": "Cho H, Zhao X, Hatori M, et al. Regulation of circadian behaviour and metabolism by REV-ERB-α and REV-ERB-β. Nature 2012;485:123-7.",
+   "pmid": "22460952",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22460952/"
+  },
+  {
+   "cite": "Zhang Y, Fang B, Emmett MJ, et al. GENE REGULATION. Discrete functions of nuclear receptor Rev-erbα couple metabolism to the clock. Science 2015;348:1488-92.",
+   "pmid": "26044300",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26044300/"
+  },
+  {
+   "cite": "Kojetin DJ, Burris TP. REV-ERB and ROR nuclear receptors as drug targets. Nat Rev Drug Discov 2014;13:197-216.",
+   "pmid": "24577401",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24577401/"
+  },
+  {
+   "cite": "Penvose A, Keenan JL, Bray D, et al. Comprehensive study of nuclear receptor DNA binding provides a revised framework for understanding receptor specificity. Nat Commun 2019;10:2514.",
+   "pmid": "31175293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31175293/"
+  }
+ ]
+}

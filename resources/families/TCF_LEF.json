@@ -1,0 +1,79 @@
+{
+ "key": "TCF_LEF",
+ "aka": [
+  "WRE",
+  "Wnt response element",
+  "TCF binding element",
+  "TBE",
+  "TCF site",
+  "LEF-1 site",
+  "TCF4 site",
+  "TCF/LEF motif"
+ ],
+ "consensus": "CTTTGWW",
+ "short": "TCF/LEF proteins are the DNA-binding end of the canonical Wnt pathway. Humans have four: TCF7 (TCF-1), TCF7L1 (TCF-3), TCF7L2 (TCF-4) and LEF1. Each binds DNA through a single SRY-type HMG box plus an adjacent basic region, reading the minor groove of the Wnt response element CTTTGWW and bending the helix sharply. None activates transcription on its own: an N-terminal domain recruits beta-catenin, which supplies the coactivators, and without nuclear beta-catenin the same proteins repress through TLE/Groucho. Wnt response elements control intestinal crypt renewal, hair follicle and limb development, and T cell differentiation; they are constitutively occupied in APC-mutant colorectal cancer, and an intronic variant at TCF7L2 is the largest-effect common risk allele for type 2 diabetes.",
+ "long": "## The factors\n\nFour human genes encode TCF/LEF proteins: TCF7 (originally TCF-1), TCF7L1 (TCF-3), TCF7L2\n(TCF-4) and LEF1. Each carries one HMG box of the same SRY-related, sequence-specific type used\nby SOX proteins, together with an adjacent basic region. The HMG box binds entirely in the minor\ngroove and bends DNA sharply; the LEF-1 solution structure showed the box in a widened minor\ngroove of a markedly distorted helix, with the basic region lying across the narrowed major\ngroove and adding to recognition. Because of that geometry these proteins were first described\nas architectural factors that bring proteins at flanking sites into contact, the original\nexample being Ets-1, RUNX and ATF/CREB at the TCR-alpha enhancer. Transcriptional output comes\nfrom partners rather than from the HMG box: an N-terminal domain binds the armadillo repeats of\nbeta-catenin, whose groove accommodates the extended TCF peptide, and without nuclear beta-\ncatenin the same proteins repress through TLE/Groucho and histone deacetylases. Alternative\nsplicing produces \"E-tail\" isoforms of TCF7 and TCF7L2 carrying a 30-residue cysteine clamp\n(C-clamp), a second and independent DNA-binding module. TCF7 and LEF1 are highest in T\nlymphocytes and progenitors, TCF7L1 is broad and prominent in embryonic stem cells, and TCF7L2\nis broad with high levels in intestine, pancreatic islets and brain.\n\n## The motif\n\nThe Wnt response element, also called the TCF binding element, is written CTTTGWW (W = A/T),\nmost often CTTTGAT or CTTTGAA, and AWWCAAAG on the opposite strand. The medoid of the 18 models\ncollected here is AGATCAAAG, the reverse complement of CTTTGATCT; the databases differ in which\nstrand they display, not in what they measured. Cyclic selection with full-length LEF-1 and\nTCF-1E gave the extended element TYYCTTTGATSTT. The invariant part is the CTTTG pentamer, where\nthe HMG box inserts into the minor groove; the two positions after it are read with help from\nthe basic region and from residues C-terminal to the box, and site selection on Tcf1 showed the\nfunctional element to be about 12 base pairs, not the 6-8 usually assumed for an HMG box. E-tail\nisoforms additionally bind a GC-rich helper element, RCCG, near the core. The C-clamp does not\nchange which WRE is recognized, but it restricts occupancy to sites carrying the extra block,\nand that is visible here: the two longest models (HOCOMOCO TCF7L1, CAGCGCCTCGATGT, 18.0 bits;\nVierstra AC0308 LEF/TCF, CAGCGCCCCGATG, 17.4 bits) pair a GC-rich block with the core instead of\nextending the AT-rich flanks. All four proteins give the same motif - cohesion 0.84, the\ntightest family in the HMG class - so sequence cannot separate TCF7, TCF7L1, TCF7L2 and LEF1,\nand the archetypes are named \"LEF/TCF\" and \"TCF7L/LEF\". The boundary that does matter is with\nSOX: the reverse complement of CTTTGWW is WWCAAAG, and the SRY/SOX consensus is WWCAAWG,\nidentical except that SOX tolerates T where TCF/LEF requires A.\n\n## Where it acts\n\nWnt response elements are predominantly distal. Genome-wide mapping of TCF7L2 in colorectal\ncancer cells placed most occupied sites well away from transcription start sites, often in\nclusters of several elements per responsive gene, and recovered the CTTTG core as the enriched\nmotif. Canonical targets include AXIN2, LGR5, ASCL2, SP5, NKD1, CDX1, MYC and LEF1 itself. In\nintestinal epithelium TCF7L2 sites co-occur with CDX2, HNF4A, GATA6 and SOX9 sites; in T cells\nTCF7 sites co-occur with RUNX and GATA3. With two degenerate positions, CTTTGWW is expected on\nthe order of 1.5 million times in a 3.1 Gb double-stranded genome, so the element is not what\nlimits output - nuclear beta-catenin level, chromatin state and the presence of a C-clamp helper\nsite are.\n\n## Biology and disease\n\nTCF/LEF proteins convert Wnt signaling into transcription. Beta-catenin was shown to bind LEF-1\nand convert it into an activator, and the Drosophila experiment with Armadillo and dTCF\nestablished that this is the pathway's output step. In colorectal cancer with APC loss, beta-\ncatenin accumulates and forms a constitutive complex with TCF7L2 that holds Wnt targets on;\nactivating CTNNB1 mutations produce the same result. LEF1 is required for hair follicle, tooth\nand limb development; TCF7 for thymocyte development, and TCF1 marks the stem-like CD8 T cell\npopulation that responds to checkpoint blockade; TCF7L1 restrains differentiation in embryonic\nstem cells. The intronic TCF7L2 variant rs7903146 was identified as a common risk allele for\ntype 2 diabetes and remains the largest-effect common variant for that disease, acting through\nislet function.\n\n## Reading a hit\n\nA CTTTGWW match identifies a Wnt response element, not which TCF/LEF protein uses it: all four\nare identical on DNA. Choosing among them needs expression data; deciding whether the site is\nactive needs evidence about beta-catenin. The bigger practical hazard is the SOX family:\nCTTTGTT-type sequences satisfy both consensuses, several HOCOMOCO SOX models (SOX4, SOX11,\nSOX13, one SOX2 model) read CCTTTGTT, and there is no sequence-only way to resolve them - an AT-\nrich flank leans SOX, a GC-rich RCCG block leans an E-tail TCF. The element is common enough to\noccur by chance more than a million times, so isolated matches are weak evidence. Three of the\nseven HOCOMOCO models here are ChIP-only; prefer the HT-SELEX and methyl-HT-SELEX models when\nthe question is whether a protein binds a sequence. Finally, do not read the GC-rich block of\nthe long TCF7L1 models as a WRE - it is the helper site, and alone it is not a TCF/LEF motif.\n",
+ "caveats": "Good confidence that a CTTTGWW match is a Wnt response element; none at all about which of TCF7, TCF7L1, TCF7L2 and LEF1 binds it, since all four share one motif (cohesion 0.84) and the archetypes are named \"LEF/TCF\". The element overlaps the SOX consensus at all but one position, so CTTTGTT-type hits cannot be assigned to TCF/LEF rather than SOX from sequence alone. Roughly 1.5 million matches are expected by chance genome-wide. Occupancy depends on nuclear beta-catenin and, for E-tail isoforms, on a nearby GC-rich helper site; the GC block in the longest TCF7L1 and LEF/TCF models is that helper, not the core element.",
+ "refs": [
+  {
+   "cite": "van de Wetering M, Clevers H. Sequence-specific interaction of the HMG box proteins TCF-1 and SRY occurs within the minor groove of a Watson-Crick double helix. EMBO J 1992;11:3039-44.",
+   "pmid": "1639073",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1639073/"
+  },
+  {
+   "cite": "Love JJ, Li X, Case DA, et al. Structural basis for DNA bending by the architectural transcription factor LEF-1. Nature 1995;376:791-5.",
+   "pmid": "7651541",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7651541/"
+  },
+  {
+   "cite": "Behrens J, von Kries JP, Kühl M, et al. Functional interaction of beta-catenin with the transcription factor LEF-1. Nature 1996;382:638-42.",
+   "pmid": "8757136",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8757136/"
+  },
+  {
+   "cite": "van de Wetering M, Cavallo R, Dooijes D, et al. Armadillo coactivates transcription driven by the product of the Drosophila segment polarity gene dTCF. Cell 1997;88:789-99.",
+   "pmid": "9118222",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9118222/"
+  },
+  {
+   "cite": "Korinek V, Barker N, Morin PJ, et al. Constitutive transcriptional activation by a beta-catenin-Tcf complex in APC-/- colon carcinoma. Science 1997;275:1784-7.",
+   "pmid": "9065401",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9065401/"
+  },
+  {
+   "cite": "Graham TA, Weaver C, Mao F, et al. Crystal structure of a beta-catenin/Tcf complex. Cell 2000;103:885-96.",
+   "pmid": "11136974",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11136974/"
+  },
+  {
+   "cite": "van Beest M, Dooijes D, van De Wetering M, et al. Sequence-specific high mobility group box factors recognize 10-12-base pair minor groove motifs. J Biol Chem 2000;275:27266-73.",
+   "pmid": "10867006",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10867006/"
+  },
+  {
+   "cite": "Hallikas O, Palin K, Sinjushina N, et al. Genome-wide prediction of mammalian enhancers based on analysis of transcription-factor binding affinity. Cell 2006;124:47-59.",
+   "pmid": "16413481",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16413481/"
+  },
+  {
+   "cite": "Atcha FA, Syed A, Wu B, et al. A unique DNA binding domain converts T-cell factors into strong Wnt effectors. Mol Cell Biol 2007;27:8352-63.",
+   "pmid": "17893322",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17893322/"
+  },
+  {
+   "cite": "Hatzis P, van der Flier LG, van Driel MA, et al. Genome-wide pattern of TCF7L2/TCF4 chromatin occupancy in colorectal cancer cells. Mol Cell Biol 2008;28:2732-44.",
+   "pmid": "18268006",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18268006/"
+  },
+  {
+   "cite": "Grant SF, Thorleifsson G, Reynisdottir I, et al. Variant of transcription factor 7-like 2 (TCF7L2) gene confers risk of type 2 diabetes. Nat Genet 2006;38:320-3.",
+   "pmid": "16415884",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16415884/"
+  },
+  {
+   "cite": "Werner MH, Huth JR, Gronenborn AM, et al. Molecular basis of human 46X,Y sex reversal revealed from the three-dimensional solution structure of the human SRY-DNA complex. Cell 1995;81:705-14.",
+   "pmid": "7774012",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7774012/"
+  }
+ ]
+}

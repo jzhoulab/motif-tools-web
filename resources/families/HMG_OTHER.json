@@ -1,0 +1,76 @@
+{
+ "key": "HMG_OTHER",
+ "aka": [
+  "non-SOX HMG-box",
+  "HMG20",
+  "BRAF35",
+  "iBRAF",
+  "bobby sox homolog",
+  "HMG-box superfamily (other)"
+ ],
+ "short": "This entry holds the HMG-box factors that are neither SOX nor TCF/LEF: HMG20A (iBRAF), HMG20B (BRAF35) and BBX (bobby sox homolog). They share only the fold. HMG20A and HMG20B are paralogous subunits of chromatin complexes - HMG20B of the LSD1-CoREST-HDAC complex that keeps neuronal genes off in non-neuronal cells, HMG20A of KMT2A/MLL complexes that turn them on - so their genomic distribution is largely set by whichever partner recruits the complex. BBX is a poorly characterized protein that groups phylogenetically with CIC rather than with SOX. The three measured motifs are unrelated to each other and to the SOX core, and this is the least coherent family in the HMG class; a hit here should be treated as a lead, not an identification.",
+ "long": "## The factors\n\nThree proteins are collected here, and what they have in common is a single HMG box, not a site.\nHMG20B, originally named BRAF35 (BRCA2-associated factor 35), is a core subunit of the BHC\ncomplex that pairs LSD1 (KDM1A) and CoREST with histone deacetylases and represses neuronal\ngenes in non-neuronal cells. HMG20A, its paralogue, was named iBRAF for inhibitor of BRAF35: it\nopposes that complex and instead recruits KMT2A/MLL to drive neuronal gene expression, and it is\nalso found in a KMT2A-associated PHF5A-PHF14-HMG20A-RAI1 subcomplex. HMG20B has a separate\nmitotic function that depends on its interaction with the BRC repeats of BRCA2. Both are broadly\nexpressed. BBX is a larger, much less studied protein, broadly expressed with enrichment in the\ncentral nervous system, which phylogenetic analysis places with CIC (capicua) in an HMG-box\nsubfamily distinct from both SOX and TCF/LEF. The important structural point is that most HMG\nboxes are architectural rather than sequence-reading domains: the HMGB1/HMGB2 type binds and\nbends DNA with little sequence preference, and only a minority of the superfamily - SOX,\nTCF/LEF, CIC and a few others - has demonstrable sequence specificity. Nothing published\nestablishes that HMG20A or HMG20B selects a specific sequence in cells.\n\n## The motif\n\nThere is no single consensus for this family, which is why none is given. The four models here\ndisagree with each other; cohesion is 0.45, the lowest of the HMG-class families. BBX gives the\nmost informative model, and it is the family medoid: CIS-BP reports TGAACRVCGTTCA (15.1 bits)\nand the Vierstra archetype AC0363 independently reports TGAACRNYGTTCA (15.8 bits). These are the\nsame 13-base element - an inverted repeat, since TGAAC and GTTCA are reverse complements, with\nthree variable bases between them. The half-site resembles the TGAAT half of the dimeric,\npalindromic sites that appear in SOX models (Vierstra TGAATGTGCAGTCA, HOCOMOCO SOX1\nTGAATANCATTCAT), differing at one position, which is consistent with BBX reading DNA in the same\ngeneral way as other sequence-specific HMG boxes. HMG20A's single HOCOMOCO model,\nHM20A.H14CORE.0.SB.A, reads TCCCTAGGC (11.5 bits); its fourth field carries S, so it rests on\nHT-SELEX rather than on ChIP, and it is graded A. CCTAGG is itself palindromic but bears no\nrelation to the SOX or TCF/LEF core. The HMG20B model, CIS-BP M02487_2.00, is ATTATAT (10.5\nbits) and is inferred from the mouse protein at 94% DNA-binding-domain identity; a short AT-rich\nstring of this kind is what a non-sequence-specific HMG box tends to produce in a selection\nexperiment, and it should not be read as a recognition sequence.\n\n## Where it acts\n\nFor HMG20A and HMG20B the practical answer is: wherever the complex goes. LSD1-CoREST-HDAC is\nrecruited to neuronal gene promoters largely by REST binding its own RE1/NRSE element, and KMT2A\ncomplexes are recruited by their own targeting subunits; HMG20A and HMG20B come along as\nsubunits. Locations reported for them therefore track partner occupancy - neuronal gene\npromoters, pancreatic islet regulatory regions where HMG20A is required for beta cell\nmaturation, adipocyte loci where HMG20A acts through MEF2C, and KMT2A targets in pancreatic\ncancer stem cells. BBX has been mapped less. Its 13-base palindrome is specific by the standards\nof this atlas: with two degenerate inner positions, TGAACRVCGTTCA is expected only a few hundred\ntimes in a 3.1 Gb genome, against tens of thousands for the nine-base HMG20A model and millions\nfor a bare six-base HMG core.\n\n## Biology and disease\n\nHMG20B is required for repression of the neuronal program in non-neuronal cells and for\ncompletion of mitosis, and its splicing has been implicated in breast cancer; the HMG20A locus\nis a genome-wide-association signal for type 2 diabetes, and HMG20A is needed for functional\nmaturity of pancreatic beta cells, restrains adipogenesis through MEF2C, and supports the stem-\ncell state in pancreatic cancer. The HMG20A/HMG20B antagonism is a clean example of two\nparalogues with the same DNA-binding domain having opposite effects by virtue of the complexes\nthey join. BBX has been linked to phosphate homeostasis through regulation of FGF23 in bone, and\nis maternally expressed and CNS-enriched in zebrafish and mouse. None of the three has an\nestablished monogenic human disease.\n\n## Reading a hit\n\nTreat this family as a fold, not a motif: the models do not resemble one another and the family\ncohesion is 0.45. The BBX palindrome is worth taking seriously as a sequence - two databases\nderived it independently and it is long enough to be rare - but the label rests on in vitro\nselection with no structural or functional follow-up, so \"BBX site\" is provisional, and because\nthe half-sites resemble those of dimeric SOX sites you should exclude SOX before settling on\nBBX. An HMG20A match does not license the conclusion that HMG20A occupies the site: the HT-SELEX\nevidence supports \"this protein can bind this sequence\", while in cells HMG20A is a passenger in\nLSD1-CoREST and KMT2A complexes whose distribution is set by REST and other partners, so check\nfor an RE1/NRSE element nearby. The HMG20B model is mouse-inferred and low in information; do\nnot use it to call sites. More generally, a weak AT-rich match labelled with an HMG-box protein\nis more likely to reflect a shape preference than a recognition sequence.\n",
+ "caveats": "Low confidence throughout. This is a fold-defined group with no shared consensus and the lowest cohesion in the HMG class (0.45) across only four models. The BBX 13-base palindrome is reproduced by two databases and is rare enough to be useful, but rests on in vitro selection alone and its half-sites overlap those of dimeric SOX sites. The HMG20A motif has HT-SELEX support, yet HMG20A acts as a subunit of LSD1-CoREST and KMT2A complexes, so genomic locations attributed to it may belong to REST or another recruiting factor. The HMG20B model is inferred from mouse at 94% DNA-binding-domain identity and is an uninformative AT-rich string.",
+ "refs": [
+  {
+   "cite": "Hakimi MA, Bochar DA, Chenoweth J, et al. A core-BRAF35 complex containing histone deacetylase mediates repression of neuronal-specific genes. Proc Natl Acad Sci U S A 2002;99:7420-5.",
+   "pmid": "12032298",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12032298/"
+  },
+  {
+   "cite": "Wynder C, Hakimi MA, Epstein JA, et al. Recruitment of MLL by HMG-domain protein iBRAF promotes neural differentiation. Nat Cell Biol 2005;7:1113-7.",
+   "pmid": "16227968",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16227968/"
+  },
+  {
+   "cite": "Lee M, Daniels MJ, Garnett MJ, et al. A mitotic function for the high-mobility group protein HMG20b regulated by its interaction with the BRC repeats of the BRCA2 tumor suppressor. Oncogene 2011;30:3360-9.",
+   "pmid": "21399666",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21399666/"
+  },
+  {
+   "cite": "Mellado-Gil JM, Fuente-Martín E, Lorenzo PI, et al. The type 2 diabetes-associated HMG20A gene is mandatory for islet beta cell functional maturity. Cell Death Dis 2018;9:279.",
+   "pmid": "29449530",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29449530/"
+  },
+  {
+   "cite": "Li R, Meng S, Ji M, et al. HMG20A Inhibit Adipogenesis by Transcriptional and Epigenetic Regulation of MEF2C Expression. Int J Mol Sci 2022;23.",
+   "pmid": "36142473",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36142473/"
+  },
+  {
+   "cite": "Mouti MA, Deng S, Pook M, et al. KMT2A associates with PHF5A-PHF14-HMG20A-RAI1 subcomplex in pancreatic cancer stem cells and epigenetically regulates their characteristics. Nat Commun 2023;14:5685.",
+   "pmid": "37709746",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37709746/"
+  },
+  {
+   "cite": "Chen T, Zhou L, Yuan Y, et al. Characterization of Bbx, a member of a novel subfamily of the HMG-box superfamily together with Cic. Dev Genes Evol 2014;224:261-8.",
+   "pmid": "25079045",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25079045/"
+  },
+  {
+   "cite": "Lee SJ, Kim JA, Ihn HJ, et al. The transcription factor BBX regulates phosphate homeostasis through the modulation of FGF23. Exp Mol Med 2024;56:2436-2448.",
+   "pmid": "39482539",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39482539/"
+  },
+  {
+   "cite": "Zhong G, Shen Q, Zheng X, et al. CPSF4-mediated regulation of alternative splicing of HMG20B facilitates the progression of triple-negative breast cancer. J Transl Med 2024;22:1149.",
+   "pmid": "39731153",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39731153/"
+  },
+  {
+   "cite": "Werner MH, Huth JR, Gronenborn AM, et al. Molecular basis of human 46X,Y sex reversal revealed from the three-dimensional solution structure of the human SRY-DNA complex. Cell 1995;81:705-14.",
+   "pmid": "7774012",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7774012/"
+  },
+  {
+   "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
+   "pmid": "25215497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  },
+  {
+   "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
+   "pmid": "32728250",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  }
+ ]
+}

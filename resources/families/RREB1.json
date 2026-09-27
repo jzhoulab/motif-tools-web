@@ -1,0 +1,72 @@
+{
+ "key": "RREB1",
+ "aka": [
+  "RREB-1",
+  "Finb",
+  "RAS-responsive element binding protein 1",
+  "LZ321",
+  "zinc finger protein 368",
+  "RRE"
+ ],
+ "consensus": "CCCCAAACCACCCC",
+ "short": "RREB1 is a large C2H2 zinc-finger protein, originally identified as the factor binding the RAS-responsive element of the human calcitonin promoter in medullary thyroid carcinoma cells. It has around fifteen fingers and, in the high-throughput data that define its motif, prefers a long C-rich word usually written CCCCAAACCACCCC. It is a downstream effector of RAS and TGF-beta signalling: in the TGF-beta pathway RREB1 partners with SMAD complexes to direct fibrogenic and developmental epithelial-mesenchymal transitions, and it has been implicated in metastatic enhancer priming. The motif's length is its main virtue and its main problem, since a long C-rich element overlaps several other GC-rich promoter families and no short functional consensus has ever been agreed in the literature.",
+ "long": "## The factors\n\nRREB1 is a single gene, with no paralogue in the human genome that shares its specificity, and this family therefore has one member and three closely agreeing matrices. The protein is large and carries a long array of C2H2 zinc fingers, on the order of fifteen, which is consistent with the long element the databases recover; as with other very large finger arrays, it is unlikely that all fingers contact DNA in a single binding event. It has appeared under several names: RREB-1, from the RAS-responsive element of the calcitonin promoter; Finb, from work on a Raf-responsive zinc-finger protein that binds divergent sequences; and zinc finger protein 368. Multiple splice variants exist and have been catalogued in urologic cancers. RREB1 is broadly expressed and is not a dedicated tissue-restricted factor.\n\n## The motif\n\nThis family needs an explicit statement about what the consensus is and is not. The functional literature never converged on a short IUPAC word: RREB-1 was defined by binding the RAS-responsive element of the human calcitonin gene, the Finb work explicitly reported binding to divergent sequences, and the secretin promoter study described potentiation of BETA2/NeuroD rather than a new consensus. The word given above, CCCCAAACCACCCC, comes from high-throughput in vitro data: the JASPAR MA0073.2 matrix and the CIS-BP M02665 matrix are effectively identical (pairwise similarity 0.998 in this collection), and the Vierstra archetype AC0602 is a slightly shortened version. The full 19-base form CCCCAAACCACCCCCCCCC is C-rich throughout with a short internal A-tract, and the information is carried mainly by the CCCCAAACCA portion; the 3' C-run is low in information and will match almost any C-rich stretch. There is no half-site, no spacing rule and no dimerization requirement described. Since the literature consensus and the data consensus genuinely differ in kind rather than in detail, we quote the data-derived word and label it as such.\n\nSeveral families in this atlas read C-rich promoter words, and they are easy to confuse. ZNF281/ZNF148 (ZBP-89) read CCCCACCCC; ZBTB7A/B/C read GACCCCCCCC; SP/KLF-type GC boxes are GGGGCGGGGC, that is G-rich on the same strand where RREB1 is C-rich plus CpG-containing; ZBTB17/MIZ1 reads core-promoter GC-rich sites. The RREB1 word's distinguishing feature is the internal AAA: CCCCAAACCACCCC has a purine interruption in the middle of the C-run that GC boxes and ZBTB7 sites lack, and it contains no CpG dinucleotide, which sets it apart from the CpG-island-associated GC-rich families. A hit with no internal A-tract is more likely one of the neighbouring families.\n\n## Where it acts\n\nThere is less genomic mapping for RREB1 than for most families of comparable size, and no ChIP-derived matrix appears in HOCOMOCO for it at all, which is itself informative. The characterized sites are promoter-proximal: the calcitonin promoter RAS-responsive element, the secretin promoter, and the SLC39A1/hZIP1 zinc-transporter promoter, where RREB1 overexpression down-regulates the gene in prostate cancer. In the TGF-beta pathway the interesting occupancy is enhancer-associated and combinatorial: RREB1 and SMAD complexes act together at enhancers controlling SNAI1 and other EMT effectors, and RREB1 has been placed in the mechanism by which TGF-beta and RAS jointly unmask primed enhancers to drive metastasis. So the motif can be expected both at C-rich proximal promoters and at signal-dependent enhancers, and in the latter case the relevant unit is a composite RREB1-SMAD arrangement rather than an isolated RREB1 site.\n\n## Biology and disease\n\nRREB1 was found through a differentiation response to RAS in human medullary thyroid carcinoma. Its best-supported function now is as a RAS effector within TGF-beta signalling: it directs the choice between fibrogenic and developmental EMT programs, and in mouse models contributes to enhancer priming for metastasis. Independent lines of work report RREB1 repressing the zinc transporter hZIP1 in prostate cancer, altering p16 expression and proliferation in gastric cancer, and being subject to splice-variant changes in urologic tumours. The RREB1 locus is also recurrently altered in melanoma, and copy-number gain at RREB1 is used diagnostically in melanocytic-lesion FISH panels, which is one of the more concrete clinical connections. Common variants in and near RREB1 appear in genome-wide association studies of type 2 diabetes and birth weight. No Mendelian RREB1 disorder is established.\n\n## Reading a hit\n\nTreat the long C-rich word as a family-level signal at best. The 5' CCCCAAACCA segment carries the discriminating information; the 3' C-run does not, so check that your match covers the informative half rather than sliding along a homopolymeric C stretch. A hit without the internal A-tract is probably a GC box or a ZNF281/ZBTB7-type site. There is no paralogue problem, but there is a provenance problem: the matrices are in vitro high-throughput products that are near-duplicates of each other, so agreement between them is not independent confirmation, and there is no ChIP-derived matrix to check against. For signalling questions, look for a nearby SMAD-binding element, because the functionally demonstrated RREB1 activity in TGF-beta responses is composite. A single promoter-proximal hit does not license the conclusion that a gene is RAS- or TGF-beta-responsive.",
+ "caveats": "The consensus here is data-derived rather than literature-derived, and that matters: the original RAS-responsive element was defined functionally in the calcitonin promoter, and the Finb work reported binding to divergent sequences, so no agreed short consensus exists. The three matrices in this family are near-duplicates from in vitro high-throughput sources, so their agreement is not independent evidence, and no ChIP-derived matrix is available to cross-check. The word is long but much of its length is a low-information C-run that will match many GC-rich promoters, overlapping the ZNF281, ZBTB7, ZBTB17 and SP/KLF families; only the CCCCAAACCA portion discriminates. Functionally demonstrated activity in TGF-beta signalling is composite with SMAD, not standalone.",
+ "refs": [
+  {
+   "cite": "Thiagalingam A, De Bustros A, Borges M, et al. RREB-1, a novel zinc finger protein, is involved in the differentiation response to Ras in human medullary thyroid carcinomas. Mol Cell Biol 1996;16:5335-45.",
+   "pmid": "8816445",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8816445/"
+  },
+  {
+   "cite": "Zhang L, Zhao J, Edenberg HJ. A human Raf-responsive zinc-finger protein that binds to divergent sequences. Nucleic Acids Res 1999;27:2947-56.",
+   "pmid": "10390538",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10390538/"
+  },
+  {
+   "cite": "Ray SK, Nishitani J, Petry MW, et al. Novel transcriptional potentiation of BETA2/NeuroD on the secretin gene promoter by the DNA-binding protein Finb/RREB-1. Mol Cell Biol 2003;23:259-71.",
+   "pmid": "12482979",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12482979/"
+  },
+  {
+   "cite": "Milon BC, Agyapong A, Bautista R, et al. Ras responsive element binding protein-1 (RREB-1) down-regulates hZIP1 expression in prostate cancer cells. Prostate 2010;70:288-96.",
+   "pmid": "19802870",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19802870/"
+  },
+  {
+   "cite": "Zou J, Milon BC, Desouki MM, et al. hZIP1 zinc transporter down-regulation in prostate cancer involves the overexpression of ras responsive element binding protein-1 (RREB-1). Prostate 2011;71:1518-24.",
+   "pmid": "21360563",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21360563/"
+  },
+  {
+   "cite": "Nitz MD, Harding MA, Smith SC, et al. RREB1 transcription factor splice variants in urologic cancer. Am J Pathol 2011;179:477-86.",
+   "pmid": "21703425",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21703425/"
+  },
+  {
+   "cite": "Su J, Morgani SM, David CJ, et al. TGF-β orchestrates fibrogenic and developmental EMTs via the RAS effector RREB1. Nature 2020;577:566-571.",
+   "pmid": "31915377",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31915377/"
+  },
+  {
+   "cite": "Deng YN, Xia Z, Zhang P, et al. Transcription Factor RREB1: from Target Genes towards Biological Functions. Int J Biol Sci 2020;16:1463-1473.",
+   "pmid": "32210733",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32210733/"
+  },
+  {
+   "cite": "Gao Q, Wu Y, Lu C, et al. Knockdown of RREB1 inhibits cell proliferation via enhanced p16 expression in gastric cancer. Cell Cycle 2021;20:2465-2475.",
+   "pmid": "34666611",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34666611/"
+  },
+  {
+   "cite": "O'Hern K, Barney R, Chambers M, et al. A novel method to assess copy number variation in melanoma: Droplet digital PCR for precise quantitation of the RREB1 gene in formalin-fixed, paraffin-embedded melanocytic neoplasms, a proof-of-concept study. J Cutan Pathol 2023;50:169-177.",
+   "pmid": "36325821",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36325821/"
+  },
+  {
+   "cite": "Lee JH, Sánchez-Rivera FJ, He L, et al. TGF-β and RAS jointly unmask primed enhancers to drive metastasis. Cell 2024;187:6182-6199.e29.",
+   "pmid": "39243762",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39243762/"
+  }
+ ]
+}

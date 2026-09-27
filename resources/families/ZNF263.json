@@ -1,0 +1,55 @@
+{
+ "key": "ZNF263",
+ "aka": [
+  "ZKSCAN12",
+  "GA-rich repeat site",
+  "GGAGGA repeat",
+  "CT-rich repeat site"
+ ],
+ "consensus": "GGAGGAGGAGGAGGA",
+ "short": "ZNF263 is a nine-finger C2H2 zinc-finger protein that also carries a KRAB repression domain and a SCAN oligomerization domain. Its binding site is unusually long: genome-wide mapping in K562 cells recovered a roughly 24-nucleotide GA-rich element built from tandem GGAGGA-like units, which differs in several positions from what the zinc-finger recognition code predicted for this protein. Unlike most KRAB zinc-finger proteins it does not sit mainly on transposable elements, and many of its thousands of target sites lie inside transcribed regions rather than at promoters; knockdown both raises and lowers target genes. The GA-rich character makes this motif easy to confuse with purine-rich sites read by ETS and SP1-like factors on the opposite strand.",
+ "long": "## The factors\n\nZNF263 is the only member of this family. It combines three modules found in the KRAB zinc-finger protein superfamily: nine tandem C2H2 fingers, a KRAB domain that recruits TRIM28/KAP1 and associated silencing machinery, and a SCAN domain, a protein-protein interaction module that mediates selective homo- and hetero-oligomerization among SCAN-domain zinc fingers. Because of the KRAB domain ZNF263 was expected to be a repressor, but knockdown experiments changed expression of target genes in both directions, so it is better described as a context-dependent regulator. It is broadly expressed. Its nine fingers are the reason the recognized element is so long, and it is one of the relatively few C2H2 proteins for which the whole array appears to be used for base reading rather than for anchoring or for protein contacts.\n\n## The motif\n\nThe element is long and internally repetitive. ChIP-seq in K562 cells recovered more than 5000 binding sites and a 24-nucleotide consensus assembled from tandem GA-rich units, written here as GGAGGAGGAGGAGGA and equivalently as CTCCTCCTCCTCCTCC on the complementary strand. Notably, the observed motif differed at several positions from the site predicted for ZNF263 by the zinc-finger recognition code, which was one of the early demonstrations that prediction from finger sequence is not a substitute for measurement. The matrices in this family capture different amounts of the repeat: the ChIP-derived HOCOMOCO matrix spans 20 base pairs (GGGAGGAGGGVGAGGAGGAG), while JASPAR MA0528.3, the CIS-BP matrix and the two Vierstra archetypes cover only seven or eight (GGGAGGA, CTCCTCCC, GTGCTCCC). The short versions are not different motifs; they are windows on the same repeat, and because the repeat is periodic a short matrix will match at many registers within one site, so one genomic element can generate several overlapping matches. There is no half-site and no spacing rule, and no paralogue to confuse ZNF263 with.\n\nWhat distinguishes this from other purine-rich motifs is length and periodicity. ETS-class motifs are built on a GGA(A/T) core needing the flanking ACCGGAAGT-type context and are much shorter; SPI1/PU.1 reads a purine-rich AGAGGAAGTG with a defined 3' half; ZNF281/ZNF148 and ZBTB7 read C-rich CCCCACCC-type words rather than GA-rich ones; VEZF1 reads CT/GC-rich vascular promoter sites. A genuine ZNF263 element is a long, uninterrupted GGAGGA-type repeat rather than a single core with flanks, so a short GGGAGGA match inside a mixed-sequence promoter more likely belongs to one of the shorter families, while a repeat of 20 base pairs or more is the ZNF263 signature.\n\n## Where it acts\n\nZNF263 sites are not concentrated at transcription start sites in the way most promoter motifs are. A striking fraction of the ChIP-seq peaks fall within the transcribed region of the target gene, including introns and exons, which is atypical both for a KRAB zinc-finger protein and for a promoter factor. Many targets are expressed at high levels despite the KRAB domain. Reported biology places sites at genes of heparan sulfate and heparin biosynthesis, where ZNF263 regulates the pathway, and at SIX3 in glioblastoma, where an EGFR-ZNF263 axis silences the gene. GA-rich and CT-rich simple repeats of this kind are also enriched in short tandem repeat-based silencer elements, so the sequence class has regulatory functions that are not necessarily ZNF263-dependent. The motif is not a CpG-island signature and has no named composite element.\n\n## Biology and disease\n\nThe functional literature is modest, and it is better to say so than to pad it. ZNF263 has been reported as a transcriptional regulator of heparin and heparan sulfate biosynthesis, as the effector of an EGFR-driven axis that epigenetically silences SIX3 in glioblastoma, and as a regulator of adipocyte gene expression in cattle. There is no described knockout phenotype in a mammalian model, no Mendelian disease, and no recurrent somatic driver mutation. Broader surveys of human KRAB zinc-finger proteins place ZNF263 among the members whose targets are not dominated by transposable elements, which distinguishes it from the large group of primate-specific KRAB proteins that control endogenous retroviruses. The motif is considerably better characterized than the biology.\n\n## Reading a hit\n\nAsk how long the match is. A 20-base-pair or longer GA repeat is good evidence for the ZNF263 element; a seven- or eight-base match is weak, because the short matrices in this family are windows on a repeat and because several other families read short purine-rich cores. Expect multiple overlapping hits within one real element and do not count them as independent observations. The primary matrices are ChIP-derived; the single HOCOMOCO matrix carrying in vitro support is the short eight-base version, so the long consensus rests on genome-wide occupancy rather than on purified binding, and indirect binding cannot be excluded for individual peaks. A hit inside a gene body is not a reason to discount it here, since that is where much of the reported occupancy lies. Simple repeats are also prone to mapping and assembly artefacts, so confirm that a hit lies in uniquely mappable sequence before building on it.",
+ "caveats": "Two problems. First, length: the long GA repeat is distinctive, but the short seven- and eight-base matrices in this family match promiscuously and overlap ETS, PU.1 and other purine-rich families on one strand and CT-rich families on the other. Only a match of about 20 base pairs or more should be attributed to ZNF263. Second, evidence: the long consensus comes from ChIP-seq in a single cell line, and the ChIP-derived matrix differs from the sequence predicted by the zinc-finger recognition code, so individual peaks could reflect indirect binding or the intrinsic properties of simple repeats. Because the element is periodic, one real site produces several overlapping matches, which inflates naive hit counts.",
+ "refs": [
+  {
+   "cite": "Frietze S, Lan X, Jin VX, et al. Genomic targets of the KRAB and SCAN domain-containing zinc finger protein 263. J Biol Chem 2010;285:1393-403.",
+   "pmid": "19887448",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19887448/"
+  },
+  {
+   "cite": "Ecco G, Imbeault M, Trono D. KRAB zinc finger proteins. Development 2017;144:2719-2729.",
+   "pmid": "28765213",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28765213/"
+  },
+  {
+   "cite": "Fedotova AA, Bonchuk AN, Mogila VA, et al. C2H2 Zinc Finger Proteins: The Largest but Poorly Explored Family of Higher Eukaryotic Transcription Factors. Acta Naturae 2017;9:47-58.",
+   "pmid": "28740726",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28740726/"
+  },
+  {
+   "cite": "Weiss RJ, Spahn PN, Toledo AG, et al. ZNF263 is a transcriptional regulator of heparin and heparan sulfate biosynthesis. Proc Natl Acad Sci U S A 2020;117:9311-9317.",
+   "pmid": "32277030",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32277030/"
+  },
+  {
+   "cite": "Yu Z, Feng J, Wang W, et al. The EGFR-ZNF263 signaling axis silences SIX3 in glioblastoma epigenetically. Oncogene 2020;39:3163-3178.",
+   "pmid": "32051553",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32051553/"
+  },
+  {
+   "cite": "Hussain S, Sadouni N, van Essen D, et al. Short tandem repeats are important contributors to silencer elements in T cells. Nucleic Acids Res 2023;51:4845-4866.",
+   "pmid": "36929452",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36929452/"
+  },
+  {
+   "cite": "de Tribolet-Hardy J, Thorball CW, Forey R, et al. Genetic features and genomic targets of human KRAB-zinc finger proteins. Genome Res 2023;33:1409-1423.",
+   "pmid": "37730438",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37730438/"
+  },
+  {
+   "cite": "Zhang X, Blumenthal RM, Cheng X. Updated understanding of the protein-DNA recognition code used by C2H2 zinc finger proteins. Curr Opin Struct Biol 2024;87:102836.",
+   "pmid": "38754172",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38754172/"
+  }
+ ]
+}

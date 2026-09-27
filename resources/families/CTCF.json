@@ -1,0 +1,78 @@
+{
+ "key": "CTCF",
+ "aka": [
+  "CCCTC-binding factor",
+  "CTCF site",
+  "CTCF-binding site (CBS)",
+  "insulator element",
+  "11-zinc-finger factor",
+  "NeP1",
+  "TFClass: more than 3 adjacent zinc finger factors"
+ ],
+ "consensus": "CCASYAGRKGGCRSYR",
+ "short": "CTCF is a single, near-ubiquitously expressed protein whose eleven C2H2 zinc fingers read an asymmetric, roughly 15-20 bp GC-rich sequence, often with a second recognition module a few bases upstream. Tens of thousands of these sites act as insulators and as anchors for cohesin-extruded chromatin loops, so they delimit topologically associating domains and separate enhancers from promoters they should not reach. Because the motif is long, information-rich, and read by a well-characterized finger-to-base code solved in two crystal structures, a CTCF match is one of the few motif hits that predicts real occupancy reasonably often. The site is directional: which strand it lies on determines which way a loop is anchored, and convergent pairs of sites are the ones that form loops.",
+ "long": "## The factors\n\nCTCF (CCCTC-binding factor) is one protein, not a family. The human gene encodes a 727-residue polypeptide with a central array of eleven Cys2-His2 zinc fingers flanked by N- and C-terminal regions that carry no DNA-binding domain. It is expressed in essentially every cell type examined, and it is extraordinarily conserved: the chicken and human proteins are 93% identical in amino acid sequence (Filippova et al. 1996). CTCF binds DNA as a monomer; no dimerization interface is required, and its long-range activity comes from partners rather than from self-assembly. The most important of these is cohesin: a short segment in the CTCF N terminus docks onto the SA2-SCC1 (STAG2-RAD21) surface of human cohesin, and a 2.7 A crystal structure of that complex showed the interaction is specifically needed for CTCF-anchored loops and for positioning cohesin at CTCF sites (Li et al. 2020). CTCF has exactly one paralogue, the testis-restricted CTCFL/BORIS, which carries an almost identical zinc-finger array and is treated as a separate family here.\n\n## The motif\n\nThe high-information core is 15 bp. JASPAR's core model (MA0139.2) reduces to RCCASYAGRKGGCRS in IUPAC, which is the sequence most people mean when they write the CTCF consensus; longer ChIP-derived models are also in use (JASPAR MA1929.2 and MA1930.2 span 31 and 33 positions), corresponding to the 33/34-mer that Schmidt et al. (2012) defined from six mammals. The structural basis is unusually well understood. In the Hashimoto et al. (2017) crystal structure, zinc fingers 3-7 each contact three bases of the 15-bp core, with each conserved nucleotide making a base-specific hydrogen bond to a particular side chain; variable positions also make contacts, which is how CTCF tolerates deviation from consensus. Yin et al. (2017) resolved CTCF on protocadherin sites and split the site into four modules: ZF3 reads module 4, ZF4-7 read modules 3 and 2, and ZF9-11 read an upstream module 1, with ZF8 acting as a spacer that absorbs variable distance between modules 1 and 2. Genome-wide, ZF4-7 anchor CTCF at roughly 80% of targets containing the core motif, while ZF1-2 and ZF8-11 read non-conserved flanks (Nakahashi et al. 2013). Two consequences matter in practice. The site is asymmetric, so it has an orientation, and a central asymmetric A is part of what makes recognition directional. CTCF is also sensitive to cytosine methylation at position 2 of the core but insensitive at position 12, a difference the structure rationalizes; across 19 human cell types, 41% of variable CTCF occupancy was attributable to differential methylation concentrated at two positions in the recognition sequence (Wang et al. 2012).\n\n## Where it acts\n\nThe first genome-wide survey reported 13,804 CTCF sites (Kim et al. 2007); current ChIP-seq gives tens of thousands per cell type. Sites are GC-rich but are not concentrated in CpG islands the way GC-box promoters are; they are spread across intergenic space, introns and promoter-proximal regions, and lineage-specific expansions have been driven by waves of retrotransposon activity (Schmidt et al. 2012). Occupied sites are enriched at topologically associating domain boundaries, where they often occur in clusters rather than singly, a redundancy that appears to stabilize boundaries over evolution (Kentepozidou et al. 2020). The essential partner is cohesin. Loops form preferentially between CTCF sites in convergent orientation (Rao et al. 2014), and deleting or inverting a single site changes the loops formed (de Wit et al. 2015; Guo et al. 2015) - the observation that motivated the loop-extrusion model (Sanborn et al. 2015; Fudenberg et al. 2016) and that single-molecule work later explained as DNA-tension-dependent, orientation-specific blocking of extruding cohesin (Davidson et al. 2023).\n\n## Biology and disease\n\nCTCF was defined functionally as the protein required for enhancer-blocking by vertebrate insulators (Bell et al. 1999) and for methylation-sensitive imprinting control at the H19/Igf2 locus. Acute degradation of CTCF abolishes CTCF-CTCF loops and TAD insulation while leaving A/B compartments intact, separating those two layers of genome folding (Nora et al. 2017). In disease, CTCF/cohesin-binding sites are recurrent somatic mutation hotspots in several cancers (Katainen et al. 2015); in IDH-mutant glioma, hypermethylation disrupts a CTCF boundary and allows an enhancer to activate PDGFRA (Flavahan et al. 2016); and germline monoallelic CTCF variants cause an autosomal dominant neurodevelopmental disorder affecting brain, growth and craniofacial development (Valverde de Morales et al. 2023).\n\n## Reading a hit\n\nThis is the one family in the atlas where a position-weight-matrix match genuinely carries predictive weight: sites that match the consensus more closely are occupied more often and more constitutively (Plasschaert et al. 2014). Even so, only a fraction of genomic matches are bound in any one cell type, and occupancy is conditional on the methylation state of the CpG at core position 2. Report the strand: a CTCF hit without an orientation is half an answer, because loop anchoring depends on it. A hit cannot distinguish CTCF from CTCFL, which share the zinc-finger array. Finally, check which matrix matched. Two Vierstra archetypes labelled for CTCF are not the CTCF motif at all - AC0214:CTCF/ZNF is a poly-T model (tTTTTgTTTTT) and AC0174:CTCF/ZNF is a short C-rich model (tGCCCCCT, 8.4 bits) - and a hit to either says nothing about CTCF. The genuine CTCF models, including the ChIP-derived HOCOMOCO core model (CTCF.H14CORE.0.P.B, ChIP evidence, grade B), agree with each other and with two independent crystal structures, so the label itself is not in doubt.",
+ "caveats": "Trust a strong CTCF hit more than almost any other motif in this atlas, but not unconditionally. Only some matches are occupied in a given cell type; occupancy depends on the methylation state of the CpG at core position 2, and a site bound in one lineage may be free in another. The hit cannot tell CTCF from CTCFL/BORIS. Orientation is part of the result, not an afterthought. A single site is weak evidence for a domain boundary, since boundaries are usually clusters of sites. And confirm which matrix matched: two Vierstra archetypes carrying the CTCF label are poly-T or short C-rich models that have nothing to do with the CTCF core.",
+ "refs": [
+  {
+   "cite": "Filippova GN, Fagerlie S, Klenova EM, et al. An exceptionally conserved transcriptional repressor, CTCF, employs different combinations of zinc fingers to bind diverged promoter sequences of avian and mammalian c-myc oncogenes. Mol Cell Biol 1996;16:2802-13.",
+   "pmid": "8649389",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8649389/"
+  },
+  {
+   "cite": "Bell AC, West AG, Felsenfeld G. The protein CTCF is required for the enhancer blocking activity of vertebrate insulators. Cell 1999;98:387-96.",
+   "pmid": "10458613",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10458613/"
+  },
+  {
+   "cite": "Kim TH, Abdullaev ZK, Smith AD, et al. Analysis of the vertebrate insulator protein CTCF-binding sites in the human genome. Cell 2007;128:1231-45.",
+   "pmid": "17382889",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17382889/"
+  },
+  {
+   "cite": "Schmidt D, Schwalie PC, Wilson MD, et al. Waves of retrotransposon expansion remodel genome organization and CTCF binding in multiple mammalian lineages. Cell 2012;148:335-48.",
+   "pmid": "22244452",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22244452/"
+  },
+  {
+   "cite": "Wang H, Maurano MT, Qu H, et al. Widespread plasticity in CTCF occupancy linked to DNA methylation. Genome Res 2012;22:1680-8.",
+   "pmid": "22955980",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22955980/"
+  },
+  {
+   "cite": "Nakahashi H, Kieffer Kwon KR, Resch W, et al. A genome-wide map of CTCF multivalency redefines the CTCF code. Cell Rep 2013;3:1678-1689.",
+   "pmid": "23707059",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23707059/"
+  },
+  {
+   "cite": "Plasschaert RN, Vigneau S, Tempera I, et al. CTCF binding site sequence differences are associated with unique regulatory and functional trends during embryonic stem cell differentiation. Nucleic Acids Res 2014;42:774-89.",
+   "pmid": "24121688",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24121688/"
+  },
+  {
+   "cite": "Rao SS, Huntley MH, Durand NC, et al. A 3D map of the human genome at kilobase resolution reveals principles of chromatin looping. Cell 2014;159:1665-80.",
+   "pmid": "25497547",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25497547/"
+  },
+  {
+   "cite": "de Wit E, Vos ES, Holwerda SJ, et al. CTCF Binding Polarity Determines Chromatin Looping. Mol Cell 2015;60:676-84.",
+   "pmid": "26527277",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26527277/"
+  },
+  {
+   "cite": "Hashimoto H, Wang D, Horton JR, et al. Structural Basis for the Versatile and Methylation-Dependent Binding of CTCF to DNA. Mol Cell 2017;66:711-720.e3.",
+   "pmid": "28529057",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28529057/"
+  },
+  {
+   "cite": "Yin M, Wang J, Wang M, et al. Molecular mechanism of directional CTCF recognition of a diverse range of genomic sites. Cell Res 2017;27:1365-1377.",
+   "pmid": "29076501",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29076501/"
+  },
+  {
+   "cite": "Li Y, Haarhuis JHI, Sedeño Cacciatore Á, et al. The structural basis for cohesin-CTCF-anchored loops. Nature 2020;578:472-476.",
+   "pmid": "31905366",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31905366/"
+  }
+ ]
+}

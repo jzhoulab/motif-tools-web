@@ -1,0 +1,78 @@
+{
+ "key": "SMAD",
+ "aka": [
+  "SBE",
+  "Smad-binding element",
+  "CAGA box",
+  "CAGAC motif",
+  "5GC motif",
+  "GC-SBE",
+  "BMP-responsive element (BRE)"
+ ],
+ "consensus": "GTCT / AGAC (palindrome GTCTAGAC); also the 5-bp GC motif GGC(GC/CG)",
+ "short": "SMAD proteins are the intracellular effectors of TGF-beta family signaling. Their MH1 domain inserts a beta-hairpin into the major groove and reads just four bases, GTCT or its reverse complement AGAC, often written as the CAGAC box or as the 8-bp palindrome GTCTAGAC. SMAD3, SMAD4 and the BMP-activated SMAD1/5/9 also bind a separate 5-bp GC-rich element, GGCGC or GGCCG. Both elements are far too short to be informative alone, and genome-wide SMAD occupancy is set mainly by whichever lineage-determining factor is present, so most SMAD ChIP peaks are better explained by a partner's motif than by an SBE. This is a family where a motif hit needs corroboration more than almost any other.",
+ "long": "## The factors\n\nEight human SMADs fall into three groups. The receptor-regulated R-SMADs are SMAD2 and SMAD3\n(phosphorylated by TGF-beta and activin receptors) and SMAD1, SMAD5 and SMAD9/SMAD8\n(phosphorylated by BMP receptors). SMAD4 is the shared co-SMAD. SMAD6 and SMAD7 are inhibitory\nand are not sequence-specific activators. DNA contact is made by the N-terminal MH1 domain, a\ncompact domain with a bound zinc ion whose 11-residue beta-hairpin inserts into the major groove;\nthe C-terminal MH2 domain mediates trimerization, so the functional unit on DNA is normally a\ntrimer of two R-SMADs plus SMAD4, giving two or three DNA-contacting hairpins. One paralogue is a\nspecial case: wild-type SMAD2 carries a 30-residue insert encoded by exon 3 immediately before the\nhairpin that blocks direct DNA binding. Full-length SMAD2 reaches DNA through partners, most\nclearly the forkhead protein FOXH1/FAST1; the naturally occurring SMAD2 delta-exon-3 splice form\ndoes bind DNA, like SMAD3.\n\n## The motif\n\nThe classical Smad-binding element is 4 bp, GTCT, read on the other strand as AGAC and usually\nquoted with a flanking base as CAGAC (\"CAGA box\") or CAGACA. Zawel and colleagues showed that\nSMAD3 and SMAD4 both recognize an identical 8-bp palindrome, GTCTAGAC, and the Smad3 MH1 crystal\nstructure explained why: the hairpin reads GTCT and two hairpins from a trimer can occupy the two\nhalves of the palindrome. Real promoters usually contain tandem CAGA repeats rather than a perfect\npalindrome; the TGF-beta response element of the PAI-1/SERPINE1 promoter is the canonical example.\nSeparately, SMADs bind a 5-bp GC-rich element with consensus GGC(GC) or GGC(CG). This was first\ndescribed as a BMP-responsive element for SMAD1/5, but structural work showed that SMAD3 and SMAD4\nbind the same 5GC motifs, and that these motifs occur in clusters in SMAD-bound regions\ngenome-wide. So the family has two chemically distinct consensus sequences, not one; a database\nentry showing GTCTAGAC and one showing a GC-rich string can both be correct. The data for this\nfamily reflects that split, and its cohesion (0.76) is the lowest in this batch. The CAGAC-type\nand 5GC-type models do not interconvert, and paralogues are not separable from sequence within\neither type. The CIS-BP SMAD9 entry is a GC-rich model transferred from a Drosophila protein at\n91% MH1 identity, not a human measurement.\n\n## Where it acts\n\nSMAD sites are distributed across promoters and enhancers with no CpG-island preference for the\nCAGAC form, while 5GC clusters are by definition GC-rich and promoter-biased. What matters more is\nthat SMAD occupancy is almost entirely conditional. Smad3 ChIP-seq in three different cell types\nrecovers three largely non-overlapping site sets, each co-occupied by that cell type's\nlineage-determining factor: OCT4 in embryonic stem cells, MYOD1 in myotubes, PU.1 in pro-B cells.\nIn other systems the recurring partners are FOXH1 and other forkhead proteins, RUNX1/2, AP-1\n(JUN/FOS), TEAD, and the repressors TGIF1, SKI and SnoN. Named composite elements include the\nactivin-responsive element of the Mix.2 promoter (a forkhead site next to a SMAD site) and the\nBMP-responsive elements of the Id1 and Smad7 promoters. In practice a SMAD peak set looks like the\npartner's peak set with a weak SBE enrichment layered on top.\n\n## Biology and disease\n\nTGF-beta/BMP signaling through SMADs controls epithelial growth arrest, extracellular matrix\nproduction, epithelial-mesenchymal transition, regulatory T cell induction, bone and cartilage\nformation, and left-right and dorsoventral patterning. Smad3-null mice die within months from\nimpaired mucosal immunity with defective T cell responses to TGF-beta. SMAD4 was identified as\nDPC4, a tumor suppressor homozygously deleted at 18q21 in roughly half of pancreatic\nadenocarcinomas; germline SMAD4 mutations cause juvenile polyposis and, with an overlapping\nphenotype, hereditary hemorrhagic telangiectasia. SMAD4 and SMAD2/SMAD3 are also recurrently\nmutated in colorectal cancer, and loss of SMAD signaling converts TGF-beta from a growth\nsuppressor to a driver of invasion and immune evasion. SMAD9 mutations cause a form of pulmonary\narterial hypertension, consistent with the BMP9/BMPR2 axis.\n\n## Reading a hit\n\nTreat an isolated SBE match as essentially no evidence. GTCT or AGAC occurs about once every 128\nbases on either strand, so a 4-bp core appears tens of millions of times in the human genome; even\nthe 8-bp palindrome GTCTAGAC is expected tens of thousands of times by chance. A SMAD hit becomes\nmeaningful only in one of three forms: several CAGA repeats within a short window, a cluster of\n5GC motifs, or an SBE within a few base pairs of a validated partner site (a forkhead, RUNX,\nAP-1 or TEAD motif). The second problem is that ChIP-derived SMAD motifs in these collections are\ncontaminated by indirect binding almost by construction, since SMAD complexes are recruited by\nlineage factors. Every HOCOMOCO SMAD2 model here rests on ChIP-seq only (evidence code P), and\nwild-type SMAD2 cannot bind DNA directly, so those matrices describe the composition of SMAD2\npeaks rather than SMAD2's own specificity. Finally, do not use a hit to name a paralogue. CAGAC\ndoes not mean TGF-beta rather than BMP, because SMAD1/5 bind CAGAC-type sites too and SMAD3/4 bind\nGC-type sites; the original \"TGF-beta uses CAGAC, BMP uses GC\" division does not survive the\nstructural and genome-wide data.",
+ "caveats": "The lowest-confidence family in this batch. A 4-bp SBE is not a finding; even the 8-bp palindrome is common by chance. The family has two unrelated consensus sequences (CAGAC-type and 5GC-type), so conflicting database entries may both be right, and paralogues are not separable within either. Most SMAD ChIP peaks are explained by a partner's motif, not by an SBE, and all HOCOMOCO SMAD2 models here are ChIP-only while full-length SMAD2 cannot bind DNA directly. The CIS-BP SMAD9 model is transferred from Drosophila. Use SMAD hits only as supporting evidence alongside a partner site or experimental occupancy.",
+ "refs": [
+  {
+   "cite": "Shi Y, Wang YF, Jayaraman L, et al. Crystal structure of a Smad MH1 domain bound to DNA: insights on DNA binding in TGF-beta signaling. Cell 1998;94:585-94.",
+   "pmid": "9741623",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9741623/"
+  },
+  {
+   "cite": "Zawel L, Dai JL, Buckhaults P, et al. Human Smad3 and Smad4 are sequence-specific transcription activators. Mol Cell 1998;1:611-7.",
+   "pmid": "9660945",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9660945/"
+  },
+  {
+   "cite": "Dennler S, Itoh S, Vivien D, et al. Direct binding of Smad3 and Smad4 to critical TGF beta-inducible elements in the promoter of human plasminogen activator inhibitor-type 1 gene. EMBO J 1998;17:3091-100.",
+   "pmid": "9606191",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9606191/"
+  },
+  {
+   "cite": "Martin-Malpartida P, Batet M, Kaczmarska Z, et al. Structural basis for genome wide recognition of 5-bp GC motifs by SMAD transcription factors. Nat Commun 2017;8:2070.",
+   "pmid": "29234012",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29234012/"
+  },
+  {
+   "cite": "Kusanagi K, Inoue H, Ishidou Y, et al. Characterization of a bone morphogenetic protein-responsive Smad-binding element. Mol Biol Cell 2000;11:555-65.",
+   "pmid": "10679014",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10679014/"
+  },
+  {
+   "cite": "Ruiz L, Kaczmarska Z, Gomes T, et al. Unveiling the dimer/monomer propensities of Smad MH1-DNA complexes. Comput Struct Biotechnol J 2021;19:632-646.",
+   "pmid": "33510867",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33510867/"
+  },
+  {
+   "cite": "Mullen AC, Orlando DA, Newman JJ, et al. Master transcription factors determine cell-type-specific responses to TGF-β signaling. Cell 2011;147:565-76.",
+   "pmid": "22036565",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22036565/"
+  },
+  {
+   "cite": "Labbé E, Silvestri C, Hoodless PA, et al. Smad2 and Smad3 positively and negatively regulate TGF beta-dependent transcription through the forkhead DNA-binding protein FAST2. Mol Cell 1998;2:109-20.",
+   "pmid": "9702197",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9702197/"
+  },
+  {
+   "cite": "Yagi K, Goto D, Hamamoto T, et al. Alternatively spliced variant of Smad2 lacking exon 3. Comparison with wild-type Smad2 and Smad3. J Biol Chem 1999;274:703-9.",
+   "pmid": "9873005",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9873005/"
+  },
+  {
+   "cite": "Yang X, Letterio JJ, Lechleider RJ, et al. Targeted disruption of SMAD3 results in impaired mucosal immunity and diminished T cell responsiveness to TGF-beta. EMBO J 1999;18:1280-91.",
+   "pmid": "10064594",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10064594/"
+  },
+  {
+   "cite": "Hahn SA, Schutte M, Hoque AT, et al. DPC4, a candidate tumor suppressor gene at human chromosome 18q21.1. Science 1996;271:350-3.",
+   "pmid": "8553070",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8553070/"
+  },
+  {
+   "cite": "Massagué J, Sheppard D. TGF-β signaling in health and disease. Cell 2023;186:4007-4037.",
+   "pmid": "37714133",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37714133/"
+  }
+ ]
+}

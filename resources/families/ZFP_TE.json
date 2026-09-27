@@ -1,0 +1,66 @@
+{
+ "key": "ZFP_TE",
+ "aka": [
+  "TE-binding KRAB zinc fingers",
+  "retrotransposon-restricting KZFPs",
+  "ZNF93",
+  "ZNF808",
+  "ZNF780A",
+  "SVA/L1 repressors"
+ ],
+ "short": "A small entry for KRAB zinc fingers whose recognized sequence is itself a piece of a transposable element. The best-documented cases are ZNF91, which binds the VNTR region of SVA elements, and ZNF93, which binds a segment of the 5' untranslated region of primate L1 retrotransposons. Both changed as those element families began to spread, and the L1PA3 subfamily escaped ZNF93 by deleting its binding site. The atlas holds six matrices for three proteins, ZNF93, ZNF808 and ZNF780A; ZNF91 itself has no motif in any of the four source databases. Because these motifs are copies of element sequence rather than compact regulatory words, a match usually tells you which repeat you are inside rather than which protein is bound there.",
+ "long": "## The factors\n\nAll three labelled proteins are KRAB zinc-finger proteins (KZFPs): an N-terminal KRAB domain that recruits TRIM28/KAP1 and through it SETDB1 and H3K9me3 heterochromatin, plus a tandem array of C2H2 fingers. ZNF93 (19p12, formerly ZNF505) is primate-restricted and represses L1 elements roughly 12 to 20 million years old (Forey et al. 2025). ZNF808 (19q13.41) is primate-specific and silences a set of primate-specific transposable elements during pancreas development (De Franco et al. 2023). ZNF780A has almost no functional literature; it appears here because its ChIP-derived motif clusters with the others, and the only concrete report about it is as the partner of a RUNX1::ZNF780A fusion in one case of T-cell acute lymphoblastic leukaemia (Panagopoulos et al. 2023). ZNF91, the fourth gene named in this family's definition, has no motif in JASPAR, HOCOMOCO, CIS-BP or the Vierstra archetypes, so it cannot be scanned for at all; it is covered here because its biology defines the category. ZFP57 and the bulk of the KZFP family have their own entries.\n\n## The motif\n\nThere is no family consensus: three proteins, three unrelated sequences, cohesion 0.60. ZNF93 is given as GGCAGCGGCAGCGG in JASPAR (MA1721.2) and as GCAGCAGSGNCTGCTGCTDCC in CIS-BP, a tandem GCAGC/CTGCT repeat rather than a compact site, which is what a long finger array tiling a repeated element looks like. ZNF780A is CWGACBGCCTGCC in CIS-BP and in the matching Vierstra archetype AC0167, but GGCAGGCAGTTAGGGAAG in HOCOMOCO. ZNF808 is GGTCTVTAAAGDGCCTGBT. Median consensus length is 16 bp and median information content 15 bits. More important, the primary literature does not describe these proteins with short consensus words at all: ZNF91 is mapped to the VNTR region of SVA elements (Haring et al. 2021) and ZNF93 to a segment of the L1 5' untranslated region whose deletion in the L1PA3 subfamily released those elements from repression (Jacobs et al. 2014). The matrices here are partial models of long element segments, so scanning for them behaves much like scanning for the element.\n\n## Where it acts\n\nCopies of the target element, usually in heterochromatin. SVA is one of three still-mobile human element families, with roughly 2,800 insertions in the reference genome and about half of those human-specific (Haring et al. 2021); recognizable L1PA 5' untranslated regions number in the thousands. Occupancy is concentrated in early embryonic and pluripotent contexts, where TRIM28 and SETDB1 deposit H3K9me3. Many KZFP-bound element copies remain in closed chromatin in differentiated cells, which is why sites of this kind are systematically missed by accessibility-based assays (Razavi et al. 2026). Where repression is relieved, the same elements can act as cis-regulatory modules for neighbouring genes, the route by which element sequence becomes host regulatory DNA (Imbeault et al. 2017; Davis et al. 2026).\n\n## Biology and disease\n\nDeleting ZNF91 in human embryonic stem cells activates SVA transcription, shifts evolutionarily young SVAs toward activating chromatin marks, mildly upregulates nearby genes, and triggers coordinated upregulation of KZFP genes across their clusters. Deleting ZNF611, another strong SVA binder, does not activate SVAs, so binding and functional repression are not the same thing (Haring et al. 2021). Biallelic loss of ZNF808 causes pancreatic agenesis: the primate-specific elements it normally silences gain regulatory activity during pancreas specification and liver-identity genes are induced instead (De Franco et al. 2023). ZNF93 has been co-opted in cancer, where it limits the mutagenic enzyme APOBEC3B; ZNF93 depletion impairs DNA synthesis, activates replication and damage checkpoints, and provokes proinflammatory phenotypes (Forey et al. 2025). The general pattern, of an arms race followed by domestication, is reviewed by Bruno et al. 2019 and Davis et al. 2026, and the correlation between retroelement load and zinc-finger gene number across vertebrates is quantified by Thomas and Schneider 2011.\n\n## Reading a hit\n\nCheck the repeat annotation before interpreting anything. A ZNF93 match inside an L1PA 5' untranslated region mainly tells you the approximate age of that L1 copy; whether ZNF93 is bound there in your cell type is a separate question these matrices cannot answer. Occurrence counts scale with element copy number, so genome-wide enrichment of one of these motifs is usually a statement about repeat content rather than about regulation. The evidence base is thin: the family contributes one HOCOMOCO model, ChIP-only (evidence code P) and graded C, and no member has an HT-SELEX or methyl-SELEX model in HOCOMOCO. ZNF91's absence from all four databases is a hard limitation. And because ZNF93's matrix is essentially a GCAGC repeat, it will also score well on unrelated GCAGC- and CTGCT-rich sequence, including trinucleotide-repeat tracts.",
+ "caveats": "These motifs are transposable-element sequence, so scanning for them is close to scanning for the element: check repeat annotation first, and expect occurrence counts to track element copy number rather than regulatory activity. The family contributes a single HOCOMOCO model, ChIP-only and graded C, and no member has in vitro support there. ZNF91, the best-characterized member of this category, has no matrix in any source database and cannot be scanned. The literature describes the ZNF91 and ZNF93 sites as long element segments, not short consensus words, so these matrices are approximations. Binding also does not imply repression: ZNF611 binds SVAs without silencing them.",
+ "refs": [
+  {
+   "cite": "Jacobs FM, Greenberg D, Nguyen N, et al. An evolutionary arms race between KRAB zinc-finger genes ZNF91/93 and SVA/L1 retrotransposons. Nature 2014;516:242-5.",
+   "pmid": "25274305",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25274305/"
+  },
+  {
+   "cite": "Haring NL, van Bree EJ, Jordaan WS, et al. ZNF91 deletion in human embryonic stem cells leads to ectopic activation of SVA retrotransposons and up-regulation of KRAB zinc finger gene clusters. Genome Res 2021;31:551-563.",
+   "pmid": "33722937",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33722937/"
+  },
+  {
+   "cite": "De Franco E, Owens NDL, Montaser H, et al. Primate-specific ZNF808 is essential for pancreatic development in humans. Nat Genet 2023;55:2075-2081.",
+   "pmid": "37973953",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37973953/"
+  },
+  {
+   "cite": "Forey R, Raclot C, Pulver C, et al. Cancer cells subvert the primate-specific KRAB zinc finger protein ZNF93 to control APOBEC3B. Proc Natl Acad Sci U S A 2025;122:e2505021122.",
+   "pmid": "40828019",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40828019/"
+  },
+  {
+   "cite": "Imbeault M, Helleboid PY, Trono D. KRAB zinc-finger proteins contribute to the evolution of gene regulatory networks. Nature 2017;543:550-554.",
+   "pmid": "28273063",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28273063/"
+  },
+  {
+   "cite": "Davis J, Voicu D, Chitnavis U, et al. The role of KRAB zinc-finger proteins in expanding the domestication potential of transposable elements. Nat Genet 2026;58:492-502.",
+   "pmid": "41720928",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41720928/"
+  },
+  {
+   "cite": "Bruno M, Mahgoub M, Macfarlan TS. The Arms Race Between KRAB-Zinc Finger Proteins and Endogenous Retroelements and Its Impact on Mammals. Annu Rev Genet 2019;53:393-416.",
+   "pmid": "31518518",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31518518/"
+  },
+  {
+   "cite": "Thomas JH, Schneider S. Coevolution of retroelements and tandem zinc finger genes. Genome Res 2011;21:1800-12.",
+   "pmid": "21784874",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21784874/"
+  },
+  {
+   "cite": "Razavi R, Fathi A, Yellan I, et al. Extensive binding of poorly characterized human transcription factors to genomic dark matter. Nat Commun 2026;17.",
+   "pmid": "42557260",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42557260/"
+  },
+  {
+   "cite": "Panagopoulos I, Andersen K, Rinvoll Johannsdottir IM, et al. Novel MYCBP::EHD2 and RUNX1::ZNF780A Fusion Genes in T-cell Acute Lymphoblastic Leukemia. Cancer Genomics Proteomics 2023;20:51-63.",
+   "pmid": "36581344",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36581344/"
+  }
+ ]
+}

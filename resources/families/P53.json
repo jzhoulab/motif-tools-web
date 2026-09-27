@@ -1,0 +1,77 @@
+{
+ "key": "P53",
+ "aka": [
+  "p53 response element",
+  "p53 RE",
+  "PuPuPuC(A/T)(T/A)GPyPyPy",
+  "RRRCWWGYYY",
+  "p53/p63/p73 element",
+  "p53 half-site"
+ ],
+ "consensus": "RRRCWWGYYY(N)0-13RRRCWWGYYY",
+ "short": "The p53 response element is bound by three paralogues - TP53, TP63 and TP73 - through a shared, structurally unusual DNA-binding domain that works only as a tetramer. The element is built from two decamers of the form RRRCWWGYYY, usually adjacent but tolerating a spacer, so a full site is 20 bp or more. Each decamer is read by a p53 dimer, and the CATG core at its centre is the part that matters: three of the four hotspot residues mutated in human cancers contact exactly this DNA. Because the element is long and its core is well defined, p53 sites are among the more specific vertebrate motifs, and a good double-decamer match is genuinely informative. What a match cannot tell you is which of the three paralogues is responsible.",
+ "long": "## The factors\n\nThree human genes encode this DNA-binding domain: TP53, TP63 and TP73. The domain is a beta-sandwich carrying a loop-sheet-helix motif and two large loops held together by a structural zinc ion, a fold shared with no other vertebrate transcription factor family. It works only as a tetramer, assembled through a separate C-terminal oligomerisation domain, and the tetramer is best described as a dimer of dimers: two dimers bind the two decamer half-sites and are further stabilised by protein-protein and base-stacking contacts between them. TP53 is ubiquitously expressed and normally short-lived, kept low by MDM2-mediated degradation until stress stabilises it. TP63 and TP73 are expressed more narrowly - TP63 in basal keratinocytes and other stratified epithelia, TP73 in ciliated epithelia and neurons - and both produce N-terminally truncated dominant-negative isoforms (dNp63, dNp73) that compete for the same element without activating it. All three share a near-identical DNA-contacting surface, which is why they read the same sequence.\n\n## The motif\n\nThe consensus was defined by selecting genomic fragments that bind p53: two copies of 5'-PuPuPuC(A/T)(T/A)GPyPyPy-3', now usually written RRRCWWGYYY, separated by 0-13 bp. One decamer alone was insufficient for binding in that assay, and small alterations of the decamer abolished affinity even in multiple copies. The crystal structure of the p53 core domain on DNA explained why: arginine 280 hydrogen-bonds the invariant guanine, lysine 120 and alanine 276 read the adjacent bases, and arginine 248 tracks the minor groove - residues 248, 273 and 282 are among the most frequently mutated in human tumours, so the hotspots are literally the DNA-reading apparatus. Information is concentrated in the central CWWG (in practice mostly CATG) and in the purine and pyrimidine runs that flank it; the outer positions are looser. Spacing is genuinely contested. The original definition allowed up to 13 bp, but a systematic transactivation study found that even small increases in spacer length sharply reduce activity, while separately reporting substantial transactivation from non-canonical half-sites (a single decamer) and three-quarter sites. Solution and crystal work has since shown that p53 tetramers can form hemispecific complexes in which one dimer sits on a specific half-site and the other on adjacent spacer sequence, with comparable affinity - which reconciles the two observations without settling how much of the genome's real regulation runs through half-sites. Practically, the databases here are split the same way: the high-information models are full double decamers (for example ACATGTCC..GACATGT, 16-20 positions), while several HOCOMOCO secondary models are single decamers or less, and those have markedly lower label agreement. TP53, TP63 and TP73 models are not separable from one another; the family's cohesion is 0.81 mainly because half-site and full-site models are mixed together.\n\n## Where it acts\n\np53 elements are found at promoters and at distal enhancers in roughly comparable numbers, and are not CpG-island-associated. The first genome-wide map put the number of high-confidence sites in the low hundreds to about 1,600 depending on threshold, far fewer than for most families, and curated censuses converge on a core set of a few hundred directly regulated genes that is largely shared across cell types and stresses. Unlike many factors, p53 does not require a partner site to bind: its element is self-sufficient and often sits in closed chromatin that p53 can open. Co-occurrence is therefore weaker and less stereotyped than for NF-kB or NFAT, though p53 sites are enriched near CCAAT boxes and E2F sites at cell-cycle genes, and p63 sites in keratinocytes co-occur with AP-1, KLF and GRHL motifs.\n\n## Biology and disease\n\np53 activation by DNA damage, oncogene signalling, ribosomal stress or nucleotide depletion drives cell-cycle arrest (CDKN1A), apoptosis (BBC3, PMAIP1, BAX), senescence, DNA repair and metabolic adjustment. TP53 is the most frequently mutated gene in human cancer, and the common mutations are missense changes in the DNA-binding domain rather than truncations - they produce a full-length protein that cannot read the element and can act dominant-negatively over the tetramer. Germline TP53 mutation causes Li-Fraumeni syndrome. The paralogues are developmental: Trp63-null mice lack limbs and stratified epithelia entirely, and human TP63 mutations cause EEC and related ectodermal dysplasia syndromes; TP73 loss affects ciliogenesis and neuronal survival. TP63 and TP73 are rarely mutated in cancer but their dominant-negative isoforms are frequently overexpressed.\n\n## Reading a hit\n\nA full double-decamer match is one of the more trustworthy motif hits available, because 20 constrained positions are rare by chance. A single decamer is not: it occurs frequently enough to be uninformative on its own, and the half-site models in these collections will match tens of thousands of times per genome. Always check whether the model you scanned with is a full site or a half site. The hit does not identify the paralogue - TP53, TP63 and TP73 read the same element, and in a keratinocyte or a basal breast tumour the more likely occupant is p63. Be aware of provenance: the CIS-BP TP53 motif M03439 is transferred from the mouse protein (91% DNA-binding-domain identity), which is harmless here but is the same mechanism that produces bad motifs elsewhere. ChIP-derived p53 models are relatively clean, since p53 binds its element directly and largely without partners, but the ChIP-only HOCOMOCO models still favour the subset of sites occupied in whichever cell line was assayed. Spacer-containing matches should be treated as plausible but weaker than adjacent decamers.",
+ "caveats": "Trust full sites, distrust half sites. Two adjacent RRRCWWGYYY decamers are specific enough that a match means something; a single decamer is common and several models in these databases are single-decamer or shorter, with correspondingly low label agreement. A hit identifies the p53 family, not the member: TP53, TP63 and TP73 share the element, so in stratified epithelia p63 is often the likelier occupant. Spacer length is unsettled - the original definition allowed 0-13 bp, but transactivation falls off quickly as the spacer grows, so spaced matches deserve less weight than abutting ones. One CIS-BP TP53 entry is inherited from mouse rather than measured on the human protein.",
+ "refs": [
+  {
+   "cite": "el-Deiry WS, Kern SE, Pietenpol JA, et al. Definition of a consensus binding site for p53. Nat Genet 1992;1:45-9.",
+   "pmid": "1301998",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1301998/"
+  },
+  {
+   "cite": "Cho Y, Gorina S, Jeffrey PD, et al. Crystal structure of a p53 tumor suppressor-DNA complex: understanding tumorigenic mutations. Science 1994;265:346-55.",
+   "pmid": "8023157",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8023157/"
+  },
+  {
+   "cite": "Yang A, Kaghad M, Wang Y, et al. p63, a p53 homolog at 3q27-29, encodes multiple products with transactivating, death-inducing, and dominant-negative activities. Mol Cell 1998;2:305-16.",
+   "pmid": "9774969",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9774969/"
+  },
+  {
+   "cite": "Mills AA, Zheng B, Wang XJ, et al. p63 is a p53 homologue required for limb and epidermal morphogenesis. Nature 1999;398:708-13.",
+   "pmid": "10227293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10227293/"
+  },
+  {
+   "cite": "Wei CL, Wu Q, Vega VB, et al. A global map of p53 transcription-factor binding sites in the human genome. Cell 2006;124:207-19.",
+   "pmid": "16413492",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16413492/"
+  },
+  {
+   "cite": "Kitayner M, Rozenberg H, Kessler N, et al. Structural basis of DNA recognition by p53 tetramers. Mol Cell 2006;22:741-753.",
+   "pmid": "16793544",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16793544/"
+  },
+  {
+   "cite": "Veprintsev DB, Fersht AR. Algorithm for prediction of tumour suppressor p53 affinity for binding sites in DNA. Nucleic Acids Res 2008;36:1589-98.",
+   "pmid": "18234719",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18234719/"
+  },
+  {
+   "cite": "Jordan JJ, Menendez D, Inga A, et al. Noncanonical DNA motifs as transactivation targets by wild type and mutant p53. PLoS Genet 2008;4:e1000104.",
+   "pmid": "18714371",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18714371/"
+  },
+  {
+   "cite": "Riley T, Sontag E, Chen P, et al. Transcriptional control of human p53-regulated genes. Nat Rev Mol Cell Biol 2008;9:402-12.",
+   "pmid": "18431400",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18431400/"
+  },
+  {
+   "cite": "Kitayner M, Rozenberg H, Rohs R, et al. Diversity in DNA recognition by p53 revealed by crystal structures with Hoogsteen base pairs. Nat Struct Mol Biol 2010;17:423-9.",
+   "pmid": "20364130",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20364130/"
+  },
+  {
+   "cite": "Fischer M. Census and evaluation of p53 target genes. Oncogene 2017;36:3943-3956.",
+   "pmid": "28288132",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28288132/"
+  },
+  {
+   "cite": "Vyas P, Beno I, Xi Z, et al. Diverse p53/DNA binding modes expand the repertoire of p53 response elements. Proc Natl Acad Sci U S A 2017;114:10624-10629.",
+   "pmid": "28912355",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28912355/"
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "key": "MBD_CXXC",
+ "aka": [
+  "MBD and CxxC readers",
+  "methyl-CpG binding domain",
+  "ZF-CxxC domain",
+  "CpG island readers",
+  "MECP2",
+  "CFP1 / CXXC1",
+  "KDM2A / KDM2B",
+  "unmethylated CpG readers"
+ ],
+ "consensus": "CG",
+ "short": "This family puts two opposite kinds of reader in one place. MBD proteins - MECP2, MBD1, MBD3 - bind CpG that is methylated. ZF-CxxC proteins - CXXC1/CFP1, CXXC4, CXXC5, KDM2A, KDM2B, FBXL19, TET1, TET3, DNMT1, KMT2A, KMT2B - bind CpG that is not. Neither group has a sequence-specific site in any useful sense. The single most important thing to know about this page is that its motifs are essentially measurements of CpG density: the family consensus is literally CG, eight of the twenty-one models carry two to four bits of information, and the representative model is a two-base-pair CG. Treat a MECP2 motif in particular with real scepticism.",
+ "long": "## The factors\n\nTwo unrelated protein modules are collected here because they do the same job from opposite directions. The methyl-CpG binding domain was defined in 1998 as the shared feature of a small mammalian family - MeCP2 plus MBD1, MBD2, MBD3 and MBD4 - that binds DNA containing methylated CpG; MeCP2 then recruits a Sin3A and histone deacetylase complex, which was the first mechanistic link from DNA methylation to repressive chromatin. The zinc-finger CxxC domain does the reverse: it binds CpG only when the cytosine is unmethylated, and it appears in a striking list of chromatin enzymes - CXXC1 (CFP1), CXXC4 and CXXC5, the H3K36 demethylases KDM2A and KDM2B, FBXL19, the 5-methylcytosine dioxygenases TET1 and TET3, the maintenance methyltransferase DNMT1, and the H3K4 methyltransferases KMT2A and KMT2B. In every case the domain is a targeting device attached to a catalytic or scaffolding protein, not a transcription factor in its own right.\n\nBecause methylation is almost entirely restricted to CpG in mammalian somatic cells, and because CpG islands are by definition the unmethylated CpG-dense regions, the two groups partition the same dinucleotide between them according to its modification state rather than according to its sequence context.\n\n## The motif\n\nThere is no motif in the ordinary sense, and the atlas data say so plainly. The family consensus is CG. The representative model, CIS-BP M01919 for CXXC1, is a two-base-pair CG carrying 4.0 bits. Eight models - those for CXXC1, CXXC5, KMT2A, KDM2A, KDM2B, FBXL19, TET1 and DNMT1 - are CG or CGG at 1.5 to 4.5 bits. The MECP2 model in CIS-BP, M00806, is the dinucleotide Ac at 1.8 bits. The slightly longer models add at most one or two informative flanking positions: TACG for FBXL19, TaCGc for KDM2A, TaCGT for CXXC4, GCGch for MBD1, CCGCcG for CXXC1 in HOCOMOCO. Structural work on human CXXC domains shows exactly this - the CpG is read directly and the domains differ modestly in which bases they tolerate immediately around it - so the flanking preferences in these models are real but small.\n\nThe long models are a different problem. HOCOMOCO's KMT2A model, CcCcGCCgCCGCCGCCGCCgCC, and its KMT2B model, GCGGCGGC, are ChIP-derived (evidence code P, grade B) CGG-repeat and GC-rich patterns; the MBD3 model, GGAGCgcaGsngGsgggrgvg, is likewise ChIP-only. These describe the base composition of CpG-island promoters, which is where the proteins sit, not a site the proteins select. The Vierstra archetype for MECP2, cCCGGag, and for MBD1, gGgCCGGag, are footprint archetypes over the same GC-rich compartment. Only TET3's tACGTaagGggggg has grade A multi-assay support, and it is dominated by an ACGT core plus a G-tract.\n\nOne statistic deserves attention. The short CG models have high label agreement, 0.5 to 0.8, meaning their nearest neighbours in other databases really do carry family labels - but their bestOther scores are also 0.85 to 0.95, meaning they are nearly identical to models in unrelated families. When both numbers are high for a two-bit model, the model is not discriminating anything.\n\n## Where it acts\n\nCpG islands, and methylated CpG everywhere else. CFP1/CXXC1 occupancy tracks unmethylated CpG islands and shapes their chromatin, and KDM2A is recruited to CpG islands by its CxxC domain to remove H3K36 methylation there. TET1 acts genome-wide on 5-methylcytosine and 5-hydroxymethylcytosine, with CpG islands and their shores prominent. MeCP2, by contrast, is not localised in the usual sense at all: in neurons it is present at levels approaching those of the histone octamer and tracks methylated CpG across the whole genome, and it represses the rate of transcriptional initiation of long, highly methylated genes rather than acting at discrete sites.\n\n## Biology and disease\n\nMECP2 is the Rett syndrome gene - mutations in the X-linked gene cause the classic neurodevelopmental disorder in girls, and duplication of the locus causes a distinct syndrome in boys. This is a very well-understood gene with a very poorly defined binding motif, and the contrast is instructive. KMT2A rearrangement defines a major class of acute leukaemia; DNMT1 mutations cause hereditary sensory neuropathy with dementia; TET2, a relative of the TET1/TET3 proteins filed here, is one of the most commonly mutated genes in myeloid malignancy. In none of these cases does a motif model contribute to interpretation.\n\n## Reading a hit\n\nDo not treat a match in this family as a binding site. If you must use these models, read them as a CpG-density statistic and check whether your region is a CpG island. Then ask which direction of methylation sensitivity matters: a CXXC protein requires the CpG to be unmethylated, an MBD protein requires it to be methylated, and the motif model cannot tell you which state your sequence is in - you need methylation data for that. Be most sceptical of MECP2. Its CIS-BP model is 1.8 bits, its Vierstra archetype is a generic GC-rich footprint, and the biology says MeCP2 coats methylated CpG genome-wide rather than occupying motifs. A MECP2 motif hit is not a MeCP2 site. The same applies to the ChIP-derived KMT2A, KMT2B and MBD3 models, which report the composition of CpG-island promoters.",
+ "caveats": "These are not sequence-specific motifs. The family consensus is CG, the representative model is a two-base CG, and eight of twenty-one models carry under 4.5 bits; they measure CpG density, not a site. Methylation state, which is what actually determines binding and which is opposite for the MBD and CxxC halves of the family, is invisible to a sequence scan. The long KMT2A, KMT2B and MBD3 models are ChIP-only (grade B) and describe the GC-rich composition of CpG-island promoters. MECP2 deserves particular scepticism: its CIS-BP model is 1.8 bits, and MeCP2 binds methylated CpG genome-wide at near-nucleosomal abundance rather than at discrete sites. Two CIS-BP models are cross-species transfers.",
+ "refs": [
+  {
+   "cite": "Hendrich B, Bird A. Identification and characterization of a family of mammalian methyl-CpG binding proteins. Mol Cell Biol 1998;18:6538-47.",
+   "pmid": "9774669",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9774669/"
+  },
+  {
+   "cite": "Nan X, Ng HH, Johnson CA, et al. Transcriptional repression by the methyl-CpG-binding protein MeCP2 involves a histone deacetylase complex. Nature 1998;393:386-9.",
+   "pmid": "9620804",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9620804/"
+  },
+  {
+   "cite": "Ho KL, McNae IW, Schmiedeberg L, et al. MeCP2 binding to DNA depends upon hydration at methyl-CpG. Mol Cell 2008;29:525-31.",
+   "pmid": "18313390",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18313390/"
+  },
+  {
+   "cite": "Amir RE, Van den Veyver IB, Wan M, et al. Rett syndrome is caused by mutations in X-linked MECP2, encoding methyl-CpG-binding protein 2. Nat Genet 1999;23:185-8.",
+   "pmid": "10508514",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10508514/"
+  },
+  {
+   "cite": "Skene PJ, Illingworth RS, Webb S, et al. Neuronal MeCP2 is expressed at near histone-octamer levels and globally alters the chromatin state. Mol Cell 2010;37:457-68.",
+   "pmid": "20188665",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20188665/"
+  },
+  {
+   "cite": "Boxer LD, Renthal W, Greben AW, et al. MeCP2 Represses the Rate of Transcriptional Initiation of Highly Methylated Long Genes. Mol Cell 2020;77:294-309.e9.",
+   "pmid": "31784358",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31784358/"
+  },
+  {
+   "cite": "Thomson JP, Skene PJ, Selfridge J, et al. CpG islands influence chromatin structure via the CpG-binding protein Cfp1. Nature 2010;464:1082-6.",
+   "pmid": "20393567",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20393567/"
+  },
+  {
+   "cite": "Blackledge NP, Zhou JC, Tolstorukov MY, et al. CpG islands recruit a histone H3 lysine 36 demethylase. Mol Cell 2010;38:179-90.",
+   "pmid": "20417597",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20417597/"
+  },
+  {
+   "cite": "Long HK, Blackledge NP, Klose RJ. ZF-CxxC domain-containing proteins, CpG islands and the chromatin connection. Biochem Soc Trans 2013;41:727-40.",
+   "pmid": "23697932",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23697932/"
+  },
+  {
+   "cite": "Xu C, Liu K, Lei M, et al. DNA Sequence Recognition of Human CXXC Domains and Their Structural Determinants. Structure 2018;26:85-95.e3.",
+   "pmid": "29276034",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29276034/"
+  },
+  {
+   "cite": "Xu Y, Wu F, Tan L, et al. Genome-wide regulation of 5hmC, 5mC, and gene expression by Tet1 hydroxylase in mouse embryonic stem cells. Mol Cell 2011;42:451-64.",
+   "pmid": "21514197",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21514197/"
+  }
+ ]
+}

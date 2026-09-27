@@ -1,0 +1,77 @@
+{
+ "key": "TFAP4",
+ "aka": [
+  "AP-4",
+  "AP4 site",
+  "class A E-box",
+  "CAGCTG E-box",
+  "TFAP4 site",
+  "SV40 late enhancer AP-4 element"
+ ],
+ "consensus": "CAGCTG",
+ "short": "TFAP4 (AP-4) is a single-gene bHLH-LZ family with no close paralogue. Unusually for the class, a second zipper-like dimerization motif restricts it to homodimers, so it does not form the combinatorial heterodimers that dominate the rest of the bHLH class. It binds the palindromic class-A E-box CAGCTG, usually written extended as AACAGCTGAT. TFAP4 is a direct MYC target and represses the CDK inhibitor CDKN1A (p21), placing it in a MYC-driven cell-cycle circuit whose direction is context-dependent - growth-promoting in several carcinomas, tumour-suppressive in B lymphocytes. Because CAGCTG is shared with the E-proteins and with most tissue-restricted bHLH factors, a match is weak evidence for AP-4 specifically.",
+ "long": "## The factors\n\nTFAP4 (AP-4) is a single-gene family: there is one human TFAP4 protein and no close paralogue, which makes it one of the few bHLH families where the usual paralogue problem does not apply. It is a basic helix-loop-helix leucine zipper protein, but with an unusual architecture. Beyond the bHLH and the adjacent leucine zipper, AP-4 carries a second, more distal zipper-like dimerization motif; biochemical dissection showed that these multiple dimerization surfaces restrict it to homodimers and prevent it from partnering the other bHLH-ZIP proteins. Functionally that puts AP-4 in the opposite position from the E-proteins: it does not form the combinatorial heterodimers that dominate the rest of the bHLH class, so its DNA-binding activity depends on its own expression level rather than on the availability of a partner. AP-4 was discovered as an enhancer-binding factor that cooperates with AP-1 to activate SV40 late transcription in vitro, and it is expressed broadly but at levels that follow proliferative signals, because TFAP4 is a direct MYC target gene. The atlas assigns 6 motifs here (4 JASPAR, 1 HOCOMOCO, 1 CIS-BP), all labelled TFAP4, with cohesion of only 0.77 - the lowest in this batch - for reasons explained below.\n\n## The motif\n\nThe AP-4 site is the palindromic class-A E-box CAGCTG, six base pairs, read as two CAG half-sites by the basic region of each monomer in the homodimer. In the general bHLH scheme, CACGTG is the class-B E-box read by the MYC/MAX/USF/MITF group and CAGCTG (and CACCTG) is the class-A E-box read by the E-proteins and by tissue-restricted bHLH factors; AP-4 is a class-A binder that happens to be a bHLH-ZIP. In the databases the motif is usually written extended, AaCAGCTGaT or CAGCTGtT, adding a weak preference for A/T immediately outside the core; that extra information is small and comes mainly from local DNA shape rather than from direct base contacts. The low cohesion score has two concrete causes. First, two of the six models are not CAGCTG at all but CATATG-type CANNTG variants (aaCAtaTGtt in JASPAR MA1570.1, AhCATATG in CIS-BP), so the family contains two different E-box classes. Second, two of the models are JASPAR heterodimer profiles in which the TFAP4 half-site is fused to an ETS half-site - ACCGGAAACAGCTG with FLI1, cCGGAAGCAGsTG with ETV1 - which are composite models of a TFAP4-ETS pair rather than definitions of the AP-4 site itself. Across all four databases, the nearest neighbours of the TFAP4 models are usually motifs labelled with some other factor: label agreement is only 0.1-0.2. That is not an error in the databases; it is a statement that CAGCTG is not an AP-4-specific sequence.\n\n## Where it acts\n\nCAGCTG is a 6-bp palindrome and therefore expected several hundred thousand times in the human genome, and unlike CACGTG it contains no CpG and so is not depleted. AP-4 occupancy is concentrated at promoters of cell-cycle and proliferation genes, overlapping heavily with MYC-responsive promoters, which is unsurprising given that TFAP4 is MYC-induced. It can act as an activator or a repressor at the same class of site; at CDKN1A it is a repressor. The JASPAR composite models suggest AP-4 half-sites adjacent to ETS half-sites as one recurring arrangement, and the founding observation was cooperation with AP-1 at the SV40 late enhancer, so AP-4 sites are best interpreted as part of composite promoter modules rather than as stand-alone elements.\n\n## Biology and disease\n\nAP-4 sits in a MYC-driven cell-cycle circuit. TFAP4 is induced directly by MYC and represses the CDK inhibitor CDKN1A (p21), so MYC can suppress p21 indirectly through AP-4; AP-4 is required for mitogen- and MYC-induced cell-cycle progression, and it attenuates DREAM-complex-mediated repression downstream of p53. The relationship is not uniformly oncogenic: in B lymphocytes, MYC was found to suppress tumorigenesis through TFAP4-dependent restriction of stemness, so the direction of the effect is context-dependent. In solid tumours, elevated TFAP4 has been associated with growth-promoting programs, for example upregulation of FOXK1 in prostate cancer cells. There is no well-established Mendelian disease attributed to TFAP4 in the sources reviewed here.\n\n## Reading a hit\n\nA CAGCTG match is close to uninformative about AP-4 on its own. The same core is the preferred site of TCF3, TCF4 and TCF12, of MYOD and the myogenic bHLHs, of ASCL and NEUROD proteins, of TWIST/HAND, and of many other class-A binders, and it is common enough to occur by chance roughly every few kilobases. Nothing in the flanking preference reliably separates AP-4 from those. Use a CAGCTG hit as \"class-A E-box\", then argue from expression, from ChIP data and from promoter context. Do not treat the two JASPAR TFAP4::ETS models as TFAP4 motifs; they are composite dimer models. Do not treat the CATATG models as the canonical AP-4 site either.",
+ "caveats": "CAGCTG is the generic class-A E-box: TCF3/TCF4/TCF12, MYOD, ASCL, NEUROD, TWIST and many others read it, and nothing in the flanking preference separates AP-4 from them. The site contains no CpG, so it is not depleted and occurs by chance every few kilobases. Family cohesion is only 0.77 because two of the six models are CATATG-type variants rather than CAGCTG, and two are JASPAR heterodimer profiles in which a TFAP4 half-site is fused to an ETS half-site; those composite models should not be used as AP-4 site definitions. Label agreement for these models is 0.1-0.2, meaning their nearest neighbours across databases usually carry a different factor name.",
+ "refs": [
+  {
+   "cite": "Mermod N, Williams TJ, Tjian R. Enhancer binding factors AP-4 and AP-1 act in concert to activate SV40 late transcription in vitro. Nature 1988;332:557-61.",
+   "pmid": "2833704",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2833704/"
+  },
+  {
+   "cite": "Hu YF, Lüscher B, Admon A, et al. Transcription factor AP-4 contains multiple dimerization domains that regulate dimer specificity. Genes Dev 1990;4:1741-52.",
+   "pmid": "2123466",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2123466/"
+  },
+  {
+   "cite": "Massari ME, Murre C. Helix-loop-helix proteins: regulators of transcription in eucaryotic organisms. Mol Cell Biol 2000;20:429-40.",
+   "pmid": "10611221",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10611221/"
+  },
+  {
+   "cite": "Ledent V, Vervoort M. The basic helix-loop-helix protein family: comparative genomics and phylogenetic analysis. Genome Res 2001;11:754-70.",
+   "pmid": "11337472",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11337472/"
+  },
+  {
+   "cite": "Jung P, Menssen A, Mayr D, et al. AP4 encodes a c-MYC-inducible repressor of p21. Proc Natl Acad Sci U S A 2008;105:15046-51.",
+   "pmid": "18818310",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18818310/"
+  },
+  {
+   "cite": "Gordân R, Shen N, Dror I, et al. Genomic regions flanking E-box binding sites influence DNA binding specificity of bHLH transcription factors through DNA shape. Cell Rep 2013;3:1093-104.",
+   "pmid": "23562153",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23562153/"
+  },
+  {
+   "cite": "Jackstadt R, Hermeking H. AP4 is required for mitogen- and c-MYC-induced cell cycle progression. Oncotarget 2014;5:7316-27.",
+   "pmid": "25261373",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25261373/"
+  },
+  {
+   "cite": "Tonc E, Takeuchi Y, Chou C, et al. Unexpected suppression of tumorigenesis by c-MYC via TFAP4-dependent restriction of stemness in B lymphocytes. Blood 2021;138:2526-2538.",
+   "pmid": "34283887",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34283887/"
+  },
+  {
+   "cite": "Gu Y, Jiang J, Liang C. TFAP4 promotes the growth of prostate cancer cells by upregulating FOXK1. Exp Ther Med 2021;22:1299.",
+   "pmid": "34630654",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34630654/"
+  },
+  {
+   "cite": "Kaller M, Shi W, Hermeking H. c-MYC-Induced AP4 Attenuates DREAM-Mediated Repression by p53. Cancers (Basel) 2023;15.",
+   "pmid": "36831504",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36831504/"
+  },
+  {
+   "cite": "Rauluseviciute I, Riudavets-Puig R, Blanc-Mathieu R, et al. JASPAR 2024: 20th anniversary of the open-access database of transcription factor binding profiles. Nucleic Acids Res 2024;52:D174-D182.",
+   "pmid": "37962376",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37962376/"
+  },
+  {
+   "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
+   "pmid": "37971293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "key": "DMRT",
+ "aka": [
+  "DM element",
+  "DM domain site",
+  "doublesex site",
+  "DSX site",
+  "MAB-3 site",
+  "DMRT1 element",
+  "DM-domain zinc finger factors"
+ ],
+ "consensus": "ACAWTGTW",
+ "short": "DMRT proteins are the DM-domain transcription factors, named after Drosophila Doublesex and C. elegans MAB-3, the sexual regulators in which the domain was found. Humans have seven well-studied genes, DMRT1, DMRT2, DMRT3, DMRTA1, DMRTA2, DMRTB1 and DMRTC2, plus DMRTC1 paralogues. The DM domain is not a classical zinc finger: two zinc ions are chelated by an intertwined arrangement of cysteines and histidines that cannot be split into independent fingers, and the module ends in a recognition helix. The proteins bind a pseudopalindromic element built from two ACA/TGT half-sites, canonically ACAWTGTW, as dimers and higher-order oligomers. DMRT1 is required for testis differentiation and sustains it after birth; it is the sex-determining gene in chicken, and the 9p24 region containing it is deleted in human 46,XY sex reversal.",
+ "long": "## The factors\n\nThe DM domain was identified in Drosophila Doublesex (DSX) and C. elegans MAB-3 and is conserved\nacross animals. Vertebrates have a small family: the seven human genes usually discussed are\nDMRT1, DMRT2, DMRT3, DMRTA1 (DMRT4), DMRTA2 (DMRT5), DMRTB1 (DMRT6) and DMRTC2 (DMRT7), with\nadditional DMRTC1 paralogues that also have measured binding. Outside the DM domain the proteins\nshare almost no sequence, so the family is defined by its DNA-binding module and not by any\ncommon architecture. That module is structurally unusual. Rather than the independent zinc\nfingers of C2H2 or GATA proteins, the DM domain chelates two zinc ions through an intertwined\nset of cysteine and histidine ligands that cannot be separated into discrete fingers, followed by\na C-terminal recognition helix and a basic tail. DMRT proteins do not bind as simple monomers:\nthe crystal structures of human DMRT1 on DNA show tetrameric, trimeric and dimeric modes on the\nsame kind of site, and ChIP with exonuclease treatment indicates that several of these modes are\nused in cells. Expression is restricted. DMRT1 is essentially gonad-specific (Sertoli cells and\ngerm cells); DMRT2 acts in somites; DMRT3 is in spinal interneurons and gonad; DMRTA2 is in\ndeveloping cortex; DMRTB1 and DMRTC2 are germ-cell proteins.\n\n## The motif\n\nThe element is a pseudopalindrome assembled from two trinucleotide half-sites that are reverse\ncomplements of one another, ACA and TGT, separated by one or two variable bases. Written as the\nliterature usually does, the core is ACAWTGTW; the equivalent forward-strand rendering with the\nhalf-sites in the other order is TGTWACA, and this is what the data consensus here,\nAATGTAACAA, represents. The two are the same element, not a disagreement. Information is\nconcentrated on the two ACA/TGT triplets; the spacer base and the flanks are weakly constrained,\nwhich is why individual database models range from a bare six-base TGTADC to a full 13-base\nAATGTATCAATTT. Structurally, the early NMR work on the DSX DM domain described contacts in the\nminor groove of an undistorted duplex, whereas the later crystal structures of DMRT1 showed two\nadjacent antiparallel recognition helices inserted into a widened major groove making\nbase-specific contacts; the current picture is major-groove reading with minor-groove\nstabilization, and this shift is worth knowing when reading older descriptions. In vitro\nselection across six of the seven vertebrate proteins returned sites resembling the DSX site for\nall of them, differing only in efficiency and in preference at individual positions. The family\nis correspondingly cohesive here (0.86 across 20 motifs) and no paralogue is separable by\nsequence. Some DMRT models drift toward pure AT-richness: the Vierstra archetype\nAC0092:DMRT/HOXB is an ATATATT-like model shared with HOXB, and its nearest neighbours lie\noutside the family, a reminder that AT-rich DM sites and AT-rich homeodomain sites are hard to\ntell apart.\n\n## Where it acts\n\nDMRT1 occupancy in mouse testis is largely promoter-proximal and promoter-distal in roughly equal\nmeasure, with thousands of sites, and the strongest targets are genes of the male pathway\n(SOX9, PTGDS) and genes that DMRT1 must keep off (FOXL2, and the retinoic-acid-responsive meiotic\ninitiator STRA8). DMRT1 works with and against other gonadal regulators: it opposes FOXL2 and\nESR1/ESR2 in the ovarian program, and cooperates with SOX9 and SF1/NR5A1 in the testis. DMRT3\nacts in the spinal cord in circuits that coordinate limb movement. Because the factors are\ntissue-restricted, the genomic distribution of DM sites is much broader than the set that is\never occupied: in a cell that expresses no DMRT protein, the sequence is inert.\n\n## Biology and disease\n\nDmrt1-null mice have severely dysgenic testes, and postnatal loss of DMRT1 in Sertoli cells\nreprograms them toward granulosa cells with activation of FOXL2 and ESR2, so DMRT1 is needed\ncontinuously, not just at the sex-determining step. In chicken, the Z-linked DMRT1 is the male\nsex-determining gene, and knockdown feminizes male gonads. In humans, deletions of distal 9p\nthat remove DMRT1 cause 46,XY gonadal dysgenesis and sex reversal, and point mutations in\nresidues that contact DNA have the same effect; common variants near DMRT1 are associated with\ntesticular germ cell tumor risk. Outside sex determination, a premature stop codon in horse\nDMRT3 underlies the ability to perform alternate gaits, and the same mutation modeled in mice\ndisturbs spinal circuit function.\n\n## Reading a hit\n\nThe element is short and AT-rich in its flanks, so chance matches are common and the AT-rich\ntails are readily confused with homeodomain and other minor-groove AT binders. A match cannot\nbe assigned to a paralogue: the seven vertebrate DM proteins select nearly the same sequence in\nvitro, and most models in these databases come from HT-SELEX or methyl-HT-SELEX on isolated\ndomains, which measure intrinsic specificity and cannot distinguish family members. The strongest\ninterpretive constraint is expression: DM sites are only meaningful in tissues where a DMRT\nprotein is present, which for DMRT1 means gonad. Note also that the JASPAR mouse Dmrt1 matrix\nMA1603.2 (TACAAAGT) is an outlier here, with nearest neighbours outside the family, so a hit\nscored against that specific model deserves a second look.",
+ "caveats": "The informative part of a DM site is two ACA/TGT triplets separated by one or two bases, so an effective width of about seven bases plus AT-rich flanks: chance matches are frequent. All seven vertebrate paralogues select nearly identical sequences in vitro, so a hit identifies the family, never the member, and expression is the only practical discriminator. AT-rich renderings of the site overlap homeodomain space, which is visible in the Vierstra AC0092:DMRT/HOXB archetype. Most models here derive from in vitro selection on isolated DM domains, which supports the sequence preference but says nothing about genomic occupancy. The JASPAR mouse Dmrt1 model MA1603.2 does not match the family consensus.",
+ "refs": [
+  {
+   "cite": "Zhu L, Wilken J, Phillips NB, et al. Sexual dimorphism in diverse metazoans is regulated by a novel class of intertwined zinc fingers. Genes Dev 2000;14:1750-64.",
+   "pmid": "10898790",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10898790/"
+  },
+  {
+   "cite": "Murphy MW, Zarkower D, Bardwell VJ. Vertebrate DM domain proteins bind similar DNA sequences and can heterodimerize on DNA. BMC Mol Biol 2007;8:58.",
+   "pmid": "17605809",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17605809/"
+  },
+  {
+   "cite": "Murphy MW, Lee JK, Rojo S, et al. An ancient protein-DNA interaction underlying metazoan sex determination. Nat Struct Mol Biol 2015;22:442-51.",
+   "pmid": "26005864",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26005864/"
+  },
+  {
+   "cite": "Raymond CS, Shamu CE, Shen MM, et al. Evidence for evolutionary conservation of sex-determining genes. Nature 1998;391:691-5.",
+   "pmid": "9490411",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9490411/"
+  },
+  {
+   "cite": "Raymond CS, Murphy MW, O'Sullivan MG, et al. Dmrt1, a gene related to worm and fly sexual regulators, is required for mammalian testis differentiation. Genes Dev 2000;14:2587-95.",
+   "pmid": "11040213",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11040213/"
+  },
+  {
+   "cite": "Matson CK, Murphy MW, Sarver AL, et al. DMRT1 prevents female reprogramming in the postnatal mammalian testis. Nature 2011;476:101-4.",
+   "pmid": "21775990",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21775990/"
+  },
+  {
+   "cite": "Smith CA, Roeszler KN, Ohnesorg T, et al. The avian Z-linked gene DMRT1 is required for male sex determination in the chicken. Nature 2009;461:267-71.",
+   "pmid": "19710650",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19710650/"
+  },
+  {
+   "cite": "Andersson LS, Larhammar M, Memic F, et al. Mutations in DMRT3 affect locomotion in horses and spinal circuit function in mice. Nature 2012;488:642-6.",
+   "pmid": "22932389",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22932389/"
+  },
+  {
+   "cite": "Turnbull C, Rapley EA, Seal S, et al. Variants near DMRT1, TERT and ATF7IP are associated with testicular germ cell cancer. Nat Genet 2010;42:604-7.",
+   "pmid": "20543847",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20543847/"
+  },
+  {
+   "cite": "Kopp A. Dmrt genes in the development and evolution of sexual dimorphism. Trends Genet 2012;28:175-84.",
+   "pmid": "22425532",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22425532/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  },
+  {
+   "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
+   "pmid": "25215497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  }
+ ]
+}

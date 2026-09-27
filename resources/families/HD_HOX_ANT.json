@@ -1,0 +1,78 @@
+{
+ "key": "HD_HOX_ANT",
+ "aka": [
+  "TAAT core",
+  "Antennapedia-class homeodomain site",
+  "anterior HOX motif",
+  "HOX paralogue groups 1-8",
+  "HOX-PBX composite site",
+  "ATGATTNATNN",
+  "hexapeptide/TALE composite element"
+ ],
+ "consensus": "TAATTA",
+ "short": "The 39 human HOX genes sit in four clusters and specify position along the head-to-tail axis. This family covers paralogue groups 1 to 8 - the anterior and central HOX proteins - with 75 motifs for 27 gene symbols. Their homeodomains read the generic TAAT core, written TAATTA for groups 1-3 and shifting to TAATGA or TAATGG for groups 4-8. On their own these proteins are essentially interchangeable in vitro: no matrix separates HOXA5 from HOXB5 or HOXC6. Real sequence discrimination appears only in complex with the TALE cofactors PBX and MEIS, which build a bipartite site, ATGATTNATNN, whose HOX half-site shifts stepwise along the cluster.",
+ "long": "## The factors\n\nHOXA1-A7, HOXB1-B8, HOXC4-C8 and HOXD1-D8 make up this family, together with unassigned HOXA/HOXB/HOXC/HOXD archetypes: 27 symbols, 75 motifs. Each protein is a single homeodomain with short flanking regions, expressed in a spatially restricted, colinear pattern - genes at the 3' end of a cluster are expressed earliest and most anteriorly - and controlled in part by retinoic acid. Immediately N-terminal to the homeodomain most of them carry a hexapeptide motif (IYPWMK and variants) that docks into a pocket of the TALE-class cofactor PBX1-4 (extradenticle in Drosophila); MEIS1-3 and PKNOX1/2 form the second TALE arm. Anterior HOX proteins bind cooperatively with PBX in a hexapeptide-dependent manner, shown for HOXB4, HOXB6 and HOXB7 but not for HOXA10, and grafting the HOXB7 hexapeptide onto HOXA10 confers cooperativity.\n\n## The motif\n\nThe invariant feature is the four-base core 5'-TAAT-3'. When the DNA preferences of four Drosophila HOM proteins were compared directly, Ultrabithorax, Antennapedia and Deformed all preferred TAAT while Abdominal-B preferred TTAT, and Ubx and Antp were indistinguishable outside the core; the residues responsible lie in the homeodomain N-terminal arm, not at position 50 (all HOX proteins have glutamine there).\n\nWithin this family the bases 3' of the core drift with cluster position. JASPAR and HOCOMOCO in vitro models give CTAATTAC for groups 1-3 (HOXA1, HOXA2, HOXB1, HOXB2, HOXD1, HOXD3), TTAATGA for groups 4-5 (HOXA4, HOXB4, HOXC4, HOXD4, HOXA5) and TAATGG/TAATTG for groups 6-8 (HOXA6, HOXA7, HOXB8, HOXD8). The family medoid is HOXA6 (HOCOMOCO HXA6.H14CORE.0.SM.B) and its trimmed consensus is TAATGA, which is why the data consensus for the family reads TAATGA rather than the TAATTA usually quoted for anterior HOX; both are the same 6-bp window with a different 3' base, and cohesion across the family is 0.87.\n\nThe cofactor site is where specificity actually lives. Binding-site selection with PBX-HOX heterodimers returned the bipartite sequence 5'-ATGATTNATNN-3', with PBX contacting ATGAT and HOX the more variable TNATNN half; across HOXB1 to HOXB9 and HOXA10 the HOX half-site core shifts stepwise from TTAT to TGAT in an order that matches gene position in the cluster. Crystal structures explain both halves: the HoxB1-Pbx1-DNA complex at 2.35 A shows the hexapeptide bound in a pocket created by the three-residue TALE insertion, and the HoxA9-Pbx1 structure shows that N-terminal arm residues determine sequence preference indirectly, without contacting bases. SELEX-seq on all eight Drosophila Hox proteins with Exd showed the same principle quantitatively: latent specificity differences emerge only in the complex, group into three classes that follow colinearity, and correspond to differences in minor-groove shape, the same readout mechanism worked out structurally for Sex combs reduced.\n\n## Where it acts\n\nAnterior HOX sites are in embryonic distal enhancers, not CpG-island promoters, and in vivo occupancy tracks accessible, PBX/MEIS-marked regions. Counting matters: TAATTA is expected on the order of two million times in 3.1 Gb, while the ATGATTNAT composite is expected a few hundred thousand times - still common, but two orders of magnitude more specific. Two ChIP-derived models in this family make the point directly: HOXB4 and HOXB7 ChIP-seq models read TGATTGATG, the PBX-HOX composite, while HT-SELEX models for the same two proteins read TTAATGA. Archetype analysis of DNase footprints likewise puts a HOXB/PBX composite (TTGATTAAT) in this family.\n\n## Biology and disease\n\nAnterior HOX genes set segmental identity in the hindbrain, branchial arches and axial skeleton. Hoxa2 loss in mouse produces a homeotic transformation of the second branchial arch toward first-arch identity. In humans, homozygous HOXA1 loss of function causes brainstem malformation with inner-ear, cardiovascular and cognitive involvement, and a HOXB1 founder mutation causes hereditary congenital facial palsy, reproducing the Hoxb1 null mouse phenotype. Anterior HOX genes are also downstream of retinoic acid signaling in the hindbrain, and PBX1 itself is oncogenic as the E2A-PBX1 fusion in acute lymphoblastic leukemia.\n\n## Reading a hit\n\nA bare TAAT or TAATTA hit is close to meaningless. It does not identify a HOX protein, does not distinguish anterior HOX from the large Q50 homeodomain family that reads the same core, and occurs so often that genome-wide scans return millions of matches. The only sequence configuration with real discriminating power is the PBX composite ATGATTNATNN, and even that identifies a class, not a paralogue. Evidence quality is good for the in vitro claim - 19 of 23 HOCOMOCO models here have HT-SELEX support - but ChIP-derived HOX motifs should be assumed to be cofactor composites or, worse, unrelated: in a direct comparison the most enriched motif in HOXA2 ChIP-seq peaks was not bound by HOXA2 in vitro at all. Three flagged members are informative rather than wrong: a HOXB2::ELK1 model is a measured heterodimer site dominated by its ETS half, two footprint archetypes labelled HOXC/HOXD and HOXC/HOXA are posterior-type (TTTTATTG), and an archetype labelled HOXB/BARHL is plain TAATTA.",
+ "caveats": "Treat a match as \"anterior/central HOX-type TAAT site\" at best. The 27 gene symbols here are not separable by matrix, and the core is shared with the ~200-member Q50 homeodomain class, so a TAATTA hit does not even establish that a HOX protein is involved. Expect millions of genome-wide matches; require the PBX composite ATGATTNATNN, expression data and accessibility before treating a site as HOX-bound. ChIP-derived models for these factors are suspect: the two ChIP-only HOCOMOCO models in this family are PBX-HOX composites rather than HOX sites, and published comparisons show the top motif in HOXA2 peaks is not one HOXA2 binds in vitro. Three CIS-BP entries come from mouse orthologues.",
+ "refs": [
+  {
+   "cite": "Ekker SC, Jackson DG, von Kessler DP, et al. The degree of variation in DNA sequence recognition among four Drosophila homeotic proteins. EMBO J 1994;13:3551-60.",
+   "pmid": "7914870",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7914870/"
+  },
+  {
+   "cite": "Chang CP, Shen WF, Rozenfeld S, et al. Pbx proteins display hexapeptide-dependent cooperative DNA binding with a subset of Hox proteins. Genes Dev 1995;9:663-74.",
+   "pmid": "7729685",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7729685/"
+  },
+  {
+   "cite": "Chang CP, Brocchieri L, Shen WF, et al. Pbx modulation of Hox homeodomain amino-terminal arms establishes different DNA-binding specificities across the Hox locus. Mol Cell Biol 1996;16:1734-45.",
+   "pmid": "8657149",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8657149/"
+  },
+  {
+   "cite": "Piper DE, Batchelor AH, Chang CP, et al. Structure of a HoxB1-Pbx1 heterodimer bound to DNA: role of the hexapeptide and a fourth homeodomain helix in complex formation. Cell 1999;96:587-97.",
+   "pmid": "10052460",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10052460/"
+  },
+  {
+   "cite": "LaRonde-LeBlanc NA, Wolberger C. Structure of HoxA9 and Pbx1 bound to DNA: Hox hexapeptide and DNA recognition anterior to posterior. Genes Dev 2003;17:2060-72.",
+   "pmid": "12923056",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12923056/"
+  },
+  {
+   "cite": "Slattery M, Riley T, Liu P, et al. Cofactor binding evokes latent differences in DNA binding specificity between Hox proteins. Cell 2011;147:1270-82.",
+   "pmid": "22153072",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22153072/"
+  },
+  {
+   "cite": "Joshi R, Passner JM, Rohs R, et al. Functional specificity of a Hox protein mediated by the recognition of minor groove structure. Cell 2007;131:530-43.",
+   "pmid": "17981120",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17981120/"
+  },
+  {
+   "cite": "Merabet S, Mann RS. To Be Specific or Not: The Critical Relationship Between Hox And TALE Proteins. Trends Genet 2016;32:334-347.",
+   "pmid": "27066866",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27066866/"
+  },
+  {
+   "cite": "Mallen J, Kalsan M, Zarrineh P, et al. Molecular Characterization of HOXA2 and HOXA3 Binding Properties. J Dev Biol 2021;9.",
+   "pmid": "34940502",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34940502/"
+  },
+  {
+   "cite": "Rijli FM, Mark M, Lakkaraju S, et al. A homeotic transformation is generated in the rostral branchial region of the head by disruption of Hoxa-2, which acts as a selector gene. Cell 1993;75:1333-49.",
+   "pmid": "7903601",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7903601/"
+  },
+  {
+   "cite": "Tischfield MA, Bosley TM, Salih MA, et al. Homozygous HOXA1 mutations disrupt human brainstem, inner ear, cardiovascular and cognitive development. Nat Genet 2005;37:1035-7.",
+   "pmid": "16155570",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16155570/"
+  },
+  {
+   "cite": "Webb BD, Shaaban S, Gaspar H, et al. HOXB1 founder mutation in humans recapitulates the phenotype of Hoxb1-/- mice. Am J Hum Genet 2012;91:171-9.",
+   "pmid": "22770981",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22770981/"
+  }
+ ]
+}

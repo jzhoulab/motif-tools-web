@@ -1,0 +1,78 @@
+{
+ "key": "NR4A",
+ "aka": [
+  "NBRE",
+  "NGFI-B response element",
+  "NurRE",
+  "NUR77 / NGFI-B / TR3 (NR4A1)",
+  "NURR1 (NR4A2)",
+  "NOR-1 / MINOR (NR4A3)",
+  "Monomeric nuclear receptor half-site"
+ ],
+ "consensus": "AAAGGTCA",
+ "short": "NR4A1 (NUR77), NR4A2 (NURR1) and NR4A3 (NOR-1) are orphan nuclear receptors and immediate-early genes: they are transcribed within minutes of serum stimulation, depolarization or antigen-receptor signaling and their proteins turn over quickly. Unlike most nuclear receptors they bind DNA as monomers, to a single AGGTCA half-site carried on an A/T-rich 5' extension, giving the eight-base NGFI-B response element AAAGGTCA. A separate protein surface, the A box, reads those A-T base pairs in the minor groove. The same receptors can also act as homodimers on the everted NurRE and as heterodimers with RXR. Because a monomeric half-site constrains only eight or nine positions, matches are common by chance, and the AGGTCA core is shared with most of the nuclear receptor superfamily.",
+ "long": "## The factors\n\nThe NR4A subfamily has three paralogues: NR4A1 (NUR77, NGFI-B, TR3), NR4A2 (NURR1) and NR4A3 (NOR-1, MINOR). Each has the standard nuclear receptor layout: an AF-1 region, a DNA-binding domain of two C4 zinc modules, a carboxy-terminal extension containing the A box, and a ligand-binding domain. All three are immediate-early genes induced by serum, growth factors, depolarization, antigen-receptor signaling and stress, with short protein half-lives, so levels are low in resting tissue; NR4A1 was cloned as a nerve growth factor-induced transcript. They are orphans in a strong sense: the NURR1 ligand-binding domain has no accessible ligand pocket, its interior filled with bulky side chains, defining a class of receptors that activate without a ligand (Wang et al. 2003). The three paralogues are largely redundant: NR4A1-null mice have normal thymocyte apoptosis (Lee et al. 1995). Ten motifs are collected here across all four sources.\n\n## The motif\n\nThe core element is the NGFI-B response element, NBRE, AAAGGTCA, identified by genetic selection in yeast (Wilson et al. 1991). Its structure explains its length. The two zinc modules read the AGGTCA half-site through the major groove as in other nuclear receptors, while a substructure carboxy-terminal to them, the A box, reaches into the minor groove and reads the three A-T base pairs extending 5' of the half-site; this was the first structure of a nuclear receptor bound to DNA as a monomer (Meinke and Sigler 1999). Domain swaps had already shown that NR4A1 and SF-1 (NR5A1) bind by the same monomeric mechanism with distinct 5' requirements: an amino group in the minor groove of the SF-1 sequence and an asparagine in the SF-1 A box (Wilson et al. 1993). The same receptors use two other arrangements: homodimers on the NurRE, an everted pair of NBRE-related octamers with an unusual spacer, which mediates signaling at the POMC promoter (Philips et al. 1997), and heterodimers with RXR on a direct repeat (Perlmann and Jansson 1995). The collected data agree: the pooled consensus is AAAGGTCA, and five models from three databases give exactly that string. The highest-information model, the Vierstra archetype AC0119:NR4A at 25 bits, is GACCTTTAAAGGTCA: two NBRE octamers head to head with no spacer, not the classic NurRE spacing. Two entries need care. JASPAR NR4A2::RXRA (MA1147.2) is an inverted-repeat dimer model whose nearest neighbors sit outside this family, so it describes a heterodimer, not monomer binding. The archetype AC0114:NR4A/NR2C is flagged in the data as probably belonging with the RXR heterodimers: it is a bare aAGGTCA half-site, exactly what one expects to be ambiguous. Nothing distinguishes the three paralogues by sequence.\n\n## Where it acts\n\nNR4A sites behave like those of other stimulus-induced factors: promoters and signal-responsive enhancers, with occupancy tracking induction of the receptor rather than presence of the motif. They act in T cells, neurons, pituitary corticotropes, macrophages, vascular smooth muscle, liver and adipose tissue, so target programs are cell-type specific. A specific eight-mer is expected about 47,000 times per strand in a 3-Gb genome, so tens of thousands of NBRE matches exist and only a small fraction is ever bound. Composite arrangement matters: NurRE-type pairs and NBRE-RXR direct repeats bind more tightly and are the configurations shown to respond to physiological signals, while a lone NBRE is often weak or non-functional.\n\n## Biology and disease\n\nNR4A2 loss abolishes midbrain dopaminergic neurons in mice and the gene has been examined in Parkinson disease (Zetterstrom et al. 1997). Although single knockouts are near-normal, the subfamily as a group limits T cell effector function: deleting all three NR4A genes relieves an exhaustion-like program and improves tumor control by CAR T cells (Chen et al. 2019). In the pituitary, NR4A1 mediates CRH-induced POMC transcription through the NurRE (Philips et al. 1997). The clearest cancer link is structural: extraskeletal myxoid chondrosarcoma is defined by a translocation fusing EWSR1 to NR4A3, converting the receptor into a constitutive activator (Labelle et al. 1995).\n\n## Reading a hit\n\nA monomeric half-site is much harder to call than a spaced dimer; this is the central practical point. A dimeric element such as a DR3, DR4 or DR5 constrains two 6-bp half-sites plus a fixed spacer, 13-15 positions in all, so a scanner can demand a rare pattern and the arrangement itself is evidence. The NBRE constrains only eight or nine positions, of which six are the AGGTCA half-site shared by most of the nuclear receptor superfamily, so all the family-level information lives in the two or three A-T bases of the 5' extension, and there is no spacer to check. One or two substitutions convert a predicted NBRE into an SF-1 element or into one half of a genuine RXR heterodimer site. Prediction of nuclear receptor elements improves substantially when dimer configuration is modeled, which is unavailable here (Sandelin and Wasserman 2005). Treat a hit as \"a nuclear receptor half-site\" first. Provenance is comparatively good here: NR4A1.H14CORE.0.PSM.A is grade A with ChIP, HT-SELEX and methyl-HT-SELEX support and NR4A2.H14CORE.0.SM.B has both in vitro assays, so AAAGGTCA is well supported as directly bound. The one NR4A3 model, CIS-BP M00818_2.00, is inferred from the mouse protein at 97% DNA-binding-domain identity rather than measured for human NR4A3 (Weirauch et al. 2014).",
+ "caveats": "The sequence identifies a nuclear receptor half-site, not a receptor. AAAGGTCA constrains eight positions, six of which are the AGGTCA half-site used across the superfamily, so tens of thousands of chance matches exist and one or two substitutions turn a predicted NBRE into an SF-1 element or into half of an RXR heterodimer site. Nothing separates NR4A1, NR4A2 and NR4A3. The AAAGGTCA string itself is well supported in vitro (a grade-A HOCOMOCO model with HT-SELEX and methyl-HT-SELEX evidence), but the only NR4A3 model is inferred from mouse, one Vierstra archetype in this family is flagged as probably belonging with the RXR heterodimers, and the JASPAR NR4A2::RXRA entry is a dimer model rather than an NR4A monomer motif. Occupancy requires the receptor to have been induced.",
+ "refs": [
+  {
+   "cite": "Wilson TE, Fahrner TJ, Johnston M, et al. Identification of the DNA binding site for NGFI-B by genetic selection in yeast. Science 1991;252:1296-300.",
+   "pmid": "1925541",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1925541/"
+  },
+  {
+   "cite": "Wilson TE, Fahrner TJ, Milbrandt J. The orphan receptors NGFI-B and steroidogenic factor 1 establish monomer binding as a third paradigm of nuclear receptor-DNA interaction. Mol Cell Biol 1993;13:5794-804.",
+   "pmid": "8395013",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8395013/"
+  },
+  {
+   "cite": "Perlmann T, Jansson L. A novel pathway for vitamin A signaling mediated by RXR heterodimerization with NGFI-B and NURR1. Genes Dev 1995;9:769-82.",
+   "pmid": "7705655",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7705655/"
+  },
+  {
+   "cite": "Labelle Y, Zucman J, Stenman G, et al. Oncogenic conversion of a novel orphan nuclear receptor by chromosome translocation. Hum Mol Genet 1995;4:2219-26.",
+   "pmid": "8634690",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8634690/"
+  },
+  {
+   "cite": "Lee SL, Wesselschmidt RL, Linette GP, et al. Unimpaired thymic and peripheral T cell death in mice lacking the nuclear receptor NGFI-B (Nur77). Science 1995;269:532-5.",
+   "pmid": "7624775",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7624775/"
+  },
+  {
+   "cite": "Philips A, Lesage S, Gingras R, et al. Novel dimeric Nur77 signaling mechanism in endocrine and lymphoid cells. Mol Cell Biol 1997;17:5946-51.",
+   "pmid": "9315652",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9315652/"
+  },
+  {
+   "cite": "Zetterström RH, Solomin L, Jansson L, et al. Dopamine neuron agenesis in Nurr1-deficient mice. Science 1997;276:248-50.",
+   "pmid": "9092472",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9092472/"
+  },
+  {
+   "cite": "Meinke G, Sigler PB. DNA-binding mechanism of the monomeric orphan nuclear receptor NGFI-B. Nat Struct Biol 1999;6:471-7.",
+   "pmid": "10331876",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10331876/"
+  },
+  {
+   "cite": "Wang Z, Benoit G, Liu J, et al. Structure and function of Nurr1 identifies a class of ligand-independent nuclear receptors. Nature 2003;423:555-60.",
+   "pmid": "12774125",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12774125/"
+  },
+  {
+   "cite": "Sandelin A, Wasserman WW. Prediction of nuclear hormone receptor response elements. Mol Endocrinol 2005;19:595-606.",
+   "pmid": "15563547",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15563547/"
+  },
+  {
+   "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
+   "pmid": "25215497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  },
+  {
+   "cite": "Chen J, López-Moyado IF, Seo H, et al. NR4A transcription factors limit CAR T cell function in solid tumours. Nature 2019;567:530-534.",
+   "pmid": "30814732",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30814732/"
+  }
+ ]
+}

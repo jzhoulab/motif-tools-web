@@ -1,0 +1,72 @@
+{
+ "key": "CREB_ATF",
+ "aka": [
+  "CRE",
+  "cyclic-AMP response element",
+  "CREB site",
+  "ATF site",
+  "ATF/CREB",
+  "somatostatin CRE"
+ ],
+ "consensus": "TGACGTCA",
+ "short": "The CREB/ATF group contains the basic region-leucine zipper factors CREB1, CREM, ATF1, ATF2, ATF7, ATF4 and CREB5. They bind the cyclic-AMP response element, the eight-base palindrome TGACGTCA, and its five-base half-site TGACG. The element was defined in the somatostatin promoter as the sequence through which cAMP raises transcription, and CREB1 phosphorylated on Ser133 recruits the coactivators CBP and p300 to it. Unlike the closely related AP-1 site, the CRE carries a central CpG, so its occupancy is sensitive to DNA methylation, and CRE-containing promoters are concentrated in CpG islands. Genome-wide, CREB occupies a few thousand promoters with a profile that is similar across tissues. All members read the same palindrome, so a match identifies the group rather than a single factor.",
+ "long": "## The factors\n\nThree subgroups share this element. The CREB subgroup - CREB1, CREM and ATF1 - carries a kinase-inducible domain; phosphorylation of CREB1 Ser133 by protein kinase A, calcium/calmodulin kinases and others creates the surface that binds the CBP and p300 KIX domain. CREM is expressed as many isoforms, including activators and the repressor ICER, and a testis-specific form required for spermiogenesis. The ATF2 subgroup - ATF2, ATF7 and CREB5 - is activated instead by the stress-responsive kinases JNK and p38. ATF4 is an outlier: it is regulated translationally, through an upstream open reading frame that is bypassed when eIF2-alpha is phosphorylated during the integrated stress response, and its preferred site is not the plain CRE. All are bZIP proteins, dimerizing through a leucine zipper and reading DNA with a basic region in the major groove. The group was defined as an \"extensive family of leucine zipper proteins able to selectively form DNA-binding heterodimers\", and cross-family dimers with Jun were reported soon afterwards, which is why the CREB/ATF and AP-1 families cannot be cleanly separated at the protein level either.\n\n## The motif\n\nThe CRE is the 8 bp palindrome TGACGTCA: two TGAC half-sites related by a two-fold axis, one per subunit. The crystal structure of a CREB bZIP bound to the somatostatin CRE showed the basis for its selective dimerization and a divalent-cation-enhanced mode of DNA binding. Half-site CREs (TGACG, or CGTCA on the other strand) are functional and far more common in promoters than the full palindrome; they bind with lower affinity and with measurably different kinetics, which is one reason CREB occupancy and CREB-dependent induction are not the same thing. The feature that distinguishes the CRE from the AP-1 TRE is a single inserted base, giving a central CpG. That CpG is methylatable, and methylation of TGACGTCA abolishes CREB binding and cAMP-dependent activation; genome-wide CREB occupancy tracks both the presence of a consensus CRE and its methylation state. ATF4 is the exception within the family: its selected site is the C/EBP-ATF response element, read as TGATGCAAT or TTGCATCA, one CRE half joined to one C/EBP half. The ATF4 models here (JASPAR MA0833.3, HOCOMOCO ATF4 ChIP and HT-SELEX models) therefore sit closer to C/EBP than to CREB, and their label agreement with the rest of the family is low by construction rather than by error. CREB1, CREM, ATF1, ATF2, ATF7 and CREB5 are not distinguishable from sequence; JASPAR ATF7 MA0834.2 and the CIS-BP ATF7 model are 0.99 similar, and both are within 0.98 of CREB5 and ATF2 models.\n\n## Where it acts\n\nUnlike AP-1, this family is promoter- and CpG-island-biased. Serial analysis of chromatin occupancy in rat PC12 cells recovered 6,302 CREB loci, of which 40% lay within 2 kb of an annotated transcription start site, 49% within 1 kb of a CpG island and 72% within 1 kb of a candidate CRE. In human tissues CREB occupied roughly 4,000 promoter sites, with very similar profiles across tissues, yet only a small fraction of those genes responded to a cAMP agonist, because induction additionally requires CBP recruitment. Half-CRE sites often sit beside other promoter elements rather than in enhancer clusters. Named composite contexts include the CRE-TATA arrangement of the somatostatin promoter, tandem half-CREs in cAMP-inducible promoters, and the amino-acid response elements at which ATF4 acts on ATF3, TRIB3, ASNS and DDIT3.\n\n## Biology and disease\n\nThis family is the main route from cAMP and calcium signaling to transcription: gluconeogenic and lipid programs in liver, circadian Per1 induction, activity-dependent transcription and long-term synaptic plasticity in neurons, and hormone-responsive programs in endocrine tissue. ICER provides negative feedback by competing for the same element without activating. ATF2 and ATF7 transmit stress-kinase signaling and have roles in DNA-damage responses. ATF4 is the effector arm of the integrated stress response: it raises amino-acid transporter and aminoacyl-tRNA synthetase expression during amino-acid limitation, and together with CHOP it increases protein synthesis during prolonged ER stress to the point of cell death. Loss-of-function phenotypes are generally mild for individual members and severe for combinations, the expected signature of a shared element.\n\n## Reading a hit\n\nA full TGACGTCA is a reasonably specific family call, but not a member call: CREB1, CREM, ATF1, ATF2, ATF7 and CREB5 give the same matrix. A half-site (TGACG) is much weaker evidence and occurs far too often to interpret alone. The CpG matters twice: the 8-mer is rarer than the AP-1 TRE partly because the genome is depleted of CpG, and a match in a methylated region may never be occupied, so pair the hit with methylation or accessibility data where you have it. Boundaries with siblings are real. TGACTCA without the central G is AP-1; TGACGTGG, or CCACGTCA read the other way, is ATF6/CREB3; TTACGTAA is PAR bZIP. If your match is the ATF4-style TGATGCAAT, it is a C/EBP-ATF composite and the C/EBP family is an equally good explanation. Seven of the 13 HOCOMOCO models here carry in vitro evidence, and four of those - ATF2, ATF7, CREB1 and CREM - are grade-A models combining ChIP with both HT-SELEX and methyl-SELEX, which is strong support that these proteins bind this sequence directly.",
+ "caveats": "A full palindromic CRE is one of the better-supported motifs in this collection, with grade-A HOCOMOCO models backed by both ChIP and in vitro selection. What it cannot do is name a factor: six of the seven members are interchangeable at the sequence level, and Jun-family proteins bind the same palindrome, so a CRE hit is genuinely ambiguous between this family and AP-1. Treat the 5 bp half-site as a weak signal. Methylation makes matters worse in one direction and better in another: a methylated CRE is unlikely to be CREB-bound, but is a candidate C/EBP-alpha site. ATF4 models in this family are C/EBP-ATF composites and should not be read as ordinary CREs.",
+ "refs": [
+  {
+   "cite": "Montminy MR, Bilezikjian LM. Binding of a nuclear protein to the cyclic-AMP response element of the somatostatin gene. Nature 1987;328:175-8.",
+   "pmid": "2885756",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2885756/"
+  },
+  {
+   "cite": "Hai TW, Liu F, Coukos WJ, et al. Transcription factor ATF cDNA clones: an extensive family of leucine zipper proteins able to selectively form DNA-binding heterodimers. Genes Dev 1989;3:2083-90.",
+   "pmid": "2516827",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2516827/"
+  },
+  {
+   "cite": "Iguchi-Ariga SM, Schaffner W. CpG methylation of the cAMP-responsive enhancer/promoter sequence TGACGTCA abolishes specific factor binding as well as transcriptional activation. Genes Dev 1989;3:612-9.",
+   "pmid": "2545524",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2545524/"
+  },
+  {
+   "cite": "Hai T, Curran T. Cross-family dimerization of transcription factors Fos/Jun and ATF/CREB alters DNA binding specificity. Proc Natl Acad Sci U S A 1991;88:3720-4.",
+   "pmid": "1827203",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1827203/"
+  },
+  {
+   "cite": "Schumacher MA, Goodman RH, Brennan RG. The structure of a CREB bZIP.somatostatin CRE complex reveals the basis for selective dimerization and divalent cation-enhanced DNA binding. J Biol Chem 2000;275:35242-7.",
+   "pmid": "10952992",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10952992/"
+  },
+  {
+   "cite": "Craig JC, Schumacher MA, Mansoor SE, et al. Consensus and variant cAMP-regulated enhancers have distinct CREB-binding properties. J Biol Chem 2001;276:11719-28.",
+   "pmid": "11134034",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11134034/"
+  },
+  {
+   "cite": "Mayr B, Montminy M. Transcriptional regulation by the phosphorylation-dependent factor CREB. Nat Rev Mol Cell Biol 2001;2:599-609.",
+   "pmid": "11483993",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11483993/"
+  },
+  {
+   "cite": "Impey S, McCorkle SR, Cha-Molstad H, et al. Defining the CREB regulon: a genome-wide analysis of transcription factor regulatory regions. Cell 2004;119:1041-54.",
+   "pmid": "15620361",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15620361/"
+  },
+  {
+   "cite": "Zhang X, Odom DT, Koo SH, et al. Genome-wide analysis of cAMP-response element binding protein occupancy, phosphorylation, and target gene activation in human tissues. Proc Natl Acad Sci U S A 2005;102:4459-64.",
+   "pmid": "15753290",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15753290/"
+  },
+  {
+   "cite": "Kilberg MS, Shan J, Su N. ATF4-dependent transcription mediates signaling of amino acid limitation. Trends Endocrinol Metab 2009;20:436-43.",
+   "pmid": "19800252",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19800252/"
+  },
+  {
+   "cite": "Rodríguez-Martínez JA, Reinke AW, Bhimsaria D, et al. Combinatorial bZIP dimers display complex DNA-binding specificity landscapes. Elife 2017;6.",
+   "pmid": "28186491",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28186491/"
+  }
+ ]
+}

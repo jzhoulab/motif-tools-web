@@ -1,0 +1,77 @@
+{
+ "key": "MECOM",
+ "aka": [
+  "EVI1",
+  "EVI-1 site",
+  "MDS1-EVI1",
+  "PRDM3",
+  "GACAAGATA site",
+  "GATA-like tandem site"
+ ],
+ "consensus": "GAYAAGAYAAGATAA",
+ "short": "MECOM, better known as EVI1, is a 145-kDa C2H2 zinc-finger protein with two separate finger clusters that bind two different sequences. The N-terminal cluster of seven fingers reads a 15-bp GATA-like site, GA(C/T)AAGA(T/C)AAGATAA, whose core is GACAAGATA; the C-terminal cluster of three fingers reads the unrelated GAAGATGAG. EVI1 is normally expressed in hematopoietic stem cells, kidney and lung, and is silenced in most differentiated blood cells. It is one of the strongest adverse prognostic markers in acute myeloid leukemia, where 3q26 rearrangements such as inv(3)(q21q26) do not create a fusion protein but move a GATA2 enhancer next to MECOM, switching the gene on. Germline MECOM mutations cause radioulnar synostosis with amegakaryocytic thrombocytopenia.",
+ "long": "## The factors\n\nMECOM (MDS1 and EVI1 complex locus, 3q26.2) encodes EVI1, first found as the site of retroviral\nintegration in murine myeloid leukemia cell lines. The protein carries two physically separate arrays of\nCys2-His2 zinc fingers, seven at the N terminus and three near the C terminus, plus a CtBP-interaction\nmotif and an acidic domain; it can act as a repressor or an activator depending on partners. A longer\nread-through transcript, MDS1-EVI1, adds a PR/SET domain and is the reason EVI1 was once numbered\nPRDM3. Unlike the PRDM family proper, the two finger clusters of EVI1 are used as independent\nDNA-binding modules, which is why this atlas treats MECOM separately. EVI1 binds as a monomer, not an\nobligate dimer, and one protein can engage both site types. Expression is restricted: hematopoietic stem\nand progenitor cells, kidney, lung and developing heart and limb, with silencing on myeloid and\nlymphoid differentiation. There is only one human gene, so there is no paralogue ambiguity within the\nfamily, but there is considerable ambiguity with GATA factors.\n\n## The motif\n\nThe proximal (N-terminal, fingers 1-7) cluster recognizes a 15-nucleotide consensus,\nGA(C/T)AAGA(T/C)AAGATAA, which contains a tandem pair of GATA-like half-sites. Fingers 4-7 make the\nsequence-specific contacts; fingers 1-3 do not detectably bind DNA on their own but bias the first\nposition toward GACAA over GATAA and are needed for optimal occupancy of the full 15-mer. The functional\nminimal core is GACAAGATA, and a single amino-acid change (R205N) abolishes high-affinity binding to it.\nBecause GATAA is embedded in the site, EVI1 and GATA factors have overlapping but not identical\npreferences: EVI1 binds erythroid GATA-1 target sites only weakly, while GATA-1 can bind and activate\nthrough a GACAAGATAA element. The distal (C-terminal, three-finger) cluster binds a completely different\nand shorter consensus, GAAGATGAG.\n\nThe database consensus in this atlas, TTATCTTATCT (and the 14-bp TATCTTATCWTATC archetype), is the\nreverse complement of the proximal site written as tandem AGATAAGATAA half-sites; JASPAR renders the\nsame thing as AGATAAGATAA. So the literature consensus and the data agree once strand and finger cluster\nare accounted for, and the longer Vierstra archetype simply captures more half-site repeats. No\nwidely used matrix in these databases represents the distal GAAGATGAG site, which is worth remembering:\nscanning with a MECOM matrix tests only one of EVI1's two specificities.\n\n## Where it acts\n\nEVI1 occupancy in fibroblasts and myeloid cells maps to conserved GACAAGATA-like motifs within about\n10 kb of transcription start sites of a defined target set, including GATA2, ZFPM2/FOG2, GADD45G, SKIL,\nKLF5, DCN and MAP3K14. Sites are found in both promoters and distal elements. Because the proximal site\nis a doubled GATA half-site, EVI1 peaks overlap GATA1/GATA2 peaks in hematopoietic cells, and in\nerythroid or megakaryocytic chromatin a WGATAA-rich region is ambiguous between the two families. EVI1\nalso functions through protein interactions with a large partner network, including CtBP and\npolycomb-associated proteins, so a fraction of its ChIP signal is likely tethered rather than\nsequence-driven.\n\n## Biology and disease\n\nConditional deletion of Evi1 in mice depletes hematopoietic stem cells and impairs repopulation, and\nalso blocks transformation by leukemic fusion oncogenes, making EVI1 required for both normal and\nmalignant stem-cell self-renewal. High EVI1 expression marks roughly 6-11% of adult acute myeloid\nleukemia and is associated with poor outcome. The clearest mechanism is enhancer hijacking: in\ninv(3)(q21q26) and t(3;3)(q21;q26), the breakpoint does not create a fusion protein but relocates a\ndistal GATA2 hematopoietic enhancer to the MECOM locus, driving EVI1 expression while leaving the\nother GATA2 allele haploinsufficient. Two independent studies established this, one by mapping the\nrearranged enhancer in patient genomes and one by deleting the orthologous mouse enhancer. Germline\nbiallelic or dominant MECOM mutations cause radioulnar synostosis with amegakaryocytic thrombocytopenia,\na bone-marrow-failure syndrome with a skeletal phenotype, confirming a developmental role beyond blood.\n\n## Reading a hit\n\nA MECOM match is a doubled GATA-like element, so the first alternative hypothesis is a GATA factor, not\nEVI1 - especially in erythroid, megakaryocytic or endothelial cells where GATA1/GATA2 are abundant and\nEVI1 is usually off. The 15-bp full site is long enough to be reasonably specific, but the shorter\nmatrices in these databases (10-11 bp, essentially two WGATAA half-sites) will match tandem GATA sites\nindiscriminately. A hit on the distal GAAGATGAG specificity will not be found at all with the available\nmatrices. There is only one human MECOM gene, so a true EVI1 hit has no paralogue problem, but the\nCIS-BP model is inferred from mouse Evi1 at 98% DNA-binding-domain identity rather than measured on the\nhuman protein, and the Vierstra archetypes are named for MECOM without claiming separability from GATA.\nTreat a hit as evidence for a GATA-type element and use expression data to decide whether EVI1 is a\nplausible occupant.",
+ "caveats": "The proximal EVI1 site is a tandem GATA-like element, so matches are shared with GATA1-GATA6 and TRPS1; in blood and endothelium a GATA factor is usually the more likely occupant, since EVI1 is off in most differentiated cells. The shorter matrices here are effectively two WGATAA half-sites and match tandem GATA sites indiscriminately. EVI1's second specificity, GAAGATGAG, is not represented by any matrix in these databases, so a MECOM scan tests only one of two binding modes. The CIS-BP model is inferred from mouse Evi1 (98% DBD identity), not measured on human EVI1. Part of EVI1's ChIP signal is likely tethered through its large protein-interaction network rather than direct.",
+ "refs": [
+  {
+   "cite": "Morishita K, Parker DS, Mucenski ML, et al. Retroviral activation of a novel gene encoding a zinc finger protein in IL-3-dependent myeloid leukemia cell lines. Cell 1988;54:831-40.",
+   "pmid": "2842066",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2842066/"
+  },
+  {
+   "cite": "Perkins AS, Fishel R, Jenkins NA, et al. Evi-1, a murine zinc finger proto-oncogene, encodes a sequence-specific DNA-binding protein. Mol Cell Biol 1991;11:2665-74.",
+   "pmid": "2017172",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2017172/"
+  },
+  {
+   "cite": "Delwel R, Funabiki T, Kreider BL, et al. Four of the seven zinc fingers of the Evi-1 myeloid-transforming gene are required for sequence-specific binding to GA(C/T)AAGA(T/C)AAGATAA. Mol Cell Biol 1993;13:4291-300.",
+   "pmid": "8321231",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8321231/"
+  },
+  {
+   "cite": "Funabiki T, Kreider BL, Ihle JN. The carboxyl domain of zinc fingers of the Evi-1 myeloid transforming gene binds a consensus sequence of GAAGATGAG. Oncogene 1994;9:1575-81.",
+   "pmid": "8183551",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8183551/"
+  },
+  {
+   "cite": "Perkins AS, Kim JH. Zinc fingers 1-7 of EVI1 fail to bind to the GATA motif by itself but require the core site GACAAGATA for binding. J Biol Chem 1996;271:1104-10.",
+   "pmid": "8557637",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8557637/"
+  },
+  {
+   "cite": "Yatsula B, Lin S, Read AJ, et al. Identification of binding sites of EVI1 in mammalian cells. J Biol Chem 2005;280:30712-22.",
+   "pmid": "16006653",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16006653/"
+  },
+  {
+   "cite": "Goyama S, Yamamoto G, Shimabe M, et al. Evi-1 is a critical regulator for hematopoietic stem cells and transformed leukemic cells. Cell Stem Cell 2008;3:207-20.",
+   "pmid": "18682242",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18682242/"
+  },
+  {
+   "cite": "Gröschel S, Sanders MA, Hoogenboezem R, et al. A single oncogenic enhancer rearrangement causes concomitant EVI1 and GATA2 deregulation in leukemia. Cell 2014;157:369-381.",
+   "pmid": "24703711",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24703711/"
+  },
+  {
+   "cite": "Yamazaki H, Suzuki M, Otsuki A, et al. A remote GATA2 hematopoietic enhancer drives leukemogenesis in inv(3)(q21;q26) by activating EVI1 expression. Cancer Cell 2014;25:415-27.",
+   "pmid": "24703906",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24703906/"
+  },
+  {
+   "cite": "Niihori T, Ouchi-Uchiyama M, Sasahara Y, et al. Mutations in MECOM, Encoding Oncoprotein EVI1, Cause Radioulnar Synostosis with Amegakaryocytic Thrombocytopenia. Am J Hum Genet 2015;97:848-54.",
+   "pmid": "26581901",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26581901/"
+  },
+  {
+   "cite": "Hinai AA, Valk PJ. Review: Aberrant EVI1 expression in acute myeloid leukaemia. Br J Haematol 2016;172:870-8.",
+   "pmid": "26729571",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26729571/"
+  },
+  {
+   "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
+   "pmid": "25215497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  }
+ ]
+}

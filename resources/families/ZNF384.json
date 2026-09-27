@@ -1,0 +1,74 @@
+{
+ "key": "ZNF384",
+ "aka": [
+  "CIZ",
+  "Nmp4",
+  "NMP4",
+  "nuclear matrix protein 4",
+  "CAS-interacting zinc finger protein",
+  "ZNF362",
+  "poly(dA:dT) element",
+  "COL1A1/MMP element"
+ ],
+ "consensus": "AAAAAAAA",
+ "short": "ZNF384 and its near-identical paralogue ZNF362 are C2H2 zinc-finger proteins that bind homopolymeric runs of A on one strand and T on the other. They are unusual among zinc fingers in reading the minor groove of an A-tract rather than the major groove of a mixed sequence, and only three of their fingers contact DNA. ZNF384 was cloned twice, as CIZ, a partner of the adaptor p130Cas that activates matrix metalloproteinase genes, and as Nmp4, a nuclear matrix factor at the type I collagen alpha-1 promoter. In human leukaemia ZNF384 is a recurrent fusion partner: rearrangements joining its C-terminal region to EP300, TCF3, TAF15 and others define a subtype of B-cell precursor acute lymphoblastic leukaemia.",
+ "long": "## The factors\n\nZNF384 and ZNF362 are paralogues whose zinc-finger arrays are close enough that no assay distinguishes their sequence preferences; the family therefore has two members and one motif. Splice variants of ZNF384 contain between five and eight C2H2 fingers, together with an SH3-binding region overlapping a putative AT-hook and a polyglutamine-alanine repeat. Mapping the DNA-binding function showed that only fingers 2, 3 and 6 are needed for association with the A-tract element, so most of the array does something other than read bases. ZNF384 was described independently as CIZ, a protein that binds the focal-adhesion adaptor p130Cas and activates matrix metalloproteinase promoters, and as Nmp4, one of a set of nuclear matrix proteins occupying the rat COL1A1 promoter. The N-terminus carries a strong activation domain that is masked in the full-length protein and becomes productive once the fingers engage DNA, and the polyglutamine-alanine repeat then contributes to activation, suggesting an allosteric switch triggered by binding. Both proteins are broadly expressed.\n\n## The motif\n\nThis is the atlas entry whose consensus is least word-like. The element is a homopolymeric (dA:dT) tract: eight or more consecutive adenines on one strand, equivalently eight or more thymines on the other. The literature usually writes it as poly(dA:dT) rather than as an IUPAC string, and the AT-rich promoter sites in COL1A1 and the MMP genes are described as TAAAAA-type runs. ZNF384 and ZNF362 are, as far as is known, the only C2H2 zinc-finger proteins that bind within the minor groove of such a tract, which is why only three fingers are involved: there are no distinguishing major-groove bases to read. All five matrices in this family are A- or T-runs of seven to twelve positions, differing mainly in run length and in whether they specify a flanking base; the HOCOMOCO ZNF362 matrix adds a 3' C and the ZNF384 matrix a 3' GT. Information content is therefore low in the usual sense while being high in a positional sense, because the requirement is a structural one: an uninterrupted, narrow-minor-groove A-tract. ZNF384 and ZNF362 cannot be distinguished from sequence at all.\n\n## Where it acts\n\nOccurrences are promoter-proximal in the characterized cases, notably the COL1A1 and MMP promoters in osteoblasts, and genome-wide mapping of Nmp4 in bone cells recovered a large target set biased toward extracellular-matrix and secretory-pathway genes. A-tracts are, however, everywhere: they are among the most abundant simple sequence features in mammalian genomes, occur heavily in intergenic and intronic DNA, and are also intrinsically nucleosome-disfavouring, which means they influence chromatin accessibility independently of any protein binding them. That double life is the central interpretive problem for this family. There is no named composite element with a partner factor, and the reported cofactor interactions are protein-protein rather than DNA-adjacent: p130Cas for CIZ, and the nuclear matrix for Nmp4.\n\n## Biology and disease\n\nNmp4/ZNF384 is best understood in bone as a brake. Nmp4-null mice respond more strongly than wild type to anabolic parathyroid hormone therapy, gaining more trabecular bone, and their osteoblasts show enhanced secretory capacity; the factor has accordingly been described as closing the PTH anabolic window. Nmp4 loss also alters innate immune responses to influenza A and modifies serum-induced arthritis, so the effects are not skeletal alone. The prominent human disease link is oncogenic and structural rather than transcriptional-regulatory in the ordinary sense: ZNF384 is a recurrent fusion partner in B-cell precursor acute lymphoblastic leukaemia, with EP300, TCF3, TAF15, CREBBP and other 5' partners fused to a nearly complete ZNF384 coding region. These ZNF384-rearranged leukaemias form a distinct transcriptional subtype with a characteristic immunophenotype, they include mixed-phenotype acute leukaemia cases, and additional classes of ZNF384 aberration have since been described. Because the fusion retains the zinc-finger array, the chimeric protein is thought to redirect a strong heterologous activation domain to ZNF384's A-tract sites.\n\n## Reading a hit\n\nTreat a hit here as a statement about DNA structure first and about protein occupancy second. Eight-base A-tracts occur many hundreds of thousands of times in the human genome, so a match on its own is close to uninformative; conversely, a long A-tract found in an accessibility or ChIP dataset may reflect nucleosome depletion or an alignment artefact rather than ZNF384 binding. The family also overlaps other AT-rich motif families, and any tool that scans for homopolymer runs will find these sites regardless of which factor is labelled. ZNF384 and ZNF362 are indistinguishable, so a hit identifies the pair. HOCOMOCO's evidence codes for this family include in vitro data (S and M), so direct binding to A-tracts is real; what is not licensed by a hit is the conclusion that a particular tract is a regulated element.",
+ "caveats": "This is a structural motif, not a word, and its abundance makes single hits nearly uninformative: eight-base A-tracts appear hundreds of thousands of times genome-wide. A-tracts are also intrinsically nucleosome-disfavouring, so their enrichment in open chromatin and in ChIP peak sets can arise without any ZNF384 binding, and an A-tract hit in an accessibility dataset should not be read as occupancy. ZNF384 and ZNF362 are indistinguishable from sequence, and the motif overlaps other AT-rich families. In vitro evidence supports direct minor-groove binding, so the protein-motif link itself is sound; only the interpretation of individual genomic matches is weak. Context, notably promoter position and extracellular-matrix or secretory target genes, does most of the work.",
+ "refs": [
+  {
+   "cite": "Nakamoto T, Yamagata T, Sakai R, et al. CIZ, a zinc finger protein that interacts with p130(cas) and activates the expression of matrix metalloproteinases. Mol Cell Biol 2000;20:1649-58.",
+   "pmid": "10669742",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10669742/"
+  },
+  {
+   "cite": "Furuya K, Nakamoto T, Shen ZJ, et al. Overexpression of Cas-interacting zinc finger protein (CIZ) suppresses proliferation and enhances expression of type I collagen gene in osteoblast-like MC3T3E1 cells. Exp Cell Res 2000;261:329-35.",
+   "pmid": "11112339",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11112339/"
+  },
+  {
+   "cite": "Feister HA, Torrungruang K, Thunyakitpisal P, et al. NP/NMP4 transcription factors have distinct osteoblast nuclear matrix subdomains. J Cell Biochem 2000;79:506-17.",
+   "pmid": "10972987",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10972987/"
+  },
+  {
+   "cite": "Torrungruang K, Alvarez M, Shah R, et al. DNA binding and gene activation properties of the Nmp4 nuclear matrix transcription factors. J Biol Chem 2002;277:16153-9.",
+   "pmid": "11867614",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11867614/"
+  },
+  {
+   "cite": "Robling AG, Childress P, Yu J, et al. Nmp4/CIZ suppresses parathyroid hormone-induced increases in trabecular bone. J Cell Physiol 2009;219:734-43.",
+   "pmid": "19189321",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19189321/"
+  },
+  {
+   "cite": "Childress P, Robling AG, Bidwell JP. Nmp4/CIZ: road block at the intersection of PTH and load. Bone 2010;46:259-66.",
+   "pmid": "19766748",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19766748/"
+  },
+  {
+   "cite": "Childress P, Stayrook KR, Alvarez MB, et al. Genome-Wide Mapping and Interrogation of the Nmp4 Antianabolic Bone Axis. Mol Endocrinol 2015;29:1269-85.",
+   "pmid": "26244796",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26244796/"
+  },
+  {
+   "cite": "Hirabayashi S, Ohki K, Nakabayashi K, et al. ZNF384-related fusion genes define a subgroup of childhood B-cell precursor acute lymphoblastic leukemia with a characteristic immunotype. Haematologica 2017;102:118-129.",
+   "pmid": "27634205",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27634205/"
+  },
+  {
+   "cite": "Yang S, Adaway M, Du J, et al. NMP4 regulates the innate immune response to influenza A virus infection. Mucosal Immunol 2021;14:209-218.",
+   "pmid": "32152414",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32152414/"
+  },
+  {
+   "cite": "Zaliova M, Winkowska L, Stuchly J, et al. A novel class of ZNF384 aberrations in acute leukemia. Blood Adv 2021;5:4393-4397.",
+   "pmid": "34529760",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34529760/"
+  },
+  {
+   "cite": "Korff C, Atkinson E, Adaway M, et al. NMP4, an Arbiter of Bone Cell Secretory Capacity and Regulator of Skeletal Response to PTH Therapy. Calcif Tissue Int 2023;113:110-125.",
+   "pmid": "37147466",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37147466/"
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "key": "NEUROD_ATOH",
+ "aka": [
+  "proneural bHLH factors",
+  "neural E-box",
+  "CAGATG E-box",
+  "Atonal-related factors",
+  "achaete-scute homologues (MASH/ASH)",
+  "neurogenin (NGN)",
+  "BETA2 (NEUROD1)",
+  "MATH1 (ATOH1)",
+  "class II bHLH (TFClass: Tal-related/NeuroD-related)"
+ ],
+ "consensus": "CAGATG",
+ "short": "Class II basic helix-loop-helix (bHLH) proteins of the Atonal, achaete-scute, Olig and NSCL groups — NEUROD1/2, NEUROG1-3, ATOH1/7/8, ASCL1/2, OLIG1-3, PTF1A, BHLHA15, FIGLA, MSGN1, NHLH1/2 and relatives — bind DNA only as heterodimers with the broadly expressed class I E-proteins TCF3, TCF4 and TCF12. The dimer reads a six-base E-box, CANNTG; this group prefers CAGATG (CATCTG on the opposite strand), with CATATG and CAGCTG as the two common variants. These factors are commitment switches for progenitors in the nervous system, inner ear, retina, pancreas, intestine and presomitic mesoderm, and several of them — ASCL1, NEUROD1, NEUROG2, ATOH1 — are the active ingredients of direct reprogramming protocols that convert fibroblasts into neurons.",
+ "long": "## The factors\n\nThis family collects the tissue-restricted (\"class II\") bHLH proteins whose DNA-binding domains are closest to *Drosophila* atonal and achaete-scute. In the atlas it spans NEUROD1/2 (and NEUROD4/6), NEUROG1/2/3, ATOH1/7/8, ASCL1/2, OLIG1/2/3, PTF1A, FERD3L, FIGLA, BHLHA9, BHLHA15 (MIST1), BHLHE22/23, MSGN1 and NHLH1/2 — around twenty human genes. The binding unit is a ~60-residue basic helix-loop-helix domain: a basic segment that lies in the major groove, followed by two helices separated by a loop that pack into a parallel four-helix bundle with the partner subunit. Almost none of these proteins binds DNA usefully on its own. The functional species is a heterodimer with a class I E-protein — TCF3 (E12/E47), TCF4 (ITF2) or TCF12 (HEB) — which are expressed in nearly every cell type. The crystal structure of the E47-NEUROD1 bHLH dimer on the insulin-gene E-box shows why heterodimers dominate: the E47-NEUROD1 interface is as extensive as the E47 homodimer interface, while NEUROD1 homodimers are unstable. Expression of the class II partners is narrow and largely non-overlapping: NEUROG1/2 in neural progenitors, NEUROD1 in newly born neurons and pancreatic islets, ATOH1 in cerebellar granule, inner-ear hair-cell and intestinal secretory progenitors, ASCL1 in ventral telencephalon and autonomic and neuroendocrine lineages, OLIG2 in motor-neuron and oligodendrocyte precursors, PTF1A in pancreas and cerebellum, BHLHA15 in exocrine secretory cells, FIGLA in oocytes, MSGN1 in presomitic mesoderm. \"Neural\" describes most of the family, not all of it.\n\n## The motif\n\nThe site is a six-base E-box, CANNTG, an imperfect palindrome in which each monomer reads one CAN half-site. A glutamate in the basic region hydrogen-bonds the cytosine and adenine of its half-site and an adjacent arginine contacts the guanine on the complementary strand; these contacts are what make CA...TG invariant. The central two positions are the variable ones, and in the E47-NEUROD1 structure no side chain contacts them directly — specificity there comes from backbone contacts, DNA deformability and flanking sequence. That is the single most important fact for interpreting hits: CAGATG, CAGCTG and CATCTG (the reverse complement of CAGATG) differ at positions the protein barely touches.\n\nThe data reflect this. The representative model is `gaCAGATGG`, and the 82 motifs split into three overlapping groups: CAGATG (mostly ChIP-derived, for NEUROD1/2, NEUROG2, ATOH1, PTF1A), CATATG (almost all HT-SELEX or methyl-SELEX models, covering NEUROG1/2/3, OLIG1/2/3, ATOH1/7, BHLHE22/23, NEUROD1/2, BHLHA15) and CAGCTG (ASCL1/2, NHLH1/2, PTF1A, FERD3L, ATOH8, BHLHA9), with a CACCTG minority for FIGLA and some ASCL1 and PTF1A models. Genome-wide comparison of NEUROD2 and MYOD binding found CAGCTG shared between them and CAGATG as the NEUROD2-preferred site, so CAGCTG is the least diagnostic of the three. The flanks add a little: FERD3L models read GTAACAGCTGTTGC, NHLH models CGCAGCTGCG, and PTF1A ChIP gives an E-box followed after about five bases by a TTC, the TC-box of the trimeric PTF1 complex with RBPJ or RBPJL. Overall cohesion is 0.81 and no member is flagged as belonging elsewhere, but the CATATG and CAGCTG subgroups are separated by more than the usual paralogue-level noise.\n\n## Where it acts\n\nThese are enhancer factors. Sites are distal, AT-rich rather than CpG-island-associated, and binding is largely confined to E-boxes that are already in accessible chromatin, so the same motif is used by different family members in different cell types with little overlap. Typical genome-wide occupancy is thousands to tens of thousands of sites per factor, a small fraction of the available E-boxes. Frequent neighbours are SOX (SOX2, SOX10), POU (POU3F2/BRN2), LHX and RFX motifs in neural enhancers, and in the pancreas FOXA, PDX1 and RBPJ/RBPJL. The named composite element in this family is the PTF1 site: an E-box and a TC-box about one helical turn apart, bound by PTF1A together with RBPJ (PTF1-J) or RBPJL (PTF1-L).\n\n## Biology and disease\n\nThese factors are commitment switches. *Atoh1* loss removes cerebellar granule neurons, inner-ear hair cells and the intestinal secretory lineage; *Neurog3* loss removes all four pancreatic endocrine cell types; *Olig1* and *Olig2* couple motor-neuron and oligodendrocyte specification, and *Olig2* loss removes both; *Neurog1/2* are required for cranial and dorsal root sensory neurons. ASCL1 also drives progenitor proliferation, not only differentiation, which is why proneural activity and cell-cycle exit are not synonymous. In humans, biallelic *PTF1A* mutations cause pancreatic and cerebellar agenesis. ASCL1 and NEUROD1 define transcriptional subtypes of small-cell lung cancer and OLIG2 marks oligodendroglial tumours. The same commitment function underlies direct reprogramming: ASCL1 with POU3F2 and MYT1L converts fibroblasts to functional neurons, and NEUROD1, NEUROG2 and ATOH1 are used in comparable protocols.\n\n## Reading a hit\n\nA CAGATG, CATATG or CAGCTG match tells you a class II bHLH-E-protein heterodimer could bind, and nothing about which one. All ~20 members are indistinguishable from sequence; the Vierstra archetype `AC0084:OLIG/NEUROG:bHLH` says so in its name. Chance matters: a fixed six-mer is expected roughly 750,000 times per strand of a 3.1-Gb genome, so a bare E-box hit is close to uninformative without conservation, accessibility or expression evidence. Which motif version you scan with changes the answer — the in vitro (HT-SELEX) models say CATATG while the ChIP models say CAGATG or CAGCTG. Members with only ChIP evidence (HOCOMOCO fourth-field `P`, e.g. `NDF1.H14CORE.0.P.B`) support \"this factor occupies these regions\", not \"this factor binds this sequence\"; the S and M models do the latter. One outlier deserves naming: the Vierstra archetype `AC0461:ASCL:bHLH` has the consensus ACACGACGC, which is not an E-box and matches nothing else in the family.",
+ "caveats": "A hit identifies the family, not the factor: all twenty-odd members read the same six-base E-box and cannot be told apart from sequence, which is why one Vierstra archetype here is named OLIG/NEUROG rather than after a protein. The three variants CAGATG, CATATG and CAGCTG differ at positions the protein does not directly contact, so a scan tuned to one will miss or misrank the others, and CAGCTG in particular is shared with E-protein homodimers, MYOD, TWIST and TCF21. Six-mers are far too common to be evidence on their own. ChIP-only models (HOCOMOCO evidence letter P) show occupancy, not binding specificity.",
+ "refs": [
+  {
+   "cite": "Lee JE, Hollenberg SM, Snider L, et al. Conversion of Xenopus ectoderm into neurons by NeuroD, a basic helix-loop-helix protein. Science 1995;268:836-44.",
+   "pmid": "7754368",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7754368/"
+  },
+  {
+   "cite": "Ma Q, Kintner C, Anderson DJ. Identification of neurogenin, a vertebrate neuronal determination gene. Cell 1996;87:43-52.",
+   "pmid": "8858147",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8858147/"
+  },
+  {
+   "cite": "Bertrand N, Castro DS, Guillemot F. Proneural genes and the specification of neural cell types. Nat Rev Neurosci 2002;3:517-30.",
+   "pmid": "12094208",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12094208/"
+  },
+  {
+   "cite": "Longo A, Guanga GP, Rose RB. Crystal structure of E47-NeuroD1/beta2 bHLH domain-DNA complex: heterodimer selectivity and DNA recognition. Biochemistry 2008;47:218-29.",
+   "pmid": "18069799",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18069799/"
+  },
+  {
+   "cite": "Fong AP, Yao Z, Zhong JW, et al. Genetic and epigenetic determinants of neurogenesis and myogenesis. Dev Cell 2012;22:721-35.",
+   "pmid": "22445365",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22445365/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  },
+  {
+   "cite": "Castro DS, Martynoga B, Parras C, et al. A novel function of the proneural factor Ascl1 in progenitor proliferation identified by genome-wide characterization of its targets. Genes Dev 2011;25:930-45.",
+   "pmid": "21536733",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21536733/"
+  },
+  {
+   "cite": "Bermingham NA, Hassan BA, Price SD, et al. Math1: an essential gene for the generation of inner ear hair cells. Science 1999;284:1837-41.",
+   "pmid": "10364557",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10364557/"
+  },
+  {
+   "cite": "Gradwohl G, Dierich A, LeMeur M, et al. neurogenin3 is required for the development of the four endocrine cell lineages of the pancreas. Proc Natl Acad Sci U S A 2000;97:1607-11.",
+   "pmid": "10677506",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10677506/"
+  },
+  {
+   "cite": "Sellick GS, Barker KT, Stolte-Dijkstra I, et al. Mutations in PTF1A cause pancreatic and cerebellar agenesis. Nat Genet 2004;36:1301-5.",
+   "pmid": "15543146",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15543146/"
+  },
+  {
+   "cite": "Zhou Q, Anderson DJ. The bHLH transcription factors OLIG2 and OLIG1 couple neuronal and glial subtype specification. Cell 2002;109:61-73.",
+   "pmid": "11955447",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11955447/"
+  },
+  {
+   "cite": "Vierbuchen T, Ostermeier A, Pang ZP, et al. Direct conversion of fibroblasts to functional neurons by defined factors. Nature 2010;463:1035-41.",
+   "pmid": "20107439",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20107439/"
+  }
+ ]
+}

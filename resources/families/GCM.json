@@ -1,0 +1,74 @@
+{
+ "key": "GCM",
+ "aka": [
+  "GCM box",
+  "glial cells missing",
+  "GCMa",
+  "GCM1",
+  "GCMb",
+  "GCM2",
+  "GCM domain",
+  "GCM-binding site"
+ ],
+ "consensus": "ATRCGGGT",
+ "short": "GCM1 and GCM2 (glial cells missing 1 and 2) are the only human members of a small metazoan family that binds DNA through the GCM domain, a conserved 150-residue region with a fold unlike any other transcription factor class: two subdomains held together by structural zinc ions, reading the major groove with a five-stranded beta-sheet rather than an alpha-helix. They recognize an 8-bp GCM box, AT(G/A)CGGGT, as monomers, with no half-sites or spacing rules. Despite the name, the mammalian proteins are not gliogenic: GCM1 is required for placental labyrinth branching and trophoblast fusion, and GCM2 for parathyroid gland development, where loss-of-function and activating mutations cause hypoparathyroidism and hyperparathyroidism respectively.",
+ "long": "## The factors\n\nGCM (glial cells missing) proteins are a small metazoan family with two human members, GCM1 (also GCMa) and GCM2 (GCMb); *Drosophila* has *gcm* and *gcm2*. They share a highly conserved 150-residue N-terminal region, the GCM domain, which carries all of the sequence-specific DNA-binding activity and sits next to a bipartite nuclear localization signal; the transactivation function maps to the divergent C-terminal half. There is no dimerization module — the GCM domain binds its site as a monomer — and no relationship to any other DNA-binding class. Expression is narrow. GCM1 is expressed in placental trophoblast, with lower levels in kidney and thymus; GCM2 is expressed in the developing parathyroid and, at lower levels, in a few brain regions. Despite the name, the mammalian proteins have no established role in gliogenesis: the glia-versus-neuron switch is the *Drosophila* function, and it was the fly gene that gave the family its name. With only two paralogues and highly restricted expression, GCM is one of the most self-contained families in this atlas.\n\n## The motif\n\nThe GCM box is an 8-mer, AT(G/A)CGGGT, determined by binding-site selection for *Drosophila* GCM and reproduced for both mammalian proteins. The models here agree closely: JASPAR, CIS-BP and the Vierstra archetypes all give ATGCGGGT, and family cohesion is 0.92. Note that two of the HOCOMOCO entries (GCM1.H14CORE.0.S.B, GCM2.H14CORE.0.SM.B) report the consensus as ACCCGCAT, which is the reverse complement of the same element — an orientation convention, not a different specificity. One short CIS-BP profile (M02020_2.00, TGCGGG) is simply a trimmed version of the same core.\n\nThe structural story is what makes this family unusual. The crystal structure of the murine GCMa GCM domain bound to its octameric site, at 2.85 A, revealed a fold with no precedent: two subdomains tethered together by one of two structural zinc ions, and a five-stranded beta-sheet that protrudes into the major groove perpendicular to the DNA axis. Almost every well-known DNA-binding class reads the major groove with an alpha-helix; GCM does it with a beta-sheet, and the zinc ions are structural rather than part of a classical zinc finger. That is why the recognized sequence looks like nothing else: the GC-rich CGGGT half is read by beta-strand side chains in a geometry not available to helical readers. Because the element is a single 8-mer with high information content and no half-site structure, there are no spacing rules to worry about and no composite arrangements to score. GCM1 and GCM2 are not distinguishable from sequence.\n\n## Where it acts\n\nGCM boxes act in promoters and proximal enhancers of a small number of tissue-restricted genes. The best-documented GCM1 targets are the syncytin-1 (*ERVWE1*) promoter in human trophoblast, and *Itga4*, *Rb1* and syncytin A in mouse placenta; GCM1 activity is regulated by cAMP/PKA signaling in trophoblast. GCM2 acts in parathyroid precursor cells. Because both factors are so restricted, the great majority of sequence matches genome-wide are unoccupied in any given cell type. An exact 8-mer of this composition is expected tens of thousands of times in the human genome, and GC-rich promoter sequence produces additional weak partial matches, so the motif is informative only when paired with the right cell type. The GCM box is not part of any named composite element.\n\n## Biology and disease\n\nIn *Drosophila*, *gcm* is a binary switch: cells that express it become glia, cells that do not become neurons. The mammalian phenotypes are entirely different. *Gcm1*-null mouse embryos fail to initiate chorioallantoic branching morphogenesis and die from a defective placental labyrinth; the fusion of trophoblast into syncytium depends on GCM1-driven syncytin expression. *Gcm2*-null mice have no parathyroid glands, yet remain viable with parathyroid hormone produced from the thymus. In humans, loss-of-function *GCM2* mutations, including substitutions that disrupt DNA binding by the GCM domain, cause autosomal recessive familial isolated hypoparathyroidism, while activating *GCM2* variants cause familial isolated hyperparathyroidism — a clean case of a transcription factor with disease alleles in both directions.\n\n## Reading a hit\n\nA GCM box match is one of the more trustworthy family-level calls in this atlas. The fold is unique, the element is an 8-mer with high information content, and no other human family in this collection reads it: across the eight member motifs, similarity to the nearest non-GCM motif (0.67-0.80) sits well below within-family similarity. The evidence is also good — the HOCOMOCO entries rest on in vitro selection (codes `S` and `SM`), not on ChIP alone, so the claim \"these proteins bind this sequence\" is directly supported rather than inferred from co-occupancy.\n\nWhat the match does not license is a call on which paralogue, or on occupancy. GCM1 and GCM2 are indistinguishable by motif; the discriminator is tissue, and outside trophoblast and parathyroid neither is expressed at a level that would make a site functional. Watch for two practical traps: databases report this motif in both orientations (ATGCGGGT and ACCCGCAT), so a scan that only checks one strand will miss half the sites; and permissive thresholds on GC-rich promoter sequence will produce partial matches to the CGGGT half that have little to do with GCM.",
+ "caveats": "The GCM box is a high-information 8-mer read by a structurally unique domain, so family-level assignment is reliable — nothing else in this atlas reads ATGCGGGT, and the HOCOMOCO models rest on in vitro selection rather than ChIP alone. GCM1 and GCM2 cannot be told apart from sequence; use tissue instead, since GCM1 is essentially trophoblast-restricted and GCM2 parathyroid-restricted, so most matches are unoccupied in most cell types. Two mechanical points: the element is reported in both orientations across databases (ATGCGGGT and its reverse complement ACCCGCAT), and permissive scoring on GC-rich promoter sequence yields partial matches to the CGGGT half that are not GCM sites.",
+ "refs": [
+  {
+   "cite": "Schreiber J, Sock E, Wegner M. The regulator of early gliogenesis glial cells missing is a transcription factor with a novel type of DNA-binding domain. Proc Natl Acad Sci U S A 1997;94:4739-44.",
+   "pmid": "9114061",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9114061/"
+  },
+  {
+   "cite": "Cohen SX, Moulin M, Hashemolhosseini S, et al. Structure of the GCM domain-DNA complex: a DNA-binding domain with a novel fold and mode of target site recognition. EMBO J 2003;22:1835-45.",
+   "pmid": "12682016",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12682016/"
+  },
+  {
+   "cite": "Hosoya T, Takizawa K, Nitta K, et al. glial cells missing: a binary switch between neuronal and glial determination in Drosophila. Cell 1995;82:1025-36.",
+   "pmid": "7553844",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7553844/"
+  },
+  {
+   "cite": "Jones BW, Fetter RD, Tear G, et al. glial cells missing: a genetic switch that controls glial versus neuronal fate. Cell 1995;82:1013-23.",
+   "pmid": "7553843",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7553843/"
+  },
+  {
+   "cite": "Anson-Cartwright L, Dawson K, Holmyard D, et al. The glial cells missing-1 protein is essential for branching morphogenesis in the chorioallantoic placenta. Nat Genet 2000;25:311-4.",
+   "pmid": "10888880",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10888880/"
+  },
+  {
+   "cite": "Günther T, Chen ZF, Kim J, et al. Genetic ablation of parathyroid glands reveals another source of parathyroid hormone. Nature 2000;406:199-203.",
+   "pmid": "10910362",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10910362/"
+  },
+  {
+   "cite": "Yu C, Shen K, Lin M, et al. GCMa regulates the syncytin-mediated trophoblastic fusion. J Biol Chem 2002;277:50062-8.",
+   "pmid": "12397062",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12397062/"
+  },
+  {
+   "cite": "Schubert SW, Lamoureux N, Kilian K, et al. Identification of integrin-alpha4, Rb1, and syncytin a as murine placental target genes of the transcription factor GCMa/Gcm1. J Biol Chem 2008;283:5460-5.",
+   "pmid": "18167345",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18167345/"
+  },
+  {
+   "cite": "Baumber L, Tufarelli C, Patel S, et al. Identification of a novel mutation disrupting the DNA binding activity of GCM2 in autosomal recessive familial isolated hypoparathyroidism. J Med Genet 2005;42:443-8.",
+   "pmid": "15863676",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15863676/"
+  },
+  {
+   "cite": "Guan B, Welch JM, Sapp JC, et al. GCM2-Activating Mutations in Familial Isolated Hyperparathyroidism. Am J Hum Genet 2016;99:1034-1044.",
+   "pmid": "27745835",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27745835/"
+  },
+  {
+   "cite": "Hashemolhosseini S, Wegner M. Impacts of a new transcription factor family: mammalian GCM proteins in health and disease. J Cell Biol 2004;166:765-8.",
+   "pmid": "15353544",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15353544/"
+  }
+ ]
+}

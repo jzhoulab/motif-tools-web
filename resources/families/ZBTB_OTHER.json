@@ -1,0 +1,73 @@
+{
+ "key": "ZBTB_OTHER",
+ "aka": [
+  "BTB-ZF",
+  "POZ-ZF",
+  "POK proteins",
+  "ZBTB",
+  "myoneurin",
+  "ZBTB31",
+  "ZNF131",
+  "ZF5"
+ ],
+ "short": "BTB-ZF proteins, also called POZ-ZF, pair an N-terminal BTB/POZ domain, a dimerization module, with a short C2H2 zinc-finger array. This entry collects the 28 less-studied members: ZBTB1 to ZBTB6, ZBTB8A and ZBTB8B, ZBTB11, 12, 14, 16, 20, 22, 24, 26, 32, 37, 40 to 45, 47 and 49, plus myoneurin (MYNN) and ZNF131. The distinctive BTB-ZFs with well-mapped sites, among them BCL6, HIC1/2, ZBTB7A/B, MIZ1, ZBTB18, Kaiso and TZAP, are split into their own entries. It is not a single motif: 60 matrices, cohesion 0.42, median length 10 bp. Several members do read inverted-repeat sites, as obligate dimerization predicts, but the half-sites differ from protein to protein.",
+ "long": "## The factors\n\nThe BTB domain (broad-complex, tramtrack, bric-a-brac), also called POZ (poxvirus and zinc finger), is a protein-protein interaction module with a highly conserved core fold. It was first visualized in the PLZF/ZBTB16 crystal structure (Ahmad et al. 1998), and the PLZF BTB homodimer remains the reference model; surveys of 17 eukaryotic genomes place BTB-ZF among several BTB families and show a large vertebrate expansion (Stogios et al. 2005). BTB-ZF factors are predominantly transcriptional repressors, with prominent roles in haematopoietic development and malignancy (Kelly and Daniel 2006; de Greef et al. 2011). Their C2H2 arrays are short compared with KRAB zinc fingers, typically two to six fingers, which limits how much sequence one monomer can read and is part of why dimerization matters. Twenty-eight gene symbols appear here. Members with distinctive, better-mapped sites are described elsewhere in this atlas: BCL6 and BCL6B, HIC1 and HIC2, ZBTB7A and ZBTB7B, ZBTB17/MIZ1, ZBTB18, ZBTB33/Kaiso, PATZ1 (grouped with MAZ) and ZBTB48/TZAP (grouped with the telobox factors). What remains is deliberately the residue: a few members with good data, a majority with almost none.\n\n## The motif\n\nThere is no family consensus; cohesion is 0.42. Median consensus length is 10 bp and median information content 12.7 bits, short and weak beside the KRAB zinc-finger entries; only 2 matrices reach 20 bp and only 7 exceed 20 bits. The clearest structural signature is the dyad an obligate BTB homodimer predicts. ZBTB32 (also TZFP, FAZF) gives TGTACAGTAATACTGTACA at 28.9 bits, an inverted repeat of TGTACAGTA; its half-site ACTGTA is also the entire HOCOMOCO model for ZBTB16/PLZF at 9.4 bits, so at half-site resolution those two are indistinguishable. ZBTB22 gives TCACTATTATAGTGA, a near-perfect inverted repeat of TCACTAT, reproduced independently in CIS-BP and the Vierstra archetype AC0356. ZBTB43 gives GTGCCATANNNNCAGCAC, two half-sites separated by four unconstrained positions. ZBTB20 (CTATACGTT) and ZBTB45 (CACCTATAG, or CTATAGGTG on the other strand) both centre on CTATA and score about 0.96 against each other, so they are not separable. ZBTB14 (ZF5/ZFP161) is GC-rich and appears variously as TGCGCGTGCACGTG, GCGCGTGCGCGCG and CCGCGCAC; its CIS-BP model's nearest neighbour is an E2F matrix at 0.96 and its JASPAR model matches a non-family motif at 1.00, so ZBTB14 hits cannot be separated from the general GC-box and E2F pool. MYNN gives GACTTTTATTTT identically in CIS-BP, HOCOMOCO and the archetype AC0431, one of the few internally consistent models here. ZBTB40 has the best-supported model in the family: AAMAAAACTTTATTGA, 22.7 bits, grade A with ChIP, SELEX and integrative evidence. Two members contradict themselves across databases: ZBTB26 appears as TTCTGGA, as a CG repeat, and as TTYAAAANTTTTCTAGAA; ZBTB49 as TTTCGCCTGGCACGTCA and as GTGACCAGCCAGGCMAAAATGG. Neither should be treated as settled.\n\n## Where it acts\n\nPromoters and promoter-proximal regions, mostly; short, moderately informative motifs are typical of factors recruited into promoter complexes rather than of long-range specificity. Genome-wide maps exist for few members. ZBTB11 is found at nuclear respiratory factor 2 (NRF-2/GABP) target promoters, where it facilitates GABP recruitment to genes for respiratory complex I and the mitoribosome (Wilson et al. 2020). ZBTB24 is required for DNA methylation of juxtacentromeric repeat sequences (de Greef et al. 2011). ZBTB16/PLZF occupies an extensive transcription-factor poising network in juvenile spermatogonial stem cells (Yi et al. 2025). For most other members the HOCOMOCO model is the only positional information available.\n\n## Biology and disease\n\nHuman phenotypes are established for three members. ZBTB24 mutations cause immunodeficiency, centromeric instability and facial anomalies syndrome type 2, which shares hypomethylation of juxtacentromeric repeats with DNMT3B-mutant ICF1 and involves B cell development (de Greef et al. 2011). ZBTB20 mutations cause Primrose syndrome (Cordeddu et al. 2014), and Zbtb20 haploinsufficiency reproduces the intellectual disability and autism-like behaviour in mice (Hindermann et al. 2026). ZBTB11 mutations cause hereditary intellectual disability; the pathogenic substitutions destabilize the protein, lowering its dosage and producing a severe respiratory complex I assembly defect, impaired respiration and cell death (Wilson et al. 2020). Beyond disease genetics, ZBTB16/PLZF controls juvenile spermatogonial stem cell development (Yi et al. 2025), and myoneurin regulates BMP signalling by competing with PPM1A for SMAD binding (Yang et al. 2022) — several of these proteins act mainly through protein-protein rather than protein-DNA interactions.\n\n## Reading a hit\n\nBecause the BTB domain dimerizes, look for the dyad: an inverted repeat of the half-site, with the spacing of the reference matrix. A half-site alone is weak evidence, and half-sites are shared between members, ACTGTA between ZBTB32 and PLZF and CTATA between ZBTB20 and ZBTB45. At a median of 10 bp and 12.7 bits, most of these motifs occur hundreds of thousands of times in the human genome, so a single match without conservation, accessibility or ChIP support supports nothing. Eleven of 60 matrices have their nearest neighbour in another family: three resemble HSF motifs (two ZBTB26 models and the archetype AC0687), two the ZBTB7 motif (ZBTB11 and ZBTB2), two HAND/TWIST (ZBTB42 and AC0074), and one each E2F (ZBTB14), Kaiso/ZBTB33 (AC0312), ZBTB18 (ZBTB42) and HIC (ZBTB43). The ZBTB11 case is instructive: its JASPAR motif CACTTCCGG contains CCGGAAG, the GABP/ETS core, and ZBTB11 is known to recruit GABP to promoters, so the most parsimonious reading is that this matrix records GABP's specificity captured through co-binding rather than ZBTB11's own. Finally, the CIS-BP models for ZBTB1 (CCCGCA) and ZBTB3 (CACTGC) are transferred from mouse orthologues; the domains are 100% identical, so the transfer is sound, but at 6.5 to 6.8 bits they are too weak to scan with.",
+ "caveats": "This is a domain family with several unrelated motifs, not one motif: 28 proteins, 60 matrices, cohesion 0.42, no consensus. The matrices are short (median 10 bp, 12.7 bits), so most match hundreds of thousands of genomic positions and a lone hit means little. Because BTB is a dimerization domain, require the dyad rather than a half-site, and note that half-sites are shared: ACTGTA between ZBTB32 and PLZF, CTATA between ZBTB20 and ZBTB45. Eleven matrices most closely resemble another family's motif, and ZBTB11's is most plausibly GABP's, captured through co-binding. The ZBTB26 and ZBTB49 models contradict each other across databases, and the mouse-derived ZBTB1 and ZBTB3 models carry under 7 bits.",
+ "refs": [
+  {
+   "cite": "Ahmad KF, Engel CK, Privé GG. Crystal structure of the BTB domain from PLZF. Proc Natl Acad Sci U S A 1998;95:12123-8.",
+   "pmid": "9770450",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9770450/"
+  },
+  {
+   "cite": "Stogios PJ, Downs GS, Jauhal JJ, et al. Sequence and structural analysis of BTB domain proteins. Genome Biol 2005;6:R82.",
+   "pmid": "16207353",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16207353/"
+  },
+  {
+   "cite": "Kelly KF, Daniel JM. POZ for effect--POZ-ZF transcription factors in cancer and development. Trends Cell Biol 2006;16:578-87.",
+   "pmid": "16996269",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16996269/"
+  },
+  {
+   "cite": "de Greef JC, Wang J, Balog J, et al. Mutations in ZBTB24 are associated with immunodeficiency, centromeric instability, and facial anomalies syndrome type 2. Am J Hum Genet 2011;88:796-804.",
+   "pmid": "21596365",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21596365/"
+  },
+  {
+   "cite": "Cordeddu V, Redeker B, Stellacci E, et al. Mutations in ZBTB20 cause Primrose syndrome. Nat Genet 2014;46:815-7.",
+   "pmid": "25017102",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25017102/"
+  },
+  {
+   "cite": "Hindermann M, Wilke JB, Curto Y, et al. Erythropoietin alleviates syndrome-associated intellectual disability and autism-like behavior in Zbtb20-haploinsufficient Primrose syndrome mouse model. JCI Insight 2026;11.",
+   "pmid": "41729076",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41729076/"
+  },
+  {
+   "cite": "Wilson BC, Boehme L, Annibali A, et al. Intellectual disability-associated factor Zbtb11 cooperates with NRF-2/GABP to control mitochondrial function. Nat Commun 2020;11:5469.",
+   "pmid": "33122634",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33122634/"
+  },
+  {
+   "cite": "Yi C, Kitamura Y, Maezawa S, et al. ZBTB16/PLZF regulates juvenile spermatogonial stem cell development through an extensive transcription factor poising network. Nat Struct Mol Biol 2025;32:1213-1226.",
+   "pmid": "40033150",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40033150/"
+  },
+  {
+   "cite": "Yang S, Ning G, Hou Y, et al. Myoneurin regulates BMP signaling by competing with Ppm1a for Smad binding. iScience 2022;25:104495.",
+   "pmid": "35712083",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35712083/"
+  },
+  {
+   "cite": "Schmitges FW, Radovani E, Najafabadi HS, et al. Multiparameter functional diversity of human C2H2 zinc finger proteins. Genome Res 2016;26:1742-1752.",
+   "pmid": "27852650",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27852650/"
+  },
+  {
+   "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
+   "pmid": "37971293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "key": "DACH",
+ "aka": [
+  "DACH1 / DACH2",
+  "Dachshund homology domain",
+  "DD1 domain",
+  "SKI / SnoN / SKOR corepressors",
+  "SKIL (SnoN)",
+  "Corl1 (SKOR1) / Corl2 (SKOR2)",
+  "LBXCOR1 (SKOR1)",
+  "Ski/Sno family"
+ ],
+ "consensus": "TTAATTAC",
+ "short": "These are transcriptional corepressors, not classical sequence-specific activators. DACH1 and DACH2 are the vertebrate Dachshund proteins, and SKI, SKIL/SnoN, SKOR1 and SKOR2 are the Ski family; all share a Dachshund homology domain with a winged-helix fold related to forkhead. They work mostly by being recruited: DACH proteins into SIX/EYA complexes and onto forkhead sites where they compete with FOXM1, the Ski proteins onto SMAD complexes to shut down TGF-beta signalling, and SKOR1/SKOR2 onto homeodomain factors such as LBX1. The motifs in this family therefore look borrowed. The best-supported models, TTAATTAC for SKOR1 and SKOR2, are indistinguishable from homeodomain dimer sites, which is what you would expect from proteins that arrive at DNA on someone else's back.",
+ "long": "## The factors\n\nTwo lineages sit in this family because they share one domain. DACH1 and DACH2 are the vertebrate\nhomologues of *Drosophila* dachshund, a retinal determination gene. Their conserved N-terminal region, the\nDachshund homology domain or DD1, was solved crystallographically and turned out to adopt a winged-helix\nfold of the kind used by forkhead proteins, with a surface consistent with DNA binding; a second conserved\nregion, DD2, mediates protein-protein interaction. The Ski family, SKI, SKIL (SnoN), SKOR1 and SKOR2,\ncarries a homologous Dachshund homology domain; the crystal structure of the human SKI domain confirmed the\nsame fold and identified a SAND-like element within it as the likely DNA-contacting surface. None of these\nproteins has a homeodomain, a zinc finger or a leucine zipper. All of them function primarily as\ncorepressors that recruit histone deacetylase and N-CoR complexes to sites chosen by a partner: DACH\nproteins into SIX-EYA complexes on SIX target promoters, SKI and SnoN onto SMAD2/3 and SMAD4 complexes at\nTGF-beta response elements, and SKOR1 and SKOR2, originally named Corl1 and Corl2, onto the homeodomain\nprotein LBX1 and related factors in developing neurons.\n\n## The motif\n\nThere is no single well-founded consensus, and the two lineages point in different directions. For the DACH\nproteins, the functional claim from cell biology is that DACH1 binds forkhead-type sequences and thereby\ncompetes with FOXM1 for its targets; the winged-helix fold of DD1 makes that structurally plausible. The\ndatabase models for DACH1 and DACH2, however, are HT-SELEX motifs reading CAATCGTCATAATT and TGACGATTG,\nwhich are not forkhead sites, are the weakest-matching members of this family internally, and should be\ntreated as provisional. For SKOR1 and SKOR2 the models are much stronger and mutually consistent: in vitro\nselection and methyl-selection give TTAATTAC and CTTTAATTAA, around 15 to 16 bits, reproduced in CIS-BP as\nTTAATTACAGNT. Read as a homeodomain site, TTAATTAC is a TAAT/ATTA arrangement of exactly the type that\nLHX, ALX and ARX homeodomains bind as cooperative dimers, and that is what the data show: the\nnearest neighbours of these models outside the family are LHX, ALX and ARX homeodomain motifs, at\nsimilarities of 0.88 to 0.93. Whether the Ski/Dachshund winged helix genuinely prefers this sequence, or\nwhether the selection experiments captured the preference of an associated homeodomain partner, is not\nsettled. The family consensus offered here, TTAATTAC, is therefore the observed motif, not a validated\nstatement about which protein reads it.\n\n## Where it acts\n\nDACH1 occupies promoters and enhancers in complexes with SIX1 and EYA proteins, where the three together\nconvert a SIX-bound site from repressed to activated via CREB-binding protein, and at forkhead sites where\nDACH1 opposes FOXM1-driven proliferative programs. SKI and SnoN are found wherever SMAD complexes are, so\ntheir apparent binding footprint is the SMAD-binding element landscape of TGF-beta and BMP signalling.\nSKOR1 and SKOR2 are restricted to specific neuronal lineages: SKOR1 in dorsal horn interneurons with LBX1,\nSKOR2 in cerebellar Purkinje cell precursors, where it is a selective marker and drives early\ndifferentiation. The practical consequence is that these factors' genome-wide occupancy tracks the\nexpression and occupancy of their partners, so composite elements in the useful sense are the partner's\nelements: a SIX site, a SMAD-binding element, or an LBX1-type homeodomain site.\n\n## Biology and disease\n\nDACH1 restrains proliferation: it inhibits cyclin D1 and breast tumour growth, binds SMAD4 to attenuate\nTGF-beta signalling, and attenuates forkhead signalling. It is downregulated in several carcinomas, and\ntranscriptome-wide association work identified DACH1 as a kidney disease risk gene contributing to fibrosis,\nmaking it a candidate target in chronic kidney disease. DACH1 and DACH2 act redundantly in Mullerian duct\ndevelopment. SKI and SnoN are proto-oncoproteins by virtue of repressing TGF-beta growth inhibition, and\nSKI mutations cause Shprintzen-Goldberg syndrome. SKOR2/Corl2 is required for early Purkinje cell\ndifferentiation. The SKOR1 locus, formerly LBXCOR1, was one of the three regions identified in the first\ngenome-wide association study of restless legs syndrome, alongside MEIS1 and BTBD9.\n\n## Reading a hit\n\nBe sceptical in a specific way. A TTAATTAC hit is a good homeodomain dimer site and a poor SKOR\nidentification: if you scan with the SKOR1 or SKOR2 model you will recover LHX, ALX and ARX sites, and in\nthis family's own data those motifs are the nearest neighbours. Conversely, if a ChIP experiment on any of\nthese proteins yields a homeodomain or SMAD or forkhead motif, the most likely explanation is indirect\nbinding through the partner that recruited them, which is the mechanism these proteins are known for. The\nDACH1 and DACH2 models are the weakest members of the family internally and do not match the forkhead-like\nspecificity that the functional literature describes, so a DACH1 motif hit should not be used as evidence\nof DACH1 occupancy. In practice, use expression of the partner, not the motif, to decide whether a DACH or\nSki family protein is plausibly at a locus.",
+ "caveats": "This family's motifs probably belong to other proteins. DACH and Ski family members have no homeodomain, no zinc finger and no leucine zipper; they are corepressors recruited by SIX/EYA, SMAD or homeodomain partners, and their conserved Dachshund homology domain has only a plausible, not a demonstrated, sequence preference. The strongest models here, SKOR1 and SKOR2 reading TTAATTAC, sit among LHX, ALX and ARX homeodomain motifs at 0.88 to 0.93 similarity, which is the expected signature of partner carry-over. The DACH1 and DACH2 models do not match the forkhead-like specificity the functional literature reports and are the weakest members internally. Do not call occupancy for these factors from a motif hit alone.",
+ "refs": [
+  {
+   "cite": "Kim SS, Zhang RG, Braunstein SE, et al. Structure of the retinal determination protein Dachshund reveals a DNA binding motif. Structure 2002;10:787-95.",
+   "pmid": "12057194",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12057194/"
+  },
+  {
+   "cite": "Wilson JJ, Malakhova M, Zhang R, et al. Crystal structure of the dachshund homology domain of human SKI. Structure 2004;12:785-92.",
+   "pmid": "15130471",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15130471/"
+  },
+  {
+   "cite": "Ikeda K, Watanabe Y, Ohto H, et al. Molecular interaction and synergistic activation of a promoter by Six, Eya, and Dach proteins mediated through CREB binding protein. Mol Cell Biol 2002;22:6759-66.",
+   "pmid": "12215533",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12215533/"
+  },
+  {
+   "cite": "Zhou J, Wang C, Wang Z, et al. Attenuation of Forkhead signaling by the retinal determination factor DACH1. Proc Natl Acad Sci U S A 2010;107:6864-9.",
+   "pmid": "20351289",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20351289/"
+  },
+  {
+   "cite": "Wu K, Li A, Rao M, et al. DACH1 is a cell fate determination factor that inhibits cyclin D1 and breast tumor growth. Mol Cell Biol 2006;26:7116-29.",
+   "pmid": "16980615",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16980615/"
+  },
+  {
+   "cite": "Luo K, Stroschein SL, Wang W, et al. The Ski oncoprotein interacts with the Smad proteins to repress TGFbeta signaling. Genes Dev 1999;13:2196-206.",
+   "pmid": "10485843",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10485843/"
+  },
+  {
+   "cite": "Mizuhara E, Nakatani T, Minaki Y, et al. Corl1, a novel neuronal lineage-specific transcriptional corepressor for the homeodomain transcription factor Lbx1. J Biol Chem 2005;280:3645-55.",
+   "pmid": "15528197",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15528197/"
+  },
+  {
+   "cite": "Minaki Y, Nakatani T, Mizuhara E, et al. Identification of a novel transcriptional corepressor, Corl2, as a cerebellar Purkinje cell-selective marker. Gene Expr Patterns 2008;8:418-423.",
+   "pmid": "18522874",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18522874/"
+  },
+  {
+   "cite": "Nakatani T, Minaki Y, Kumai M, et al. The c-Ski family member and transcriptional regulator Corl2/Skor2 promotes early differentiation of cerebellar Purkinje cells. Dev Biol 2014;388:68-80.",
+   "pmid": "24491816",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24491816/"
+  },
+  {
+   "cite": "Winkelmann J, Schormair B, Lichtner P, et al. Genome-wide association study of restless legs syndrome identifies common variants in three genomic regions. Nat Genet 2007;39:1000-6.",
+   "pmid": "17637780",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17637780/"
+  },
+  {
+   "cite": "Doke T, Huang S, Qiu C, et al. Transcriptome-wide association analysis identifies DACH1 as a kidney disease risk gene that contributes to fibrosis. J Clin Invest 2021;131.",
+   "pmid": "33998598",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33998598/"
+  },
+  {
+   "cite": "Doyle AJ, Doyle JJ, Bessling SL, et al. Mutations in the TGF-β repressor SKI cause Shprintzen-Goldberg syndrome with aortic aneurysm. Nat Genet 2012;44:1249-54.",
+   "pmid": "23023332",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23023332/"
+  }
+ ]
+}

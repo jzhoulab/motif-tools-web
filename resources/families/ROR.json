@@ -1,0 +1,79 @@
+{
+ "key": "ROR",
+ "aka": [
+  "RORE",
+  "ROR response element",
+  "RZR",
+  "NR1F",
+  "retinoic acid receptor-related orphan receptor",
+  "RORA/RORB/RORC",
+  "RORgammat site",
+  "ROR half-site"
+ ],
+ "consensus": "AWNTAGGTCA",
+ "short": "RORA, RORB and RORC (RORalpha/beta/gamma) are nuclear receptors that bind DNA as monomers to the ROR response element, or RORE: an AGGTCA nuclear-receptor half-site preceded by a 5-6 bp AT-rich extension, most often written AAAGTAGGTCA. The extension is read by a C-terminal extension of the DNA-binding domain lying in the minor groove, and it is the only feature that distinguishes a RORE from the half-site shared by many other nuclear receptors. ROREs form the second transcriptional loop of the mammalian circadian clock, where RORs activate Bmal1 in competition with the REV-ERB repressors at the same sites. RORgammat, a thymus-restricted RORC isoform, drives the Th17 program and is a drug target in autoimmune disease.",
+ "long": "## The factors\n\nThe ROR (RAR-related orphan receptor) group is encoded by three human genes: *RORA* (NR1F1, RORalpha), *RORB* (NR1F2, RORbeta) and *RORC* (NR1F3, RORgamma; the symbol *RORG* is used for it in HOCOMOCO and in the Vierstra archetypes). Each protein has the standard nuclear-receptor layout — an N-terminal A/B region, a DNA-binding domain (DBD) built from two zinc-coordinating modules, a hinge, and a ligand-binding domain (LBD) ending in an AF-2 helix. Unlike the steroid and RXR-partnered receptors, RORs bind DNA as monomers, using a C-terminal extension (CTE) of the DBD in addition to the zinc modules. Alternative promoters and splicing generate isoforms with different N-termini (RORalpha1-4; RORgamma and the thymus-restricted RORgammat), and these N-termini change DNA-binding behavior rather than just transactivation. Expression differs sharply: *RORA* is broad (cerebellum, liver, many tissues), *RORB* is largely restricted to retina, pineal gland and specific brain regions, and *RORC* is expressed in liver, muscle and skeletal tissue, with RORgammat confined to thymocytes and to T-helper and innate lymphoid subsets. RORalpha and RORgamma are constitutively active in reporter assays, with cholesterol and oxysterol derivatives occupying the LBD pocket.\n\n## The motif\n\nThe ROR response element (RORE) is a single nuclear-receptor half-site with a 5' extension, conventionally written as an AT-rich stretch of 5-6 bp followed by RGGTCA. The canonical monomeric site established for RORalpha1 is often quoted as the 11-mer AAAGTAGGTCA; the motif models in this family converge on a slightly shorter 10-mer, A(A/T)NTAGGTCA (the pooled data consensus here is AAbTAGGTCA). Both renderings describe the same element — the discrepancy is only how many of the weakly constrained AT positions a given model retains.\n\nStructurally, the split is clean. The zinc modules place a recognition helix in the major groove of AGGTCA, which supplies most of the information content; the CTE (the A-box/T-box region) lies along the minor groove of the AT-rich 5' extension and is what converts a generic half-site into a RORE. The crystal structure of the closely related REV-ERBalpha DBD plus CTE on a direct repeat, and the structure of the monomeric receptor NGFI-B, both show this arrangement directly. Without the 5' extension the motif is just the half-site shared by dozens of nuclear receptors.\n\nRORs also bind extended sites: HT-SELEX models in this family include ~18-bp tandem arrangements (AAGTAGGTCAGTAGGTCA), i.e. two half-sites in direct repeat with a 2-bp gap. All eleven motifs assigned here collapse onto the same core (family cohesion 0.87), and none is flagged as mislabelled. RORA, RORB and RORC are not distinguishable from sequence.\n\n## Where it acts\n\nROREs sit in promoters and enhancers, not preferentially in CpG islands. The best-characterized examples are the two ROREs in the *Bmal1* (*ARNTL*) promoter, with further sites at *Cry1*, *Npas2* and *Nfil3*. In immune cells, RORgammat acts through ROREs in the *IL17A*/*IL17F* locus and its conserved non-coding regions, alongside RUNX1, BATF and IRF4. In the circadian cis-regulatory grammar, the RORE is one of three elements — E-box (CLOCK:BMAL1), D-box, and RORE — whose combination sets the phase of a rhythmic promoter; the RORE contributes the late-night/early-morning component. Because the informative part is a 10-mer with several degenerate positions, matches are common: expect on the order of 10^5 hits genome-wide at permissive thresholds, so genomic occurrence alone carries little weight.\n\n## Biology and disease\n\nThe *staggerer* mouse, a spontaneous *Rora* deletion, loses cerebellar Purkinje cells and is ataxic, and RNAi and mutant analyses place Rora in the mammalian clock, where loss shortens or destabilizes period. *Rorb* is required for photoreceptor and pineal gene programs. *Rorc*-null mice lack lymph nodes and Peyer's patches and show increased thymocyte apoptosis, and RORgammat is required for the Th17 program, making it a drug target in psoriasis and other autoimmune disease; RORgamma inverse agonists and RORalpha/gamma agonists have both been pursued clinically.\n\n## Reading a hit\n\nA RORE match identifies the family, not the member: nothing in the sequence separates RORA from RORB from RORC. More importantly, it does not separate ROR from REV-ERB. NR1D1 and NR1D2 bind the same RORE and the same 2-bp-spaced direct repeat, and the Vierstra archetype AC0123:NR1D/RORC states this by naming both groups. The two are told apart by tissue, circadian phase and cofactor (coactivator versus NCoR-HDAC3), not by motif.\n\nSecond, check that your hit includes the AT-rich extension. A bare AGGTCA is shared with ESRRA, NR5A, NR4A and the RXR heterodimer partners; scanning with the full 10-11-mer is the only way to make the call specific. Third, weigh the evidence code. RORB.H14CORE.0.SM.B rests on in vitro selection (HT-SELEX plus methyl-HT-SELEX) and supports a direct binding claim; RORA.H14CORE.0.P.C is ChIP-only at grade C and its consensus drifts at the 3' end. Finally, ChIP-derived versions of this motif can be contaminated by indirect binding: in mouse liver, most REV-ERBalpha ChIP peaks reflect tethering to HNF6 rather than direct RORE occupancy, and the same mechanism is available to RORs.",
+ "caveats": "Treat a RORE hit as a family-level call, and remember the family boundary is porous: REV-ERB (NR1D1/NR1D2) binds the same element, so a match is really a 'ROR/REV-ERB site' unless expression or phase data break the tie. RORA, RORB and RORC are not separable from sequence — all eleven motifs here collapse onto one core. Matches to the bare AGGTCA half-site are not ROREs; require the AT-rich 5' extension. Prefer the in vitro-derived models (HOCOMOCO evidence S/M, e.g. RORB.H14CORE.0.SM.B) over ChIP-only entries such as RORA.H14CORE.0.P.C, which is grade C. The 10-mer is common enough that occurrence alone is weak evidence.",
+ "refs": [
+  {
+   "cite": "Giguère V, Tini M, Flock G, et al. Isoform-specific amino-terminal domains dictate DNA-binding properties of ROR alpha, a novel family of orphan hormone nuclear receptors. Genes Dev 1994;8:538-53.",
+   "pmid": "7926749",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7926749/"
+  },
+  {
+   "cite": "Giguère V, McBroom LD, Flock G. Determinants of target gene specificity for ROR alpha 1: monomeric DNA binding by an orphan nuclear receptor. Mol Cell Biol 1995;15:2517-26.",
+   "pmid": "7739535",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7739535/"
+  },
+  {
+   "cite": "Zhao Q, Khorasanizadeh S, Miyoshi Y, et al. Structural elements of an orphan nuclear receptor-DNA complex. Mol Cell 1998;1:849-61.",
+   "pmid": "9660968",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9660968/"
+  },
+  {
+   "cite": "Meinke G, Sigler PB. DNA-binding mechanism of the monomeric orphan nuclear receptor NGFI-B. Nat Struct Biol 1999;6:471-7.",
+   "pmid": "10331876",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10331876/"
+  },
+  {
+   "cite": "Penvose A, Keenan JL, Bray D, et al. Comprehensive study of nuclear receptor DNA binding provides a revised framework for understanding receptor specificity. Nat Commun 2019;10:2514.",
+   "pmid": "31175293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31175293/"
+  },
+  {
+   "cite": "Sato TK, Panda S, Miraglia LJ, et al. A functional genomics strategy reveals Rora as a component of the mammalian circadian clock. Neuron 2004;43:527-37.",
+   "pmid": "15312651",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15312651/"
+  },
+  {
+   "cite": "Ueda HR, Chen W, Adachi A, et al. A transcription factor response element for gene expression during circadian night. Nature 2002;418:534-9.",
+   "pmid": "12152080",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12152080/"
+  },
+  {
+   "cite": "Hamilton BA, Frankel WN, Kerrebrock AW, et al. Disruption of the nuclear hormone receptor RORalpha in staggerer mice. Nature 1996;379:736-9.",
+   "pmid": "8602221",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8602221/"
+  },
+  {
+   "cite": "Sun Z, Unutmaz D, Zou YR, et al. Requirement for RORgamma in thymocyte survival and lymphoid organ development. Science 2000;288:2369-73.",
+   "pmid": "10875923",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10875923/"
+  },
+  {
+   "cite": "Ivanov II, McKenzie BS, Zhou L, et al. The orphan nuclear receptor RORgammat directs the differentiation program of proinflammatory IL-17+ T helper cells. Cell 2006;126:1121-33.",
+   "pmid": "16990136",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16990136/"
+  },
+  {
+   "cite": "Zhang Y, Fang B, Emmett MJ, et al. GENE REGULATION. Discrete functions of nuclear receptor Rev-erbα couple metabolism to the clock. Science 2015;348:1488-92.",
+   "pmid": "26044300",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26044300/"
+  },
+  {
+   "cite": "Kojetin DJ, Burris TP. REV-ERB and ROR nuclear receptors as drug targets. Nat Rev Drug Discov 2014;13:197-216.",
+   "pmid": "24577401",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24577401/"
+  }
+ ]
+}

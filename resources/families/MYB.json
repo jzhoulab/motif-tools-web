@@ -1,0 +1,77 @@
+{
+ "key": "MYB",
+ "aka": [
+  "MBS",
+  "Myb binding site",
+  "Myb recognition element",
+  "AACNG",
+  "PyAAC(G/T)G",
+  "Myb/SANT class"
+ ],
+ "consensus": "YAACKG",
+ "short": "MYB factors bind the Myb binding site (MBS), a six-base element written YAACKG, through two or three imperfect ~52-residue repeats that each fold into a helix-turn-helix-like unit. Humans have three true MYB proteins: MYB (c-Myb), MYBL1 (A-Myb) and MYBL2 (B-Myb). Only repeats R2 and R3 are required for sequence-specific binding, and their recognition helices sit side by side in one major groove. MYB proteins control hematopoietic progenitor expansion, spermatogenesis and, for MYBL2, mitotic gene expression through the MuvB complex. MYB is duplicated in T-cell acute lymphoblastic leukemia and fused to NFIB in adenoid cystic carcinoma. This family key also collects Myb/SANT-fold archetypes whose proteins are not MYB factors and do not bind the MBS, which is the main source of confusion here.",
+ "long": "## The factors\n\nThree human genes encode true MYB transcription factors: MYB (c-Myb), MYBL1 (A-Myb) and MYBL2\n(B-Myb); HOCOMOCO labels them MYB, MYBA and MYBB, and the Vierstra archetypes use the group\nname MYBL. Their DNA-binding domain is built from three imperfect repeats of about 52 residues,\nR1, R2 and R3, each containing three regularly spaced tryptophans and folding into a\nhelix-turn-helix-related unit. R1 is dispensable: R2 and R3 alone give specific binding, which is\nwhy plant and fungal homologues are usually R2R3 proteins. MYB is expressed in immature\nhematopoietic cells, colonic crypt epithelium and some neural progenitors; MYBL1 is highest in\ntestis and germinal-center B cells; MYBL2 is a cell-cycle gene, rising in S phase and peaking at\nG2/M. This atlas key is deliberately broader than the three MYB proteins, because the Myb/SANT\nfold is reused by proteins that are not MYB factors. In the current data those extras are DMTF1\n(DMP1, a cyclin D-binding Myb-like protein), MYPOP (a Myb-related protein that partners profilin)\nand TTF1 (the RNA polymerase I transcription termination factor, not the thyroid factor NKX2-1,\nwhich is unfortunately also called TTF-1). TERF1 and TERF2, whose telobox is a Myb-like repeat,\nare held in a separate TELOBOX family here; SNAPC4, which uses Myb repeats to bind the snRNA\nproximal sequence element, has no motif in these databases. The SANT domain itself, found in\nchromatin remodelers and corepressors, has the Myb fold but is thought to read histone tails\nrather than DNA sequence.\n\n## The motif\n\nThe literature consensus for the MBS is YAACKG, six bases, usually quoted as PyAAC(G/T)G. The\ninvariant part is AAC followed by G or T then G; the identity comes from the recognition helix of\nR3 inserting into the major groove with R2 packed alongside, so the two repeats read one\ncontinuous site and the cavity in R2 rearranges on binding. Database renderings differ mainly by\nstrand and by doubling. JASPAR MYB (MA0100.4) and the corresponding CIS-BP model give CAACTG,\nwhich is YAACKG with Y=C and K=T; the HOCOMOCO ChIP model GGCAGTTG is the same site read on the\nother strand. The data consensus for the family as a whole, CCGTTA, is the reverse complement of\nTAACGG, again the same core. In vitro selection on MYBL1 and MYBL2 returns longer, near-palindromic\nmodels such as AACCGTTAACGG and CCGTTAAACSG: these are two MBS half-sites in inverted orientation\nand reflect how the isolated domains bind selected DNA, not a different specificity. Within the\nthree MYB proteins nothing is separable by sequence. The non-MYB members are separable, and they\nare not MBS models: DMTF1's high-quality integrative model is CCCGGATG, MYPOP's is GCGCAA, and\nTTF1's is the rDNA Sal box terminator, recognizable by its internal GACCAG. Their nearest\nneighbours across the four databases fall outside this family, and the family's cohesion (0.72\nover 22 motifs) is lower than for a single-specificity family for exactly that reason.\n\n## Where it acts\n\nMYB sites are short and occur in both promoters and enhancers. In hematopoietic cells c-Myb\noccupies thousands of sites and cooperates with CEBP factors, RUNX1, GATA2 and the coactivators\nCBP/p300; classic targets include MYC, KIT, CCNB1 and, in T cells, TCR genes. MYBL2 behaves\ndifferently: it is recruited to mitotic promoters mainly as a subunit of the MYB-MuvB (MMB)\ncomplex, which hands over from the repressive DREAM complex at G1/S, and MuvB's own sequence\nanchor is the CHR element read by LIN54, not the MBS. Consequently much of the MYBL2 signal in\nchromatin immunoprecipitation sits on CHR-containing promoters where the underlying sequence is\nnot a Myb site at all. TTF1 sites are confined to the rDNA repeat, where the Sal box terminates\nPol I transcription, so its motif is genomically almost absent outside the rDNA and its\nnucleolar-organizer copies.\n\n## Biology and disease\n\nMice lacking c-Myb die around embryonic day 15 with a failure of fetal hepatic hematopoiesis, the\nsharpest demonstration that MYB is needed for progenitor expansion rather than for lineage\nidentity. Mybl1-null male mice are sterile with a meiotic arrest, and Mybl2 loss is lethal at the\nblastocyst stage. In cancer, MYB is more often amplified, translocated or driven by a new enhancer\nthan mutated: tandem duplication of MYB occurs in T-cell acute lymphoblastic leukemia, and a\nrecurrent MYB-NFIB fusion defines most adenoid cystic carcinomas of salivary gland and breast.\nMYBL2 overexpression is a component of proliferation signatures in many tumors and is largely a\nreadout of cell-cycle activity.\n\n## Reading a hit\n\nA YAACKG match is six informative bases and will occur by chance roughly every few hundred base\npairs on either strand, so a single hit is close to meaningless without other evidence. The three\nMYB proteins cannot be separated from sequence, so a hit means \"a MYB-family site\" at best, and\nexpression context is what narrows it: MYB in immature hematopoietic cells, MYBL1 in testis and\ngerminal centers, MYBL2 in cycling cells. The bigger hazard in this key is the label. Several\nmembers are Myb/SANT-fold proteins that do not bind the MBS, and a match scored against the\nDMTF1, MYPOP or TTF1 models is a match to an unrelated sequence that happens to share the family\nkey. For MYBL2, treat ChIP-derived enrichment with care: recruitment through MuvB to CHR\nelements means a B-Myb peak often marks a LIN54 site rather than a Myb site.",
+ "caveats": "Two problems compound here. First, the MBS is six bases, so chance matches are abundant and the three MYB paralogues are indistinguishable by sequence. Second, this key is a fold class, not a single specificity: DMTF1 (CCCGGATG), MYPOP (GCGCAA) and TTF1 (the rDNA Sal box) are Myb/SANT-fold proteins whose motifs are unrelated to the MBS, and the CIS-BP MYPOP model is transferred from mouse. The family cohesion of 0.72 reflects this mixture. For MYBL2, ChIP-derived signal is frequently recruitment through the MuvB complex onto LIN54's CHR element rather than direct MBS binding, so a B-Myb peak is not evidence of a Myb site.",
+ "refs": [
+  {
+   "cite": "Biedenkapp H, Borgmeyer U, Sippel AE, et al. Viral myb oncogene encodes a sequence-specific DNA-binding activity. Nature 1988;335:835-7.",
+   "pmid": "3185713",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3185713/"
+  },
+  {
+   "cite": "Tanikawa J, Yasukawa T, Enari M, et al. Recognition of specific DNA sequences by the c-myb protooncogene product: role of three repeat units in the DNA-binding domain. Proc Natl Acad Sci U S A 1993;90:9320-4.",
+   "pmid": "8415700",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8415700/"
+  },
+  {
+   "cite": "Ogata K, Morikawa S, Nakamura H, et al. Solution structure of a specific DNA complex of the Myb DNA-binding domain with cooperative recognition helices. Cell 1994;79:639-48.",
+   "pmid": "7954830",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7954830/"
+  },
+  {
+   "cite": "Mucenski ML, McLain K, Kier AB, et al. A functional c-myb gene is required for normal murine fetal hepatic hematopoiesis. Cell 1991;65:677-89.",
+   "pmid": "1709592",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1709592/"
+  },
+  {
+   "cite": "Lahortiga I, De Keersmaecker K, Van Vlierberghe P, et al. Duplication of the MYB oncogene in T cell acute lymphoblastic leukemia. Nat Genet 2007;39:593-5.",
+   "pmid": "17435759",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17435759/"
+  },
+  {
+   "cite": "Persson M, Andrén Y, Mark J, et al. Recurrent fusion of MYB and NFIB transcription factor genes in carcinomas of the breast and head and neck. Proc Natl Acad Sci U S A 2009;106:18740-4.",
+   "pmid": "19841262",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19841262/"
+  },
+  {
+   "cite": "Sadasivam S, Duan S, DeCaprio JA. The MuvB complex sequentially recruits B-Myb and FoxM1 to promote mitotic gene expression. Genes Dev 2012;26:474-89.",
+   "pmid": "22391450",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22391450/"
+  },
+  {
+   "cite": "Boyer LA, Latek RR, Peterson CL. The SANT domain: a unique histone-tail-binding module?. Nat Rev Mol Cell Biol 2004;5:158-63.",
+   "pmid": "15040448",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15040448/"
+  },
+  {
+   "cite": "Hirai H, Sherr CJ. Interaction of D-type cyclins with a novel myb-like transcription factor, DMP1. Mol Cell Biol 1996;16:6457-67.",
+   "pmid": "8887674",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8887674/"
+  },
+  {
+   "cite": "Evers R, Grummt I. Molecular coevolution of mammalian ribosomal gene terminator sequences and the transcription termination factor TTF-I. Proc Natl Acad Sci U S A 1995;92:5827-31.",
+   "pmid": "7597036",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7597036/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  },
+  {
+   "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
+   "pmid": "25215497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  }
+ ]
+}

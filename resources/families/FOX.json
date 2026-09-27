@@ -1,0 +1,78 @@
+{
+ "key": "FOX",
+ "aka": [
+  "forkhead",
+  "FKH site",
+  "winged-helix site",
+  "HNF-3 site",
+  "FOXA/HNF3 motif",
+  "DBE (DAF-16 binding element)",
+  "Fork head / winged helix factors (TFClass)"
+ ],
+ "consensus": "RYAAAYA",
+ "short": "Forkhead box (FOX) proteins are a family of about 50 human transcription factors that bind DNA as monomers through a ~100-residue winged-helix domain, named for the two loops, or wings, that flank its three-helix core. Nearly all of them read the same seven-base element, RYAAAYA, usually written GTAAACA or, on the opposite strand, TGTTTAC. The family includes the FOXA pioneer factors that engage nucleosomal DNA and open liver, prostate and breast enhancers; the insulin- and stress-controlled FOXO proteins; FOXC, FOXE, FOXG and FOXL factors needed for eye, thyroid, forebrain and ovary development; and the proliferation factor FOXM1. Because the DNA-contacting residues are almost invariant across the family, a forkhead match tells you that a FOX protein could bind there, but rarely which one.",
+ "long": "## The factors\n\nThe human genome carries about 50 forkhead box genes in 19 subfamilies, FOXA through FOXS. Each\nencodes one copy of the forkhead (winged-helix) domain: roughly 100 residues in which three\nalpha-helices pack against a short three-stranded beta-sheet. Helix H3 lies in the major groove\nand supplies the base-specific contacts, while two extended loops - wing 1, between strands\nbeta2 and beta3, and wing 2 at the C-terminus - fold over the phosphate backbone and reach into\nthe flanking minor groove. The first co-crystal structure, of HNF-3gamma (FOXA3) on DNA, showed\nthat this fold is essentially that of linker histone H5 and that it bends DNA by about 13\ndegrees. Binding is monomeric in the usual case, but FOXO1 (and, in the same assays, FOXO3,\nFOXM1 and FOXI1) also homodimerizes on a palindromic element using wing 1. Expression ranges\nfrom near-ubiquitous (FOXK1/2, FOXO1/3, FOXJ3) to sharply restricted: FOXA1-3 in endoderm-\nderived epithelia, FOXE1 in thyroid, FOXG1 in telencephalon, FOXL2 in granulosa cells and\neyelid, FOXI1 in inner ear and renal intercalated cells, FOXM1 in cycling cells.\n\n## The motif\n\nThe literature consensus is RYAAAYA (R = A/G, Y = C/T), seven base pairs, most often realized as\nGTAAACA; the medoid model of the 106 collected here is exactly GTAAACA, matching the databases.\nSpecificity comes almost entirely from H3 contacts to the central AAA run and the following\npyrimidine, several of them water-mediated, which is why that core tolerates so little variation\nand the flanks so much. The FOXO field calls the same element the DAF-16 binding element, core\nTTGTTTAC, and distinguishes it from the weaker insulin-response sequence in the IGFBP1 promoter.\nLonger models in the data are one of three things: an extended monomeric site with AT-rich\nflanks (HOCOMOCO FOXA1, TTGTTTACTTAA); a perfect palindrome, GTAAATATTTAC, which is two RYAAAYA\nhalf-sites head-to-head with no spacer and corresponds to the wing-1 homodimer site (HOCOMOCO\nFOXD3, FOXD2, FOXB1, FOXC1; CIS-BP FOXC2); or a composite with a partner, as in the JASPAR\nmodels FOXO1::ELK1, FOXO1::ELK3, FOXO1::ELF1 and FOXO1::FLI1, where most of the information\ncontent is the ETS GGAA core, not the forkhead site. Two members are real exceptions. FOXM1\nmodels carry almost no information (2.1 bits in CIS-BP) because FOXM1 reaches chromatin mainly\nthrough cofactors and non-canonical sequences. FOXH1 (FAST-1/FAST-2) models read AATCCACA,\nequivalently TGTGGATT - the activin/Smad response element - and not RYAAAYA at all. Otherwise\nFOXA, FOXB, FOXC, FOXD, FOXI, FOXK, FOXL, FOXO, FOXQ, FOXR and FOXS are not separable by\nsequence.\n\n## Where it acts\n\nForkhead sites are AT-rich and enhancer-biased: depleted from CpG-island promoters, enriched in\ndistal tissue-specific elements, and frequently on nucleosomal rather than naked DNA. FOXA1 and\nFOXA2 bind a nucleosomal site that overlaps the linker-histone position, displace H1, and hold\nliver enhancers in an accessible but nucleosome-occupied state. ChIP-seq typically recovers tens\nof thousands of FOXA1 sites per cell type, most of them distal, and which ones are used depends\non the partner present: androgen receptor in prostate, estrogen receptor alpha and GATA3 in\nluminal breast, HNF4A and CEBP in liver. FOXA1 is required for almost all ER-chromatin contacts\nand for tamoxifen-dependent ER activity. FOXO sites sit at insulin- and oxidative-stress-\nresponsive promoters and enhancers (IGFBP1, G6PC, SOD2) and are switched off by AKT-driven\nnuclear export, not by loss of the site. RYAAAYA is short - with two degenerate positions it is\nexpected on the order of three million times in a 3.1 Gb double-stranded genome - so occupancy\nis set by chromatin and partners, not by the element.\n\n## Biology and disease\n\nForkhead loss-of-function is usually severe. FOXC1 mutations cause Axenfeld-Rieger malformations\nand early-onset glaucoma; FOXL2 mutations cause blepharophimosis-ptosis-epicanthus inversus\nsyndrome, and the recurrent FOXL2 C134W substitution is present in most adult granulosa cell\ntumors; FOXE1 variants affect thyroid development; FOXG1 mutations produce a Rett-like\nencephalopathy. FOXA1 is the clearest cancer story. It is altered in roughly a third of prostate\ncancers, and the most common class of activating mutation clusters inside the wing-2 loop of the\nforkhead domain, increasing chromatin mobility and driving a luminal androgen-receptor program;\nother classes truncate the C-terminus or rearrange the locus. FOXA1 is also amplified or mutated\nin breast, bladder and salivary tumors and sets the response to endocrine therapy. FOXM1 is\noverexpressed in most carcinomas and drives cell-cycle gene expression.\n\n## Reading a hit\n\nA GTAAACA/TGTTTAC match identifies a forkhead site, not a forkhead protein. All of FOXA, FOXO,\nFOXK, FOXC and FOXD read this element with the same residues, the models in all four databases\ncollapse onto one cluster (cohesion 0.78, no member with out-of-family nearest neighbors), and\nthe archetype names make the point explicitly: AC0042 is \"FOXA/FOXB\", AC0039 is \"FOXD/FOXK\",\nAC0093 is \"FOXC/HOXA\". Deciding which FOX protein is involved requires expression data, ChIP, or\na partner site. The element is common enough to occur millions of times by chance, so a single\nmatch in a region of unknown function is weak evidence. Prefer the in vitro models when you need\n\"this protein binds this sequence\": 24 of the 30 HOCOMOCO entries here carry HT-SELEX or methyl-\nHT-SELEX evidence (S or M in the fourth field), and only six are ChIP-only. Treat the FOXO1::ETS\nand FOXJ2::ELF1 composite models as ETS motifs with a forkhead flank, and treat FOXM1 and FOXH1\nmodels as not representing RYAAAYA.\n",
+ "caveats": "High confidence that a match is a forkhead site; very low confidence about which of the ~50 FOX proteins binds it. Sequence cannot separate FOXA from FOXO, FOXC, FOXD, FOXI, FOXK, FOXL or FOXQ, and the Vierstra archetype names (FOXA/FOXB, FOXD/FOXK, FOXC/FOXK) reflect that rather than resolving it. The element is short and AT-rich, so it occurs millions of times by chance; treat matches as candidates that need chromatin or expression evidence. Two labels in this family do not represent RYAAAYA: FOXM1 models are near-uninformative, and FOXH1 models are the activin/Smad response element. Four CIS-BP entries are mouse-derived (FOXJ1, FOXM1, and the inferred FOXS1 and FOXB2 models at 79% and 93% DBD identity).",
+ "refs": [
+  {
+   "cite": "Clark KL, Halay ED, Lai E, et al. Co-crystal structure of the HNF-3/fork head DNA-recognition motif resembles histone H5. Nature 1993;364:412-20.",
+   "pmid": "8332212",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8332212/"
+  },
+  {
+   "cite": "Jackson BC, Carpenter C, Nebert DW, et al. Update of human and mouse forkhead box (FOX) gene families. Hum Genomics 2010;4:345-52.",
+   "pmid": "20650821",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20650821/"
+  },
+  {
+   "cite": "Furuyama T, Nakazawa T, Nakano I, et al. Identification of the differential distribution patterns of mRNAs and consensus binding sequences for mouse DAF-16 homologues. Biochem J 2000;349:629-34.",
+   "pmid": "10880363",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10880363/"
+  },
+  {
+   "cite": "Nakagawa S, Gisselbrecht SS, Rogers JM, et al. DNA-binding specificity changes in the evolution of forkhead transcription factors. Proc Natl Acad Sci U S A 2013;110:12349-54.",
+   "pmid": "23836653",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23836653/"
+  },
+  {
+   "cite": "Li J, Dai S, Chen X, et al. Mechanism of forkhead transcription factors binding to a novel palindromic DNA site. Nucleic Acids Res 2021;49:3573-3583.",
+   "pmid": "33577686",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33577686/"
+  },
+  {
+   "cite": "Cirillo LA, McPherson CE, Bossard P, et al. Binding of the winged-helix transcription factor HNF3 to a linker histone site on the nucleosome. EMBO J 1998;17:244-54.",
+   "pmid": "9427758",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9427758/"
+  },
+  {
+   "cite": "Iwafuchi-Doi M, Donahue G, Kakumanu A, et al. The Pioneer Transcription Factor FoxA Maintains an Accessible Nucleosome Configuration at Enhancers for Tissue-Specific Gene Activation. Mol Cell 2016;62:79-91.",
+   "pmid": "27058788",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27058788/"
+  },
+  {
+   "cite": "Hurtado A, Holmes KA, Ross-Innes CS, et al. FOXA1 is a key determinant of estrogen receptor function and endocrine response. Nat Genet 2011;43:27-33.",
+   "pmid": "21151129",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21151129/"
+  },
+  {
+   "cite": "Parolia A, Cieslik M, Chu SC, et al. Distinct structural classes of activating FOXA1 alterations in advanced prostate cancer. Nature 2019;571:413-418.",
+   "pmid": "31243372",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31243372/"
+  },
+  {
+   "cite": "Sanders DA, Gormally MV, Marsico G, et al. FOXM1 binds directly to non-consensus sequences in the human genome. Genome Biol 2015;16:130.",
+   "pmid": "26100407",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26100407/"
+  },
+  {
+   "cite": "Nishimura DY, Swiderski RE, Alward WL, et al. The forkhead transcription factor gene FKHL7 is responsible for glaucoma phenotypes which map to 6p25. Nat Genet 1998;19:140-7.",
+   "pmid": "9620769",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9620769/"
+  },
+  {
+   "cite": "Chen X, Rubock MJ, Whitman M. A transcriptional partner for MAD proteins in TGF-beta signalling. Nature 1996;383:691-6.",
+   "pmid": "8878477",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8878477/"
+  }
+ ]
+}

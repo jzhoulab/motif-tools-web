@@ -1,0 +1,78 @@
+{
+ "key": "MITF_TFE",
+ "aka": [
+  "CLEAR box",
+  "CLEAR element",
+  "M-box",
+  "melanocyte M-box",
+  "MiT/TFE family site",
+  "TCATGTGA",
+  "GTCACGTGAC E-box"
+ ],
+ "consensus": "GTCACGTGAC",
+ "short": "MITF, TFE3, TFEB and TFEC are bHLH-LZ factors that dimerize only with each other, because a three-residue insertion kinks their leucine zipper. They read a canonical E-box core with a strict flanking requirement, giving the palindromic 10-mer GTCACGTGAC - the same element known as the melanocyte M-box (TCATGTGA) in pigmentation genes and as the CLEAR box in lysosomal and autophagy promoters. MITF is the lineage factor of melanocytes and is mutated in Waardenburg syndrome type 2A and predisposes to melanoma; TFEB and TFE3 run the lysosome-autophagy program downstream of mTORC1 and are recurrently rearranged in renal cell carcinoma. The four paralogues cannot be told apart from sequence.",
+ "long": "## The factors\n\nMITF, TFE3, TFEB and TFEC form the MiT/TFE family of basic helix-loop-helix leucine zipper (bHLH-LZ) factors. MITF was identified from the mouse microphthalmia locus, where mutations cause loss of melanocytes, deafness and small eyes; the three TFE genes were then recognized as a discrete family that dimerizes internally - each member homodimerizes and heterodimerizes with the others, but not with MYC, MAX or USF. The structural basis is a three-residue insertion that kinks the leucine zipper, which excludes the other bHLH-ZIP proteins from the dimer interface and explains why MiT/TFE factors, despite reading the same DNA core, form a closed dimerization set. Expression is what separates them: MITF is restricted (melanocytes, mast cells, osteoclasts, retinal pigment epithelium) and has multiple isoforms driven from alternative promoters, TFE3 and TFEB are broadly expressed and act as the general lysosomal-autophagy arm, and TFEC is largely myeloid. All four are regulated post-translationally rather than only transcriptionally; TFEB in particular is phosphorylated by mTORC1 at the lysosomal surface and held in the cytoplasm until nutrient stress releases it. The atlas assigns 14 motifs here (4 JASPAR, 6 HOCOMOCO, 4 CIS-BP) across all four symbols, cohesion 0.94, with TFE3.H14CORE.0.PSM.A as the representative.\n\n## The motif\n\nThe core is the canonical E-box CACGTG, read as two CAC half-sites by the histidine-glutamate-arginine triad in each basic region, exactly as in MAX. What distinguishes MiT/TFE is an absolute-looking flanking requirement: these proteins need a T immediately 5' of the core (and the reciprocal A 3'), giving the palindromic 10-mer GTCACGTGAC. The same preference, written as TCATGTGA, defines the classical melanocyte M-box of the tyrosinase promoter, which uses the CATGTG rather than the CACGTG half-site; MITF binds TCATGTGA but not CATGTG without the T. In the lysosomal literature the identical 10-mer is called the CLEAR element (Coordinated Lysosomal Expression And Regulation), GTCACGTGAC, found in the promoters of most lysosomal hydrolase, subunit and trafficking genes. So the M-box and the CLEAR box are the same motif described in two fields. Two consequences follow. First, MITF, TFE3, TFEB and TFEC are not separable from one another by sequence: pairwise similarity among their models in this atlas is 0.97-0.995. Second, the motif is essentially identical to the USF motif, and very close to BHLHE41 and CLOCK-BMAL1 models, so the T/A flanks buy discrimination against MYC-MAX but not against those. The family data also contains lower-information, ChIP-derived variants (a grade-C TFEB model reading gTCACATG) that lose the 3' half entirely.\n\n## Where it acts\n\nMiT/TFE sites are promoter-proximal and CpG-island-associated. The CLEAR network was defined as a few hundred coordinately regulated lysosomal and autophagy genes carrying the element within the first few hundred base pairs of the transcription start site, and TFEB ChIP-seq recovers that set plus autophagosome-formation genes. MITF occupancy is layered on top of a melanocyte-specific accessibility landscape: the same GTCACGTGAC sequence is used at pigmentation genes (TYR, DCT, TYRP1, PMEL), at lysosome-related genes in melanosome biogenesis, and at proliferation genes, and MITF co-occupies melanocyte enhancers with SOX10 and the AP-1 machinery. TFEB and TFE3 occupancy is switched by subcellular localization rather than by motif availability - the sites are present and often accessible even when the factor is cytoplasmic.\n\n## Biology and disease\n\nMITF is the lineage-determining factor of the melanocyte: loss-of-function alleles cause the mouse microphthalmia phenotypes and, in humans, Waardenburg syndrome type 2A (deafness with pigmentary anomalies) and Tietz syndrome. The recurrent MITF E318K substitution, which impairs SUMOylation, raises melanoma risk and also associates with renal cell carcinoma. TFEB and TFE3 drive lysosomal biogenesis and autophagy downstream of mTORC1 and starvation, and are involved in lysosomal storage disease biology as therapeutic targets. Translocations involving these genes are diagnostic in cancer: promoter substitution at t(6;11)(p21;q13) drives TFEB overexpression in a distinct renal cell carcinoma subtype, and TFE3 fusions define another renal carcinoma group and alveolar soft part sarcoma.\n\n## Reading a hit\n\nA GTCACGTGAC or TCATGTGA hit identifies a T/A-flanked E-box. That is a real narrowing - it argues against MYC-MAX - but it does not name the factor: USF1/USF2, BHLHE41, CLOCK-BMAL1 and all four MiT/TFE proteins share it. Within the family, a hit cannot distinguish MITF from TFE3, TFEB or TFEC; the usual discriminator is expression, so a hit in melanocyte data suggests MITF and a hit in a starvation experiment suggests TFEB, and neither inference comes from the sequence. ChIP-derived MiT/TFE models are additionally biased toward active CpG-island promoters. Prefer the HOCOMOCO models with in vitro (S or M) support.",
+ "caveats": "The T/A flanks make this motif distinguishable from MYC-MAX but not from USF1/USF2, BHLHE41 or CLOCK-BMAL1, which prefer the same extended palindrome; a GTCACGTGAC hit therefore names a group, not a protein. Within the family MITF, TFE3, TFEB and TFEC share one motif at 0.97-0.995 similarity, so assignment relies entirely on which factor is expressed and, for TFEB/TFE3, on whether it is nuclear at the time. Several models here are ChIP-only and low grade (a grade-C TFEB model reduces to gTCACATG), so they encode promoter context as much as intrinsic specificity. Prefer HT-SELEX or methyl-HT-SELEX-supported models when the question is direct binding.",
+ "refs": [
+  {
+   "cite": "Hodgkinson CA, Moore KJ, Nakayama A, et al. Mutations at the mouse microphthalmia locus are associated with defects in a gene encoding a novel basic-helix-loop-helix-zipper protein. Cell 1993;74:395-404.",
+   "pmid": "8343963",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8343963/"
+  },
+  {
+   "cite": "Hemesath TJ, Steingrímsson E, McGill G, et al. microphthalmia, a critical factor in melanocyte development, defines a discrete transcription factor family. Genes Dev 1994;8:2770-80.",
+   "pmid": "7958932",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7958932/"
+  },
+  {
+   "cite": "Lowings P, Yavuzer U, Goding CR. Positive and negative elements regulate a melanocyte-specific promoter. Mol Cell Biol 1992;12:3653-62.",
+   "pmid": "1321344",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1321344/"
+  },
+  {
+   "cite": "Aksan I, Goding CR. Targeting the microphthalmia basic helix-loop-helix-leucine zipper transcription factor to a subset of E-box elements in vitro and in vivo. Mol Cell Biol 1998;18:6930-8.",
+   "pmid": "9819381",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9819381/"
+  },
+  {
+   "cite": "Pogenberg V, Ogmundsdóttir MH, Bergsteinsdóttir K, et al. Restricted leucine zipper dimerization and specificity of DNA recognition of the melanocyte master regulator MITF. Genes Dev 2012;26:2647-58.",
+   "pmid": "23207919",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23207919/"
+  },
+  {
+   "cite": "Sardiello M, Palmieri M, di Ronza A, et al. A gene network regulating lysosomal biogenesis and function. Science 2009;325:473-7.",
+   "pmid": "19556463",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19556463/"
+  },
+  {
+   "cite": "Palmieri M, Impey S, Kang H, et al. Characterization of the CLEAR network reveals an integrated control of cellular clearance pathways. Hum Mol Genet 2011;20:3852-66.",
+   "pmid": "21752829",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21752829/"
+  },
+  {
+   "cite": "Settembre C, Di Malta C, Polito VA, et al. TFEB links autophagy to lysosomal biogenesis. Science 2011;332:1429-33.",
+   "pmid": "21617040",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21617040/"
+  },
+  {
+   "cite": "Roczniak-Ferguson A, Petit CS, Froehlich F, et al. The transcription factor TFEB links mTORC1 signaling to transcriptional control of lysosome homeostasis. Sci Signal 2012;5:ra42.",
+   "pmid": "22692423",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22692423/"
+  },
+  {
+   "cite": "Tassabehji M, Newton VE, Read AP. Waardenburg syndrome type 2 caused by mutations in the human microphthalmia (MITF) gene. Nat Genet 1994;8:251-5.",
+   "pmid": "7874167",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7874167/"
+  },
+  {
+   "cite": "Yokoyama S, Woods SL, Boyle GM, et al. A novel recurrent mutation in MITF predisposes to familial and sporadic melanoma. Nature 2011;480:99-103.",
+   "pmid": "22080950",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22080950/"
+  },
+  {
+   "cite": "Kuiper RP, Schepens M, Thijssen J, et al. Upregulation of the transcription factor TFEB in t(6;11)(p21;q13)-positive renal cell carcinomas due to promoter substitution. Hum Mol Genet 2003;12:1661-9.",
+   "pmid": "12837690",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12837690/"
+  }
+ ]
+}

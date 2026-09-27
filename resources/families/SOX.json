@@ -1,0 +1,78 @@
+{
+ "key": "SOX",
+ "aka": [
+  "HMG-box site",
+  "SRY box",
+  "Sox element",
+  "SOX/OCT composite element",
+  "SOX-OCT motif",
+  "Sry-related HMG box",
+  "Sox (TFClass)"
+ ],
+ "consensus": "AACAAT",
+ "short": "SOX proteins are the 20 human transcription factors built around a single SRY-type HMG box, a 78-residue L-shaped domain that binds DNA entirely in the minor groove, wedges a hydrophobic residue between base pairs and bends the double helix by 70-80 degrees. They read a six- to seven-base core usually written AACAAT, or CATTGTT/ATTGTT on the opposite strand. A SOX protein bound alone does little; transcriptional output comes from a partner factor on an adjacent site, most famously OCT4 in the SOX-OCT composite element of pluripotency enhancers, and from dimeric palindromic sites used by SOX8, SOX9 and SOX10. The family covers sex determination (SRY, SOX9), cartilage (SOX9, SOX5, SOX6), neural stem cells (SOX2), neural crest and melanocytes (SOX10) and endothelium (SOX17, SOX18).",
+ "long": "## The factors\n\nHumans have 20 SOX genes: SRY (group A), SOX1/2/3 (B1), SOX14/21 (B2), SOX4/11/12 (C), SOX5/6/13\n(D), SOX8/9/10 (E), SOX7/17/18 (F), SOX15 (G) and SOX30 (H). Each carries one HMG box of about\n78 residues folded into a twisted L: three alpha-helices whose concave face lies against DNA.\nUnlike almost all other transcription factors, recognition happens entirely in the minor groove.\nSide chains intercalate between base pairs - isoleucine 13 in SRY - widening the groove,\nunwinding the helix and bending it by 70-80 degrees. That distortion is the point: SOX proteins\nare as much architectural as regulatory, and one bound alone generally neither activates nor\nrepresses. Output depends on a partner factor at an adjacent site, which is why the same SOX\nprotein behaves differently in different tissues. Two subgroups add dimerization hardware. SOXD\nproteins (SOX5, SOX6, SOX13) carry a coiled-coil that makes them obligate dimers or\nheterodimers; SOXE proteins (SOX8, SOX9, SOX10) carry a short DIM domain immediately N-terminal\nto the HMG box that supports cooperative homo- and heterodimers. SOX2 and SOX11 can also bind\nDNA on the nucleosome surface and are bona fide pioneer factors.\n\n## The motif\n\nThe core is six to seven bases, conventionally written AACAAT and equivalently ATTGTT or CATTGTT\non the other strand; the medoid of the 87 models here is CATTGTT, the reverse complement of\nAACAATG. The SRY consensus determined by site selection is (A/T)(A/T)CAA(A/T)G. Information is\nconcentrated on the CAA/TTG centre, which is where the intercalating residue inserts and where\ngroove width is most constrained; the outer positions are AT-preferring largely because AT-rich\nDNA is easier to bend. Site selection on Sox4, Tcf1 and yeast Ste11 showed the functional\nelement is really 10-12 base pairs, with residues C-terminal to the HMG box reading the 3'\nflank. Many models here are dimeric: CIS-BP SOX8 AACAATGTGCAGTGTT (28.8 bits), CIS-BP SRY,\nSOX15, SOX7 and SOX2 AACAAT(A/G)(n)CATTGTT, HOCOMOCO SOX9 ATSAATTGCAGTSAT. All are head-to-head\ninverted repeats of the core with a two- to four-base spacer, consistent with the finding that\nSOXE dimers tolerate a range of spacings rather than a fixed one. Within the family sequence\ndoes not separate members: SOX1, SOX2 and SOX3 are interchangeable on DNA, as are SOX8, SOX9 and\nSOX10 apart from their preference for dimeric sites, and the Vierstra archetypes are labelled\n\"SOX\" or \"SOX/SRY\", not a protein. One overlap reaches outside the family: HOCOMOCO SOX4, SOX11,\nSOX13 and one SOX2 model read CCTTTGTT, whose reverse complement AACAAAGG also satisfies the\nTCF/LEF Wnt response element CTTTGWW. SOX and TCF/LEF share the HMG fold and their consensus\nsequences differ at essentially one position, so CTTTG-type hits are genuinely ambiguous between\nthe two families.\n\n## Where it acts\n\nSOX sites are enhancer-biased and usually appear as one half of a composite element. The best\ncharacterized is the SOX-OCT element, where a SOX core abuts the octamer ATGCAAAT: SOX2 and OCT4\noccupy it at the FGF4, UTF1, NANOG and POU5F1 enhancers, and the crystal structure of the\nPOU/HMG/DNA complex showed that the two proteins assemble in different conformational\narrangements depending on which enhancer's spacing they are given. Other named partnerships\ninclude SOX2 with PAX6 at the lens DC5 element, SOX9 with SOX5/SOX6 at the COL2A1, COL9A2 and\nCOL11A2 enhancers, SOX10 with MITF at melanocyte enhancers, and SOXF factors with ERG and FLI1\nin endothelium. Because AACAAT is only six bases it is expected roughly 1.5 million times in a\n3.1 Gb double-stranded genome, far more often than it is occupied; nucleosome position matters,\nsince SOX2 and SOX11 bind at superhelical location 2, distort the DNA there and help detach the\nterminal nucleosomal DNA.\n\n## Biology and disease\n\nSRY is the testis-determining gene, and HMG-box point mutations that abolish DNA binding or\nbending cause 46,XY sex reversal. SOX9 mutations cause campomelic dysplasia with XY sex\nreversal; Sox9 is required for cartilage formation, and a mutation in the dimerization domain\nalone gives skeletal disease without sex reversal, showing that the dimeric and monomeric\nactivities are separable. SOX10 mutations cause Waardenburg syndrome type 4 (Waardenburg-\nHirschsprung disease) and peripheral demyelinating neuropathy, and SOX10 is the lineage-\ndependency factor of melanoma. SOX2 mutations cause bilateral anophthalmia, SOX2 is one of the\nfour Yamanaka reprogramming factors, and its locus is amplified in squamous carcinomas of lung\nand esophagus. SOX17 and SOX18 are required for endothelial and lymphatic development, and SOX11\nis a diagnostic marker in mantle cell lymphoma.\n\n## Reading a hit\n\nA CATTGTT/AACAAT match identifies a SOX-family site, not a SOX protein: all 20 members read it\nwith the same fold and the same contacts, and the archetype labels (\"SOX\", \"SOX/SRY\") say so.\nExpression data is the practical discriminator. Even the family assignment is soft at the\nboundary with TCF/LEF, because CTTTG-type variants fit both. The core is short enough to occur\nby chance more than a million times, so an isolated match means little; look for a partner site\n- an octamer, a second SOX core in inverted orientation, a MITF E-box - before treating it as\nfunctional. Of the 36 HOCOMOCO models here, 27 carry HT-SELEX or methyl-HT-SELEX evidence and\nnine are ChIP-only; the ChIP-only ones (SOX5, SOX6, SOX11, SOX13, SOX30, some SOX2 and SOX17\nmodels) are the likeliest to have absorbed a partner's preference. Two CIS-BP entries (SOX1,\nSOX11) are mouse-derived at 100% DNA-binding-domain identity, which does not affect specificity;\nno member of the family has out-of-family nearest neighbors.\n",
+ "caveats": "A hit tells you a SOX-family HMG box could bind; it does not tell you which of the 20 proteins. SOX1/2/3, SOX8/9/10 and SOX4/11/12 are mutually indistinguishable from sequence, and the Vierstra archetypes are named \"SOX\" or \"SOX/SRY\" for that reason. The core is six bases and occurs over a million times by chance, so isolated matches are weak evidence; SOX proteins also need a partner factor to do anything, so a lone SOX site rarely predicts regulation. CTTTG-type variants overlap the TCF/LEF Wnt response element and cannot be confidently assigned to either family. Nine of the 36 HOCOMOCO models are ChIP-only and may reflect a partner's specificity.",
+ "refs": [
+  {
+   "cite": "Sinclair AH, Berta P, Palmer MS, et al. A gene from the human sex-determining region encodes a protein with homology to a conserved DNA-binding motif. Nature 1990;346:240-4.",
+   "pmid": "1695712",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1695712/"
+  },
+  {
+   "cite": "Harley VR, Lovell-Badge R, Goodfellow PN. Definition of a consensus DNA binding site for SRY. Nucleic Acids Res 1994;22:1500-1.",
+   "pmid": "8190643",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8190643/"
+  },
+  {
+   "cite": "Werner MH, Huth JR, Gronenborn AM, et al. Molecular basis of human 46X,Y sex reversal revealed from the three-dimensional solution structure of the human SRY-DNA complex. Cell 1995;81:705-14.",
+   "pmid": "7774012",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7774012/"
+  },
+  {
+   "cite": "van Beest M, Dooijes D, van De Wetering M, et al. Sequence-specific high mobility group box factors recognize 10-12-base pair minor groove motifs. J Biol Chem 2000;275:27266-73.",
+   "pmid": "10867006",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10867006/"
+  },
+  {
+   "cite": "Yuan H, Corbi N, Basilico C, et al. Developmental-specific activity of the FGF-4 enhancer requires the synergistic action of Sox2 and Oct-3. Genes Dev 1995;9:2635-45.",
+   "pmid": "7590241",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7590241/"
+  },
+  {
+   "cite": "Reményi A, Lins K, Nissen LJ, et al. Crystal structure of a POU/HMG/DNA ternary complex suggests differential assembly of Oct4 and Sox2 on two enhancers. Genes Dev 2003;17:2048-59.",
+   "pmid": "12923055",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12923055/"
+  },
+  {
+   "cite": "Kamachi Y, Kondoh H. Sox proteins: regulators of cell fate specification and differentiation. Development 2013;140:4129-44.",
+   "pmid": "24086078",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24086078/"
+  },
+  {
+   "cite": "Bernard P, Tang P, Liu S, et al. Dimerization of SOX9 is required for chondrogenesis, but not for sex determination. Hum Mol Genet 2003;12:1755-65.",
+   "pmid": "12837698",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12837698/"
+  },
+  {
+   "cite": "Huang YH, Jankowski A, Cheah KS, et al. SOXE transcription factors form selective dimers on non-compact DNA motifs through multifaceted interactions between dimerization and high-mobility group domains. Sci Rep 2015;5:10398.",
+   "pmid": "26013289",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26013289/"
+  },
+  {
+   "cite": "Dodonova SO, Zhu F, Dienemann C, et al. Nucleosome-bound SOX2 and SOX11 structures elucidate pioneer factor function. Nature 2020;580:669-672.",
+   "pmid": "32350470",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32350470/"
+  },
+  {
+   "cite": "Foster JW, Dominguez-Steglich MA, Guioli S, et al. Campomelic dysplasia and autosomal sex reversal caused by mutations in an SRY-related gene. Nature 1994;372:525-30.",
+   "pmid": "7990924",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7990924/"
+  },
+  {
+   "cite": "Pingault V, Bondurand N, Kuhlbrodt K, et al. SOX10 mutations in patients with Waardenburg-Hirschsprung disease. Nat Genet 1998;18:171-3.",
+   "pmid": "9462749",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9462749/"
+  }
+ ]
+}

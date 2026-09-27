@@ -1,0 +1,77 @@
+{
+ "key": "NDT80",
+ "aka": [
+  "MYRF site",
+  "Myelin regulatory factor element",
+  "C11orf9",
+  "MRF",
+  "Ndt80/PhoG-like domain",
+  "middle sporulation element (MSE)"
+ ],
+ "consensus": "TGGTACCA",
+ "short": "This family is named after the budding yeast meiotic activator Ndt80, whose DNA-binding domain defines an immunoglobulin-like fold shared by the human proteins MYRF and MYRFL. MYRF, myelin regulatory factor, is the only well-characterized vertebrate member. It is an endoplasmic-reticulum membrane protein that trimerizes and cleaves itself using a domain related to bacteriophage tailspike proteins; the released N-terminal fragment enters the nucleus and binds DNA. The measured site is the palindromic eight-base TGGTACCA, consistent with binding by a symmetric oligomer. MYRF is required for oligodendrocyte differentiation and for making and maintaining central nervous system myelin, and human MYRF variants cause a cardiac-urogenital syndrome and disorders of sex development.",
+ "long": "## The factors\n\nThe family is defined by a DNA-binding fold, not by a lineage of related regulators. It takes its\nname from Ndt80, the Saccharomyces cerevisiae transcription factor that is activated at pachytene\nand turns on roughly 150 middle sporulation genes, including the B-type cyclins, once meiotic\nrecombination is complete. The crystal structure of the Ndt80 DNA-binding domain showed an\nimmunoglobulin-like fold, with functional similarities that suggested an evolutionary link to the\np53 family. Human proteins carrying the same Ndt80/PhoG-like domain are MYRF (myelin regulatory\nfactor, formerly C11orf9 or MRF) and its paralogue MYRFL, which is poorly characterized. MYRF is\nunusual for a transcription factor: it is synthesized as a type-2 transmembrane protein in the\nendoplasmic reticulum, assembles into a homotrimer, and then cleaves itself through an\nautoproteolytic intramolecular chaperone domain that is related to the corresponding domain of\nbacteriophage tailspike proteins, the first time that domain was found in a eukaryotic protein.\nCleavage separates the transmembrane C-terminal region from an N-terminal fragment that carries\nthe DNA-binding domain and a nuclear localization signal. MYRF expression is essentially\nrestricted to oligodendrocytes in the central nervous system, with some expression in Schwann\ncells and other tissues; it is not a broadly expressed factor.\n\n## The motif\n\nAll three models in these databases converge on TGGTACCA, an eight-base perfect palindrome, which\nis what a symmetric trimeric or dimeric binder would be expected to select: the half-site is TGGT,\nread on both strands. The CIS-BP MYRF model and the Vierstra archetype AC0396 are identical to\neach other. Chromatin immunoprecipitation of the cleaved N-terminal fragment showed it binding\noligodendrocyte and myelin gene enhancers through a defined consensus, which is consistent with\nthis palindrome. Information is concentrated in the TGGT/ACCA core; there are no established\nspacing rules, and because the site is symmetric, orientation cannot be called from sequence. The\nfamily is not fully coherent here (cohesion 0.73, three motifs). The one discordant model is\nHOCOMOCO's MYRFL entry, a long integrative model (GTGCCAGGCNGTGACATCCC) whose best similarity to\nany other member of the family is only 0.47, so MYRF and MYRFL should not be assumed to share a\nsite on the current evidence. The yeast middle sporulation element that Ndt80 reads is a different\nsequence again, with a GC-rich 5' half whose pyrimidine-guanine steps are recognized by arginine\nside chains through a combination of hydrogen bonding and stacking, and an AT-rich 3' half read\nthrough the minor groove; it is useful as structural background but not as a human motif.\n\n## Where it acts\n\nMYRF sites are found at promoters and, more characteristically, at oligodendrocyte-specific distal\nenhancers of myelin genes, including MBP, PLP1, MAG and CNP. Enhancer mapping at the Plp1 locus\nidentified two oligodendrocyte-specific enhancers, both acted on by MYRF, whose contacts with the\ngene are among the strongest in that cell type. MYRF works with SOX10 at many of these elements,\nso a MYRF match near a SOX10 dimer site in oligodendrocyte-accessible chromatin is a much stronger\nsignal than the match alone. As an eight-base fixed palindrome, TGGTACCA is expected by chance on\nthe order of tens of thousands of times in a human genome, most of them in closed chromatin and in\ncell types where MYRF is absent.\n\n## Biology and disease\n\nMice lacking Myrf in the oligodendrocyte lineage fail to myelinate the central nervous system, and\ninducible deletion in adults causes loss of myelin and of mature oligodendrocyte identity, so MYRF\nis required for maintenance as well as for differentiation. In humans, de novo MYRF variants cause\na syndrome of congenital cardiac and urogenital anomalies, often with congenital diaphragmatic\nhernia, and MYRF haploinsufficiency has been reported in both 46,XY and 46,XX disorders of sex\ndevelopment. The link between a myelin regulator and cardiac and gonadal development is not\nexplained by the oligodendrocyte role, and likely reflects earlier developmental expression.\n\n## Reading a hit\n\nThe palindrome is short and fully specified, so chance matches are common and the sequence alone\ncarries no cell-type information. A MYRF match matters only in a cell that expresses MYRF, which\nin practice means the oligodendrocyte lineage; elsewhere the same eight bases are inert. Do not\nassume that a match to the MYRFL model is equivalent to a MYRF site: that model is discordant with\nthe MYRF palindrome in these data. Because MYRF requires autoproteolytic release to reach the\nnucleus, the presence of MYRF protein in a tissue does not establish that its DNA-binding fragment\nis present, which is an unusual extra step between motif and function. Treat the yeast Ndt80 MSE\nas a separate element that shares only the fold.",
+ "caveats": "Only three motifs and two proteins sit under this key, and one of them disagrees with the other two: the HOCOMOCO MYRFL model matches the MYRF palindrome at only 0.47, so MYRF and MYRFL cannot be assumed interchangeable. TGGTACCA is eight fixed bases and a perfect palindrome, so chance matches number in the tens of thousands per genome and orientation is undefined. The site is only interpretable in cells expressing MYRF, essentially the oligodendrocyte lineage. MYRF also needs autoproteolytic cleavage before its DNA-binding fragment reaches the nucleus, so protein presence does not imply DNA binding. The yeast Ndt80 MSE shares the fold but not the sequence.",
+ "refs": [
+  {
+   "cite": "Chu S, Herskowitz I. Gametogenesis in yeast is regulated by a transcriptional cascade dependent on Ndt80. Mol Cell 1998;1:685-96.",
+   "pmid": "9660952",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9660952/"
+  },
+  {
+   "cite": "Lamoureux JS, Stuart D, Tsang R, et al. Structure of the sporulation-specific transcription factor Ndt80 bound to DNA. EMBO J 2002;21:5721-32.",
+   "pmid": "12411490",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12411490/"
+  },
+  {
+   "cite": "Lamoureux JS, Glover JN. Principles of protein-DNA recognition revealed in the structural analysis of Ndt80-MSE DNA complexes. Structure 2006;14:555-65.",
+   "pmid": "16531239",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16531239/"
+  },
+  {
+   "cite": "Emery B, Agalliu D, Cahoy JD, et al. Myelin gene regulatory factor is a critical transcriptional regulator required for CNS myelination. Cell 2009;138:172-85.",
+   "pmid": "19596243",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19596243/"
+  },
+  {
+   "cite": "Bujalka H, Koenning M, Jackson S, et al. MYRF is a membrane-associated transcription factor that autoproteolytically cleaves to directly activate myelin genes. PLoS Biol 2013;11:e1001625.",
+   "pmid": "23966833",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23966833/"
+  },
+  {
+   "cite": "Li Z, Park Y, Marcotte EM. A Bacteriophage tailspike domain promotes self-cleavage of a human membrane-bound transcription factor, the myelin regulatory factor MYRF. PLoS Biol 2013;11:e1001624.",
+   "pmid": "23966832",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23966832/"
+  },
+  {
+   "cite": "Koenning M, Jackson S, Hay CM, et al. Myelin gene regulatory factor is required for maintenance of myelin and mature oligodendrocyte identity in the adult CNS. J Neurosci 2012;32:12528-42.",
+   "pmid": "22956843",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22956843/"
+  },
+  {
+   "cite": "Kim D, An H, Fan C, et al. Identifying oligodendrocyte enhancers governing Plp1 expression. Hum Mol Genet 2021;30:2225-2239.",
+   "pmid": "34230963",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34230963/"
+  },
+  {
+   "cite": "Pinz H, Pyle LC, Li D, et al. De novo variants in Myelin regulatory factor (MYRF) as candidates of a new syndrome of cardiac and urogenital anomalies. Am J Med Genet A 2018;176:969-972.",
+   "pmid": "29446546",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29446546/"
+  },
+  {
+   "cite": "Hamanaka K, Takata A, Uchiyama Y, et al. MYRF haploinsufficiency causes 46,XY and 46,XX disorders of sex development: bioinformatics consideration. Hum Mol Genet 2019;28:2319-2329.",
+   "pmid": "30985895",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30985895/"
+  },
+  {
+   "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
+   "pmid": "25215497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  },
+  {
+   "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
+   "pmid": "32728250",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  }
+ ]
+}

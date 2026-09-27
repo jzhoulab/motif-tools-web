@@ -1,0 +1,79 @@
+{
+ "key": "KLF_SP",
+ "aka": [
+  "GC-box",
+  "Sp1 site",
+  "CACCC-box",
+  "CACC element",
+  "basic transcription element (BTE)",
+  "Kruppel-like factor",
+  "EKLF / GKLF / LKLF site",
+  "TFClass: three-zinc finger Kruppel-related factors"
+ ],
+ "consensus": "GGGGCGGGG",
+ "short": "The SP and KLF proteins are about 26 human transcription factors that each use three C2H2 zinc fingers to read a nine- to ten-base GC-rich element. Two classical forms of that element exist: the GC-box GGGGCGGGG, found in the SV40 21-bp repeats and in most CpG-island promoters, and the CACCC-box CCACACCC of erythroid promoters such as beta-globin. In vitro selection puts the family consensus at CCACGCCC, which is the same site read from the other strand. Because all 26 proteins share the same finger code, sequence alone cannot say which one is bound; a GC-box hit identifies the family and, given how common GC-rich sequence is in promoters, often identifies very little else.",
+ "long": "## The factors\n\nThe mammalian SP/KLF family comprises roughly 26 genes - SP1 to SP9 and KLF1 to KLF17/18 - unified under a single nomenclature by Suske et al. (2005). Each protein carries three Cys2-His2 zinc fingers at its C terminus; the SP subgroup additionally has the Sp-box and a buttonhead box, while the KLF subgroup is more variable outside the fingers. SP1 was the first mammalian sequence-specific activator purified, isolated as the factor that activates the SV40 early promoter through its 21-bp repeats (Dynan and Tjian 1983), and its DNA-binding activity was mapped to the C-terminal zinc-finger region (Kadonaga et al. 1987). The KLF branch was opened by the cloning of erythroid Kruppel-like factor, KLF1/EKLF, as a CACCC-element-binding protein (Miller and Bieker 1993). Older aliases persist: KLF1 = EKLF, KLF2 = LKLF, KLF4 = GKLF, KLF9 = BTEB1, SP7 = Osterix. Expression splits the family into broadly expressed members (SP1, SP2, SP3, KLF6, KLF7, KLF9-KLF11, KLF13, KLF16) and restricted ones (KLF1 in erythroid cells, KLF2 in lymphocytes and endothelium, KLF4 and KLF5 in gut and skin, SP4 in neurons, SP7 in osteoblasts, SP8 and SP9 in limb bud and forebrain, KLF17 in oocytes). They bind DNA as monomers.\n\n## The motif\n\nThree fingers read nine to ten bases, three per finger, following the Zif268 code. Two canonical forms are described in the literature. The GC-box, GGGGCGGGG, is the Sp1 site. The CACCC-box, CCACACCC, is the erythroid form found in the beta-globin promoter. The 100 matrices collected here converge on a third way of writing the same thing: the medoid (SP3, JASPAR MA0746.3) is GCCACGCCCAC, and in vitro selection models across the family read CCACGCCC or, on the opposite strand, GGGCGTGG. Which of these a given paralogue prefers is a graded matter, not a switch. Matrices for SP1-SP4 and most KLFs keep a CpG in the central triplet (GGGGCGGGG, GGGCGTGG), whereas KLF1, KLF3, KLF4 and KLF5 tolerate A or T there and yield the CACCC-type models seen in this atlas (KLF4: TGGGTGTGGC; KLF9: GCCACACCCAC). Structurally, the Klf4 three-finger domain has been solved bound to fully methylated DNA at 1.85 A, where an arginine and a glutamate contact the 5-methyl group and binding to methylated DNA is only slightly tighter than to unmodified DNA (Liu et al. 2014); methyl-SELEX across 542 human factors confirmed that many C2H2 proteins, KLFs included, are methylation-tolerant rather than methylation-blocked (Yin et al. 2017). Several HOCOMOCO models here span 18-23 positions and contain two copies of the core, reflecting how often these sites occur in tandem. With 100 matrices from 27 gene labels and a cohesion of 0.84, the honest summary is that this family has one motif: no matrix distinguishes SP1 from SP3, or KLF10 from KLF11.\n\n## Where it acts\n\nGC-boxes are the characteristic element of CpG-island promoters and are the reason many housekeeping promoters have no TATA box. They cluster with NRF1, NFY and ETS sites in the same promoters, while CACCC-type sites dominate erythroid regulatory elements such as the beta-globin promoter and locus control region. The family's real problem is neighbors, not partners. The gastrin EGF-response element GGGGCGGGGTGGGGGG binds Sp1 and, independently, ZBP-89/ZNF148 (Merchant et al. 1996). When the CT/GC-rich element of the IL-3 promoter was used as a bait, the clones recovered were EGR1, EGR2 and DB1/VEZF1 (Koyano-Nakagawa et al. 1994). In other words, a single GC-rich element can be a legitimate binding site for members of four or five different families in this atlas.\n\n## Biology and disease\n\nSp1-null mouse embryos are retarded and die around day 11, yet Sp1-/- cells grow and differentiate, so the requirement is developmental rather than cell-autonomous (Marin et al. 1997). KLF1 is required for beta-globin transcription and activates the beta-globin promoter through its CACCC box but not the gamma-globin promoter, whose CACCC sequence differs (Asano and Stamatoyannopoulos 1998); dominant human KLF1 mutations cause severe anemia, including congenital dyserythropoietic anemia type IV (Kulczynska-Figurny et al. 2020). KLF4 is one of the four factors in the original reprogramming cocktail for induced pluripotent stem cells. SP7/Osterix is required for osteoblast differentiation, and its mode of action is unusual (below).\n\n## Reading a hit\n\nA hit identifies the GC-box family and nothing narrower. Beyond that, ask three questions. Is the site informative at all? GGGGCGGGG and CCACGCCC are very common in GC-rich sequence, so a match inside a CpG-island promoter carries little information by itself. Which matrix matched? Of the 100 profiles here, 45 come from HOCOMOCO and many rest on ChIP-seq evidence at grade B or C; the grade-A models (KLF3-KLF5, KLF10, KLF12-KLF14) carry in vitro support and are the ones worth trusting for \"this protein binds this sequence\". Two HOCOMOCO models are not GC-box motifs at all: SP7.H14CORE.0.P.B and SP9.H14CORE.0.P.B are AT-rich (TAATTACAGGTT). For SP7 this is understood - amino-acid differences in the Sp7 zinc-finger domain reduce its affinity for the GC-box, and Sp7 reaches osteoblast enhancers inside Dlx-containing complexes bound to AT-rich motifs (Hojo et al. 2016) - which makes the SP7 ChIP motif a textbook case of a factor \"having\" its recruiter's motif. One CIS-BP matrix labelled SP5 (M03682_2.00) is not from a human protein at all: it is transferred from a Drosophila melanogaster protein at 94% DNA-binding-domain identity. Finally, MAZ/PATZ1, ZNF281/ZNF148, VEZF1, EGR and WT1 all read GC- or GA-rich sequence, and where a match scores well against both a GC-box and a GGGAGGG model, sequence cannot decide between them.",
+ "caveats": "A match tells you the GC-box family, not the member: 100 matrices from 27 gene labels share essentially one motif. GC-rich nine-mers are also very common, so a hit in a CpG-island promoter may be no more than a statement about base composition. Most matrices are ChIP-derived at grade B or C; prefer the grade-A in vitro models. Two HOCOMOCO models labelled SP7 and SP9 are AT-rich and are not this motif - for SP7, indirect recruitment by Dlx factors explains it - and one CIS-BP matrix labelled SP5 is inherited from a Drosophila protein. Overlap with MAZ, ZNF281/ZNF148, VEZF1, EGR and WT1 is frequently unresolvable from sequence alone.",
+ "refs": [
+  {
+   "cite": "Dynan WS, Tjian R. The promoter-specific transcription factor Sp1 binds to upstream sequences in the SV40 early promoter. Cell 1983;35:79-87.",
+   "pmid": "6313230",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/6313230/"
+  },
+  {
+   "cite": "Kadonaga JT, Carner KR, Masiarz FR, et al. Isolation of cDNA encoding transcription factor Sp1 and functional analysis of the DNA binding domain. Cell 1987;51:1079-90.",
+   "pmid": "3319186",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3319186/"
+  },
+  {
+   "cite": "Miller IJ, Bieker JJ. A novel, erythroid cell-specific murine transcription factor that binds to the CACCC element and is related to the Krüppel family of nuclear proteins. Mol Cell Biol 1993;13:2776-86.",
+   "pmid": "7682653",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7682653/"
+  },
+  {
+   "cite": "Koyano-Nakagawa N, Nishida J, Baldwin D, et al. Molecular cloning of a novel human cDNA encoding a zinc finger protein that binds to the interleukin-3 promoter. Mol Cell Biol 1994;14:5099-107.",
+   "pmid": "8035792",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8035792/"
+  },
+  {
+   "cite": "Merchant JL, Iyer GR, Taylor BR, et al. ZBP-89, a Krüppel-like zinc finger protein, inhibits epidermal growth factor induction of the gastrin promoter. Mol Cell Biol 1996;16:6644-53.",
+   "pmid": "8943318",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8943318/"
+  },
+  {
+   "cite": "Marin M, Karis A, Visser P, et al. Transcription factor Sp1 is essential for early embryonic development but dispensable for cell growth and differentiation. Cell 1997;89:619-28.",
+   "pmid": "9160753",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9160753/"
+  },
+  {
+   "cite": "Asano H, Stamatoyannopoulos G. Activation of beta-globin promoter by erythroid Krüppel-like factor. Mol Cell Biol 1998;18:102-9.",
+   "pmid": "9418858",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9418858/"
+  },
+  {
+   "cite": "Suske G, Bruford E, Philipsen S. Mammalian SP/KLF transcription factors: bring in the family. Genomics 2005;85:551-6.",
+   "pmid": "15820306",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15820306/"
+  },
+  {
+   "cite": "Liu Y, Olanrewaju YO, Zheng Y, et al. Structural basis for Klf4 recognition of methylated DNA. Nucleic Acids Res 2014;42:4859-67.",
+   "pmid": "24520114",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24520114/"
+  },
+  {
+   "cite": "Hojo H, Ohba S, He X, et al. Sp7/Osterix Is Restricted to Bone-Forming Vertebrates where It Acts as a Dlx Co-factor in Osteoblast Specification. Dev Cell 2016;37:238-53.",
+   "pmid": "27134141",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27134141/"
+  },
+  {
+   "cite": "Yin Y, Morgunova E, Jolma A, et al. Impact of cytosine methylation on DNA binding specificities of human transcription factors. Science 2017;356.",
+   "pmid": "28473536",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28473536/"
+  },
+  {
+   "cite": "Kulczynska-Figurny K, Bieker JJ, Siatecka M. Severe anemia caused by dominant mutations in Krüppel-like factor 1 (KLF1). Mutat Res Rev Mutat Res 2020;786:108336.",
+   "pmid": "33339573",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33339573/"
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+ "key": "HNF4",
+ "aka": [
+  "H4-SBM",
+  "HNF4-specific binding motif",
+  "DR1",
+  "HNF4A site",
+  "HNF-4 element",
+  "TR2/TR4 element",
+  "DRED element",
+  "NR2A / NR2C"
+ ],
+ "consensus": "CAAAGTCCA",
+ "short": "HNF4A and HNF4G are nuclear receptors that bind DNA only as homodimers, on a DR1: two hexameric half-sites in the same orientation separated by exactly one base pair. Their preferred half-site drifts away from the superfamily's AGGTCA towards AG(G/T)CCA, which is why the databases render the HNF4 motif as CAAAGTCCA, or at full length as a 13 bp DR1. That drift is real specificity: the HNF4-specific binding motif is bound by HNF4A and not by other nuclear receptors tested in vivo. The same family here also holds NR2C1 and NR2C2 (TR2/TR4), whose models are generic AGGTCA DR1s and are not distinguishable from RXR or COUP-TF. HNF4A is the central regulator of hepatocyte, islet and intestinal gene expression and the MODY1 gene.",
+ "long": "## The factors\n\nHNF4A (NR2A1) and HNF4G (NR2A2) are C4 double-zinc-finger nuclear receptors, discovered as a liver-enriched activator and immediately recognised as a steroid-receptor-superfamily member (Sladek et al. 1990). HNF4A is expressed in hepatocytes, pancreatic islet beta cells, intestine, kidney proximal tubule and stomach; HNF4G overlaps, weighted towards intestine and stomach. Unlike most of the superfamily they do not use RXR: HNF4A recognises its target genes exclusively as a cooperative homodimer (Lu et al. 2008). Fatty acyl-CoA thioesters have been proposed as ligands, but HNF4 is usually treated as constitutively active, regulated through coactivators and isoform choice (P1 versus P2 promoters).\n\nThis family also contains NR2C1 (TR2) and NR2C2 (TR4), broadly expressed orphan receptors that homodimerize and heterodimerize with each other. They are grouped here because their motif models are DR1 elements in the same frame, not because they are HNF4 paralogues. The family holds 18 models in total (JASPAR 6, HOCOMOCO 6, CIS-BP 4, Vierstra 2).\n\n## The motif\n\nThe architecture is a DR1: two hexamers on the same strand with a single base between them, generically AGGTCAxAGGTCA (Khorasanizadeh and Rastinejad 2001). HNF4 departs from that hexamer. Its models read AGKCCA-A-AGTCCA at full length (CIS-BP M08219, HOCOMOCO HNF4A.H14CORE.0 gGtyCAAAGTcC, JASPAR MA1494.2 ggGTCCAAAGGTCA), and the short JASPAR models for both paralogues (MA0114.5, MA0484.3) give only the 9 bp core CAAAGTCCA, covering the spacer and the 3' half-site.\n\nProtein-binding microarrays comparing HNF4A, RXRA and COUP-TFII resolved this into a named element: the HNF4-specific binding motif, H4-SBM, xxxxCAAAGTCCA. ChIP data indicated the H4-SBM is bound by HNF4A and not by ten other nuclear receptors in vivo, and the specificity maps to Asp69 and Arg76 in the DNA-binding domain, a residue combination unique to HNF4 among human nuclear receptors. The same study reported a previously unrecognised polarity in the classical DR1 for HNF4A, RXRA and COUP-TFII homodimers (Fang et al. 2012). The 2.0 A structure of the HNF4A DBD on the HNF1A promoter element shows the cooperative homodimer and the contacts that give this element its strong 5' extension (Lu et al. 2008).\n\nSo the family splits into two unequal halves. HNF4A and HNF4G carry the AGTCCA-flavoured signature and are partly distinguishable from the rest of the superfamily - but not from each other, their models being 0.999 similar. NR2C1 and NR2C2 models are either the bare hexamer AGGTCA (four of the eighteen models here) or a generic AGGTCAxAGGTCA DR1, and are not distinguishable from RXR homodimers or COUP-TF. That is why the family's data consensus is GgTcAAAGGTCA, the generic DR1, rather than the H4-SBM quoted above, and why the family's medoid model (HOCOMOCO NR2C2.H14CORE.1.PS.A) matches motifs outside this family better than inside it, 0.985 against 0.86. The disagreement is not an error in either source: it reflects a family that contains one receptor pair with a private motif and one without.\n\n## Where it acts\n\nHNF4A occupies promoters and enhancers across the hepatocyte, islet, intestinal and renal gene programs. Promoter-occupancy mapping in human liver and pancreatic islets placed HNF4A in tissue-specific circuits with HNF1A and HNF6/ONECUT1 (Odom et al. 2004), and combining protein-binding microarrays with expression and ChIP data extended the human target list (Bolotin et al. 2010). HNF4 motifs are among the most enriched in liver open chromatin and co-occur with HNF1A/HNF1B, FOXA1/FOXA2, CEBPA/CEBPB, ONECUT1 and NR5A2 sites. On the NR2C side, the best-characterised sites are DR1 elements in the embryonic and fetal beta-type globin promoters, where the TR2/TR4 heterodimer forms the core of a repressor complex (Tanabe et al. 2002).\n\n## Biology and disease\n\nHeterozygous HNF4A mutations cause maturity-onset diabetes of the young type 1 (Yamagata et al. 1996), and some of the same alleles cause transient neonatal hyperinsulinism and macrosomia. Germline Hnf4a-null mouse embryos die during gastrulation. Liver-specific deletion in adult mice causes hepatic lipid accumulation, low serum cholesterol and triglycerides and raised serum bile acids, traced to reduced apolipoprotein B and microsomal triglyceride transfer protein and to reduced basolateral bile-acid transporters (Hayhurst et al. 2001). HNF4A is required for intestinal and hepatic differentiation, and its loss or isoform switching is seen in hepatocellular carcinoma and colorectal cancer. TR2/TR4 repression of the fetal globin genes makes NR2C1 and NR2C2 candidate targets for induction of fetal hemoglobin in sickle-cell disease and beta-thalassemia.\n\n## Reading a hit\n\nThis family contains the one place in the nuclear receptor superfamily where a matrix does come close to naming a receptor. A clean CAAAGTCCA or full AGTCCA-type DR1 is reasonable evidence for HNF4A or HNF4G, given that the H4-SBM was bound by HNF4A and not by ten other nuclear receptors tested (Fang et al. 2012). It still does not separate HNF4A from HNF4G; use expression, since the two rarely overlap strongly outside intestine and stomach. A generic AGGTCAxAGGTCA hit tells you much less: RXR homodimers, PPAR:RXR, COUP-TF/NR2F and TR2/TR4 all use DR1. Scale matters too: a 9-mer like CAAAGTCCA occurs on the order of 10^4 times per haploid genome by chance, comparable to the number of HNF4A ChIP peaks recovered in liver, so the motif alone over-calls heavily outside hepatic and intestinal chromatin. Finally, one CIS-BP model labelled NR2C2 in this family, M07990 (abcaCTTCCGGGtC), contains a CTTCC/GGAA core and its nearest neighbours across all four databases are ETS motifs; the family data flags it with altFamily ETS_EHF. Treat it as indirect or misassigned rather than as evidence that TR4 binds an ETS site.",
+ "caveats": "Two different things live in this family. An HNF4-flavoured site (CAAAGTCCA, or a DR1 whose half-sites read AGTCCA) is genuinely informative for HNF4A/HNF4G, though it cannot separate those two paralogues. A generic AGGTCAxAGGTCA DR1 - which is what the NR2C1 and NR2C2 models here are, four of them being the bare hexamer - is shared with RXR homodimers, PPAR:RXR and COUP-TF, and the family's own medoid matches other families better than its own. One CIS-BP model labelled NR2C2 (M07990) is an ETS-like matrix flagged as belonging elsewhere. A 9-mer occurs roughly 10^4 times per genome, so pair hits with liver or intestinal accessibility data.",
+ "refs": [
+  {
+   "cite": "Sladek FM, Zhong WM, Lai E, et al. Liver-enriched transcription factor HNF-4 is a novel member of the steroid hormone receptor superfamily. Genes Dev 1990;4:2353-65.",
+   "pmid": "2279702",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2279702/"
+  },
+  {
+   "cite": "Yamagata K, Furuta H, Oda N, et al. Mutations in the hepatocyte nuclear factor-4alpha gene in maturity-onset diabetes of the young (MODY1). Nature 1996;384:458-60.",
+   "pmid": "8945471",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8945471/"
+  },
+  {
+   "cite": "Hayhurst GP, Lee YH, Lambert G, et al. Hepatocyte nuclear factor 4alpha (nuclear receptor 2A1) is essential for maintenance of hepatic gene expression and lipid homeostasis. Mol Cell Biol 2001;21:1393-403.",
+   "pmid": "11158324",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11158324/"
+  },
+  {
+   "cite": "Tanabe O, Katsuoka F, Campbell AD, et al. An embryonic/fetal beta-type globin gene repressor contains a nuclear receptor TR2/TR4 heterodimer. EMBO J 2002;21:3434-42.",
+   "pmid": "12093744",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12093744/"
+  },
+  {
+   "cite": "Odom DT, Zizlsperger N, Gordon DB, et al. Control of pancreas and liver gene expression by HNF transcription factors. Science 2004;303:1378-81.",
+   "pmid": "14988562",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/14988562/"
+  },
+  {
+   "cite": "Lu P, Rha GB, Melikishvili M, et al. Structural basis of natural promoter recognition by a unique nuclear receptor, HNF4alpha. Diabetes gene product. J Biol Chem 2008;283:33685-97.",
+   "pmid": "18829458",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18829458/"
+  },
+  {
+   "cite": "Bolotin E, Liao H, Ta TC, et al. Integrated approach for the identification of human hepatocyte nuclear factor 4alpha target genes using protein binding microarrays. Hepatology 2010;51:642-53.",
+   "pmid": "20054869",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20054869/"
+  },
+  {
+   "cite": "Fang B, Mane-Padros D, Bolotin E, et al. Identification of a binding motif specific to HNF4 by comparative analysis of multiple nuclear receptors. Nucleic Acids Res 2012;40:5343-56.",
+   "pmid": "22383578",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22383578/"
+  },
+  {
+   "cite": "Khorasanizadeh S, Rastinejad F. Nuclear-receptor interactions on DNA-response elements. Trends Biochem Sci 2001;26:384-90.",
+   "pmid": "11406412",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11406412/"
+  }
+ ]
+}

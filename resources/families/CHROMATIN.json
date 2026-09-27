@@ -1,0 +1,81 @@
+{
+ "key": "CHROMATIN",
+ "aka": [
+  "Chromatin regulators without a classical DBD",
+  "cofactor-attributed motifs",
+  "ChIP-derived motifs of readers and writers",
+  "BPTF / NURF",
+  "ZFPM1 / FOG-1",
+  "GATAD2A / p66alpha",
+  "ARID1A",
+  "DPF1 / BAF45b",
+  "ZZZ3",
+  "SETBP1",
+  "PHF21A / BHC80"
+ ],
+ "short": "A deliberate holding bucket, and the place to learn why a ChIP-derived motif may not belong to the protein it is labelled with. The twenty motifs here are attributed to chromatin readers, writers and scaffolds that have no sequence-specific DNA-binding domain: BPTF, PHF1, PHF21A, DPF1, MYSM1, SETBP1, TOPORS, GATAD2A, ZFPM1, ZZZ3, GLYR1, MTF2, TCF20, SP140L, NAIF1 and ARID1A. Cohesion is 0.38, the lowest in the atlas, and six models are explicitly flagged as resembling another family. The clearest case is ZFPM1/FOG-1, which binds GATA-1's zinc finger rather than DNA, yet carries a GATA motif. Read this page as a warning list.",
+ "long": "## The factors\n\nCuration of the human transcription factors draws a line between proteins that carry a recognised sequence-specific DNA-binding domain and the much larger set of chromatin-associated proteins that reach DNA only through partners. Everything in this family is on the wrong side of that line. BPTF is the largest subunit of the NURF remodelling complex, a PHD-finger and bromodomain histone reader. PHF1 and MTF2 are Polycomb-like accessory subunits of PRC2. DPF1 is a BAF subunit with a double PHD finger, GATAD2A (p66alpha) a NuRD subunit, ZFPM1 is FOG-1, and ZZZ3 belongs to the ATAC acetyltransferase complex, where its ZZ-type zinc finger binds the histone H3 N-terminus. GLYR1 is a nucleosome-destabilising PWWP protein, PHF21A is BHC80 of the LSD1-CoREST complex, MYSM1 a histone H2A deubiquitinase, and ARID1A the BAF subunit whose ARID domain binds DNA with no sequence preference. SETBP1, TCF20, TOPORS, SP140L and NAIF1 are scaffolds and modifiers.\n\nSeveral do touch DNA - SETBP1 through AT-hooks, ZZZ3 through a Myb/SANT-like region, SP140L through a SAND domain, DPF1 through a Kruppel-like zinc finger - so \"no classical DNA-binding domain\" is not \"no DNA contact\". What none has is a demonstrated, discriminating, sequence-specific site. MTF2 is the instructive exception: it binds DNA directly and recruits PRC2 to CpG islands, but what it reads is helical shape, not sequence.\n\n## The motif\n\nA ChIP-seq experiment reports where a protein is crosslinked, not what it recognizes. If the protein is carried to chromatin by a sequence-specific partner, de novo motif discovery on its peaks returns the partner's motif, reproducibly, and the result is then filed under the wrong name. This is not a rare accident: non-targeted transcription factor motifs are a systemic component of ChIP-seq datasets, active promoters generate false-positive \"phantom peaks\" independent of the antigen, and high-occupancy target regions accumulate signal for many proteins at once. A survey of 208 chromatin-associated proteins in one human cell type found exactly that pattern.\n\nThe atlas exposes it mechanically, through the resembles flag and by comparing each model's best within-family match against its best out-of-family match. Six models are flagged, and the cases are concrete:\n\nZFPM1 (FOG1.H14CORE.0.I.C) reads TTATCt, is flagged as resembling GATA, and has an out-of-family similarity of 0.98. FOG-1 was characterised in 1997 as a multitype zinc finger protein that acts as a cofactor for GATA-1 by binding GATA-1's own zinc finger. It does not bind DNA sequence-specifically. The motif is GATA's. GATAD2A gives the same answer from another complex: its P66A model, tCTTATCTcthtthhnatctt, is flagged as resembling GATA, and its out-of-family similarity (0.858) exceeds its within-family one (0.813) - NuRD is recruited to GATA sites, and the motif came along for the ride. ARID1A's TTTTATtGg is ChIP-only, graded C, flagged as resembling the posterior HOX family, and scores 0.944 against another family; the ARID domain of BAF subunits binds DNA without sequence specificity. PHF1 (tCGG) and NAIF1 (CGTA) are flagged as resembling the CpG readers and are essentially CpG dinucleotides. MTF2's CCCGaCGg is flagged as resembling MTF1 - a different protein with a similar name - at 0.98.\n\nThree more deserve naming. The family's highest-information model, Vierstra archetype AC0442 labelled TOPORS with function \"Unknown\", is a 17-base-pair, 31.5-bit consensus TCCCAAAGTAGCTGGGA that closely matches a segment of the Alu consensus: it reads as repeat sequence, not a factor site. SP140L's tACGTcA is a fragment of the canonical CRE, TGACGTCA. DPF1 is the genuine near-miss: its HOCOMOCO and CIS-BP models (CaCCTATAG, CTATAGGtG) have in vitro selection support and agree at 0.97, but their best out-of-family similarity is 0.996 and the Vierstra archetype carrying them is labelled DPF/ZBTB and classed as C2H2 - so even here the model cannot be assigned to DPF1 rather than a ZBTB protein. The rest (SETBP1's A-rich aCgvaaAAaaaA, TCF20's gAdTataT, GLYR1's four-base AAAT, PHF21A's rcaaAaAcA, BPTF's AtAACA at 5.4 bits) are short and uninformative; SETBP1's is consistent with its AT-hooks, which give affinity without specificity.\n\n## Where it acts\n\nWherever the recruiting factor acts. GATAD2A and ZFPM1 signal at GATA sites in erythroid and megakaryocytic cells; PRC2 accessory subunits at CpG islands; BAF and NURF subunits at active promoters and enhancers, which is also where phantom peaks and high-occupancy regions live. The useful statement is always about the complex and its recruiter, not about a sequence.\n\n## Biology and disease\n\nThese are important genes. PHF21A disruption in the Potocki-Shaffer region causes intellectual disability with craniofacial anomalies; de novo SETBP1 mutations cause Schinzel-Giedion syndrome; ARID1A is among the most frequently mutated genes in human cancer, and TCF20 and BPTF are established disease genes too. None of that makes their motif models usable. Clinical importance and motif quality are independent.\n\n## Reading a hit\n\nDo not attribute a hit in this family to the labelled protein. Instead, use the entry backwards: if a scan returns a hit for one of these names, identify which real family the model belongs to and read that entry. For ZFPM1 and GATAD2A, go to GATA. For PHF1 and NAIF1, go to MBD_CXXC. For ARID1A, go to the posterior HOX family. For SETBP1 and PHF21A, go to HMGA and read what an AT-hook does. Check TOPORS against repeat annotation. And apply the general rule beyond this page: whenever a motif is attributed to a cofactor, reader, writer or remodeller, ask whether the ChIP experiment that produced it was measuring the protein or its recruiter.",
+ "caveats": "Nothing in this family should be scanned with the intention of finding sites for the named protein. These are chromatin proteins without sequence-specific DNA-binding domains, and their models are best explained as the motifs of the sequence-specific factors that recruit them, as phantom peaks over active promoters, or as repeat sequence. Cohesion is 0.38, the lowest in the atlas; six of twenty models are flagged as resembling another family, and several score higher against other families than within this one. The NAIF1 model is a Gallus gallus transfer at 74 percent domain identity. Even DPF1, the only member with in vitro support and internal agreement, is 0.996 similar to a ZBTB C2H2 model and cannot be attributed.",
+ "refs": [
+  {
+   "cite": "Lambert SA, Jolma A, Campitelli LF, et al. The Human Transcription Factors. Cell 2018;172:650-665.",
+   "pmid": "29425488",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29425488/"
+  },
+  {
+   "cite": "Worsley Hunt R, Wasserman WW. Non-targeted transcription factors motifs are a systemic component of ChIP-seq datasets. Genome Biol 2014;15:412.",
+   "pmid": "25070602",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25070602/"
+  },
+  {
+   "cite": "Jain D, Baldi S, Zabel A, et al. Active promoters give rise to false positive 'Phantom Peaks' in ChIP-seq experiments. Nucleic Acids Res 2015;43:6959-68.",
+   "pmid": "26117547",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26117547/"
+  },
+  {
+   "cite": "Wreczycka K, Franke V, Uyar B, et al. HOT or not: examining the basis of high-occupancy target regions. Nucleic Acids Res 2019;47:5735-5745.",
+   "pmid": "31114922",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31114922/"
+  },
+  {
+   "cite": "Partridge EC, Chhetri SB, Prokop JW, et al. Occupancy maps of 208 chromatin-associated proteins in one human cell type. Nature 2020;583:720-728.",
+   "pmid": "32728244",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32728244/"
+  },
+  {
+   "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
+   "pmid": "32728250",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  },
+  {
+   "cite": "Tsang AP, Visvader JE, Turner CA, et al. FOG, a multitype zinc finger protein, acts as a cofactor for transcription factor GATA-1 in erythroid and megakaryocytic differentiation. Cell 1997;90:109-19.",
+   "pmid": "9230307",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9230307/"
+  },
+  {
+   "cite": "Mi W, Zhang Y, Lyu J, et al. The ZZ-type zinc finger of ZZZ3 modulates the ATAC complex-mediated histone acetylation and gene activation. Nat Commun 2018;9:3759.",
+   "pmid": "30217978",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30217978/"
+  },
+  {
+   "cite": "Perino M, van Mierlo G, Karemaker ID, et al. MTF2 recruits Polycomb Repressive Complex 2 by helical-shape-selective DNA binding. Nat Genet 2018;50:1002-1010.",
+   "pmid": "29808031",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29808031/"
+  },
+  {
+   "cite": "Wilsker D, Patsialou A, Zumbrun SD, et al. The DNA-binding properties of the ARID-containing subunits of yeast and mammalian SWI/SNF complexes. Nucleic Acids Res 2004;32:1345-53.",
+   "pmid": "14982958",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/14982958/"
+  },
+  {
+   "cite": "Kim HG, Kim HT, Leach NT, et al. Translocations disrupting PHF21A in the Potocki-Shaffer-syndrome region are associated with intellectual disability and craniofacial anomalies. Am J Hum Genet 2012;91:56-72.",
+   "pmid": "22770980",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22770980/"
+  },
+  {
+   "cite": "Hoischen A, van Bon BW, Gilissen C, et al. De novo mutations of SETBP1 cause Schinzel-Giedion syndrome. Nat Genet 2010;42:483-5.",
+   "pmid": "20436468",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20436468/"
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "key": "MEF2",
+ "aka": [
+  "MEF2 site",
+  "myocyte enhancer factor 2 site",
+  "A/T-rich element",
+  "MEF2 A/T box",
+  "RSRF site",
+  "CTA(A/T)4TAG",
+  "MADS-box (MEF2 type)"
+ ],
+ "consensus": "CTA(A/T)4TAG",
+ "short": "MEF2 sites are bound by the four MADS-box factors MEF2A, MEF2B, MEF2C and MEF2D, which act as obligate dimers. The element is an A/T-rich decamer, CTA(A/T)4TAG, and is easy to confuse with ordinary AT-rich sequence: the information sits almost entirely in the flanking CTA and TAG. MEF2 and SRF share the MADS fold but not the site - SRF requires the CC and GG of a CArG box where MEF2 requires TA and TA. The four paralogues have the same sequence preference and overlapping expression, so which one acts at a given element is decided by cell type and by chromatin rather than by DNA. MEF2 factors drive muscle differentiation, cardiac morphogenesis and activity-dependent programmes in neurons.",
+ "long": "## The factors\n\nMEF2A, MEF2B, MEF2C and MEF2D each carry a MADS box - a 56-58 residue domain shared with SRF and with the plant and yeast MADS proteins - immediately followed by a MEF2-specific extension of about 30 residues. The two regions together form the DNA-binding and dimerisation surface; MEF2 proteins bind only as homodimers or as heterodimers among themselves. The crystal structure of the MEF2A core on DNA at 1.5 A resolution and an NMR structure of the same complex showed that MEF2 lacks the N-terminal extension SRF uses, and that the MEF domain C-terminal to the MADS box adopts a conformation substantially different from the equivalent region in SRF and yeast MCM1 - the structural basis for a different sequence preference and a different degree of DNA bending within one fold. All four genes are broadly expressed with different emphases: MEF2A and MEF2D are near-ubiquitous, MEF2C is prominent in brain, cardiac and skeletal muscle and in B lymphocytes, MEF2B in germinal-centre B cells. Activity is regulated post-translationally rather than by abundance: class IIa histone deacetylases (HDAC4, HDAC5, HDAC7, HDAC9) bind the MADS/MEF2 domain and repress it until calcium-CaMK signalling drives their nuclear export, and p38 MAPK, ERK5, sumoylation and the corepressor CABIN1 tune the same surface.\n\n## The motif\n\nThe consensus was determined by selecting optimal sites with anti-MEF2A antibodies from muscle, heart and brain extracts: 5'-CT(A/T)(A/T)AAATAG-3', now generally written CTA(A/T)4TAG or YTA(A/T)4TAR, a 10-bp near-palindrome. Each MADS monomer reads one half, contacting the bases through an antiparallel coiled coil of two alpha-helices laid in the widened major groove, with basic residues gripping the flanking phosphates. Because the centre is a run of A and T, essentially all the sequence information lives in the outer CTA and TAG - which is why an A/T-rich stretch with the wrong flanks scores poorly, and why MEF2 sites are easy to over-call in AT-rich genomes. That same selection experiment found that MEF2 complexes from brain extracts imposed additional constraints outside the decamer, a tissue effect that has never been resolved into a distinct PWM. The four paralogues are not separable: in these databases the JASPAR and CIS-BP models for MEF2A, MEF2B, MEF2C and MEF2D are nearly identical (family cohesion 0.86), and no in vitro study has reported a usable difference. One real complication is visible in the data. Alongside the canonical CTATTTTTAG models sits a second flavour - CCAAATATGG, CCNAATTTGGAA and similar - which comes almost entirely from HT-SELEX and methyl-HT-SELEX experiments and which is, read literally, a CArG box: CC plus an A/T core plus GG. These entries have lower label agreement (0.6-0.7) and their nearest non-MEF2 neighbours are MADS-box motifs from SRF. Whether this is a genuine secondary MEF2 specificity or an artefact of selection is unsettled; either way, scanning with those models partly scans for SRF.\n\n## Where it acts\n\nMEF2 motifs are enhancer elements, not promoter elements, and are depleted from CpG islands - unsurprising for an A/T-rich site. In differentiating muscle they mark the same enhancers as the myogenic bHLH factors MYOD1 and MYF5, and MEF2-E-box pairs are the canonical muscle enhancer architecture; MEF2 does not have a named composite element of its own but the MEF2-plus-E-box arrangement is close to one. In neurons MEF2 sites mark activity-regulated enhancers; in cardiomyocytes they co-occur with GATA4, NKX2-5, TBX20 and SRF sites. Paralogue occupancy is largely redundant where two MEF2 proteins are co-expressed, and which paralogue compensates at a given site depends on the local chromatin environment.\n\n## Biology and disease\n\nMEF2 factors are required for differentiation rather than for lineage specification. Mef2c-null mouse embryos fail cardiac morphogenesis, with a single ventricular chamber and absent right ventricle, and die around E9.5. In neurons, activity-dependent MEF2 activation restricts excitatory synapse number, so MEF2 acts in synapse elimination rather than formation. In humans, MEF2C haploinsufficiency - by 5q14.3 microdeletion or point mutation - causes severe intellectual disability with stereotypic movements, epilepsy and absent speech. MEF2B is somatically mutated in roughly 11% of diffuse large B-cell lymphomas and 12% of follicular lymphomas; the mutations increase MEF2B activity, either by disrupting its interaction with the corepressor CABIN1 or by escaping inhibitory phosphorylation and sumoylation, and deregulate the proto-oncogene BCL6. MEF2D fusions define a subtype of B-cell acute lymphoblastic leukemia, and MEF2A variants have been reported in coronary artery disease.\n\n## Reading a hit\n\nThe main risk here is the base composition of the genome, not the paralogue problem. An A/T-rich decamer is common in intergenic and intronic DNA, so scan with a model that actually constrains the CTA and TAG flanks and check the flanks in the match itself; a hit on a poly-A or poly-T stretch with soft flanks is almost certainly noise. A hit identifies MEF2, not MEF2A versus MEF2B, MEF2C or MEF2D - there is no reported sequence-level discrimination, and expression plus chromatin decide the occupant. Be explicit about which model you used, because the collections contain two incompatible flavours: canonical CTA(A/T)4TAG models, and CArG-like CCAAATATGG models from in vitro selection whose nearest neighbours are SRF motifs. If a putative MEF2 hit came from the second kind, consider SRF as an equally good explanation. The ChIP-derived MEF2A and MEF2C models here are grade B and reflect occupancy in specific cell types; because MEF2 sits beside E-boxes at muscle enhancers, E-box information can leak into ChIP-derived MEF2 models and vice versa.",
+ "caveats": "Two distinct problems. First, base composition: the site is an A/T-rich decamer whose only real information is the CTA and TAG flanks, so AT-rich sequence throws false positives unless the flanks are genuinely constrained - inspect them in every hit. Second, the databases carry two incompatible model flavours for this family: canonical CTA(A/T)4TAG, and a CArG-like CCAAATATGG form from HT-SELEX whose nearest neighbours are SRF motifs. A hit from the second kind is as consistent with SRF as with MEF2. No model separates MEF2A, MEF2B, MEF2C and MEF2D, so report MEF2-family and let expression and chromatin decide the member.",
+ "refs": [
+  {
+   "cite": "Pollock R, Treisman R. Human SRF-related proteins: DNA-binding properties and potential regulatory targets. Genes Dev 1991;5:2327-41.",
+   "pmid": "1748287",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1748287/"
+  },
+  {
+   "cite": "Shore P, Sharrocks AD. The MADS-box family of transcription factors. Eur J Biochem 1995;229:1-13.",
+   "pmid": "7744019",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7744019/"
+  },
+  {
+   "cite": "Andrés V, Cervera M, Mahdavi V. Determination of the consensus binding site for MEF2 expressed in muscle and brain reveals tissue-specific sequence constraints. J Biol Chem 1995;270:23246-9.",
+   "pmid": "7559475",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7559475/"
+  },
+  {
+   "cite": "Lin Q, Schwarz J, Bucana C, et al. Control of mouse cardiac morphogenesis and myogenesis by transcription factor MEF2C. Science 1997;276:1404-7.",
+   "pmid": "9162005",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9162005/"
+  },
+  {
+   "cite": "Santelli E, Richmond TJ. Crystal structure of MEF2A core bound to DNA at 1.5 A resolution. J Mol Biol 2000;297:437-49.",
+   "pmid": "10715212",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10715212/"
+  },
+  {
+   "cite": "Huang K, Louis JM, Donaldson L, et al. Solution structure of the MEF2A-DNA complex: structural basis for the modulation of DNA bending and specificity by MADS-box transcription factors. EMBO J 2000;19:2615-28.",
+   "pmid": "10835359",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10835359/"
+  },
+  {
+   "cite": "Flavell SW, Cowan CW, Kim TK, et al. Activity-dependent regulation of MEF2 transcription factors suppresses excitatory synapse number. Science 2006;311:1008-12.",
+   "pmid": "16484497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16484497/"
+  },
+  {
+   "cite": "Potthoff MJ, Olson EN. MEF2: a central regulator of diverse developmental programs. Development 2007;134:4131-40.",
+   "pmid": "17959722",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17959722/"
+  },
+  {
+   "cite": "Le Meur N, Holder-Espinasse M, Jaillard S, et al. MEF2C haploinsufficiency caused by either microdeletion of the 5q14.3 region or mutation is responsible for severe mental retardation with stereotypic movements, epilepsy and/or cerebral malformations. J Med Genet 2010;47:22-9.",
+   "pmid": "19592390",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19592390/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  },
+  {
+   "cite": "Ying CY, Dominguez-Sola D, Fabi M, et al. MEF2B mutations lead to deregulated expression of the oncogene BCL6 in diffuse large B cell lymphoma. Nat Immunol 2013;14:1084-92.",
+   "pmid": "23974956",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23974956/"
+  },
+  {
+   "cite": "Majidi SP, Reddy NC, Moore MJ, et al. Chromatin Environment and Cellular Context Specify Compensatory Activity of Paralogous MEF2 Transcription Factors. Cell Rep 2019;29:2001-2015.e5.",
+   "pmid": "31722213",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31722213/"
+  }
+ ]
+}

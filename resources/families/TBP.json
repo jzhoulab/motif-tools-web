@@ -1,0 +1,77 @@
+{
+ "key": "TBP",
+ "aka": [
+  "TATA box",
+  "TATA element",
+  "Goldberg-Hogness box",
+  "Hogness box",
+  "TATAWAWR",
+  "TBP site"
+ ],
+ "consensus": "TATAWAWR",
+ "short": "The TATA box is the oldest known eukaryotic core promoter element and the binding site of TBP, the TATA-box-binding protein. TBP is a saddle-shaped, internally pseudo-symmetric protein that straddles about eight base pairs of AT-rich DNA, reads them entirely from the minor groove, kinks the duplex at both ends and bends it by roughly 80 degrees. It works within TFIID for RNA polymerase II and within SL1 and TFIIIB for polymerases I and III, so a single protein serves all three. Because minor-groove contacts barely distinguish A:T from T:A, the element carries little information: the canonical TATAWAWR is present in only a small minority of human promoters, most of which are instead GC-rich and TATA-less. A TATA match on its own is therefore very weak evidence of anything.",
+ "long": "## The factors\n\nTBP is a single small protein, about 180 residues in its conserved core, encoded by one gene. Its\nfold is a pseudo-symmetric saddle: two structurally similar halves, each contributing a curved\nbeta sheet that forms the concave underside, with helices on the convex top surface where general\nfactors and activators dock. TBP does not act alone. For RNA polymerase II it is the anchoring\nsubunit of TFIID, a roughly one-megadalton complex of thirteen or more TAF subunits; for\npolymerase I it sits in SL1 and for polymerase III in TFIIIB. Two paralogues exist, TBPL1\n(TRF2/TLF) and TBPL2 (TRF3), which have the TBP fold but altered DNA-contacting surfaces and do\nnot bind TATA boxes; neither has a motif in the databases used here. TAF1, the largest TFIID\nsubunit, is included in this key because its motif models are attributed to a promoter-binding\ncomponent of the same machinery, but TAF1 is not a sequence-specific DNA-binding protein in the\nway TBP is: its promoter contacts involve the initiator and downstream regions, and it carries\nhistone-acetyltransferase and bromodomain activities.\n\n## The motif\n\nThe literature consensus is the eight-base TATAWAWR, most often realized as TATAAAAG or TATATAAG,\npositioned roughly 25-30 bp upstream of the transcription start site in a focused promoter. The\nco-crystal structures of human and yeast TBP on TATA DNA showed why the information content is\nlow: TBP makes no major-groove base contacts at all. It binds the minor groove, where an A:T and a\nT:A base pair present nearly the same pattern of hydrogen-bond acceptors, and inserts pairs of\nphenylalanine side chains between the first two and last two base pairs, kinking the helix at both\nends and bending the whole element by about 80 degrees while partially unwinding it. What TBP\nreally reads is a short run of deformable, narrow-minor-groove AT-rich DNA, and later work showed\nthat a wide range of AT-rich variants are bound with comparable affinity. The consequence for\nmotif models is direct: every matrix in this family is a low-information AT-rich model. The\nrepresentative here, the Vierstra archetype AC0057, is TATAAAAG; JASPAR MA0108.3 is TATAAAA;\nHOCOMOCO's TBP model is CTATAAAAGG. There is no half-site structure and no spacing rule, and\nbecause TBP is a monomer on a pseudo-symmetric site, orientation is only weakly determined by\nsequence, which is one reason TATA-box orientation prediction is unreliable. Family cohesion here\nis only 0.64, and two of the five motifs are flagged as belonging elsewhere, discussed below.\n\n## Where it acts\n\nTATA boxes belong to focused, or sharp-initiation, promoters: a single dominant start site,\nAT-rich surroundings, no CpG island. These are a minority of mammalian promoters. A genome-scale\nanalysis found that about 76% of human core promoters have no TATA-like element, are GC-rich and\nare enriched for SP1 sites; about 24% have something TATA-like, but only about 10% of those match\nthe canonical TATAWAWR, which puts canonical TATA boxes at a few percent of human genes. Broad,\ndispersed-initiation promoters in CpG islands dominate the mammalian genome, and these use the\ninitiator, downstream elements and TFIID-DNA contacts rather than a TATA box. Functionally the\nsplit is informative: TATA-less promoters skew toward housekeeping genes, while TATA-containing\npromoters are enriched for highly regulated, stimulus-responsive and tissue-specific genes,\nincluding many that are strongly induced by stress or hormones. Cryo-EM structures of\npromoter-bound TFIID show TBP being loaded onto the TATA region while other TAFs contact the\ninitiator and downstream promoter, so the TATA box is one anchor point in an extended,\nmulti-contact interaction rather than the sole determinant of where transcription starts.\n\n## Biology and disease\n\nTBP is essential in every organism tested; there is no viable null. Its N-terminal region in\nhumans contains a polyglutamine tract, and expansion of that tract to roughly 43 repeats or more\ncauses spinocerebellar ataxia type 17, a rare autosomal dominant neurodegenerative disorder,\nplacing TBP among the polyglutamine diseases. Mutations in individual TAFs cause developmental\nsyndromes and intellectual disability, and TAF1 variants are associated with X-linked\nneurodevelopmental disease. TATA-box variants in individual promoters cause disease in their own\nright, the classic cases being promoter mutations that reduce beta-globin expression in\nbeta-thalassemia and the TATA-box polymorphism in the UGT1A1 promoter that contributes to\nGilbert syndrome.\n\n## Reading a hit\n\nTreat a TATA match as almost no evidence. TATAWAWR is an eight-base AT-rich pattern with two\ndegenerate positions, expected by chance roughly once every few kilobases on either strand, which\nis hundreds of thousands of matches in a human genome, the overwhelming majority of them nowhere\nnear a promoter. A match is only interesting if it sits 25-30 bp upstream of an annotated or\nmeasured start site in a promoter that otherwise looks focused and AT-rich. It also says nothing\nabout TBP itself, since TBP is present at essentially all active promoters, including TATA-less\nones, where it is positioned by TFIID rather than by sequence. This family is also a good place to\nsee what happens when a ChIP-derived matrix is assigned to the wrong protein. The HOCOMOCO model\nTAF1.H14CORE.0.P.B is AAGATGGCGGC, which is the YY1 motif, not a TBP-like or TAF1-specific\nsequence; YY1 sites are common at focused promoters, so a TAF1 ChIP experiment recovers them.\nLikewise the CIS-BP TBP entry M08231_2.00 is TATTTGCATA, whose core ATTTGCAT is the POU octamer\nread in reverse. Neither model should be used as a TATA box.",
+ "caveats": "The TATA box is the least informative element in common use: eight AT-rich bases read entirely from the minor groove, where A:T and T:A are nearly interchangeable, so the matrix cannot be much better than the physics allows. Expect hundreds of thousands of chance matches per genome and only a few percent of human promoters to carry a real one. A match means nothing without position 25-30 bp upstream of a start site. Two of the five motifs under this key are not TATA boxes: the HOCOMOCO ChIP-derived TAF1 matrix is the YY1 motif, and the CIS-BP TBP entry M08231_2.00 is the POU octamer. Family cohesion is correspondingly low at 0.64.",
+ "refs": [
+  {
+   "cite": "Kim JL, Nikolov DB, Burley SK. Co-crystal structure of TBP recognizing the minor groove of a TATA element. Nature 1993;365:520-7.",
+   "pmid": "8413605",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8413605/"
+  },
+  {
+   "cite": "Kim Y, Geiger JH, Hahn S, et al. Crystal structure of a yeast TBP/TATA-box complex. Nature 1993;365:512-20.",
+   "pmid": "8413604",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8413604/"
+  },
+  {
+   "cite": "Kim JL, Burley SK. 1.9 A resolution refined structure of TBP recognizing the minor groove of TATAAAAG. Nat Struct Biol 1994;1:638-53.",
+   "pmid": "7634103",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7634103/"
+  },
+  {
+   "cite": "Patikoglou GA, Kim JL, Sun L, et al. TATA element recognition by the TATA box-binding protein has been conserved throughout evolution. Genes Dev 1999;13:3217-30.",
+   "pmid": "10617571",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10617571/"
+  },
+  {
+   "cite": "Nikolov DB, Chen H, Halay ED, et al. Crystal structure of a TFIIB-TBP-TATA-element ternary complex. Nature 1995;377:119-28.",
+   "pmid": "7675079",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7675079/"
+  },
+  {
+   "cite": "Yang C, Bolotin E, Jiang T, et al. Prevalence of the initiator over the TATA box in human and yeast genes and identification of DNA motifs enriched in human TATA-less core promoters. Gene 2007;389:52-65.",
+   "pmid": "17123746",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17123746/"
+  },
+  {
+   "cite": "Carninci P, Sandelin A, Lenhard B, et al. Genome-wide analysis of mammalian promoter architecture and evolution. Nat Genet 2006;38:626-35.",
+   "pmid": "16645617",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16645617/"
+  },
+  {
+   "cite": "Vo Ngoc L, Wang YL, Kassavetis GA, et al. The punctilious RNA polymerase II core promoter. Genes Dev 2017;31:1289-1301.",
+   "pmid": "28808065",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28808065/"
+  },
+  {
+   "cite": "Louder RK, He Y, López-Blanco JR, et al. Structure of promoter-bound TFIID and model of human pre-initiation complex assembly. Nature 2016;531:604-9.",
+   "pmid": "27007846",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27007846/"
+  },
+  {
+   "cite": "Weintraub AS, Li CH, Zamudio AV, et al. YY1 Is a Structural Regulator of Enhancer-Promoter Loops. Cell 2017;171:1573-1588.e28.",
+   "pmid": "29224777",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29224777/"
+  },
+  {
+   "cite": "Wang J, Zhuang J, Iyer S, et al. Sequence features and chromatin structure around the genomic regions bound by 119 human transcription factors. Genome Res 2012;22:1798-812.",
+   "pmid": "22955990",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22955990/"
+  },
+  {
+   "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
+   "pmid": "37971293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  }
+ ]
+}

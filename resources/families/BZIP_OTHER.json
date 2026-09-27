@@ -1,0 +1,60 @@
+{
+ "key": "BZIP_OTHER",
+ "aka": [
+  "other bZIP",
+  "unclassified bZIP",
+  "residual bZIP bucket",
+  "CREBZF (Zhangfei/SMILE)",
+  "CREBL2"
+ ],
+ "short": "This is not a family. It is the residual bucket in which bZIP motifs land when they do not belong to any of the defined bZIP families, and in the current data it holds exactly two entries, both from CIS-BP: a cyclic-AMP-response-element-like matrix labelled CREBL2 that was inherited from a Drosophila protein at 64 percent DNA-binding-domain identity, and a short, low-information ACGT-core matrix labelled CREBZF (Zhangfei/SMILE) taken from the mouse ortholog. The two do not resemble each other, and each is closer to a member of another family than to its bucket-mate. Read a hit here as unassigned rather than as a shared motif, and read the underlying proteins as bZIPs that act largely by partnering with, and destabilizing, other bZIPs rather than through a well-mapped element of their own.",
+ "long": "## The factors\n\nOnly two proteins have a motif model in this bucket. CREBZF, also called Zhangfei or SMILE, is a bZIP whose documented mode of action is not sequence-specific activation but interference with other bZIPs. It suppresses CREB3 (Luman) and CREB3L3 (CREBH), both ER-stress transducers in the ATF6/CREB3 family, and it binds XBP1s through its leucine zipper and triggers its proteasomal degradation, reducing induction of unfolded-protein-response genes. Depleting CREBZF has the opposite effect, raising UPR transcript and protein levels. CREBL2 was cloned as a transcript from the chromosome 12p13 interval between ETV6 and CDKN1B, a region recurrently deleted in leukemia, and has since been reported to interact with CREB1 and to promote adipogenesis in 3T3-L1 cells, and to influence metabolism in muscle and liver. Neither protein has an established DNA-binding specificity determined on the human protein. For scale: the human bZIP class has on the order of fifty to sixty members, and the named families in this atlas account for nearly all of the ones with motif models. Several human bZIPs have no model at all in JASPAR 2024, HOCOMOCO v14, CIS-BP or the Vierstra archetypes - ATF5 and NFE2L3 (NRF3) among them - and so appear in no family, including this one.\n\n## The motif\n\nThere is no consensus for this bucket and none should be quoted. The two entries are as follows. CIS-BP M03649, labelled CREBL2, reads GTGACGTCAT - a cyclic-AMP response element. Its provenance record marks it as inferred from a Drosophila melanogaster protein at 64 percent DNA-binding-domain identity, and the family data notes that it resembles the CREB/ATF family. CIS-BP M01813, labelled CREBZF, reads AAACGTAK, a short motif carrying 10.8 bits in total, determined on the mouse ortholog, whose DNA-binding domain is 100 percent identical to the human one. The internal cohesion of the pair is 0.60, the lowest of the eight bZIP groups in this atlas, and for each entry the nearest neighbour across all four source databases lies in a different family. In other words the bucket fails the definition of a family used here - a set of motifs it is reasonable to believe are the same motif - and it fails it by design. Averaging these two matrices, or scanning with a single representative for the group, would mix a CRE with an unrelated short ACGT core.\n\n## Where it acts\n\nNot established, for either protein, in the sense that matters for a motif atlas: there is no published genome-wide occupancy map tied to a validated element for CREBZF or CREBL2 in human cells. Scanning with the CREBL2 matrix will return the same promoter-proximal, CpG-island-associated sites that a CREB1 or ATF7 matrix returns, because it is a CRE; that reflects the borrowed Drosophila specificity rather than measured CREBL2 occupancy. The CREBZF matrix is short and will match very frequently, and its hits should not be treated as CREBZF binding sites. Where CREBZF does act functionally is at unfolded-protein-response genes, but as a partner and destabilizer of XBP1s and of CREB3-family activators, so its effect appears at their elements rather than at one of its own.\n\n## Biology and disease\n\nCREBZF behaves as a brake on the unfolded protein response. It reduces induction of UPR genes after thapsigargin treatment, an effect that depends on its leucine zipper and on degradation of XBP1s, and knocking it down in primary sensory neurons increases UPR gene expression. Mouse and cell work has since linked CREBZF to insulin resistance, macrophage inflammatory responses and adipose browning, with its protein level controlled by nutrient state and by reversible acetylation. CREBL2 has no disease attributed to the gene itself; the 12p13 region in which it sits is deleted in leukemia, but the deletions are not mapped to CREBL2, and the functional literature is confined to adipogenesis and to metabolic phenotypes in muscle, liver and Schwann cells. Neither protein has a knockout phenotype that is routinely cited as defining a cis-element.\n\n## Reading a hit\n\nDo not report a match here as a match to a motif. If a scan returns M03649 (CREBL2), read it as a cyclic-AMP response element and report it to the CREB/ATF family, with the caveat that the matrix is a cross-species transfer from an insect protein at 64 percent domain identity and is not evidence about human CREBL2. If it returns M01813 (CREBZF), the match carries little information and no established in vivo target; it does not license the conclusion that CREBZF binds that sequence in human cells. More generally, a residual bucket exists in a motif ontology so that the well-supported families are not diluted by unresolved single cases, and its contents should be read as unassigned rather than as shared biology. If the question is which bZIP is bound at your site, the informative version of that question is which of the named families - AP-1, CREB/ATF, ATF6/CREB3, C/EBP, MAF, NFE2/BACH or PAR bZIP - the sequence best matches, and whether the flanks let you tell them apart at all.",
+ "caveats": "Treat this as an administrative category, not a biological one. It holds two CIS-BP matrices whose internal similarity is the lowest of any bZIP group here (cohesion 0.60), and both are cross-species transfers: the CREBL2 model comes from a Drosophila protein at 64 percent DNA-binding-domain identity and is simply a CRE, and the CREBZF model comes from mouse and carries little information. Neither protein has a validated human element. A hit in this bucket should be re-reported to whichever named family the sequence actually matches, or left unassigned. Do not build a consensus, a logo or a representative matrix for the group, and do not infer that CREBZF and CREBL2 share a site.",
+ "refs": [
+  {
+   "cite": "Hoornaert I, Marynen P, Baens M. CREBL2, a novel transcript from the chromosome 12 region flanked by ETV6 and CDKN1B. Genomics 1998;51:154-7.",
+   "pmid": "9693048",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9693048/"
+  },
+  {
+   "cite": "Vinson C, Myakishev M, Acharya A, et al. Classification of human B-ZIP proteins based on dimerization properties. Mol Cell Biol 2002;22:6321-35.",
+   "pmid": "12192032",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12192032/"
+  },
+  {
+   "cite": "Ma X, Zhang H, Yuan L, et al. CREBL2, interacting with CREB, induces adipogenesis in 3T3-L1 adipocytes. Biochem J 2011;439:27-38.",
+   "pmid": "21728997",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21728997/"
+  },
+  {
+   "cite": "Zhang R, Rapin N, Ying Z, et al. Zhangfei/CREB-ZF - a potential regulator of the unfolded protein response. PLoS One 2013;8:e77256.",
+   "pmid": "24155933",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24155933/"
+  },
+  {
+   "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
+   "pmid": "25215497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  },
+  {
+   "cite": "Lambert SA, Jolma A, Campitelli LF, et al. The Human Transcription Factors. Cell 2018;172:650-665.",
+   "pmid": "29425488",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29425488/"
+  },
+  {
+   "cite": "Tiebe M, Lutz M, Senyilmaz Tiebe D, et al. Crebl2 regulates cell metabolism in muscle and liver cells. Sci Rep 2019;9:19869.",
+   "pmid": "31882710",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31882710/"
+  },
+  {
+   "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
+   "pmid": "32728250",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  },
+  {
+   "cite": "Cui A, Xue Y, Su W, et al. Glucose regulation of adipose tissue browning by CBP/p300- and HDAC3-mediated reversible acetylation of CREBZF. Proc Natl Acad Sci U S A 2024;121:e2318935121.",
+   "pmid": "38588421",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38588421/"
+  }
+ ]
+}

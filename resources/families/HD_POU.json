@@ -1,0 +1,79 @@
+{
+ "key": "HD_POU",
+ "aka": [
+  "octamer motif",
+  "ATGCAAAT",
+  "Oct site",
+  "OCT1/OCT2 site",
+  "PORE",
+  "MORE",
+  "SOX2-OCT4 composite element",
+  "POU domain factors (TFClass 3.1)"
+ ],
+ "consensus": "ATGCAAAT",
+ "short": "The octamer ATGCAAAT is the site read by the 16 human POU-domain factors, including OCT1/POU2F1, OCT2/POU2F2, PIT1/POU1F1, the BRN2/BRN1 group (POU3F1-4), the BRN3 group (POU4F1-3) and OCT4/POU5F1. What makes the family unusual is the binding unit: a POU-specific domain and a homeodomain joined by a flexible linker, so the two halves of the site can be re-arranged. The same proteins therefore also form dimers on the PORE and MORE elements and sit next to SOX partners in the SOX-OCT composite elements that control pluripotency genes. Hits matter because octamer elements drive immunoglobulin and snRNA promoters and because OCT4 occupancy of SOX-OCT sites is a defining feature of pluripotent cells. The motif is short and AT-rich, so it is common.",
+ "long": "## The factors\n\nSixteen human POU genes fall into six classes: POU1F1 (PIT1), POU2F1-3 (OCT1, OCT2, OCT11/SKN-1a), POU3F1-4 (OCT6, BRN2, BRN1, BRN4), POU4F1-3 (BRN3A/B/C), POU5F1 (OCT4) together with the retrogene-derived POU5F1B locus, and POU6F1/2. All of them use one composite DNA-binding unit, described from sequence in 1988 and named after PIT1, OCT1, OCT2 and *C. elegans* UNC-86: an N-terminal POU-specific domain (POU-S), a four-helix bundle whose helix-turn-helix resembles the bacteriophage lambda and 434 repressors, tethered by a flexible 15-27 residue linker to a C-terminal POU-homeodomain (POU-HD), a conventional 60-residue three-helix homeodomain. Expression is class-restricted. POU2F1 is essentially ubiquitous; POU2F2 is lymphoid; POU5F1 is confined to pluripotent and germ cells; POU3F and POU4F members mark defined neural, retinal and inner-ear lineages; POU1F1 is restricted to the anterior pituitary.\n\n## The motif\n\nThe core is the 8-bp octamer ATGCAAAT, first noted as a conserved element upstream of immunoglobulin genes. The 1994 crystal structure of the OCT1 POU domain on an octamer site showed why the site is bipartite: POU-S grips the 5' ATGCA half and POU-HD the 3' AAAT half, the two domains bind opposite faces of the duplex, and the linker is disordered and contacts no bases. The 3' half is a TAAT-type homeodomain site read in the reverse orientation; POU-S contributes most of the base-specific contacts, which is why the ATGC block is the least tolerant part of the site. Because the linker tethers rather than spaces, the half-sites can be rearranged: two POU domains dimerize on the PORE (ATTTGAAATGCAAAT) or on the MORE (ATGCATATGCAT) using two non-overlapping surface patches, and only the PORE arrangement recruits the coactivator OBF-1/POU2AF1. Pooled across JASPAR, HOCOMOCO, CIS-BP and the Vierstra archetypes, this family's consensus is tTATGCaAATt - the octamer plus its usual flanking T - but cohesion is only 0.68, because many HT-SELEX models for POU3F, POU4F and POU6F members report homeodomain-half arrangements (TGCATAAT, ATTAATTATGCA, TAATTA, TCATTA) instead of the full octamer. Those are configuration variants of one binding unit, not separate specificities.\n\n## Where it acts\n\nOctamer sites are classically promoter-proximal, in immunoglobulin heavy- and light-chain promoters, the histone H2B promoter and snRNA promoters. The best-characterized POU enhancer elements are composite: an OCT4 octamer immediately adjacent to a SOX HMG site. OCT4 and SOX2 dimerize in different relative orientations on the FGF4 and UTF1 enhancers, and it is the arrangement of the two boxes in the DNA, not a switch in the proteins, that sets the geometry. The Vierstra archetype set recovers POU5F/NANOG and POU2F/POU3F clusters, reflecting how routinely these sites are found with partner motifs. Because the octamer is only 8 bp and AT-rich, an exact match is expected on the order of 10^5 times in 3.1 Gb, so the great majority of matches are unoccupied in any one cell type; occupancy tracks which POU class is expressed. Methyl-SELEX places several POU factors among those whose affinity is changed by CpG methylation in flanking positions, although the octamer core itself has no CpG.\n\n## Biology and disease\n\nPOU5F1/OCT4 maintains the pluripotent state and is one of the four factors that reprogram human fibroblasts to induced pluripotent stem cells. POU2F2 with OBF-1 drives immunoglobulin promoter activity in B cells, and the PORE-versus-MORE distinction is the structural explanation for that coactivator dependence. POU3F2 and POU3F3 pattern the neocortex; POU4F1-3 specify sensory neurons, retinal ganglion cells and inner-ear hair cells; POU1F1 controls the growth hormone and prolactin genes. Mendelian loss of POU1F1 causes combined pituitary hormone deficiency, and mutations in POU3F4 and POU4F3 cause X-linked and autosomal dominant deafness respectively. In cancer, POU2F3 defines a tuft-cell-like subtype of small-cell lung carcinoma, and POU5F1 is re-expressed in germ cell tumors.\n\n## Reading a hit\n\nA good octamer match tells you that a POU factor could bind; it does not tell you which one. The in vitro models for POU2F1, POU2F2, POU2F3, POU3F1-4 and POU5F1 are all the same 8-9 bp, so treat a hit as \"POU family\" unless expression data narrow it. Do not read a bare TAATTA or TCATTA match as POU: that is the homeodomain half alone and is shared with most of the homeodomain superfamily, which is exactly why two low-information CIS-BP and Vierstra entries in this family have nearest neighbours in the HOX and Q50 groups. Conversely, a full PORE, MORE or SOX-OCT composite is much stronger evidence, because the spacing constraint is specific. HOCOMOCO ids are informative here: PO2F1.H14CORE.0.PS.A and PO5F1.H14CORE.2.SM.B carry in vitro (S/M) support, whereas the P-only models such as PO3F2.H14CORE.0.P.B come from ChIP alone and may reflect co-binding.",
+ "caveats": "A hit identifies the POU family, not a paralogue: the octamer models for OCT1, OCT2, OCT4 and the BRN proteins are interchangeable at 8-9 bp. The family is only moderately cohesive (0.68) because HT-SELEX returns several linker configurations, and the lowest-information members reduce to TAAT cores indistinguishable from the rest of the homeodomain superfamily; three entries here have nearest neighbours in other homeodomain families. ChIP-derived (P-grade) POU models can capture partner motifs, particularly SOX sites in pluripotent cells. Exact octamers occur roughly 10^5 times genome-wide, so a match alone is weak evidence without expression or footprint support.",
+ "refs": [
+  {
+   "cite": "Parslow TG, Blair DL, Murphy WJ, et al. Structure of the 5' ends of immunoglobulin genes: a novel conserved sequence. Proc Natl Acad Sci U S A 1984;81:2650-4.",
+   "pmid": "6425835",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/6425835/"
+  },
+  {
+   "cite": "Herr W, Sturm RA, Clerc RG, et al. The POU domain: a large conserved region in the mammalian pit-1, oct-1, oct-2, and Caenorhabditis elegans unc-86 gene products. Genes Dev 1988;2:1513-6.",
+   "pmid": "3215510",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3215510/"
+  },
+  {
+   "cite": "Sturm RA, Das G, Herr W. The ubiquitous octamer-binding protein Oct-1 contains a POU domain with a homeo box subdomain. Genes Dev 1988;2:1582-99.",
+   "pmid": "2905684",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2905684/"
+  },
+  {
+   "cite": "Klemm JD, Rould MA, Aurora R, et al. Crystal structure of the Oct-1 POU domain bound to an octamer site: DNA recognition with tethered DNA-binding modules. Cell 1994;77:21-32.",
+   "pmid": "8156594",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8156594/"
+  },
+  {
+   "cite": "Klemm JD, Pabo CO. Oct-1 POU domain-DNA interactions: cooperative binding of isolated subdomains and effects of covalent linkage. Genes Dev 1996;10:27-36.",
+   "pmid": "8557192",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8557192/"
+  },
+  {
+   "cite": "Herr W, Cleary MA. The POU domain: versatility in transcriptional regulation by a flexible two-in-one DNA-binding domain. Genes Dev 1995;9:1679-93.",
+   "pmid": "7622033",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7622033/"
+  },
+  {
+   "cite": "Tomilin A, Reményi A, Lins K, et al. Synergism with the coactivator OBF-1 (OCA-B, BOB-1) is mediated by a specific POU dimer configuration. Cell 2000;103:853-64.",
+   "pmid": "11136971",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11136971/"
+  },
+  {
+   "cite": "Reményi A, Tomilin A, Pohl E, et al. Differential dimer activities of the transcription factor Oct-1 by DNA-induced interface swapping. Mol Cell 2001;8:569-80.",
+   "pmid": "11583619",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11583619/"
+  },
+  {
+   "cite": "Reményi A, Lins K, Nissen LJ, et al. Crystal structure of a POU/HMG/DNA ternary complex suggests differential assembly of Oct4 and Sox2 on two enhancers. Genes Dev 2003;17:2048-59.",
+   "pmid": "12923055",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12923055/"
+  },
+  {
+   "cite": "Takahashi K, Tanabe K, Ohnuki M, et al. Induction of pluripotent stem cells from adult human fibroblasts by defined factors. Cell 2007;131:861-72.",
+   "pmid": "18035408",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18035408/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  },
+  {
+   "cite": "Yin Y, Morgunova E, Jolma A, et al. Impact of cytosine methylation on DNA binding specificities of human transcription factors. Science 2017;356.",
+   "pmid": "28473536",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28473536/"
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "key": "KRAB_ZNF",
+ "aka": [
+  "KZFP",
+  "KRAB-ZFP",
+  "KRAB-ZNF",
+  "Krüppel-associated box zinc finger protein",
+  "tandem C2H2 zinc finger repressors",
+  "poly-zinc-finger genes",
+  "ZNF### genes"
+ ],
+ "short": "KRAB zinc-finger proteins (KZFPs) are the largest family of DNA-binding proteins in the human genome: roughly 350 to 380 genes, most named only ZNF followed by a number. Each combines a KRAB repression domain, which recruits the corepressor TRIM28/KAP1 and the histone methyltransferase SETDB1, with a tandem array of C2H2 zinc fingers that reads a long, protein-specific stretch of DNA. Most of those stretches lie inside transposable elements, and the family has expanded and diversified alongside successive waves of element invasion. This atlas entry is therefore a bucket, not a motif: its 587 matrices come from 304 different proteins, run from 4 to 38 bp, and mostly do not resemble one another. A hit identifies one protein's site, not a family motif.",
+ "long": "## The factors\n\nHuman KZFPs number about 350 in the original survey and 378 in the most complete census, the largest group of transcription factors encoded by tetrapods (Imbeault et al. 2017; de Tribolet-Hardy et al. 2023). The architecture is uniform: an N-terminal KRAB domain, a variable linker, and a tandem array of 4 to more than 30 C2H2 fingers. The KRAB domain binds the corepressor KAP1/TRIM28 (Friedman et al. 1996), which in turn scaffolds the H3K9-specific methyltransferase SETDB1, HP1 proteins and DNA methyltransferases, producing H3K9me3 heterochromatin over the bound site (Schultz et al. 2002). The genes sit in clusters, heavily on chromosome 19, built by repeated gene and segment duplication; the family traces back more than 400 million years, to a common ancestor of coelacanths and tetrapods (Imbeault et al. 2017). Selection has acted specifically on the finger residues that touch DNA, so recent paralogues diverge in specificity while their scaffolds stay similar (Emerson and Thomas 2009). Not all are simple repressors: across 101 KZFP interactomes, those conserved up to placental mammals essentially recruit KAP1, while a subset of more ancient ones interact instead with genome-architecture and RNA-processing factors (Helleboid et al. 2019). Expression is not restricted to stem cells. This entry carries 304 distinct gene symbols, 191 of which have two or more matrices.\n\n## The motif\n\nThere is no family consensus and one should not be invented. Every protein's finger array differs, and each finger specifies roughly three base pairs through a few residues in its recognition helix, so a 10-finger protein can specify 30 bp. That is what the data show: median consensus length 17 bp, 360 of 587 matrices at least 15 bp, 214 at least 20 bp, median information content 16.3 bits, and 149 matrices above 20 bits. The longest is a 31 bp, 50.7-bit model for ZNF550. Family cohesion is 0.37, against values above 0.8 for entries that really are one motif, and the listed representative (CIS-BP M07723, GCTCCCTGC) is just the matrix nearest the centre of a diffuse cloud. Typical examples: ZNF558 ATTTGATGAAAGACATAAATCTACAAATC (29 bp), ZNF611 TCTGGGATGTGAGGAGCGCCTCTGC (42 bits), ZNF75D TGTAATGAATGTGGGAAAGCCTTCA. Recent paralogue pairs are not separable: ZNF417 and ZNF587 share TGGCGCCCAACATGGG, and the same holds for ZNF75A/ZNF75D, ZNF354A/ZNF354B and the ZNF33A/ZNF33B archetypes. A minority of matrices have the opposite problem, being short or low-complexity and therefore non-specific: 24 are under 8 bp, and models for ZNF212 (a TC repeat), ZNF613 (poly-T) and ZNF746 (poly-C) carry high nominal information but no factor-specific content.\n\n## Where it acts\n\nOverwhelmingly inside transposable elements: endogenous retroviral LTRs, L1, SVA and Alu. Most KRAB-containing C2H2 proteins bind specific endogenous retroelements, from currently active families to ancient ones, and also show widespread binding at regulatory regions (Najafabadi et al. 2015). Critically, most element targets have lost all transposition potential, so KZFPs are using conserved element fragments as regulatory platforms long after any arms race ended, creating a largely species-restricted layer of epigenetic regulation (Imbeault et al. 2017). The chromatin context is usually H3K9me3-marked and closed: many KZFPs bind within closed chromatin, each recognizing a distinct set of repeats (Razavi et al. 2026), so these sites are routinely absent from accessibility-based catalogues. A separate niche is the 3' end of the zinc-finger genes themselves, where ZNF274 recruits KAP1 and SETDB1 (Frietze et al. 2010). Occurrence counts track the copy number of the target element subfamily, from hundreds to tens of thousands of loci.\n\n## Biology and disease\n\nDepleting TRIM28 in human or mouse embryonic stem cells derepresses a broad range of transposable elements, which is the baseline phenotype for the family (Imbeault et al. 2017). Individual proteins show how element control becomes gene control. ZNF558 evolved as an L1 suppressor but now regulates a single target, the mitophagy gene SPATA18, in human but not chimpanzee forebrain progenitors, with its own expression set by a variable tandem repeat that differs between the two species (Johansson et al. 2022). More broadly, KZFPs act as context-specific switches that gate element-derived regulatory modules, and mutations in KZFP genes are an emerging cause of human developmental disorders (Davis et al. 2026); Bruno et al. 2019 review the arms race and its consequences for mammalian traits. Imprinting (ZFP57), pancreatic development (ZNF808) and the SVA/L1 restriction factors ZNF91 and ZNF93 have separate entries.\n\n## Reading a hit\n\nStart from the gene symbol on the matrix, not the family. Then check the evidence: of the 285 HOCOMOCO models here, 224 are ChIP-only (evidence code P) and 160 are graded C, with only 49 at grade A, and in vitro codes (S, M) are rare. A ChIP-derived KZFP motif is in practice the consensus of the element the protein sits on, so a match may mean only \"this is that element\". Long, high-information motifs will not arise by chance in a small interval, but they will match every copy of the parent element, so genome-wide enrichment is usually a statement about repeat content. Seventeen matrices here have their closest neighbour in a different family: three resemble ETS motifs, two each MAZ, CTCF, ZNF24 and TBX, and one each STAT, YY1, HNF4, E2F, ZNF384 and ZFP57. That is the expected failure mode of ChIP-derived models, and a reason to check short KZFP hits against the better-characterized families. Finally, most KZFPs are expressed at low levels in restricted contexts, so a sequence match without expression evidence in your cell type is weak.",
+ "caveats": "This entry is a family of proteins, not a motif: cohesion 0.37, with 587 matrices from 304 genes whose sites are largely unrelated. Never report it as a consensus. Most models are ChIP-derived (224 of 285 HOCOMOCO entries, 160 graded C), and for KZFPs that usually means the matrix is the consensus of a transposable element, so a hit may amount to repeat annotation rather than evidence of binding. Recent paralogue pairs such as ZNF417/ZNF587 share a motif outright. Seventeen matrices most closely resemble motifs of other families, including ETS, CTCF and MAZ. Check the gene symbol, the evidence code, the repeat track, and whether the protein is expressed in your cells.",
+ "refs": [
+  {
+   "cite": "Imbeault M, Helleboid PY, Trono D. KRAB zinc-finger proteins contribute to the evolution of gene regulatory networks. Nature 2017;543:550-554.",
+   "pmid": "28273063",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28273063/"
+  },
+  {
+   "cite": "de Tribolet-Hardy J, Thorball CW, Forey R, et al. Genetic features and genomic targets of human KRAB-zinc finger proteins. Genome Res 2023;33:1409-1423.",
+   "pmid": "37730438",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37730438/"
+  },
+  {
+   "cite": "Helleboid PY, Heusel M, Duc J, et al. The interactome of KRAB zinc finger proteins reveals the evolutionary history of their functional diversification. EMBO J 2019;38:e101220.",
+   "pmid": "31403225",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31403225/"
+  },
+  {
+   "cite": "Najafabadi HS, Mnaimneh S, Schmitges FW, et al. C2H2 zinc finger proteins greatly expand the human regulatory lexicon. Nat Biotechnol 2015;33:555-62.",
+   "pmid": "25690854",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25690854/"
+  },
+  {
+   "cite": "Emerson RO, Thomas JH. Adaptive evolution in zinc finger transcription factors. PLoS Genet 2009;5:e1000325.",
+   "pmid": "19119423",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19119423/"
+  },
+  {
+   "cite": "Friedman JR, Fredericks WJ, Jensen DE, et al. KAP-1, a novel corepressor for the highly conserved KRAB repression domain. Genes Dev 1996;10:2067-78.",
+   "pmid": "8769649",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8769649/"
+  },
+  {
+   "cite": "Schultz DC, Ayyanathan K, Negorev D, et al. SETDB1: a novel KAP-1-associated histone H3, lysine 9-specific methyltransferase that contributes to HP1-mediated silencing of euchromatic genes by KRAB zinc-finger proteins. Genes Dev 2002;16:919-32.",
+   "pmid": "11959841",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11959841/"
+  },
+  {
+   "cite": "Johansson PA, Brattås PL, Douse CH, et al. A cis-acting structural variation at the ZNF558 locus controls a gene regulatory network in human brain development. Cell Stem Cell 2022;29:52-69.e8.",
+   "pmid": "34624206",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34624206/"
+  },
+  {
+   "cite": "Frietze S, O'Geen H, Blahnik KR, et al. ZNF274 recruits the histone methyltransferase SETDB1 to the 3' ends of ZNF genes. PLoS One 2010;5:e15082.",
+   "pmid": "21170338",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21170338/"
+  },
+  {
+   "cite": "Bruno M, Mahgoub M, Macfarlan TS. The Arms Race Between KRAB-Zinc Finger Proteins and Endogenous Retroelements and Its Impact on Mammals. Annu Rev Genet 2019;53:393-416.",
+   "pmid": "31518518",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31518518/"
+  },
+  {
+   "cite": "Davis J, Voicu D, Chitnavis U, et al. The role of KRAB zinc-finger proteins in expanding the domestication potential of transposable elements. Nat Genet 2026;58:492-502.",
+   "pmid": "41720928",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41720928/"
+  },
+  {
+   "cite": "Razavi R, Fathi A, Yellan I, et al. Extensive binding of poorly characterized human transcription factors to genomic dark matter. Nat Commun 2026;17.",
+   "pmid": "42557260",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42557260/"
+  }
+ ]
+}

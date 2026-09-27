@@ -1,0 +1,81 @@
+{
+ "key": "HD_TALE",
+ "aka": [
+  "TALE homeodomain",
+  "PBC/MEIS/TGIF class",
+  "PBX site",
+  "PREP1/PKNOX1 site",
+  "PBX-HOX composite site",
+  "hexapeptide-PBX element",
+  "TGATTGAT",
+  "TGACAG",
+  "MEIS half-site",
+  "TGIF site"
+ ],
+ "consensus": "TGACAG",
+ "short": "TALE homeodomain factors - PBX1-4, MEIS1-3, PKNOX1/2 (PREP1/2) and TGIF1/2 with the TGIF2LX/TGIF2LY retrogenes - carry a homeodomain with three extra residues inserted between helices 1 and 2, the Three Amino acid Loop Extension that names the class. That insertion creates a pocket that docks the hexapeptide of HOX proteins, which is how these factors turn otherwise generic HOX binding into specific composite sites. Two cores dominate the family: MEIS, PKNOX and TGIF read TGACAG, usually as the palindrome TGACAGCTGTCA, while PBX proteins read TGAT and assemble PBX-HOX elements (TGATTNAT) and PBX-MEIS elements (TGATTGACAG). These composite sites are the reason HOX and TALE factors have any DNA-level specificity at all.",
+ "long": "## The factors\n\nThe TALE superclass takes its name from a three-residue insertion between helices 1 and 2 of the homeodomain, recognized in 1997 in the MEIS, PBC, KNOX, Iroquois and TGIF groups. The human members here are the PBC class (PBX1-4), the MEIS class (MEIS1-3 and the more distantly related PKNOX1/PKNOX2, also called PREP1 and PREP2), and the TGIF class (TGIF1, TGIF2 and the X- and Y-linked retrogenes TGIF2LX and TGIF2LY). The Iroquois branch is treated separately in this atlas as HD_IRX. Beyond the homeodomain, PBX proteins carry PBC-A and PBC-B domains, and MEIS/PKNOX proteins carry the homologous MEIS/HR domains, through which the two groups heterodimerize with each other. PBX and MEIS/PKNOX are broadly expressed; TGIF1 and TGIF2 are widely expressed transcriptional repressors that also serve as Smad corepressors, linking the family to TGF-beta and NODAL signaling.\n\n## The motif\n\nThe extra three residues do two things. They lengthen the loop so that PBX can accommodate an additional fourth helix and, critically, they form part of a hydrophobic pocket that binds the hexapeptide (YPWM-like) motif found N-terminal to the homeodomain in most HOX proteins. A bare homeodomain reads only a 4-6 bp TAAT-type core, so HOX proteins on their own are nearly indistinguishable. Docking through the TALE pocket assembles a bipartite element: the HOXB1-PBX1 and HOXA9-PBX1 cocrystals show PBX occupying a TGAT half-site and the HOX partner an adjacent TNAT half-site, giving the composite TGATTNATNN, with the identity of the central bases set by the HOX paralogue. MEIS, PKNOX and TGIF read a different core, TGACAG, and in vitro they bind it overwhelmingly as the head-to-head palindrome TGACAGCTGTCA - the highest-information models in this family, up to 22 bits in JASPAR and CIS-BP, reported for TGIF1, TGIF2, PKNOX2, MEIS2 and MEIS3 alike. PBX-MEIS heterodimers instead give the asymmetric composite TGATTGACAG, seen in the ChIP-derived HOCOMOCO models for PBX1, PBX2, PBX3 and PKNOX1. Pooled, the family consensus is TGACAGCt with cohesion 0.74; the TGACAG and TGAT branches are readily distinguished from one another, but within each branch the paralogues are not.\n\n## Where it acts\n\nPBX and MEIS/PKNOX sites are found in developmental enhancers, especially in and around the HOX clusters and in hindbrain and limb enhancers, where the composite elements confer the segment specificity that bare HOX motifs cannot. Genome-wide, PKNOX1/PREP1 and MEIS1 occupy largely independent site sets: PREP1 associates with promoters and housekeeping genes, MEIS1 with promoter-remote developmental regions, and HOX-type sequences co-occur with MEIS1 but not PREP1 binding sites, while PBX1 cooperates with both. Composite element names worth searching for are the PBX-HOX or hexapeptide element and the PBX-MEIS/PREP element; TGIF palindromes additionally co-occur with SMAD sites, reflecting TGIF's role as a Smad corepressor. Because TGACAG is only 6 bp and TGAT only 4, matches to the half-sites are extremely common; the 12-bp TGACAGCTGTCA palindrome, by contrast, is expected only in the low thousands per genome.\n\n## Biology and disease\n\nPBX1 loss in mouse disrupts skeletal patterning and chondrocyte differentiation, and PBX1 haploinsufficiency in humans causes syndromic congenital anomalies of the kidney and urinary tract. MEIS1 is the top locus in genome-wide association studies of restless legs syndrome. In cancer the family is best known for two mechanisms: the t(1;19) fusion E2A-PBX1 in pre-B acute lymphoblastic leukemia, and the collaboration of MEIS1 with HOXA9, where Hoxa9 transforms primary bone marrow cells specifically with Meis1a rather than Pbx1b - a pairing that underlies MLL-rearranged leukemia. Heterozygous TGIF1 mutations cause holoprosencephaly, linking NODAL signaling to human neural axis determination.\n\n## Reading a hit\n\nA TGACAGCTGTCA palindrome is strong evidence for a TALE factor but says nothing about which one: TGIF1, TGIF2, TGIF2LX, TGIF2LY, PKNOX1, PKNOX2, MEIS2 and MEIS3 all have essentially this model. A bare TGACAG or TGAT is too short to act on. The most useful reading is compositional: a TGATTNAT composite points to a PBX-HOX pair, and TGATTGACAG to a PBX-MEIS/PREP pair, and those are the hits worth following up. Note that several PBX and PKNOX models in HOCOMOCO are ChIP-only (P grade), so their TGATTGGC and TGATTGACAG variants may partly reflect the partner's contribution rather than PBX alone; one low-information CIS-BP entry in this family (CTAATTAa) has nearest neighbours in the K50 homeodomain group and is best ignored.",
+ "caveats": "Within each branch the paralogues are interchangeable: the TGACAGCTGTCA palindrome is shared by TGIF1/2, TGIF2LX/2LY, PKNOX1/2 and MEIS1-3, and PBX1-4 share TGAT. Treat a hit as \"TALE, MEIS/TGIF type\" or \"TALE, PBX type\", not as a named protein. Half-site matches (TGACAG, TGAT) occur far too often to interpret. Several PBX and PKNOX models are ChIP-derived only (HOCOMOCO P grade) and their composite forms may carry a partner's half-site, which is informative but is not evidence that PBX alone binds it. One low-information CIS-BP member resolves to a K50 homeodomain site.",
+ "refs": [
+  {
+   "cite": "Bürglin TR. Analysis of TALE superclass homeobox genes (MEIS, PBC, KNOX, Iroquois, TGIF) reveals a novel domain conserved between plants and animals. Nucleic Acids Res 1997;25:4173-80.",
+   "pmid": "9336443",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9336443/"
+  },
+  {
+   "cite": "Chang CP, Shen WF, Rozenfeld S, et al. Pbx proteins display hexapeptide-dependent cooperative DNA binding with a subset of Hox proteins. Genes Dev 1995;9:663-74.",
+   "pmid": "7729685",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7729685/"
+  },
+  {
+   "cite": "Piper DE, Batchelor AH, Chang CP, et al. Structure of a HoxB1-Pbx1 heterodimer bound to DNA: role of the hexapeptide and a fourth homeodomain helix in complex formation. Cell 1999;96:587-97.",
+   "pmid": "10052460",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10052460/"
+  },
+  {
+   "cite": "LaRonde-LeBlanc NA, Wolberger C. Structure of HoxA9 and Pbx1 bound to DNA: Hox hexapeptide and DNA recognition anterior to posterior. Genes Dev 2003;17:2060-72.",
+   "pmid": "12923056",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12923056/"
+  },
+  {
+   "cite": "Shen WF, Montgomery JC, Rozenfeld S, et al. AbdB-like Hox proteins stabilize DNA binding by the Meis1 homeodomain proteins. Mol Cell Biol 1997;17:6448-58.",
+   "pmid": "9343407",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9343407/"
+  },
+  {
+   "cite": "Penkov D, Mateos San Martín D, Fernandez-Díaz LC, et al. Analysis of the DNA-binding profile and function of TALE homeoproteins reveals their specialization and specific interactions with Hox genes/proteins. Cell Rep 2013;3:1321-33.",
+   "pmid": "23602564",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23602564/"
+  },
+  {
+   "cite": "Slattery M, Riley T, Liu P, et al. Cofactor binding evokes latent differences in DNA binding specificity between Hox proteins. Cell 2011;147:1270-82.",
+   "pmid": "22153072",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22153072/"
+  },
+  {
+   "cite": "Moens CB, Selleri L. Hox cofactors in vertebrate development. Dev Biol 2006;291:193-206.",
+   "pmid": "16515781",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16515781/"
+  },
+  {
+   "cite": "Selleri L, Depew MJ, Jacobs Y, et al. Requirement for Pbx1 in skeletal patterning and programming chondrocyte proliferation and differentiation. Development 2001;128:3543-57.",
+   "pmid": "11566859",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11566859/"
+  },
+  {
+   "cite": "Le Tanno P, Breton J, Bidart M, et al. PBX1 haploinsufficiency leads to syndromic congenital anomalies of the kidney and urinary tract (CAKUT) in humans. J Med Genet 2017;54:502-510.",
+   "pmid": "28270404",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28270404/"
+  },
+  {
+   "cite": "Kroon E, Krosl J, Thorsteinsdottir U, et al. Hoxa9 transforms primary bone marrow cells through specific collaboration with Meis1a but not Pbx1b. EMBO J 1998;17:3714-25.",
+   "pmid": "9649441",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9649441/"
+  },
+  {
+   "cite": "Gripp KW, Wotton D, Edwards MC, et al. Mutations in TGIF cause holoprosencephaly and link NODAL signalling to human neural axis determination. Nat Genet 2000;25:205-8.",
+   "pmid": "10835638",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10835638/"
+  }
+ ]
+}

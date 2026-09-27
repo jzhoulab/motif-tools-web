@@ -1,0 +1,85 @@
+{
+ "key": "ZBTB7",
+ "aka": [
+  "ZBTB7A",
+  "LRF",
+  "Pokemon",
+  "FBI-1",
+  "OCZF",
+  "ZBTB7B",
+  "ThPOK",
+  "cKrox",
+  "c-Krox",
+  "Zfp67",
+  "vGAF",
+  "ZBTB7C",
+  "APM-1",
+  "ZNF857A"
+ ],
+ "consensus": "CGACCACC",
+ "short": "ZBTB7A, ZBTB7B and ZBTB7C are BTB/POZ zinc-finger proteins that read short GC-rich sites through four C2H2 fingers and repress or reorganize promoters through the dimerizing BTB domain. ZBTB7A, also called LRF, Pokemon or FBI-1, competes with SP1 at GC boxes, represses the ARF tumor suppressor and the fetal hemoglobin genes, and acts more broadly as a promoter-accessibility factor for other transcription factors. ZBTB7B, better known as ThPOK or cKrox, directs CD4 rather than CD8 T-cell fate and has been proposed as the vertebrate GAGA factor. Because the recognition sites are short, GC-rich and shared with the large SP/KLF motif class, hits in this family are easy to obtain and hard to attribute.",
+ "long": "## The factors\n\nThree paralogues: ZBTB7A (LRF, Pokemon, FBI-1, OCZF), ZBTB7B (ThPOK, cKrox, Zfp67) and the much less studied ZBTB7C (APM-1). Each is 500-600 residues with an N-terminal BTB/POZ domain and four C-terminal C2H2 fingers. The BTB domain homodimerizes and also serves as the corepressor-docking surface, so DNA-bound ZBTB7 proteins arrive as dimers carrying NCoR/SMRT- and HDAC-containing complexes; for ZBTB7B the BTB domain is specifically required for its CD4-lineage function. Expression patterns diverge sharply. ZBTB7A is broadly expressed, with well-characterized roles in hematopoietic stem and progenitor cells, erythroid cells and B versus T lineage choice. ZBTB7B is induced in CD4-committed thymocytes during positive selection and is also expressed in cartilage and skin, where it was first described as c-Krox, a regulator of type I collagen genes. ZBTB7C is expressed at low levels in many tissues and has essentially no dedicated functional literature.\n\n## The motif\n\nThe in vitro consensus supported by the matrices here is a short GC-rich element, CGACCACC, or GGTGGTCG read on the other strand. HT-SELEX models for ZBTB7B (JASPAR MA0694.2) and ZBTB7C (MA0695.2), the CIS-BP entries for both, and the Vierstra archetype AC0529:ZBTB7A/ZBTB7B all converge on it, with 10-14 bits over eight positions. Four adjacent zinc fingers would be expected to read about 12 bases, so this consensus is shorter than the domain can in principle cover, and the flanks are weakly specified. Two other renderings circulate and should not be conflated with it. First, ZBTB7A models in HOCOMOCO and CIS-BP extend the same GACC core into a run of cytosines - written GGGGGGGTC or GACCCCYSCC - and the GC-rich \"GACCCCCCCC\" form is what much of the ZBTB7A literature quotes; whether ZBTB7A genuinely prefers a longer C-run than its paralogues, or whether this reflects the different experiments used, is not resolved by these data. Second, ZBTB7B has been identified as the vertebrate homologue of the Drosophila GAGA factor and reported to associate with purine-rich GAGA sequences, a description that does not match CGACCACC at all. The atlas reports the HT-SELEX consensus because that is what the collections agree on, but a reader should know that three different sequence descriptions exist for this family. Within the family, ZBTB7A, ZBTB7B and ZBTB7C models are 0.96-0.98 similar where they overlap, so the paralogues are not separable by sequence.\n\n## Where it acts\n\nThese are promoter factors. ZBTB7A binds a substantial fraction of human promoters and enhancers, including many NF-kappaB p65 targets, and it associates with promoters independently of the client factor; prebinding by ZBTB7A marks which promoters can undergo factor-induced changes in accessibility. On its own it does not activate. ZBTB7A also competes directly with SP1 for overlapping GC boxes - documented at the RB1 promoter, where it displaces SP1 and recruits corepressors - which is a general hazard for interpreting GC-box hits. Because the site is GC-rich and CpG-containing, matches concentrate in CpG-island promoters. Known target loci include CDKN2A/ARF, RB1, MCAM, BCL2L11 (BIM) and the fetal globin genes HBG1/HBG2.\n\n## Biology and disease\n\nZbtb7a-null mouse embryonic fibroblasts resist oncogene-driven transformation, and ZBTB7A overexpression transforms cells in vitro and in transgenic mice, effects attributable in part to direct repression of ARF; ZBTB7A is overexpressed in several human cancers. In hematopoiesis, ZBTB7A antagonizes Notch to enforce B-cell over T-cell fate, and it is an essential GATA1 target in erythroid development, restraining BIM-dependent apoptosis. ZBTB7A and BCL11A independently repress fetal hemoglobin, making ZBTB7A a target of interest for sickle cell disease and beta-thalassemia therapy. Recurrent ZBTB7A mutations occur in acute myeloid leukemia with t(8;21), where they behave as loss-of-function cooperating lesions. For ZBTB7B, transgenic expression forces MHC class I-restricted thymocytes into the CD4 helper program instead of the CD8 cytotoxic program, and a human multimorphic ThPOK variant has been reported to cause an inborn error of immunity with T-cell defects and fibrosis.\n\n## Reading a hit\n\nThis family sits in the most crowded part of motif space. CGACCACC and the GC-rich GACCCCC variants overlap the recognition space of SP1-SP4, the KLFs, MAZ, PATZ1, E2F and other CpG-island factors, and ZBTB7A is documented to compete with SP1 for the same sites, so sequence cannot assign a GC-box hit to this family with any confidence. Within the family, the three paralogues are indistinguishable; the Vierstra archetype AC0529:ZBTB7A/ZBTB7B is explicit that ZBTB7A and ZBTB7B were not resolved. Provenance is mixed. The ZBTB7B and ZBTB7C JASPAR matrices are HT-SELEX, which supports direct binding, and HOCOMOCO's ZBT7B and ZBT7C models carry in vitro evidence codes (SM and S). The ZBTB7A situation is worse: the JASPAR ZBTB7A matrix MA0750.3 is ChIP-seq-derived and reads CCGGAAGTG, an ETS-family site with no resemblance to any other ZBTB7A model in the family and with its best cross-database match in a different family altogether. That matrix should be treated as reporting a co-bound or indirectly bound ETS element, not ZBTB7A's own preference. Finally, ZBTB7A occupancy is common and largely permissive rather than instructive, so even a correct ZBTB7A call says little about whether the promoter is regulated by it.",
+ "caveats": "The sites are eight or fewer informative bases, GC-rich and CpG-island-associated, and overlap SP/KLF, MAZ and E2F motif space; ZBTB7A is documented to compete with SP1 for the same GC boxes. ZBTB7A, ZBTB7B and ZBTB7C cannot be told apart from sequence, and the Vierstra archetype merges ZBTB7A with ZBTB7B by name. Three different sequence descriptions exist in the literature for this family (CGACCACC, GC-rich GACCCCCCCC, and purine-rich GAGA for ThPOK/vGAF), which are not reconciled. Most importantly, JASPAR MA0750.3 for ZBTB7A is a ChIP-derived ETS-like matrix (CCGGAAGTG) unrelated to the rest of the family; do not scan with it as if it were ZBTB7A.",
+ "refs": [
+  {
+   "cite": "Maeda T, Hobbs RM, Merghoub T, et al. Role of the proto-oncogene Pokemon in cellular transformation and ARF repression. Nature 2005;433:278-85.",
+   "pmid": "15662416",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15662416/"
+  },
+  {
+   "cite": "Maeda T, Merghoub T, Hobbs RM, et al. Regulation of B versus T lymphoid lineage fate decision by the proto-oncogene LRF. Science 2007;316:860-6.",
+   "pmid": "17495164",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17495164/"
+  },
+  {
+   "cite": "Maeda T, Ito K, Merghoub T, et al. LRF is an essential downstream target of GATA1 in erythroid development and regulates BIM-dependent apoptosis. Dev Cell 2009;17:527-40.",
+   "pmid": "19853566",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19853566/"
+  },
+  {
+   "cite": "Masuda T, Wang X, Maeda M, et al. Transcription factors LRF and BCL11A independently repress expression of fetal hemoglobin. Science 2016;351:285-9.",
+   "pmid": "26816381",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26816381/"
+  },
+  {
+   "cite": "Hartmann L, Dutta S, Opatz S, et al. ZBTB7A mutations in acute myeloid leukaemia with t(8;21) translocation. Nat Commun 2016;7:11733.",
+   "pmid": "27252013",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27252013/"
+  },
+  {
+   "cite": "Jeon BN, Yoo JY, Choi WI, et al. Proto-oncogene FBI-1 (Pokemon/ZBTB7A) represses transcription of the tumor suppressor Rb gene via binding competition with Sp1 and recruitment of co-repressors. J Biol Chem 2008;283:33199-210.",
+   "pmid": "18801742",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18801742/"
+  },
+  {
+   "cite": "Ramos Pittol JM, Oruba A, Mittler G, et al. Zbtb7a is a transducer for the control of promoter accessibility by NF-kappa B and multiple other transcription factors. PLoS Biol 2018;16:e2004526.",
+   "pmid": "29813070",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29813070/"
+  },
+  {
+   "cite": "Sun G, Liu X, Mercado P, et al. The zinc finger protein cKrox directs CD4 lineage differentiation during intrathymic T cell positive selection. Nat Immunol 2005;6:373-81.",
+   "pmid": "15750595",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15750595/"
+  },
+  {
+   "cite": "He X, Park K, Kappes DJ. The role of ThPOK in control of CD4/CD8 lineage commitment. Annu Rev Immunol 2010;28:295-320.",
+   "pmid": "20307210",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20307210/"
+  },
+  {
+   "cite": "Srivastava A, Kumar AS, Mishra RK. Vertebrate GAF/ThPOK: emerging functions in chromatin architecture and transcriptional regulation. Cell Mol Life Sci 2018;75:623-633.",
+   "pmid": "28856379",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28856379/"
+  },
+  {
+   "cite": "Vaseghi-Shanjani M, Sharma M, Yousefi P, et al. A multimorphic variant in ThPOK causes an inborn error of immunity with T cell defects and fibrosis. J Exp Med 2025;222.",
+   "pmid": "40392549",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40392549/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  }
+ ]
+}

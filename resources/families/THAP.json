@@ -1,0 +1,73 @@
+{
+ "key": "THAP",
+ "aka": [
+  "THAP domain",
+  "THAP-type zinc finger",
+  "C2CH THAP finger",
+  "P-element transposase-derived DBD",
+  "THAP1",
+  "DYT6 gene product",
+  "THAP12 / DAP4"
+ ],
+ "consensus": "GCAGGGCA",
+ "short": "THAP-type zinc fingers are C2CH modules whose closest known relative is the site-specific DNA-binding domain of the Drosophila P-element transposase, making this a family of domesticated transposase DNA-binding domains. The atlas files six motifs for two proteins, THAP1 and THAP12. THAP1 recognizes a bipartite site - a GCCATCTT-like half and a GGGCA half separated by a short variable spacer - which the trimmed JASPAR model reduces to GCAGGGCA. Crystallography of the fly THAP domain explains the bipartite pattern: a beta-sheet inserts into the major groove while a basic C-terminal loop reads the adjacent minor groove. THAP1 is the DYT6 dystonia gene. THAP11 is deliberately not filed here; it shares the ZNF143 SBS element and is covered by the ZNF143 entry.",
+ "long": "## The factors\n\nThe THAP domain was defined in 2003 as a roughly 90-residue module whose sequence resembles the site-specific DNA-binding domain of the Drosophila melanogaster P-element transposase, carrying a putative metal-coordinating signature of the form CX(2-4)CX(35-53)CX(2)H. A survey across model animals catalogued about 100 distinct THAP proteins, including the human proapoptotic factors THAP1 and DAP4/THAP0, the transcriptional repressor THAP7, and the Caenorhabditis elegans chromatin protein HIM-17 and cell-cycle regulators LIN-36 and LIN-15B. The domain is therefore one of the clearest cases of molecular domestication: a transposase recognition module retained by the host after the mobile element that carried it was lost, a route to new transcription factors seen repeatedly in animal genomes.\n\nThe atlas family itself is small. Six motifs cover two named proteins, THAP1 and THAP12, plus two unnamed Vierstra archetypes labelled only THAP. THAP1 is a ubiquitously expressed nuclear protein encoded at 8p11.21. THAP12 is the protein also known as DAP4 or PRKRIR. THAP11, better known as Ronin, is excluded by design: it binds the same element as ZNF143 and is described in the ZNF143 entry, so a THAP11-labelled motif should be read there, not here.\n\n## The motif\n\nIn vitro binding-site selection with the THAP domain of human THAP1 yielded an 11-nucleotide consensus, and single-nucleotide substitutions within it abolished binding; chelating zinc with 1,10-o-phenanthroline also abolished binding, confirming the domain is a zinc-dependent member of the zinc-finger superfamily. The structural basis came from a crystal structure of the fly P-element transposase THAP domain bound to a natural ten-base-pair site. Unlike a C2H2 finger, the THAP domain docks a conserved beta-sheet into the major groove and a basic C-terminal loop into the adjacent minor groove, and sequence analysis of natural and selected sites suggested a shared bipartite TXXGGGX(A/T) consensus for the fly domain and for human THAP1 and THAP9.\n\nThe atlas models match that description at two different trimmings. The long models keep both halves: HOCOMOCO THAP1.H14CORE.0.P.B reads gccGCCATcTTbgntvcGGGCa over 22 positions, and CIS-BP M08020 gives CGCCATcTTggnTrhGGGCAg at 21.5 bits. The short models keep only the downstream half: JASPAR MA0597.3 and Vierstra archetype AC0141 are both GCAGGGCA, and a second Vierstra archetype AC0478 is the still shorter tnhGGGCA. Family cohesion is moderate at 0.58, driven entirely by this difference in trimming rather than by disagreement about the site. The remaining motif, CIS-BP M02538 for THAP12, carries 3.8 bits of information and is not usable. Label agreement across databases is very low, between 0 and 0.1, which is what an eight-base-pair GC-containing model will always produce: its nearest neighbours in other databases belong to other families.\n\n## Where it acts\n\nTHAP1 occupancy is concentrated at promoters and CpG islands rather than distal enhancers. The best-characterised direct target is TOR1A, the DYT1 dystonia gene, whose promoter THAP1 binds and represses. Because the site includes a GGGCA half that overlaps GC-box-like sequence, matches cluster in the same promoter-proximal, CpG-rich compartment occupied by SP/KLF factors, and mouse work indicates THAP1 acts on that same regulatory space. Note the separation of labour within the wider domain family: the hyperconserved promoter element bound by Ronin/THAP11 together with HCF-1 at genes controlling embryonic stem cell growth is the ZNF143 SBS, not the THAP1 site.\n\n## Biology and disease\n\nHeterozygous THAP1 mutations cause DYT6, an autosomal dominant primary torsion dystonia with prominent cranio-cervical and laryngeal involvement. Many of the pathogenic substitutions fall inside the THAP domain and reduce DNA binding directly, which is why this family is one of the few where a motif model maps onto a molecular disease mechanism. THAP1 represses TOR1A, linking the DYT6 and DYT1 loci in one pathway. DYT6-mutant THAP1 behaves as a cell-type-dependent regulator of the SP1 family, and mouse Thap1 loss produces transcriptional deficits that converge on pathways shared with other dystonic syndromes. Elsewhere in the domain family, Ronin/THAP11 is essential for mouse embryogenesis and for embryonic stem cell pluripotency.\n\n## Reading a hit\n\nUse the long model if you can. GCAGGGCA is eight base pairs of partly GC-rich sequence and will match tens of thousands of times in a 3.1 Gb genome, most of them meaningless; the 22-base-pair bipartite HOCOMOCO model is far more specific because it requires both halves and the spacer. A hit identifies a THAP-domain site, not a protein: the bipartite consensus is shared by THAP1, THAP9 and the fly P-element transposase itself. Condition on a promoter or CpG island context and on THAP1 expression. If your hit instead resembles the ACTACA-containing SBS element, you are looking at THAP11 and should read the ZNF143 entry. Ignore the THAP12 model entirely.",
+ "caveats": "The family carries only six motifs for two proteins, and one of them, CIS-BP M02538 for THAP12, has 3.8 bits and no usable information. The HOCOMOCO THAP1 model is ChIP-only (evidence code P, grade B), so within the atlas there is no in vitro support for it, although independent binding-site selection and a crystal structure of the homologous fly domain support the same bipartite site in the literature. Short GCAGGGCA-style matches are common and largely uninformative on their own. Nothing in the motif separates THAP1 from THAP9 or from the ancestral P-element transposase domain. THAP11 is intentionally absent from this family: its site is the ZNF143 SBS and belongs to that entry.",
+ "refs": [
+  {
+   "cite": "Roussigne M, Kossida S, Lavigne AC, et al. The THAP domain: a novel protein motif with similarity to the DNA-binding domain of P element transposase. Trends Biochem Sci 2003;28:66-9.",
+   "pmid": "12575992",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12575992/"
+  },
+  {
+   "cite": "Clouaire T, Roussigne M, Ecochard V, et al. The THAP domain of THAP1 is a large C2CH module with zinc-dependent sequence-specific DNA-binding activity. Proc Natl Acad Sci U S A 2005;102:6907-12.",
+   "pmid": "15863623",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15863623/"
+  },
+  {
+   "cite": "Sabogal A, Lyubimov AY, Corn JE, et al. THAP proteins target specific DNA sites through bipartite recognition of adjacent major and minor grooves. Nat Struct Mol Biol 2010;17:117-23.",
+   "pmid": "20010837",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20010837/"
+  },
+  {
+   "cite": "Fuchs T, Gavarini S, Saunders-Pullman R, et al. Mutations in the THAP1 gene are responsible for DYT6 primary torsion dystonia. Nat Genet 2009;41:286-8.",
+   "pmid": "19182804",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19182804/"
+  },
+  {
+   "cite": "Kaiser FJ, Osmanoric A, Rakovic A, et al. The dystonia gene DYT1 is repressed by the transcription factor THAP1 (DYT6). Ann Neurol 2010;68:554-9.",
+   "pmid": "20976771",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20976771/"
+  },
+  {
+   "cite": "Cheng F, Zheng W, Barbuti PA, et al. DYT6 mutated THAP1 is a cell type dependent regulator of the SP1 family. Brain 2022;145:3968-3984.",
+   "pmid": "35015830",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35015830/"
+  },
+  {
+   "cite": "Frederick NM, Shah PV, Didonna A, et al. Loss of the dystonia gene Thap1 leads to transcriptional deficits that converge on common pathogenic pathways in dystonic syndromes. Hum Mol Genet 2019;28:1343-1356.",
+   "pmid": "30590536",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30590536/"
+  },
+  {
+   "cite": "Dejosez M, Krumenacker JS, Zitur LJ, et al. Ronin is essential for embryogenesis and the pluripotency of mouse embryonic stem cells. Cell 2008;133:1162-74.",
+   "pmid": "18585351",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18585351/"
+  },
+  {
+   "cite": "Dejosez M, Levine SS, Frampton GM, et al. Ronin/Hcf-1 binds to a hyperconserved enhancer element and regulates genes involved in the growth of embryonic stem cells. Genes Dev 2010;24:1479-84.",
+   "pmid": "20581084",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20581084/"
+  },
+  {
+   "cite": "Sinzelle L, Izsvák Z, Ivics Z. Molecular domestication of transposable elements: from detrimental parasites to useful host genes. Cell Mol Life Sci 2009;66:1073-93.",
+   "pmid": "19132291",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19132291/"
+  },
+  {
+   "cite": "Jangam D, Feschotte C, Betrán E. Transposable Element Domestication As an Adaptation to Evolutionary Conflicts. Trends Genet 2017;33:817-831.",
+   "pmid": "28844698",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28844698/"
+  }
+ ]
+}

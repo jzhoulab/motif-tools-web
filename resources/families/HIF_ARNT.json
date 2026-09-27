@@ -1,0 +1,78 @@
+{
+ "key": "HIF_ARNT",
+ "aka": [
+  "HRE",
+  "Hypoxia response element",
+  "HIF binding site (HBS)",
+  "RCGTG core",
+  "ARNT / HIF-1beta site",
+  "EPAS1 / HIF-2alpha",
+  "bHLH-PAS factors"
+ ],
+ "consensus": "RCGTG",
+ "short": "The hypoxia response element is the site read by HIF, a heterodimer of an oxygen-labile alpha subunit (HIF-1alpha, HIF-2alpha/EPAS1, HIF-3alpha) and the constitutive beta subunit ARNT (HIF-1beta) or its paralogue ARNT2. Both partners are bHLH-PAS proteins. The element is an asymmetric E-box half-site pair: ARNT reads the 3' GTG and the alpha subunit reads a 5' half that is usually TAC or GAC, giving the five-base core (A/G)CGTG, most often written in context as ...TACGTGC... When oxygen is plentiful the alpha subunits are prolyl-hydroxylated and destroyed by the VHL ubiquitin ligase, so occupancy of these sites is a direct readout of oxygen availability. HIF drives erythropoietin, VEGFA and the glycolytic genes, and the pathway is constitutively active in VHL-mutant kidney cancer.",
+ "long": "## The factors\n\nHIF is an obligate heterodimer of one oxygen-regulated alpha subunit and one constitutive beta subunit. The alpha subunits are HIF-1alpha (*HIF1A*), HIF-2alpha (*EPAS1*) and HIF-3alpha (*HIF3A*, which produces several splice isoforms, some of them dominant-negative); the beta subunits are ARNT (also called HIF-1beta) and the brain- and kidney-enriched paralogue ARNT2. All are bHLH-PAS proteins: a basic helix-loop-helix domain followed by PAS-A and PAS-B. Alpha-subunit prolines are hydroxylated by the PHD enzymes, creating the binding site for the VHL ubiquitin ligase; a separate asparagine hydroxylation by FIH blocks p300/CBP recruitment (Kaelin and Ratcliffe 2008). HIF-1alpha is close to ubiquitous; HIF-2alpha is enriched in endothelium, kidney interstitium, lung and sympathoadrenal tissue. ARNT is the shared partner of the whole bHLH-PAS class: it also dimerizes with AHR, SIM1/2 and NPAS factors, and forms homodimers. Loss of *Arnt* in mice is embryonic lethal around E10.5 with defective angiogenesis and placental vascularization (Maltepe et al. 1997). HIF-1 was first defined as the hypoxia-inducible activity at the erythropoietin enhancer (Semenza and Wang 1992) and then identified as a bHLH-PAS heterodimer (Wang et al. 1995).\n\n## The motif\n\nThe core is (A/G)CGTG, conventionally written RCGTG. Unlike the palindromic E-box CACGTG, the HIF site is an asymmetric pair of half-sites: selection experiments assign the 3' half-site GTG to ARNT, while the 5' half comes from the partner (AHR prefers T(C/T)GC and SIM prefers GT(G/A)C, so ARNT is the constant element in all of them) (Swanson et al. 1995). For HIF the 5' half is usually TAC or GAC, so the full site reads TACGTGC or GACGTGC. One substitution, C to T at the first position, is therefore all that separates an HRE from a canonical E-box. Crystal structures of mouse HIF-2alpha-ARNT and HIF-1alpha-ARNT bound to an HRE show ARNT spiraling around the outside of the alpha subunit; the DNA-reading head rotates and extends and cooperates with a distal PAS domain, and cancer-associated alpha-subunit mutations map to residues that establish DNA binding (Wu et al. 2015). Systematic measurements across the family find 12-15 bp footprints in which flanking-base preferences, not the core, distinguish members that share a core (Bersten et al. 2026). The consensus computed from the 19 members here is ACGTGc, core plus a 3' C preference, matching the compiled consensus HRE (Wenger et al. 2005). Nothing in the sequence distinguishes HIF-1alpha from HIF-2alpha (Smythies et al. 2019). Two entries need care: JASPAR EPAS1 (MA2325.1) is written GCACGTAC, the reverse complement of GTACGTGC, so it is the same site on the other strand; JASPAR Arnt (MA0004.1) is an ARNT-homodimer palindrome, not an HRE.\n\n## Where it acts\n\nRCGTG is expected several million times per strand in a 3-Gb genome, and only a small fraction is ever occupied. Chromatin is the dominant filter: occupancy is enriched roughly 20-fold at DNase-hypersensitive sites that were already open in normoxia, irrespective of distance from promoters (Schodel et al. 2011). Confirmed sites number in the hundreds to low thousands per cell type and often lie far from the genes they regulate. The two isoforms partition consistently: HIF-1 is biased toward promoter-proximal sites and HIF-2 toward promoter-distant sites, each with a cell-type-specific repertoire that does not redistribute with hypoxia severity or duration (Smythies et al. 2019). Because the core contains a CpG, HREs cluster with CpG-rich promoters and are sensitive to DNA methylation. Functional HREs generally need neighboring sequence, historically called the HIF ancillary sequence, and commonly co-occur with CREB/ATF, SP1 and AP-1 sites (Wenger et al. 2005).\n\n## Biology and disease\n\nHIF targets include *EPO*, *VEGFA*, the glucose transporter *SLC2A1*, *LDHA*, *PDK1* and *CA9*, coordinating oxygen delivery with a shift to glycolysis. Biallelic *VHL* loss in clear-cell renal carcinoma leaves HIF-2 constitutively active, which made the PAS-B pocket seen in the HIF structures a drug target (Wu et al. 2015; Kaelin and Ratcliffe 2008). Somatic gain-of-function *EPAS1* mutations that block hydroxylation cause paraganglioma with polycythemia (Zhuang et al. 2012), and *EPAS1* carries the strongest selection signal in Tibetan high-altitude adaptation (Yi et al. 2010). The pathway is also the target of prolyl-hydroxylase inhibitors used for renal anemia.\n\n## Reading a hit\n\nAn RCGTG match on its own licenses almost no conclusion: five informative base pairs occur millions of times, and the great majority are never bound. Treat it as a candidate only in accessible chromatin, and preferably with hypoxia-responsive expression nearby. A hit cannot tell you which alpha subunit bound, and it barely distinguishes HIF:ARNT from the other ARNT complexes: AHR:ARNT prefers GCGTG, SIM:ARNT GT(G/A)CGTG, and ARNT homodimers the palindromic CACGTG, so the discriminating information sits in one or two weakly constrained positions. Evidence is skewed: eight of the ten HOCOMOCO models here are ChIP-only (letter P) at grade B or C, supporting \"this region was occupied in cells\" rather than \"this protein binds this sequence\"; the one HT-SELEX model, ARNT2.H14CORE.2.S.C, is a palindromic CACGTGAC of the kind an ARNT2 homodimer makes. The CIS-BP ARNT entry M01719_2.00 is transferred from mouse at 100% DNA-binding-domain identity: safe, but not a human measurement. The Vierstra archetype AC0072:HIF1A/ARNT is named after the factors whose motifs clustered together and is not a claim that HIF1A and ARNT can be told apart.",
+ "caveats": "The core is only five informative base pairs, so chance matches vastly outnumber real sites and a hit is close to uninformative without chromatin or expression evidence. HIF-1alpha and HIF-2alpha share one consensus and cannot be distinguished by sequence; neither can HIF:ARNT be cleanly separated from AHR:ARNT, SIM:ARNT or ARNT homodimers, since all read CGTG with differences at one or two flanking positions. Most HOCOMOCO models here are ChIP-only at grade B or C, so they reflect occupied regions and may include indirect binding; ChIP peaks lacking any RCGTG are well documented. The ARNT entries in JASPAR and CIS-BP include palindromic E-boxes that are homodimer, not HIF, motifs, and one JASPAR entry is written on the opposite strand.",
+ "refs": [
+  {
+   "cite": "Semenza GL, Wang GL. A nuclear factor induced by hypoxia via de novo protein synthesis binds to the human erythropoietin gene enhancer at a site required for transcriptional activation. Mol Cell Biol 1992;12:5447-54.",
+   "pmid": "1448077",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1448077/"
+  },
+  {
+   "cite": "Wang GL, Jiang BH, Rue EA, et al. Hypoxia-inducible factor 1 is a basic-helix-loop-helix-PAS heterodimer regulated by cellular O2 tension. Proc Natl Acad Sci U S A 1995;92:5510-4.",
+   "pmid": "7539918",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7539918/"
+  },
+  {
+   "cite": "Swanson HI, Chan WK, Bradfield CA. DNA binding specificities and pairing rules of the Ah receptor, ARNT, and SIM proteins. J Biol Chem 1995;270:26292-302.",
+   "pmid": "7592839",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7592839/"
+  },
+  {
+   "cite": "Maltepe E, Schmidt JV, Baunoch D, et al. Abnormal angiogenesis and responses to glucose and oxygen deprivation in mice lacking the protein ARNT. Nature 1997;386:403-7.",
+   "pmid": "9121557",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9121557/"
+  },
+  {
+   "cite": "Wenger RH, Stiehl DP, Camenisch G. Integration of oxygen signaling at the consensus HRE. Sci STKE 2005;2005:re12.",
+   "pmid": "16234508",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16234508/"
+  },
+  {
+   "cite": "Kaelin WG Jr, Ratcliffe PJ. Oxygen sensing by metazoans: the central role of the HIF hydroxylase pathway. Mol Cell 2008;30:393-402.",
+   "pmid": "18498744",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18498744/"
+  },
+  {
+   "cite": "Yi X, Liang Y, Huerta-Sanchez E, et al. Sequencing of 50 human exomes reveals adaptation to high altitude. Science 2010;329:75-8.",
+   "pmid": "20595611",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20595611/"
+  },
+  {
+   "cite": "Schödel J, Oikonomopoulos S, Ragoussis J, et al. High-resolution genome-wide mapping of HIF-binding sites by ChIP-seq. Blood 2011;117:e207-17.",
+   "pmid": "21447827",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21447827/"
+  },
+  {
+   "cite": "Zhuang Z, Yang C, Lorenzo F, et al. Somatic HIF2A gain-of-function mutations in paraganglioma with polycythemia. N Engl J Med 2012;367:922-30.",
+   "pmid": "22931260",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22931260/"
+  },
+  {
+   "cite": "Wu D, Potluri N, Lu J, et al. Structural integration in hypoxia-inducible factors. Nature 2015;524:303-8.",
+   "pmid": "26245371",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26245371/"
+  },
+  {
+   "cite": "Smythies JA, Sun M, Masson N, et al. Inherent DNA-binding specificities of the HIF-1α and HIF-2α transcription factors in chromatin. EMBO Rep 2019;20.",
+   "pmid": "30429208",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30429208/"
+  },
+  {
+   "cite": "Bersten DC, McDougal DP, Sullivan AE, et al. Multimodal bHLH-PAS DNA binding controls specificity and drives obesity. Nucleic Acids Res 2026;54.",
+   "pmid": "41495897",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41495897/"
+  }
+ ]
+}

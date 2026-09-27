@@ -1,0 +1,77 @@
+{
+ "key": "USF",
+ "aka": [
+  "USF site",
+  "MLTF",
+  "major late transcription factor",
+  "upstream stimulatory factor",
+  "GTCACGTGAC E-box",
+  "extended E-box"
+ ],
+ "consensus": "GTCACGTGAC",
+ "short": "USF1 and USF2 are ubiquitously expressed bHLH-LZ proteins, first purified as the adenovirus major late transcription factor (MLTF), that bind DNA as homodimers and heterodimers. They read a canonical E-box core, but with a characteristic extended palindromic preference, GTCACGTGAC: the T and A flanks are what separate a USF site from a MYC-MAX site, which prefers C and G there. Because both proteins are constitutive, USF motifs turn up in a very large number of accessible promoters and CpG islands in every cell type, making USF one of the most frequently recovered motifs in promoter and footprint analyses. Human genetics links USF1 variants to familial combined hyperlipidemia.",
+ "long": "## The factors\n\nUSF1 and USF2 are ubiquitous basic helix-loop-helix leucine zipper (bHLH-LZ) proteins of about 43 and 44 kDa, originally purified as the factor that stimulates transcription from the adenovirus major late promoter and therefore also called MLTF. They bind DNA as homodimers and as USF1-USF2 heterodimers; besides the bHLH-LZ they carry a USF-specific region (USR) immediately N-terminal to the basic domain that is required for activation but not for binding. A third gene, USF3 (KIAA2018), encodes a much larger protein with a divergent bHLH and no leucine zipper, and is not a simple USF1/USF2 paralogue. Both USF1 and USF2 are expressed in essentially all tissues, which is one reason USF sites appear in so many promoters. In mice, loss of either gene alone is tolerated and the two cross-regulate asymmetrically, with Usf2 loss reducing total USF DNA-binding activity more than Usf1 loss; combined loss was reported to be embryonic lethal. The atlas assigns 8 motifs to this family (2 JASPAR, 3 HOCOMOCO, 2 CIS-BP, 1 Vierstra archetype) over the symbols USF1, USF2 and USF3, with high cohesion (0.94) and USF1.H14CORE.0.PSM.A as the representative.\n\n## The motif\n\nUSF reads the canonical E-box CACGTG, but what defines the family in practice is the extended, strongly palindromic form GTCACGTGAC: a pyrimidine-purine flank on each side that USF prefers and that MYC-MAX does not. The bHLH-LZ fold places one basic helix in each half of the major groove, where a conserved histidine, glutamate and arginine read the CAC triplet; the crystallographic analysis of the USF b/HLH/Z domain showed the same recognition geometry as Max, with the leucine zipper fixing dimer choice. Because core contacts are shared across the bHLH-ZIP class, almost all of the discriminating information in a USF model sits in the two flanking positions, and in vitro base-preference measurements confirmed that USF and MYC family proteins differ mainly there rather than in the core. Flanking preference of this kind is largely mediated by local DNA shape rather than by new base contacts. Variants matter: the JASPAR USF1 model MA0093.4 is a CATGTG-type site (GTCATGTGAC), so USF tolerates the class-A-like half-site as well. The central CG of the core is a CpG, so occupancy can be modulated by DNA methylation; the HOCOMOCO USF1 and USF2 models carry both HT-SELEX and methyl-HT-SELEX support. The HOCOMOCO USF3 model is an outlier: its consensus GgCCACGTGGg has MYC-like C/G flanks and its nearest neighbours across the four databases sit outside this family.\n\n## Where it acts\n\nUSF1 and USF2 are promoter factors. They occupy tens of thousands of accessible, mostly promoter-proximal and CpG-island regions in essentially every cell type examined, which makes USF one of the most commonly recovered motifs in promoter analyses and in DNase footprint atlases. Because both proteins are constitutive, USF occupancy is not a cell-type marker; the dependence is on accessibility and on methylation state rather than on a tissue-restricted partner. USF sites are frequently found close to TATA-less initiators, in housekeeping and metabolic gene promoters, and in composite arrangements with other promoter-proximal factors. The Vierstra footprint archetype covering these motifs is labelled AC0066:USF/BHLHE:bHLH - that is, USF motifs cluster with BHLHE40/41 motifs and were not separable in the footprint data.\n\n## Biology and disease\n\nUSF1/USF2 targets are enriched for lipid and glucose metabolism, stress response and cell-cycle genes, and the pair have been characterized as stress-responsive general regulators rather than as a developmental switch. The clearest human genetic link is metabolic: variants in USF1 are associated with familial combined hyperlipidemia, one of the more common inherited dyslipidemias, in Finnish and subsequently other cohorts. USF3 is a separate story; a germline compound heterozygous poly-glutamine deletion in USF3 has been reported in predisposition to heritable and sporadic epithelial thyroid carcinoma. Because USF binding is methylation-sensitive, USF sites are also discussed in the context of promoter CpG island hypermethylation.\n\n## Reading a hit\n\nA GTCACGTGAC match is better evidence for USF than a bare CACGTG, but it is not proof. MITF, TFE3, TFEB and TFEC prefer exactly the same extended palindrome, and BHLHE41 and CLOCK-BMAL1 models look very similar; a strong T/A-flanked E-box narrows the candidate set to USF plus MITF/TFE plus BHLHE41 rather than to one factor. USF1 and USF2 are not distinguishable from each other by sequence at all, so a hit identifies USF, not a paralogue. Do not read the USF3 model as a USF site: it is MYC-flanked and clusters away from USF1/USF2. Given the number of genomic E-boxes, treat a single hit as a hypothesis.",
+ "caveats": "The extended GTCACGTGAC form is shared with MITF, TFE3, TFEB, TFEC and BHLHE41, so it narrows a hit to a T/A-flanked E-box group, not to USF. USF1 and USF2 are indistinguishable by sequence. The Vierstra footprint archetype that carries these motifs is labelled USF/BHLHE, which is an explicit statement that USF and BHLHE40/41 motifs did not separate. The HOCOMOCO USF3 model has MYC-like CCACGTGG flanks and its nearest neighbours lie outside this family, so it should not be used as a USF site definition. USF occupancy is also methylation-sensitive because the core contains a CpG, so a sequence match says nothing about binding in a methylated promoter.",
+ "refs": [
+  {
+   "cite": "Sawadogo M, Roeder RG. Interaction of a gene-specific transcription factor with the adenovirus major late promoter upstream of the TATA box region. Cell 1985;43:165-75.",
+   "pmid": "4075392",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/4075392/"
+  },
+  {
+   "cite": "Sawadogo M. Multiple forms of the human gene-specific transcription factor USF. II. DNA binding properties and transcriptional activity of the purified HeLa USF. J Biol Chem 1988;263:11994-2001.",
+   "pmid": "3403559",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3403559/"
+  },
+  {
+   "cite": "Gregor PD, Sawadogo M, Roeder RG. The adenovirus major late transcription factor USF is a member of the helix-loop-helix group of regulatory proteins and binds to DNA as a dimer. Genes Dev 1990;4:1730-40.",
+   "pmid": "2249772",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2249772/"
+  },
+  {
+   "cite": "Ferré-D'Amaré AR, Pognonec P, Roeder RG, et al. Structure and function of the b/HLH/Z domain of USF. EMBO J 1994;13:180-9.",
+   "pmid": "8306960",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8306960/"
+  },
+  {
+   "cite": "Bendall AJ, Molloy PL. Base preferences for DNA binding by the bHLH-Zip protein USF: effects of MgCl2 on specificity and comparison with binding of Myc family members. Nucleic Acids Res 1994;22:2801-10.",
+   "pmid": "8052536",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8052536/"
+  },
+  {
+   "cite": "Sirito M, Lin Q, Deng JM, et al. Overlapping roles and asymmetrical cross-regulation of the USF proteins in mice. Proc Natl Acad Sci U S A 1998;95:3758-63.",
+   "pmid": "9520440",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9520440/"
+  },
+  {
+   "cite": "Pajukanta P, Lilja HE, Sinsheimer JS, et al. Familial combined hyperlipidemia is associated with upstream transcription factor 1 (USF1). Nat Genet 2004;36:371-6.",
+   "pmid": "14991056",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/14991056/"
+  },
+  {
+   "cite": "Corre S, Galibert MD. Upstream stimulating factors: highly versatile stress-responsive transcription factors. Pigment Cell Res 2005;18:337-48.",
+   "pmid": "16162174",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16162174/"
+  },
+  {
+   "cite": "Gordân R, Shen N, Dror I, et al. Genomic regions flanking E-box binding sites influence DNA binding specificity of bHLH transcription factors through DNA shape. Cell Rep 2013;3:1093-104.",
+   "pmid": "23562153",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23562153/"
+  },
+  {
+   "cite": "Ni Y, Seballos S, Fletcher B, et al. Germline compound heterozygous poly-glutamine deletion in USF3 may be involved in predisposition to heritable and sporadic epithelial thyroid carcinoma. Hum Mol Genet 2017;26:243-257.",
+   "pmid": "28011713",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28011713/"
+  },
+  {
+   "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
+   "pmid": "32728250",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  },
+  {
+   "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
+   "pmid": "37971293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "key": "HD_CUT",
+ "aka": [
+  "CUT homeodomain",
+  "CDP",
+  "CCAAT displacement protein",
+  "Clox",
+  "CUTL1",
+  "CDP/Cut/Cux",
+  "ATCGAT",
+  "ATCRAT",
+  "MAR/SAR-binding protein",
+  "base-unpairing region (BUR)",
+  "SATB1/SATB2 site"
+ ],
+ "consensus": "ATCGAT",
+ "short": "CUX1, CUX2 and the SATB proteins SATB1 and SATB2 bind DNA with two kinds of domain at once: CUT repeats, each an independent ~70-residue DNA-binding module, plus a homeodomain. The combination shifts the preferred site away from the generic TAAT core of other homeodomain proteins toward ATCGAT, usually embedded in a longer near-palindrome such as TAATCGATTA. CUT repeats also bind CCAAT boxes, which is how CUX1 earned its older name, CCAAT displacement protein. SATB1 and SATB2 use their CUT-like domain differently, recognizing AT-rich matrix-attachment regions rather than ATCGAT. CUX1 is a haploinsufficient tumor suppressor in myeloid and other cancers, and SATB1 and SATB2 organize chromatin over long distances in T cells and bone.",
+ "long": "## The factors\n\nFour human proteins make up this family. CUX1 (also CDP, CUTL1, CASP, Clox) and CUX2 each carry three evolutionarily conserved 73-residue CUT repeats followed by a CUT-type homeodomain. SATB1 and SATB2 carry a CUT-like domain of two repeats plus a homeodomain, and additionally an N-terminal ubiquitin-like dimerization domain, so they act as oligomers. CUX1 is broadly expressed and produces multiple isoforms by alternative splicing and proteolytic processing, which changes how many CUT repeats a given isoform contains and therefore how it binds DNA. CUX2 is largely neural. SATB1 is highest in thymocytes and T cells; SATB2 is expressed in osteoblasts, cortical neurons and intestinal epithelium, where it is used clinically as a lineage marker.\n\n## The motif\n\nThe defining feature is that the homeodomain does not work alone. In vitro selection with the mammalian Cut proteins returned the palindromic consensus (t/a)(a/t)tATCGATTAt(t/c)(t/g)(t/a) - an ATCGAT core with a homeodomain ATTA motif adjacent - and showed that CUT repeat 2 binds DNA independently of the homeodomain, preferring CCAAT boxes and an ATTA core, and that the repeat and the homeodomain interact even without DNA, greatly increasing the affinity of the pair. A separate study of CUT repeats 1 and 3 found broad, overlapping specificities, binding as dimers, with flanking sequence contributing measurably, and concluded that the native human Cut-like protein prefers a site with an ATCGAT core flanked by G/C-rich sequence rather than one built around ATTA. Both pictures are visible in the pooled data here: the family consensus is TaATCGATa, JASPAR gives CUX1 TAATCGATA and CUX2 TaATCGATa, HOCOMOCO HT-SELEX models give TATCGATTA, and two Vierstra archetypes recover tandem ATCGAT (ATCgATaannttATCGAT) and, strikingly, CCAATAATCGAT - a CCAAT box abutting the homeodomain site, exactly the arrangement the biochemistry predicts. ATCGAT contains a CpG, and because CpG is depleted several-fold in the human genome outside CpG islands, exact matches are considerably rarer than a naive 6-mer calculation suggests; they are also candidates for methylation-sensitive binding. Note that the SATB1 models in this family look different: the ChIP-derived HOCOMOCO entries read ataATtAwtAcTAATAAtt and tACTAATAATtA, and the JASPAR model CTAATAA - AT-rich rather than ATCGAT.\n\n## Where it acts\n\nCUX1 and CUX2 sites occur in promoters, where CUT-repeat binding to CCAAT elements displaces CCAAT-box activators, and in enhancers of differentiation genes. SATB1 and SATB2 bind base-unpairing regions - AT-rich stretches with an ATC sequence context, one strand rich in A, T and C but not G - that occur in matrix- or scaffold-attachment regions. SATB1 anchors such regions into a cage-like nuclear structure and recruits chromatin remodelling activity to regulate genes tens of kilobases away, most clearly across the T-helper-2 cytokine locus and the MHC class I region. So although the two halves of this family share a domain architecture, they occupy different kinds of sequence: CUX hits tend to be discrete ATCGAT-containing sites, SATB hits broad AT-rich regions.\n\n## Biology and disease\n\nInactivating CUX1 mutations behave as haploinsufficient tumor-promoting events across cancer types, and CUX1 lies in the commonly deleted 7q22 region of myeloid malignancy. SATB1 overexpression reprograms gene expression to promote breast tumor growth and metastasis in xenograft models. Heterozygous disruption of SATB2 causes cleft palate and, more broadly, the SATB2-associated syndrome; SATB2 immunohistochemistry is standard in distinguishing colorectal from other adenocarcinomas. Mouse Cux1 mutants show hair follicle and immune defects, and Satb1-null mice have a severe block in thymocyte development.\n\n## Reading a hit\n\nA TAATCGATTA-type match is reasonably specific because ATCGAT is CpG-containing and therefore uncommon, but it does not distinguish CUX1 from CUX2, whose models are the same. Do not use an ATCGAT hit as evidence for SATB1 or SATB2: their functional target is an AT-rich base-unpairing region, and the SATB1 motifs in these databases are ChIP-derived (P grade) AT-rich models that may partly reflect the sequence composition of matrix-attachment regions rather than a crisp binding site. Also be careful with short fragments: four CIS-BP and Vierstra members of this family reduce to ATCG or ATTG, which is too short to be informative. Finally, one Vierstra archetype in this family is labelled CUX/ONECUT, a reminder that ATCGAT is shared with the ONECUT factors covered separately.",
+ "caveats": "CUX1 and CUX2 are indistinguishable from sequence. SATB1 and SATB2 belong to the same domain family but do not share the ATCGAT preference; their models here are ChIP-derived, AT-rich, and better understood as matrix-attachment/base-unpairing regions than as a defined site, so do not infer SATB binding from an ATCGAT hit or vice versa. ATCGAT is also the preferred core of the ONECUT factors, and one Vierstra archetype in this family is explicitly labelled CUX/ONECUT, so an ATCGAT hit cannot be assigned to CUX over ONECUT without expression context. Several members reduce to 4-bp fragments that carry almost no information.",
+ "refs": [
+  {
+   "cite": "Harada R, Dufort D, Denis-Larose C, et al. Conserved cut repeats in the human cut homeodomain protein function as DNA binding domains. J Biol Chem 1994;269:2062-7.",
+   "pmid": "7904999",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7904999/"
+  },
+  {
+   "cite": "Andrés V, Chiara MD, Mahdavi V. A new bipartite DNA-binding domain: cooperative interaction between the cut repeat and homeo domain of the cut homeo proteins. Genes Dev 1994;8:245-57.",
+   "pmid": "7905452",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7905452/"
+  },
+  {
+   "cite": "Harada R, Bérubé G, Tamplin OJ, et al. DNA-binding specificity of the cut repeats from the human cut-like protein. Mol Cell Biol 1995;15:129-40.",
+   "pmid": "7799919",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7799919/"
+  },
+  {
+   "cite": "Nepveu A. Role of the multifunctional CDP/Cut/Cux homeodomain transcription factor in regulating differentiation, cell growth and development. Gene 2001;270:1-15.",
+   "pmid": "11403998",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11403998/"
+  },
+  {
+   "cite": "Iyaguchi D, Yao M, Watanabe N, et al. DNA recognition mechanism of the ONECUT homeodomain of transcription factor HNF-6. Structure 2007;15:75-83.",
+   "pmid": "17223534",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17223534/"
+  },
+  {
+   "cite": "Dickinson LA, Joh T, Kohwi Y, et al. A tissue-specific MAR/SAR DNA-binding protein with unusual binding site recognition. Cell 1992;70:631-45.",
+   "pmid": "1505028",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1505028/"
+  },
+  {
+   "cite": "Yasui D, Miyano M, Cai S, et al. SATB1 targets chromatin remodelling to regulate genes over long distances. Nature 2002;419:641-5.",
+   "pmid": "12374985",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12374985/"
+  },
+  {
+   "cite": "Han HJ, Russo J, Kohwi Y, et al. SATB1 reprogrammes gene expression to promote breast tumour growth and metastasis. Nature 2008;452:187-93.",
+   "pmid": "18337816",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18337816/"
+  },
+  {
+   "cite": "FitzPatrick DR, Carr IM, McLaren L, et al. Identification of SATB2 as the cleft palate gene on 2q32-q33. Hum Mol Genet 2003;12:2491-501.",
+   "pmid": "12915443",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12915443/"
+  },
+  {
+   "cite": "Wong CC, Martincorena I, Rust AG, et al. Inactivating CUX1 mutations promote tumorigenesis. Nat Genet 2014;46:33-8.",
+   "pmid": "24316979",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24316979/"
+  },
+  {
+   "cite": "Rerkpichaisuth V, Lau RP, Meyerson C, et al. The utility of the lineage specific immunohistochemical stains SATB2, CDX2, and villin, and the mucin glycoproteins MUC2, MUC5AC, and MUC6 to distinguish pulmonary invasive mucinous adenocarcinoma from metastatic colorectal carcinoma. Hum Pathol 2024;151:105627.",
+   "pmid": "39029534",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39029534/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "key": "RFX",
+ "aka": [
+  "X-box",
+  "X1 box",
+  "RF-X site",
+  "MHC class II X box",
+  "regulatory factor X"
+ ],
+ "consensus": "GTTRCC(N0-3)RGYAAC",
+ "short": "RFX proteins recognize the X-box, a pseudo-palindrome built from two GTTRCC-like half-sites separated by zero to three bases. The DNA-binding domain is a 76-residue winged helix that reads bases with its beta-hairpin wing rather than with the usual recognition helix, and two domains bind one X-box cooperatively. Humans have eight members, RFX1-RFX8. RFX1-3 form homodimers and heterodimers and drive ciliary gene programs; RFX5 works in a complex with RFXAP and RFXANK to switch on MHC class II genes; RFX6 is restricted to pancreatic islet and enteroendocrine cells. The full 13-14 bp palindrome is one of the most information-rich motifs in vertebrate collections, which makes RFX hits unusually trustworthy.",
+ "long": "## The factors\n\nThe human RFX family has eight genes. All share a highly conserved 76-residue DNA-binding domain\n(DBD); most also carry dimerization domains (B, C and DIM regions) that RFX1, RFX2 and RFX3 use\nto form homodimers and heterodimers with each other. RFX1-3 are the ciliogenic branch and are\nbroadly expressed, with RFX2 and RFX3 concentrated in tissues that build motile cilia. RFX4 is\nlargely brain- and testis-restricted and produces isoforms lacking parts of the dimerization\nregion. RFX5 does not dimerize with other RFX proteins; it functions in the RFX (also called\nRFXANK-RFXAP-RFX5) complex that, together with the coactivator CIITA, drives MHC class I and\nclass II transcription. RFX6 is restricted to pancreatic islet and gut enteroendocrine cells and\nworks downstream of NEUROG3. RFX7 is broadly expressed and acts downstream of p53. RFX8 is\npoorly characterized in humans, and the CIS-BP human RFX8 entry is not a human measurement at\nall: it is transferred from a louse (Pediculus humanus) protein at 55% DBD identity.\n\n## The motif\n\nThe literature consensus, from the RFX1 crystal structure, is 5'-GTNRCC(N0-3)RGYAAC-3'. In\npractice vertebrate RFX models converge on the tighter form GTTGCCATGGCAAC, which is what the\nmotif data in this family reports (GTTGCCATGG). The two forms are not in conflict: the databases\nare dominated by high-affinity selection experiments that pick GTTGCC as the half-site and a\n2-3 bp spacer, while the literature consensus is written loosely enough to cover the weaker,\nvariably spaced sites found in real promoters. The structural explanation is unusual. RFX1 is a\nwinged-helix (helix-turn-helix) protein, but instead of inserting a recognition helix into the\nmajor groove it uses a beta-hairpin wing to make the base-specific contacts; two DBDs bind\ncooperatively on opposite half-sites of a symmetrical X-box. This is why the informative positions\nare the GTT/AAC ends and the CC/GG pair inside them, and why the central spacer bases are almost\nfree. Half-sites alone are real sites: RFX5, RFX6 and RFX7 models in these databases are\nessentially single half-sites (GTTGC, GTTGCTA, GTTGCCAGG) with 7-12 bits, whereas RFX1-4 models\nreach 20-23 bits. Paralogues within RFX1-4 are not separable by sequence. RFX5 and RFX7 can\nsometimes be distinguished from RFX1-3 by the *absence* of a strong second half-site, but that is\nan occupancy difference, not a specificity difference.\n\n## Where it acts\n\nX-boxes are promoter-proximal more often than not, typically within a few hundred bases of the\ntranscription start site of ciliary genes (IFT and BBS genes, dynein subunits, ciliary membrane\nproteins) and of MHC class II genes, where the X box sits next to the X2 box and about 15-20 bp\nfrom the Y box. The Y box is a CCAAT element bound by NF-Y, and RFX5 and NF-Y bind the class II\npromoter cooperatively; this is the best-characterized composite element containing an X-box. In\nmotile ciliated epithelium RFX2 and RFX3 co-occupy promoters with FOXJ1, the forkhead factor that\nspecifies motile cilia, and in Drosophila the equivalent partnership is Rfx with Fd3F. RFX6 in\nislets co-occupies enhancers with NEUROD1, PDX1 and NKX2-2. X-box counts are modest for a\nvertebrate motif precisely because the full palindrome is long: genome-wide scans typically\nrecover a few thousand strong matches, most of them at ciliary and immune loci.\n\n## Biology and disease\n\nLoss of the RFX complex causes MHC class II deficiency (bare lymphocyte syndrome, complementation\ngroups C, D and E): RFX5, RFXAP or RFXANK mutations remove X-box binding, class II expression\nfails, and patients present with combined immunodeficiency. The original RF-X activity was\ndefined by its absence in such patients' cells. RFX1-3 are the transcriptional core of\nciliogenesis across animals, and the X-box-driven ciliary program is old enough to predate\nmetazoans. Rfx3 mutant mice have laterality defects, hydrocephalus and impaired nodal cilia;\ncombined Rfx1/2/3 loss ablates motile ciliogenesis. RFX6 loss of function causes Mitchell-Riley\nsyndrome (neonatal diabetes with intestinal atresia); heterozygous truncating RFX6 variants cause\nmaturity-onset diabetes of the young with reduced penetrance, and Rfx6 is also required to\nmaintain adult beta-cell identity. RFX7 is recurrently mutated in lymphoid cancers and mediates\npart of the p53 response, controlling genes including DDIT4 and PDCD4. An estrogen-receptor-RFX4\nfusion has been reported in breast tumors.\n\n## Reading a hit\n\nA full 13-14 bp X-box match is strong evidence, and among vertebrate motifs it is one of the few\nwhere a single high-scoring hit is worth acting on: the palindrome carries about 20 bits, so\nchance occurrences in the human genome are rare. What a hit does not tell you is which RFX\nprotein. RFX1, RFX2, RFX3 and RFX4 are indistinguishable from sequence, and the practical\nquestion is which of them is expressed in your cell type. Half-site-only matches (GTTGC plus a\npurine) are a different matter: at 7-9 bits they occur by chance constantly, and they are the form\nin which RFX5, RFX6 and RFX7 models are represented here, so hits on those models deserve much\nmore skepticism than hits on RFX1-4. Two provenance problems affect this family in CIS-BP: the\nRFX8 motif comes from a louse protein at 55% DBD identity and the RFX6 motif from guinea pig at\n71%, so neither is a human measurement. One HOCOMOCO RFX3 secondary model (evidence code S,\ngrade B) does not resemble an X-box at all and should not be used.",
+ "caveats": "Trust full-palindrome X-box hits; treat half-site hits (GTTGC alone) as near-worthless on their own, because they carry under 9 bits. Nothing in the sequence separates RFX1, RFX2, RFX3 and RFX4, so assign a member from expression, not from the match. The RFX5 model reflects a three-protein complex, not RFX5 alone. In CIS-BP the human RFX8 motif is transferred from a louse protein (55% DBD identity) and the RFX6 motif from guinea pig (71%); neither was measured on the human protein. One HOCOMOCO RFX3 secondary model is not X-box-like and looks unreliable.",
+ "refs": [
+  {
+   "cite": "Gajiwala KS, Chen H, Cornille F, et al. Structure of the winged-helix protein hRFX1 reveals a new mode of DNA binding. Nature 2000;403:916-21.",
+   "pmid": "10706293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10706293/"
+  },
+  {
+   "cite": "Reith W, Satola S, Sanchez CH, et al. Congenital immunodeficiency with a regulatory defect in MHC class II gene expression lacks a specific HLA-DR promoter binding protein, RF-X. Cell 1988;53:897-906.",
+   "pmid": "3133120",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3133120/"
+  },
+  {
+   "cite": "Villard J, Peretti M, Masternak K, et al. A functionally essential domain of RFX5 mediates activation of major histocompatibility complex class II promoters by promoting cooperative binding between RFX and NF-Y. Mol Cell Biol 2000;20:3364-76.",
+   "pmid": "10779326",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10779326/"
+  },
+  {
+   "cite": "Lemeille S, Paschaki M, Baas D, et al. Interplay of RFX transcription factors 1, 2 and 3 in motile ciliogenesis. Nucleic Acids Res 2020;48:9019-9036.",
+   "pmid": "32725242",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32725242/"
+  },
+  {
+   "cite": "Piasecki BP, Burghoorn J, Swoboda P. Regulatory Factor X (RFX)-mediated transcriptional rewiring of ciliary genes in animals. Proc Natl Acad Sci U S A 2010;107:12969-74.",
+   "pmid": "20615967",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20615967/"
+  },
+  {
+   "cite": "Newton FG, zur Lage PI, Karak S, et al. Forkhead transcription factor Fd3F cooperates with Rfx to regulate a gene expression program for mechanosensory cilia specialization. Dev Cell 2012;22:1221-33.",
+   "pmid": "22698283",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22698283/"
+  },
+  {
+   "cite": "Smith SB, Qu HQ, Taleb N, et al. Rfx6 directs islet formation and insulin production in mice and humans. Nature 2010;463:775-80.",
+   "pmid": "20148032",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20148032/"
+  },
+  {
+   "cite": "Patel KA, Kettunen J, Laakso M, et al. Heterozygous RFX6 protein truncating variants are associated with MODY with reduced penetrance. Nat Commun 2017;8:888.",
+   "pmid": "29026101",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29026101/"
+  },
+  {
+   "cite": "Coronel L, Riege K, Schwab K, et al. Transcription factor RFX7 governs a tumor suppressor network in response to p53 and stress. Nucleic Acids Res 2021;49:7437-7456.",
+   "pmid": "34197623",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34197623/"
+  },
+  {
+   "cite": "Sugiaman-Trapman D, Vitezic M, Jouhilahti EM, et al. Characterization of the human RFX transcription factor family by regulatory and target gene analysis. BMC Genomics 2018;19:181.",
+   "pmid": "29510665",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29510665/"
+  },
+  {
+   "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
+   "pmid": "25215497",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  }
+ ]
+}

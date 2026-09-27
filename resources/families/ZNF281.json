@@ -1,0 +1,82 @@
+{
+ "key": "ZNF281",
+ "aka": [
+  "ZBP-99",
+  "ZNF148",
+  "ZBP-89",
+  "BFCOL1",
+  "ht-beta",
+  "Zfp281",
+  "Zfp148",
+  "ZNF219",
+  "GC-rich element",
+  "CCCCACCCC",
+  "TFClass: more than 3 adjacent zinc finger factors"
+ ],
+ "consensus": "GGGGGAGGGG",
+ "short": "ZNF148 (better known as ZBP-89) and ZNF281 (ZBP-99) are broadly expressed four-fingered C2H2 proteins that bind GC- and GA-rich promoter elements, most often written GGGGGAGGGG or, on the opposite strand, CCCCTCCCCC; longer models add a CCCCACCCC module. Both were cloned as factors that occupy GC-rich elements already known to bind Sp1, and that competition is the point: the same element is a legitimate site for several families. ZNF219 is grouped with them on domain similarity but has no matrix here. The two proteins are not distinguishable from each other by sequence, and only weakly distinguishable from MAZ, PATZ1 and VEZF1. Human ZNF148 truncating variants cause a recognized developmental syndrome.",
+ "long": "## The factors\n\nZNF148 was cloned as ZBP-89, an 89-kDa zinc-finger protein, by screening a rat expression library with a multimer of the GC-rich element GGGGCGGGGTGGGGGG that confers epidermal growth factor responsiveness on the human gastrin promoter - an element already known to bind Sp1. The protein was 89% identical to a previously described 49-kDa human factor, ht-beta, and acts as a repressor of that promoter (Merchant et al. 1996). ZNF281 was then cloned as ZBP-99, a second member of the same family, also a GC-box binder and also a repressor, this time characterized on the ornithine decarboxylase promoter; its four Kruppel-type zinc fingers share 91% similarity and 79% identity with those of ZBP-89 (Law et al. 1999). Four fingers predicts a footprint of roughly 12 bp, not the long arrays of CTCF-like proteins. ZNF219 is placed here by domain similarity and assembles with Sox9 to drive chondrocyte differentiation (Takigawa et al. 2010), but contributes no matrix, so everything said about the motif comes from ZNF148 and ZNF281. Mouse orthologs are Zfp148 and Zfp281. Both are broadly expressed and both act predominantly as repressors, frequently at elements that Sp1 also occupies.\n\n## The motif\n\nThe two JASPAR profiles are one sequence in opposite orientations: ZNF281 (MA1630.3) is GGGGGAGGGG, ZNF148 (MA1653.2) is CCCCTCCCCC, as is CIS-BP M08321_2.00. The HOCOMOCO models are longer and add a module: ZN281.H14CORE.0.P.B is GGGTGGGGGAGGGG and ZN148.H14CORE.0.P.B is the same 14-mer, placing a GGGTGGGG (CCCCACCCC on the other strand) immediately 5' of the GGGGGAGGGG core. At 20.3 and 19.9 bits these are the most information-rich matrices in the family, and they are also where the CCCCACCCC form of the consensus comes from. One matrix here carries in vitro evidence - ZN281.H14CORE.1.SM.B, from HT-SELEX and methyl-HT-SELEX - and it is instructive: it is a 21-position near-uniform G-run, GGGGGGGGGGGGAGGGDGGGG. In other words, the in vitro data for ZNF281 support \"long G-rich tract\" rather than a crisp, positionally defined site. Family cohesion is high at 0.90, but that is cohesion among six matrices from two gene labels and does not make the family distinctive. Label agreement runs from 0.2 to 0.4, and for the JASPAR ZNF148 profile the best-scoring neighbor anywhere in the four databases (0.95) lies outside this family, beating its best within-family match (0.88). Concretely: GGGAGGG, the MAZ site, is contained inside GGGGGAGGGG, so MAZ and ZNF281 differ only in the length of the run and its flanks; VEZF1's informative model is the same shape; and the ChIP-derived WT1 models fall in the same cluster. The only sequence-level discriminator available in this neighborhood is against the SP1/KLF GC-box - an A in the middle of the run where the GC-box has a C, GGGAGGG versus GGGCGG (Song et al. 2001) - and even that fails when the match spans a G-rich tract long enough to accommodate both.\n\n## Where it acts\n\nThese are promoter-proximal factors, at GC-rich elements in CpG-island promoters - gastrin, ornithine decarboxylase and similar targets - usually shared with Sp1. ZBP-89 is butyrate-inducible and binds GC-rich DNA elements in gastrointestinal epithelium (Essien et al. 2013). Zfp281 in mouse embryonic stem cells occupies the Nanog locus, where its function depends on recruited complexes rather than on the motif: it brings in the NuRD complex to mediate Nanog autorepression (Fidalgo et al. 2012) and recruits Polycomb repressive complex 2 to restrict extraembryonic endoderm potential (Huang et al. 2021). The pattern recurs: the motif places the protein, the partner determines the output.\n\n## Biology and disease\n\nZfp281 is required for embryonic stem cell pluripotency, acting by both direct activation and direct repression of targets (Wang et al. 2008), and behaves predominantly as a transcriptional repressor in that setting (Fidalgo et al. 2011); it also inhibits somatic cell reprogramming (Fidalgo et al. 2012). ZNF281 is induced by genotoxic stress and contributes to the DNA damage response by controlling expression of the homologous-recombination and non-homologous-end-joining factors XRCC2 and XRCC4 (Pieraccioli et al. 2016), and is reported as an oncogene in colorectal and other carcinomas, in association with epithelial-mesenchymal transition. On the ZNF148 side, conditional deletion of Zfp148 in mice alters tryptophan hydroxylase I expression and impairs mucosal defense against Salmonella typhimurium (Essien et al. 2013). The clearest human link is Mendelian: de novo truncating variants in ZNF148 cause a syndrome of corpus callosum defects, developmental delay, short stature and dysmorphic features (Stevens et al. 2016), since named GDACCF and delineated in a cohort of 22 patients (Szakszon et al. 2024).\n\n## Reading a hit\n\nA match identifies a G-rich promoter element and nothing narrower. ZNF148 and ZNF281 share one motif, so the hit cannot choose between them; ZNF219 has no matrix at all, so a claim about ZNF219 from sequence is pure inference from domain similarity. Three of the six matrices are ChIP-only at grade B, and the one in vitro model is effectively a poly-G tract, which means the family's own evidence does not define a sharp site. Long G-runs are common in GC-rich promoters and in G-quadruplex-forming sequence, so expect chance matches. Most importantly, the neighbors: MAZ and PATZ1 sites are nested inside this consensus, VEZF1's model has the same shape, the ChIP-derived WT1 models cluster here, and the SP1/KLF GC-box is one base away. Which protein occupies a site is answered by ChIP, knockdown or expression - not by a score.",
+ "caveats": "ZNF148 and ZNF281 share a single motif, and ZNF219 - also assigned to this family - contributes no matrix, so nothing can be said about it from sequence. Three of the six matrices rest on ChIP-seq alone at grade B, and the one HT-SELEX/methyl-SELEX model is essentially a 21-base poly-G tract, so the in vitro evidence does not define a sharp site. For the JASPAR ZNF148 profile the best-matching matrix anywhere in the four databases lies outside this family. MAZ and PATZ1 sites are nested inside this consensus, VEZF1's model has the same shape, and the SP1 GC-box is one base away. Treat a hit as G-rich promoter sequence.",
+ "refs": [
+  {
+   "cite": "Merchant JL, Iyer GR, Taylor BR, et al. ZBP-89, a Krüppel-like zinc finger protein, inhibits epidermal growth factor induction of the gastrin promoter. Mol Cell Biol 1996;16:6644-53.",
+   "pmid": "8943318",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8943318/"
+  },
+  {
+   "cite": "Law DJ, Du M, Law GL, et al. ZBP-99 defines a conserved family of transcription factors and regulates ornithine decarboxylase gene expression. Biochem Biophys Res Commun 1999;262:113-20.",
+   "pmid": "10448078",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10448078/"
+  },
+  {
+   "cite": "Song J, Ugai H, Ogawa K, et al. Two consecutive zinc fingers in Sp1 and in MAZ are essential for interactions with cis-elements. J Biol Chem 2001;276:30429-34.",
+   "pmid": "11395515",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11395515/"
+  },
+  {
+   "cite": "Wang ZX, Teh CH, Chan CM, et al. The transcription factor Zfp281 controls embryonic stem cell pluripotency by direct activation and repression of target genes. Stem Cells 2008;26:2791-9.",
+   "pmid": "18757296",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18757296/"
+  },
+  {
+   "cite": "Takigawa Y, Hata K, Muramatsu S, et al. The transcription factor Znf219 regulates chondrocyte differentiation by assembling a transcription factory with Sox9. J Cell Sci 2010;123:3780-8.",
+   "pmid": "20940257",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20940257/"
+  },
+  {
+   "cite": "Fidalgo M, Shekar PC, Ang YS, et al. Zfp281 functions as a transcriptional repressor for pluripotency of mouse embryonic stem cells. Stem Cells 2011;29:1705-16.",
+   "pmid": "21915945",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21915945/"
+  },
+  {
+   "cite": "Fidalgo M, Faiola F, Pereira CF, et al. Zfp281 mediates Nanog autorepression through recruitment of the NuRD complex and inhibits somatic cell reprogramming. Proc Natl Acad Sci U S A 2012;109:16202-7.",
+   "pmid": "22988117",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22988117/"
+  },
+  {
+   "cite": "Essien BE, Grasberger H, Romain RD, et al. ZBP-89 regulates expression of tryptophan hydroxylase I and mucosal defense against Salmonella typhimurium in mice. Gastroenterology 2013;144:1466-77, 1477.e1-9.",
+   "pmid": "23395646",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23395646/"
+  },
+  {
+   "cite": "Pieraccioli M, Nicolai S, Antonov A, et al. ZNF281 contributes to the DNA damage response by controlling the expression of XRCC2 and XRCC4. Oncogene 2016;35:2592-601.",
+   "pmid": "26300006",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26300006/"
+  },
+  {
+   "cite": "Stevens SJ, van Essen AJ, van Ravenswaaij CM, et al. Truncating de novo mutations in the Krüppel-type zinc-finger gene ZNF148 in patients with corpus callosum defects, developmental delay, short stature, and dysmorphisms. Genome Med 2016;8:131.",
+   "pmid": "27964749",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27964749/"
+  },
+  {
+   "cite": "Huang X, Bashkenova N, Yang J, et al. ZFP281 recruits polycomb repressive complex 2 to restrict extraembryonic endoderm potential in safeguarding embryonic stem cell pluripotency. Protein Cell 2021;12:213-219.",
+   "pmid": "32812113",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32812113/"
+  },
+  {
+   "cite": "Szakszon K, Lourenco CM, Callewaert BL, et al. Further delineation of the rare GDACCF (global developmental delay, absent or hypoplastic corpus callosum, dysmorphic facies syndrome): genotype and phenotype of 22 patients with ZNF148 mutations. J Med Genet 2024;61:132-141.",
+   "pmid": "37580113",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37580113/"
+  }
+ ]
+}

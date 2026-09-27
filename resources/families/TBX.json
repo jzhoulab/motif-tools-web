@@ -1,0 +1,78 @@
+{
+ "key": "TBX",
+ "aka": [
+  "T-box site",
+  "T site",
+  "T half-site",
+  "Brachyury site",
+  "TBE (T-box binding element)",
+  "AGGTGTGA",
+  "TCACACCT"
+ ],
+ "consensus": "AGGTGTGA",
+ "short": "T-box sites are read by the seventeen human T-box proteins - TBXT (Brachyury), TBX1 to TBX6, TBX10, TBX15, TBX18 to TBX22, TBR1, EOMES and MGA - through a ~180-residue T domain that inserts a helix deep into a widened minor groove, a recognition mode found in no other family. The unit of binding is an eight-base half-site, AGGTGTGA, written TCACACCT in the other orientation. Brachyury binds a palindromic pair of half-sites as a dimer; several paralogues occupy single half-sites or tandem repeats instead. These factors specify the notochord, heart, limbs, pharyngeal apparatus and T-helper-1 lineage, and mutations in individual genes cause distinct human malformation syndromes - but the paralogues are essentially indistinguishable from sequence.",
+ "long": "## The factors\n\nThe human genome carries seventeen T-box genes, conventionally grouped into five subfamilies: TBXT (T/Brachyury); the TBX1 subfamily (TBX1, TBX10, TBX15, TBX18, TBX20, TBX22); the TBX2 subfamily (TBX2, TBX3, TBX4, TBX5); the TBX6 subfamily (TBX6 and MGA); and the TBR1 subfamily (TBR1, EOMES, TBX21). All share the T domain, about 180 residues of immunoglobulin-like beta-sandwich. The Brachyury T domain-DNA structure showed an unusual recognition mode: a C-terminal helix buries itself in an enlarged minor groove without bending the DNA, and specificity comes from hydrophobic packing and a main-chain carbonyl contact to a guanine as well as conventional major-groove contacts. Expression is mostly narrow and developmental - TBXT in nascent mesoderm and notochord, TBX5 and TBX20 in heart and forelimb, TBX1 in pharyngeal mesoderm, TBR1 and EOMES in cortical neurons and, for EOMES and TBX21, in lymphocytes. One member is a hybrid: MGA combines a T domain with a bHLH-zipper region that heterodimerises with MAX and binds E-boxes, so MGA reads two unrelated motifs. The family splits into activators (TBX5, TBX20, TBX21, EOMES, TBXT) and repressors (TBX2, TBX3) that use the same element.\n\n## The motif\n\nThe core unit is the eight-base half-site AGGTGTGA, equivalently TCACACCT on the opposite strand; both orientations are standard and both appear in these databases, a frequent source of confusion when comparing consensus strings. Binding-site selection with Brachyury first defined it; the protein bound as a monomer in that assay. Geometry is where the paralogues differ, insofar as they differ at all. The Brachyury structure used a 24-bp palindrome and found a dimer whose two monomers contact each other, whereas the human TBX3 structure on a palindromic duplex found the two sites recognised independently, with no stabilising monomer-monomer interface - different quaternary arrangements within one fold. The data reflect this: the TBXT and TBX19 models here are inverted palindromes (TCACACCTAGGTGTGA), several models are everted pairs (AGGTGTGAAATTCACA), TBX20 models are direct tandem repeats (AGGTGTGAAGGTGTGA), and the majority are plain single half-sites. Beyond geometry, the paralogues are not separable. Across four databases, the primary models for TBX1, TBX2, TBX3, TBX4, TBX5, TBX6, TBX15, TBX18, TBX20, TBX21, TBR1, EOMES, MGA and TBXT are all AGGTGTGA or AGGTGTGAA - character-for-character identical in many cases - and the family's cohesion of 0.86 across 60 motifs is high given how many distinct proteins are involved. High-throughput SELEX reached the same conclusion: homodimer orientation and spacing preferences often carry more information than the core consensus. Treat spacing and orientation, not base identity, as the only thing that might discriminate members, and treat even that as weak. One provenance note: the CIS-BP TBX10 motif is transferred from the mouse protein at 89% DNA-binding-domain identity rather than measured on the human protein.\n\n## Where it acts\n\nT-box sites are predominantly enhancer elements and are not CpG-island features. Occupancy is highly cell-type restricted because expression is: a TBX5 site in a cardiomyocyte and a TBR1 site in a cortical neuron may be the same sequence. In the heart, T-box sites co-occur with GATA4, NKX2-5, MEF2 and SRF sites, and TBX5-GATA4-NKX2-5 co-binding is the best-studied combinatorial arrangement in cardiac enhancers. In lymphocytes, TBX21 sites sit alongside STAT, RUNX and ETS sites at the IFNG locus. The only named heterodimeric element in these collections is MGA::EVX1, a T-box half-site adjacent to a homeodomain TAAT core, which is a composite of two different proteins rather than a T-box variant.\n\n## Biology and disease\n\nBrachyury is required for posterior mesoderm and notochord; homozygous mutants fail axial development. The paralogues map neatly onto human malformation syndromes: TBX5 mutations cause Holt-Oram syndrome, with septal defects and radial-ray limb malformations; TBX3 mutations cause ulnar-mammary syndrome; loss of Tbx1 in mice reproduces the DiGeorge/22q11.2 deletion phenotype; TBX20 mutations cause diverse cardiac pathology including septation and valve defects and cardiomyopathy; TBX19 (TPIT) mutations cause isolated ACTH deficiency; TBX22 mutations cause cleft palate with ankyloglossia; TBX6 variants contribute to congenital scoliosis. TBX21 (T-bet) was isolated as the T-box factor that drives interferon-gamma and commits naive CD4 T cells to the Th1 lineage, and can redirect polarised Th2 cells. In cancer, germline duplication of the TBXT locus confers strong susceptibility to familial chordoma, a notochord-derived tumour in which TBXT is also the near-universal lineage dependency; TBX2 and TBX3 are amplified or overexpressed in breast and other carcinomas, where they repress CDKN2A.\n\n## Reading a hit\n\nAssume a T-box hit names the family and nothing more. Models for fourteen or more paralogues are identical, so which protein is responsible must be inferred from expression, not from sequence. An eight-base half-site is also short - AGGTGTGA occurs on the order of tens of thousands of times per genome - so an isolated half-site match is weak. Matches gain weight when the geometry is present: an inverted pair (AGGTGTGA...TCACACCT), an everted pair, or a tandem repeat within a few base pairs is much more likely to be real than a lone half-site. Check provenance before trusting a specific label: the CIS-BP TBX10 model is inherited from mouse, and the Vierstra archetype names (AC0487:TBX/T, AC0490:TBX/EOMES, AC0491:TBX/MGA) list the factor groups whose motifs clustered together, not distinguishable specificities. Two ChIP-derived entries in this family, TBX20.H14CORE.0.P.C and TBX5.H14CORE.1.P.B, read GTGNTGACAG, contain no recognisable T-box core, and have their nearest neighbours outside the family (label agreement 0.1); they are better read as reflecting co-occupancy with another factor than as T-box recognition, and should not be used for scanning.",
+ "caveats": "This family has the paralogue problem in its most extreme form: the primary models for fourteen or more T-box proteins are AGGTGTGA or AGGTGTGAA, identical in many cases, so a hit identifies T-box and nothing finer - the responsible protein follows from which paralogue is expressed. An eight-base half-site is common by chance, so weight matches by geometry: inverted, everted or tandem pairs are far more credible than a single half-site. Two ChIP-derived models here (TBX20.H14CORE.0.P.C, TBX5.H14CORE.1.P.B) read GTGNTGACAG with no T-box core and neighbours outside the family; treat them as co-occupancy signal. The CIS-BP TBX10 motif is transferred from mouse.",
+ "refs": [
+  {
+   "cite": "Kispert A, Herrmann BG. The Brachyury gene encodes a novel DNA binding protein. EMBO J 1993;12:3211-20.",
+   "pmid": "8344258",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8344258/"
+  },
+  {
+   "cite": "Basson CT, Bachinsky DR, Lin RC, et al. Mutations in human TBX5 [corrected] cause limb and cardiac malformation in Holt-Oram syndrome. Nat Genet 1997;15:30-5.",
+   "pmid": "8988165",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8988165/"
+  },
+  {
+   "cite": "Müller CW, Herrmann BG. Crystallographic structure of the T domain-DNA complex of the Brachyury transcription factor. Nature 1997;389:884-8.",
+   "pmid": "9349824",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9349824/"
+  },
+  {
+   "cite": "Hurlin PJ, Steingrìmsson E, Copeland NG, et al. Mga, a dual-specificity transcription factor that interacts with Max and contains a T-domain DNA-binding motif. EMBO J 1999;18:7019-28.",
+   "pmid": "10601024",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10601024/"
+  },
+  {
+   "cite": "Szabo SJ, Kim ST, Costa GL, et al. A novel transcription factor, T-bet, directs Th1 lineage commitment. Cell 2000;100:655-69.",
+   "pmid": "10761931",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10761931/"
+  },
+  {
+   "cite": "Jerome LA, Papaioannou VE. DiGeorge syndrome phenotype in mice mutant for the T-box gene, Tbx1. Nat Genet 2001;27:286-91.",
+   "pmid": "11242110",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11242110/"
+  },
+  {
+   "cite": "Coll M, Seidman JG, Müller CW. Structure of the DNA-bound T-box domain of human TBX3, a transcription factor responsible for ulnar-mammary syndrome. Structure 2002;10:343-56.",
+   "pmid": "12005433",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12005433/"
+  },
+  {
+   "cite": "Naiche LA, Harrelson Z, Kelly RG, et al. T-box genes in vertebrate development. Annu Rev Genet 2005;39:219-39.",
+   "pmid": "16285859",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16285859/"
+  },
+  {
+   "cite": "Kirk EP, Sunde M, Costa MW, et al. Mutations in cardiac T-box factor gene TBX20 are associated with diverse cardiac pathologies, including defects of septation and valvulogenesis and cardiomyopathy. Am J Hum Genet 2007;81:280-91.",
+   "pmid": "17668378",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17668378/"
+  },
+  {
+   "cite": "Yang XR, Ng D, Alcorta DA, et al. T (brachyury) gene duplication confers major susceptibility to familial chordoma. Nat Genet 2009;41:1176-8.",
+   "pmid": "19801981",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19801981/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  },
+  {
+   "cite": "Papaioannou VE. The T-box gene family: emerging roles in development, stem cells and cancer. Development 2014;141:3819-33.",
+   "pmid": "25294936",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25294936/"
+  }
+ ]
+}

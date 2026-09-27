@@ -1,0 +1,54 @@
+{
+ "key": "ZNF460",
+ "aka": [
+  "ZNF460",
+  "ZNF317",
+  "ZKSCAN-related zinc fingers",
+  "KZFP motifs (ZNF460/ZNF317)"
+ ],
+ "short": "ZNF460 and ZNF317 are poorly characterized human C2H2 zinc-finger proteins grouped here because their database motifs cluster together, not because a published experiment showed they read the same sequence. The family is the least coherent in this part of the atlas: its eight matrices split into two unrelated groups, one a long AGTCTGCTGT-type word from ZNF317 in vitro data and the other a GC-rich GCCTCAGCCTCCC-type word from ZNF460 that closely resembles Alu consensus sequence. No single consensus is given here because the data do not support one. Almost everything known about either protein comes from high-throughput surveys of zinc-finger binding specificity rather than from focused study.",
+ "long": "## The factors\n\nZNF460 and ZNF317 are human C2H2 zinc-finger proteins with tandem finger arrays. Neither has been the subject of a dedicated structural or biochemical study, and the literature on them is thin enough that this entry is mostly a description of data quality rather than of biology. They are grouped as one family because their motifs are nearest neighbours across the four databases, not because anyone has demonstrated shared specificity; the pairing should be read as a statement about matrix similarity. Both fall within the broad class of zinc-finger proteins surveyed in genome-wide characterizations of human KRAB and non-KRAB zinc fingers, where hundreds of members were assayed at once by ChIP-exo and related methods. They are broadly but not highly expressed. There is no reported dimerization, no described cofactor, and no knockout phenotype in a mammalian model for either gene.\n\n## The motif\n\nThis family has the lowest cohesion in the batch (0.49 on the atlas's internal scale), and the reason is visible in the matrices. They fall into two groups that have nothing in common. The first is long and AT/AC-mixed: the CIS-BP ZNF317 matrix reads GAGAAGTCAGCTGTCADTCTTAT, the Vierstra archetype AC0085 reads AGTCTGCTGT, one ChIP-derived HOCOMOCO ZNF317 matrix reads GAHTGACAGCTGACTTCTCA, and JASPAR MA1593.2 reduces this to ACAGCAGA. The second group is GC-rich: JASPAR MA1596.1 for ZNF460 reads GCCTCAGCCTCCCGAG, the CIS-BP ZNF460 matrix reads CGCCGCCTCCCC, and the low-grade HOCOMOCO ZNF460 matrix reads GGGGGGCG. The GCCTCAGCCTCCC word is worth naming for what it is: that sequence is a near-exact match to a well-known segment of the Alu consensus, so a matrix built on it will report Alu copies rather than a specific protein-DNA preference. The second ChIP-derived ZNF317 matrix (ATGGAAGCCAGAAGACAATGGAA) has no close neighbour anywhere in the collection. For this reason no `consensus` field is given for this family: quoting either group as the consensus would misrepresent the data, and averaging them would be meaningless.\n\n## Where it acts\n\nThere is little to say that rests on evidence. If the GC-rich ZNF460 matrices are reporting Alu sequence, then matches will be distributed like Alus: hundreds of thousands of copies, concentrated in gene-rich, GC-rich regions and in introns, and heavily represented near promoters simply because Alus are. The AGTCTGCTGT-type ZNF317 word is longer and less repeat-like, and would be expected to occur at more modest frequency, but no published mapping study describes where ZNF317 actually binds in a genome or which genes it regulates. Neither protein has a named composite element or an established partner. Surveys of human zinc-finger proteins provide the only genome-scale occupancy context, and they treat these two as members of a large set rather than as individually characterized factors.\n\n## Biology and disease\n\nDirect functional work is limited to recent cancer and vascular papers, all of which study the protein rather than the motif. ZNF460 has been reported to inhibit HMGCL and activate PI3K signalling in colon cancer, to act downstream of KMT2D in a COL9A1-dependent extracellular-matrix stiffening mechanism that maintains a colorectal cancer stem-cell pool, and to promote GSDME-driven pyroptosis through transcriptional activation of PKM2 in aortic dissection. These studies identify target genes but do not establish a binding consensus, so they cannot be used to validate the matrices above. ZNF317 has no comparable literature. Neither gene is a recognized Mendelian disease gene or a recurrent cancer driver, and neither appears among the primate-specific KRAB zinc fingers whose control of endogenous retroviruses has been worked out in detail. Where the literature is this thin, the right summary is that these are annotated but essentially uncharacterized factors.\n\n## Reading a hit\n\nBe cautious to the point of scepticism. First, decide which of the two motif groups your hit belongs to, because they are not the same element and the family label hides that. If the match is to the GC-rich GCCTCAGCCTCCC-type word, check whether it falls in an Alu; if it does, the hit is almost certainly reporting the repeat and not ZNF460 occupancy. If the match is to the longer AGTCTGCTGT-type word, you have a more specific sequence but almost no functional literature to interpret it against. Second, look at the evidence codes. The ZNF460 HOCOMOCO matrix is grade C with in vitro (S) evidence only and is a low-information G-run; the ZNF317 HOCOMOCO matrices are ChIP-only (P, grade B) and disagree with each other. Third, do not report a hit as identifying ZNF460 versus ZNF317: the grouping itself is data-driven, and nothing in the literature says these two proteins share a site. A match in this family is best treated as a flag to inspect the underlying sequence manually rather than as an assignment to a factor.",
+ "caveats": "Treat this family as unreliable. Its matrices split into two unrelated groups, a long AGTCTGCTGT-type ZNF317 word and a GC-rich ZNF460 word whose sequence (GCCTCAGCCTCCC) closely matches Alu consensus, so matches to the latter most likely report a repeat rather than protein occupancy. Internal cohesion is 0.49, the lowest in this batch, and the two ChIP-derived ZNF317 matrices disagree with each other; the ZNF460 HOCOMOCO matrix is grade C with low information content. The pairing of ZNF460 with ZNF317 is a clustering result, not a published finding of shared specificity. No consensus is quoted because the data do not support one, and there is no focused literature on either protein's DNA binding.",
+ "refs": [
+  {
+   "cite": "Ecco G, Imbeault M, Trono D. KRAB zinc finger proteins. Development 2017;144:2719-2729.",
+   "pmid": "28765213",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28765213/"
+  },
+  {
+   "cite": "Fedotova AA, Bonchuk AN, Mogila VA, et al. C2H2 Zinc Finger Proteins: The Largest but Poorly Explored Family of Higher Eukaryotic Transcription Factors. Acta Naturae 2017;9:47-58.",
+   "pmid": "28740726",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28740726/"
+  },
+  {
+   "cite": "Maksimenko OG, Fursenko DV, Belova EV, et al. CTCF As an Example of DNA-Binding Transcription Factors Containing Clusters of C2H2-Type Zinc Fingers. Acta Naturae 2021;13:31-46.",
+   "pmid": "33959385",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33959385/"
+  },
+  {
+   "cite": "de Tribolet-Hardy J, Thorball CW, Forey R, et al. Genetic features and genomic targets of human KRAB-zinc finger proteins. Genome Res 2023;33:1409-1423.",
+   "pmid": "37730438",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37730438/"
+  },
+  {
+   "cite": "Zhang X, Blumenthal RM, Cheng X. Updated understanding of the protein-DNA recognition code used by C2H2 zinc finger proteins. Curr Opin Struct Biol 2024;87:102836.",
+   "pmid": "38754172",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38754172/"
+  },
+  {
+   "cite": "Song C, Xue J, Song W, et al. KMT2D/ZNF460-induced COL9A1-mediated extracellular matrix stiffness maintains the cancer stem cell pool to promote colorectal cancer progression. Cell Biol Toxicol 2025;41:111.",
+   "pmid": "40591048",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40591048/"
+  },
+  {
+   "cite": "Yang Q, Shao X, Zheng Z, et al. ZNF460 Promotes GSDME-Driven Pyroptosis via PKM2 Transcriptional Activation in Aortic Dissection. Rev Cardiovasc Med 2026;27:48463.",
+   "pmid": "41923736",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41923736/"
+  },
+  {
+   "cite": "Hou W, Wang J, Wu Y, et al. ZNF460 inhibits HMGCL and promotes PI3K pathway in colon cancer. Transl Cancer Res 2026;15:185.",
+   "pmid": "41969486",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41969486/"
+  }
+ ]
+}
