@@ -43,6 +43,7 @@ for (const t of TOOLS) {
 // reads the route to present itself as the Map rather than as Match.
 mkdirSync(resolve(dist, 'map'), { recursive: true });
 copyFileSync(resolve(root, 'apps/motif-match/dist/motif-match.html'), resolve(dist, 'map', 'index.html'));
+copyFileSync(resolve(root, 'apps/motif-match/dist/motif-match.html'), resolve(dist, 'downloads', 'motif-map.html'));
 
 // Brand-mark favicon: four nucleotide-colored bars (A C G T)
 const favicon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">

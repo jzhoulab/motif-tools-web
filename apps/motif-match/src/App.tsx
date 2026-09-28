@@ -70,9 +70,11 @@ function buildMap() {
     return { all, dbNodes };
 }
 
-// The same build is served at /match/ and at /map/. On /map/ the motif map is the point
-// of the page rather than one view of the matching tool, so it names itself accordingly.
-const IS_MAP = typeof location !== 'undefined' && /(^|\/)map(\/|$)/.test(location.pathname);
+// The same build is served at /match/ and at /map/, and downloaded as either
+// motif-match.html or motif-map.html. Opened as the map, the motif map is the point of
+// the page rather than one view of the matching tool, so it names itself accordingly.
+const IS_MAP = typeof location !== 'undefined'
+    && (/(^|\/)map(\/|$)/.test(location.pathname) || /motif-map\.html$/.test(location.pathname));
 
 function App() {
     const [status, setStatus] = useState('Initializing...');
