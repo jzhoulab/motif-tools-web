@@ -13,6 +13,8 @@ export interface DbNode {
     nns?: number;  // its correlation
     c?: number;    // cluster id (-1 = not in a coloured cluster)
     f?: number;    // curated motif family index (every motif has one)
+    gx?: number;   // grouped layout: families arranged by their aggregate similarity
+    gy?: number;
     // How much the name on this motif is worth: the label is a claim, and these say
     // when the claim is weak. See scripts/families/assign.mjs.
     sus?: number;  // 1 = its closest relatives belong to family `alt`, not to `f`
@@ -69,7 +71,7 @@ export function labelNote(n: DbNode, families: FamilyMeta[]): string | null {
 
 export interface QueryNode {
     id: string;
-    x: number; // world coords (already placed near matches)
+    x: number; // normalized 0..1, like DbNode - scaled by WORLD at draw time
     y: number;
     pwm: number[][];
     bestId?: string;
@@ -83,6 +85,7 @@ export interface QueryEdge {
 
 export interface Cluster {
     c: number;
+    r?: number;      // grouped layout: the family disc's radius
     label: string;   // compact form, for the zoomed-out map
     name?: string;   // fuller form, used once there is room for it
     size: number;
@@ -98,6 +101,7 @@ interface Props {
     queryEdges: QueryEdge[];
     sources: { key: string; count: number }[];
     clusters: Cluster[];
+    groupedClusters?: Cluster[];
     families: FamilyMeta[];
     familyText?: Record<string, FamilyText>;
     onSequenceSearch: (seq: string) => void;
@@ -161,7 +165,40 @@ function drawMiniLogo(ctx: CanvasRenderingContext2D, pwm: number[][], cx: number
 
 type PickResult = { type: 'db' | 'query'; idx: number };
 
-export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sources, clusters, families, familyText, onSequenceSearch }: Props) {
+export default function NetworkView({
+    nodes: nodesIn, edges, queryNodes: queryNodesIn, queryEdges, sources,
+    clusters: clustersIn, groupedClusters, families, familyText, onSequenceSearch,
+}: Props) {
+    // Two layouts over the same data. "Similarity" is the organic neighbour embedding:
+    // honest about every pair, but it must invent neighbours for the ~1,000 motifs that
+    // have no close relative, which smears the map. "Families" uses the two scales
+    // separately — families placed by their aggregate similarity to each other, members
+    // placed inside their family by local similarity — so nothing has to be invented.
+    const [layout, setLayout] = useState<'organic' | 'grouped'>('organic');
+    const hasGrouped = !!groupedClusters?.length && nodesIn.some((n) => n.gx != null);
+    const nodes = useMemo(() => (
+        layout === 'grouped' && hasGrouped
+            ? nodesIn.map((n) => ({ ...n, x: n.gx ?? n.x, y: n.gy ?? n.y, c: n.f ?? -1 }))
+            : nodesIn
+    ), [nodesIn, layout, hasGrouped]);
+    const clusters = layout === 'grouped' && hasGrouped ? (groupedClusters as Cluster[]) : clustersIn;
+    // A placed query has world coordinates from the organic layout; in the grouped layout
+    // it belongs wherever its matches now live, so re-derive it from the same edges.
+    const queryNodes = useMemo(() => {
+        if (layout !== 'grouped' || !hasGrouped) return queryNodesIn;
+        return queryNodesIn.map((q, qi) => {
+            let sw = 0, sx = 0, sy = 0;
+            for (const e of queryEdges) {
+                if (e.q !== qi) continue;
+                const d = nodes[e.db];
+                if (!d) continue;
+                const w = Math.max(0.05, (e as unknown as { weight?: number }).weight ?? 1);
+                sx += d.x * w; sy += d.y * w; sw += w;
+            }
+            return sw ? { ...q, x: sx / sw, y: sy / sw } : q;
+        });
+    }, [queryNodesIn, queryEdges, nodes, layout, hasGrouped]);
+
     const wrapRef = useRef<HTMLDivElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const transformRef = useRef({ x: 0, y: 0, k: 1 });
@@ -547,6 +584,8 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
         draw();
     }, [nodes, draw]);
 
+    useEffect(() => { fittedRef.current = false; }, [layout]);
+
     const fit = useCallback(() => {
         const { w, h } = sizeRef.current;
         if (!w) return;
@@ -774,6 +813,15 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
                         </div>
                     )}
                 </div>
+                {hasGrouped && (
+                    <div className="net-colormode">
+                        <span>Layout</span>
+                        <button className={layout === 'organic' ? 'active' : ''} onClick={() => setLayout('organic')}
+                            title="Every motif placed by its nearest relatives">Similarity</button>
+                        <button className={layout === 'grouped' ? 'active' : ''} onClick={() => setLayout('grouped')}
+                            title="Families placed by how similar they are to each other; motifs placed inside their family">Families</button>
+                    </div>
+                )}
                 <div className="net-colormode">
                     <span>Colour</span>
                     <button className={colorMode === 'cluster' ? 'active' : ''} onClick={() => setColorMode('cluster')}>Family</button>
@@ -781,7 +829,10 @@ export default function NetworkView({ nodes, edges, queryNodes, queryEdges, sour
                 </div>
                 <button onClick={() => { fittedRef.current = false; fit(); }}>Fit</button>
             </div>
-            <div className="net-hint">scroll to zoom · drag to pan · hover a node for its logo</div>
+            <div className="net-hint">
+                scroll to zoom · drag to pan · hover a node for its logo
+                {layout === 'grouped' && ' · families arranged by how similar they are to each other'}
+            </div>
 
             {cardKey && (() => {
                 const fam = families.find((f) => f.key === cardKey);

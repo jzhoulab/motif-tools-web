@@ -63,7 +63,7 @@ function buildMap() {
     const dbNodes: DbNode[] = (networkData.nodes as any[]).map((n, i) => ({
         id: n.id, source: n.source, x: n.x, y: n.y,
         pwm: byId.get(n.id) || all[i]?.pwm,
-        nn: n.nn, nns: n.nns, c: n.c, f: n.f,
+        nn: n.nn, nns: n.nns, c: n.c, f: n.f, gx: n.gx, gy: n.gy,
         // label-quality flags from the family assignment
         sus: n.sus, alt: n.alt, res: n.res, inf: n.inf, ev: n.ev, sp: n.sp, dim: n.dim,
     }));
@@ -508,6 +508,7 @@ function App() {
                     queryEdges={queryEdges}
                     sources={networkData.sources as { key: string; count: number }[]}
                     clusters={(networkData as any).clusters || []}
+                    groupedClusters={(networkData as any).groupedClusters || []}
                     families={(networkData as any).families || []}
                     familyText={familyText as any}
                     onSequenceSearch={handleSequenceSearch}

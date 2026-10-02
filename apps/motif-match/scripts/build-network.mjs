@@ -9,6 +9,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import umapPkg from 'umap-js';
+import { groupedLayout } from './lib/grouped-layout.mjs';
 const { UMAP } = umapPkg;
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
@@ -296,6 +297,19 @@ console.log(`family territories: ${territories.length} of ${famMembers.size} fam
     `${clusterId.filter((c) => c >= 0).length}/${N} motifs inside one`);
 console.log(`  largest: ${territories.slice(0, 8).map((t) => `${t.label}(${t.size}${t.size < t.total ? '/' + t.total : ''})`).join(', ')}`);
 
+// ---- second layout: families arranged by their aggregate similarity ----------
+// The organic layout above is built from each motif's nearest neighbours, which is the
+// right scale for "these are the same motif" but leaves 30% of its input fabricated for
+// motifs that have no real relatives. The grouped layout uses the two scales separately.
+const t2 = Date.now();
+const grouped = groupedLayout(S, famOf, famList.map((f) => f.key), { log: console.log });
+console.log(`grouped layout built in ${((Date.now() - t2) / 1000).toFixed(1)}s`);
+const groupedTerritories = grouped.territories.map((t) => ({
+    ...t,
+    label: famList[t.c]?.abbr || '',
+    name: famList[t.c]?.short || '',
+}));
+
 const outNodes = nodes.map((n, i) => {
     const a = ASSIGN.motifs[n.id] || {};
     const out = {
@@ -307,6 +321,9 @@ const outNodes = nodes.map((n, i) => {
         nns: Math.round(nnScore[i] * 100) / 100,
         c: clusterId[i],
         f: famOf[i],
+        // grouped layout coordinates (see lib/grouped-layout.mjs)
+        gx: Math.round(grouped.nodes[i].x * 1000) / 1000,
+        gy: Math.round(grouped.nodes[i].y * 1000) / 1000,
     };
     // Label caveats, so the map can say when a motif's name is doing more work than the
     // evidence supports: sus = its closest relatives belong to family `alt`;
@@ -321,7 +338,7 @@ const outNodes = nodes.map((n, i) => {
     return out;
 });
 
-const out = { generated: new Date().toISOString().slice(0, 10), sources: SOURCES.map((s) => ({ key: s.key, count: s.motifs.length })), nodes: outNodes, edges, clusters: territories, families: famList };
+const out = { generated: new Date().toISOString().slice(0, 10), sources: SOURCES.map((s) => ({ key: s.key, count: s.motifs.length })), nodes: outNodes, edges, clusters: territories, groupedClusters: groupedTerritories, families: famList };
 const outPath = R('motif-network.json');
 writeFileSync(outPath, JSON.stringify(out));
 console.log(`Wrote ${outPath}: ${outNodes.length} nodes, ${edges.length} edges, ${(JSON.stringify(out).length / 1e6).toFixed(2)} MB`);
