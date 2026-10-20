@@ -207,6 +207,17 @@ const embedding = umap.fit(dummyX);
 console.log(`UMAP embedded ${N} motifs in ${((Date.now() - t1) / 1000).toFixed(1)}s`);
 const simNodes = embedding.map(([x, y]) => ({ x, y }));
 
+// How many genuine relatives each motif has. A motif with none has an underdetermined
+// position in 2-D: the layout has to put it somewhere, and that somewhere is not
+// reproducible across runs. The map says so rather than implying a precision it lacks.
+const REL = 0.70;
+const relCount = new Int32Array(N);
+for (let i = 0; i < N; i++) { let c = 0; for (let j = 0; j < N; j++) if (j !== i && S[i][j] >= REL) c++; relCount[i] = c; }
+{
+    const none = [...relCount].filter((c) => c === 0).length, few = [...relCount].filter((c) => c > 0 && c < 3).length;
+    console.log(`position certainty: ${none} motifs with no relative above ${REL}, ${few} with only one or two`);
+}
+
 // nearest overall relative per node (for the hover alignment), regardless of threshold
 const nn = new Int32Array(N).fill(-1);
 const nnScore = new Float32Array(N);
@@ -324,6 +335,7 @@ const outNodes = nodes.map((n, i) => {
         // grouped layout coordinates (see lib/grouped-layout.mjs)
         gx: Math.round(grouped.nodes[i].x * 1000) / 1000,
         gy: Math.round(grouped.nodes[i].y * 1000) / 1000,
+        nr: relCount[i],
     };
     // Label caveats, so the map can say when a motif's name is doing more work than the
     // evidence supports: sus = its closest relatives belong to family `alt`;

@@ -65,7 +65,7 @@ function buildMap() {
         pwm: byId.get(n.id) || all[i]?.pwm,
         nn: n.nn, nns: n.nns, c: n.c, f: n.f, gx: n.gx, gy: n.gy,
         // label-quality flags from the family assignment
-        sus: n.sus, alt: n.alt, res: n.res, inf: n.inf, ev: n.ev, sp: n.sp, dim: n.dim,
+        sus: n.sus, alt: n.alt, res: n.res, inf: n.inf, ev: n.ev, sp: n.sp, dim: n.dim, nr: n.nr,
     }));
     return { all, dbNodes };
 }

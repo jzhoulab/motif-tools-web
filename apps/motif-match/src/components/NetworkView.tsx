@@ -24,6 +24,7 @@ export interface DbNode {
     ev?: string;   // HOCOMOCO evidence + grade, e.g. "PSM.A"
     sp?: string;   // motif transferred from this species' protein, with DBD identity
     dim?: number;  // matrix of a heterodimer
+    nr?: number;   // how many motifs it resembles at all (>= 0.70); 0 = position undetermined
 }
 
 export interface FamilyMeta {
@@ -58,6 +59,17 @@ function familyColor(f: number | undefined): string {
 // One short line on how much the name attached to a motif is worth. The databases label
 // a matrix with a factor name, which is a claim about what binds it - and ChIP-derived
 // matrices, cross-species transfers and generic archetype names all weaken that claim.
+// Whether this motif's position on the Similarity layout means anything. UMAP has to
+// place every point, and it normalises each one's neighbourhood until its nearest
+// non-relative counts as close - so a motif with no relatives gets a confident-looking
+// position that moves if you re-run the layout. Say so rather than implying precision.
+export function positionNote(n: DbNode, layout: 'organic' | 'grouped'): string | null {
+    if (layout !== 'organic' || n.nr == null) return null;
+    if (n.nr === 0) return 'nothing else resembles this motif \u2014 its position here is not determined';
+    if (n.nr < 3) return `only ${n.nr} close relative${n.nr === 1 ? '' : 's'} \u2014 its position here is weakly determined`;
+    return null;
+}
+
 export function labelNote(n: DbNode, families: FamilyMeta[]): string | null {
     if (n.sus && n.alt != null && families[n.alt]) {
         return `closest relatives are ${families[n.alt].short} motifs \u2014 label and matrix may disagree`;
@@ -963,6 +975,7 @@ export default function NetworkView({
                                         {fam?.class ? <span className="net-tooltip-cls">{fam.class}</span> : null}
                                     </div>
                                     {labelNote(n, families) && <div className="net-tooltip-warn">{labelNote(n, families)}</div>}
+                                    {positionNote(n, layout) && <div className="net-tooltip-pos">{positionNote(n, layout)}</div>}
                                 </>
                             );
                         })()}

@@ -66,6 +66,27 @@ table.mem td.s{font-family:var(--font-mono);font-size:11.5px;color:var(--muted)}
 .flag.x{background:#2a1a1a;color:#e0866f;border:1px solid #4a2a26}
 .flag.i{background:#1c2436;color:#8FA3BC;border:1px solid #2a3category}
 .flag.w{background:#231d12;color:#c9a35a;border:1px solid #3a2f1c}
+.sbars{margin-top:12px}
+.sbar-row{display:grid;grid-template-columns:minmax(190px,22ch) 1fr 120px;gap:12px;align-items:center;padding:5px 0}
+.sbar-l{font-size:13.5px;color:#cfdaea}
+.sbar-track{height:7px;background:var(--panel-2);border-radius:4px;overflow:hidden}
+.sbar-fill{display:block;height:100%;background:var(--muted-2);border-radius:4px}
+.sbar-fill.ok{background:#3f9e6b}.sbar-fill.warn{background:#c7982f}.sbar-fill.bad{background:#c2604c}
+.sbar-n{font-family:var(--font-mono);font-size:12px;color:var(--muted);text-align:right}
+.sbar-n i{display:block;font-style:normal;font-size:10.5px;color:var(--muted-2)}
+.note{font-size:14px;color:var(--muted);margin-top:10px;max-width:78ch;line-height:1.65}
+.note a{color:var(--cyan)}
+@media(max-width:640px){.sbar-row{grid-template-columns:1fr 70px}.sbar-track{display:none}}
+.checks{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.chk{font-family:var(--font-mono);font-size:11px;color:var(--muted);border:1px solid var(--line-soft);border-radius:6px;padding:3px 8px}
+.chk a{color:inherit}
+.chk.ok{border-color:#1e3a2a;background:#111c16;color:#6fbf8f}
+.chk.warn{border-color:#3a2f1c;background:#1b1710;color:#d2a344}
+.chk.bad{border-color:#4a2a26;background:#1e1312;color:#e0866f}
+.prov{margin:34px 0 0;padding:14px 16px;border:1px solid var(--line-soft);border-left:3px solid var(--muted-2);
+background:rgba(255,255,255,.015);border-radius:8px;font-size:13.5px;line-height:1.6;color:var(--muted);max-width:78ch}
+.prov-tag{display:block;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);margin-bottom:5px}
+.prov a{color:var(--cyan)}
 .feedback{margin:34px 0 0;padding:18px 20px;border:1px solid var(--line-soft);background:var(--panel);border-radius:var(--radius)}
 .feedback p{margin-top:8px;font-size:14.5px;color:var(--muted);max-width:74ch}
 .fb-btn{border-color:var(--cyan)!important;color:var(--cyan)!important}
@@ -106,7 +127,7 @@ const HEAD = (title, desc, canonical) => `<!DOCTYPE html>
 <style>${CSS}</style></head><body>
 <header class="top"><div class="wrap">
 <a class="brand" href="/"><span class="bars"><i style="background:var(--A)"></i><i style="background:var(--C)"></i><i style="background:var(--G)"></i><i style="background:var(--T)"></i></span>Motif Tools</a>
-<nav><a href="/scan/">Scan</a><a href="/search/">Search</a><a href="/map/">Map</a><a href="/families/">Families</a></nav>
+<nav><a href="/scan/">Scan</a><a href="/search/">Search</a><a href="/map/">Map</a><a href="/families/">Families</a><a href="/families/methods/">Methods</a><a href="/families/stats/">Stats</a></nav>
 </div></header><main><div class="wrap">`;
 
 // Readers who spot an error are the best reviewers this atlas will get. A prefilled
@@ -153,6 +174,15 @@ const evidenceTitle = (letters, grade) => {
     return `${how}${g}`;
 };
 
+// Every entry here was drafted by a language model reading the primary literature, then
+// checked mechanically. Saying so on each page is the minimum a reader is owed; the
+// methods page gives the full account.
+const PROVENANCE = `<div class="prov"><span class="prov-tag">how this page was made</span>
+Drafted by a language model reading the primary literature, then checked: every cited PMID
+is resolved against PubMed and its citation text regenerated from PubMed's own record, and
+every claim about the motifs themselves is checked against the matrices in the four source
+databases. <a href="/families/methods/">Methods and limits &rarr;</a></div>`;
+
 function memberRows(members) {
     return members.map((m) => {
         const flags = [];
@@ -183,6 +213,26 @@ export function buildFamilies(dist) {
         const title = `${f.name} — motif family`;
         const desc = (f.short || f.def || '').replace(/\s+/g, ' ').slice(0, 195);
         const logo = f.repPwm ? `<div class="logo-wrap">${logoSvg(f.repPwm, { height: 74, colW: 16 })}</div>` : '';
+        // What the matrices say about this entry, independently of what it says about itself.
+        const ev = { chip: 0, vitro: 0, transfer: 0, suspect: 0 };
+        for (const m of f.members || []) {
+            if (m.prov?.evidence) { if (/^P+$/.test(m.prov.evidence)) ev.chip++; else ev.vitro++; }
+            if (m.prov?.species) ev.transfer++;
+            if (m.suspect) ev.suspect++;
+        }
+        const cohesionWord = f.cohesion == null ? null
+            : f.cohesion >= 0.75 ? ['tight', 'ok'] : f.cohesion >= 0.5 ? ['loose', 'warn'] : ['not one motif', 'bad'];
+        const checks = [
+            cohesionWord && `<span class="chk ${cohesionWord[1]}" title="median similarity of members to the family's representative motif">members ${cohesionWord[0]} · ${f.cohesion}</span>`,
+            f.consensusChip && f.dataConsensus
+                ? `<span class="chk ok" title="the consensus this entry states, next to the one computed from the member matrices">stated ${esc(f.consensusChip)} · data ${esc(f.dataConsensus)}</span>`
+                : `<span class="chk warn" title="this entry declines to state a single consensus">no single consensus</span>`,
+            ev.vitro ? `<span class="chk ok" title="HOCOMOCO matrices with in vitro support (HT-SELEX, methyl-HT-SELEX, PBM, SMiLE-seq)">${ev.vitro} in vitro</span>` : '',
+            ev.chip ? `<span class="chk warn" title="ChIP-only matrices: they record where the protein was crosslinked, not necessarily a sequence it binds">${ev.chip} ChIP-only</span>` : '',
+            ev.transfer ? `<span class="chk warn" title="motifs measured on a non-human protein and transferred by DNA-binding-domain similarity">${ev.transfer} cross-species</span>` : '',
+            ev.suspect ? `<span class="chk bad" title="their nearest relatives across all four databases belong to another family"><a href="/families/label-checks/">${ev.suspect} label conflict${ev.suspect === 1 ? '' : 's'}</a></span>` : '',
+            `<span class="chk">${(f.refs || []).length} references, all PMIDs verified</span>`,
+        ].filter(Boolean).join('');
         const html = HEAD(title, desc, `https://motif.zhoulab.io/families/${f.key.toLowerCase()}/`)
             + `<div class="crumb"><a href="/families/">Family atlas</a> / ${esc(f.class)}</div>`
             + `<h1>${esc(f.name)}</h1>`
@@ -195,6 +245,7 @@ export function buildFamilies(dist) {
             + logo
             + (f.repPwm ? `<div class="eyebrow" style="margin-bottom:6px">representative: ${esc(f.representative)} · data consensus ${esc(f.dataConsensus || '')}</div>` : '')
             + (f.consensus && !f.consensusChip ? `<p class="lead" style="font-size:15px"><b>Consensus:</b> ${esc(f.consensus)}</p>` : '')
+            + `<div class="checks">${checks}</div>`
             + (f.short ? `<p class="lead">${esc(f.short)}</p>` : `<p class="lead">${esc(f.def)}</p>`)
             + `<div class="prose">${md(f.long || '')}</div>`
             + (f.caveats ? `<div class="caveat"><div class="eyebrow">How much to trust a hit</div><p style="margin-top:8px">${esc(f.caveats)}</p></div>` : '')
@@ -205,14 +256,121 @@ export function buildFamilies(dist) {
             + memberRows(f.members || []) + `</tbody></table>`
             + `<p class="evkey">HOCOMOCO tags read as assay + quality grade: <b>P</b> ChIP-seq, <b>S</b> HT-SELEX, <b>M</b> methyl-HT-SELEX, <b>G</b> GHT-SELEX, <b>I</b> SMiLE-seq, <b>B</b> PBM; grade <b>A</b> means two or more assay types agreed. A <b>P</b>-only matrix is a record of where the protein was crosslinked, which need not be a sequence it binds itself.</p>`
             + `</details>`
+            + (f.symbols?.length ? `<h2 style="font-size:19px;margin-top:30px">The factors, elsewhere</h2>`
+                + `<div class="rel">` + f.symbols.slice(0, 40).map((g) =>
+                    `<a href="https://www.genenames.org/tools/search/#!/?query=${encodeURIComponent(g)}" rel="noopener nofollow" title="HGNC, UniProt and linked records for ${esc(g)}">${esc(g)}</a>`).join('')
+                + (f.symbols.length > 40 ? `<span class="chk">+${f.symbols.length - 40} more</span>` : '')
+                + `</div>` : '')
+            + `<div class="rel" style="margin-top:10px">`
+            + `<a href="https://jaspar.elixir.no/search?q=${encodeURIComponent((f.symbols || [])[0] || f.name)}" rel="noopener nofollow">Find these in JASPAR →</a>`
+            + `<a href="https://hocomoco14.autosome.org/search?query=${encodeURIComponent((f.symbols || [])[0] || '')}" rel="noopener nofollow">in HOCOMOCO →</a>`
+            + `<a href="/families/${f.key.toLowerCase()}.json">this entry as JSON →</a>`
+            + `</div>`
+            + PROVENANCE
             + feedbackBlock(f)
             + (related.length ? `<h2 style="font-size:19px;margin-top:30px">Other ${esc(f.class)} families</h2><div class="rel">`
                 + related.map((g) => `<a href="/families/${g.key.toLowerCase()}/">${esc(g.name)}</a>`).join('') + `</div>` : '')
             + `<div class="rel" style="margin-top:26px"><a href="/map/">See this family on the motif map →</a><a href="/search/">Search your motif against the databases →</a></div>`
             + FOOT();
         writeFileSync(resolve(dir, 'index.html'), html);
+        // the same record as data: everything the page shows, minus the HTML
+        writeFileSync(resolve(dist, 'families', `${f.key.toLowerCase()}.json`), JSON.stringify({
+            key: f.key, name: f.name, class: f.class, aka: f.aka, definition: f.def,
+            consensus: f.consensus || null, dataConsensus: f.dataConsensus || null,
+            motifCount: f.n, bySource: f.bySource, symbols: f.symbols,
+            representative: f.representative, cohesion: f.cohesion,
+            short: f.short, long: f.long, caveats: f.caveats, references: f.refs,
+            members: f.members,
+            url: `https://motif.zhoulab.io/families/${f.key.toLowerCase()}/`,
+            generated: data.generated,
+            provenance: 'Entry text drafted by a language model reading the primary literature; every cited PMID verified against PubMed. Computed fields derive from JASPAR 2024, HOCOMOCO v14, CIS-BP and the Vierstra archetypes. See https://motif.zhoulab.io/families/methods/',
+        }, null, 1));
         written.push(f.key);
     }
+
+    writeFileSync(resolve(dist, 'families', 'index.json'), JSON.stringify({
+        generated: data.generated,
+        families: fams.length,
+        motifs: fams.reduce((a, f) => a + f.n, 0),
+        methods: 'https://motif.zhoulab.io/families/methods/',
+        entries: fams.map((f) => ({
+            key: f.key, name: f.name, class: f.class, motifCount: f.n,
+            consensus: f.consensus || null, cohesion: f.cohesion,
+            url: `https://motif.zhoulab.io/families/${f.key.toLowerCase()}/`,
+            json: `https://motif.zhoulab.io/families/${f.key.toLowerCase()}.json`,
+        })),
+    }, null, 1));
+
+    // ---- methods and limits ----
+    const stat = {
+        families: fams.length,
+        motifs: fams.reduce((a, f) => a + f.n, 0),
+        classes: new Set(fams.map((f) => f.class)).size,
+        refs: fams.reduce((a, f) => a + (f.refs || []).length, 0),
+        pmids: new Set(fams.flatMap((f) => (f.refs || []).map((r) => r.pmid).filter(Boolean).map(String))).size,
+        noConsensus: fams.filter((f) => !f.consensusChip).length,
+        lowCohesion: fams.filter((f) => f.cohesion != null && f.cohesion < 0.5).length,
+    };
+    const counts = { suspect: 0, transfer: 0, resembles: 0, inferred: 0, generic: 0, chipOnly: 0, withEvidence: 0 };
+    for (const f of fams) for (const m of f.members || []) {
+        if (m.suspect) counts.suspect++;
+        if (m.prov?.species) counts.transfer++;
+        if (m.resembles) counts.resembles++;
+        if (m.familyFromData) counts.inferred++;
+        if (m.genericLabel) counts.generic++;
+        if (m.prov?.evidence) { counts.withEvidence++; if (/^P+$/.test(m.prov.evidence)) counts.chipOnly++; }
+    }
+    const methods = HEAD('How the motif family atlas was made — Motif Tools',
+        `How the ${stat.families} family entries were written and checked, what was verified mechanically, and what was not.`,
+        'https://motif.zhoulab.io/families/methods/')
+        + `<div class="crumb"><a href="/families/">Family atlas</a> / methods</div>`
+        + `<h1>How this atlas was made</h1>`
+        + `<p class="lead">The ${stat.families} entries here were <b>drafted by language models reading the primary literature</b>, then checked mechanically against PubMed and against the motif matrices themselves. This page says exactly what that means, what is verified and what is not, and where the weak points are. Read any entry with that in mind.</p>`
+
+        + `<div class="prose">`
+        + md(`
+## What is generated and what is computed
+
+Two different things sit on every family page, and they have different reliability.
+
+**Computed from the matrices** — the member list, the data consensus, the representative motif, the cohesion value, the evidence tags, the cross-species transfer flags, and every entry on the [label checks](/families/label-checks/) page. These are arithmetic over the ${stat.motifs.toLocaleString()} motifs in JASPAR 2024, HOCOMOCO v14, CIS-BP and the Vierstra archetypes. They are reproducible from the repository and do not involve a language model.
+
+**Written by a model** — the short summary, the long entry, the caveats, and the choice of which papers to cite. Each family was written by an agent that read its computed data file first, then searched the literature and wrote from what it retrieved.
+
+## What is checked
+
+- **Every citation.** All ${stat.pmids.toLocaleString()} distinct PMIDs behind the ${stat.refs.toLocaleString()} references resolve against PubMed, and each one names an author the citation claims. The printed citation text is then *regenerated from PubMed's own record*, so what you read cannot drift from the identifier beside it. A wrong identifier surfaces as a mismatch rather than sitting there looking plausible.
+- **Structure.** Every entry carries the five required sections in order, within set word budgets, with at least six references.
+- **Claims about the motifs.** Where an entry states a consensus, it is compared with the consensus computed from the member matrices. ${stat.noConsensus} families state that they have **no single consensus** rather than being given one, and the pages and the map show that instead of substituting the medoid.
+
+## What is not checked
+
+- **Whether a sentence is a fair reading of the paper it cites.** The citation is verified to exist and to be the paper named. That it supports the specific claim is not mechanically verified.
+- **Claims with no citation.** Several entries state textbook background without a reference, because the reference list is capped at twelve. Those sentences rest on the model's training, not on a retrieved source.
+- **Completeness.** No claim is made that an entry covers the important literature for its family, only that what it cites is real.
+
+## Known weak points
+
+- **${stat.lowCohesion} families are buckets, not motifs.** Their members do not resemble one another (cohesion below 0.5), and the KRAB zinc-finger, unnamed-archetype and "other" entries say so in their first sentence. A hit to one of these identifies a kind of thing, not a site.
+- **${counts.chipOnly} of ${counts.withEvidence} HOCOMOCO matrices are ChIP-only.** A ChIP-derived matrix records where a protein was crosslinked, which need not be a sequence it binds itself. Those are flagged in amber in every member table.
+- **${counts.transfer} CIS-BP entries are inherited from a non-human protein**, down to 55% DNA-binding-domain identity — the human RFX8 motif comes from a louse. Each is labelled with its species and identity.
+- **${counts.suspect} motifs sit under a label their own matrix contradicts**, and ${counts.resembles} uncharacterised zinc-finger motifs are essentially a known family's motif. Both are listed on the [label checks](/families/label-checks/) page rather than quietly corrected.
+- **Family assignment is from the label, not the matrix.** A motif's family comes from the protein name it carries, routed through a curated gene-symbol table. Only ${counts.inferred} of the ${stat.motifs.toLocaleString()} were assigned from similarity instead, and a further ${counts.generic} carry a label so generic ("ZNF") that they are grouped as unnamed archetypes rather than placed. That independence from the matrices is what makes the label checks possible — but it also means a mislabelled matrix lands in the wrong family until someone notices.
+
+## Reproducing it
+
+Everything is in [the repository](https://github.com/jzhoulab/motif-tools-web): the family ontology, the gene-symbol assignment tables, the written entries as JSON, and the scripts. \`npm run families\` rebuilds the assignment and the merged atlas, \`npm test\` runs the integrity checks, and \`verify-refs.mjs\` re-checks every citation against PubMed.
+
+## Corrections
+
+If something here is wrong, it probably is somewhere. Corrections are the fastest way to fix it, and they are public.
+`)
+        + `</div>`
+        + feedbackBlock(null)
+        + `<div class="rel" style="margin-top:26px"><a href="/families/">Back to the family atlas →</a><a href="/families/label-checks/">Label checks →</a></div>`
+        + FOOT();
+    mkdirSync(resolve(dist, 'families', 'methods'), { recursive: true });
+    writeFileSync(resolve(dist, 'families', 'methods', 'index.html'), methods);
 
     // ---- label checks: where the data disagrees with the name on a motif ----
     const conflicts = [], transfers = [], resembles = [];
@@ -267,6 +425,78 @@ export function buildFamilies(dist) {
     mkdirSync(resolve(dist, 'families', 'label-checks'), { recursive: true });
     writeFileSync(resolve(dist, 'families', 'label-checks', 'index.html'), checks);
 
+    // ---- stats: the atlas's own numbers, including the unflattering ones ----
+    const bar = (label, n, total, tone='') => {
+        const pct = total ? (100 * n / total) : 0;
+        return `<div class="sbar-row"><span class="sbar-l">${esc(label)}</span>`
+            + `<span class="sbar-track"><span class="sbar-fill ${tone}" style="width:${pct.toFixed(1)}%"></span></span>`
+            + `<span class="sbar-n">${n.toLocaleString()}<i>${pct.toFixed(1)}%</i></span></div>`;
+    };
+    const srcCounts = {};
+    for (const f of fams) for (const [k, v] of Object.entries(f.bySource || {})) srcCounts[k] = (srcCounts[k] || 0) + v;
+    const cohesionBuckets = { 'tight (>=0.75)': 0, 'loose (0.5-0.75)': 0, 'not one motif (<0.5)': 0 };
+    for (const f of fams) {
+        if (f.cohesion == null) continue;
+        if (f.cohesion >= 0.75) cohesionBuckets['tight (>=0.75)']++;
+        else if (f.cohesion >= 0.5) cohesionBuckets['loose (0.5-0.75)']++;
+        else cohesionBuckets['not one motif (<0.5)']++;
+    }
+    const refCounts = fams.map((f) => (f.refs || []).length).sort((a, b) => a - b);
+    const wordsOf = (t) => String(t || '').trim().split(/\s+/).filter(Boolean).length;
+    const longWords = fams.map((f) => wordsOf(f.long));
+    const sum = (a) => a.reduce((x, y) => x + y, 0);
+    const statsPage = HEAD('Motif family atlas — coverage and quality',
+        `What the atlas covers, how well, and where it is weakest: ${stat.families} families over ${stat.motifs.toLocaleString()} motifs, ${stat.pmids.toLocaleString()} verified PMIDs.`,
+        'https://motif.zhoulab.io/families/stats/')
+        + `<div class="crumb"><a href="/families/">Family atlas</a> / coverage and quality</div>`
+        + `<h1>Coverage and quality</h1>`
+        + `<p class="lead">Every number here is computed from the published atlas by <code>npm test</code> and the build, not quoted from memory. The unflattering ones are included on purpose: an atlas that only reports what it does well is not telling you how much to trust it.</p>`
+
+        + `<h2 style="font-size:20px;margin-top:34px">Coverage</h2>`
+        + `<div class="sbars">`
+        + bar('motifs with a curated family', stat.motifs, stat.motifs, 'ok')
+        + bar('families with a written entry', stat.families, stat.families, 'ok')
+        + Object.entries(srcCounts).map(([k, v]) => bar(k, v, stat.motifs)).join('')
+        + `</div>`
+        + `<p class="note">${stat.families} families across ${stat.classes} DNA-binding-domain classes. Total written text: ${sum(longWords).toLocaleString()} words in the long entries, median ${longWords.sort((a, b) => a - b)[Math.floor(longWords.length / 2)]} per family.</p>`
+
+        + `<h2 style="font-size:20px;margin-top:34px">How cohesive the families are</h2>`
+        + `<p class="note">Median similarity of a family's members to its representative motif. A family below 0.5 is a bucket of unrelated matrices, not one motif — and its entry says so.</p>`
+        + `<div class="sbars">`
+        + bar('tight — one motif', cohesionBuckets['tight (>=0.75)'], stat.families, 'ok')
+        + bar('loose', cohesionBuckets['loose (0.5-0.75)'], stat.families, 'warn')
+        + bar('not one motif', cohesionBuckets['not one motif (<0.5)'], stat.families, 'bad')
+        + `</div>`
+
+        + `<h2 style="font-size:20px;margin-top:34px">Evidence behind the matrices</h2>`
+        + `<p class="note">HOCOMOCO records how each matrix was measured. In vitro evidence supports "this protein binds this sequence"; a ChIP-only matrix records where the protein was crosslinked, which need not be a sequence it binds itself.</p>`
+        + `<div class="sbars">`
+        + bar('in vitro support (SELEX, PBM, SMiLE-seq)', counts.withEvidence - counts.chipOnly, counts.withEvidence, 'ok')
+        + bar('ChIP-only', counts.chipOnly, counts.withEvidence, 'warn')
+        + `</div>`
+
+        + `<h2 style="font-size:20px;margin-top:34px">Where the data and the labels disagree</h2>`
+        + `<div class="sbars">`
+        + bar('motifs whose matrix contradicts its label', counts.suspect, stat.motifs, 'bad')
+        + bar('motifs inherited from a non-human protein', counts.transfer, stat.motifs, 'warn')
+        + bar('uncharacterised motifs matching a known family', counts.resembles, stat.motifs, 'warn')
+        + bar('family inferred from similarity, not the label', counts.inferred, stat.motifs)
+        + `</div>`
+        + `<p class="note">All of these are listed individually on the <a href="/families/label-checks/">label checks</a> page.</p>`
+
+        + `<h2 style="font-size:20px;margin-top:34px">Citations</h2>`
+        + `<div class="sbars">`
+        + bar('PMIDs that resolve and name the author cited', stat.pmids, stat.pmids, 'ok')
+        + `</div>`
+        + `<p class="note">${stat.refs.toLocaleString()} references across ${stat.families} entries, ${stat.pmids.toLocaleString()} of them distinct; median ${refCounts[Math.floor(refCounts.length / 2)]} per family, minimum ${refCounts[0]}. Citation text is regenerated from PubMed's own record, so it cannot drift from the identifier beside it. What is <em>not</em> checked is whether each sentence is a fair reading of the paper it cites — see <a href="/families/methods/">methods</a>.</p>`
+
+        + `<h2 style="font-size:20px;margin-top:34px">Entries that decline to answer</h2>`
+        + `<p class="note">${stat.noConsensus} of ${stat.families} families state that they have <b>no single consensus</b> rather than being given one. That is a result, not a gap: a KRAB zinc-finger hit identifies a kind of protein, not a site.</p>`
+        + `<div class="rel" style="margin-top:26px"><a href="/families/">Back to the atlas →</a><a href="/families/methods/">Methods and limits →</a><a href="/families/index.json">All of this as JSON →</a></div>`
+        + FOOT();
+    mkdirSync(resolve(dist, 'families', 'stats'), { recursive: true });
+    writeFileSync(resolve(dist, 'families', 'stats', 'index.html'), statsPage);
+
     // ---- index ----
     const classes = [...new Set(fams.map((f) => f.class))]
         .sort((a, b) => fams.filter((f) => f.class === b).reduce((s, f) => s + f.n, 0) - fams.filter((f) => f.class === a).reduce((s, f) => s + f.n, 0));
@@ -291,6 +521,7 @@ export function buildFamilies(dist) {
         + `<p style="margin-top:18px"><a class="fam-checks" href="/families/label-checks/">See where the data disagrees with the label →</a></p>`
         + `<div class="sbar"><input id="q" type="search" placeholder="filter families — name, consensus, gene symbol" autocomplete="off"/><span class="eyebrow" id="cnt"></span></div>`
         + `<div id="all">${cards}</div>`
+        + PROVENANCE
         + feedbackBlock(null)
         + `<script>
 const q=document.getElementById('q'),cnt=document.getElementById('cnt');

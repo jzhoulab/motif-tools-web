@@ -752,3 +752,10 @@ body {
     color: #d2a344;
 }
 .net-card-nocons { color: #64768f; font-style: italic; }
+.net-tooltip-pos {
+    margin-top: 3px;
+    font-size: 10.5px;
+    line-height: 1.4;
+    color: #7f8fa6;
+    font-style: italic;
+}

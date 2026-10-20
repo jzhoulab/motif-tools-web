@@ -84,7 +84,7 @@ for (const f of families) {
         id: m.id, source: m.source, consensus: m.consensus, bits: m.bits,
         prov: m.prov && Object.keys(m.prov).length ? m.prov : undefined,
         suspect: m.suspect, altFamily: m.altFamily, resembles: m.resembles,
-        genericLabel: m.genericLabel,
+        genericLabel: m.genericLabel, familyFromData: m.familyFromData,
     }));
 }
 
