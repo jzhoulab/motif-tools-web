@@ -7,7 +7,7 @@
  ],
  "consensus": "AGGGTAACAGC",
  "short": "SPZ1 is a single-gene family: one bHLH-Zip protein, with a basic helix-loop-helix domain followed by a leucine zipper, the same architecture as MYC, USF and the SREBPs. It was isolated from mouse testis, where expression is confined to testis and epididymis and is reduced by testosterone and retinoic acid. Unlike its palindrome-reading relatives, the one experimentally derived matrix is asymmetric, AGGGTAACAGC, from a small mouse SELEX experiment; the only other entry in the databases is a footprint archetype with a completely different, G-rich consensus. There is no ChIP-seq or in vitro human model. Overexpression studies link SPZ1 to MAPK-driven proliferation and transformation and to TWIST-mediated epithelial-mesenchymal transition in liver cancer.",
- "long": "## The factors\n\nSPZ1 (spermatogenic Zip 1) is a single gene with no human paralogues, and this family therefore has exactly one member. It was isolated from a mouse testis cDNA library and described as a bHLH-Zip protein: a basic helix-loop-helix domain followed by a leucine zipper, the same domain architecture as MYC, MAX, USF1/2, TFE3 and the SREBPs. In mouse, expression is restricted to testis and epididymis, with protein detected in the nuclei of Leydig cells, and transcript levels are reduced by testosterone and by retinoic acid. Nothing comparable to the structural, genetic and genomic literature that exists for the other bHLH families exists for SPZ1; there is no crystal structure, no knockout phenotype in the published record retrieved here, and no genome-wide binding map. The functional work that does exist is about overexpression: Spz1 driven downstream of mitogen-activated protein kinase signalling promotes proliferation, transformation of cultured cells and tumour formation in mice, and SPZ1 has since been reported to promote TWIST-mediated epithelial-mesenchymal transition in liver cancer, chemoresistance in breast cancer lines, and interleukin-6 induction in nasopharyngeal carcinoma cells. Whether endogenous human SPZ1 does any of this outside the testis is not established.\n\n## The motif\n\nThe family contains two entries, and they do not agree with each other.\n\nThe primary one is JASPAR MA0111.1, a SELEX-derived matrix for the *mouse* protein (UniProt Q99MY0), traceable to the original 2001 report, which described a nine-base asymmetric target site selected by random selection and PCR. The retrieved matrix is 11 columns wide and its column sums are 12, meaning it was built from about a dozen selected sequences — an extremely small sample by modern standards. Its consensus reads AGGGTAACAGC, with position 7 weakly A or T. Two things are worth noting about that string. It is asymmetric, unlike the palindromic CACGTG-type E-boxes that the other bHLH-Zip proteins read, and its 3' end, AACAGC, is the 5' half of a class A E-box with an A/T flank (AACAGCTG) but is not followed by a complete second half-site. Whether the selected element is a bona fide degenerate E-box variant or something else is not resolvable from one small SELEX experiment.\n\nThe second entry is the Vierstra archetype `AC0575:SPZ:Unknown`. Its consensus is GGRGGGT, a G-rich sequence with no resemblance to the SELEX model, and its structural class is recorded as unknown. Archetypes are named after whichever factor group dominated a cluster of footprint-derived motifs, so this is a claim about clustering, not about SPZ1 recognition. The two entries match each other poorly and match nothing else in the collection: the best similarity of either to any motif outside the family is 0.62 and 0.69 respectively, and family cohesion is 0.33, the lowest value in this part of the atlas. There is no HOCOMOCO model for SPZ1 at all — no ChIP-seq, no HT-SELEX, no methyl-SELEX — and no CIS-BP entry.\n\n## Where it acts\n\nUnknown. With no ChIP-seq or footprint-verified model, there is no evidence in the collection about promoter versus enhancer preference, chromatin context, CpG association, typical occupancy count or co-occurring partners. The expectation for a bHLH-Zip protein would be dimerisation through the zipper and binding as a dimer, but SPZ1's dimerisation partner, if it has one, has not been identified in the material retrieved here.\n\n## Biology and disease\n\nRestricted testis and epididymis expression in mouse, Leydig cell nuclear localisation, and downregulation by testosterone and retinoic acid are the only well-supported endogenous observations. A role in spermatogenesis was proposed on that basis but has not been demonstrated genetically in the literature retrieved. The cancer literature is overexpression-based: SPZ1 downstream of MAPK signalling drives proliferation, transformation and tumorigenesis in mouse models; SPZ1 promotes TWIST-mediated epithelial-mesenchymal transition and oncogenesis in human liver cancer; and reports link it to chemoresistance in drug-resistant breast cancer cells and to Wnt5a/interleukin-6 signalling in nasopharyngeal carcinoma. These are consistent in direction but come from a small literature centred on a few groups.\n\n## Reading a hit\n\nTreat an SPZ1 match with real skepticism. The only sequence model with any experimental basis is a mouse SELEX matrix built from roughly twelve sequences, so its position weights are not well estimated, and using it on human sequence is a cross-species application even though the human and mouse proteins are orthologous. The only other entry, the SPZ archetype, is a different sequence entirely and is labelled with an unknown structural class, so the two cannot be reconciled. There is no in vitro human model and no ChIP evidence of any kind. In practice a hit to this family should be read as \"the sequence resembles a poorly characterised mouse SELEX consensus\", not as \"SPZ1 binds here\", and it should not be used to support a mechanistic claim without direct experimental follow-up. If SPZ1 came up as a top hit in a scan of human regulatory regions, the prior that the result is meaningful is low, and the prior that a better-supported factor explains the same sequence is high.",
+ "long": "## The factors\n\nSPZ1 (spermatogenic Zip 1) is a single gene with no human paralogues, and this family therefore has exactly one member. It was isolated from a mouse testis cDNA library and described as a bHLH-Zip protein: a basic helix-loop-helix domain followed by a leucine zipper, the same domain architecture as MYC, MAX, USF1/2, TFE3 and the SREBPs [PMID:11165476,10611221]. In mouse, expression is restricted to testis and epididymis, with protein detected in the nuclei of Leydig cells, and transcript levels are reduced by testosterone and by retinoic acid [PMID:11165476]. Nothing comparable to the structural, genetic and genomic literature that exists for the other bHLH families exists for SPZ1; there is no crystal structure, no knockout phenotype in the published record retrieved here, and no genome-wide binding map. The functional work that does exist is about overexpression: Spz1 driven downstream of mitogen-activated protein kinase signalling promotes proliferation, transformation of cultured cells and tumour formation in mice [PMID:15899793], and SPZ1 has since been reported to promote TWIST-mediated epithelial-mesenchymal transition in liver cancer [PMID:28368406], chemoresistance in breast cancer lines [PMID:30076850], and interleukin-6 induction in nasopharyngeal carcinoma cells [PMID:39440046]. Whether endogenous human SPZ1 does any of this outside the testis is not established.\n\n## The motif\n\nThe family contains two entries, and they do not agree with each other.\n\nThe primary one is JASPAR MA0111.1, a SELEX-derived matrix for the *mouse* protein (UniProt Q99MY0), traceable to the original 2001 report, which described a nine-base asymmetric target site selected by random selection and PCR [PMID:37962376,11165476]. The retrieved matrix is 11 columns wide and its column sums are 12, meaning it was built from about a dozen selected sequences — an extremely small sample by modern standards. Its consensus reads AGGGTAACAGC, with position 7 weakly A or T. Two things are worth noting about that string. It is asymmetric, unlike the palindromic CACGTG-type E-boxes that the other bHLH-Zip proteins read, and its 3' end, AACAGC, is the 5' half of a class A E-box with an A/T flank (AACAGCTG) but is not followed by a complete second half-site. Whether the selected element is a bona fide degenerate E-box variant or something else is not resolvable from one small SELEX experiment.\n\nThe second entry is the Vierstra archetype `AC0575:SPZ:Unknown`. Its consensus is GGRGGGT, a G-rich sequence with no resemblance to the SELEX model, and its structural class is recorded as unknown. Archetypes are named after whichever factor group dominated a cluster of footprint-derived motifs, so this is a claim about clustering, not about SPZ1 recognition [PMID:32728250]. The two entries match each other poorly and match nothing else in the collection: the best similarity of either to any motif outside the family is 0.62 and 0.69 respectively, and family cohesion is 0.33, the lowest value in this part of the atlas. There is no HOCOMOCO model for SPZ1 at all — no ChIP-seq, no HT-SELEX, no methyl-SELEX — and no CIS-BP entry [PMID:25215497].\n\n## Where it acts\n\nUnknown. With no ChIP-seq or footprint-verified model, there is no evidence in the collection about promoter versus enhancer preference, chromatin context, CpG association, typical occupancy count or co-occurring partners. The expectation for a bHLH-Zip protein would be dimerisation through the zipper and binding as a dimer, but SPZ1's dimerisation partner, if it has one, has not been identified in the material retrieved here.\n\n## Biology and disease\n\nRestricted testis and epididymis expression in mouse, Leydig cell nuclear localisation, and downregulation by testosterone and retinoic acid are the only well-supported endogenous observations [PMID:11165476]. A role in spermatogenesis was proposed on that basis but has not been demonstrated genetically in the literature retrieved. The cancer literature is overexpression-based: SPZ1 downstream of MAPK signalling drives proliferation, transformation and tumorigenesis in mouse models [PMID:15899793]; SPZ1 promotes TWIST-mediated epithelial-mesenchymal transition and oncogenesis in human liver cancer [PMID:28368406]; and reports link it to chemoresistance in drug-resistant breast cancer cells and to Wnt5a/interleukin-6 signalling in nasopharyngeal carcinoma [PMID:30076850,39440046]. These are consistent in direction but come from a small literature centred on a few groups.\n\n## Reading a hit\n\nTreat an SPZ1 match with real skepticism. The only sequence model with any experimental basis is a mouse SELEX matrix built from roughly twelve sequences, so its position weights are not well estimated, and using it on human sequence is a cross-species application even though the human and mouse proteins are orthologous. The only other entry, the SPZ archetype, is a different sequence entirely and is labelled with an unknown structural class, so the two cannot be reconciled. There is no in vitro human model and no ChIP evidence of any kind. In practice a hit to this family should be read as \"the sequence resembles a poorly characterised mouse SELEX consensus\", not as \"SPZ1 binds here\", and it should not be used to support a mechanistic claim without direct experimental follow-up. If SPZ1 came up as a top hit in a scan of human regulatory regions, the prior that the result is meaningful is low, and the prior that a better-supported factor explains the same sequence is high.",
  "caveats": "This is the weakest family in the batch and should be read as provisional. Its two motifs do not agree with each other: the JASPAR SELEX matrix (mouse, roughly twelve selected sequences) reads AGGGTAACAGC, while the Vierstra archetype AC0575:SPZ:Unknown reads a G-rich GGRGGGT and carries an unknown structural class. Cohesion is 0.33, and neither entry resembles anything else in the collection. There is no HOCOMOCO model at all for SPZ1 — no ChIP-seq, no HT-SELEX, no methyl-SELEX — and no CIS-BP entry, so nothing here establishes a human binding preference. A hit means the sequence resembles a small mouse SELEX consensus, nothing more.",
  "refs": [
   {
@@ -55,5 +55,83 @@
    "pmid": "10611221",
    "url": "https://pubmed.ncbi.nlm.nih.gov/10611221/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 2000,
+   "finding": "The helix-loop-helix classes are set out in the form the atlas still uses, with the bHLH-Zip group (MYC, MAX, USF, TFE3, SREBP) defined by a leucine zipper appended to the bHLH and by dimeric binding to palindromic E-boxes — the class SPZ1 was later assigned to.",
+   "methods": "review of structural and biochemical literature",
+   "confidence": "medium",
+   "pmids": [
+    "10611221"
+   ]
+  },
+  {
+   "year": 2001,
+   "finding": "Spz1 is isolated from a mouse testis cDNA library as a bHLH-Zip protein expressed in testis and epididymis, with protein in Leydig cell nuclei and transcript reduced by testosterone and retinoic acid; random selection and PCR give a nine-base asymmetric target site, the matrix later deposited as JASPAR MA0111.1.",
+   "methods": "cDNA cloning, Northern blot, immunohistochemistry, in vitro site selection",
+   "confidence": "medium",
+   "pmids": [
+    "11165476"
+   ],
+   "open": "The selected site rests on about a dozen sequences and was never confirmed by an independent assay, and no dimerization partner was identified."
+  },
+  {
+   "year": 2005,
+   "finding": "Spz1 is placed downstream of mitogen-activated protein kinase signalling: overexpression promotes proliferation, transforms cultured cells and produces tumours in mice.",
+   "methods": "overexpression in cell lines and transgenic mice",
+   "confidence": "medium",
+   "pmids": [
+    "15899793"
+   ],
+   "open": "Whether endogenous Spz1, whose expression is testis-restricted, does any of this was not addressed."
+  },
+  {
+   "year": 2014,
+   "finding": "Successive genome-scale compilations leave SPZ1 essentially unmodelled: CIS-BP (2014) carries no SPZ1 motif, the human footprint archetypes (2020) place a G-rich cluster AC0575:SPZ:Unknown with unknown structural class, and JASPAR 2024 still offers only the 2001 mouse SELEX matrix.",
+   "methods": "database compilation; genomic footprint clustering",
+   "confidence": "medium",
+   "pmids": [
+    "25215497",
+    "32728250",
+    "37962376"
+   ],
+   "open": "The archetype and the SELEX matrix are different sequences and no experiment reconciles them."
+  },
+  {
+   "year": 2017,
+   "finding": "SPZ1 is reported to promote TWIST-mediated epithelial-mesenchymal transition and oncogenesis in human liver cancer, the first proposed mechanism for the human protein.",
+   "methods": "knockdown and overexpression in liver cancer cells and xenografts",
+   "confidence": "low",
+   "pmids": [
+    "28368406"
+   ],
+   "open": "Whether SPZ1 acts here through its own DNA binding or through protein-protein interaction with TWIST."
+  },
+  {
+   "year": 2018,
+   "finding": "SPZ1 is linked to chemoresistance and aggressiveness in drug-resistant breast cancer cell lines.",
+   "methods": "cell-line knockdown and overexpression",
+   "confidence": "low",
+   "pmids": [
+    "30076850"
+   ]
+  },
+  {
+   "year": 2024,
+   "finding": "SPZ1-mediated Wnt5a signalling is reported to induce interleukin-6 and promote progression in nasopharyngeal carcinoma cells, extending a small overexpression-based literature.",
+   "methods": "cell-line manipulation and expression assays",
+   "confidence": "low",
+   "pmids": [
+    "39440046"
+   ],
+   "open": "No genome-wide binding map or knockout phenotype has yet been reported for SPZ1 in any system."
+  }
+ ],
+ "open": [
+  "The family's two entries describe different sequences and cannot both be SPZ1's site: the mouse SELEX matrix reads AGGGTAACAGC while the footprint archetype AC0575:SPZ:Unknown reads a G-rich GGRGGGT, and no independent experiment exists to decide between them.",
+  "Whether SPZ1 binds DNA as a homodimer, as a heterodimer with another bHLH-Zip protein, or chiefly through protein partners is unknown, since no dimerization partner has been identified and the selected site is asymmetric rather than palindromic like the sites read by other bHLH-Zip proteins.",
+  "It is unresolved whether the selected element is a degenerate E-box variant at all: its 3' end, AACAGC, is the 5' half of a class A E-box with an A/T flank, but no complete second half-site follows, and one small selection experiment cannot settle the question.",
+  "Whether endogenous human SPZ1 has any function outside the testis is unestablished: the proliferation, EMT, chemoresistance and interleukin-6 reports all rest on overexpression or knockdown in cell lines, and no knockout phenotype or genome-wide binding map has been published."
  ]
 }

@@ -12,7 +12,7 @@
  ],
  "consensus": "ACTACAATTCCC",
  "short": "The SPH element, also called the SBS, is a promoter element read by three proteins that are not close relatives. ZNF143 (originally Staf) and its paralogue ZNF76 are C2H2 zinc-finger activators; THAP11 (Ronin) uses an unrelated THAP zinc-coordinating domain and occupies the same sequence in a complex with the coactivator HCFC1. The site sits close to transcription start sites at thousands of CpG-island promoters, where it drives small nuclear RNA genes transcribed by RNA polymerase II and III and a large set of protein-coding genes, prominently nuclear-encoded mitochondrial and ribosomal ones. The element was once presented as a sequence-specific anchor for chromatin loops; that role has since been retracted, but its promoter activity is well supported.",
- "long": "## The factors\n\nZNF143 was cloned as Staf, the selenocysteine tRNA gene transcription-activating factor, a zinc-finger protein that activates an RNA polymerase III promoter; it was soon shown to work on polymerase II promoters as well, including the U6 snRNA gene, whose enhancer-like distal region contains the same element (there called SPH). The DNA-binding region is a tandem array of seven C2H2 zinc fingers, with a separate N-terminal activation domain. ZNF76 is the close paralogue and has essentially the same in vitro specificity. THAP11/Ronin is unrelated in fold: its DNA-binding domain is a THAP domain, a zinc-coordinating domain of transposase ancestry that reads adjacent major and minor grooves, and it binds the element as part of a complex with HCFC1 (HCF-1). ZNF143, THAP11 and HCFC1 occupy overlapping sets of promoters, and the three are individually essential; ZNF143 is deeply conserved in vertebrates, and zebrafish carry two znf143 paralogues.\n\n## The motif\n\nThe functional element is bipartite and about 18 base pairs long. The half that carries most of the information is written TCCCAYAATGCA; upstream of it, separated by nothing or a base or two, sits the ACTACAA box, giving the composite form that the ChIP-derived matrices in this family read as ACTACAATTCCCAGCATG (reverse complement CATGCTGGGAATTGTAGT); the element is more often quoted in the literature in the shortened form ACTACAATTCCC used above. The two halves are contacted by different parts of the finger array, which is why databases built from different assays capture different portions of the site. In this family, the in vitro matrices — the HT-SELEX/methyl-SELEX ZNF76 matrix and JASPAR MA0088.2 (ZNF143) and MA1716.2 (ZNF76) — cover the TCCCACAATGCA half, in the opposite orientation, while the ChIP-derived HOCOMOCO matrices and the CIS-BP ZNF143 matrix carry the full bipartite word including ACTACAA. The family-level dataConsensus, CGGGGCATGCTGGGAADTGTAG, is the complete site read on the minus strand, which is why it looks unlike the ACTACAATTCCC form given above. ZNF143, ZNF76 and THAP11 are not distinguishable from sequence: their matrices are each other's nearest neighbours across all four databases.\n\n## Where it acts\n\nThis is a promoter motif, not an enhancer motif. Occurrences concentrate within roughly 100-200 base pairs of transcription start sites in CpG islands, often at divergent promoter pairs, and the element is one of the small number of words enriched at bidirectional promoters. It is also a fixture of the type 3 polymerase III promoters (U6, tRNA-Sec, and related small RNA genes), where it works together with the SNAPc complex and the PSE. At protein-coding promoters the element coincides with HCFC1, YY1 and GABP occupancy, making it part of a recurring core-promoter module rather than a stand-alone site. Overlapping ZNF143, THAP11 and Notch1 sites at the same promoters have been described, so occupancy can be competitive. Tens of thousands of matches to the full motif exist in the human genome, but the strongly occupied subset is in the low thousands and is largely invariant between cell types.\n\n## Biology and disease\n\nDepletion of ZNF143 is lethal in cells and in mouse embryos. Degron experiments place its direct output on nuclear-encoded mitochondrial genes and ribosomal genes: loss causes severe mitochondrial dysfunction and blocks proliferation and differentiation, and it acts by stimulating transcription initiation at promoters it occupies directly, activating most and repressing some. THAP11/Ronin knockout arrests mouse embryos before implantation and is required for embryonic stem cell self-renewal, and mutations in HCFC1 and THAP11 cause an inborn error of cobalamin metabolism with ribosomopathy features. ZNF143 has been reported as overexpressed in several cancers, but the mechanistic claims that received most attention were architectural rather than oncogenic.\n\nThe architectural story is the important caution here. ZNF143 was reported to occupy chromatin-interaction anchors and to provide sequence specificity for promoter loops, with and without CTCF, and later to mediate CTCF-bound promoter-enhancer loops in haematopoietic stem cells. Two 2025 degron studies overturned this. Acute depletion of ZNF143/ZFP143 in mouse and human cells changed no loops, and one study showed that a widely used ZNF143 antibody cross-reacts with CTCF, which is how the factor came to be placed at loop anchors in the first place. The current view is that ZNF143 is an essential promoter-proximal transcription factor with an unusually long chromatin residence time and no general looping function.\n\n## Reading a hit\n\nA confident match tells you that you are almost certainly at a promoter, and it tells you the family, not the protein: ZNF143, ZNF76 and THAP11/HCFC1 all read this word and cannot be separated from sequence. If the hit came from a ChIP peak set, check which antibody was used before concluding anything about loops or CTCF, and do not treat co-occurrence with CTCF as evidence of a composite element. Because the site is bipartite, a hit on only the TCCCAYAATGCA half is weaker evidence than a hit spanning both halves, and matrices in this family differ in which half they model; scan with several and compare. The motif is information-rich, so chance matches to the full site are uncommon in a single promoter but not negligible genome-wide.",
+ "long": "## The factors\n\nZNF143 was cloned as Staf, the selenocysteine tRNA gene transcription-activating factor, a zinc-finger protein that activates an RNA polymerase III promoter [PMID:7641696]; it was soon shown to work on polymerase II promoters as well, including the U6 snRNA gene, whose enhancer-like distal region contains the same element (there called SPH) [PMID:9009278,9776743]. The DNA-binding region is a tandem array of seven C2H2 zinc fingers, with a separate N-terminal activation domain [PMID:7641696]. ZNF76 is the close paralogue and has essentially the same in vitro specificity. THAP11/Ronin is unrelated in fold: its DNA-binding domain is a THAP domain, a zinc-coordinating domain of transposase ancestry that reads adjacent major and minor grooves, and it binds the element as part of a complex with HCFC1 (HCF-1) [PMID:20581084]. ZNF143, THAP11 and HCFC1 occupy overlapping sets of promoters [PMID:23539139,23408857], and the three are individually essential; ZNF143 is deeply conserved in vertebrates, and zebrafish carry two znf143 paralogues.\n\n## The motif\n\nThe functional element is bipartite and about 18 base pairs long. The half that carries most of the information is written TCCCAYAATGCA [PMID:9009278]; upstream of it, separated by nothing or a base or two, sits the ACTACAA box, giving the composite form that the ChIP-derived matrices in this family read as ACTACAATTCCCAGCATG (reverse complement CATGCTGGGAATTGTAGT) [PMID:23408857]; the element is more often quoted in the literature in the shortened form ACTACAATTCCC used above. The two halves are contacted by different parts of the finger array, which is why databases built from different assays capture different portions of the site. In this family, the in vitro matrices — the HT-SELEX/methyl-SELEX ZNF76 matrix and JASPAR MA0088.2 (ZNF143) and MA1716.2 (ZNF76) — cover the TCCCACAATGCA half, in the opposite orientation, while the ChIP-derived HOCOMOCO matrices and the CIS-BP ZNF143 matrix carry the full bipartite word including ACTACAA. The family-level dataConsensus, CGGGGCATGCTGGGAADTGTAG, is the complete site read on the minus strand, which is why it looks unlike the ACTACAATTCCC form given above. ZNF143, ZNF76 and THAP11 are not distinguishable from sequence: their matrices are each other's nearest neighbours across all four databases.\n\n## Where it acts\n\nThis is a promoter motif, not an enhancer motif. Occurrences concentrate within roughly 100-200 base pairs of transcription start sites in CpG islands, often at divergent promoter pairs, and the element is one of the small number of words enriched at bidirectional promoters [PMID:21177654]. It is also a fixture of the type 3 polymerase III promoters (U6, tRNA-Sec, and related small RNA genes), where it works together with the SNAPc complex and the PSE [PMID:9009278]. At protein-coding promoters the element coincides with HCFC1, YY1 and GABP occupancy, making it part of a recurring core-promoter module rather than a stand-alone site [PMID:23539139]. Overlapping ZNF143, THAP11 and Notch1 sites at the same promoters have been described, so occupancy can be competitive [PMID:23408857]. Tens of thousands of matches to the full motif exist in the human genome, but the strongly occupied subset is in the low thousands [PMID:23408857] and is largely invariant between cell types.\n\n## Biology and disease\n\nDepletion of ZNF143 is lethal in cells and in mouse embryos [PMID:39708803,39708805]. Degron experiments place its direct output on nuclear-encoded mitochondrial genes and ribosomal genes [PMID:39708803,39708805]: loss causes severe mitochondrial dysfunction and blocks proliferation and differentiation [PMID:39708805], and it acts by stimulating transcription initiation at promoters it occupies directly, activating most and repressing some [PMID:39676670]. THAP11/Ronin knockout arrests mouse embryos before implantation and is required for embryonic stem cell self-renewal [PMID:20581084], and mutations in HCFC1 and THAP11 cause an inborn error of cobalamin metabolism with ribosomopathy features [PMID:35013307]. ZNF143 has been reported as overexpressed in several cancers, but the mechanistic claims that received most attention were architectural rather than oncogenic.\n\nThe architectural story is the important caution here. ZNF143 was reported to occupy chromatin-interaction anchors and to provide sequence specificity for promoter loops, with and without CTCF [PMID:25645053], and later to mediate CTCF-bound promoter-enhancer loops in haematopoietic stem cells [PMID:33397967]. Two 2025 degron studies overturned this. Acute depletion of ZNF143/ZFP143 in mouse and human cells changed no loops [PMID:39708803,39708805], and one study showed that a widely used ZNF143 antibody cross-reacts with CTCF, which is how the factor came to be placed at loop anchors in the first place [PMID:39708805]. The current view is that ZNF143 is an essential promoter-proximal transcription factor with an unusually long chromatin residence time and no general looping function [PMID:39708803].\n\n## Reading a hit\n\nA confident match tells you that you are almost certainly at a promoter, and it tells you the family, not the protein: ZNF143, ZNF76 and THAP11/HCFC1 all read this word and cannot be separated from sequence. If the hit came from a ChIP peak set, check which antibody was used before concluding anything about loops or CTCF [PMID:39708805], and do not treat co-occurrence with CTCF as evidence of a composite element. Because the site is bipartite, a hit on only the TCCCAYAATGCA half is weaker evidence than a hit spanning both halves, and matrices in this family differ in which half they model; scan with several and compare. The motif is information-rich, so chance matches to the full site are uncommon in a single promoter but not negligible genome-wide.",
  "caveats": "A match identifies the SPH/SBS element, not a specific protein: ZNF143, ZNF76 and THAP11 with HCFC1 all occupy it, and in vitro data support direct binding for all three. The main hazard is historical rather than motif-based. ChIP-derived ZNF143 peak sets in the literature are contaminated by CTCF cross-reactivity of a common antibody, so any inference from a hit to loop anchoring, CTCF cooperation or three-dimensional architecture is unsafe; the 2025 degron studies found no looping function. Also note that the four databases model different portions of the bipartite site, in opposite orientations, so scores are not comparable across matrices and a partial match may reflect the matrix rather than the sequence.",
  "refs": [
   {
@@ -74,6 +74,101 @@
    "cite": "Dong J, Sathyan KM, Scott TG, et al. ZNF143 binds DNA and stimulates transcription initiation to activate and repress direct target genes. Nucleic Acids Res 2025;53.",
    "pmid": "39676670",
    "url": "https://pubmed.ncbi.nlm.nih.gov/39676670/"
+  },
+  {
+   "cite": "Chern T, Achilleos A, Tong X, et al. Mutations in Hcfc1 and Ronin result in an inborn error of cobalamin metabolism and ribosomopathy. Nat Commun 2022;13:134.",
+   "pmid": "35013307",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35013307/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1995,
+   "finding": "Staf is cloned from Xenopus as the factor that binds the 15-bp activator element of the selenocysteine tRNA gene and activates its RNA polymerase III promoter; it has seven C2H2 zinc fingers, a separate acidic activation domain, and a close human relative, ZNF76.",
+   "methods": "cDNA cloning, DNA-binding assays, Xenopus oocyte expression",
+   "confidence": "medium",
+   "pmids": [
+    "7641696"
+   ],
+   "open": "The binding-site consensus, and whether Staf acted on any gene other than tRNA-Sec, were unknown."
+  },
+  {
+   "year": 1997,
+   "finding": "Binding-site selection gives a 19-bp Staf consensus (YYWCCCRNMATSCMYY-RCR), and Staf is shown to drive enhanced transcription of most vertebrate snRNA genes by both RNA polymerase II and III; in 1998 the human factor cloned on the U6 SPH element turns out to be ZNF143.",
+   "methods": "In vitro binding-site selection, footprinting, EMSA, oocyte microinjection, expression cloning",
+   "confidence": "high",
+   "pmids": [
+    "9009278",
+    "9776743"
+   ],
+   "open": "The site was known only from small-RNA genes; how many protein-coding promoters used it was not known."
+  },
+  {
+   "year": 2010,
+   "finding": "Ronin (THAP11), with its coregulator HCF-1, is identified as the binder of a hyperconserved promoter element containing ACTACA that had lacked a known factor; its targets in embryonic stem cells are genes for transcription initiation, splicing and metabolism.",
+   "methods": "ChIP-seq and motif discovery in mouse ES cells",
+   "confidence": "medium",
+   "pmids": [
+    "20581084"
+   ],
+   "open": "Whether this element and the Staf/ZNF143 site were one element or two neighbours was not addressed."
+  },
+  {
+   "year": 2011,
+   "finding": "Genome-wide analysis finds ZNF143 sites overrepresented in bidirectional over unidirectional promoters, and ChIP detects ZNF143 at 93% of a tested set of divergent promoters carrying a predicted site.",
+   "methods": "Promoter motif analysis, ChIP, dual-reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "21177654"
+   ]
+  },
+  {
+   "year": 2013,
+   "finding": "ChIP-seq resolves two ZNF143 motifs at about 3,100 promoter binding events: the canonical 18-bp SBS1 and a 25-bp SBS2 with ACTACAN immediately upstream. ZNF143 binds both with the same affinity; the ACTACA part is the THAP11 site, and the two DNA-binding domains occupy SBS2 mutually exclusively. Separately, HCFC1 is found at about 5,400 active CpG-island promoters, about 90% of them co-occupied by ZNF143/THAP11, YY1 or GABP.",
+   "methods": "ChIP-seq, de novo motif discovery, EMSA with recombinant DNA-binding domains",
+   "confidence": "high",
+   "pmids": [
+    "23408857",
+    "23539139"
+   ],
+   "open": "Whether ZNF143 and THAP11-HCFC1 compete for or share individual sites in cells was left open."
+  },
+  {
+   "year": 2015,
+   "finding": "ZNF143 is proposed as a chromatin-looping factor: integration of ENCODE ChIP-seq with interaction maps places it at loop anchors connecting promoters to distal elements, and binding-altering SNPs alter interactions. A 2021 study extends this to CTCF-bound promoter-enhancer loops in mouse hematopoietic stem and progenitor cells, with CTCF and ZNF143 motifs often 37 bp apart in convergent orientation.",
+   "methods": "ChIP-seq and ChIA-PET/HiChIP integration, knockdown and conditional knockout, allele-specific analysis",
+   "confidence": "low",
+   "pmids": [
+    "25645053",
+    "33397967"
+   ],
+   "open": "Neither study depleted ZNF143 acutely, so direct and indirect effects on loops could not be separated, and anchor occupancy rested on antibody ChIP."
+  },
+  {
+   "year": 2025,
+   "finding": "Reversal of the looping model. Two independent degron studies in mouse and human cells find that acute ZNF143/ZFP143 depletion changes no chromatin loops and that ZNF143 acts largely independently of CTCF; one shows that a widely used ZNF143 antibody cross-reacts with CTCF, which is how ZNF143 came to be placed at CTCF loop anchors. ZNF143 is instead an essential promoter-proximal regulator of nuclear-encoded mitochondrial and ribosomal genes, with a chromatin dwell time of over 20 minutes.",
+   "methods": "Degron tagging, chromosome conformation capture, single-molecule imaging, re-analysis of antibody specificity in ChIP data",
+   "confidence": "high",
+   "pmids": [
+    "39708803",
+    "39708805"
+   ],
+   "open": "Acute depletion tests loop maintenance; a role in establishing loops at specific loci was not formally excluded."
+  },
+  {
+   "year": 2025,
+   "finding": "Rapid degradation places ZNF143's action at transcription initiation: it binds the promoters of nearly all genes it activates, and represses a subset by occluding initiation sites and promoter elements and by acting as a roadblock to early elongation.",
+   "methods": "Degron depletion with nascent-transcription profiling and ChIP-seq",
+   "confidence": "medium",
+   "pmids": [
+    "39676670"
+   ]
+  }
+ ],
+ "open": [
+  "Whether the upstream ACTACAA box belongs to the ZNF143 site is doubtful: ZNF143's DNA-binding domain binds the canonical SBS1 and the ACTACA-extended SBS2 with the same affinity and cannot bind the THAP11 site alone, yet the ChIP-derived ZNF143 matrices in this family include ACTACAA, which may record THAP11 occupancy at the same promoters rather than ZNF143 contacts.",
+  "How ZNF143 and THAP11-HCFC1 share promoters in cells is unsettled: their DNA-binding domains occupy the composite SBS2 site mutually exclusively in vitro, while genome-wide ChIP places all three proteins at largely the same CpG-island promoters, which could mean alternating occupancy of one site or separate sites within one promoter.",
+  "Whether anything of the earlier looping phenotypes survives is open: the 2021 hematopoietic study used multi-day conditional deletion and reported loss of CTCF binding, which acute degron studies did not reproduce, and it has not been shown whether those effects were indirect consequences of transcriptional and mitochondrial failure.",
+  "What ZNF76 contributes is unresolved: it shares ZNF143's in vitro specificity and its peaks overlap ZNF143's, but since ZNF143 loss alone is lethal ZNF76 evidently does not substitute, and whether it has targets of its own is not established."
  ]
 }

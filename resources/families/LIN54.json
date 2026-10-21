@@ -11,7 +11,7 @@
  ],
  "consensus": "TTYGAA",
  "short": "LIN54 is the DNA-binding subunit of the MuvB core, the module shared by the repressive DREAM complex and the activating MMB (B-MYB-MuvB) and FOXM1-MuvB complexes. It reads a very short promoter element called the CHR, the cell cycle genes homology region, whose consensus is TTYGAA (most often TTTGAA or TTCGAA). Recognition is unusual: two tandem cysteine-rich CXC (tesmin/CRC) domains grip the duplex and two tyrosine side chains insert into the minor groove, with no zinc finger or helix-turn-helix involved. The CHR is the reason so many G2/M promoters - CCNB1, CCNB2, CDK1, CDC25C, PLK1, AURKA, UBE2C - share the same short TTYGAA, switching from repressed in G0/G1 to activated in G2/M.",
- "long": "## The factors\n\nLIN54 (also called MIP120, and CXCD1) is one of five subunits of the MuvB core, together with LIN9,\nLIN37, LIN52 and RBBP4. MuvB is the shared module of three complexes that act sequentially through the\ncell cycle. In quiescence and early G1 it assembles with E2F4, DP1 and the RB-family pocket protein p130\n(RBL2) to form DREAM, which represses. On entry into S phase p130 and E2F4 leave and B-MYB (MYBL2) binds,\ngiving MMB; later FOXM1 is recruited, giving FOXM1-MuvB, which activates the same promoters in G2 and M.\nLIN54 is the only subunit with sequence-specific DNA-binding activity, so it supplies the address for all\nthree complexes. There is a single human LIN54 gene, so there is no paralogue ambiguity, and the protein\nis broadly expressed in proliferating and quiescent cells alike. Its DNA-binding module is not a zinc\nfinger: it consists of two tandem cysteine-rich CXC domains, related to the tesmin/CRC domain family, and\nboth are required for high-affinity binding. The Drosophila orthologue Mip120 is part of the dREAM/MMB\ncomplex with the same architecture.\n\n## The motif\n\nThe CHR was defined genetically in 1995 as a short element in the CCNA2, CDC25C and CDK1 promoters, sitting\njust downstream of a second element, the CDE, in a CDE-CHR tandem. The literature consensus is TTYGAA -\nin practice TTTGAA or TTCGAA - and the atlas data agree: the JASPAR LIN54 model is TTTGAAT and the CIS-BP\nmodel is ATTCAAA, which is the same element on the reverse strand. Family cohesion is 0.99, essentially\none motif in two orientations.\n\nOne genuine disagreement is worth flagging. The genome-wide survey by Engeland's group defined the\nfunctional spectrum around TTYGAA, while the crystallographic study of LIN54 bound to DNA reported the\nbiochemically selected consensus as TTYRAA, which admits TTTAAA and TTCAAA as well. Both statements are\nin the literature; the practical difference is whether a central G is required. The structure explains why\nthe information content is so low: specificity comes from two tyrosine residues inserting into the minor\ngroove rather than from major-groove base readout, a mode that reads a short AT-rich stretch with modest\ndiscrimination. That tyrosine-mediated contact is required for MuvB recruitment to target promoters in\ncells.\n\nThe element is 6 bp of low-complexity sequence. That is the single most important fact for reading a hit:\nTTTGAA occurs roughly every few kilobases in random sequence.\n\n## Where it acts\n\nCHR elements are promoter elements, not enhancer elements, and they sit close to the transcription start\nsite, typically within about 20-100 bp downstream of it. They occur in most late (G2/M) cell-cycle genes\nthat bind DREAM, MMB or FOXM1-MuvB: CCNB1, CCNB2, CDK1, CDC25C, PLK1, AURKA, AURKB, BUB1, CENPF and UBE2C\namong many others. Inverse-orientation CHRs are functional. Some promoters use a CDE-CHR tandem in which\nan E2F4-contacted CDE enhances DREAM binding, and some use a CHR alone; the CHR, not the CDE, is the\nelement that is strictly required. By contrast, canonical MYB-binding and forkhead-binding sites are\nunder-represented in these promoters, even though B-MYB and FOXM1 act there - they arrive by protein\ninteraction with MuvB rather than by binding their own sites. The structural work also suggests MuvB\nbinding near the start site helps position downstream nucleosomes. The p53-p21-DREAM axis routes p53\nsignalling to these same CHR promoters, so CHR-containing G2/M genes are among the most reliably\np53-repressed genes in the genome.\n\n## Biology and disease\n\nThe CHR is the mechanistic answer to a common observation: that G2/M genes behave as a tightly coordinated\nmodule with almost identical expression timing. They share one element and one binding protein. Loss of\nLIN54 or other MuvB subunits impairs mitotic gene expression and cell-cycle progression, and a LIN54\nmutant in the CXC region mislocalizes to the cytoplasm and blocks the cycle. DREAM disruption\nde-represses G2/M genes in quiescence, which is one route by which RB-pathway and p53-pathway lesions in\ncancer produce the proliferation signature seen in tumour expression profiles. The CHR is therefore less\na disease gene than the promoter grammar through which two of the most commonly disrupted tumour\nsuppressor pathways act.\n\n## Reading a hit\n\nA CHR match tells you a G2/M cell-cycle promoter is plausible; it does not tell you that LIN54 is bound.\nSix low-complexity bases match far too often for a single hit to be evidence. What raises confidence is\ncontext, not score: the match should be in a promoter, within roughly 100 bp of the transcription start\nsite, in a gene whose expression peaks in G2/M, and ideally accompanied by a CDE a few bases away. Outside\nthat context, treat TTTGAA as background. There is no paralogue problem, because LIN54 is the only protein\nknown to read this element, but there is an interpretation problem in the other direction: because MuvB\ncarries B-MYB, FOXM1, E2F4 and p130 to the DNA, ChIP-seq for any of those factors will return CHR\nelements without those factors binding DNA themselves, and a CHR hit under a FOXM1 or MYBL2 peak is\nusually indirect. The CIS-BP LIN54 model is inferred from chicken LIN54 at 99% DNA-binding-domain\nidentity rather than measured on the human protein, and note the TTYGAA-versus-TTYRAA disagreement when\nchoosing how strict to be about the central base.",
+ "long": "## The factors\n\nLIN54 (also called MIP120, and CXCD1) is one of five subunits of the MuvB core, together with LIN9,\nLIN37, LIN52 and RBBP4 [PMID:17531812,22391450]. MuvB is the shared module of three complexes that act sequentially through the\ncell cycle. In quiescence and early G1 it assembles with E2F4, DP1 and the RB-family pocket protein p130\n(RBL2) to form DREAM, which represses [PMID:17531812]. On entry into S phase p130 and E2F4 leave and B-MYB (MYBL2) binds,\ngiving MMB; later FOXM1 is recruited, giving FOXM1-MuvB, which activates the same promoters in G2 and M [PMID:22391450].\nLIN54 is the only subunit with sequence-specific DNA-binding activity, so it supplies the address for all\nthree complexes [PMID:19725879,27465258]. There is a single human LIN54 gene, so there is no paralogue ambiguity, and the protein\nis broadly expressed in proliferating and quiescent cells alike. Its DNA-binding module is not a zinc\nfinger: it consists of two tandem cysteine-rich CXC domains, related to the tesmin/CRC domain family, and\nboth are required for high-affinity binding [PMID:27465258]. The Drosophila orthologue Mip120 is part of the dREAM/MMB\ncomplex with the same architecture [PMID:28522430].\n\n## The motif\n\nThe CHR was defined genetically in 1995 as a short element in the CCNA2, CDC25C and CDK1 promoters, sitting\njust downstream of a second element, the CDE, in a CDE-CHR tandem [PMID:7556094]. The literature consensus is TTYGAA -\nin practice TTTGAA or TTCGAA - and the atlas data agree: the JASPAR LIN54 model is TTTGAAT and the CIS-BP\nmodel is ATTCAAA, which is the same element on the reverse strand [PMID:25215497]. Family cohesion is 0.99, essentially\none motif in two orientations.\n\nOne genuine disagreement is worth flagging. The genome-wide survey by Engeland's group defined the\nfunctional spectrum around TTYGAA [PMID:25106871], while the crystallographic study of LIN54 bound to DNA reported the\nbiochemically selected consensus as TTYRAA, which admits TTTAAA and TTCAAA as well [PMID:27465258]. Both statements are\nin the literature; the practical difference is whether a central G is required. The structure explains why\nthe information content is so low: specificity comes from two tyrosine residues inserting into the minor\ngroove rather than from major-groove base readout, a mode that reads a short AT-rich stretch with modest\ndiscrimination [PMID:27465258]. That tyrosine-mediated contact is required for MuvB recruitment to target promoters in\ncells [PMID:27465258].\n\nThe element is 6 bp of low-complexity sequence. That is the single most important fact for reading a hit:\nTTTGAA occurs roughly every few kilobases in random sequence.\n\n## Where it acts\n\nCHR elements are promoter elements, not enhancer elements, and they sit close to the transcription start\nsite [PMID:19725879,27465258], typically within about 20-100 bp downstream of it. They occur in most late (G2/M) cell-cycle genes\nthat bind DREAM, MMB or FOXM1-MuvB: CCNB1, CCNB2, CDK1, CDC25C, PLK1, AURKA, AURKB, BUB1, CENPF and UBE2C\namong many others [PMID:25106871]. Inverse-orientation CHRs are functional [PMID:22064854]. Some promoters use a CDE-CHR tandem in which\nan E2F4-contacted CDE enhances DREAM binding, and some use a CHR alone; the CHR, not the CDE, is the\nelement that is strictly required [PMID:22064854]. By contrast, canonical MYB-binding and forkhead-binding sites are\nunder-represented in these promoters, even though B-MYB and FOXM1 act there - they arrive by protein\ninteraction with MuvB rather than by binding their own sites [PMID:25106871,22391450]. The structural work also suggests MuvB\nbinding near the start site helps position downstream nucleosomes [PMID:27465258]. The p53-p21-DREAM axis routes p53\nsignalling to these same CHR promoters, so CHR-containing G2/M genes are among the most reliably\np53-repressed genes in the genome [PMID:20015071].\n\n## Biology and disease\n\nThe CHR is the mechanistic answer to a common observation: that G2/M genes behave as a tightly coordinated\nmodule with almost identical expression timing. They share one element and one binding protein. Loss of\nLIN54 or other MuvB subunits impairs mitotic gene expression and cell-cycle progression [PMID:19725879,22391450], and a LIN54\nmutant in the CXC region mislocalizes to the cytoplasm and blocks the cycle [PMID:22895175]. DREAM disruption\nde-represses G2/M genes in quiescence [PMID:17531812,28799433], which is one route by which RB-pathway and p53-pathway lesions in\ncancer produce the proliferation signature seen in tumour expression profiles. The CHR is therefore less\na disease gene than the promoter grammar through which two of the most commonly disrupted tumour\nsuppressor pathways act.\n\n## Reading a hit\n\nA CHR match tells you a G2/M cell-cycle promoter is plausible; it does not tell you that LIN54 is bound.\nSix low-complexity bases match far too often for a single hit to be evidence. What raises confidence is\ncontext, not score: the match should be in a promoter, within roughly 100 bp of the transcription start\nsite, in a gene whose expression peaks in G2/M, and ideally accompanied by a CDE a few bases away. Outside\nthat context, treat TTTGAA as background. There is no paralogue problem, because LIN54 is the only protein\nknown to read this element, but there is an interpretation problem in the other direction: because MuvB\ncarries B-MYB, FOXM1, E2F4 and p130 to the DNA, ChIP-seq for any of those factors will return CHR\nelements without those factors binding DNA themselves, and a CHR hit under a FOXM1 or MYBL2 peak is\nusually indirect. The CIS-BP LIN54 model is inferred from chicken LIN54 at 99% DNA-binding-domain\nidentity [PMID:25215497] rather than measured on the human protein, and note the TTYGAA-versus-TTYRAA disagreement when\nchoosing how strict to be about the central base.",
  "caveats": "The CHR is 6 bp of low-complexity sequence (TTYGAA; TTTGAA and TTCGAA), so it matches frequently by chance and a single hit carries almost no information. Confidence comes from context: promoter location within roughly 100 bp of the transcription start site, a gene with G2/M-peaking expression, and often an adjacent CDE. Two consensus definitions coexist - TTYGAA from genome-wide promoter analysis and TTYRAA from in vitro selection with the LIN54 CXC domains - so whether a central G is required is unsettled. LIN54 is the only known reader, so there is no paralogue problem, but B-MYB, FOXM1, E2F4 and p130 all reach CHRs through MuvB, so their ChIP peaks contain CHRs indirectly. The CIS-BP model is inferred from chicken LIN54 (99% DBD identity).",
  "refs": [
   {
@@ -74,5 +74,78 @@
    "pmid": "25215497",
    "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1995,
+   "finding": "The CHR is identified as an identical 5-bp region six nucleotides 3' of the CDE in the cyclin A, cdc25C and cdc2 promoters; mutating it deregulates all three in G0, and in vivo footprinting shows it occupied through the minor groove.",
+   "methods": "Promoter mutagenesis and reporter assays; in vivo DMS footprinting",
+   "confidence": "medium",
+   "pmids": [
+    "7556094"
+   ],
+   "open": "The protein occupying the CHR was unknown."
+  },
+  {
+   "year": 2007,
+   "finding": "The DREAM complex, p130/E2F4/DP plus the MuvB proteins LIN9, LIN37, LIN52, LIN54 and RBBP4, is identified as the repressor bound at more than 800 cell-cycle promoters in quiescence.",
+   "methods": "Proteomics; genome-wide promoter ChIP; bioinformatics",
+   "confidence": "high",
+   "pmids": [
+    "17531812"
+   ],
+   "open": "Which subunit contacted DNA was not established."
+  },
+  {
+   "year": 2009,
+   "finding": "The LIN54 CXC region is shown to be a new sequence-specific DNA-binding domain that binds the cdc2 promoter at the CHR overlapping the start site.",
+   "methods": "Gel shift; protein interaction mapping; knock-down",
+   "confidence": "medium",
+   "pmids": [
+    "19725879"
+   ]
+  },
+  {
+   "year": 2012,
+   "finding": "DREAM is shown to bind the CHR of the cyclin B2 promoter in G0 without needing a CDE, MMB binds the same CHR in proliferating cells, and inverse CHRs are functional.",
+   "methods": "Promoter mutagenesis; protein-DNA binding assays; ChIP; bioinformatic promoter screen",
+   "confidence": "medium",
+   "pmids": [
+    "22064854"
+   ]
+  },
+  {
+   "year": 2012,
+   "finding": "MuvB is shown to switch partners through the cycle, forming DREAM in quiescence, then recruiting B-MYB in S phase and FOXM1 in G2 to activate late cell-cycle genes.",
+   "methods": "Co-immunoprecipitation; ChIP time courses; knock-down",
+   "confidence": "high",
+   "pmids": [
+    "22391450"
+   ]
+  },
+  {
+   "year": 2014,
+   "finding": "A genome-wide definition of functional CHR variants (TTYGAA) places CHRs in most late cell-cycle genes bound by DREAM, MMB or FOXM1-MuvB, while MYB and forkhead sites are under-represented there.",
+   "methods": "Computational meta-analysis of motif conservation, genome-wide binding and expression data",
+   "confidence": "medium",
+   "pmids": [
+    "25106871"
+   ]
+  },
+  {
+   "year": 2016,
+   "finding": "A crystal structure of the LIN54 DNA-binding domain on a CHR shows two tyrosines reading the minor groove, explaining the 1995 minor-groove footprint, and binding studies define the consensus as TTYRAA rather than TTYGAA.",
+   "methods": "X-ray crystallography; quantitative binding assays; mutant rescue in cells",
+   "confidence": "high",
+   "pmids": [
+    "27465258"
+   ],
+   "open": "The TTYRAA consensus conflicts with the TTYGAA spectrum derived from genomic promoters."
+  }
+ ],
+ "open": [
+  "Whether the central G of the CHR is required is unsettled: the genome-wide promoter survey defines functional CHRs as TTYGAA, whereas binding studies with the LIN54 DNA-binding domain give TTYRAA, which also admits TTTAAA and TTCAAA.",
+  "What confines MuvB to a few hundred promoters when TTYGAA occurs every few kilobases is not fully explained: proximity to the start site, an adjacent E2F4-bound CDE and NF-Y-bound CCAAT boxes are all implicated, but their separate contributions have not been resolved.",
+  "Whether MuvB bound near the start site positions downstream nucleosomes is a model suggested by the structural study, not an established mechanism."
  ]
 }

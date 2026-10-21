@@ -13,7 +13,7 @@
  ],
  "consensus": "SNGSGGGCAMCC",
  "short": "HIC1 (hypermethylated in cancer 1) and HIC2 are BTB/POZ zinc-finger repressors with five Kruppel-like C2H2 fingers. Their optimal site, defined by site selection, is (C/G)NG(C/G)GGGCA(C/A)CC, with a GGCA core read by fingers 3 and 4; databases usually render the same element on the opposite strand as TGCC(A/G), which is why the family is often listed with a short TGCC consensus. The BTB domain blocks binding to a single site but supports cooperative binding to several, so genuine targets carry multiple sites. HIC1 sits at 17p13.3, is induced by p53, is frequently silenced by promoter hypermethylation in tumors, and represses SIRT1; heterozygous mouse mutants develop tumors.",
- "long": "## The factors\n\nTwo paralogues: HIC1 and HIC2 (also HRG22). Each has an N-terminal BTB/POZ domain, a central region containing a conserved GLDLSKK motif that binds CtBP, and five Kruppel-like C2H2 zinc fingers at the C terminus. HIC1 was cloned from 17p13.3, a region frequently deleted or hypermethylated in human tumors and deleted in Miller-Dieker syndrome, and was identified as a p53-inducible gene. The BTB domain has an unusual and important effect on DNA binding: it inhibits binding of the full-length protein to an isolated site while mediating cooperative binding to probes carrying several concatemerized sites, a property shared with other BTB/POZ proteins. Repression works through CtBP and through recruitment of HDAC-containing complexes, and HIC1 also localizes to distinct nuclear bodies, into which it can sequester other proteins. HIC1 is widely expressed in adult tissues and silenced epigenetically in tumors; HIC2 is expressed in the developing cardiovascular system and is much less studied. There is no evidence that the two heterodimerize preferentially over homodimerizing.\n\n## The motif\n\nSelection and amplification of binding sites with recombinant HIC1 gave the optimal sequence 5'-(C/G)NG(C/G)GGGCA(C/A)CC-3'. In silico and functional follow-up narrowed the essential element to a GGCA core contacted by zinc fingers 3 and 4, so of the five fingers only two carry most of the base-specific contacts - which explains why the informative region is short even though the domain could cover more sequence. The database matrices all describe this same element on the complementary strand, which is why they look different at first glance: JASPAR Hic1 (MA0739.2) reads ATGCCAAC, JASPAR HIC2 (MA0738.2) and CIS-BP M02902 read ATGCCC, the HOCOMOCO HIC1 grade-A model reads ATGCCA, and the Vierstra archetype AC0477:HIC reads ATGCCCAC. Reverse-complementing ATGCCCAC gives GTGGGCAT, which contains the GGGCA of the selected consensus. This is a strand convention, not a conflict, but it does mean the widely quoted \"TGCC(A/G)\" form of the consensus is a four- or five-base fragment of a longer selected site and is far too short to scan with. Information content of the database models is low, 7-11 bits. HIC1 and HIC2 models are 0.98 similar and cannot be separated by sequence. One archetype in the family, AC0435:HIC reading GGCAACC, matches the main HIC cluster poorly (0.74) and should be treated as a divergent model rather than an independent confirmation.\n\n## Where it acts\n\nHIC1 sites occur in promoters of genes it represses, and because the full-length protein needs cooperativity, functional HIC1 elements usually come in clusters - a single TGCC match in a promoter is not a HIC1 element in any meaningful sense. Validated targets include SIRT1, ATOH1, EPHA2 and Wnt-responsive genes; HIC1 also attenuates Wnt signaling by a non-DNA route, recruiting TCF4 and beta-catenin into nuclear bodies away from their target promoters. The element is GC-rich and CpG-containing, so matches concentrate in CpG-island promoters, the same territory as SP/KLF and other GC-box readers. HIC2 sites, where studied, are in cardiovascular differentiation genes.\n\n## Biology and disease\n\nHic1-null mice die perinatally with developmental defects - acrania, exencephaly and limb abnormalities - that overlap the structures affected in Miller-Dieker syndrome, consistent with HIC1 contributing to that contiguous gene deletion phenotype. Heterozygous Hic1 mice are viable but develop a sex-dependent spectrum of malignant tumors, with age-dependent hypermethylation and silencing of the remaining wild-type allele, which is a textbook demonstration of an epigenetically inactivated tumor suppressor. Mechanistically, HIC1 binds and represses the SIRT1 promoter; because SIRT1 deacetylates p53, loss of HIC1 raises SIRT1 and blunts p53-dependent responses to DNA damage, forming a regulatory circuit with p53 that also explains why HIC1 is p53-inducible. HIC1 promoter hypermethylation is among the more common epigenetic lesions across human carcinomas, medulloblastoma and leukemia. HIC2 has been shown to control isoform switching during cardiovascular maturation and lies in the distal 22q11 region, but its human disease role is not established.\n\n## Reading a hit\n\nThe honest summary is that a short TGCC-type match is close to worthless on its own. The informative element is longer, the database matrices capture only 7-11 bits of it, and the sequence is GC-rich and CpG-island-associated, so it overlaps the recognition space of SP1-SP4, the KLFs and other C2H2 GC-box factors. Two things make a HIC call more credible: multiple sites in the same promoter, which is what the BTB-dependent cooperativity requires, and a target gene or cell context in which HIC1 is expressed rather than methylated. Within the family, HIC1 and HIC2 are indistinguishable at 0.98 similarity, and the Vierstra archetypes are named AC0435:HIC and AC0477:HIC without a paralogue assignment, so a hit identifies the pair. On provenance, the better entries are in vitro: JASPAR MA0739.2 and MA0738.2 are HT-SELEX matrices and the HOCOMOCO HIC1 model is grade A with PSM evidence. Two weaker entries deserve flags - JASPAR MA0739.2 is derived from mouse Hic1 rather than the human protein, a cross-species transfer that is unproblematic here given how conserved the fingers are but should be recorded; and the HOCOMOCO HIC2 model carries ChIP-only evidence (code P, grade B) and matches the rest of the family poorly (0.75), so it is the entry most likely to reflect indirect binding.",
+ "long": "## The factors\n\nTwo paralogues: HIC1 and HIC2 (also HRG22). Each has an N-terminal BTB/POZ domain, a central region containing a conserved GLDLSKK motif that binds CtBP, and five Kruppel-like C2H2 zinc fingers at the C terminus [PMID:15231840,23566242]. HIC1 was cloned from 17p13.3, a region frequently deleted or hypermethylated in human tumors and deleted in Miller-Dieker syndrome, and was identified as a p53-inducible gene [PMID:7585125]. The BTB domain has an unusual and important effect on DNA binding: it inhibits binding of the full-length protein to an isolated site while mediating cooperative binding to probes carrying several concatemerized sites, a property shared with other BTB/POZ proteins [PMID:15231840]. Repression works through CtBP and through recruitment of HDAC-containing complexes, and HIC1 also localizes to distinct nuclear bodies, into which it can sequester other proteins [PMID:16724116]. HIC1 is widely expressed in adult tissues and silenced epigenetically in tumors; HIC2 is expressed in the developing cardiovascular system and is much less studied. There is no evidence that the two heterodimerize preferentially over homodimerizing.\n\n## The motif\n\nSelection and amplification of binding sites with recombinant HIC1 gave the optimal sequence 5'-(C/G)NG(C/G)GGGCA(C/A)CC-3' [PMID:15231840]. In silico and functional follow-up narrowed the essential element to a GGCA core contacted by zinc fingers 3 and 4 [PMID:15231840], so of the five fingers only two carry most of the base-specific contacts - which explains why the informative region is short even though the domain could cover more sequence. The database matrices all describe this same element on the complementary strand, which is why they look different at first glance: JASPAR Hic1 (MA0739.2) reads ATGCCAAC, JASPAR HIC2 (MA0738.2) and CIS-BP M02902 read ATGCCC, the HOCOMOCO HIC1 grade-A model reads ATGCCA, and the Vierstra archetype AC0477:HIC reads ATGCCCAC [PMID:23332764,32728250,37971293]. Reverse-complementing ATGCCCAC gives GTGGGCAT, which contains the GGGCA of the selected consensus. This is a strand convention, not a conflict, but it does mean the widely quoted \"TGCC(A/G)\" form of the consensus is a four- or five-base fragment of a longer selected site and is far too short to scan with. Information content of the database models is low, 7-11 bits. HIC1 and HIC2 models are 0.98 similar and cannot be separated by sequence. One archetype in the family, AC0435:HIC reading GGCAACC, matches the main HIC cluster poorly (0.74) [PMID:32728250] and should be treated as a divergent model rather than an independent confirmation.\n\n## Where it acts\n\nHIC1 sites occur in promoters of genes it represses, and because the full-length protein needs cooperativity, functional HIC1 elements usually come in clusters [PMID:15231840] - a single TGCC match in a promoter is not a HIC1 element in any meaningful sense. Validated targets include SIRT1, ATOH1, EPHA2 and Wnt-responsive genes [PMID:16269335,23566242]; HIC1 also attenuates Wnt signaling by a non-DNA route, recruiting TCF4 and beta-catenin into nuclear bodies away from their target promoters [PMID:16724116]. The element is GC-rich and CpG-containing, so matches concentrate in CpG-island promoters, the same territory as SP/KLF and other GC-box readers. HIC2 sites, where studied, are in cardiovascular differentiation genes [PMID:29061339].\n\n## Biology and disease\n\nHic1-null mice die perinatally with developmental defects - acrania, exencephaly and limb abnormalities - that overlap the structures affected in Miller-Dieker syndrome [PMID:10655551], consistent with HIC1 contributing to that contiguous gene deletion phenotype. Heterozygous Hic1 mice are viable but develop a sex-dependent spectrum of malignant tumors, with age-dependent hypermethylation and silencing of the remaining wild-type allele [PMID:12539045], which is a textbook demonstration of an epigenetically inactivated tumor suppressor. Mechanistically, HIC1 binds and represses the SIRT1 promoter; because SIRT1 deacetylates p53, loss of HIC1 raises SIRT1 and blunts p53-dependent responses to DNA damage, forming a regulatory circuit with p53 that also explains why HIC1 is p53-inducible [PMID:7585125,16269335]. HIC1 promoter hypermethylation is among the more common epigenetic lesions across human carcinomas, medulloblastoma and leukemia [PMID:23566242]. HIC2 has been shown to control isoform switching during cardiovascular maturation [PMID:29061339] and lies in the distal 22q11 region, but its human disease role is not established.\n\n## Reading a hit\n\nThe honest summary is that a short TGCC-type match is close to worthless on its own. The informative element is longer, the database matrices capture only 7-11 bits of it, and the sequence is GC-rich and CpG-island-associated, so it overlaps the recognition space of SP1-SP4, the KLFs and other C2H2 GC-box factors. Two things make a HIC call more credible: multiple sites in the same promoter, which is what the BTB-dependent cooperativity requires, and a target gene or cell context in which HIC1 is expressed rather than methylated. Within the family, HIC1 and HIC2 are indistinguishable at 0.98 similarity, and the Vierstra archetypes are named AC0435:HIC and AC0477:HIC without a paralogue assignment, so a hit identifies the pair. On provenance, the better entries are in vitro: JASPAR MA0739.2 and MA0738.2 are HT-SELEX matrices [PMID:23332764] and the HOCOMOCO HIC1 model is grade A with PSM evidence [PMID:37971293]. Two weaker entries deserve flags - JASPAR MA0739.2 is derived from mouse Hic1 rather than the human protein, a cross-species transfer that is unproblematic here given how conserved the fingers are but should be recorded; and the HOCOMOCO HIC2 model carries ChIP-only evidence (code P, grade B) and matches the rest of the family poorly (0.75), so it is the entry most likely to reflect indirect binding.",
  "caveats": "The short TGCC(A/G) form quoted for this family is a fragment of a longer selected consensus, (C/G)NG(C/G)GGGCA(C/A)CC, rendered on the other strand; the database matrices hold only 7-11 bits, are GC-rich and CpG-island-associated, and therefore overlap SP/KLF and other GC-box motifs. Single matches are not interpretable: the BTB domain blocks binding to isolated sites and supports cooperative binding to clustered ones, so look for several sites in one promoter. HIC1 and HIC2 are indistinguishable (0.98 similarity) and the Vierstra archetypes do not assign a paralogue. Note JASPAR MA0739.2 is a mouse Hic1 matrix, and the HOCOMOCO HIC2 model is ChIP-only and a poor fit to the rest of the family.",
  "refs": [
   {
@@ -71,5 +71,88 @@
    "pmid": "37971293",
    "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1995,
+   "finding": "HIC-1 was identified at 17p13.3 through a site hypermethylated in tumor DNA, shown to be expressed in normal tissue, underexpressed and hypermethylated in tumor cells, and inducible by wild-type p53 - a tumor suppressor candidate defined epigenetically rather than by mutation.",
+   "methods": "methylation-directed cloning, expression analysis, p53 induction and colony suppression assays",
+   "confidence": "medium",
+   "pmids": [
+    "7585125"
+   ],
+   "open": "What sequence the zinc fingers recognize and which genes they control."
+  },
+  {
+   "year": 2000,
+   "finding": "Hic1-null mice were shown to die perinatally with acrania, exencephaly, cleft palate and limb defects that match structures affected in Miller-Dieker syndrome, supporting a contribution of HIC1 loss to that 17p13.3 deletion phenotype.",
+   "methods": "mouse gene targeting, developmental phenotyping",
+   "confidence": "medium",
+   "pmids": [
+    "10655551"
+   ]
+  },
+  {
+   "year": 2003,
+   "finding": "Mice heterozygous for Hic1 developed a sex-dependent spectrum of spontaneous tumors in which the remaining wild-type allele was densely methylated rather than mutated, making HIC1 a worked example of a tumor suppressor inactivated by methylation in both alleles' turn.",
+   "methods": "heterozygous mouse cohorts, tumor histology, promoter methylation analysis",
+   "confidence": "medium",
+   "pmids": [
+    "12539045"
+   ]
+  },
+  {
+   "year": 2004,
+   "finding": "Site selection with recombinant HIC1 gave the optimal sequence (C/G)NG(C/G)GGGCA(C/A)CC with a GGCA core read by fingers 3 and 4, and showed that the BTB domain blocks binding to a single site while supporting cooperative binding to concatemerized sites - so the functional unit is a cluster, not one match.",
+   "methods": "selection and amplification of binding sites, EMSA with single and multimerized probes, chromatin immunoprecipitation, reporter assays",
+   "confidence": "high",
+   "pmids": [
+    "15231840"
+   ],
+   "open": "Whether endogenous target promoters carry the multiple sites the full-length protein needs."
+  },
+  {
+   "year": 2005,
+   "finding": "SIRT1 was identified as a direct HIC1 target: HIC1 and SIRT1 form a repression complex on the SIRT1 promoter, and loss of HIC1 raises SIRT1, which deacetylates p53 and blunts DNA-damage responses, closing a circuit with the p53 that induces HIC1.",
+   "methods": "chromatin immunoprecipitation, promoter reporters, apoptosis assays in HIC1-deficient cells",
+   "confidence": "medium",
+   "pmids": [
+    "16269335"
+   ]
+  },
+  {
+   "year": 2006,
+   "finding": "HIC1 was shown to antagonize Wnt signaling without binding target promoters, by associating with TCF-4 and recruiting it and beta-catenin into HIC1 nuclear bodies - a mechanism that detaches part of this factor's output from its motif.",
+   "methods": "co-immunoprecipitation, imaging of nuclear bodies, TCF reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "16724116"
+   ]
+  },
+  {
+   "year": 2013,
+   "finding": "HT-SELEX measured both paralogues directly and returned short ATGCC-type models of 8 to 11 bits, much shorter than the 12-base consensus from site selection; these compact models are what the collections now carry, and the discrepancy with the longer in vitro consensus was never resolved.",
+   "methods": "HT-SELEX across human transcription factors",
+   "confidence": "medium",
+   "pmids": [
+    "23332764"
+   ],
+   "open": "Whether the short model is the real preference or an artifact of using isolated DNA-binding domains that bypass BTB-dependent cooperativity."
+  },
+  {
+   "year": 2018,
+   "finding": "Hic2 was given its own phenotype - control of haemoglobin and sarcomeric isoform switching during cardiovascular maturation in mouse embryos - showing that the two paralogues, which are indistinguishable by motif, are not interchangeable in vivo.",
+   "methods": "mouse mutants, expression profiling of embryonic heart and blood",
+   "confidence": "medium",
+   "pmids": [
+    "29061339"
+   ]
+  }
+ ],
+ "open": [
+  "The length of this family's site is unsettled: site selection with the full-length protein returned a 12-base GC-rich consensus, while HT-SELEX returned 6 to 8 informative bases, and no experiment has tested whether the difference comes from using isolated zinc-finger domains, which bypass the BTB-dependent cooperativity, or from the longer consensus overstating flanking preference.",
+  "Whether functional HIC1 elements must occur in clusters in the genome is unknown: cooperativity across concatemerized sites was demonstrated in vitro, but no genome-wide occupancy study has reported how many sites a bound promoter typically carries.",
+  "How much of HIC1's effect on Wnt targets requires DNA binding is unresolved, because the factor both represses promoters directly and sequesters TCF-4 and beta-catenin into nuclear bodies, and the two routes have not been separated with a binding-deficient allele.",
+  "HIC1 and HIC2 are indistinguishable by motif yet have different mutant phenotypes, and it is not established whether that reflects expression domains, different partners, or a sequence preference too subtle for the current models, the more so since the only HIC2 model with in vivo evidence is ChIP-only and fits the family poorly."
  ]
 }

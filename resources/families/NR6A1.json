@@ -10,7 +10,7 @@
  ],
  "consensus": "AGGTCAAGGTCA",
  "short": "NR6A1, better known as germ cell nuclear factor (GCNF), is the only mammalian member of nuclear receptor subfamily 6: one gene with no paralogue. It binds a DR0, two nuclear receptor half-sites in direct repeat with no intervening bases, and it does so as a homodimer without an RXR partner. That makes it the odd one out among the orphan receptors here, because a two-half-site element of 13 to 15 base pairs is far more specific than a monomeric half-site. Its best-characterized job is repressing the pluripotency gene Oct4 during differentiation, which it does by recruiting methyl-CpG-binding proteins and DNA methyltransferases. Mouse mutants show posterior truncation, the gene underlies a vertebral-number locus in pigs, and human variants cause an oculo-vertebral-renal syndrome.",
- "long": "## The factors\n\nNR6A1 was cloned as GCNF, germ cell nuclear factor, from developing germ cells and is also called RTR (Chen et al. 1994). It is the sole mammalian member of nuclear receptor subfamily 6, so unlike most families here it has no paralogue to be confused with; zebrafish carries two copies (Neelathi et al. 2025). The protein has the standard layout: a DNA-binding domain of two C4 zinc modules with a carboxy-terminal extension, then a ligand-binding domain with no established ligand. It behaves predominantly as a repressor, recruiting methyl-CpG-binding domain proteins and DNA methyltransferases at its best-studied target (Gu et al. 2011). Expression is developmentally restricted: germ cells during spermatogenesis and oogenesis, the early post-implantation embryo, embryonic stem cells and parts of the developing nervous system, with little in adult tissue. Six motifs are collected here from all four sources, all labeled NR6A1; the family is the most internally consistent of the orphan receptor groups.\n\n## The motif\n\nThe element is a DR0: two nuclear receptor half-sites arranged as a direct repeat with zero intervening bases. In vitro translated GCNF binds autonomously to a direct repeat of AGGTCA; sequences beyond the core DNA-binding domain are needed for specific binding; antibody-shift experiments place two GCNF molecules on one repeat, so the complex is a homodimer; and no RXR interaction is detectable (Borgmeyer 1997). That homodimeric, two-half-site mode separates NR6A1 from NR4A and NR5A, which bind a single extended half-site as monomers (Wilson et al. 1993). The collected models agree closely. Four of the six, from HOCOMOCO, JASPAR, CIS-BP and the Vierstra archetypes, converge on AAGTTCAAGGTCA or the longer TCAAGTTCAAGGTCA at 15 to 20 bits. One detail is worth stating rather than smoothing over: the measured upstream half-site is the AGTTCA variant, not AGGTCA, so the data consensus AAGtTCAAGgTCA differs from the textbook description of a direct repeat of AGGTCA. The architecture is the same; the databases capture which variant of the upstream half-site is preferred. Two further points matter for scanning. The 3' nine bases, TCAAGGTCA, are exactly the NR5A/SF-1 response element, so every genuine NR6A1 site contains an exact SF-1 match. And one of the two ChIP-only HOCOMOCO models, NR6A1.H14CORE.1.P.C, is nothing more than tCAAGgtCA, a bare half-site indistinguishable from the NR5A motif; the other, NR6A1.H14CORE.0.P.C, is a degenerate aAggtCAAGgtCA.\n\n## Where it acts\n\nThe best-characterized site is a DR0 in the proximal promoter of Oct4 (POU5F1). GCNF restricts Oct4 to the germline in the mouse embryo (Fuhrmann et al. 2001), is required to repress Oct4 and other pluripotency genes when embryonic stem cells differentiate in response to retinoic acid (Gu et al. 2005), and initiates promoter DNA methylation there by recruiting MBD proteins and DNMTs (Gu et al. 2011). Occupancy is developmentally gated and largely absent from adult tissue. The element's length changes the arithmetic: a specific 13-mer is expected only about 50 times per strand in a 3-Gb genome, against roughly 47,000 for a specific eight-mer, so a full DR0 match is genuinely rare and the limiting question becomes whether NR6A1 is expressed rather than whether the match is chance.\n\n## Biology and disease\n\nMouse embryos lacking Gcnf develop an ectopic tail bud and a posterior truncation (Chung et al. 2001) and fail to silence Oct4 outside the germline (Fuhrmann et al. 2001). In domestic pigs, NR6A1 underlies a major quantitative trait locus for the number of vertebrae (Mikawa et al. 2007). In humans, rare heterozygous NR6A1 variants in six families cause an autosomal dominant oculo-vertebral-renal syndrome of colobomatous microphthalmia, missing vertebrae and congenital kidney abnormalities; knockdown of either or both zebrafish paralogues gives abnormal eye, kidney and somite development, rescued by wild-type but not variant mRNA (Neelathi et al. 2025). The vertebral phenotype in both pig and human is consistent with a role in somitogenesis.\n\n## Reading a hit\n\nThis family is the encouraging case among the orphan receptors, but only if the hit came from the right model. A match to the full 13- to 15-base DR0 is informative: the pattern is long enough that chance occurrences are rare, and the strongest model, NR6A1.H14CORE.2.SM.B, has HT-SELEX and methyl-HT-SELEX support at grade B, so it is in vitro evidence of direct binding rather than mere occupancy. A match to the two ChIP-only grade-C models is different: one is a bare nuclear receptor half-site and should be reported as such, not as NR6A1. Always check which model produced the hit. Two confusions follow from the sequence. Because the DR0 contains an exact SF-1 element, NR5A scanners will score NR6A1 sites, and a hit that looks like NR5A inside a longer direct repeat may be NR6A1. And a DR0 is not unique to NR6A1: the NR2F/COUP-TF group and RXR heterodimers also bind direct repeats with short spacers, so the arrangement narrows the candidates without naming one. Prediction of nuclear receptor elements is much better when the dimer configuration can be modeled, which here it can (Sandelin and Wasserman 2005). The Vierstra entry AC0133:NR6A is a footprint archetype named after the factor group whose motifs clustered together (Vierstra et al. 2020). Expression is the practical gate: outside germ cells, early embryos and stem cell models, an NR6A1 call needs independent support.",
+ "long": "## The factors\n\nNR6A1 was cloned as GCNF, germ cell nuclear factor, from developing germ cells and is also called RTR (Chen et al. 1994) [PMID:7854358]. It is the sole mammalian member of nuclear receptor subfamily 6, so unlike most families here it has no paralogue to be confused with; zebrafish carries two copies (Neelathi et al. 2025) [PMID:40610405]. The protein has the standard layout: a DNA-binding domain of two C4 zinc modules with a carboxy-terminal extension, then a ligand-binding domain with no established ligand. It behaves predominantly as a repressor, recruiting methyl-CpG-binding domain proteins and DNA methyltransferases at its best-studied target (Gu et al. 2011) [PMID:21608077]. Expression is developmentally restricted: germ cells during spermatogenesis and oogenesis, the early post-implantation embryo, embryonic stem cells and parts of the developing nervous system, with little in adult tissue. Six motifs are collected here from all four sources, all labeled NR6A1; the family is the most internally consistent of the orphan receptor groups.\n\n## The motif\n\nThe element is a DR0: two nuclear receptor half-sites arranged as a direct repeat with zero intervening bases. In vitro translated GCNF binds autonomously to a direct repeat of AGGTCA; sequences beyond the core DNA-binding domain are needed for specific binding; antibody-shift experiments place two GCNF molecules on one repeat, so the complex is a homodimer; and no RXR interaction is detectable (Borgmeyer 1997) [PMID:9063454]. That homodimeric, two-half-site mode separates NR6A1 from NR4A and NR5A, which bind a single extended half-site as monomers (Wilson et al. 1993) [PMID:8395013]. The collected models agree closely. Four of the six, from HOCOMOCO, JASPAR, CIS-BP and the Vierstra archetypes, converge on AAGTTCAAGGTCA or the longer TCAAGTTCAAGGTCA at 15 to 20 bits. One detail is worth stating rather than smoothing over: the measured upstream half-site is the AGTTCA variant, not AGGTCA, so the data consensus AAGtTCAAGgTCA differs from the textbook description of a direct repeat of AGGTCA. The architecture is the same; the databases capture which variant of the upstream half-site is preferred. Two further points matter for scanning. The 3' nine bases, TCAAGGTCA, are exactly the NR5A/SF-1 response element, so every genuine NR6A1 site contains an exact SF-1 match. And one of the two ChIP-only HOCOMOCO models, NR6A1.H14CORE.1.P.C, is nothing more than tCAAGgtCA, a bare half-site indistinguishable from the NR5A motif; the other, NR6A1.H14CORE.0.P.C, is a degenerate aAggtCAAGgtCA.\n\n## Where it acts\n\nThe best-characterized site is a DR0 in the proximal promoter of Oct4 (POU5F1). GCNF restricts Oct4 to the germline in the mouse embryo (Fuhrmann et al. 2001) [PMID:11702949], is required to repress Oct4 and other pluripotency genes when embryonic stem cells differentiate in response to retinoic acid (Gu et al. 2005) [PMID:16166633], and initiates promoter DNA methylation there by recruiting MBD proteins and DNMTs (Gu et al. 2011) [PMID:21608077]. Occupancy is developmentally gated and largely absent from adult tissue. The element's length changes the arithmetic: a specific 13-mer is expected only about 50 times per strand in a 3-Gb genome, against roughly 47,000 for a specific eight-mer, so a full DR0 match is genuinely rare and the limiting question becomes whether NR6A1 is expressed rather than whether the match is chance.\n\n## Biology and disease\n\nMouse embryos lacking Gcnf develop an ectopic tail bud and a posterior truncation (Chung et al. 2001) [PMID:11134352] and fail to silence Oct4 outside the germline (Fuhrmann et al. 2001) [PMID:11702949]. In domestic pigs, NR6A1 underlies a major quantitative trait locus for the number of vertebrae (Mikawa et al. 2007) [PMID:17416745]. In humans, rare heterozygous NR6A1 variants in six families cause an autosomal dominant oculo-vertebral-renal syndrome of colobomatous microphthalmia, missing vertebrae and congenital kidney abnormalities; knockdown of either or both zebrafish paralogues gives abnormal eye, kidney and somite development, rescued by wild-type but not variant mRNA (Neelathi et al. 2025) [PMID:40610405]. The vertebral phenotype in both pig and human is consistent with a role in somitogenesis.\n\n## Reading a hit\n\nThis family is the encouraging case among the orphan receptors, but only if the hit came from the right model. A match to the full 13- to 15-base DR0 is informative: the pattern is long enough that chance occurrences are rare, and the strongest model, NR6A1.H14CORE.2.SM.B, has HT-SELEX and methyl-HT-SELEX support at grade B [PMID:37971293], so it is in vitro evidence of direct binding rather than mere occupancy. A match to the two ChIP-only grade-C models is different: one is a bare nuclear receptor half-site and should be reported as such, not as NR6A1. Always check which model produced the hit. Two confusions follow from the sequence. Because the DR0 contains an exact SF-1 element, NR5A scanners will score NR6A1 sites, and a hit that looks like NR5A inside a longer direct repeat may be NR6A1. And a DR0 is not unique to NR6A1: the NR2F/COUP-TF group and RXR heterodimers also bind direct repeats with short spacers, so the arrangement narrows the candidates without naming one. Prediction of nuclear receptor elements is much better when the dimer configuration can be modeled, which here it can (Sandelin and Wasserman 2005) [PMID:15563547]. The Vierstra entry AC0133:NR6A is a footprint archetype named after the factor group whose motifs clustered together (Vierstra et al. 2020) [PMID:32728250]. Expression is the practical gate: outside germ cells, early embryos and stem cell models, an NR6A1 call needs independent support.",
  "caveats": "The full DR0 is long enough to be reasonably specific, and the strongest model has in vitro support, so a good 13- to 15-base match is more trustworthy than most nuclear receptor hits. The risk is model choice: two of the six collected models are ChIP-only at grade C, and one of those is just the nine-base half-site tCAAGgtCA, which is identical to the NR5A/SF-1 element. Hits from that model say nothing specific about NR6A1. Conversely, every real NR6A1 site contains an exact SF-1 match, so the two families cross-annotate each other. A direct repeat is not unique to NR6A1 either, since NR2F/COUP-TF and RXR heterodimers also read closely spaced repeats. Note finally that the measured upstream half-site is AGTTCA rather than the textbook AGGTCA, and that expression is confined largely to germ cells and early embryos.",
  "refs": [
   {
@@ -73,5 +73,89 @@
    "pmid": "40610405",
    "url": "https://pubmed.ncbi.nlm.nih.gov/40610405/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1994,
+   "finding": "GCNF was cloned from developing germ cells as an orphan receptor with no close mammalian relative, establishing nuclear receptor subfamily 6 as a single-gene group.",
+   "methods": "Molecular cloning with expression analysis in germ cells",
+   "confidence": "medium",
+   "pmids": [
+    "7854358"
+   ],
+   "open": "Neither a ligand nor a response element was known."
+  },
+  {
+   "year": 1997,
+   "finding": "In vitro translated GCNF was shown to bind a direct repeat of AGGTCA with no spacer, with two molecules placed on one repeat by antibody shift and no detectable RXR interaction, making this a homodimeric DR0-binding receptor rather than a monomer or an RXR partner.",
+   "methods": "Gel-shift with antibody supershift and deletion constructs",
+   "confidence": "medium",
+   "pmids": [
+    "9063454",
+    "8395013"
+   ]
+  },
+  {
+   "year": 2001,
+   "finding": "Gcnf-null mouse embryos were found to develop an ectopic tail bud and a posterior truncation, giving the receptor a role in axial development well outside the germ cell compartment it was named for.",
+   "methods": "Mouse germline knockout with embryological analysis",
+   "confidence": "high",
+   "pmids": [
+    "11134352"
+   ]
+  },
+  {
+   "year": 2001,
+   "finding": "GCNF was shown to restrict Oct4 expression to the germline in the mouse embryo, identifying the pluripotency gene as its central target and the receptor as a repressor.",
+   "methods": "Mouse genetics with expression analysis and promoter studies",
+   "confidence": "high",
+   "pmids": [
+    "11702949"
+   ]
+  },
+  {
+   "year": 2005,
+   "finding": "GCNF was found to be required for repression of Oct4 and other pluripotency genes when embryonic stem cells differentiate in response to retinoic acid, moving the DR0 from an embryonic curiosity to a component of the exit from pluripotency.",
+   "methods": "Knockout embryonic stem cells with differentiation assays and expression profiling",
+   "confidence": "medium",
+   "pmids": [
+    "16166633"
+   ]
+  },
+  {
+   "year": 2007,
+   "finding": "Fine mapping of a swine quantitative trait locus for the number of vertebrae implicated NR6A1, tying the gene to somitogenesis in a second species and in a non-laboratory setting.",
+   "methods": "Linkage fine mapping and candidate-gene analysis in pigs",
+   "confidence": "medium",
+   "pmids": [
+    "17416745"
+   ]
+  },
+  {
+   "year": 2011,
+   "finding": "Repression at Oct4 was shown to proceed through recruitment of methyl-CpG-binding domain proteins and DNA methyltransferases, so occupancy of the DR0 initiates promoter DNA methylation rather than acting only through transient repression.",
+   "methods": "Chromatin immunoprecipitation, methylation analysis, knockdown",
+   "confidence": "medium",
+   "pmids": [
+    "21608077"
+   ]
+  },
+  {
+   "year": 2025,
+   "finding": "Rare heterozygous NR6A1 variants in six families were reported to cause an autosomal dominant oculo-vertebral-renal syndrome of colobomatous microphthalmia, missing vertebrae and congenital kidney abnormalities, with zebrafish knockdown phenotypes rescued by wild-type but not variant mRNA.",
+   "methods": "Human genetics across families with zebrafish knockdown and rescue",
+   "confidence": "high",
+   "pmids": [
+    "40610405"
+   ],
+   "open": "Whether the variants act by haploinsufficiency or as dominant negatives on the homodimer."
+  }
+ ],
+ "open": [
+  "The preferred upstream half-site is unsettled between the literature and the data: the receptor is described as binding a direct repeat of AGGTCA, while four independent models converge on AAGTTCAAGGTCA, so the measured upstream half-site is the AGTTCA variant and scanners built on the textbook description will score real sites lower.",
+  "Whether NR6A1 ever occupies a bare nuclear receptor half-site in vivo is unresolved: two ChIP-only grade-C models for this factor encode little more than TCAAGGTCA, which is also the NR5A element, so those peaks may reflect a different receptor or indirect binding.",
+  "The target set beyond the pluripotency network is essentially unmapped; a specific 13-mer is expected only about 50 times per strand in the genome, but no survey has established how many of those matches are occupied when the receptor is expressed.",
+  "How the human NR6A1 variants cause the oculo-vertebral-renal syndrome is open, since a dominant phenotype in a homodimeric receptor is compatible both with haploinsufficiency and with a variant subunit poisoning the dimer, and the published rescue experiments do not separate the two.",
+  "Whether the ligand-binding domain has a physiological ligand at all remains unknown, and the receptor is still treated as an orphan on the basis of absence of evidence."
  ]
 }

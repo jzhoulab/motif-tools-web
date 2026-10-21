@@ -10,7 +10,7 @@
  ],
  "consensus": "TTTSSCGC",
  "short": "E2F factors are the transcriptional output of the retinoblastoma (RB) pathway and set the G1/S transition. Eight human genes, E2F1-E2F8, encode a winged-helix DNA-binding domain. E2F1-E2F6 bind DNA only as heterodimers with a DP subunit (TFDP1 or TFDP2); E2F7 and E2F8 carry two tandem winged-helix domains and work without DP. All of them read essentially the same GC-rich eight-base element, written TTTSSCGC and just as often rendered on the other strand as GCGGGAAA. E2F1-E2F3 are activators released when CDKs phosphorylate RB; E2F4-E2F8 repress, E2F4 as part of the DREAM complex that also reads the adjacent CHR element. Sites sit in CpG-island promoters of replication and cell-cycle genes, and the RB-E2F axis is disabled in most human cancers.",
- "long": "## The factors\n\nHumans have eight E2F genes and two dimerization partners, TFDP1 and TFDP2 (DP1 and DP2).\nE2F1-E2F6 each contribute one winged-helix domain and must heterodimerize with a DP subunit,\nwhich contributes a second winged helix, so the functional unit is a pseudo-symmetric clamp\nbuilt from two different proteins. The crystal structure of the E2F4-DP2 DNA-binding regions\non DNA showed both recognition helices inserted into the major groove of one short GC-rich\nsite. E2F7 and E2F8 are the exceptions: each carries two winged-helix domains in a single\npolypeptide, binds as a homodimer or as an E2F7-E2F8 heterodimer, and needs no DP partner.\nFunction splits along the same lines as pocket-protein binding. E2F1, E2F2 and E2F3a are\nactivators held inactive by RB; E2F4 and E2F5 are repressors that partner p107 and p130\n(RBL1, RBL2); E2F6 lacks the pocket-protein-binding region and represses as part of a\nBmi1-containing polycomb complex; E2F7 and E2F8 are atypical repressors. E2F1-E2F3 peak at\nG1/S, whereas E2F4 is abundant in quiescent cells and accounts for most of the E2F signal in\nchromatin immunoprecipitation (ChIP) experiments, largely through the DREAM complex.\n\n## The motif\n\nThe literature consensus is TTTSSCGC (S = G or C), eight positions. Because the element is\nclose to self-complementary at its center, databases write it on either strand: TTTCCCGC,\nTTTGGCGC, GCGGGAAA and GGCGGGAA are all the same site. The data consensus here, GGCGGGAA, is\nthe reverse complement of TTCCCGCC and does not contradict the literature form. In vitro\nmodels from HT-SELEX are longer and palindromic, TTTTGGCGCCAAAA or TTTTGGCGGGAAA, which\nreflects two overlapping half-sites and the two-subunit clamp; ChIP-derived models collapse to\nthe shorter, GC-skewed GGCGGGAA. The information is concentrated in the central GCGC or GCGG,\nwhere the two recognition helices make direct base contacts, and falls off through the flanking\nT-rich or A-rich tract. Because the core is GC-rich and contains CGCG or GGCGGG, E2F models\noverlap the sequence space of the KLF/SP GC-box (GGGGCGGGG) and of other GC-repeat binders;\nthe Vierstra archetype AC0552:E2F/ZBTB is effectively a GCGCGCGC repeat whose nearest\nneighbours in these data lie outside the family. Across 37 motifs from four databases the\nfamily is cohesive (0.82) and no paralogue is separable: E2F1 through E2F8 and TFDP1 all\nconverge on one model, and E2F7/E2F8 differ only in showing the doubled form expected from\ntheir tandem domains.\n\n## Where it acts\n\nE2F sites are promoter elements, not typical distal enhancer elements. They cluster within a\ncouple of hundred base pairs of the transcription start site in CpG islands, upstream of\nreplication genes (CDC6, the MCM2-7 genes, PCNA, POLA1), nucleotide metabolism genes (TYMS,\nRRM2) and the E2F genes themselves. Genome-wide, E2F1, E2F4 and E2F6 occupy largely the same\npromoters, which is one reason ChIP data do not separate the paralogues, and a large fraction\nof occupied regions contain no canonical consensus at all. The best-characterized composite\nelement is the CDE/CHR module: a GC-rich cell cycle-dependent element (CDE) separated by about\nfour base pairs from a cell cycle genes homology region (CHR, TTYGAA), found in G2/M promoters\nsuch as CDC25C, CDK1, CCNB2 and PLK1. The CHR is bound by LIN54 inside the DREAM/MuvB complex\nand the CDE by an E2F-family protein; the two are functionally coupled, and both are needed for\np53-p21-DREAM repression. E2F sites also sit next to NF-Y CCAAT boxes and SP1 GC-boxes.\n\n## Biology and disease\n\nLoss of E2F1 in mice produces tumors as well as thymic hyperplasia, combined loss of E2F1-E2F3\nblocks proliferation, and E2f7/E2f8 double-knockout embryos die with widespread apoptosis and\npolyploidy. In human cancer the pathway upstream of E2F is disrupted far more often than E2F\nitself: RB1 deletion, CDKN2A loss, CCND1 amplification and CDK4/CDK6 activation all converge on\nreleasing activator E2Fs, and CDK4/6 inhibitors work by restoring RB-mediated E2F repression.\nAdenovirus E1A, HPV E7 and SV40 large T each dissociate E2F from pocket proteins, and HPV E7\nspecifically deregulates CDE/CHR-controlled genes. Deregulated E2F1 can also drive apoptosis,\nwhich is why E2F activity is not simply pro-proliferative.\n\n## Reading a hit\n\nA single E2F match is weak evidence. The element is eight GC-rich bases with little flanking\ninformation, so it occurs frequently by chance and is especially common in CpG-island promoters,\nwhere base composition alone inflates matches. The match tells you nothing about which member\nis bound: all eight E2Fs and both DP proteins share one model, and in a proliferating cell\nseveral are present at once. It also does not tell you whether the site activates or represses,\nsince activator and repressor E2Fs use the same sequence. Confirm you are not looking at a\nKLF/SP GC-box or a generic GC repeat. If the hit is in a G2/M promoter, look for a CHR about\nfour base pairs downstream, which is stronger evidence than the E2F match alone.",
+ "long": "## The factors\n\nHumans have eight E2F genes and two dimerization partners, TFDP1 and TFDP2 (DP1 and DP2).\nE2F1-E2F6 each contribute one winged-helix domain and must heterodimerize with a DP subunit,\nwhich contributes a second winged helix, so the functional unit is a pseudo-symmetric clamp\nbuilt from two different proteins. The crystal structure of the E2F4-DP2 DNA-binding regions\non DNA showed both recognition helices inserted into the major groove of one short GC-rich\nsite [PMID:10090723]. E2F7 and E2F8 are the exceptions: each carries two winged-helix domains in a single\npolypeptide, binds as a homodimer or as an E2F7-E2F8 heterodimer, and needs no DP partner [PMID:14633988,18194653].\nFunction splits along the same lines as pocket-protein binding. E2F1, E2F2 and E2F3a are\nactivators held inactive by RB [PMID:16360038]; E2F4 and E2F5 are repressors that partner p107 and p130\n(RBL1, RBL2) [PMID:17531812]; E2F6 lacks the pocket-protein-binding region and represses as part of a\nBmi1-containing polycomb complex [PMID:11171983]; E2F7 and E2F8 are atypical repressors. E2F1-E2F3 peak at\nG1/S, whereas E2F4 is abundant in quiescent cells and accounts for most of the E2F signal in\nchromatin immunoprecipitation (ChIP) experiments, largely through the DREAM complex [PMID:17531812].\n\n## The motif\n\nThe literature consensus is TTTSSCGC (S = G or C), eight positions [PMID:10090723]. Because the element is\nclose to self-complementary at its center, databases write it on either strand: TTTCCCGC,\nTTTGGCGC, GCGGGAAA and GGCGGGAA are all the same site. The data consensus here, GGCGGGAA, is\nthe reverse complement of TTCCCGCC and does not contradict the literature form. In vitro\nmodels from HT-SELEX are longer and palindromic, TTTTGGCGCCAAAA or TTTTGGCGGGAAA, which\nreflects two overlapping half-sites and the two-subunit clamp; ChIP-derived models collapse to\nthe shorter, GC-skewed GGCGGGAA. The information is concentrated in the central GCGC or GCGG,\nwhere the two recognition helices make direct base contacts, and falls off through the flanking\nT-rich or A-rich tract [PMID:10090723]. Because the core is GC-rich and contains CGCG or GGCGGG, E2F models\noverlap the sequence space of the KLF/SP GC-box (GGGGCGGGG) and of other GC-repeat binders;\nthe Vierstra archetype AC0552:E2F/ZBTB is effectively a GCGCGCGC repeat whose nearest\nneighbours in these data lie outside the family. Across 37 motifs from four databases the\nfamily is cohesive (0.82) and no paralogue is separable: E2F1 through E2F8 and TFDP1 all\nconverge on one model, and E2F7/E2F8 differ only in showing the doubled form expected from\ntheir tandem domains.\n\n## Where it acts\n\nE2F sites are promoter elements, not typical distal enhancer elements. They cluster within a\ncouple of hundred base pairs of the transcription start site in CpG islands, upstream of\nreplication genes (CDC6, the MCM2-7 genes, PCNA, POLA1), nucleotide metabolism genes (TYMS,\nRRM2) and the E2F genes themselves. Genome-wide, E2F1, E2F4 and E2F6 occupy largely the same\npromoters, which is one reason ChIP data do not separate the paralogues [PMID:17908821], and a large fraction\nof occupied regions contain no canonical consensus at all [PMID:18836037]. The best-characterized composite\nelement is the CDE/CHR module: a GC-rich cell cycle-dependent element (CDE) separated by about\nfour base pairs from a cell cycle genes homology region (CHR, TTYGAA), found in G2/M promoters\nsuch as CDC25C, CDK1, CCNB2 and PLK1 [PMID:7556094,22064854]. The CHR is bound by LIN54 inside the DREAM/MuvB complex\nand the CDE by an E2F-family protein [PMID:22064854,27465258]; the two are functionally coupled [PMID:7556094], and both are needed for\np53-p21-DREAM repression. E2F sites also sit next to NF-Y CCAAT boxes and SP1 GC-boxes [PMID:7556094].\n\n## Biology and disease\n\nLoss of E2F1 in mice produces tumors as well as thymic hyperplasia, combined loss of E2F1-E2F3\nblocks proliferation [PMID:19851314], and E2f7/E2f8 double-knockout embryos die with widespread apoptosis [PMID:18194653]. In human cancer the pathway upstream of E2F is disrupted far more often than E2F\nitself: RB1 deletion, CDKN2A loss, CCND1 amplification and CDK4/CDK6 activation all converge on\nreleasing activator E2Fs [PMID:19851314], and CDK4/6 inhibitors work by restoring RB-mediated E2F repression.\nAdenovirus E1A, HPV E7 and SV40 large T each dissociate E2F from pocket proteins, and HPV E7\nspecifically deregulates CDE/CHR-controlled genes. Deregulated E2F1 can also drive apoptosis [PMID:18194653],\nwhich is why E2F activity is not simply pro-proliferative.\n\n## Reading a hit\n\nA single E2F match is weak evidence. The element is eight GC-rich bases with little flanking\ninformation, so it occurs frequently by chance and is especially common in CpG-island promoters,\nwhere base composition alone inflates matches. The match tells you nothing about which member\nis bound: all eight E2Fs and both DP proteins share one model, and in a proliferating cell\nseveral are present at once. It also does not tell you whether the site activates or represses,\nsince activator and repressor E2Fs use the same sequence. Confirm you are not looking at a\nKLF/SP GC-box or a generic GC repeat. If the hit is in a G2/M promoter, look for a CHR about\nfour base pairs downstream, which is stronger evidence than the E2F match alone.",
  "caveats": "Trust an E2F hit as evidence for \"an E2F-family site\" and nothing narrower. The 8-bp GC-rich core gives frequent chance matches, especially inside CpG islands, and it overlaps KLF/SP GC-boxes, MAZ and other GC-repeat models. No paralogue is distinguishable from sequence, and neither activator nor repressor identity is readable. HOCOMOCO ChIP-only models (evidence letter P) are shorter and GC-skewed relative to the HT-SELEX and methyl-HT-SELEX models (S, M), which show the longer palindrome; the discrepancy is a difference in method, not in the factor. Roughly a third to a half of genomic E2F occupancy in ChIP experiments falls on regions without a canonical consensus, so absence of a match does not exclude binding.",
  "refs": [
   {
@@ -72,6 +72,97 @@
    "cite": "Chen HZ, Tsai SY, Leone G. Emerging roles of E2Fs in cancer: an exit from cell cycle control. Nat Rev Cancer 2009;9:785-97.",
    "pmid": "19851314",
    "url": "https://pubmed.ncbi.nlm.nih.gov/19851314/"
+  },
+  {
+   "cite": "Kovesdi I, Reichel R, Nevins JR. Identification of a cellular transcription factor involved in E1A trans-activation. Cell 1986;45:219-28.",
+   "pmid": "2938741",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2938741/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1986,
+   "finding": "A cellular factor that binds the adenovirus E2 promoter, protecting positions -33 to -74, is detected in nuclear extracts; its binding activity rises when the viral E1A gene is expressed. This is the activity named E2F.",
+   "methods": "Gel mobility shift, DNase I and exonuclease III footprinting",
+   "confidence": "medium",
+   "pmids": [
+    "2938741"
+   ],
+   "open": "The protein, its exact recognition sequence and its connection to cell-cycle control were unknown."
+  },
+  {
+   "year": 1995,
+   "finding": "Periodic repression of cdc25C, cyclin A and cdc2 depends on a GC-rich cell cycle-dependent element (CDE) and an adjacent five-base CHR; mutating either one deregulates all three genes in G0.",
+   "methods": "Promoter mutagenesis, reporter assays, in vivo DMS footprinting",
+   "confidence": "medium",
+   "pmids": [
+    "7556094"
+   ],
+   "open": "The proteins occupying the CDE and the CHR were not identified."
+  },
+  {
+   "year": 1999,
+   "finding": "Crystal structure of E2F4-DP2 on DNA: both subunits contribute a winged-helix domain, the central GCGC is read symmetrically by residues conserved across all E2Fs and DPs, and an E2F-specific arginine in the minor groove near the TTT stretch makes the extended site TTTSGCGCS asymmetric.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "10090723"
+   ],
+   "open": "Why the heterodimer is preferred over homodimers was inferred from the interface, not measured."
+  },
+  {
+   "year": 2003,
+   "finding": "E2F7 carries two DNA-binding domains in one polypeptide, binds the E2F consensus without DP and represses only a subset of E2F target promoters.",
+   "methods": "Cloning, DNA-binding assays, ChIP, RNA interference",
+   "confidence": "medium",
+   "pmids": [
+    "14633988"
+   ],
+   "open": "What restricts E2F7 to a subset of promoters bearing the same site."
+  },
+  {
+   "year": 2007,
+   "finding": "ChIP-chip of E2F1, E2F4 and E2F6 in five cell types finds most binding within 2 kb of a start site and several E2Fs on the same promoters, with only modest cell-type specificity.",
+   "methods": "ChIP-chip on ENCODE and promoter arrays, shRNA knockdown",
+   "confidence": "medium",
+   "pmids": [
+    "17908821"
+   ],
+   "open": "Most bound promoters lacked a consensus site, leaving open how E2Fs got there."
+  },
+  {
+   "year": 2008,
+   "finding": "Testing isolated fragments in vivo shows that a consensus motif is not sufficient to recruit E2F, that regions lacking one can be bound, and that being an active core promoter is the main determinant of occupancy.",
+   "methods": "ChIP-chip, eChIP of isolated fragments",
+   "confidence": "medium",
+   "pmids": [
+    "18836037"
+   ],
+   "open": "Indirect recruitment, looping and assisted binding to weak sites were not fully separated."
+  },
+  {
+   "year": 2012,
+   "finding": "At cyclin B2 the CHR, not the E2F-bound CDE, is the essential element: DREAM binds the CHR in G0 and the B-Myb-MuvB complex binds it in proliferating cells, and a CDE enhances but is not required for DREAM binding. This revises the earlier view that E2F4 binding to the CDE is central to CDE/CHR regulation.",
+   "methods": "Promoter mutagenesis, DNA-affinity purification, ChIP",
+   "confidence": "medium",
+   "pmids": [
+    "22064854"
+   ]
+  },
+  {
+   "year": 2016,
+   "finding": "Crystal structure of the LIN54 DNA-binding domain on a CHR: two tyrosines insert into the minor groove, and the CHR consensus is defined biochemically as TTYRAA.",
+   "methods": "X-ray crystallography, binding assays",
+   "confidence": "high",
+   "pmids": [
+    "27465258"
+   ]
+  }
+ ],
+ "open": [
+  "How E2Fs occupy the many promoters that lack a consensus site is unresolved: in vivo tests point to an active core promoter, not a motif, as the main determinant, but indirect recruitment, looping from a distal site and assisted binding to weak motif-like sequences have not been separated.",
+  "Whether individual E2Fs have distinct targets is unsettled: ChIP finds E2F1, E2F4 and E2F6 on largely the same promoters, whereas the activator and repressor classes have distinct functions, so it is open whether any of that specificity is encoded in DNA rather than in partners, timing and pocket-protein binding.",
+  "The databases carry two forms of the site: HT-SELEX and methyl-HT-SELEX models give a long palindrome (TTTGGCGCCAAA), ChIP-derived models give the shorter GGCGGGAA, and it has not been settled whether the ChIP form is the preferred in vivo site or a product of CpG-island base composition and indirect binding.",
+  "The weight of the E2F-bound CDE in DREAM recruitment is disputed: mutagenesis at cdc25C, cyclin A and cdc2 found the CDE and CHR equally required, whereas work at cyclin B2 found the CHR essential and the CDE only enhancing."
  ]
 }

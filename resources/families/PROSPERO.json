@@ -10,7 +10,7 @@
  ],
  "consensus": "TAAGACG",
  "short": "PROX1 is the human counterpart of Drosophila Prospero, and it binds DNA with a module unlike any other homeodomain: a highly divergent homeodomain fused to a conserved Prospero domain, the two folding into one structural unit called the homeo-prospero domain. That unit reads a non-canonical site, TAAGACG, rather than the TAAT core used by ordinary homeodomains, and the Prospero domain both aligns the protein on DNA and masks a nuclear export signal, coupling DNA binding to where the protein sits in the cell. PROX1 is essential for lymphatic endothelium, lens fibre elongation, liver and pancreas development and dentate gyrus identity, and it also works without its own site by tethering to nuclear receptors. A single human gene, so no paralogue ambiguity.",
- "long": "## The factors\n\nThis family has effectively one member in human, PROX1, a 737-residue protein; PROX2 is a shorter relative\nwith much less supporting data. PROX1 was cloned as the vertebrate homologue of *Drosophila* Prospero, a\npan-neural factor required for proper differentiation of neuronal lineages. The DNA-binding module sits at\nthe C terminus and is unusual enough that standard domain annotation does not register a homeobox in PROX1\nat all. It consists of a highly divergent putative homeodomain immediately followed by a conserved\nProspero domain, and the crystal structures showed that these two regions are not separable: they fold as a\nsingle structural unit, the homeo-prospero domain. The homeodomain region retains a three-helix fold\nsimilar to a canonical homeodomain, the Prospero domain is a four-helix bundle, and the recognition helix\nbridges the two. PROX1 binds as a monomer through this unit; it has no zinc fingers, leucine zipper or\nother dimerisation module. Both the fly and human proteins also act on other transcription factors: \nProspero modulates the DNA-binding properties of conventional homeodomain proteins such as Deformed, and\nPROX1 modulates nuclear receptors, in both cases through the same conserved C-terminal region that binds\nDNA but through activities that are formally independent of it.\n\n## The motif\n\nThe functionally validated Prospero target sequence is TAAGACG, which is not a homeodomain site: there is\nno TAAT core, and the bases contacted are read by residues that do not correspond to the canonical\nhomeodomain specificity positions. The co-crystal structure of the homeo-prospero domain with DNA showed\nLys1290, Asn1294 and Asp1297, invariant across the family, making the specific contacts, and it reconciled\ntwo different sequences that had previously been proposed as Prospero targets, the TAAGACG element and a\nlooser SELEX-derived pyrimidine-rich consensus. The Prospero domain does not itself contact many bases; its\njob is to align the protein correctly on the site. In vitro selection on human PROX1 extends the site to an\neleven-position model, AAGACGCCTTA, whose reverse complement reads TAAGGCGTCTT; the TAAGACG core of the\nliterature consensus is contained in it, and the extra positions are a weakly specified 3' half that makes\nthe whole thing look like a loose near-palindrome of two AAG-type half sites. All four database models in\nthe family agree on this shape, with a cohesion of 0.89, and the only weak entry is a shortened HOCOMOCO\nmodel reduced to CGTCTT. Because there is one gene, there is no paralogue problem: the motif and the\nprotein correspond one to one.\n\n## Where it acts\n\nPROX1 acts at promoters and enhancers of lineage genes in the tissues where it is expressed: lymphatic\nendothelium, lens, liver, pancreas, heart, lymphocytes and dentate gyrus granule cells. A large part of its\ngenomic footprint, though, is not explained by its own site. PROX1 functions as a corepressor and\ncoregulator of nuclear receptors, including liver receptor homologue-1, the oestrogen-related receptor\nERRalpha with its coactivator PGC-1alpha, and the retinoic-acid-related orphan receptors; in these\ncomplexes it is recruited to the receptor's own response element. So PROX1 ChIP peaks are expected to be\nenriched for nuclear receptor half sites as well as for TAAGACG, and in bioenergetic gene programs the\nnuclear receptor element may be the only motif present. There is no widely used name for a PROX1 composite\nelement.\n\n## Biology and disease\n\nProx1-null mouse embryos fail to form a lymphatic vasculature: lymphatic endothelial cells do not bud from\nthe embryonic veins, which established PROX1 as the switch for lymphatic endothelial identity. Forced PROX1\nexpression in blood vascular endothelial cells reprogrammes them toward a lymphatic phenotype, and this\nremains one of the cleaner examples of single-factor endothelial fate conversion. Prox1 loss also blocks\nlens fibre elongation, causing a cataract-like phenotype, and blocks hepatocyte migration during liver\ndevelopment. In the brain, Prox1 postmitotically specifies dentate gyrus granule cell identity in\npreference to CA3 pyramidal identity. Through ERRalpha/PGC-1alpha, PROX1 restrains mitochondrial and\nbioenergetic gene expression. In cancer the direction of effect is context-dependent and contested; in\nintestinal tumorigenesis a PROX1-positive tumour stem or progenitor population has been described that\ncontributes to tumour growth, while other settings report tumour-suppressive behaviour.\n\n## Reading a hit\n\nA good TAAGACG or AAGACGCCTTA match is unusually informative for a homeodomain-class family, because the\nsite shares nothing with the TAAT core that hundreds of other homeodomain factors use, and because there is\nonly one human protein that reads it. Two limits. The site is short and only moderately constrained, so\nchance occurrence is not negligible in a large search space, and matches should be weighted by whether\nPROX1 is expressed in the tissue at all; it is off in most adult somatic cell types. More importantly, the\nconverse inference fails: a PROX1 ChIP peak with no TAAGACG is not evidence against PROX1 involvement,\nbecause much of what PROX1 does genomically is tethered to nuclear receptors. The available models rest on\nin vitro selection, which supports the statement that PROX1 binds this sequence, and the crystal structure\nsupports it independently; that is a stronger evidence base than most families in this atlas.",
+ "long": "## The factors\n\nThis family has effectively one member in human, PROX1, a 737-residue protein; PROX2 is a shorter relative\nwith much less supporting data. PROX1 was cloned as the vertebrate homologue of *Drosophila* Prospero, a\npan-neural factor required for proper differentiation of neuronal lineages [PMID:7908825,9380747]. The DNA-binding module sits at\nthe C terminus and is unusual enough that standard domain annotation does not register a homeobox in PROX1\nat all. It consists of a highly divergent putative homeodomain immediately followed by a conserved\nProspero domain, and the crystal structures showed that these two regions are not separable: they fold as a\nsingle structural unit, the homeo-prospero domain [PMID:12429095]. The homeodomain region retains a three-helix fold\nsimilar to a canonical homeodomain, the Prospero domain is a four-helix bundle, and the recognition helix\nbridges the two [PMID:12429095,15837198]. PROX1 binds as a monomer through this unit; it has no zinc fingers, leucine zipper or\nother dimerisation module. Both the fly and human proteins also act on other transcription factors: \nProspero modulates the DNA-binding properties of conventional homeodomain proteins such as Deformed [PMID:9380747], and\nPROX1 modulates nuclear receptors, in both cases through the same conserved C-terminal region that binds\nDNA but through activities that are formally independent of it [PMID:9380747].\n\n## The motif\n\nThe functionally validated Prospero target sequence is TAAGACG, which is not a homeodomain site: there is\nno TAAT core, and the bases contacted are read by residues that do not correspond to the canonical\nhomeodomain specificity positions [PMID:9380747,15837198]. The co-crystal structure of the homeo-prospero domain with DNA showed\nLys1290, Asn1294 and Asp1297, invariant across the family, making the specific contacts, and it reconciled\ntwo different sequences that had previously been proposed as Prospero targets, the TAAGACG element and a\nlooser SELEX-derived pyrimidine-rich consensus [PMID:15837198]. The Prospero domain does not itself contact many bases; its\njob is to align the protein correctly on the site. In vitro selection on human PROX1 extends the site to an\neleven-position model, AAGACGCCTTA, whose reverse complement reads TAAGGCGTCTT [PMID:23332764]; the TAAGACG core of the\nliterature consensus is contained in it, and the extra positions are a weakly specified 3' half that makes\nthe whole thing look like a loose near-palindrome of two AAG-type half sites. All four database models in\nthe family agree on this shape, with a cohesion of 0.89, and the only weak entry is a shortened HOCOMOCO\nmodel reduced to CGTCTT [PMID:37962376]. Because there is one gene, there is no paralogue problem: the motif and the\nprotein correspond one to one.\n\n## Where it acts\n\nPROX1 acts at promoters and enhancers of lineage genes in the tissues where it is expressed: lymphatic\nendothelium, lens, liver, pancreas, heart, lymphocytes and dentate gyrus granule cells. A large part of its\ngenomic footprint, though, is not explained by its own site. PROX1 functions as a corepressor and\ncoregulator of nuclear receptors, including liver receptor homologue-1, the oestrogen-related receptor\nERRalpha with its coactivator PGC-1alpha, and the retinoic-acid-related orphan receptors; in these\ncomplexes it is recruited to the receptor's own response element [PMID:20194433]. So PROX1 ChIP peaks are expected to be\nenriched for nuclear receptor half sites as well as for TAAGACG, and in bioenergetic gene programs the\nnuclear receptor element may be the only motif present. There is no widely used name for a PROX1 composite\nelement.\n\n## Biology and disease\n\nProx1-null mouse embryos fail to form a lymphatic vasculature: lymphatic endothelial cells do not bud from\nthe embryonic veins, which established PROX1 as the switch for lymphatic endothelial identity [PMID:10499794]. Forced PROX1\nexpression in blood vascular endothelial cells reprogrammes them toward a lymphatic phenotype, and this\nremains one of the cleaner examples of single-factor endothelial fate conversion [PMID:12198161]. Prox1 loss also blocks\nlens fibre elongation, causing a cataract-like phenotype [PMID:10080188], and blocks hepatocyte migration during liver\ndevelopment [PMID:10888866]. In the brain, Prox1 postmitotically specifies dentate gyrus granule cell identity in\npreference to CA3 pyramidal identity [PMID:22791897]. Through ERRalpha/PGC-1alpha, PROX1 restrains mitochondrial and\nbioenergetic gene expression [PMID:20194433]. In cancer the direction of effect is context-dependent and contested; in\nintestinal tumorigenesis a PROX1-positive tumour stem or progenitor population has been described that\ncontributes to tumour growth [PMID:39841093], while other settings report tumour-suppressive behaviour.\n\n## Reading a hit\n\nA good TAAGACG or AAGACGCCTTA match is unusually informative for a homeodomain-class family, because the\nsite shares nothing with the TAAT core that hundreds of other homeodomain factors use, and because there is\nonly one human protein that reads it. Two limits. The site is short and only moderately constrained, so\nchance occurrence is not negligible in a large search space, and matches should be weighted by whether\nPROX1 is expressed in the tissue at all; it is off in most adult somatic cell types. More importantly, the\nconverse inference fails: a PROX1 ChIP peak with no TAAGACG is not evidence against PROX1 involvement,\nbecause much of what PROX1 does genomically is tethered to nuclear receptors. The available models rest on\nin vitro selection, which supports the statement that PROX1 binds this sequence, and the crystal structure\nsupports it independently; that is a stronger evidence base than most families in this atlas.",
  "caveats": "One gene, one motif, so no paralogue ambiguity, and the site is structurally validated by a co-crystal of the homeo-prospero domain with DNA. The limits are elsewhere. TAAGACG is only seven constrained positions, so chance matches are common in large searches and should be filtered by whether PROX1 is expressed. The database models come from in vitro selection, which is good evidence for sequence but not for occupancy. And a large fraction of PROX1 genomic action is indirect: it is recruited as a coregulator by nuclear receptors including LRH-1, ERRalpha and RORs, so PROX1 ChIP peaks are expected to carry nuclear receptor elements rather than, or in addition to, this motif.",
  "refs": [
   {
@@ -72,6 +72,98 @@
    "cite": "Rauluseviciute I, Riudavets-Puig R, Blanc-Mathieu R, et al. JASPAR 2024: 20th anniversary of the open-access database of transcription factor binding profiles. Nucleic Acids Res 2024;52:D174-D182.",
    "pmid": "37962376",
    "url": "https://pubmed.ncbi.nlm.nih.gov/37962376/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1993,
+   "finding": "Prox1 is cloned as the likely mouse homologue of Drosophila prospero and found to be expressed in young neurons, developing lens, pancreas, liver and heart, matching the fly expression pattern.",
+   "methods": "cDNA cloning and in situ expression analysis in mouse embryos",
+   "confidence": "medium",
+   "pmids": [
+    "7908825"
+   ],
+   "open": "Nothing was known about what sequence the protein binds, or whether it binds DNA directly at all."
+  },
+  {
+   "year": 1997,
+   "finding": "Prospero is shown to be a sequence-specific DNA-binding protein with preferences unlike those of canonical homeodomains, and to separately modulate the DNA binding of homeodomain partners such as Deformed, with both activities mapping to the conserved C-terminal region but operating independently.",
+   "methods": "in vitro DNA binding, enhancer assays and deletion mapping in Drosophila",
+   "confidence": "medium",
+   "pmids": [
+    "9380747"
+   ],
+   "open": "Two different target sequences were in circulation, a defined element and a looser selection-derived consensus, and they had not been reconciled."
+  },
+  {
+   "year": 1999,
+   "finding": "Prox1-null mouse embryos arrest lymphatic endothelial budding from the embryonic veins while blood vessel development proceeds normally, and separately fail lens fibre elongation, giving the vertebrate protein two sharply defined requirements.",
+   "methods": "targeted mouse knockouts with histology and marker analysis",
+   "confidence": "high",
+   "pmids": [
+    "10499794",
+    "10080188"
+   ]
+  },
+  {
+   "year": 2002,
+   "finding": "The structure of the DNA-binding region shows that the divergent homeodomain and the adjacent Prospero domain form a single structural unit, the homeo-prospero domain, and that the Prospero domain both contributes to DNA binding and masks a nuclear export signal inside the homeodomain region.",
+   "methods": "X-ray crystallography of the unliganded domain",
+   "confidence": "high",
+   "pmids": [
+    "12429095"
+   ],
+   "open": "The apo structure could not say which bases the unit reads."
+  },
+  {
+   "year": 2005,
+   "finding": "The co-crystal with DNA shows the invariant residues Lys1290, Asn1294 and Asp1297 contacting a non-canonical site, with the Prospero domain aligning the protein rather than reading many bases, and reconciles the two sequences previously proposed as Prospero targets; it also indicates that exposure of the nuclear export signal is not directly coupled to DNA binding.",
+   "methods": "X-ray crystallography of the protein-DNA complex",
+   "confidence": "high",
+   "pmids": [
+    "15837198"
+   ]
+  },
+  {
+   "year": 2010,
+   "finding": "PROX1 is shown to act as a negative modulator of ERRalpha and its coactivator PGC-1alpha at bioenergetic genes, establishing that a large part of its genomic action is tethered to nuclear receptors rather than driven by its own site.",
+   "methods": "coimmunoprecipitation, reporter assays and genome-wide location analysis in liver cells",
+   "confidence": "medium",
+   "pmids": [
+    "20194433"
+   ],
+   "open": "How much of PROX1 occupancy overall is tethered rather than direct was not quantified."
+  },
+  {
+   "year": 2013,
+   "finding": "HT-SELEX on recombinant human PROX1 extends the site to an eleven-position model, AAGACGCCTTA, which contains the TAAGACG core of the literature consensus plus a weakly specified second half, and this model underlies the JASPAR, CIS-BP and archetype entries for the family.",
+   "methods": "HT-SELEX",
+   "confidence": "medium",
+   "pmids": [
+    "23332764"
+   ],
+   "open": "In vitro selection says what the protein can bind, not which of those sites it occupies in a cell."
+  },
+  {
+   "year": 2025,
+   "finding": "Lineage tracing in intestinal adenomas identifies PROX1-positive cells as slow-cycling tumor stem or progenitor cells that self-renew, supply multiple tumor lineages and survive irradiation through enhanced DNA damage repair, sharpening but not settling the contested role of PROX1 in cancer.",
+   "methods": "mouse lineage tracing with patient-derived organoids and xenografts",
+   "confidence": "medium",
+   "pmids": [
+    "39841093"
+   ],
+   "open": "Other tumor settings report PROX1 as growth-suppressive, and the determinants of the direction of effect are unknown."
+  }
+ ],
+ "open": [
+  "No PROX1 motif derived from occupancy exists: all four database models come from in vitro selection, so whether TAAGACG-type sites are the ones PROX1 actually binds genome-wide, and in which tissues, has not been shown by ChIP.",
+  "The proportion of PROX1 genomic action that is tethered to nuclear receptors rather than driven by its own site is unknown, which matters because the two modes predict different motif content under a peak and cannot be told apart from a motif hit.",
+  "Whether PROX2 reads the same sequence is untested: it is annotated as a Prospero-domain relative but has no measured binding model, so motif hits in this family are implicitly attributed to PROX1 alone.",
+  "The direction of PROX1 effect in cancer is contested: lineage tracing in intestinal tumors describes a self-renewing, radioresistant PROX1-positive stem or progenitor population, while other tumor types report loss of PROX1 as the oncogenic event."
  ]
 }

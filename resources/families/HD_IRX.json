@@ -14,7 +14,7 @@
  ],
  "consensus": "ACATGT",
  "short": "IRX1 through IRX6, with the related factor MKX (Mohawk), form the Iroquois branch of the TALE homeodomain superclass - homeodomains carrying three extra residues between helices 1 and 2. Unlike most homeodomain proteins they do not read a TAAT core. Their recognition unit is a short ACA, and the functional site is an inverted repeat of it, so models in these databases range from the half-site CATGT up to long palindromes such as ACATGnnnnnCATGT. The IRX genes sit in two clusters, IRX1/2/4 and IRX3/5/6, and pattern the heart, limb, kidney and nervous system. IRX3 is best known outside developmental biology as the gene connected by long-range enhancer contacts to the obesity-associated variants inside FTO.",
- "long": "## The factors\n\nThe Iroquois genes are one of the five branches of the TALE superclass, which is defined by a three-amino-acid insertion between helices 1 and 2 of the homeodomain. Humans have six, arranged in two clusters that arose by duplication: IRX1, IRX2 and IRX4 on chromosome 5, and IRX3, IRX5 and IRX6 on chromosome 16. Each protein carries a TALE homeodomain plus a C-terminal Iro box. MKX (Mohawk) is an IRX-related TALE homeodomain protein assigned to this family in the motif data; it acts as a repressor and recruits the Sin3A/HDAC corepressor complex. Iroquois proteins form homodimers and heterodimers, which is part of how a very short recognition core is turned into a usable site. Expression is broad but regional: IRX1/2/4 and IRX3/5 are prominent in heart, limb bud, kidney, lung and neural tube, with IRX4 largely ventricle-specific; MKX is expressed in tendon and the precursors of skeletal muscle, cartilage and bone.\n\n## The motif\n\nThis family is the clearest example in the atlas of a homeodomain that has abandoned the TAAT core. In vitro site selection with *Drosophila* Mirror defined an Iroquois-binding sequence recognized by the other fly Iroquois proteins and by vertebrate IRX factors, and used in vivo to mediate repression. Bacterial one-hybrid selection with the mouse MKX homeodomain gave a monomeric core of just three bases, A-C-A, and the minimal Mohawk response element in the Mkx promoter is a conserved inverted repeat of that core - the same architecture the human IRX models show. Because the reverse complement of ACA is TGT, the inverted repeat is ACA-TGT, most compactly ACATGT, which is itself palindromic. The databases capture this at several spacings: CIS-BP M05319 gives tACAtGaatattCaTGTa and HOCOMOCO IRX3.H14CORE.2.S.C gives ACAtGnaaaaaCATGTa (ACATG and CATGT separated by five to seven bases), the Vierstra archetype AC0476 gives ACacGawaawtCaTGT, AC0460 gives the tandem ACAtgACA, and the shortest models collapse to the half-site CATGTt or aACATG. The pooled consensus is therefore the half-site CATGTt with cohesion 0.77 - a number that reflects spacer variability, not disagreement about the core. Two methyl-HT-SELEX models for IRX3 and IRX5 instead read ACGCGTaA, a CpG-containing palindrome, so methylation status may matter for a subset of sites. IRX1-6 are not distinguishable from one another by sequence.\n\n## Where it acts\n\nIRX sites occur in developmental enhancers rather than housekeeping promoters, and because the core is 3 bp the useful signal is always the paired arrangement plus its spacing. An exact ACATGT is expected on the order of 10^6 times in 3.1 Gb, so single-half-site matches should not be acted on. The longer palindromic forms with a 5-7 bp AT-rich spacer are much more discriminating. The best-documented regulatory context is the FTO/IRX3 locus, where obesity-associated variants in FTO introns make long-range functional contacts with the IRX3 promoter, so IRX3 rather than FTO is the effector gene. In heart, Irx3 and Irx5 act on conduction-system and repolarization genes and have both cooperative and antagonistic roles, giving a regional readout from the same motif.\n\n## Biology and disease\n\nIrx3/Irx5 double mutants in mouse have cardiac morphogenetic defects and abnormal postnatal cardiac physiology, and Irx4 loss affects ventricular identity. Homozygous loss-of-function mutations in human IRX5 cause Hamamy syndrome, with craniofacial anomalies and impaired germ cell migration attributable to reduced SDF1/CXCL12. Variants in the FTO first intron act on IRX3 to influence body mass, and IRX3 and IRX5 have also been implicated in adipocyte browning. Mkx-null mice have tendon hypoplasia, and MKX loss de-represses Sox6 and shifts skeletal muscle away from slow fiber gene expression.\n\n## Reading a hit\n\nTreat a bare CATGT or ACATG match as noise: 5 bp is not enough, and CATG is also the core of several unrelated motifs. What is interpretable is a paired ACATG...CATGT arrangement, ideally with the AT-rich spacer the high-information models show. The hit identifies the Iroquois branch, not a paralogue - all six IRX models are the same. Two members of this family in CIS-BP are cross-species transfers, one from *Drosophila melanogaster* at 98% DNA-binding-domain identity and one from mouse, and both are extremely low information (aAACA and AcA); do not treat them as independent human evidence. The MKX model here is graded A in HOCOMOCO with integrative and in vitro support but is still only five informative bases.",
+ "long": "## The factors\n\nThe Iroquois genes are one of the five branches of the TALE superclass, which is defined by a three-amino-acid insertion between helices 1 and 2 of the homeodomain [PMID:9336443]. Humans have six, arranged in two clusters that arose by duplication: IRX1, IRX2 and IRX4 on chromosome 5, and IRX3, IRX5 and IRX6 on chromosome 16 [PMID:11532909]. Each protein carries a TALE homeodomain plus a C-terminal Iro box [PMID:9336443]. MKX (Mohawk) is an IRX-related TALE homeodomain protein assigned to this family in the motif data; it acts as a repressor and recruits the Sin3A/HDAC corepressor complex [PMID:19235719]. Iroquois proteins form homodimers and heterodimers, which is part of how a very short recognition core is turned into a usable site [PMID:16203991]. Expression is broad but regional: IRX1/2/4 and IRX3/5 are prominent in heart, limb bud, kidney, lung and neural tube, with IRX4 largely ventricle-specific; MKX is expressed in tendon and the precursors of skeletal muscle, cartilage and bone [PMID:22923612].\n\n## The motif\n\nThis family is the clearest example in the atlas of a homeodomain that has abandoned the TAAT core. In vitro site selection with *Drosophila* Mirror defined an Iroquois-binding sequence recognized by the other fly Iroquois proteins and by vertebrate IRX factors, and used in vivo to mediate repression [PMID:16203991]. Bacterial one-hybrid selection with the mouse MKX homeodomain gave a monomeric core of just three bases, A-C-A, and the minimal Mohawk response element in the Mkx promoter is a conserved inverted repeat of that core [PMID:22923612] - the same architecture the human IRX models show. Because the reverse complement of ACA is TGT, the inverted repeat is ACA-TGT, most compactly ACATGT, which is itself palindromic. The databases capture this at several spacings: CIS-BP M05319 gives tACAtGaatattCaTGTa and HOCOMOCO IRX3.H14CORE.2.S.C gives ACAtGnaaaaaCATGTa (ACATG and CATGT separated by five to seven bases), the Vierstra archetype AC0476 gives ACacGawaawtCaTGT, AC0460 gives the tandem ACAtgACA, and the shortest models collapse to the half-site CATGTt or aACATG. The pooled consensus is therefore the half-site CATGTt with cohesion 0.77 - a number that reflects spacer variability, not disagreement about the core. Two methyl-HT-SELEX models for IRX3 and IRX5 instead read ACGCGTaA, a CpG-containing palindrome, so methylation status may matter for a subset of sites [PMID:28473536]. IRX1-6 are not distinguishable from one another by sequence.\n\n## Where it acts\n\nIRX sites occur in developmental enhancers rather than housekeeping promoters, and because the core is 3 bp the useful signal is always the paired arrangement plus its spacing. An exact ACATGT is expected on the order of 10^6 times in 3.1 Gb, so single-half-site matches should not be acted on. The longer palindromic forms with a 5-7 bp AT-rich spacer are much more discriminating. The best-documented regulatory context is the FTO/IRX3 locus, where obesity-associated variants in FTO introns make long-range functional contacts with the IRX3 promoter, so IRX3 rather than FTO is the effector gene [PMID:24646999,26287746]. In heart, Irx3 and Irx5 act on conduction-system and repolarization genes and have both cooperative and antagonistic roles, giving a regional readout from the same motif [PMID:22992950].\n\n## Biology and disease\n\nIrx3/Irx5 double mutants in mouse have cardiac morphogenetic defects and abnormal postnatal cardiac physiology [PMID:22992950], and Irx4 loss affects ventricular identity. Homozygous loss-of-function mutations in human IRX5 cause Hamamy syndrome, with craniofacial anomalies and impaired germ cell migration attributable to reduced SDF1/CXCL12 [PMID:22581230]. Variants in the FTO first intron act on IRX3 to influence body mass [PMID:24646999], and IRX3 and IRX5 have also been implicated in adipocyte browning [PMID:26287746]. Mkx-null mice have tendon hypoplasia, and MKX loss de-represses Sox6 and shifts skeletal muscle away from slow fiber gene expression [PMID:22923612].\n\n## Reading a hit\n\nTreat a bare CATGT or ACATG match as noise: 5 bp is not enough, and CATG is also the core of several unrelated motifs. What is interpretable is a paired ACATG...CATGT arrangement, ideally with the AT-rich spacer the high-information models show. The hit identifies the Iroquois branch, not a paralogue - all six IRX models are the same. Two members of this family in CIS-BP are cross-species transfers, one from *Drosophila melanogaster* at 98% DNA-binding-domain identity and one from mouse, and both are extremely low information (aAACA and AcA); do not treat them as independent human evidence. The MKX model here is graded A in HOCOMOCO with ChIP-seq and four in vitro assays behind it (HT-SELEX, GHT-SELEX, SMiLE-seq and PBM) but is still only five informative bases.",
  "caveats": "The recognition core is three bases, so short matches are essentially uninformative and only paired ACATG...CATGT arrangements with their AT-rich spacer are worth interpreting. IRX1-6 share one model, so a hit identifies the Iroquois branch and never a paralogue. Two CIS-BP members are inherited from non-human proteins (one from Drosophila at 98% DBD identity, one from mouse) and carry almost no information. Spacer length varies between models, so scores depend heavily on which matrix you used. Because the CATG core is shared with unrelated motifs, expect a high false-positive rate without footprint or expression support.",
  "refs": [
   {
@@ -71,6 +71,97 @@
    "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
    "pmid": "23332764",
    "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  },
+  {
+   "cite": "Anderson DM, Beres BJ, Wilson-Rawls J, et al. The homeobox gene Mohawk represses transcription by recruiting the sin3A/HDAC co-repressor complex. Dev Dyn 2009;238:572-80.",
+   "pmid": "19235719",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19235719/"
+  },
+  {
+   "cite": "Claussnitzer M, Dankel SN, Kim KH, et al. FTO Obesity Variant Circuitry and Adipocyte Browning in Humans. N Engl J Med 2015;373:895-907.",
+   "pmid": "26287746",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26287746/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1997,
+   "finding": "A classification of TALE homeobox genes defines the Iroquois (IRO) class as one of four animal TALE classes, with a conserved motif downstream of the homeodomain (the Iro box).",
+   "methods": "Comparative sequence analysis",
+   "confidence": "medium",
+   "pmids": [
+    "9336443"
+   ],
+   "open": "Nothing was known about the DNA sequence Iroquois proteins read."
+  },
+  {
+   "year": 2005,
+   "finding": "In vitro site selection with Drosophila Mirror defines an Iroquois binding motif, bound by the other fly Iroquois proteins and by vertebrate IRX factors and used in vivo for repression; Iroquois proteins homo- and heterodimerize.",
+   "methods": "In vitro site selection, EMSA, Drosophila transgenics",
+   "confidence": "high",
+   "pmids": [
+    "16203991"
+   ],
+   "open": "How a site so far from the TAAT core was recognized by a homeodomain was not explained."
+  },
+  {
+   "year": 2009,
+   "finding": "MKX, the IRX-related TALE protein, is shown to repress transcription by recruiting the Sin3A/HDAC corepressor complex.",
+   "methods": "Reporter assays, coimmunoprecipitation",
+   "confidence": "medium",
+   "pmids": [
+    "19235719"
+   ]
+  },
+  {
+   "year": 2012,
+   "finding": "Bacterial one-hybrid selection gives the monomeric MKX homeodomain core as just A-C-A, and the minimal Mohawk response element in the Mkx promoter is an inverted repeat of that core; Mkx-null satellite cells derepress Sox6.",
+   "methods": "Bacterial one-hybrid site selection, reporter assays, Mkx-null cells",
+   "confidence": "medium",
+   "pmids": [
+    "22923612"
+   ]
+  },
+  {
+   "year": 2012,
+   "finding": "Homozygous IRX5 homeodomain mutations cause a recessive craniofacial, gonadal and cardiac disorder (Hamamy syndrome), with Irx5 acting by repressing Sdf1 and interacting with GATA3 and TRPS1.",
+   "methods": "Homozygosity mapping, resequencing, Xenopus modeling",
+   "confidence": "medium",
+   "pmids": [
+    "22581230"
+   ]
+  },
+  {
+   "year": 2014,
+   "finding": "Obesity-associated FTO intronic variants contact the IRX3 promoter at megabase distance and associate with IRX3, not FTO, expression in human brain; Irx3-deficient mice are 25-30% lighter.",
+   "methods": "Chromosome conformation capture, eQTL analysis, enhancer assays, mouse knockout",
+   "confidence": "high",
+   "pmids": [
+    "24646999"
+   ]
+  },
+  {
+   "year": 2015,
+   "finding": "The FTO risk variant rs1421085 disrupts an ARID5B repressor motif, derepressing a preadipocyte enhancer and doubling IRX3 and IRX5 expression, which shifts precursors from beige to white adipocytes; editing the variant back restores thermogenesis.",
+   "methods": "Epigenomics, allelic assays, CRISPR-Cas9 editing in primary human adipocytes, mouse perturbation",
+   "confidence": "high",
+   "pmids": [
+    "26287746"
+   ]
+  },
+  {
+   "year": 2017,
+   "finding": "Methyl-HT-SELEX across 542 human factors finds that many homeodomain proteins bind CpG-methylated sites; methyl-HT-SELEX models for IRX3 and IRX5 in HOCOMOCO read the CpG-containing ACGCGTAA instead of the ACATGT core.",
+   "methods": "Methyl-HT-SELEX",
+   "confidence": "medium",
+   "pmids": [
+    "28473536"
+   ]
+  }
+ ],
+ "open": [
+  "Whether IRX proteins act mainly as monomers on ACA half-sites or as dimers on paired ACATG...CATGT sites is unresolved: the same factors yield both half-site models and inverted-repeat models with a 5-7 bp spacer, and which spacing is used in vivo has not been established.",
+  "The methyl-HT-SELEX models for IRX3 and IRX5 read a CpG-containing ACGCGTAA that differs from the unmethylated ACATGT core, and it is not known whether methylated sites are a real class of IRX targets in cells.",
+  "Whether MKX shares the IRX site is open: it is grouped here by motif data, but its best-supported model (HOCOMOCO grade A) is only five informative bases (aTGTA), too little to show that it reads the paired Iroquois arrangement."
  ]
 }

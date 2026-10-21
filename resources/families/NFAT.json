@@ -11,7 +11,7 @@
  ],
  "consensus": "TGGAAA",
  "short": "NFAT sites are read by five proteins with a Rel-homology DNA-binding domain: the calcineurin-regulated NFATC1, NFATC2, NFATC3 and NFATC4, plus the structurally distinct, calcium-independent NFAT5 (TonEBP). Unlike NF-kB, the calcineurin-dependent NFATs bind as monomers to a short GGAAA core, usually written TGGAAA and only about six informative bases long. Because that is too little information to specify a site on its own, NFATs typically work in composite elements, most famously the NFAT-AP1 element of the interleukin-2 promoter, where NFAT and a Fos-Jun dimer touch each other on adjacent DNA. NFAT activity is controlled by dephosphorylation and nuclear import, which is why cyclosporin A and tacrolimus, which inhibit calcineurin, are immunosuppressive.",
- "long": "## The factors\n\nFive human proteins carry an NFAT DNA-binding domain. NFATC1 (NFAT2), NFATC2 (NFAT1), NFATC3 (NFAT4) and NFATC4 (NFAT3) share a Rel-homology region related to that of NF-kB, preceded by a long regulatory domain packed with serine-rich motifs and SP boxes. In a resting cell that domain is heavily phosphorylated and the protein is cytoplasmic; a sustained rise in cytosolic calcium activates the phosphatase calcineurin, which dephosphorylates it and exposes a nuclear localisation signal. Nuclear export kinases such as GSK3, CK1 and DYRK reverse this, so NFAT shuttles continuously and its nuclear concentration tracks calcium in near-real time. NFATC1 and NFATC2 dominate in lymphocytes, NFATC3 in thymocytes, NFATC4 in heart, skeletal muscle and brain. NFAT5 (TonEBP) is the outlier: it keeps the Rel-homology fold but lacks the calcineurin-docking regulatory domain, is activated by hypertonicity rather than calcium, and binds DNA as an obligate homodimer that completely encircles the double helix. That structural work also made the family's relationship to NF-kB explicit, since DNA-bound NFAT5 adopts an NF-kB-like arrangement.\n\n## The motif\n\nThe core is GGAAA, normally written with its 5' T as TGGAAA, and the databases converge on a very short model: the representative in vitro-supported HOCOMOCO entry is ATGGAAAAT, of whose nine positions about six carry real information. The Rel-homology domain contacts the GGAA bases through basic residues in the equivalent of NF-kB's L1 loop, but a monomer covers only one half-site's worth of DNA, so total specificity is low - TGGAAA occurs roughly every 2 kb in random sequence. Two features add length in practice. First, many NFAT models in these databases are two half-sites in opposed orientation (for example TTTCCATGGAAA, or TTTCCNNTAACGGAAAA), reflecting genuine NFAT dimers on pseudo-palindromic, kB-like sites; the HIV-1 LTR tandem kB element is the structural example. Second, the classic arrangement is the NFAT-AP1 composite element of the interleukin-2 distal antigen-receptor response element, where NFAT and Fos-Jun bind adjacent sites and form a continuous protein-DNA interface across 15 bp. That partnership leaves a visible mark on the motif collections: the ChIP-derived NFATC1 and NFATC2 models here read TGGAAAAANTGAGTCA - the NFAT core spliced to a canonical AP-1 site, which is a property of the element, not of the protein. NFAT5 differs slightly, preferring a TonE-like TGGAAANNYNY, but not enough to separate it from NFATC1-4 by score. Within NFATC1-4 there is no usable discrimination at all: family cohesion is 0.87 and several members' models are effectively identical.\n\n## Where it acts\n\nNFAT sites are enhancer elements far more often than promoter elements, and they are not CpG-island features. Occupancy is strongly cell-type restricted because it depends both on calcium signalling and on chromatin a lineage factor has already opened; in T cells the relevant regions are co-occupied by AP-1, and frequently by RUNX1, ETS1, GATA3 or TBX21 depending on the subset. Composite elements with recognised names include the interleukin-2 ARRE-2 (NFAT-AP1) and the tandem kB/NFAT element of the HIV-1 long terminal repeat, which NFAT and NF-kB can each occupy. Cooperation with AP-1 is not optional for much of the programme: NFAT mutants that cannot recruit Fos and Jun activate a different, largely non-overlapping set of genes.\n\n## Biology and disease\n\nThe calcineurin-NFAT axis is the main transcriptional output of antigen-receptor signalling, driving interleukin-2, interleukin-4, interferon-gamma, CD40LG and FASLG in T cells, and contributing to the anergy programme when NFAT acts without AP-1. Beyond immunity, NFATC1 is required for osteoclast differentiation downstream of RANK and for heart valve development, and NFATC3 and NFATC4 contribute to cardiac hypertrophy. The pathway is a first-line drug target: cyclosporin A and tacrolimus block calcineurin and are standard immunosuppressants in transplantation, and their renal and neurological toxicity reflects how broadly the pathway is used. NFAT5-null mice show that the lymphoid microenvironment is osmotically stressful, with impaired lymphocyte function and renal medullary defects, and NFAT5 drives osmolyte-transporter genes under hypertonic conditions.\n\n## Reading a hit\n\nA bare TGGAAA match is weak evidence. With six informative positions the site occurs hundreds of thousands of times in the human genome, so one match carries essentially no information unless supported by clustering, conservation, or an adjacent partner site. Look for composites: a TGGAAA within about 15 bp of a TGASTCA is far more convincing than either alone, and tandem or inverted GGAAA repeats indicate the dimeric mode. A hit cannot distinguish NFATC1 from NFATC2, NFATC3 or NFATC4, and only marginally separates NFAT5, so report it as NFAT-family. Check the evidence code before trusting a model: HOCOMOCO entries with S or M in the fourth field come from HT-SELEX or methyl-HT-SELEX and are statements about the protein, whereas the ChIP-only NFATC1 and NFATC2 models here are demonstrably contaminated by the composite element's AP-1 site - scan with those and you are scoring AP-1 as much as NFAT. Note also that the Vierstra archetype AC0682 is labelled NFATC/ZNF because unrelated zinc-finger motifs clustered with it, not because those factors share a specificity.",
+ "long": "## The factors\n\nFive human proteins carry an NFAT DNA-binding domain. NFATC1 (NFAT2), NFATC2 (NFAT1), NFATC3 (NFAT4) and NFATC4 (NFAT3) share a Rel-homology region related to that of NF-kB, preceded by a long regulatory domain packed with serine-rich motifs and SP boxes. In a resting cell that domain is heavily phosphorylated and the protein is cytoplasmic; a sustained rise in cytosolic calcium activates the phosphatase calcineurin, which dephosphorylates it and exposes a nuclear localisation signal [PMID:8397339,12975316]. Nuclear export kinases such as GSK3, CK1 and DYRK reverse this, so NFAT shuttles continuously and its nuclear concentration tracks calcium in near-real time [PMID:12975316]. NFATC1 and NFATC2 dominate in lymphocytes, NFATC3 in thymocytes, NFATC4 in heart, skeletal muscle and brain [PMID:9143705]. NFAT5 (TonEBP) is the outlier: it keeps the Rel-homology fold but lacks the calcineurin-docking regulatory domain, is activated by hypertonicity rather than calcium [PMID:10051678], and binds DNA as an obligate homodimer that completely encircles the double helix [PMID:11780147]. That structural work also made the family's relationship to NF-kB explicit, since DNA-bound NFAT5 adopts an NF-kB-like arrangement [PMID:11780147].\n\n## The motif\n\nThe core is GGAAA, normally written with its 5' T as TGGAAA, and the databases converge on a very short model: the representative in vitro-supported HOCOMOCO entry is ATGGAAAAT, of whose nine positions about six carry real information. The Rel-homology domain contacts the GGAA bases through basic residues in the equivalent of NF-kB's L1 loop [PMID:9510247], but a monomer covers only one half-site's worth of DNA, so total specificity is low - TGGAAA occurs roughly every 2 kb in random sequence. Two features add length in practice. First, many NFAT models in these databases are two half-sites in opposed orientation (for example TTTCCATGGAAA, or TTTCCNNTAACGGAAAA), reflecting genuine NFAT dimers on pseudo-palindromic, kB-like sites; the HIV-1 LTR tandem kB element is the structural example [PMID:12949493,18462673]. Second, the classic arrangement is the NFAT-AP1 composite element of the interleukin-2 distal antigen-receptor response element, where NFAT and Fos-Jun bind adjacent sites and form a continuous protein-DNA interface across 15 bp [PMID:9510247]. That partnership leaves a visible mark on the motif collections: the ChIP-derived NFATC1 and NFATC2 models here read TGGAAAAANTGAGTCA - the NFAT core spliced to a canonical AP-1 site, which is a property of the element, not of the protein. NFAT5 differs slightly, preferring a TonE-like TGGAAANNYNY, but not enough to separate it from NFATC1-4 by score. Within NFATC1-4 there is no usable discrimination at all: family cohesion is 0.87 and several members' models are effectively identical.\n\n## Where it acts\n\nNFAT sites are enhancer elements far more often than promoter elements, and they are not CpG-island features. Occupancy is strongly cell-type restricted because it depends both on calcium signalling and on chromatin a lineage factor has already opened; in T cells the relevant regions are co-occupied by AP-1, and frequently by RUNX1, ETS1, GATA3 or TBX21 depending on the subset. Composite elements with recognised names include the interleukin-2 ARRE-2 (NFAT-AP1) [PMID:7565783,9510247] and the tandem kB/NFAT element of the HIV-1 long terminal repeat, which NFAT and NF-kB can each occupy [PMID:12949493]. Cooperation with AP-1 is not optional for much of the programme: NFAT mutants that cannot recruit Fos and Jun activate a different, largely non-overlapping set of genes [PMID:10970869].\n\n## Biology and disease\n\nThe calcineurin-NFAT axis is the main transcriptional output of antigen-receptor signalling, driving interleukin-2, interleukin-4, interferon-gamma, CD40LG and FASLG in T cells [PMID:9143705,15928679], and contributing to the anergy programme when NFAT acts without AP-1 [PMID:15928679]. Beyond immunity, NFATC1 is required for osteoclast differentiation downstream of RANK and for heart valve development, and NFATC3 and NFATC4 contribute to cardiac hypertrophy [PMID:12975316]. The pathway is a first-line drug target: cyclosporin A and tacrolimus block calcineurin and are standard immunosuppressants in transplantation, and their renal and neurological toxicity reflects how broadly the pathway is used [PMID:12975316]. NFAT5-null mice show that the lymphoid microenvironment is osmotically stressful, with impaired lymphocyte function and renal medullary defects [PMID:15247420], and NFAT5 drives osmolyte-transporter genes under hypertonic conditions [PMID:10051678].\n\n## Reading a hit\n\nA bare TGGAAA match is weak evidence. With six informative positions the site occurs hundreds of thousands of times in the human genome, so one match carries essentially no information unless supported by clustering, conservation, or an adjacent partner site. Look for composites: a TGGAAA within about 15 bp of a TGASTCA is far more convincing than either alone, and tandem or inverted GGAAA repeats indicate the dimeric mode. A hit cannot distinguish NFATC1 from NFATC2, NFATC3 or NFATC4, and only marginally separates NFAT5, so report it as NFAT-family. Check the evidence code before trusting a model: HOCOMOCO entries with S or M in the fourth field come from HT-SELEX or methyl-HT-SELEX and are statements about the protein, whereas the ChIP-only NFATC1 and NFATC2 models here are demonstrably contaminated by the composite element's AP-1 site - scan with those and you are scoring AP-1 as much as NFAT. Note also that the Vierstra archetype AC0682 is labelled NFATC/ZNF because unrelated zinc-finger motifs clustered with it, not because those factors share a specificity.",
  "caveats": "This is a short, low-information motif and that dominates everything else. Six informative bases make chance matches overwhelmingly more common than real sites, so an isolated TGGAAA should not be reported as an NFAT site; require a composite (usually AP-1 within about 15 bp), a tandem or inverted pair, or independent occupancy data. No model separates NFATC1-4, and NFAT5 only weakly, so a hit is family-level. Several ChIP-derived NFATC1 and NFATC2 models in these databases include the AP-1 TGAGTCA alongside the NFAT core: that is the partner's motif riding along, and it inflates apparent specificity. Finally, occupancy requires calcium signalling, so matches in an unstimulated cell are mostly inactive.",
  "refs": [
   {
@@ -73,6 +73,84 @@
    "cite": "Bates DL, Barthel KK, Wu Y, et al. Crystal structure of NFAT bound to the HIV-1 LTR tandem kappaB enhancer element. Structure 2008;16:684-94.",
    "pmid": "18462673",
    "url": "https://pubmed.ncbi.nlm.nih.gov/18462673/"
+  },
+  {
+   "cite": "Shaw JP, Utz PJ, Durand DB, et al. Identification of a putative regulator of early T cell activation genes. Science 1988;241:202-5.",
+   "pmid": "3260404",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3260404/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1988,
+   "finding": "NFAT-1 is identified as a complex, formed only with nuclear extracts of activated T cells, that binds a functional sequence of the interleukin-2 enhancer and appears minutes before IL-2 transcription; a similar activity binds the HIV-1 LTR.",
+   "methods": "Electrophoretic mobility shift assays; reporter transfection",
+   "confidence": "medium",
+   "pmids": [
+    "3260404"
+   ],
+   "open": "The proteins in the complex, including whether AP-1 was part of it, were unknown."
+  },
+  {
+   "year": 1993,
+   "finding": "NFATp is shown to be a substrate of the calcium-activated phosphatase calcineurin and to bind DNA together with Fos and Jun, linking calcium signalling to the NFAT-AP-1 composite site.",
+   "methods": "Protein purification, dephosphorylation and DNA-binding assays",
+   "confidence": "medium",
+   "pmids": [
+    "8397339"
+   ],
+   "open": "The DNA-binding domain and its relationship to other families had not been defined."
+  },
+  {
+   "year": 1998,
+   "finding": "The structure of the NFAT, Fos and Jun DNA-binding domains on the IL-2 distal ARRE shows an extended NFAT-AP-1 interface and a continuous groove recognizing 15 bp, explaining why the composite element binds cooperatively.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "9510247"
+   ],
+   "open": "How NFAT binds sites that have no adjacent AP-1 site, and whether it can dimerize, were not addressed."
+  },
+  {
+   "year": 1999,
+   "finding": "TonEBP (NFAT5) is cloned as a Rel-like protein that binds the tonicity-responsive enhancer and activates transcription in response to hypertonicity, extending the family beyond calcium signalling.",
+   "methods": "cDNA cloning, DNA-binding and reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "10051678"
+   ]
+  },
+  {
+   "year": 2000,
+   "finding": "NFAT1 mutants that bind DNA normally but cannot recruit Fos-Jun still induce TNF and IL-13 but not IL-2, IL-3, IL-4, GM-CSF, MIP1a or Fas ligand, separating AP-1-dependent and AP-1-independent NFAT programmes in one cell type.",
+   "methods": "Mutant-protein expression in T cells; mRNA and promoter assays",
+   "confidence": "medium",
+   "pmids": [
+    "10970869"
+   ]
+  },
+  {
+   "year": 2002,
+   "finding": "DNA-bound TonEBP/NFAT5 is an obligate dimer that adopts an NF-kB-like structure and completely encircles its DNA target, giving a direct structural link between the NFAT and NF-kB families.",
+   "methods": "X-ray crystallography; DNA-binding kinetics",
+   "confidence": "high",
+   "pmids": [
+    "11780147"
+   ]
+  },
+  {
+   "year": 2003,
+   "finding": "NFAT1 binds the HIV-1 LTR kB site cooperatively as a dimer whose asymmetric interface differs from the symmetric Rel dimer, showing that the calcium-regulated NFATs, previously viewed as monomeric binders, can also occupy kB-like sites as dimers.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "12949493"
+   ],
+   "open": "How often NFAT dimers form on genomic sites, as opposed to viral and model elements."
+  }
+ ],
+ "open": [
+  "Whether NFAT prefers a methylated CpG immediately 5' of its core is unresolved: the literature and ChIP-derived models read TGGAAA, but several HOCOMOCO models built from methyl-HT-SELEX for NFATC1-4 and NFAT5 read ACGGAAA, consistent with a 5-methylcytosine standing in for the thymine, and whether methylated CGGAAA sites are bound in cells has not been shown in the work cited here.",
+  "Which binding mode NFAT uses at a given genomic site - a monomer on a lone GGAAA, a cooperative complex with Fos-Jun, or a dimer on a kB-like site - cannot be predicted from sequence: all three are structurally established, but their genome-wide shares are unknown."
  ]
 }

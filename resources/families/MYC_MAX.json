@@ -11,7 +11,7 @@
  ],
  "consensus": "CACGTG",
  "short": "MYC, MYCN and their obligate partner MAX bind the canonical E-box CACGTG as bHLH-LZ heterodimers, and the same site is bound by MAX homodimers and by the MAX-associated repressors MXD1-4, MXI1, MNT and MGA, which recruit Sin3-HDAC complexes. The related MLX branch (MondoA, ChREBP) reads an E-box with T/A flanks. The motif is a 6-bp palindrome, two CAC half-sites read by a histidine-glutamate-arginine triad in each basic region. MYC-MAX occupancy is concentrated in CpG-island promoters of already-active genes, which is why MYC is central to the growth program and why it is one of the most frequently activated oncogenes in human cancer. No member of the network can be told from another by sequence alone.",
- "long": "## The factors\n\nThis family is the MYC/MAX/MXD network: three MYC paralogues (MYC, MYCN, MYCL), their obligate partner MAX, the MAX-binding repressors MXD1-MXD4 (MAD1, MXI1, MAD3, MAD4), MNT and MGA, and the MAX-like hub MLX with its partners MLXIP (MondoA) and MLXIPL (ChREBP). All carry a basic helix-loop-helix leucine zipper (bHLH-LZ) domain: two helices joined by a loop, with the zipper extending helix 2 into a parallel coiled coil that sets dimer choice. MYC proteins do not homodimerize appreciably and reach DNA essentially only as MYC-MAX heterodimers; MAX homodimerizes and is the common partner for MXD proteins, MNT and MGA, which carry a Sin3-interaction domain and convert the same site from activation to repression. MGA is unusual in combining the bHLH-LZ with a separate T-box DNA-binding domain. MLX heterodimerizes with MondoA and ChREBP, which are nutrient sensors rather than growth effectors. MAX, MNT and MLX are broadly expressed; MYC tracks proliferation, MYCN is largely neural and embryonic, MYCL is restricted. The atlas assigns 30 motifs here (9 JASPAR, 12 HOCOMOCO, 8 CIS-BP, 1 Vierstra archetype) across nine symbols with motifs of their own: MAX, MYC, MYCN, MXI1, MXD4, MNT, MLX, MLXIP, MLXIPL. Family cohesion is 0.90 and the medoid is MAX (MA0058.4).\n\n## The motif\n\nThe canonical site is the 6-bp palindrome CACGTG, one CAC half-site per monomer. The Max-DNA co-crystal showed how it is read: a histidine, a glutamate and an arginine in the basic region contact the CAC triplet, the glutamate hydrogen-bonding the cytosine and adenine and the arginine the guanine on the opposite strand, with the central CG contacted only through the backbone and water. The Myc-Max and Mad-Max structures showed the same contacts, so MYC-MAX, MAX-MAX and MXD-MAX read one motif. Single substitutions in the basic region can switch preference between CACGTG and neighbouring E-boxes, which is why closely related bHLH proteins differ far more in flanks than in core. Information beyond the core sits mainly at the two flanking positions: MYC and MYCN favour C and G immediately outside (CCACGTGG), whereas the MLX branch favours T and A (ATCACGTGAT), the same preference that defines USF and MITF/TFE. Flanking effects are largely a DNA-shape effect rather than direct base contact. The family also tolerates lower-affinity variants - CATGTG, CACGCG, CATGCG - and one HOCOMOCO MAX model is a CATGTG class-A-like variant while another is a CACGTG dimer with a 3-bp gap. ChREBP does not work through a bare E-box at all: its functional element, the carbohydrate response element, is two E-box-like half-sites separated by five base pairs. No member of this family is distinguishable from any other by sequence.\n\n## Where it acts\n\nMYC-MAX occupancy is overwhelmingly promoter-proximal, in CpG islands and nucleosome-depleted, already-active regions rather than distal enhancers; genome-wide mapping in B cells and in fibroblasts found thousands of bound regions strongly enriched for CpG islands, with only a fraction containing a canonical E-box. A 6-bp palindrome is expected roughly once every 4 kb, several hundred thousand times in a 3-Gb genome; CpG depletion in mammalian DNA lowers the real CACGTG count, but it remains orders of magnitude above the number of sites any single factor occupies. Occupancy therefore tracks promoter accessibility and MYC dose. As MYC levels rise it spreads from high-affinity promoters into weaker and more distal sites, the behaviour described as promoter invasion or, in the amplifier model, as general amplification of already-expressed genes.\n\n## Biology and disease\n\nMYC-MAX output is the growth program: ribosome biogenesis, nucleotide and glucose metabolism, and cell-cycle entry, opposed at the same sites by MXD-MAX, MNT-MAX and MGA-MAX repression. The MLX branch is metabolic: MondoA responds to glucose-6-phosphate, and ChREBP drives hepatic lipogenic genes in response to glucose. MYC is among the most frequently activated oncogenes in human cancer, by IGH translocation in Burkitt lymphoma, by amplification in many carcinomas, and by MYCN amplification in high-risk neuroblastoma. Whether high MYC changes which genes are expressed or mainly how much is a genuine and unsettled disagreement: amplification models argue for near-uniform scaling of active genes, while selective-regulation studies report distinct activated and repressed target sets and tumour-specific profiles.\n\n## Reading a hit\n\nA CACGTG match tells you the sequence is a canonical E-box, not that MYC binds it. USF1/2, MITF/TFE3/TFEB, CLOCK-BMAL1, HIF-ARNT, SREBP and BHLHE40/41 all read the same core; flanks shift the odds but do not resolve the factor. Within this family, MYC, MYCN, MAX, MXI1, MXD4 and MNT share one motif, so a hit identifies the network, not the member - which matters because activators and repressors are both in it. MYC ChIP-derived models are additionally biased toward active CpG-island promoters, and a large share of MYC peaks have no E-box at all, so ChIP-only models partly encode promoter context. Prefer in vitro-supported HOCOMOCO models (S/M evidence) when the question is \"does this protein bind this sequence\".",
+ "long": "## The factors\n\nThis family is the MYC/MAX/MXD network: three MYC paralogues (MYC, MYCN, MYCL), their obligate partner MAX, the MAX-binding repressors MXD1-MXD4 (MAD1, MXI1, MAD3, MAD4), MNT and MGA, and the MAX-like hub MLX with its partners MLXIP (MondoA) and MLXIPL (ChREBP). All carry a basic helix-loop-helix leucine zipper (bHLH-LZ) domain: two helices joined by a loop, with the zipper extending helix 2 into a parallel coiled coil that sets dimer choice. MYC proteins do not homodimerize appreciably and reach DNA essentially only as MYC-MAX heterodimers [PMID:2006410]; MAX homodimerizes and is the common partner for MXD proteins, MNT and MGA, which carry a Sin3-interaction domain and convert the same site from activation to repression [PMID:8425218,9000049]. MGA is unusual in combining the bHLH-LZ with a separate T-box DNA-binding domain [PMID:10601024]. MLX heterodimerizes with MondoA and ChREBP [PMID:11073985], which are nutrient sensors rather than growth effectors. MAX, MNT and MLX are broadly expressed; MYC tracks proliferation, MYCN is largely neural and embryonic, MYCL is restricted. The atlas assigns 30 motifs here (9 JASPAR, 12 HOCOMOCO, 8 CIS-BP, 1 Vierstra archetype) across nine symbols with motifs of their own: MAX, MYC, MYCN, MXI1, MXD4, MNT, MLX, MLXIP, MLXIPL. Family cohesion is 0.90 and the medoid is MAX (MA0058.4).\n\n## The motif\n\nThe canonical site is the 6-bp palindrome CACGTG, one CAC half-site per monomer [PMID:2251503,8479534]. The Max-DNA co-crystal showed how it is read: each monomer inserts its basic region into the major groove and reads one half-site through a histidine-glutamate-arginine triad [PMID:8479534]. In the Max, Myc-Max and Mad-Max structures the histidine hydrogen-bonds the outer guanine, the glutamate accepts a bond from the cytosine of CAC and packs against the methyl group of the inner thymine, and the arginine hydrogen-bonds the N7 of the guanine in the central CpG while contacting the C5 of its cytosine; methylation of that cytosine lowers MAX affinity for the E-box [PMID:27903915]. The two heterodimers resemble the Max homodimer closely, and partner choice is set by the leucine zipper rather than the basic region, so MYC-MAX, MAX-MAX and MXD-MAX read one motif [PMID:12553908]. Single substitutions in the basic region can switch preference between CACGTG and neighbouring E-boxes, which is why closely related bHLH proteins differ far more in flanks than in core. Information beyond the core sits mainly at the two flanking positions [PMID:25287278]: MYC and MYCN favour C and G immediately outside (CCACGTGG), whereas the MLX branch favours T and A (ATCACGTGAT), the same preference that defines USF and MITF/TFE. Flanking effects are largely a DNA-shape effect rather than direct base contact. The family also tolerates lower-affinity variants - CATGTG, CACGCG, CATGCG - and one HOCOMOCO MAX model is a CATGTG class-A-like variant while another is a CACGTG dimer with a 3-bp gap. ChREBP does not work through a bare E-box at all: its functional element, the carbohydrate response element, is two E-box-like half-sites separated by five base pairs. No member of this family is distinguishable from any other by sequence.\n\n## Where it acts\n\nMYC-MAX occupancy is overwhelmingly promoter-proximal, in CpG islands and nucleosome-depleted, already-active regions rather than distal enhancers [PMID:12695333]; genome-wide mapping in B cells and in fibroblasts found thousands of bound regions strongly enriched for CpG islands, with only a fraction containing a canonical E-box [PMID:17093053,25043028,25287278]. A 6-bp palindrome is expected roughly once every 4 kb, several hundred thousand times in a 3-Gb genome; CpG depletion in mammalian DNA lowers the real CACGTG count, but it remains orders of magnitude above the number of sites any single factor occupies. Occupancy therefore tracks promoter accessibility and MYC dose [PMID:12695333,25287278]. As MYC levels rise it spreads from high-affinity promoters into weaker and more distal sites [PMID:12695333,23021215], the behaviour described as promoter invasion or, in the amplifier model, as general amplification of already-expressed genes [PMID:23021215,23021216].\n\n## Biology and disease\n\nMYC-MAX output is the growth program: ribosome biogenesis, nucleotide and glucose metabolism, and cell-cycle entry, opposed at the same sites by MXD-MAX, MNT-MAX and MGA-MAX repression [PMID:22464321,9000049]. The MLX branch is metabolic: MondoA responds to glucose-6-phosphate, and ChREBP drives hepatic lipogenic genes in response to glucose. MYC is among the most frequently activated oncogenes in human cancer, by IGH translocation in Burkitt lymphoma, by amplification in many carcinomas, and by MYCN amplification in high-risk neuroblastoma [PMID:22464321]. Whether high MYC changes which genes are expressed or mainly how much is a genuine and unsettled disagreement: amplification models argue for near-uniform scaling of active genes [PMID:23021215,23021216], while selective-regulation studies report distinct activated and repressed target sets and tumour-specific profiles [PMID:25043028].\n\n## Reading a hit\n\nA CACGTG match tells you the sequence is a canonical E-box, not that MYC binds it. USF1/2, MITF/TFE3/TFEB, CLOCK-BMAL1, HIF-ARNT, SREBP and BHLHE40/41 all read the same core; flanks shift the odds but do not resolve the factor. Within this family, MYC, MYCN, MAX, MXI1, MXD4 and MNT share one motif, so a hit identifies the network, not the member - which matters because activators and repressors are both in it. MYC ChIP-derived models are additionally biased toward active CpG-island promoters, and a large share of MYC peaks have no E-box at all, so ChIP-only models partly encode promoter context [PMID:17093053,25287278]. Prefer in vitro-supported HOCOMOCO models (S/M evidence) when the question is \"does this protein bind this sequence\".",
  "caveats": "CACGTG is short, palindromic and shared across the bHLH class, so a single hit is weak evidence for anything specific. It cannot distinguish MYC from MAX, MXD, MNT or MLX, nor this family from USF, MITF/TFE, CLOCK-BMAL1, HIF-ARNT or SREBP. MYC ChIP-seq peaks are dominated by open, active CpG-island promoters and many contain no E-box, so ChIP-derived MYC models partly capture promoter context rather than intrinsic specificity. The CIS-BP MLXIP model is transferred from the mouse protein at 82% DNA-binding-domain identity, and one secondary HOCOMOCO MYCN model (aCGCGCgc) is not an E-box at all. Treat a hit as 'canonical E-box' and require expression, chromatin and direct binding data to name a factor.",
  "refs": [
   {
@@ -73,6 +73,113 @@
    "cite": "Guo J, Li T, Schipper J, et al. Sequence specificity incompletely defines the genome-wide occupancy of Myc. Genome Biol 2014;15:482.",
    "pmid": "25287278",
    "url": "https://pubmed.ncbi.nlm.nih.gov/25287278/"
+  },
+  {
+   "cite": "Dang CV. MYC on the path to cancer. Cell 2012;149:22-35.",
+   "pmid": "22464321",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22464321/"
+  },
+  {
+   "cite": "Lin CY, Lovén J, Rahl PB, et al. Transcriptional amplification in tumor cells with elevated c-Myc. Cell 2012;151:56-67.",
+   "pmid": "23021215",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23021215/"
+  },
+  {
+   "cite": "Nie Z, Hu G, Wei G, et al. c-Myc is a universal amplifier of expressed genes in lymphocytes and embryonic stem cells. Cell 2012;151:68-79.",
+   "pmid": "23021216",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23021216/"
+  },
+  {
+   "cite": "Wang D, Hashimoto H, Zhang X, et al. MAX is an epigenetic sensor of 5-carboxylcytosine and is altered in multiple myeloma. Nucleic Acids Res 2017;45:2396-2407.",
+   "pmid": "27903915",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27903915/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1990,
+   "finding": "Binding-site selection with a purified c-Myc bHLH-LZ fragment identifies CACGTG as the first sequence-specific MYC site.",
+   "methods": "In vitro binding-site selection (SAAB imprinting)",
+   "confidence": "medium",
+   "pmids": [
+    "2251503"
+   ],
+   "open": "MYC alone bound DNA poorly; the partner that makes binding efficient was not yet known."
+  },
+  {
+   "year": 1991,
+   "finding": "MAX is identified as the bHLH-LZ partner of MYC, MYCN and MYCL; the MYC-MAX heterodimer binds the E-box under conditions where neither protein binds alone.",
+   "methods": "cDNA expression-library screen, protein interaction assays, EMSA",
+   "confidence": "high",
+   "pmids": [
+    "2006410"
+   ]
+  },
+  {
+   "year": 1993,
+   "finding": "MAD (MXD1) heterodimerizes with MAX on the same site and antagonizes MYC, turning MAX into the hub of an activator-repressor network.",
+   "methods": "Expression-library screen, EMSA, transactivation assays",
+   "confidence": "medium",
+   "pmids": [
+    "8425218"
+   ],
+   "open": "How a shared site could give opposite outcomes depending on the MAX partner."
+  },
+  {
+   "year": 1993,
+   "finding": "The crystal structure of the MAX bHLH-LZ homodimer on CACGTG defines the parallel four-helix-bundle fold and the basic-region contacts to each half-site.",
+   "methods": "X-ray crystallography (2.9 Å)",
+   "confidence": "high",
+   "pmids": [
+    "8479534"
+   ]
+  },
+  {
+   "year": 2003,
+   "finding": "Structures of MYC-MAX and MAD-MAX on CACGTG show the same DNA contacts as MAX-MAX; partner choice is set by the leucine zipper, so activator and repressor dimers read one site.",
+   "methods": "X-ray crystallography (1.9-2.0 Å)",
+   "confidence": "high",
+   "pmids": [
+    "12553908"
+   ]
+  },
+  {
+   "year": 2003,
+   "finding": "In cells, MYC occupies a high-affinity class of CpG-island promoter E-boxes regardless of its level and spreads to low-affinity and non-E-box sites when overexpressed; genome-wide mapping in B cells then places most of >4,000 bound loci at CpG-island promoters.",
+   "methods": "Quantitative ChIP; ChIP-PET",
+   "confidence": "medium",
+   "pmids": [
+    "12695333",
+    "17093053"
+   ],
+   "open": "Whether occupancy at open promoters reflects E-box recognition or non-specific DNA binding."
+  },
+  {
+   "year": 2012,
+   "finding": "Amplifier model: at high levels MYC accumulates at essentially all active promoters and raises the output of the existing expression program rather than switching on a new gene set.",
+   "methods": "ChIP-seq, RNA-seq with per-cell normalization",
+   "confidence": "medium",
+   "pmids": [
+    "23021215",
+    "23021216"
+   ],
+   "open": "Direct and indirect effects of MYC on RNA output were not separated."
+  },
+  {
+   "year": 2014,
+   "finding": "The amplifier and E-box-driven views are both revised: promoter invasion and RNA amplification prove separable, with MYC directly activating and repressing discrete gene sets, and MYC-MAX genomic occupancy tracks Pol II more closely than E-boxes despite strong in vitro 8-mer preferences.",
+   "methods": "ChIP-seq and expression profiling in lymphomagenesis; universal PBM; ChIP-seq meta-analysis",
+   "confidence": "medium",
+   "pmids": [
+    "25043028",
+    "25287278"
+   ],
+   "open": "How much of MYC's effect at a given promoter depends on contacting an E-box."
+  }
+ ],
+ "open": [
+  "Whether elevated MYC uniformly amplifies all active genes or activates and represses discrete gene sets is unresolved: studies in lymphocytes, ES cells and tumour cells support amplification, while lymphoma and fibroblast studies that separate direct from indirect effects support selective regulation.",
+  "How far the E-box directs MYC occupancy is disputed: MYC-MAX shows strong CACGTG and flanking 8-mer preferences in vitro, but genome-wide occupancy follows promoter-proximal Pol II and CpG-island accessibility more closely than E-box presence.",
+  "Two database models disagree with the canonical CACGTG: the JASPAR MXI1 model (MA1108.3) reads CACATG and a methyl-HT-SELEX HOCOMOCO MYCN model reads aCGCGCgc; whether these are genuine secondary specificities or assay artifacts has not been established."
  ]
 }

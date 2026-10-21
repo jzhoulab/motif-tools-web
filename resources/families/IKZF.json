@@ -13,7 +13,7 @@
  ],
  "consensus": "GGGAA",
  "short": "The Ikaros family (IKZF1 Ikaros, IKZF2 Helios, IKZF3 Aiolos, IKZF4 Eos, IKZF5 Pegasus) are lymphoid zinc-finger proteins with an N-terminal C2H2 array that binds DNA and a C-terminal pair of fingers that mediates homo- and heterodimerization. They recognize a GGGAA core, present in lymphocyte-specific regulatory elements and also in pericentromeric satellite repeats, to which Ikaros localizes by direct DNA binding. IKZF1 is required for the development of all lymphoid lineages, is deleted in BCR-ABL1 and Ph-like B-cell acute lymphoblastic leukemia where it predicts poor outcome, and, with IKZF3, is the protein whose thalidomide-analog-induced degradation explains how lenalidomide works in myeloma. The GGGAA core is shared with ETS and NF-kB sites, which makes these motifs hard to trust.",
- "long": "## The factors\n\nFive human Ikaros-family proteins are encoded by IKZF1 to IKZF5: Ikaros, Helios, Aiolos, Eos and\nPegasus. Each has an N-terminal array of C2H2 zinc fingers that binds DNA and a separate C-terminal\npair of fingers that is not used for DNA contact but mediates homodimerization and heterodimerization\namong family members. Alternative splicing of IKZF1 produces isoforms (Ik-1 through Ik-5 in the\noriginal description) carrying different combinations of the N-terminal fingers; these differ in\nsequence specificity and affinity, with the full-length forms binding the whole set of recognition\nsequences found in lymphocyte-specific regulatory elements and the short forms binding only a subset.\nThe short forms are also poorly nuclear and are weak activators, which is the basis of their\ndominant-negative behavior.\n\nExpression is lymphoid and largely restricted: IKZF1 and IKZF3 across B and T lineages, IKZF2 in\nregulatory T cells and some other compartments, IKZF4 in regulatory T cells, IKZF5 more broadly.\nOnly IKZF1, IKZF2 and IKZF3 have motif models in the databases behind this family. The proteins work\nin complexes rather than alone, associating with NuRD (Mi-2/CHD4) and with histone deacetylases, and\nthey localize to pericentromeric heterochromatin.\n\n## The motif\n\nThe agreed core is GGGAA, written TTCCC on the other strand. Extended forms appear in the databases\nas TGGGAATAC and similar; the representative archetype for this family has that consensus. None of\nthese carries much information beyond the five-base core, and that is the central problem for this\nfamily, because GGGAA is not distinctive. It is contained within the ETS core GGA(A/T) and within the\nNF-kB half-site GGGRNNYYCC, so an Ikaros matrix, an ETS matrix and an NF-kB matrix can all score the\nsame DNA.\n\nThe collection makes this concrete. The JASPAR IKZF3 matrix has the consensus CAGGAAGTG, whose\nnearest neighbors across all four databases are ETS models rather than Ikaros models; the JASPAR\nIKZF2 matrix, AGGAAG, likewise resembles ETS more than it resembles the rest of its own family; and\ntwo Vierstra archetypes in this family are explicitly named for mixed groups, IKZF with ZNF and IKZF\nwith NFKB. Family cohesion is correspondingly low. Ikaros also binds within centromeric DNA repeats,\nand targeting to pericentromeric foci depends on the DNA-binding finger domain together with the\ndimerization domain, so part of the genuine binding repertoire is repetitive sequence that motif\nscanners will report en masse.\n\n## Where it acts\n\nIkaros-family sites are found at promoters and enhancers of lymphoid genes, including the\nimmunoglobulin and T-cell-receptor loci, and co-occur with EBF1, PU.1/SPI1, RUNX1 and E2A at B- and\nT-lineage regulatory elements. Because PU.1 is itself an ETS factor that prefers a purine-rich GGAA\ncore, Ikaros and PU.1 sites are often indistinguishable in sequence at the same elements, and\ncomposite occupancy is common. The other distinctive location is pericentromeric heterochromatin,\nwhere Ikaros accumulates in foci; this was shown to require direct DNA binding rather than\nrecruitment through Mi-2, and is consistent with Ikaros sites inside satellite repeats. Genome-wide,\na five-base core occurs on the order of a million times, so scanning alone cannot define an Ikaros\ncistrome.\n\n## Biology and disease\n\nIkzf1-null mice lack B cells and have profound defects across lymphoid lineages, establishing IKZF1\nas required for the development of all lymphoid lineages; mice expressing dominant-negative isoforms\ndevelop T-cell leukemia. In humans, focal deletions and point mutations of IKZF1 are a defining\nfeature of BCR-ABL1-positive B-cell acute lymphoblastic leukemia and of Ph-like ALL, and IKZF1\ndeletion is associated with a substantially worse outcome, which is why it is now assayed in risk\nstratification. Germline dominant-negative IKZF1 variants cause a combined T-, B- and myeloid-cell\nimmunodeficiency, and other IKZF1 variants cause common variable immunodeficiency.\n\nThe best-known pharmacology is degradation, not transcription. Thalidomide, lenalidomide and\npomalidomide act as molecular glues that recruit a zinc finger of IKZF1 and IKZF3 to cereblon, the\nsubstrate receptor of the CRL4-CRBN ubiquitin ligase, causing their selective degradation; this\naccounts for the activity of these drugs in multiple myeloma. A systematic screen of the human C2H2\nzinc-finger proteome identified eleven such degrons and predicted that more than 150 zinc fingers can\nengage the drug-CRBN interface, which turned the Ikaros story into a general strategy for targeting\nzinc-finger transcription factors.\n\n## Reading a hit\n\nTreat an Ikaros hit as a weak, ambiguous call. Three problems stack. First, the informative core is\nfive bases, so matches are everywhere. Second, that core is shared with ETS and NF-kB, and the\ndatabases themselves are contaminated: at least one JASPAR Ikaros matrix in this family is closer to\nETS models than to Ikaros models, and two archetypes are named for IKZF together with ZNF or NFKB.\nIf you get an Ikaros hit at a lymphoid enhancer, PU.1 or another ETS factor is at least as likely to\nbe the direct binder. Third, no sequence argument distinguishes IKZF1 from IKZF2 or IKZF3, and IKZF4\nand IKZF5 have no models here. Ikaros models are ChIP- and selection-derived in these collections\nrather than backed by a structure of the protein on DNA, and Ikaros works in NuRD and HDAC complexes,\nso indirect binding is a live possibility for any individual peak. A credible Ikaros call needs\nlineage-appropriate expression, a peak from a well-controlled experiment, and ideally loss of the\npeak on IKZF1 degradation rather than a motif match.",
+ "long": "## The factors\n\nFive human Ikaros-family proteins are encoded by IKZF1 to IKZF5: Ikaros, Helios, Aiolos, Eos and\nPegasus. Each has an N-terminal array of C2H2 zinc fingers that binds DNA and a separate C-terminal\npair of fingers that is not used for DNA contact but mediates homodimerization and heterodimerization\namong family members [PMID:7969165]. Alternative splicing of IKZF1 produces isoforms (Ik-1 through Ik-5 in the\noriginal description) carrying different combinations of the N-terminal fingers; these differ in\nsequence specificity and affinity, with the full-length forms binding the whole set of recognition\nsequences found in lymphocyte-specific regulatory elements and the short forms binding only a subset [PMID:7969165].\nThe short forms are also poorly nuclear and are weak activators, which is the basis of their\ndominant-negative behavior [PMID:7969165,7585946].\n\nExpression is lymphoid and largely restricted: IKZF1 and IKZF3 across B and T lineages, IKZF2 in\nregulatory T cells and some other compartments, IKZF4 in regulatory T cells, IKZF5 more broadly.\nOnly IKZF1, IKZF2 and IKZF3 have motif models in the databases behind this family. The proteins work\nin complexes rather than alone, associating with NuRD (Mi-2/CHD4) and with histone deacetylases, and\nthey localize to pericentromeric heterochromatin [PMID:10970879,29278858].\n\n## The motif\n\nThe agreed core is GGGAA, written TTCCC on the other strand [PMID:7969165]. Extended forms appear in the databases\nas TGGGAATAC and similar; the representative archetype for this family has that consensus. None of\nthese carries much information beyond the five-base core, and that is the central problem for this\nfamily, because GGGAA is not distinctive. It is contained within the ETS core GGA(A/T) and within the\nNF-kB half-site GGGRNNYYCC, so an Ikaros matrix, an ETS matrix and an NF-kB matrix can all score the\nsame DNA.\n\nThe collection makes this concrete. The JASPAR IKZF3 matrix has the consensus CAGGAAGTG, whose\nnearest neighbors across all four databases are ETS models rather than Ikaros models; the JASPAR\nIKZF2 matrix, AGGAAG, likewise resembles ETS more than it resembles the rest of its own family; and\ntwo Vierstra archetypes in this family are explicitly named for mixed groups, IKZF with ZNF and IKZF\nwith NFKB. Family cohesion is correspondingly low. Ikaros also binds within centromeric DNA repeats,\nand targeting to pericentromeric foci depends on the DNA-binding finger domain together with the\ndimerization domain [PMID:10970879], so part of the genuine binding repertoire is repetitive sequence that motif\nscanners will report en masse.\n\n## Where it acts\n\nIkaros-family sites are found at promoters and enhancers of lymphoid genes, including the\nimmunoglobulin and T-cell-receptor loci, and co-occur with EBF1, PU.1/SPI1, RUNX1 and E2A at B- and\nT-lineage regulatory elements [PMID:29278858,39017838]. Because PU.1 is itself an ETS factor that prefers a purine-rich GGAA\ncore, Ikaros and PU.1 sites are often indistinguishable in sequence at the same elements, and\ncomposite occupancy is common. The other distinctive location is pericentromeric heterochromatin,\nwhere Ikaros accumulates in foci; this was shown to require direct DNA binding rather than\nrecruitment through Mi-2 [PMID:10970879], and is consistent with Ikaros sites inside satellite repeats. Genome-wide,\na five-base core occurs on the order of a million times, so scanning alone cannot define an Ikaros\ncistrome.\n\n## Biology and disease\n\nIkzf1-null mice lack B cells and have profound defects across lymphoid lineages, establishing IKZF1\nas required for the development of all lymphoid lineages [PMID:7923373]; mice expressing dominant-negative isoforms\ndevelop T-cell leukemia [PMID:7585946]. In humans, focal deletions and point mutations of IKZF1 are a defining\nfeature of BCR-ABL1-positive B-cell acute lymphoblastic leukemia and of Ph-like ALL [PMID:18408710], and IKZF1\ndeletion is associated with a substantially worse outcome [PMID:19129520], which is why it is now assayed in risk\nstratification. Germline dominant-negative IKZF1 variants cause a combined T-, B- and myeloid-cell\nimmunodeficiency [PMID:29889099], and other IKZF1 variants cause common variable immunodeficiency [PMID:26981933].\n\nThe best-known pharmacology is degradation, not transcription. Thalidomide, lenalidomide and\npomalidomide act as molecular glues that recruit a zinc finger of IKZF1 and IKZF3 to cereblon, the\nsubstrate receptor of the CRL4-CRBN ubiquitin ligase, causing their selective degradation; this\naccounts for the activity of these drugs in multiple myeloma [PMID:24292625,24292623]. A systematic screen of the human C2H2\nzinc-finger proteome identified eleven such degrons and predicted that more than 150 zinc fingers can\nengage the drug-CRBN interface [PMID:30385546], which turned the Ikaros story into a general strategy for targeting\nzinc-finger transcription factors.\n\n## Reading a hit\n\nTreat an Ikaros hit as a weak, ambiguous call. Three problems stack. First, the informative core is\nfive bases, so matches are everywhere. Second, that core is shared with ETS and NF-kB, and the\ndatabases themselves are contaminated: at least one JASPAR Ikaros matrix in this family is closer to\nETS models than to Ikaros models, and two archetypes are named for IKZF together with ZNF or NFKB.\nIf you get an Ikaros hit at a lymphoid enhancer, PU.1 or another ETS factor is at least as likely to\nbe the direct binder. Third, no sequence argument distinguishes IKZF1 from IKZF2 or IKZF3, and IKZF4\nand IKZF5 have no models here. Ikaros models are ChIP- and selection-derived in these collections\nrather than backed by a structure of the protein on DNA, and Ikaros works in NuRD and HDAC complexes,\nso indirect binding is a live possibility for any individual peak. A credible Ikaros call needs\nlineage-appropriate expression, a peak from a well-controlled experiment, and ideally loss of the\npeak on IKZF1 degradation rather than a motif match.",
  "caveats": "The informative core is only GGGAA, which is shared with ETS (GGAA) and NF-kB (GGGAA) sites, so an Ikaros match is rarely attributable to an Ikaros protein. The databases show the contamination directly: the JASPAR IKZF3 matrix here has ETS models as its nearest neighbors across all four sources, the IKZF2 matrix also resembles ETS more than its own family, and two Vierstra archetypes are named IKZF/ZNF and IKZF/NFKB. Family cohesion is low as a result. No model distinguishes IKZF1 from IKZF2 or IKZF3, and IKZF4 and IKZF5 have none. Ikaros additionally binds satellite repeats and acts within NuRD and HDAC complexes, so peaks need not reflect its own specificity.",
  "refs": [
   {
@@ -75,6 +75,107 @@
    "cite": "Kastner P, Chan S. IKAROS Family Transcription Factors in Lymphocyte Differentiation and Function. Adv Exp Med Biol 2024;1459:33-52.",
    "pmid": "39017838",
    "url": "https://pubmed.ncbi.nlm.nih.gov/39017838/"
+  },
+  {
+   "cite": "Winandy S, Wu P, Georgopoulos K. A dominant mutation in the Ikaros gene leads to rapid development of leukemia and lymphoma. Cell 1995;83:289-99.",
+   "pmid": "7585946",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7585946/"
+  },
+  {
+   "cite": "Kuehn HS, Boisson B, Cunningham-Rundles C, et al. Loss of B Cells in Patients with Heterozygous Mutations in IKAROS. N Engl J Med 2016;374:1032-1043.",
+   "pmid": "26981933",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26981933/"
+  },
+  {
+   "cite": "Hu Y, Salgado Figueroa D, Zhang Z, et al. Lineage-specific 3D genome organization is assembled at multiple scales by IKAROS. Cell 2023;186:5269-5289.e22.",
+   "pmid": "37995656",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37995656/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1994,
+   "finding": "The Ikaros gene is shown to encode a set of alternatively spliced zinc-finger proteins whose N-terminal finger combinations differ in specificity and affinity, and Ikzf1-null mice are shown to lack all lymphoid lineages, so the family is defined simultaneously as a variable DNA-binding activity and as a requirement for lymphopoiesis.",
+   "methods": "cDNA isolation and binding-site analysis of isoforms; germline gene targeting in mouse",
+   "confidence": "medium",
+   "pmids": [
+    "7969165",
+    "7923373"
+   ],
+   "open": "The recognition sequence was a short purine-rich core whose specificity relative to other GGAA-binding factors was not addressed."
+  },
+  {
+   "year": 1995,
+   "finding": "Mice expressing a dominant-negative Ikaros isoform develop T-cell leukemia and lymphoma rapidly, linking loss of Ikaros DNA-binding function to malignancy rather than only to development.",
+   "methods": "Targeted mouse mutant expressing a DNA-binding-deficient isoform",
+   "confidence": "medium",
+   "pmids": [
+    "7585946"
+   ]
+  },
+  {
+   "year": 2000,
+   "finding": "Ikaros is shown to be targeted to pericentromeric heterochromatin by its own DNA-binding fingers together with the dimerization domain, not by recruitment through Mi-2, so part of its genuine binding repertoire is repeat DNA.",
+   "methods": "Domain mutagenesis with imaging of pericentromeric localization, binding assays on satellite repeats",
+   "confidence": "medium",
+   "pmids": [
+    "10970879"
+   ],
+   "open": "What fraction of genome-wide Ikaros signal comes from repeats rather than single-copy regulatory elements."
+  },
+  {
+   "year": 2008,
+   "finding": "Genome-wide copy-number analysis finds focal IKZF1 deletions, often removing the N-terminal fingers and leaving a dominant-negative product, in most BCR-ABL1-positive B-cell acute lymphoblastic leukemias.",
+   "methods": "SNP-array copy-number profiling and sequencing of patient samples",
+   "confidence": "medium",
+   "pmids": [
+    "18408710"
+   ]
+  },
+  {
+   "year": 2009,
+   "finding": "IKZF1 deletion is shown to mark a high-risk subgroup of B-ALL with substantially worse outcome, moving the gene into clinical risk stratification.",
+   "methods": "Genomic profiling with outcome analysis in clinical trial cohorts",
+   "confidence": "medium",
+   "pmids": [
+    "19129520"
+   ]
+  },
+  {
+   "year": 2014,
+   "finding": "Two groups show that lenalidomide works by making cereblon bind IKZF1 and IKZF3 and degrade them, which reinterprets a decades-old drug as a targeted removal of these factors rather than a transcriptional modulator.",
+   "methods": "Quantitative proteomics, CRBN binding and ubiquitination assays, cell-based degradation",
+   "confidence": "high",
+   "pmids": [
+    "24292625",
+    "24292623"
+   ]
+  },
+  {
+   "year": 2016,
+   "finding": "Germline IKZF1 variants are shown to cause human immunodeficiency: haploinsufficiency presenting as common variable immunodeficiency with progressive B-cell loss, and, in a later series, dominant-negative variants causing combined T-, B- and myeloid-cell disease.",
+   "methods": "Exome sequencing in patient cohorts with functional assays of variant proteins",
+   "confidence": "medium",
+   "pmids": [
+    "26981933",
+    "29889099"
+   ]
+  },
+  {
+   "year": 2023,
+   "finding": "IKAROS is shown to assemble lineage-specific chromatin interactions over megabase distances in B-cell precursors, with contacts from IKAROS-bound enhancers crossing CTCF boundaries, which recasts the family as a genome-organizing activity rather than only a promoter and enhancer repressor.",
+   "methods": "Loss- and gain-of-function with HiChIP and Hi-C, chromatin profiling",
+   "confidence": "medium",
+   "pmids": [
+    "37995656"
+   ],
+   "open": "Whether these long-range interactions require the GGGAA core at the contacting elements or the dimerization and NuRD interfaces alone."
+  }
+ ],
+ "open": [
+  "Whether the matrices labeled IKZF in these databases measure Ikaros specificity at all is unsettled: the JASPAR IKZF3 and IKZF2 models score closer to ETS matrices than to other Ikaros models, and PU.1 and other ETS factors occupy the same lymphoid elements, so co-occupancy and indirect binding cannot be excluded for any of them.",
+  "No structure of an Ikaros-family protein on DNA has been reported, so which fingers read the GGGAA core, and why the splice isoforms differ in specificity, remain inferred from binding assays rather than observed.",
+  "How much of Ikaros occupancy in vivo is at satellite and other repeat DNA rather than at single-copy regulatory elements has never been quantified, although pericentromeric targeting is known to require its own DNA-binding domain.",
+  "Whether the long-range chromatin interactions attributed to IKAROS depend on sequence-specific binding at the contacting elements, or on its dimerization and NuRD interfaces, is open, and this determines whether a motif hit is informative about genome organization at all."
  ]
 }

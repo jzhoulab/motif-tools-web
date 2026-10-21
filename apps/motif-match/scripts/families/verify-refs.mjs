@@ -29,7 +29,8 @@ async function fromEutils(chunk) {
     const out = [];
     for (const uid of j.result?.uids || []) {
         const r = j.result[uid];
-        out.push([uid, { title: r.title, source: r.source, pubdate: r.pubdate, volume: r.volume, pages: r.pages, authors: r.authors }]);
+        out.push([uid, { title: r.title, source: r.source, pubdate: r.pubdate, volume: r.volume, pages: r.pages, authors: r.authors,
+            pubtype: r.pubtype || [], retracted: (r.pubtype || []).includes('Retracted Publication') }]);
     }
     return out;
 }
@@ -42,6 +43,8 @@ async function fromEuropePmc(chunk) {
         title: r.title, source: r.journalInfo?.journal?.medlineAbbreviation || r.journalInfo?.journal?.title,
         pubdate: String(r.pubYear || ''), volume: r.journalInfo?.volume, pages: r.pageInfo,
         authors: (r.authorList?.author || []).map((a) => ({ name: a.fullName || `${a.lastName || ''} ${a.initials || ''}`.trim() })),
+        pubtype: r.pubTypeList?.pubType || [],
+        retracted: (r.pubTypeList?.pubType || []).includes('Retracted Publication'),
     }]);
 }
 const rec = new Map();
@@ -105,6 +108,20 @@ for (const { f, d } of docs) {
     }
     if (touched) writeFileSync(resolve(DIR, f), JSON.stringify(d, null, 1));
 }
+
+// A paper PubMed marks as retracted must not be cited as evidence. Citing the retraction
+// NOTICE is legitimate (an entry may need to say a study was withdrawn), and that is a
+// different record with pubtype "Retraction of Publication".
+const retracted = [];
+for (const { f, d } of docs) for (const r of d.refs || []) {
+    const p = r.pmid && rec.get(String(r.pmid));
+    if (p?.retracted) retracted.push(`${d.key || f}: PMID ${r.pmid} is a RETRACTED publication — ${p.title}`);
+}
+if (retracted.length) {
+    console.log(`\n${retracted.length} retracted publication(s) cited:`);
+    for (const x of retracted) console.log(`  ${x}`);
+    process.exitCode = 1;
+} else console.log('no retracted publications are cited');
 
 if (bad.length) {
     console.log(`\n${bad.length} citation(s) to check by hand:`);

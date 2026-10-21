@@ -11,7 +11,7 @@
  ],
  "consensus": "RCGTG",
  "short": "The hypoxia response element is the site read by HIF, a heterodimer of an oxygen-labile alpha subunit (HIF-1alpha, HIF-2alpha/EPAS1, HIF-3alpha) and the constitutive beta subunit ARNT (HIF-1beta) or its paralogue ARNT2. Both partners are bHLH-PAS proteins. The element is an asymmetric E-box half-site pair: ARNT reads the 3' GTG and the alpha subunit reads a 5' half that is usually TAC or GAC, giving the five-base core (A/G)CGTG, most often written in context as ...TACGTGC... When oxygen is plentiful the alpha subunits are prolyl-hydroxylated and destroyed by the VHL ubiquitin ligase, so occupancy of these sites is a direct readout of oxygen availability. HIF drives erythropoietin, VEGFA and the glycolytic genes, and the pathway is constitutively active in VHL-mutant kidney cancer.",
- "long": "## The factors\n\nHIF is an obligate heterodimer of one oxygen-regulated alpha subunit and one constitutive beta subunit. The alpha subunits are HIF-1alpha (*HIF1A*), HIF-2alpha (*EPAS1*) and HIF-3alpha (*HIF3A*, which produces several splice isoforms, some of them dominant-negative); the beta subunits are ARNT (also called HIF-1beta) and the brain- and kidney-enriched paralogue ARNT2. All are bHLH-PAS proteins: a basic helix-loop-helix domain followed by PAS-A and PAS-B. Alpha-subunit prolines are hydroxylated by the PHD enzymes, creating the binding site for the VHL ubiquitin ligase; a separate asparagine hydroxylation by FIH blocks p300/CBP recruitment (Kaelin and Ratcliffe 2008). HIF-1alpha is close to ubiquitous; HIF-2alpha is enriched in endothelium, kidney interstitium, lung and sympathoadrenal tissue. ARNT is the shared partner of the whole bHLH-PAS class: it also dimerizes with AHR, SIM1/2 and NPAS factors, and forms homodimers. Loss of *Arnt* in mice is embryonic lethal around E10.5 with defective angiogenesis and placental vascularization (Maltepe et al. 1997). HIF-1 was first defined as the hypoxia-inducible activity at the erythropoietin enhancer (Semenza and Wang 1992) and then identified as a bHLH-PAS heterodimer (Wang et al. 1995).\n\n## The motif\n\nThe core is (A/G)CGTG, conventionally written RCGTG. Unlike the palindromic E-box CACGTG, the HIF site is an asymmetric pair of half-sites: selection experiments assign the 3' half-site GTG to ARNT, while the 5' half comes from the partner (AHR prefers T(C/T)GC and SIM prefers GT(G/A)C, so ARNT is the constant element in all of them) (Swanson et al. 1995). For HIF the 5' half is usually TAC or GAC, so the full site reads TACGTGC or GACGTGC. One substitution, C to T at the first position, is therefore all that separates an HRE from a canonical E-box. Crystal structures of mouse HIF-2alpha-ARNT and HIF-1alpha-ARNT bound to an HRE show ARNT spiraling around the outside of the alpha subunit; the DNA-reading head rotates and extends and cooperates with a distal PAS domain, and cancer-associated alpha-subunit mutations map to residues that establish DNA binding (Wu et al. 2015). Systematic measurements across the family find 12-15 bp footprints in which flanking-base preferences, not the core, distinguish members that share a core (Bersten et al. 2026). The consensus computed from the 19 members here is ACGTGc, core plus a 3' C preference, matching the compiled consensus HRE (Wenger et al. 2005). Nothing in the sequence distinguishes HIF-1alpha from HIF-2alpha (Smythies et al. 2019). Two entries need care: JASPAR EPAS1 (MA2325.1) is written GCACGTAC, the reverse complement of GTACGTGC, so it is the same site on the other strand; JASPAR Arnt (MA0004.1) is an ARNT-homodimer palindrome, not an HRE.\n\n## Where it acts\n\nRCGTG is expected several million times per strand in a 3-Gb genome, and only a small fraction is ever occupied. Chromatin is the dominant filter: occupancy is enriched roughly 20-fold at DNase-hypersensitive sites that were already open in normoxia, irrespective of distance from promoters (Schodel et al. 2011). Confirmed sites number in the hundreds to low thousands per cell type and often lie far from the genes they regulate. The two isoforms partition consistently: HIF-1 is biased toward promoter-proximal sites and HIF-2 toward promoter-distant sites, each with a cell-type-specific repertoire that does not redistribute with hypoxia severity or duration (Smythies et al. 2019). Because the core contains a CpG, HREs cluster with CpG-rich promoters and are sensitive to DNA methylation. Functional HREs generally need neighboring sequence, historically called the HIF ancillary sequence, and commonly co-occur with CREB/ATF, SP1 and AP-1 sites (Wenger et al. 2005).\n\n## Biology and disease\n\nHIF targets include *EPO*, *VEGFA*, the glucose transporter *SLC2A1*, *LDHA*, *PDK1* and *CA9*, coordinating oxygen delivery with a shift to glycolysis. Biallelic *VHL* loss in clear-cell renal carcinoma leaves HIF-2 constitutively active, which made the PAS-B pocket seen in the HIF structures a drug target (Wu et al. 2015; Kaelin and Ratcliffe 2008). Somatic gain-of-function *EPAS1* mutations that block hydroxylation cause paraganglioma with polycythemia (Zhuang et al. 2012), and *EPAS1* carries the strongest selection signal in Tibetan high-altitude adaptation (Yi et al. 2010). The pathway is also the target of prolyl-hydroxylase inhibitors used for renal anemia.\n\n## Reading a hit\n\nAn RCGTG match on its own licenses almost no conclusion: five informative base pairs occur millions of times, and the great majority are never bound. Treat it as a candidate only in accessible chromatin, and preferably with hypoxia-responsive expression nearby. A hit cannot tell you which alpha subunit bound, and it barely distinguishes HIF:ARNT from the other ARNT complexes: AHR:ARNT prefers GCGTG, SIM:ARNT GT(G/A)CGTG, and ARNT homodimers the palindromic CACGTG, so the discriminating information sits in one or two weakly constrained positions. Evidence is skewed: eight of the ten HOCOMOCO models here are ChIP-only (letter P) at grade B or C, supporting \"this region was occupied in cells\" rather than \"this protein binds this sequence\"; the one HT-SELEX model, ARNT2.H14CORE.2.S.C, is a palindromic CACGTGAC of the kind an ARNT2 homodimer makes. The CIS-BP ARNT entry M01719_2.00 is transferred from mouse at 100% DNA-binding-domain identity: safe, but not a human measurement. The Vierstra archetype AC0072:HIF1A/ARNT is named after the factors whose motifs clustered together and is not a claim that HIF1A and ARNT can be told apart.",
+ "long": "## The factors\n\nHIF is an obligate heterodimer of one oxygen-regulated alpha subunit and one constitutive beta subunit. The alpha subunits are HIF-1alpha (*HIF1A*), HIF-2alpha (*EPAS1*) and HIF-3alpha (*HIF3A*, which produces several splice isoforms, some of them dominant-negative); the beta subunits are ARNT (also called HIF-1beta) and the brain- and kidney-enriched paralogue ARNT2. All are bHLH-PAS proteins: a basic helix-loop-helix domain followed by PAS-A and PAS-B. Alpha-subunit prolines are hydroxylated by the PHD enzymes, creating the binding site for the VHL ubiquitin ligase; a separate asparagine hydroxylation by FIH blocks p300/CBP recruitment (Kaelin and Ratcliffe 2008) [PMID:18498744]. HIF-1alpha is close to ubiquitous; HIF-2alpha is enriched in endothelium, kidney interstitium, lung and sympathoadrenal tissue. ARNT is the shared partner of the whole bHLH-PAS class: it also dimerizes with AHR, SIM1/2 and NPAS factors, and forms homodimers. Loss of *Arnt* in mice is embryonic lethal around E10.5 with defective angiogenesis and placental vascularization (Maltepe et al. 1997) [PMID:9121557]. HIF-1 was first defined as the hypoxia-inducible activity at the erythropoietin enhancer (Semenza and Wang 1992) [PMID:1448077] and then identified as a bHLH-PAS heterodimer (Wang et al. 1995) [PMID:7539918].\n\n## The motif\n\nThe core is (A/G)CGTG, conventionally written RCGTG. Unlike the palindromic E-box CACGTG, the HIF site is an asymmetric pair of half-sites: selection experiments assign the 3' half-site GTG to ARNT, while the 5' half comes from the partner (AHR prefers T(C/T)GC and SIM prefers GT(G/A)C, so ARNT is the constant element in all of them) (Swanson et al. 1995) [PMID:7592839]. For HIF the 5' half is usually TAC or GAC, so the full site reads TACGTGC or GACGTGC. One substitution, C to T at the first position, is therefore all that separates an HRE from a canonical E-box. Crystal structures of mouse HIF-2alpha-ARNT and HIF-1alpha-ARNT bound to an HRE show ARNT spiraling around the outside of the alpha subunit; the DNA-reading head rotates and extends and cooperates with a distal PAS domain, and cancer-associated alpha-subunit mutations map to residues that establish DNA binding (Wu et al. 2015) [PMID:26245371]. Systematic measurements across the family find 12-15 bp footprints in which flanking-base preferences, not the core, distinguish members that share a core (Bersten et al. 2026) [PMID:41495897]. The consensus computed from the 19 members here is ACGTGc, core plus a 3' C preference, matching the compiled consensus HRE (Wenger et al. 2005) [PMID:16234508]. Nothing in the sequence distinguishes HIF-1alpha from HIF-2alpha (Smythies et al. 2019) [PMID:30429208]. Two entries need care: JASPAR EPAS1 (MA2325.1) is written GCACGTAC, the reverse complement of GTACGTGC, so it is the same site on the other strand; JASPAR Arnt (MA0004.1) is an ARNT-homodimer palindrome, not an HRE.\n\n## Where it acts\n\nRCGTG is expected several million times per strand in a 3-Gb genome, and only a small fraction is ever occupied. Chromatin is the dominant filter: occupancy is enriched roughly 20-fold at DNase-hypersensitive sites that were already open in normoxia, irrespective of distance from promoters (Schodel et al. 2011) [PMID:21447827]. Confirmed sites number in the hundreds to low thousands per cell type and often lie far from the genes they regulate. The two isoforms partition consistently: HIF-1 is biased toward promoter-proximal sites and HIF-2 toward promoter-distant sites, each with a cell-type-specific repertoire that does not redistribute with hypoxia severity or duration (Smythies et al. 2019) [PMID:30429208]. Because the core contains a CpG, HREs cluster with CpG-rich promoters and are sensitive to DNA methylation. Functional HREs generally need neighboring sequence, historically called the HIF ancillary sequence, and commonly co-occur with CREB/ATF, SP1 and AP-1 sites (Wenger et al. 2005) [PMID:16234508].\n\n## Biology and disease\n\nHIF targets include *EPO*, *VEGFA*, the glucose transporter *SLC2A1*, *LDHA*, *PDK1* and *CA9*, coordinating oxygen delivery with a shift to glycolysis. Biallelic *VHL* loss in clear-cell renal carcinoma leaves HIF-2 constitutively active, which made the PAS-B pocket seen in the HIF structures a drug target (Wu et al. 2015; Kaelin and Ratcliffe 2008) [PMID:26245371,18498744]. Somatic gain-of-function *EPAS1* mutations that block hydroxylation cause paraganglioma with polycythemia (Zhuang et al. 2012) [PMID:22931260], and *EPAS1* carries the strongest selection signal in Tibetan high-altitude adaptation (Yi et al. 2010) [PMID:20595611]. The pathway is also the target of prolyl-hydroxylase inhibitors used for renal anemia.\n\n## Reading a hit\n\nAn RCGTG match on its own licenses almost no conclusion: five informative base pairs occur millions of times, and the great majority are never bound. Treat it as a candidate only in accessible chromatin, and preferably with hypoxia-responsive expression nearby. A hit cannot tell you which alpha subunit bound, and it barely distinguishes HIF:ARNT from the other ARNT complexes: AHR:ARNT prefers GCGTG, SIM:ARNT GT(G/A)CGTG, and ARNT homodimers the palindromic CACGTG, so the discriminating information sits in one or two weakly constrained positions. Evidence is skewed: eight of the ten HOCOMOCO models here are ChIP-only (letter P) at grade B or C, supporting \"this region was occupied in cells\" rather than \"this protein binds this sequence\"; the one HT-SELEX model, ARNT2.H14CORE.2.S.C, is a palindromic CACGTGAC of the kind an ARNT2 homodimer makes. The CIS-BP ARNT entry M01719_2.00 is transferred from mouse at 100% DNA-binding-domain identity: safe, but not a human measurement. The Vierstra archetype AC0072:HIF1A/ARNT is named after the factors whose motifs clustered together and is not a claim that HIF1A and ARNT can be told apart.",
  "caveats": "The core is only five informative base pairs, so chance matches vastly outnumber real sites and a hit is close to uninformative without chromatin or expression evidence. HIF-1alpha and HIF-2alpha share one consensus and cannot be distinguished by sequence; neither can HIF:ARNT be cleanly separated from AHR:ARNT, SIM:ARNT or ARNT homodimers, since all read CGTG with differences at one or two flanking positions. Most HOCOMOCO models here are ChIP-only at grade B or C, so they reflect occupied regions and may include indirect binding; ChIP peaks lacking any RCGTG are well documented. The ARNT entries in JASPAR and CIS-BP include palindromic E-boxes that are homodimer, not HIF, motifs, and one JASPAR entry is written on the opposite strand.",
  "refs": [
   {
@@ -74,5 +74,90 @@
    "pmid": "41495897",
    "url": "https://pubmed.ncbi.nlm.nih.gov/41495897/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1992,
+   "finding": "A hypoxia-inducible nuclear activity was mapped to a short element in the 3' enhancer of the human erythropoietin gene that is required for its transcriptional induction, defining the hypoxia response element operationally before any protein was known.",
+   "methods": "Electrophoretic mobility shift, enhancer mutagenesis in reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "1448077"
+   ],
+   "open": "The identity of the binding protein and the generality of the element beyond the EPO locus."
+  },
+  {
+   "year": 1995,
+   "finding": "HIF-1 was purified and shown to be a heterodimer of two bHLH-PAS proteins, an oxygen-regulated alpha subunit and the constitutive beta subunit now called ARNT, explaining why the element is an asymmetric pair of E-box half-sites.",
+   "methods": "Protein purification, peptide sequencing, reconstitution",
+   "confidence": "high",
+   "pmids": [
+    "7539918"
+   ]
+  },
+  {
+   "year": 1995,
+   "finding": "Binding-site selection with AHR, ARNT and SIM established the pairing rules for the class: ARNT reads the 3' GTG half-site in every complex while the partner supplies the 5' half, so the few bases 5' of CGTG carry almost all of the discriminating information.",
+   "methods": "In vitro binding-site selection (SELEX) with recombinant proteins",
+   "confidence": "medium",
+   "pmids": [
+    "7592839"
+   ],
+   "open": "Whether one or two weakly constrained positions suffice to separate HREs from AHR and SIM sites in genomic sequence."
+  },
+  {
+   "year": 2008,
+   "finding": "Prolyl hydroxylation of the alpha subunits by the PHD enzymes followed by VHL-dependent degradation, with a separate asparaginyl hydroxylation blocking coactivator recruitment, was consolidated as the mechanism that makes occupancy of these sites a readout of oxygen tension rather than of sequence.",
+   "methods": "Review of biochemistry, genetics and structural work",
+   "confidence": "high",
+   "pmids": [
+    "18498744"
+   ]
+  },
+  {
+   "year": 2011,
+   "finding": "Genome-wide ChIP-seq showed that HIF binding is concentrated at sites already DNase-hypersensitive in normoxia, roughly 20-fold enriched there and largely independent of distance from promoters, so chromatin rather than the five-base core is the main filter on which matches are used.",
+   "methods": "ChIP-seq in human cells with DNase-hypersensitivity comparison",
+   "confidence": "high",
+   "pmids": [
+    "21447827"
+   ],
+   "open": "Why many accessible RCGTG matches nonetheless stay unbound."
+  },
+  {
+   "year": 2015,
+   "finding": "Crystal structures of mouse HIF-2alpha-ARNT and HIF-1alpha-ARNT bound to an HRE showed ARNT spiraling around the outside of the alpha subunit, with the DNA-reading head rotated and cooperating with a distal PAS domain, and placed cancer-associated alpha-subunit mutations at residues that establish DNA binding.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "26245371"
+   ]
+  },
+  {
+   "year": 2019,
+   "finding": "HIF-1 and HIF-2 were shown to partition consistently in chromatin, HIF-1 toward promoter-proximal and HIF-2 toward promoter-distant sites, with cell-type-specific repertoires that do not redistribute with the severity or duration of hypoxia, although neither isoform has a distinguishable consensus.",
+   "methods": "ChIP-seq across cell types and hypoxic conditions",
+   "confidence": "medium",
+   "pmids": [
+    "30429208"
+   ],
+   "open": "What establishes the isoform partition, given an identical core preference."
+  },
+  {
+   "year": 2026,
+   "finding": "Systematic binding measurements across bHLH-PAS proteins reported footprints of 12-15 bp in which preferences for bases flanking the shared core, rather than the core itself, separate members, revising the long-standing description of these sites as 5-6 bp elements.",
+   "methods": "High-throughput in vitro binding across family members",
+   "confidence": "medium",
+   "pmids": [
+    "41495897"
+   ],
+   "open": "Whether the flanking preferences are strong enough to assign genomic matches to one complex."
+  }
+ ],
+ "open": [
+  "What makes HIF-1 favor promoter-proximal sites and HIF-2 promoter-distant ones is unresolved: the two share one consensus and the partition is stable across hypoxic conditions, so the explanation has been sought in chromatin context and cofactors rather than in sequence, without a settled answer.",
+  "Whether the flanking-base and DNA-shape preferences measured in vitro can actually separate HIF:ARNT from AHR:ARNT, SIM:ARNT and ARNT homodimers in genomic sequence is untested; the recent biophysics says the information exists outside the core, while every motif model in this family still encodes little more than RCGTG.",
+  "The functional role of HIF-3alpha remains disputed, with some isoforms described as dominant-negative competitors for ARNT and others as transcriptionally active on HRE-like sites; the HIF3A models here are ChIP-only and do not settle it.",
+  "It is not known what fraction of HIF ChIP peaks lacking any RCGTG reflects indirect binding through partner factors as opposed to occupancy of degenerate sites that current models score too low to recover."
  ]
 }

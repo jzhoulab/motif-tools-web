@@ -11,7 +11,7 @@
  ],
  "consensus": "TGTCAGGGGGCG",
  "short": "INSM1 (originally IA-1, cloned from a human insulinoma) and its paralogue INSM2 are five-fingered C2H2 zinc-finger repressors of neuroendocrine and neuronal differentiation. Despite the family's historical placement alongside the Snail-type repressors, every matrix in this family is a GC-rich, GGGG-containing element - TGTCAGGGGGCG, or GCCCCCTGACA read on the other strand - not a CANNTG E-box. Structural work shows INSM1's fingers bind DNA with little intrinsic specificity for that element and that INSM1 reaches GGGG-containing loci largely by riding with CTCF, and TEAD1 sites through a direct TEAD1 contact. INSM1 is required for pancreatic beta cell and intestinal endocrine development and is now a standard immunohistochemical marker of neuroendocrine tumors.",
- "long": "## The factors\n\nINSM1 was isolated as IA-1 from a human insulinoma cDNA library and encodes a roughly 510-residue protein with five C-terminal C2H2 zinc fingers and a proline-rich N terminus. INSM2 is its single paralogue, considerably less studied and without a motif of its own in any of the four databases surveyed here. Recent structural work resolves the whole five-finger module and shows it is unusually flexible: finger 1 adopts a non-canonical CCHC fold and does not contact DNA at all, instead binding the TEAD domain of TEAD1 through hydrophobic contacts, while fingers 2 and 3 bind DNA but, because the interdomain linker is long and flexible, without specificity for the GGGG-containing element that the factor is classically associated with. The functional consequence, as reported in that work, is that INSM1 is recruited to genomic targets substantially through partner proteins - CTCF at GGGG-element loci, TEAD1 at TEAD-target promoters - rather than through autonomous high-affinity recognition. Repression at the insulin promoter involves recruitment of cyclin D1 and HDAC3. INSM1 expression is tightly restricted: transient in neural and endocrine progenitors during development, essentially absent from adult differentiated tissue, and re-expressed in neuroendocrine neoplasia.\n\n## The motif\n\nAll three matrices in this family describe the same GC-rich element. JASPAR MA0155.1 renders it TGTCAGGGGGCG, CIS-BP M08445 renders it CGCCCCCTGACA, and the Vierstra archetype AC0533:INSM reads TGCCCCCTGACA; the first is simply the reverse complement of the other two. The informative block is the CCCCC/GGGGG run plus the adjacent TGAC, roughly 15 bits over 11-12 positions. There is no CANNTG E-box anywhere in it. This matters because the family is conventionally described, including in this atlas's own family definition, as carrying \"SNAI-like E-box repressor sites\": that statement reflects protein-level kinship with the Snail-type C2H2 repressors and the shared habit of repressing differentiation programs, not the matrices, which are unambiguously not E-boxes. Readers looking for an INSM1 E-box will not find one in these data. Two further points constrain how much the consensus is worth. The JASPAR entry is typed COMPILED and traces to literature annotation rather than to a high-throughput binding experiment, and the CIS-BP and Vierstra entries match it at 0.99-1.00 - so the family's apparent perfect internal cohesion is not three independent confirmations but one consensus propagated through three collections. And the structural data argue that fingers 2-3 have limited intrinsic preference for this element, so the matrix is better read as a description of where INSM1 is found than of what it binds tightly in isolation.\n\n## Where it acts\n\nMapped INSM1 sites are promoter-proximal. The best-characterized single example is the proximal rat insulin I/II promoter, where a GG-to-AT substitution in the INSM1 core site raises promoter activity three- to twenty-fold and abolishes INSM1-dependent repression, and where INSM1 occupancy has been confirmed by chromatin immunoprecipitation in beta cell lines, fetal mouse pancreas and human islets. Genome-wide, INSM1 co-localizes with CTCF at GGGG-element loci and with TEAD1 at TEAD targets, so a large fraction of INSM1 occupancy is expected to be at sites that are primarily another factor's. Because the element is GC- and CpG-rich, it is concentrated in CpG-island promoters, where it competes for space with the many other GC-box-reading C2H2 families.\n\n## Biology and disease\n\nInsm1-null mice fail to make pancreatic beta cells and intestinal endocrine cells in normal numbers, with endocrine progenitors arrested before terminal differentiation. In the developing neocortex Insm1 acts across neurogenic lineages, promoting the generation and expansion of basal progenitors, and in the zebrafish retina insm1a is required for photoreceptor differentiation; in the inner ear Insm1 promotes proliferation of delaminated otic progenitors. The clinical relevance is mostly diagnostic and oncologic. INSM1 protein is now widely used as an immunohistochemical marker of neuroendocrine differentiation across small cell lung carcinoma, neuroendocrine tumors and related neoplasms, generally with better specificity than chromogranin or synaptophysin. In neuroblastoma, INSM1 stabilizes N-MYC protein in a positive-feedback circuit, and INSM1 has been proposed as a therapeutic target and as a promoter for tumor-selective gene delivery.\n\n## Reading a hit\n\nTreat a match here as weak evidence. First, the consensus is GC-rich and CpG-island-like, which means it overlaps the recognition space of SP/KLF, ZBTB7, MAZ, PATZ1 and many other C2H2 GC-box readers; a CCCCC run with a flanking TGAC is not a specific INSM1 signature. Second, the sequence model rests on a single compiled matrix reproduced in three collections, not on independent in vitro determinations: there is no HT-SELEX or methyl-HT-SELEX model for INSM1 or INSM2 in HOCOMOCO in these data, so the \"this protein binds this sequence\" test is not met by the usual standard. Third, the structural evidence indicates that INSM1's fingers lack strong specificity for this element and that genomic recruitment leans on CTCF and TEAD1, which means an INSM1 ChIP peak carrying the motif may well be a CTCF site. Fourth, INSM2 has no motif at all, so nothing here can be attributed to it. If you have an INSM1 hit, the strongest supporting evidence is cell type: transient neural or endocrine progenitors, or a neuroendocrine tumor.",
+ "long": "## The factors\n\nINSM1 was isolated as IA-1 from a human insulinoma cDNA library and encodes a roughly 510-residue protein with five C-terminal C2H2 zinc fingers and a proline-rich N terminus [PMID:1634555]. INSM2 is its single paralogue, considerably less studied and without a motif of its own in any of the four databases surveyed here. Recent structural work resolves the whole five-finger module and shows it is unusually flexible: finger 1 adopts a non-canonical CCHC fold and does not contact DNA at all, instead binding the TEAD domain of TEAD1 through hydrophobic contacts, while fingers 2 and 3 bind DNA but, because the interdomain linker is long and flexible, without specificity for the GGGG-containing element that the factor is classically associated with [PMID:40038295]. The functional consequence, as reported in that work, is that INSM1 is recruited to genomic targets substantially through partner proteins - CTCF at GGGG-element loci, TEAD1 at TEAD-target promoters - rather than through autonomous high-affinity recognition [PMID:40038295]. Repression at the insulin promoter involves recruitment of cyclin D1 and HDAC3 [PMID:18417529]. INSM1 expression is tightly restricted: transient in neural and endocrine progenitors during development, essentially absent from adult differentiated tissue, and re-expressed in neuroendocrine neoplasia [PMID:1634555,31113827].\n\n## The motif\n\nAll three matrices in this family describe the same GC-rich element. JASPAR MA0155.1 renders it TGTCAGGGGGCG, CIS-BP M08445 renders it CGCCCCCTGACA, and the Vierstra archetype AC0533:INSM reads TGCCCCCTGACA; the first is simply the reverse complement of the other two. The informative block is the CCCCC/GGGGG run plus the adjacent TGAC, roughly 15 bits over 11-12 positions [PMID:11842116]. There is no CANNTG E-box anywhere in it. This matters because the family is conventionally described, including in this atlas's own family definition, as carrying \"SNAI-like E-box repressor sites\": that statement reflects protein-level kinship with the Snail-type C2H2 repressors and the shared habit of repressing differentiation programs, not the matrices, which are unambiguously not E-boxes. Readers looking for an INSM1 E-box will not find one in these data. Two further points constrain how much the consensus is worth. The JASPAR entry is typed COMPILED and traces to literature annotation rather than to a high-throughput binding experiment [PMID:11842116,37962376], and the CIS-BP and Vierstra entries match it at 0.99-1.00 - so the family's apparent perfect internal cohesion is not three independent confirmations but one consensus propagated through three collections. And the structural data argue that fingers 2-3 have limited intrinsic preference for this element, so the matrix is better read as a description of where INSM1 is found than of what it binds tightly in isolation [PMID:28160313,40038295].\n\n## Where it acts\n\nMapped INSM1 sites are promoter-proximal. The best-characterized single example is the proximal rat insulin I/II promoter, where a GG-to-AT substitution in the INSM1 core site raises promoter activity three- to twenty-fold and abolishes INSM1-dependent repression, and where INSM1 occupancy has been confirmed by chromatin immunoprecipitation in beta cell lines, fetal mouse pancreas and human islets [PMID:18417529]. Genome-wide, INSM1 co-localizes with CTCF at GGGG-element loci and with TEAD1 at TEAD targets [PMID:40038295], so a large fraction of INSM1 occupancy is expected to be at sites that are primarily another factor's. Because the element is GC- and CpG-rich, it is concentrated in CpG-island promoters, where it competes for space with the many other GC-box-reading C2H2 families.\n\n## Biology and disease\n\nInsm1-null mice fail to make pancreatic beta cells and intestinal endocrine cells in normal numbers, with endocrine progenitors arrested before terminal differentiation [PMID:16951258]. In the developing neocortex Insm1 acts across neurogenic lineages, promoting the generation and expansion of basal progenitors [PMID:18940587], and in the zebrafish retina insm1a is required for photoreceptor differentiation [PMID:23747542]; in the inner ear Insm1 promotes proliferation of delaminated otic progenitors [PMID:26545349]. The clinical relevance is mostly diagnostic and oncologic. INSM1 protein is now widely used as an immunohistochemical marker of neuroendocrine differentiation across small cell lung carcinoma, neuroendocrine tumors and related neoplasms, generally with better specificity than chromogranin or synaptophysin [PMID:31113827]. In neuroblastoma, INSM1 stabilizes N-MYC protein in a positive-feedback circuit [PMID:26456864], and INSM1 has been proposed as a therapeutic target and as a promoter for tumor-selective gene delivery [PMID:31113827].\n\n## Reading a hit\n\nTreat a match here as weak evidence. First, the consensus is GC-rich and CpG-island-like, which means it overlaps the recognition space of SP/KLF, ZBTB7, MAZ, PATZ1 and many other C2H2 GC-box readers; a CCCCC run with a flanking TGAC is not a specific INSM1 signature. Second, the sequence model rests on a single compiled matrix reproduced in three collections, not on independent in vitro determinations: there is no HT-SELEX or methyl-HT-SELEX model for INSM1 or INSM2 in HOCOMOCO in these data, so the \"this protein binds this sequence\" test is not met by the usual standard. Third, the structural evidence indicates that INSM1's fingers lack strong specificity for this element and that genomic recruitment leans on CTCF and TEAD1 [PMID:40038295], which means an INSM1 ChIP peak carrying the motif may well be a CTCF site. Fourth, INSM2 has no motif at all, so nothing here can be attributed to it. If you have an INSM1 hit, the strongest supporting evidence is cell type: transient neural or endocrine progenitors, or a neuroendocrine tumor.",
  "caveats": "This family's consensus is not an E-box, despite the \"SNAI-like\" label, which refers to protein kinship rather than to the matrices. The apparent perfect cohesion across JASPAR, CIS-BP and Vierstra reflects one compiled matrix propagated into three collections, not three independent measurements; there is no HOCOMOCO in vitro model here. Structural work indicates INSM1's DNA-binding fingers have little intrinsic specificity for the GGGG element and that occupancy depends heavily on CTCF and TEAD1, so a motif-positive INSM1 peak may belong to a partner. The element is GC-rich and overlaps many other C2H2 GC-box motifs. INSM2 has no motif; do not read a hit as evidence about it.",
  "refs": [
   {
@@ -68,6 +68,85 @@
    "cite": "Rauluseviciute I, Riudavets-Puig R, Blanc-Mathieu R, et al. JASPAR 2024: 20th anniversary of the open-access database of transcription factor binding profiles. Nucleic Acids Res 2024;52:D174-D182.",
    "pmid": "37962376",
    "url": "https://pubmed.ncbi.nlm.nih.gov/37962376/"
+  },
+  {
+   "cite": "Breslin MB, Zhu M, Notkins AL, et al. Neuroendocrine differentiation factor, IA-1, is a transcriptional repressor and contains a specific DNA-binding domain: identification of consensus IA-1 binding sequence. Nucleic Acids Res 2002;30:1038-45.",
+   "pmid": "11842116",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11842116/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1992,
+   "finding": "IA-1 was cloned by subtraction from a human insulinoma library as a 510-residue protein with five C2H2 fingers, expressed in neuroendocrine tumor lines and undetectable in normal adult tissue.",
+   "methods": "subtractive cDNA cloning, Northern blotting",
+   "confidence": "medium",
+   "pmids": [
+    "1634555"
+   ],
+   "open": "Whether the protein bound DNA, and at what sequence."
+  },
+  {
+   "year": 2002,
+   "finding": "A selected and amplified random-oligonucleotide assay with the bacterially expressed IA-1 DNA-binding domain gave the GC-rich consensus TG/TC/TC/TT/AGGGGG/TCG/A, showed that fingers 2 and 3 suffice for activity through that site, and mapped the repression function to residues 168-263; this single determination is the origin of the matrix later carried by JASPAR, CIS-BP and the Vierstra archetypes.",
+   "methods": "random-oligonucleotide selection with a GST-DBD fusion, reporter assays, promoter database search",
+   "confidence": "medium",
+   "pmids": [
+    "11842116"
+   ],
+   "open": "Whether the full-length protein binds this element with high affinity in cells."
+  },
+  {
+   "year": 2006,
+   "finding": "Insm1-null mice were shown to form pancreatic and intestinal endocrine precursors that arrest before terminal differentiation, with loss of hormone and secretory-machinery gene expression, giving the factor a developmental requirement independent of any motif evidence.",
+   "methods": "mouse gene targeting, expression profiling, histology",
+   "confidence": "medium",
+   "pmids": [
+    "16951258"
+   ]
+  },
+  {
+   "year": 2008,
+   "finding": "A functional INSM1 site was mapped in the proximal rat insulin I/II promoter, where a two-base substitution raised promoter activity several-fold and abolished repression and where occupancy was confirmed in beta cell lines, fetal pancreas and human islets; in the same period Insm1 was shown to have a pan-neurogenic role in generating basal progenitors in the neocortex.",
+   "methods": "promoter mutagenesis, chromatin immunoprecipitation, mouse and in utero electroporation experiments",
+   "confidence": "medium",
+   "pmids": [
+    "18417529",
+    "18940587"
+   ]
+  },
+  {
+   "year": 2017,
+   "finding": "A solution NMR structure of INSM1 zinc fingers 4 and 5 showed a conventional head-to-tail arrangement but only weak binding to the published consensus, the first direct signal that the five-finger module may not read this element tightly.",
+   "methods": "solution NMR, NMR titration, isothermal titration calorimetry",
+   "confidence": "medium",
+   "pmids": [
+    "28160313"
+   ],
+   "open": "Whether the fingers that were not resolved, 1 to 3, supply the missing affinity."
+  },
+  {
+   "year": 2019,
+   "finding": "INSM1 was established in diagnostic practice as an immunohistochemical marker of neuroendocrine differentiation with better specificity than chromogranin or synaptophysin, which made the protein widely assayed even though its binding specificity remained based on one 2002 experiment.",
+   "methods": "review of immunohistochemical series and functional studies",
+   "confidence": "low",
+   "pmids": [
+    "31113827"
+   ]
+  },
+  {
+   "year": 2025,
+   "finding": "Structural and biochemical analysis of the whole five-finger module reversed the standard reading of this family's motif: finger 1 adopts a CCHC fold and binds the TEAD domain of TEAD1 rather than DNA, fingers 2 and 3 bind DNA without specificity for the GGGG element, and INSM1 reaches its genomic targets with CTCF and TEAD1, so the catalogued matrix describes where INSM1 is found rather than what it binds.",
+   "methods": "NMR and crystallographic analysis of the zinc-finger module, binding assays, ternary complex reconstitution, genomic co-localization",
+   "confidence": "high",
+   "pmids": [
+    "40038295"
+   ]
+  }
+ ],
+ "open": [
+  "Whether INSM1 has any intrinsic preference for the GC-rich element attributed to it is now in dispute: selection with the isolated DNA-binding domain returned the TGAC-plus-GGGGG consensus that all three databases carry, while structural work on the intact five-finger module reports that fingers 2 and 3 bind DNA without specificity for it and that occupancy depends on CTCF and TEAD1.",
+  "It is unresolved what fraction of motif-containing INSM1 ChIP peaks are bound directly, since the same GGGG element is a CTCF-associated feature and no knockout-controlled occupancy study with a DNA-binding-deficient INSM1 mutant has been reported.",
+  "INSM2 has no motif in any of the four collections and essentially no binding literature, so whether it reads the same element as INSM1, a different one, or binds DNA at all is unknown."
  ]
 }

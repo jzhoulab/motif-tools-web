@@ -12,7 +12,7 @@
  ],
  "consensus": "TTCAGCACCACGGACAGCGCC",
  "short": "REST, also called NRSF, is a single zinc-finger protein that recognizes RE1 (the neuron- restrictive silencer element), a 21-base-pair site that is one of the longest and most information- rich transcription-factor motifs in the human genome. Eight of its nine zinc fingers read two half-sites separated by a two-base spacer, which is why the element is long and unusually specific. REST recruits SIN3-HDAC and CoREST-LSD1 complexes to silence neuronal genes in non-neuronal cells, and is removed or degraded as neurons differentiate. Human and mouse genomes contain roughly one to two thousand canonical RE1s, many spread by transposable elements, plus a larger set of weaker non-canonical variants. Unusually for a PWM, a strong RE1 match is good evidence of real REST binding.",
- "long": "## The factors\n\nThis family has one member. REST (RE1-silencing transcription factor) was identified twice in 1995:\nas NRSF, a coordinate repressor of multiple neuron-specific genes, and as REST, a silencer protein\nthat restricts type II sodium channel expression to neurons. It contains nine C2H2 zinc fingers,\neight of which form the DNA-binding array, plus a separate C-terminal finger. REST is not itself a\ncatalytic repressor; it carries two repression domains that dock different corepressor machinery, an\nN-terminal region that binds SIN3A with HDAC1 and HDAC2, and a C-terminal region that binds\nCoREST/RCOR1, which in turn brings the demethylase LSD1/KDM1A and associated activities such as\nG9a, CTDSP1 and MeCP2. REST is expressed broadly in non-neuronal tissue and in neural stem cells,\nand its protein level falls sharply at neuronal differentiation. A truncated splice variant, REST4,\nlacks most of the finger array. There is no paralogue in these databases, so the family and the\nprotein coincide.\n\n## The motif\n\nThe canonical RE1/NRSE is written TTCAGCACCACGGACAGCGCC, 21 base pairs. It is best read as two\nhalf-sites, a left half around TTCAGCACC and a right half around GGACAGCGCC, separated by a\ntwo-nucleotide spacer that carries almost no information. Separate groups of zinc fingers engage the\ntwo halves, which is the structural reason a single monomer can specify 19 informative positions;\nby contrast most vertebrate factors specify six to ten. The spacer explains a discrepancy readers\nwill notice: the canonical string has AC at those two positions, while the JASPAR and HOCOMOCO\nmatrices show a weak preference for at, and the data consensus for this family is\nTCAGCACCatGGACAGCgcC. These are the same element, differing only where the model is uninformative.\nNon-canonical RE1s are common and functionally important. They include half-site RE1s, in which only\nthe left or right half is present; compound elements with expanded spacers; and single-substitution\nvariants throughout. Binding-affinity work shows that canonical motifs give strong occupancy at\ntargets shared by all cell types, whereas atypical motifs give weak occupancy at cell- and\ntissue-specific targets, and, unexpectedly, that the weak sites are the most evolutionarily\nconstrained.\n\n## Where it acts\n\nRE1 elements sit in promoters, first introns and distal regions of neuronal genes: ion channels,\nsynaptic vesicle proteins, neurotransmitter receptors, neuronal microRNAs and splicing factors.\nPosition-specific scoring searches of the human genome recover on the order of 1,300 canonical RE1s\n(about 1,000 in mouse), and a comparative-genomics model built from conserved occurrences produced\n842 high-confidence human sites at 733 genes; larger surveys that admit weaker matches reach a few\nthousand. The number is small for a vertebrate motif, which is the practical consequence of the\nelement's length. RE1s are present in all sequenced vertebrate genomes and absent from invertebrates\nand protochordates, as is REST itself. A substantial fraction lie in repeats, and many RE1s fall\ninto closely related families associated with transposable elements, implying that transposon-\nmediated duplication carried the element to new target genes during vertebrate evolution. The REST\ncistrome is not conserved in detail: it is substantially larger in human than in mouse embryonic\nstem cells.\n\n## Biology and disease\n\nREST silences neuronal genes in non-neuronal cells and keeps them repressed in progenitors,\nreleasing them as neurons mature. Its regulation is therefore mostly post-transcriptional, through\nsplicing to REST4 and through ubiquitin-dependent degradation at differentiation. The first\nmammalian ChIP-sequencing experiment was performed on NRSF, and the resulting maps established the\ntight coupling between the motif and occupancy that makes this factor unusual.\n\nSeveral diseases turn on REST dosage. Wild-type huntingtin sequesters REST in the cytoplasm; mutant\nhuntingtin fails to, so REST enters the nucleus, occupies RE1s and represses target genes including\nBDNF, contributing to Huntington disease pathology. In the ageing human cortex, nuclear REST rises\nand is required for stress resistance, and is lost in Alzheimer disease. Germline truncating REST\nmutations predispose to Wilms tumor, and REST loss or degradation has been reported in epithelial\ntumors, so it behaves as a tumor suppressor in some contexts while its gain of function drives\npathology in others.\n\n## Reading a hit\n\nThis is the family where a PWM hit means the most. With about 19 informative positions, a full-length\ncanonical RE1 match essentially does not occur by chance in a three-gigabase genome, and the great\nmajority of strong matches are occupied wherever REST is expressed. There is no paralogue problem:\nthe motif belongs to one protein. Two caveats remain. First, half-site and other non-canonical RE1s\nscore poorly and will be missed by a threshold tuned to the canonical element, yet they carry the\ncell-type-specific part of the regulon, so a negative result at a neuronal gene is weak evidence.\nSecond, occupancy is not the same as repression: REST is bound at many sites in cells where the\ntarget is expressed anyway, and the functional output depends on which corepressor complex is\nrecruited and on REST protein level, which falls in neurons. Because the element is long and\ndistinctive, ChIP-derived REST models are relatively clean, and an RE1-like motif appearing in\nanother factor's ChIP data usually means that factor is part of a REST corepressor complex.",
+ "long": "## The factors\n\nThis family has one member. REST (RE1-silencing transcription factor) was identified twice in 1995:\nas NRSF, a coordinate repressor of multiple neuron-specific genes [PMID:7871435], and as REST, a silencer protein\nthat restricts type II sodium channel expression to neurons [PMID:7697725]. It contains nine C2H2 zinc fingers,\neight of which form the DNA-binding array, plus a separate C-terminal finger [PMID:25092546]. REST is not itself a\ncatalytic repressor; it carries two repression domains that dock different corepressor machinery, an\nN-terminal region that binds SIN3A with HDAC1 and HDAC2, and a C-terminal region that binds\nCoREST/RCOR1, which in turn brings the demethylase LSD1/KDM1A and associated activities such as\nG9a, CTDSP1 and MeCP2 [PMID:25092546]. REST is expressed broadly in non-neuronal tissue and in neural stem cells,\nand its protein level falls sharply at neuronal differentiation [PMID:25092546]. A truncated splice variant, REST4,\nlacks most of the finger array. There is no paralogue in these databases, so the family and the\nprotein coincide.\n\n## The motif\n\nThe canonical RE1/NRSE is written TTCAGCACCACGGACAGCGCC, 21 base pairs [PMID:7871435,7697725]. It is best read as two\nhalf-sites, a left half around TTCAGCACC and a right half around GGACAGCGCC, separated by a\ntwo-nucleotide spacer that carries almost no information. Separate groups of zinc fingers engage the\ntwo halves, which is the structural reason a single monomer can specify 19 informative positions [PMID:33849071];\nby contrast most vertebrate factors specify six to ten. The spacer explains a discrepancy readers\nwill notice: the canonical string has AC at those two positions, while the JASPAR and HOCOMOCO\nmatrices show a weak preference for at, and the data consensus for this family is\nTCAGCACCatGGACAGCgcC. These are the same element, differing only where the model is uninformative.\nNon-canonical RE1s are common and functionally important. They include half-site RE1s, in which only\nthe left or right half is present; compound elements with expanded spacers; and single-substitution\nvariants throughout [PMID:17581960]. Binding-affinity work shows that canonical motifs give strong occupancy at\ntargets shared by all cell types, whereas atypical motifs give weak occupancy at cell- and\ntissue-specific targets, and, unexpectedly, that the weak sites are the most evolutionarily\nconstrained [PMID:19401398].\n\n## Where it acts\n\nRE1 elements sit in promoters, first introns and distal regions of neuronal genes: ion channels,\nsynaptic vesicle proteins, neurotransmitter receptors, neuronal microRNAs and splicing factors.\nPosition-specific scoring searches of the human genome recover on the order of 1,300 canonical RE1s\n(about 1,000 in mouse) [PMID:16899447], and a comparative-genomics model built from conserved occurrences produced\n842 high-confidence human sites at 733 genes [PMID:16963704]; larger surveys that admit weaker matches reach a few\nthousand [PMID:15240883,17581960]. The number is small for a vertebrate motif, which is the practical consequence of the\nelement's length. RE1s are present in all sequenced vertebrate genomes and absent from invertebrates\nand protochordates, as is REST itself. A substantial fraction lie in repeats, and many RE1s fall\ninto closely related families associated with transposable elements, implying that transposon-\nmediated duplication carried the element to new target genes during vertebrate evolution [PMID:16899447]. The REST\ncistrome is not conserved in detail: it is substantially larger in human than in mouse embryonic\nstem cells [PMID:25990720].\n\n## Biology and disease\n\nREST silences neuronal genes in non-neuronal cells and keeps them repressed in progenitors,\nreleasing them as neurons mature. Its regulation is therefore mostly post-transcriptional, through\nsplicing to REST4 and through ubiquitin-dependent degradation at differentiation. The first\nmammalian ChIP-sequencing experiment was performed on NRSF [PMID:17540862], and the resulting maps established the\ntight coupling between the motif and occupancy that makes this factor unusual.\n\nSeveral diseases turn on REST dosage. Wild-type huntingtin sequesters REST in the cytoplasm; mutant\nhuntingtin fails to, so REST enters the nucleus, occupies RE1s and represses target genes including\nBDNF, contributing to Huntington disease pathology [PMID:12881722]. In the ageing human cortex, nuclear REST rises\nand is required for stress resistance, and is lost in Alzheimer disease [PMID:24670762]. Germline truncating REST\nmutations predispose to Wilms tumor [PMID:26551668], and REST loss or degradation has been reported in epithelial\ntumors, so it behaves as a tumor suppressor in some contexts while its gain of function drives\npathology in others.\n\n## Reading a hit\n\nThis is the family where a PWM hit means the most. With about 19 informative positions, a full-length\ncanonical RE1 match essentially does not occur by chance in a three-gigabase genome, and the great\nmajority of strong matches are occupied wherever REST is expressed. There is no paralogue problem:\nthe motif belongs to one protein. Two caveats remain. First, half-site and other non-canonical RE1s\nscore poorly and will be missed by a threshold tuned to the canonical element [PMID:36777181,17581960], yet they carry the\ncell-type-specific part of the regulon, so a negative result at a neuronal gene is weak evidence.\nSecond, occupancy is not the same as repression: REST is bound at many sites in cells where the\ntarget is expressed anyway, and the functional output depends on which corepressor complex is\nrecruited and on REST protein level, which falls in neurons. Because the element is long and\ndistinctive, ChIP-derived REST models are relatively clean, and an RE1-like motif appearing in\nanother factor's ChIP data usually means that factor is part of a REST corepressor complex.",
  "caveats": "This is the best case for trusting a PWM hit: a full canonical 21-bp RE1 has roughly 19 informative positions, has no paralogue competing for the label, and is rare enough that chance matches are negligible. The failure mode is the opposite of usual: thresholds set for the canonical element miss half-site and other non-canonical RE1s, which are numerous, weakly bound and carry the tissue-specific part of the regulon. A hit also does not imply repression, since REST occupies sites in cells where the target is expressed and its protein level and corepressor choice determine the output. Conversely, an RE1-like motif recovered from another factor's ChIP data usually means that factor sits in a REST corepressor complex.",
  "refs": [
   {
@@ -74,6 +74,109 @@
    "cite": "Thiel G, Ekici M, Rössler OG. RE-1 silencing transcription factor (REST): a regulator of neuronal development and neuronal/endocrine function. Cell Tissue Res 2015;359:99-109.",
    "pmid": "25092546",
    "url": "https://pubmed.ncbi.nlm.nih.gov/25092546/"
+  },
+  {
+   "cite": "Otto SJ, McCorkle SR, Hover J, et al. A new binding motif for the transcriptional repressor REST uncovers large gene networks devoted to neuronal functions. J Neurosci 2007;27:6729-39.",
+   "pmid": "17581960",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17581960/"
+  },
+  {
+   "cite": "Tang Y, Jia Z, Xu H, et al. Mechanism of REST/NRSF regulation of clustered protocadherin α genes. Nucleic Acids Res 2021;49:4506-4521.",
+   "pmid": "33849071",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33849071/"
+  },
+  {
+   "cite": "Mouri K, Dewey HB, Castro R, et al. Whole-genome functional characterization of RE1 silencers using a modified massively parallel reporter assay. Cell Genom 2023;3:100234.",
+   "pmid": "36777181",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36777181/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1995,
+   "finding": "The same protein is reported twice in one year, as NRSF, a repressor acting on a shared element in many neuron-specific genes, and as REST, which restricts type II sodium channel expression to neurons; both define the 21-base RE1/NRSE.",
+   "methods": "Expression cloning, DNA-binding and reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "7871435",
+    "7697725"
+   ],
+   "open": "How many RE1s exist in the genome, and whether the element was always this long, were unknown."
+  },
+  {
+   "year": 2004,
+   "finding": "A combined computational and biochemical survey catalogs 1,892 human and 1,894 mouse RE1s and shows an in vivo hierarchy: some sites are occupied at endogenous REST levels and others only when REST is raised.",
+   "methods": "Genome-wide PSSM search in human, mouse and Fugu with biochemical validation",
+   "confidence": "medium",
+   "pmids": [
+    "15240883"
+   ],
+   "open": "Which of the predicted sites are occupied in any given cell type."
+  },
+  {
+   "year": 2006,
+   "finding": "Two independent catalogs converge on roughly 1,000-1,300 canonical RE1s per mammalian genome, far fewer than for a typical vertebrate motif, and show that many RE1s belong to sequence families carried by transposable elements.",
+   "methods": "PSSM genome search plus BLAST clustering; comparative-genomics model trained on conserved sites",
+   "confidence": "medium",
+   "pmids": [
+    "16899447",
+    "16963704"
+   ],
+   "open": "Whether transposon-borne RE1s are functional silencers or passengers."
+  },
+  {
+   "year": 2007,
+   "finding": "Serial analysis of chromatin occupancy in a kidney cell line recovers far more REST-occupied sites than the canonical catalogs, and defines non-canonical motifs: half-site RE1s and versions with expanded spacers.",
+   "methods": "Serial analysis of chromatin occupancy (ChIP with tag sequencing)",
+   "confidence": "medium",
+   "pmids": [
+    "17581960"
+   ],
+   "open": "Whether non-canonical sites are bound with enough affinity to repress, or are low-occupancy background."
+  },
+  {
+   "year": 2007,
+   "finding": "NRSF is the subject of the first mammalian ChIP-sequencing experiment, producing genome-scale occupancy maps whose peaks align tightly with RE1 matches, which is why this motif became the standard demonstration that sequence can predict binding.",
+   "methods": "ChIP-seq",
+   "confidence": "high",
+   "pmids": [
+    "17540862"
+   ]
+  },
+  {
+   "year": 2009,
+   "finding": "Measured in vivo binding affinities split the regulon: canonical RE1s are strongly occupied at targets shared across cell types, while atypical low-affinity sites give cell-type-restricted occupancy, and those weak sites are the most evolutionarily constrained.",
+   "methods": "Quantitative ChIP across cell types with affinity ranking, comparative sequence analysis",
+   "confidence": "medium",
+   "pmids": [
+    "19401398"
+   ],
+   "open": "Why selection would preserve weak sites more strongly than strong ones."
+  },
+  {
+   "year": 2015,
+   "finding": "The REST cistrome in human embryonic stem cells is substantially larger than in mouse, so the regulon defined by occupancy is not conserved in detail even where the motif is.",
+   "methods": "Comparative ChIP-seq analysis in human and mouse ESCs",
+   "confidence": "medium",
+   "pmids": [
+    "25990720"
+   ]
+  },
+  {
+   "year": 2023,
+   "finding": "A massively parallel reporter assay tests RE1s directly for silencing and finds a minimum REST binding strength below which cofactors do not assemble, and that non-canonical motifs silence only when their half sites are aligned at particular spacings, qualifying the view that any half-site RE1 is a functional element.",
+   "methods": "Modified massively parallel reporter assay (MPRAduo) across RE1s and 1,500 variants",
+   "confidence": "medium",
+   "pmids": [
+    "36777181"
+   ],
+   "open": "The assay measures episomal silencing, so which of these elements silence in their native chromatin is still untested."
+  }
+ ],
+ "open": [
+  "How much of the non-canonical RE1 repertoire is functional is contested: affinity-based work argues that weak, atypical sites carry the cell-type-specific part of the regulon and are the most conserved, whereas reporter-based testing finds that non-canonical motifs silence only when their half sites sit at particular spacings.",
+  "Why the weakest RE1s are the most evolutionarily constrained has no accepted explanation; one possibility is that weak occupancy is itself the regulated quantity, another that these sites are constrained for reasons unrelated to REST.",
+  "Whether the much larger human than mouse REST cistrome reflects ongoing transposon-mediated expansion of the RE1 repertoire, or differences in cell state and assay sensitivity between the compared datasets, is unresolved.",
+  "What determines whether an occupied RE1 is actually repressed is unsettled, since REST is bound at many sites in cells where the target gene is expressed, and the corepressor complex recruited is not predictable from the site."
  ]
 }

@@ -5,13 +5,12 @@
   "M-CAT",
   "GGAATG",
   "TEF-1 site",
-  "Sph motif",
   "TEA/ATTS domain factors",
   "Scalloped (Drosophila)"
  ],
  "consensus": "GGAATG",
  "short": "The four human TEAD proteins (TEAD1-4, formerly TEF-1, TEF-4, TEF-5 and TEF-3) bind the MCAT element GGAATG, read on the other strand as CATTCC. The DNA-binding TEA domain is a three-helix bundle with a homeodomain-like fold, and two TEADs load cooperatively onto tandem MCAT sites. TEADs have no activation domain of their own: they are the DNA-binding platform for the Hippo pathway coactivators YAP and TAZ, and for the VGLL proteins that compete with them. The motif is therefore the readout of Hippo signaling status on chromatin. TEAD sites drive muscle gene expression, trophectoderm specification and organ size control, and are central to YAP-driven cancers.",
- "long": "## The factors\n\nFour human genes, TEAD1, TEAD2, TEAD3 and TEAD4, share an N-terminal TEA (also called ATTS) DNA\nbinding domain and a C-terminal YAP-binding domain. TEAD1 (TEF-1) and TEAD3 (TEF-5) are broadly\nexpressed with enrichment in muscle and placenta, TEAD2 (TEF-4) in neural and embryonic tissue,\nTEAD4 (TEF-3) in skeletal muscle, trophectoderm and many carcinomas. TEADs bind DNA as monomers\nbut load cooperatively onto tandem sites via a loop in the TEA domain. They carry no intrinsic\ntransactivation domain, so their output depends entirely on which partner occupies the\nYAP-binding domain: YAP or TAZ (WWTR1) when Hippo signaling is off, or a VGLL protein\n(VGLL1-VGLL4) competing for the same surface. Structures of the YAP-TEAD, TAZ-TEAD and VGLL1-TEAD\ncomplexes show how the same interface is reused. TEADs are also palmitoylated on a conserved\ncysteine in a hydrophobic central pocket; this auto-palmitoylation is required for stability and\nfor YAP/TAZ binding, and it is the target of the current generation of TEAD inhibitors.\n\n## The motif\n\nThe literature name is the MCAT (muscle CAT) element, GGAATG, equivalently CATTCC on the opposite\nstrand; older papers also call it the Sph motif or the GT-IIC element of the SV40 enhancer. Six\nbases carry essentially all the information, with the GGAAT core most constrained. The solution\nstructure of the TEA domain showed a three-helix bundle with a homeodomain fold, and revealed that\nthe L1 loop is what allows two TEAD molecules to load cooperatively onto tandemly duplicated MCAT\nsites. That explains the pattern in this family's data: single-site models span 6-9 columns with\n10-13 bits, while the most informative models (up to 21 bits) are tandem pairs such as\nCATTCC-N(2)-CATTCC, which represent the cooperative arrangement rather than a longer monomer\nfootprint. Database models divide simply into the forward-strand rendering (GGAATG, GGAATGT) and\nthe reverse rendering (ACATTCC, CATTCCA); they are the same motif and the family is one of the\nmost cohesive in these collections. No TEAD paralogue is distinguishable from another by sequence.\nAn in vitro microarray study also found that the isolated TEA domain binds a broader set of\nsequences than the sites recovered with the full-length protein, so the narrow GGAATG consensus\npartly reflects constraints outside the DNA-binding domain.\n\n## Where it acts\n\nTEAD/YAP sites are overwhelmingly enhancer elements, not promoters. YAP-TEAD complexes occupy\nthousands of distal enhancers and act largely through enhancer-promoter contacts and release of\npaused RNA polymerase; TEAD motifs are among the most enriched motifs in the accessible chromatin\nof proliferating and mechanically stimulated cells. The classic promoter-proximal cases are\nmuscle: MCAT elements in the cardiac troponin T, beta-myosin heavy chain and smooth muscle\nalpha-actin promoters. Recurrent co-occurring motifs are AP-1 (JUN/FOS), which forms functional\ncomposite TEAD-AP-1 enhancers in many YAP-driven contexts, plus RUNX, MYOD E-boxes in muscle, and\nCDX2/GATA3 in trophectoderm. Because GGAATG is only 6 bp, chance matches are extremely numerous;\noccupancy is set by chromatin state and by whether YAP/TAZ are nuclear.\n\n## Biology and disease\n\nTEAD4 specifies the trophectoderm lineage in the mouse preimplantation embryo, and its activity is\nrestricted to outer cells by Hippo signaling through LATS and YAP, making this the earliest known\ncell-fate decision read out through a TEAD motif. In muscle, MCAT elements coordinate the\ncardiac and smooth muscle differentiation programs. A missense mutation in TEAD1 that weakens its\ninteraction with YAP and TAZ causes Sveinsson chorioretinal atrophy, a dominant retinal\ndegeneration, and is the clearest human germline TEAD disease. In cancer, TEAD activity is the\neffector of Hippo pathway loss: NF2 (merlin) inactivation in mesothelioma and schwannoma, LATS1/2\nloss, and YAP1 or WWTR1 fusions all converge on TEAD-driven transcription, and YAP1-TFE3 and\nTAZ-CAMTA1 fusions in epithelioid hemangioendothelioma retain the TEAD-binding function.\nSmall-molecule inhibitors of TEAD auto-palmitoylation selectively suppress NF2-deficient\nmesothelioma in preclinical models and have entered clinical testing. VGLL4 acts as a tumor\nsuppressor by competing with YAP for the same TEAD surface.\n\n## Reading a hit\n\nGGAATG is 6 bp and occurs on the order of a million times in the human genome, so an isolated\nmatch is close to meaningless. Three things upgrade a hit: a tandem pair of MCAT sites within\nabout 15 bp, which is the cooperative binding arrangement; an adjacent AP-1 site, which marks the\nfunctional TEAD-AP-1 composite enhancers; and open chromatin in a cell with nuclear YAP or TAZ. A\nhit never identifies a paralogue; TEAD1 through TEAD4 share one matrix, and in most tissues more\nthan one is expressed. Equally important, a TEAD motif hit says nothing about the direction of the\noutput, because the same site is bound by TEAD with YAP/TAZ (activating) or with VGLL4\n(repressing), and TEAD occupancy in the absence of a coactivator does little. ChIP-derived TEAD\nmotifs are reasonably trustworthy here: HOCOMOCO grade-A models for TEAD1-4 combine ChIP-seq with\nin vitro selection (evidence codes PS or PSM), so direct binding is independently supported. The\nconverse caution applies to the reverse: YAP and TAZ ChIP-seq recovers the TEAD motif even though\nYAP and TAZ do not touch DNA, a textbook case of a coactivator \"having\" the motif of the protein\nthat recruits it. If a database entry attributes GGAATG to YAP1, WWTR1 or a VGLL protein, that is\nindirect binding.",
+ "long": "## The factors\n\nFour human genes, TEAD1, TEAD2, TEAD3 and TEAD4, share an N-terminal TEA (also called ATTS) DNA\nbinding domain and a C-terminal YAP-binding domain. TEAD1 (TEF-1) and TEAD3 (TEF-5) are broadly\nexpressed with enrichment in muscle and placenta, TEAD2 (TEF-4) in neural and embryonic tissue,\nTEAD4 (TEF-3) in skeletal muscle, trophectoderm and many carcinomas. TEADs bind DNA as monomers\nbut load cooperatively onto tandem sites via a loop in the TEA domain [PMID:2843293,17085591]. They carry no intrinsic\ntransactivation domain, so their output depends entirely on which partner occupies the\nYAP-binding domain: YAP or TAZ (WWTR1) when Hippo signaling is off, or a VGLL protein\n(VGLL1-VGLL4) competing for the same surface [PMID:18579750,22632831]. Structures of the YAP-TEAD, TAZ-TEAD and VGLL1-TEAD\ncomplexes show how the same interface is reused [PMID:20123905,22632831]. TEADs are also palmitoylated on a conserved\ncysteine in a hydrophobic central pocket; this auto-palmitoylation is required for stability and\nfor YAP/TAZ binding [PMID:26724994,31043565], and it is the target of the current generation of TEAD inhibitors [PMID:33850002].\n\n## The motif\n\nThe literature name is the MCAT (muscle CAT) element, GGAATG, equivalently CATTCC on the opposite\nstrand [PMID:17962623]; older papers also call it the GT-IIC element of the SV40 enhancer [PMID:2843293,1851669]. TEF-1 was purified as a protein binding both GT-IIC and a\nsecond SV40 motif, Sph, but the two are unrelated in sequence, so Sph is not another name for the MCAT site [PMID:2843293].\nSix bases carry essentially all the information, with the GGAAT core most constrained. The solution\nstructure of the TEA domain showed a three-helix bundle with a homeodomain fold, and revealed that\nthe L1 loop is what allows two TEAD molecules to load cooperatively onto tandemly duplicated MCAT\nsites [PMID:17085591]. That explains the pattern in this family's data: single-site models span 6-9 columns with\n10-13 bits, while the most informative models (up to 21 bits) are tandem pairs such as\nCATTCC-N(2)-CATTCC, which represent the cooperative arrangement rather than a longer monomer\nfootprint. Database models divide simply into the forward-strand rendering (GGAATG, GGAATGT) and\nthe reverse rendering (ACATTCC, CATTCCA); they are the same motif and the family is one of the\nmost cohesive in these collections. No TEAD paralogue is distinguishable from another by sequence.\nAn in vitro microarray study also found that the isolated TEA domain binds a broader set of\nsequences than the sites recovered with the full-length protein, so the narrow GGAATG consensus\npartly reflects constraints outside the DNA-binding domain [PMID:17085591].\n\n## Where it acts\n\nTEAD/YAP sites are overwhelmingly enhancer elements, not promoters. YAP-TEAD complexes occupy\nthousands of distal enhancers and act largely through enhancer-promoter contacts [PMID:26258633] and release of\npaused RNA polymerase; TEAD motifs are among the most enriched motifs in the accessible chromatin\nof proliferating and mechanically stimulated cells. The classic promoter-proximal cases are\nmuscle: MCAT elements in the cardiac troponin T, beta-myosin heavy chain and smooth muscle\nalpha-actin promoters [PMID:17962623]. Recurrent co-occurring motifs are AP-1 (JUN/FOS), which forms functional\ncomposite TEAD-AP-1 enhancers in many YAP-driven contexts [PMID:26258633], plus RUNX, MYOD E-boxes in muscle, and\nCDX2/GATA3 in trophectoderm. Because GGAATG is only 6 bp, chance matches are extremely numerous;\noccupancy is set by chromatin state and by whether YAP/TAZ are nuclear.\n\n## Biology and disease\n\nTEAD4 specifies the trophectoderm lineage in the mouse preimplantation embryo [PMID:17913785], and its activity is\nrestricted to outer cells by Hippo signaling through LATS and YAP [PMID:19289085], making this the earliest known\ncell-fate decision read out through a TEAD motif. In muscle, MCAT elements coordinate the\ncardiac and smooth muscle differentiation programs. A missense mutation in TEAD1 that weakens its\ninteraction with YAP and TAZ causes Sveinsson chorioretinal atrophy, a dominant retinal\ndegeneration [PMID:15016762,17689488], and is the clearest human germline TEAD disease. In cancer, TEAD activity is the\neffector of Hippo pathway loss: NF2 (merlin) inactivation in mesothelioma and schwannoma, LATS1/2\nloss, and YAP1 or WWTR1 fusions all converge on TEAD-driven transcription, and YAP1-TFE3 and\nTAZ-CAMTA1 fusions in epithelioid hemangioendothelioma retain the TEAD-binding function.\nSmall-molecule inhibitors of TEAD auto-palmitoylation selectively suppress NF2-deficient\nmesothelioma in preclinical models [PMID:33850002] and have entered clinical testing. VGLL4 acts as a tumor\nsuppressor by competing with YAP for the same TEAD surface.\n\n## Reading a hit\n\nGGAATG is 6 bp and occurs on the order of a million times in the human genome, so an isolated\nmatch is close to meaningless. Three things upgrade a hit: a tandem pair of MCAT sites within\nabout 15 bp, which is the cooperative binding arrangement; an adjacent AP-1 site, which marks the\nfunctional TEAD-AP-1 composite enhancers; and open chromatin in a cell with nuclear YAP or TAZ. A\nhit never identifies a paralogue; TEAD1 through TEAD4 share one matrix, and in most tissues more\nthan one is expressed. Equally important, a TEAD motif hit says nothing about the direction of the\noutput, because the same site is bound by TEAD with YAP/TAZ (activating) or with VGLL4\n(repressing), and TEAD occupancy in the absence of a coactivator does little. ChIP-derived TEAD\nmotifs are reasonably trustworthy here: HOCOMOCO grade-A models for TEAD1-4 combine ChIP-seq with\nin vitro selection (evidence codes PS or PSM), so direct binding is independently supported. The\nconverse caution applies to the reverse: YAP and TAZ ChIP-seq recovers the TEAD motif even though\nYAP and TAZ do not touch DNA [PMID:26258633], a textbook case of a coactivator \"having\" the motif of the protein\nthat recruits it. If a database entry attributes GGAATG to YAP1, WWTR1 or a VGLL protein, that is\nindirect binding.",
  "caveats": "GGAATG carries about 6 bits, so single hits are expected by chance and are not evidence on their own; tandem MCAT pairs and neighboring AP-1 sites are what make a hit credible. TEAD1-4 share one matrix and cannot be separated by sequence. A hit does not indicate activation: the same site is used by TEAD-YAP/TAZ and by repressive TEAD-VGLL4 complexes, and TEAD without a coactivator is largely inert. Any GGAATG motif attributed to YAP1, WWTR1/TAZ or a VGLL protein is indirect, since those proteins do not contact DNA. TEAD's own models are supported by in vitro selection as well as ChIP-seq.",
  "refs": [
   {
@@ -73,6 +72,109 @@
    "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
    "pmid": "32728250",
    "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  },
+  {
+   "cite": "Davidson I, Xiao JH, Rosales R, et al. The HeLa cell protein TEF-1 binds specifically and cooperatively to two SV40 enhancer motifs of unrelated sequence. Cell 1988;54:931-42.",
+   "pmid": "2843293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2843293/"
+  },
+  {
+   "cite": "Xiao JH, Davidson I, Matthes H, et al. Cloning, expression, and transcriptional properties of the human enhancer factor TEF-1. Cell 1991;65:551-68.",
+   "pmid": "1851669",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1851669/"
+  },
+  {
+   "cite": "Zhao B, Ye X, Yu J, et al. TEAD mediates YAP-dependent gene induction and growth control. Genes Dev 2008;22:1962-71.",
+   "pmid": "18579750",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18579750/"
+  },
+  {
+   "cite": "Zanconato F, Forcato M, Battilana G, et al. Genome-wide association between YAP/TAZ/TEAD and AP-1 at enhancers drives oncogenic growth. Nat Cell Biol 2015;17:1218-27.",
+   "pmid": "26258633",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26258633/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1988,
+   "finding": "TEF-1 is purified from HeLa cells as a protein that binds two sequence-unrelated SV40 enhancer motifs, GT-IIC and Sph, and binds cooperatively to tandem but not inverted or spaced repeats, which correlates with enhancer activity.",
+   "methods": "Protein purification, DNA-binding assays, enhancer assays",
+   "confidence": "medium",
+   "pmids": [
+    "2843293"
+   ],
+   "open": "How one protein recognized two unrelated motifs."
+  },
+  {
+   "year": 1991,
+   "finding": "Cloned TEF-1 is unrelated to known transcription factors and binds the GT-IIC and Sph enhansons, but its activation depends on a limiting, possibly cell-specific intermediary factor that it can squelch.",
+   "methods": "cDNA cloning, transfection, in vitro transcription, GAL4 chimeras",
+   "confidence": "medium",
+   "pmids": [
+    "1851669"
+   ],
+   "open": "The identity of the limiting coactivator."
+  },
+  {
+   "year": 2006,
+   "finding": "The solution structure of the TEA domain is a three-helix bundle with a homeodomain fold; its L1 loop is needed for cooperative loading on tandem MCAT sites, and on microarrays the isolated domain binds a broader set of elements than the known full-length sites.",
+   "methods": "NMR, structure-function mutagenesis, DNA microarray binding",
+   "confidence": "high",
+   "pmids": [
+    "17085591"
+   ]
+  },
+  {
+   "year": 2008,
+   "finding": "TEAD factors are required for YAP-dependent gene expression, growth, transformation and EMT, with CTGF as a direct target, and the YAP-TEAD relationship is conserved in Drosophila Yorkie and Scalloped, placing TEAD in the Hippo pathway.",
+   "methods": "Knockdown, reporter and transformation assays, Drosophila genetics",
+   "confidence": "high",
+   "pmids": [
+    "18579750"
+   ]
+  },
+  {
+   "year": 2009,
+   "finding": "TEAD4 is required to specify trophectoderm in the preimplantation mouse embryo, and Hippo signaling through LATS confines nuclear YAP, and so TEAD4 activity, to outer cells.",
+   "methods": "Knockout embryos, gain and loss of function in embryos and ES cells, protein localization",
+   "confidence": "high",
+   "pmids": [
+    "17913785",
+    "19289085"
+   ]
+  },
+  {
+   "year": 2010,
+   "finding": "The YAP-TEAD1 structure shows YAP wrapping the globular TEAD YAP-binding domain through three interfaces; a 2012 VGLL1-TEAD4 structure shows VGLL1 using the same surface despite an unrelated sequence.",
+   "methods": "X-ray crystallography, binding and functional assays",
+   "confidence": "high",
+   "pmids": [
+    "20123905",
+    "22632831"
+   ]
+  },
+  {
+   "year": 2015,
+   "finding": "In breast cancer cells YAP/TAZ reach DNA through TEAD at composite elements carrying both TEAD and AP-1 motifs, almost exclusively at distal enhancers that loop to promoters; AP-1 loss blunts YAP/TAZ-driven growth.",
+   "methods": "ChIP-seq, chromatin conformation, genetic gain and loss of function in cells and mice",
+   "confidence": "high",
+   "pmids": [
+    "26258633"
+   ]
+  },
+  {
+   "year": 2016,
+   "finding": "TEADs are palmitoylated on a conserved cysteine with the lipid buried in a central hydrophobic pocket, and the modification is required for folding and stability; by 2021 small molecules blocking auto-palmitoylation selectively inhibit NF2-deficient mesothelioma.",
+   "methods": "X-ray crystallography, biochemical palmitoylation assays, medicinal chemistry, xenografts",
+   "confidence": "high",
+   "pmids": [
+    "26724994",
+    "33850002"
+   ]
+  }
+ ],
+ "open": [
+  "Whether TEAD has a second binding specificity is unresolved: purified TEF-1 bound two SV40 motifs of unrelated sequence (GT-IIC and Sph) and the isolated TEA domain binds a broader set of elements on microarrays, yet every database model here reduces to the single GGAATG/CATTCC site.",
+  "How much genomic TEAD binding uses the cooperative tandem arrangement is not established: the most informative in vitro models (HT-SELEX TEAD1 and TEAD3) are paired CATTCC sites, whereas the ChIP-supported models are single sites."
  ]
 }

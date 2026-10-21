@@ -12,7 +12,7 @@
  ],
  "consensus": "CAGCTG",
  "short": "The four myogenic regulatory factors — MYOD1, MYF5, MYF6 (MRF4) and MYOG — plus the related repressor MSC (musculin/MyoR) are class II basic helix-loop-helix proteins restricted to the skeletal muscle lineage. They bind DNA as heterodimers with the ubiquitous class I E-proteins TCF3, TCF4 and TCF12, reading the E-box CAGCTG with a preference for A/T-rich flanks (AACAGCTGTT). MYOD1 was the first transcription factor shown to reprogram cell identity: transfecting it alone converts fibroblasts into myoblasts. Whether a myogenic bHLH activates muscle genes depends less on where it binds than on three residues in its basic region — the \"myogenic code\" — so an occupied E-box and an active one are not the same thing.",
- "long": "## The factors\n\nFour myogenic regulatory factors (MRFs) define this family: MYOD1, MYF5, MYF6 (MRF4) and MYOG (myogenin). The atlas also places MSC (musculin, also called MyoR and ABF-1) here, on motif similarity. All are class II bHLH proteins of about 68 residues in the DNA-binding domain, and all work as heterodimers with the broadly expressed class I E-proteins TCF3 (E12/E47), TCF4 and TCF12; MYOD1 can homodimerise in vitro, but the heterodimer is the active species in cells. MYOD1 and MYF5 act as determination factors and are largely interchangeable for that job, while MYOG and MYF6 act later in differentiation. Expression is restricted to the skeletal muscle lineage: MYF5 in early somitic and satellite-cell progenitors, MYOD1 in activated myoblasts and satellite cells, MYOG and MYF6 in differentiating and mature fibres. MSC is the odd member — a muscle-restricted bHLH that antagonises MyoD rather than cooperating with it, so a site assigned to this family can be an activating or a repressing site depending on which protein is present. MYOD1's historical importance is that transfecting it alone converts fibroblasts into myoblasts, the first demonstration that one transcription factor can switch cell identity.\n\n## The motif\n\nThe core is the E-box CANNTG, and the myogenic version is CAGCTG, usually written with its A/T-rich flanks as AACAGCTGTT. The data agree: the representative model is the Vierstra archetype `AC0075:MYOD/MYOG:bHLH` with consensus AACAGCTGTC, and JASPAR MSC, MYF6 and CIS-BP MYOG models all read AACAGCTGTT. Each monomer reads one CAN half-site through a basic-region glutamate and arginine, which is why CA...TG is fixed while the central two bases are loosely specified. Binding-site selection with MyoD and E2A complexes showed exactly this: both recognise CA--TG but differ in their flanking and internal preferences, consistent with independent half-site recognition.\n\nThe interesting part of the myogenic story is not the sequence but three residues in the protein. Replacing MyoD's helices or loop with the equivalent *Drosophila* achaete-scute sequence leaves both DNA binding and muscle-gene activation intact; replacing the basic region preserves DNA binding but abolishes activation. Transferring just three MyoD residues (Ala114, Thr115 and Lys124) into E12 confers myogenic specificity. The crystal structure of the MyoD bHLH-DNA complex then showed that Ala114 and Thr115 are buried at the protein-DNA interface, not exposed for coactivator contacts, and may instead fix the conformation of Arg111. So the \"myogenic code\" is a DNA-proximal effect, and binding is necessary but not sufficient: functional selection of transcriptionally active MyoD sites recovered sequences resembling real muscle promoters rather than the optimal in vitro binding site.\n\nTwo caveats about CAGCTG follow from this. First, genome-wide comparison of MYOD and NEUROD2 found CAGCTG shared between them, with CAGGTG (CACCTG on the other strand) as the MYOD-preferred motif and CAGATG as the NEUROD2-preferred one, and only the factor-specific sites tracked with transcription. JASPAR's MYOD1 MA0499.3 is indeed a GCACCTGTC-type model. Second, none of the four MRFs is distinguishable from the others: cohesion is 0.88 and the family is one motif.\n\n## Where it acts\n\nMRF sites sit in distal muscle enhancers and promoters — the MCK enhancer, the myogenin promoter, desmin, myosin heavy-chain and troponin loci — and are AT-rich rather than CpG-island-associated. Genome-wide, MYOD1 occupies far more sites than it activates, including many in non-muscle chromatin, and occupancy is largely limited to E-boxes that are already accessible; the cell's chromatin state, not the motif, picks the target set. Characteristic co-occurring motifs are MEF2 (an A/T-rich site often within a helical turn or two of the E-box in muscle enhancers), SRF/CArG, TEAD/MCAT, SIX and PBX/MEIS; MYOD1 also binds with PBX1 at some promoters. A \"muscle E-box pair\" of two CAGCTG sites is common in MRF-dependent enhancers but has no fixed spacing rule.\n\n## Biology and disease\n\nMice lacking both *Myod1* and *Myf5* form no skeletal muscle and no myoblasts, whereas single mutants are near-normal, showing the two are redundant determination factors. *Myog*-null mice reach birth but have a severe deficit of differentiated fibres and die perinatally. MSC/MyoR was identified as a muscle-restricted bHLH that inhibits MyoD-driven myogenesis. In human disease, the MRFs are both markers and drivers of rhabdomyosarcoma: MYOD1 and MYOG immunostaining is diagnostic, and a recurrent somatic MYOD1 p.Leu122Arg substitution defines an aggressive subset of embryonal/spindle-cell tumours. That mutation is instructive for motif work — it lies in the basic region and redirects MYOD1 to MYC consensus sequences, converting a differentiation factor into a proliferative one.\n\n## Reading a hit\n\nA CAGCTG match with A/T flanks is consistent with an MRF site but cannot name the factor, and cannot separate MRFs from E-protein homodimers, ASCL1/2, NHLH1/2, ATOH8, TCF21 or TWIST2, all of which give CAGCTG models. The A/T flank preference is real but worth only a bit or two. The strongest in vitro support in this family is `MYOD1.H14CORE.1.PSM.A` (grade A, ChIP plus HT-SELEX plus methyl-SELEX), so \"MyoD binds CAGCTG\" is well grounded; the MSC label is shakier, because the HOCOMOCO in vitro model `MUSC.H14CORE.0.SM.B` reads CATATGGT, a NeuroD/Atonal-type site, and is flagged as matching the TWIST/HAND family instead. One CIS-BP MYF5 model is inferred from the mouse protein (90% DBD identity), which is benign but should be noted. Because CAGCTG is one of the commonest six-mers in the genome, treat an isolated hit as a hypothesis requiring muscle expression, accessibility or conservation.",
+ "long": "## The factors\n\nFour myogenic regulatory factors (MRFs) define this family: MYOD1, MYF5, MYF6 (MRF4) and MYOG (myogenin). The atlas also places MSC (musculin, also called MyoR and ABF-1) here, on motif similarity. All are class II bHLH proteins of about 68 residues in the DNA-binding domain, and all work as heterodimers with the broadly expressed class I E-proteins TCF3 (E12/E47), TCF4 and TCF12; MYOD1 can homodimerise in vitro, but the heterodimer is the active species in cells. MYOD1 and MYF5 act as determination factors and are largely interchangeable for that job, while MYOG and MYF6 act later in differentiation. Expression is restricted to the skeletal muscle lineage: MYF5 in early somitic and satellite-cell progenitors, MYOD1 in activated myoblasts and satellite cells, MYOG and MYF6 in differentiating and mature fibres. MSC is the odd member — a muscle-restricted bHLH that antagonises MyoD rather than cooperating with it, so a site assigned to this family can be an activating or a repressing site depending on which protein is present. MYOD1's historical importance is that transfecting it alone converts fibroblasts into myoblasts, the first demonstration that one transcription factor can switch cell identity [PMID:3690668].\n\n## The motif\n\nThe core is the E-box CANNTG, and the myogenic version is CAGCTG, usually written with its A/T-rich flanks as AACAGCTGTT. The data agree: the representative model is the Vierstra archetype `AC0075:MYOD/MYOG:bHLH` with consensus AACAGCTGTC, and JASPAR MSC, MYF6 and CIS-BP MYOG models all read AACAGCTGTT. Each monomer reads one CAN half-site through a basic-region glutamate and arginine, which is why CA...TG is fixed while the central two bases are loosely specified. Binding-site selection with MyoD and E2A complexes showed exactly this: both recognise CA--TG but differ in their flanking and internal preferences, consistent with independent half-site recognition [PMID:2174572].\n\nThe interesting part of the myogenic story is not the sequence but three residues in the protein. Replacing MyoD's helices or loop with the equivalent *Drosophila* achaete-scute sequence leaves both DNA binding and muscle-gene activation intact; replacing the basic region preserves DNA binding but abolishes activation [PMID:2155707]. Transferring just three MyoD residues (Ala114, Thr115 and Lys124) into E12 confers myogenic specificity [PMID:1317057]. The crystal structure of the MyoD bHLH-DNA complex then showed that Ala114 and Thr115 are buried at the protein-DNA interface, not exposed for coactivator contacts, and may instead fix the conformation of Arg111 [PMID:8181063]. So the \"myogenic code\" is a DNA-proximal effect, and binding is necessary but not sufficient: functional selection of transcriptionally active MyoD sites recovered sequences resembling real muscle promoters rather than the optimal in vitro binding site [PMID:8668207].\n\nTwo caveats about CAGCTG follow from this. First, genome-wide comparison of MYOD and NEUROD2 found CAGCTG shared between them, with CAGGTG (CACCTG on the other strand) as the MYOD-preferred motif and CAGATG as the NEUROD2-preferred one, and only the factor-specific sites tracked with transcription [PMID:22445365]. JASPAR's MYOD1 MA0499.3 is indeed a GCACCTGTC-type model. Second, none of the four MRFs is distinguishable from the others: cohesion is 0.88 and the family is one motif.\n\n## Where it acts\n\nMRF sites sit in distal muscle enhancers and promoters — the MCK enhancer, the myogenin promoter, desmin, myosin heavy-chain and troponin loci — and are AT-rich rather than CpG-island-associated. Genome-wide, MYOD1 occupies far more sites than it activates, including many in non-muscle chromatin [PMID:20412780], and occupancy is largely limited to E-boxes that are already accessible; the cell's chromatin state, not the motif, picks the target set. Characteristic co-occurring motifs are MEF2 (an A/T-rich site often within a helical turn or two of the E-box in muscle enhancers), SRF/CArG, TEAD/MCAT, SIX and PBX/MEIS; MYOD1 also binds with PBX1 at some promoters. A \"muscle E-box pair\" of two CAGCTG sites is common in MRF-dependent enhancers but has no fixed spacing rule.\n\n## Biology and disease\n\nMice lacking both *Myod1* and *Myf5* form no skeletal muscle and no myoblasts, whereas single mutants are near-normal, showing the two are redundant determination factors [PMID:8269513]. *Myog*-null mice reach birth but have a severe deficit of differentiated fibres and die perinatally [PMID:8393145]. MSC/MyoR was identified as a muscle-restricted bHLH that inhibits MyoD-driven myogenesis [PMID:9892671]. In human disease, the MRFs are both markers and drivers of rhabdomyosarcoma: MYOD1 and MYOG immunostaining is diagnostic, and a recurrent somatic MYOD1 p.Leu122Arg substitution defines an aggressive subset of embryonal/spindle-cell tumours [PMID:24793135]. That mutation is instructive for motif work — it lies in the basic region and redirects MYOD1 to MYC consensus sequences, converting a differentiation factor into a proliferative one [PMID:24793135].\n\n## Reading a hit\n\nA CAGCTG match with A/T flanks is consistent with an MRF site but cannot name the factor, and cannot separate MRFs from E-protein homodimers, ASCL1/2, NHLH1/2, ATOH8, TCF21 or TWIST2, all of which give CAGCTG models. The A/T flank preference is real but worth only a bit or two. The strongest in vitro support in this family is `MYOD1.H14CORE.1.PSM.A` (grade A, ChIP plus HT-SELEX plus methyl-SELEX), so \"MyoD binds CAGCTG\" is well grounded; the MSC label is shakier, because the HOCOMOCO in vitro model `MUSC.H14CORE.0.SM.B` reads CATATGGT, a NeuroD/Atonal-type site, and is flagged as matching the TWIST/HAND family instead. One CIS-BP MYF5 model is inferred from the mouse protein (90% DBD identity), which is benign but should be noted. Because CAGCTG is one of the commonest six-mers in the genome, treat an isolated hit as a hypothesis requiring muscle expression, accessibility or conservation.",
  "caveats": "CAGCTG is among the most frequent six-mers in mammalian genomes and is read by E-protein homodimers, ASCL1/2, NHLH1/2, ATOH8, TCF21 and TWIST2 as well as by the MRFs, so a match places a site in the broad class II bHLH space rather than in muscle. The four MRFs share one motif and cannot be distinguished; nor can the activator MYOD1 be distinguished from the repressor MSC, whose in vitro model in HOCOMOCO is a CATATG site that clusters with TWIST/HAND instead. Binding also does not imply activation: the myogenic code governs activation, not affinity. Muscle-lineage expression and open chromatin are required to make a hit meaningful.",
  "refs": [
   {
@@ -75,5 +75,93 @@
    "pmid": "22445365",
    "url": "https://pubmed.ncbi.nlm.nih.gov/22445365/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1987,
+   "finding": "A single transfected cDNA, MyoD, converts fibroblasts into myoblasts, the first demonstration that one transcription factor can switch a cell's identity.",
+   "methods": "subtractive cloning and transfection of 10T1/2 fibroblasts",
+   "confidence": "medium",
+   "pmids": [
+    "3690668"
+   ],
+   "open": "No DNA sequence was yet attributed to the protein."
+  },
+  {
+   "year": 1990,
+   "finding": "Binding-site selection shows MyoD and E2A complexes both read a CA--TG core with different flanking and internal preferences, implying independent half-site recognition, while domain swaps place the determinant of myogenic activation in the basic region rather than in the helix-loop-helix.",
+   "methods": "in vitro binding-site selection; chimeric proteins in conversion assays",
+   "confidence": "medium",
+   "pmids": [
+    "2174572",
+    "2155707"
+   ],
+   "open": "Why a DNA-binding segment, rather than an activation domain, should carry the myogenic code."
+  },
+  {
+   "year": 1992,
+   "finding": "Substituting three MyoD residues (Ala114, Thr115 and Lys124) into E12 is enough to confer myogenic specificity, defining a minimal 'myogenic code'.",
+   "methods": "site-directed mutagenesis and myogenic conversion assays",
+   "confidence": "medium",
+   "pmids": [
+    "1317057"
+   ],
+   "open": "Whether those residues work by contacting DNA or by presenting a surface to coactivators."
+  },
+  {
+   "year": 1993,
+   "finding": "Mice lacking both Myod1 and Myf5 form no skeletal muscle and no myoblasts while single mutants are near-normal, and Myog-null mice make myoblasts but few differentiated fibres, splitting the family into redundant determination factors and a non-redundant differentiation factor.",
+   "methods": "mouse gene targeting",
+   "confidence": "medium",
+   "pmids": [
+    "8269513",
+    "8393145"
+   ]
+  },
+  {
+   "year": 1994,
+   "finding": "The MyoD bHLH-DNA crystal structure shows Ala114 and Thr115 buried at the protein-DNA interface rather than exposed to coactivators, so the myogenic code acts through the DNA contact surface, possibly by fixing the conformation of Arg111.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "8181063"
+   ],
+   "open": "How a buried residue converts into transcriptional output was left as a proposal."
+  },
+  {
+   "year": 1996,
+   "finding": "Functional random-sequence selection for transcriptionally active MyoD sites recovers sequences that resemble real muscle promoters rather than the highest-affinity in vitro site, separating binding requirements from activation requirements.",
+   "methods": "functional random sequence selection in cells",
+   "confidence": "medium",
+   "pmids": [
+    "8668207"
+   ]
+  },
+  {
+   "year": 2010,
+   "finding": "Genome-wide mapping shows MyoD constitutively occupies thousands of sites well beyond muscle genes, and a side-by-side comparison with NEUROD2 then separates a shared CAGCTG site from factor-specific sites (CAGGTG for MYOD, CAGATG for NEUROD2), with transcription following only the specific sites and occupancy limited to E-boxes in accessible chromatin.",
+   "methods": "ChIP-seq in myoblasts and myotubes; cross-lineage ChIP-seq and expression profiling",
+   "confidence": "medium",
+   "pmids": [
+    "20412780",
+    "22445365"
+   ],
+   "open": "Occupancy and activation remain only loosely coupled, so the determinants of a productive MyoD site are still not predictable from sequence."
+  },
+  {
+   "year": 2014,
+   "finding": "A recurrent somatic MYOD1 p.Leu122Arg substitution in embryonal rhabdomyosarcoma, in the basic region, blocks wild-type MYOD1 and redirects binding to MYC consensus sequences, turning a differentiation factor into a proliferative one.",
+   "methods": "whole-exome sequencing of tumours, interpreted against earlier mutagenesis",
+   "confidence": "medium",
+   "pmids": [
+    "24793135"
+   ]
+  }
+ ],
+ "open": [
+  "Occupancy and activation are still not reconciled: MyoD binds thousands of E-boxes that it does not activate, and whether productive sites are picked by flanking sequence, by E-box pairing, by cofactors such as MEF2 and PBX, or only by pre-existing chromatin accessibility remains contested.",
+  "Which CAGCTG matches belong to the myogenic program cannot be decided from sequence, because E-protein homodimers, ASCL1/2, NHLH1/2, ATOH8, TCF21 and TWIST2 give indistinguishable models, and the A/T flank preference reported for MRFs is worth only a bit or two of information.",
+  "The placement of MSC/musculin in this family is doubtful: its HOCOMOCO in vitro model reads the NeuroD/Atonal-type site CATATGGT and is flagged as matching TWIST/HAND, so whether MSC shares the MRF site or has its own is unresolved by the current data.",
+  "How the buried myogenic residues Ala114 and Thr115 convert into transcriptional activation is still a structural proposal rather than a demonstrated mechanism, since the crystal structure placed them at the DNA interface instead of on a coactivator-binding surface."
  ]
 }

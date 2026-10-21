@@ -12,7 +12,7 @@
  ],
  "consensus": "AGGTCAnAGGTCA",
  "short": "COUP-TFI (NR2F1), COUP-TFII (NR2F2) and EAR2 (NR2F6) are orphan nuclear receptors that bind DNA as homodimers, most often on a DR1: two AGGTCA half-sites in the same orientation separated by one base pair. Their distinguishing property is not a private consensus but promiscuity - the same dimer accommodates direct repeats with several spacings, plus inverted and everted arrangements of the same hexamer - which is how COUP-TFs compete with vitamin D, thyroid hormone and retinoic acid receptors for shared elements and repress them. The three paralogues share one motif and are also not separable from RXR homodimers, HNF4/TR2-TR4 or ERR sites. COUP-TFII specifies venous identity and is required for angiogenesis; NR2F1 mutations cause an optic atrophy and intellectual disability syndrome.",
- "long": "## The factors\n\nThree paralogues: NR2F1 (COUP-TFI, EAR3), NR2F2 (COUP-TFII, ARP1) and NR2F6 (EAR2). COUP-TF was purified as a factor binding upstream of the chicken ovalbumin gene and cloned as a member of the steroid receptor superfamily (Wang et al. 1989); NR2F1 and NR2F2 are among the most conserved nuclear receptors known (Lin et al. 2011). Each has a C4 double-zinc-finger DNA-binding domain (DBD) with a C-terminal extension and a ligand-binding domain; they bind as homodimers and can heterodimerize with RXR. The ligand-free COUP-TFII ligand-binding domain, solved at 1.48 A, is in an autorepressed conformation, with helix alpha10 folded into the ligand pocket and the activation function-2 helix occupying the coactivator groove; retinoic acid at concentrations above physiological levels releases this, so COUP-TFII is ligand-regulatable but has no established endogenous ligand (Kruse et al. 2008). NR2F1 is expressed in brain, eye, inner ear and neural crest derivatives, NR2F2 in mesenchyme, venous endothelium and reproductive tract, NR2F6 broadly including lymphocytes. Twenty-one models fall in this family (JASPAR 7, HOCOMOCO 8, CIS-BP 3, Vierstra 3).\n\n## The motif\n\nThe core arrangement is a DR1: AGGTCA-n-AGGTCA, 13 bp, seen in the data as AGGTCAAAGGTCA (JASPAR NR2F1 MA1537.2, HOCOMOCO COT1.H14CORE.1.PSM.A). The family's data consensus is the shorter AaAGGTCA, an extended single half-site, because many models here are half-sites with a 5' A or AA rather than full dimeric elements.\n\nA counting convention trips people up constantly and is worth stating plainly. The original characterisation described COUP-TF elements as direct repeats of GGTCA with a 2 bp spacing; modern usage calls the identical element a DR1, a direct repeat of AGGTCA with a 1 bp spacing. The two descriptions differ only in whether the half-site is defined as a 5-mer or a 6-mer. Compare like with like before concluding that two sources disagree.\n\nThe real signature of this family is tolerance of geometry. Aligning natural COUP-TF elements showed that besides the predominant direct repeat, functional sites vary in both orientation and spacing of the GGTCA motif; the functional DNA-binding form is a dimer needing two half-sites, and the dimer undergoes a substantial structural adaptation to accommodate these variants. The consequence is that COUP-TF can occupy the response elements of the vitamin D, thyroid hormone and retinoic acid receptors and down-regulate their hormonal induction (Cooney et al. 1992). The models in this collection reproduce that range: DR1 (NR2F1 MA1537.2), DR2 (NR2F6 MA0728.1, gAGGTCAAaAGGTCA), IR1 (NR2F1 MA1538.1 and NR2F6 MA1539.1, aAGGTCAnTGACCTt), IR2 (NR2F6.H14CORE.3.SM.B, AAGGTCAatGacC) and bare half-sites (AGGTCA, AAGGTCA).\n\nNothing here separates the paralogues: NR2F1, NR2F2 and NR2F6 models are 0.96-0.99 similar to each other. Worse, they are barely separable from other families - members' best match outside this family runs 0.89-0.98, and two of the three Vierstra archetypes assigned here are labelled NR2F/RXRG and NR2F/RXRA because COUP-TF and RXR footprints cluster together. Protein-binding microarrays did detect a polarity preference within the DR1 for COUP-TFII, as for HNF4A and RXRA homodimers (Fang et al. 2012), but that is a quantitative preference, not a discriminator you can apply to a single hit.\n\n## Where it acts\n\nMostly distal enhancers in mesenchyme and endothelium, with NR2F2 marking venous rather than arterial endothelium. Functionally many COUP-TF sites are repressive, and the mechanism documented in detail is competition: occupying a DR element that another receptor needs (Cooney et al. 1992). COUP-TF motifs co-occur with SOX, FOX and GATA sites in neural and cardiovascular enhancers, and because the element is a plain DR1 they overlap physically with RXR-heterodimer and HNF4 elements in the same regions.\n\n## Biology and disease\n\nNr2f2-null mouse embryos die around E10.5 with defective angiogenesis and heart development (Pereira et al. 1999). Deleting COUP-TFII in endothelium makes veins acquire arterial characteristics, including neuropilin 1 and Notch pathway markers, while ectopic expression fuses veins and arteries - COUP-TFII maintains vein identity by repressing Notch signalling (You et al. 2005). In tumour models COUP-TFII promotes growth and metastasis by supporting tumour angiogenesis (Qin et al. 2010). In humans, heterozygous NR2F1 point mutations and deletions cause Bosch-Boonstra-Schaaf optic atrophy syndrome, combining optic atrophy or hypoplasia with developmental delay and intellectual disability (Bosch et al. 2014), and rare NR2F2 variants cause congenital heart defects, notably atrioventricular septal defects (Al Turki et al. 2014).\n\n## Reading a hit\n\nA DR1 hit licenses very little. It does not name the paralogue, and it does not even name the family: RXR homodimers, PPAR:RXR, HNF4A and the TR2/TR4 heterodimer all use DR1, and their matrices in this atlas sit within 0.89-0.98 of the models here. Report the geometry you actually see - spacing and orientation - and state the counting convention you used, because a DR1 under one convention is a 2 bp-spaced repeat under another. Given about 11 informative positions in a 13 bp element, near-consensus DR1s occur tens of thousands of times per haploid genome, far more than any COUP-TF cistrome. Half-site-only models (eight of the twenty-one here read AGGTCA, gGGTCa, AAGGTCA or AaAGGTCA) should not be scanned genome-wide. Evidence codes help a little: NR2F1 and NR2F6 have grade A HOCOMOCO models with combined ChIP, HT-SELEX and methyl-SELEX support (PSM), so direct binding is not in doubt; what a hit cannot tell you is which NR2F protein, or whether a different DR1-binding receptor was there instead.",
+ "long": "## The factors\n\nThree paralogues: NR2F1 (COUP-TFI, EAR3), NR2F2 (COUP-TFII, ARP1) and NR2F6 (EAR2). COUP-TF was purified as a factor binding upstream of the chicken ovalbumin gene and cloned as a member of the steroid receptor superfamily (Wang et al. 1989) [PMID:2739739]; NR2F1 and NR2F2 are among the most conserved nuclear receptors known (Lin et al. 2011) [PMID:21257780]. Each has a C4 double-zinc-finger DNA-binding domain (DBD) with a C-terminal extension and a ligand-binding domain; they bind as homodimers and can heterodimerize with RXR [PMID:1324415,1311101]. The ligand-free COUP-TFII ligand-binding domain, solved at 1.48 A, is in an autorepressed conformation, with helix alpha10 folded into the ligand pocket and the activation function-2 helix occupying the coactivator groove; retinoic acid at concentrations above physiological levels releases this, so COUP-TFII is ligand-regulatable but has no established endogenous ligand (Kruse et al. 2008) [PMID:18798693]. NR2F1 is expressed in brain, eye, inner ear and neural crest derivatives, NR2F2 in mesenchyme, venous endothelium and reproductive tract, NR2F6 broadly including lymphocytes. Twenty-one models fall in this family (JASPAR 7, HOCOMOCO 8, CIS-BP 3, Vierstra 3).\n\n## The motif\n\nThe core arrangement is a DR1: AGGTCA-n-AGGTCA, 13 bp, seen in the data as AGGTCAAAGGTCA (JASPAR NR2F1 MA1537.2, HOCOMOCO COT1.H14CORE.1.PSM.A). The family's data consensus is the shorter AaAGGTCA, an extended single half-site, because many models here are half-sites with a 5' A or AA rather than full dimeric elements.\n\nA counting convention trips people up constantly and is worth stating plainly. The original characterisation described COUP-TF elements as direct repeats of GGTCA with a 2 bp spacing [PMID:1324415]; modern usage calls the identical element a DR1, a direct repeat of AGGTCA with a 1 bp spacing [PMID:1311101]. The two descriptions differ only in whether the half-site is defined as a 5-mer or a 6-mer. Compare like with like before concluding that two sources disagree.\n\nThe real signature of this family is tolerance of geometry. Aligning natural COUP-TF elements showed that besides the predominant direct repeat, functional sites vary in both orientation and spacing of the GGTCA motif; the functional DNA-binding form is a dimer needing two half-sites, and the dimer undergoes a substantial structural adaptation to accommodate these variants. The consequence is that COUP-TF can occupy the response elements of the vitamin D, thyroid hormone and retinoic acid receptors and down-regulate their hormonal induction (Cooney et al. 1992) [PMID:1324415]. The models in this collection reproduce that range: DR1 (NR2F1 MA1537.2), DR2 (NR2F6 MA0728.1, gAGGTCAAaAGGTCA), IR1 (NR2F1 MA1538.1 and NR2F6 MA1539.1, aAGGTCAnTGACCTt), IR2 (NR2F6.H14CORE.3.SM.B, AAGGTCAatGacC) and bare half-sites (AGGTCA, AAGGTCA).\n\nNothing here separates the paralogues: NR2F1, NR2F2 and NR2F6 models are 0.96-0.99 similar to each other. Worse, they are barely separable from other families - members' best match outside this family runs 0.89-0.98, and two of the three Vierstra archetypes assigned here are labelled NR2F/RXRG and NR2F/RXRA because COUP-TF and RXR footprints cluster together. Protein-binding microarrays did detect a polarity preference within the DR1 for COUP-TFII, as for HNF4A and RXRA homodimers (Fang et al. 2012) [PMID:22383578], but that is a quantitative preference, not a discriminator you can apply to a single hit.\n\n## Where it acts\n\nMostly distal enhancers in mesenchyme and endothelium, with NR2F2 marking venous rather than arterial endothelium [PMID:15875024]. Functionally many COUP-TF sites are repressive, and the mechanism documented in detail is competition: occupying a DR element that another receptor needs (Cooney et al. 1992) [PMID:1324415,1311101]. COUP-TF motifs co-occur with SOX, FOX and GATA sites in neural and cardiovascular enhancers, and because the element is a plain DR1 they overlap physically with RXR-heterodimer and HNF4 elements in the same regions.\n\n## Biology and disease\n\nNr2f2-null mouse embryos die around E10.5 with defective angiogenesis and heart development (Pereira et al. 1999) [PMID:10215630]. Deleting COUP-TFII in endothelium makes veins acquire arterial characteristics, including neuropilin 1 and Notch pathway markers, while ectopic expression fuses veins and arteries - COUP-TFII maintains vein identity by repressing Notch signalling (You et al. 2005) [PMID:15875024]. In tumour models COUP-TFII promotes growth and metastasis by supporting tumour angiogenesis (Qin et al. 2010) [PMID:20133706]. In humans, heterozygous NR2F1 point mutations and deletions cause Bosch-Boonstra-Schaaf optic atrophy syndrome, combining optic atrophy or hypoplasia with developmental delay and intellectual disability (Bosch et al. 2014) [PMID:24462372], and rare NR2F2 variants cause congenital heart defects, notably atrioventricular septal defects (Al Turki et al. 2014) [PMID:24702954].\n\n## Reading a hit\n\nA DR1 hit licenses very little. It does not name the paralogue, and it does not even name the family: RXR homodimers, PPAR:RXR, HNF4A and the TR2/TR4 heterodimer all use DR1, and their matrices in this atlas sit within 0.89-0.98 of the models here. Report the geometry you actually see - spacing and orientation - and state the counting convention you used, because a DR1 under one convention is a 2 bp-spaced repeat under another. Given about 11 informative positions in a 13 bp element, near-consensus DR1s occur tens of thousands of times per haploid genome, far more than any COUP-TF cistrome. Half-site-only models (eight of the twenty-one here read AGGTCA, gGGTCa, AAGGTCA or AaAGGTCA) should not be scanned genome-wide. Evidence codes help a little: NR2F1 and NR2F6 have grade A HOCOMOCO models with combined ChIP, HT-SELEX and methyl-SELEX support (PSM), so direct binding is not in doubt; what a hit cannot tell you is which NR2F protein, or whether a different DR1-binding receptor was there instead.",
  "caveats": "This is one of the least discriminating motifs in the atlas. NR2F1, NR2F2 and NR2F6 models are 0.96-0.99 similar to each other, and their best matches outside the family run 0.89-0.98 - RXR homodimers, PPAR:RXR, HNF4A and TR2/TR4 all bind the same DR1. Two of the three Vierstra archetypes here are named NR2F/RXRG and NR2F/RXRA for that reason. Eight of the twenty-one models are single half-sites. COUP-TF also binds DR, IR and everted arrangements with several spacings, so geometry constrains the candidates less than it does for most nuclear receptor families. Treat a hit as evidence that some DR1-binding nuclear receptor could bind, and use expression and chromatin data to go further.",
  "refs": [
   {
@@ -64,6 +64,93 @@
    "cite": "Al Turki S, Manickaraj AK, Mercer CL, et al. Rare variants in NR2F2 cause congenital heart defects in humans. Am J Hum Genet 2014;94:574-85.",
    "pmid": "24702954",
    "url": "https://pubmed.ncbi.nlm.nih.gov/24702954/"
+  },
+  {
+   "cite": "Kliewer SA, Umesono K, Heyman RA, et al. Retinoid X receptor-COUP-TF interactions modulate retinoic acid signaling. Proc Natl Acad Sci U S A 1992;89:1448-52.",
+   "pmid": "1311101",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1311101/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1989,
+   "finding": "COUP-TF, a factor required for chicken ovalbumin promoter transcription that also binds the rat insulin promoter, is cloned and found to be a member of the steroid/thyroid hormone receptor superfamily.",
+   "methods": "Protein purification and cDNA cloning, cell-free transcription",
+   "confidence": "medium",
+   "pmids": [
+    "2739739"
+   ],
+   "open": "Its DNA-binding rules, and why two dissimilar promoter sites both bind it."
+  },
+  {
+   "year": 1992,
+   "finding": "RXR and COUP-TF both bind preferentially to a DR1, form heterodimers on it in vitro, and COUP-TF fully represses RXR-mediated activation in cells, filling the DR1 slot left by the 3-4-5 rule.",
+   "methods": "In vitro DNA binding, cotransfection reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "1311101"
+   ]
+  },
+  {
+   "year": 1992,
+   "finding": "COUP-TF binds as a dimer needing two GGTCA half-sites, but tolerates direct repeats and palindromes with different spacings, which lets it occupy vitamin D, thyroid hormone and retinoic acid receptor elements and repress their induction.",
+   "methods": "In vitro binding to spacing and orientation variants, reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "1324415"
+   ],
+   "open": "How a single dimer accommodates so many half-site geometries at the structural level."
+  },
+  {
+   "year": 1999,
+   "finding": "Deleting Nr2f2 is embryonic lethal with failed remodeling of the primitive capillary plexus and atria and sinus venosus arrested at the primitive tube stage, with Angiopoietin-1 down-regulated.",
+   "methods": "Mouse knockout, histology, expression analysis",
+   "confidence": "medium",
+   "pmids": [
+    "10215630"
+   ]
+  },
+  {
+   "year": 2005,
+   "finding": "COUP-TFII is expressed in venous but not arterial endothelium; removing it gives veins arterial markers and Notch signalling, and ectopic expression fuses veins and arteries, so vein identity is actively specified rather than a default state.",
+   "methods": "Endothelial conditional knockout, transgenic ectopic expression",
+   "confidence": "medium",
+   "pmids": [
+    "15875024"
+   ]
+  },
+  {
+   "year": 2008,
+   "finding": "The 1.48 Å ligand-free structure of the COUP-TFII ligand-binding domain is autorepressed, with helix alpha10 bent into the pocket and the AF-2 helix in the coactivator groove; retinoic acid releases it, but only above physiological concentrations.",
+   "methods": "X-ray crystallography, mutagenesis, coactivator recruitment and reporter assays",
+   "confidence": "high",
+   "pmids": [
+    "18798693"
+   ],
+   "open": "Whether an endogenous ligand exists at all, and why the receptor is constitutively active in cell lines despite the autorepressed structure."
+  },
+  {
+   "year": 2012,
+   "finding": "Protein-binding microarrays comparing COUP-TFII with HNF4A and RXRA detect a previously unrecognized polarity preference within the DR1 for all three homodimers, while only HNF4A has a private element.",
+   "methods": "Protein-binding microarrays",
+   "confidence": "medium",
+   "pmids": [
+    "22383578"
+   ]
+  },
+  {
+   "year": 2014,
+   "finding": "Heterozygous NR2F1 mutations and deletions cause optic atrophy with intellectual disability (Bosch-Boonstra-Schaaf syndrome), and rare NR2F2 variants cause congenital heart defects, establishing both paralogues as human disease genes.",
+   "methods": "Exome sequencing and copy-number analysis in patient cohorts",
+   "confidence": "medium",
+   "pmids": [
+    "24462372",
+    "24702954"
+   ]
+  }
+ ],
+ "open": [
+  "Whether COUP-TFs have an endogenous ligand is unresolved: the COUP-TFII ligand-binding domain crystallizes in an autorepressed conformation that retinoic acid can release, but only at concentrations above physiological levels, while the receptor is constitutively active in cell lines.",
+  "How COUP-TFs repress most of their targets is not settled: competition for shared DR elements, sequestration of RXR into heterodimers, and active repression through the receptor's own repression domains have all been documented, and their relative contribution across the genome is unknown."
  ]
 }

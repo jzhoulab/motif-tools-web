@@ -12,7 +12,7 @@
  ],
  "consensus": "GCGTGGGCG",
  "short": "EGR1 to EGR4 are immediate-early transcription factors whose three C2H2 zinc fingers read a nine-base GC-rich site, GCGTGGGCG, also written GCGGGGGCG. The first of these proteins, EGR1, is better known to structural biologists as Zif268: its complex with DNA was the crystal structure that established how zinc fingers recognize DNA, three bases per finger, and it remains the reference for the C2H2 recognition code. EGR proteins are induced within minutes by growth factors, serum and neuronal activity, so their sites sit in the promoters of rapidly inducible genes. All four paralogues share the same matrix, and the WT1 tumor suppressor binds essentially the same sequence, so a hit names a site rather than a protein.",
- "long": "## The factors\n\nEGR1, EGR2, EGR3 and EGR4 are four paralogous immediate-early transcription factors, each with three Cys2-His2 zinc fingers and a set of aliases reflecting their independent discovery: EGR1 is also Zif268, NGFI-A, Krox-24 and zif/268; EGR2 is Krox-20; EGR4 is NGFI-C (Christy and Nathans 1989; Patwardhan et al. 1991). Their mRNAs are induced within minutes of exposure to growth factors, serum, mitogens or neuronal activity, which is what \"immediate-early\" means here: the protein is largely absent from unstimulated cells. EGR1 is broadly inducible; EGR2 is prominent in Schwann cells and the developing hindbrain; EGR3 in neurons and muscle spindles; EGR4 is largely restricted to brain. All four bind DNA as monomers. One further protein must be kept in mind: the Wilms tumor suppressor WT1 has a closely related four-finger domain and recognizes essentially the same site (Rauscher et al. 1990). WT1 is a separate family in this atlas, but it is not separable from EGR by sequence alone.\n\n## The motif\n\nThe site is nine base pairs, usually written GCGTGGGCG or GCGGGGGCG; the reverse-complement form, CGCCCACGC, is how several matrices in this atlas are stored (the medoid, CIS-BP M04461_2.00, is CCGCCCACGCA, which is TGCGTGGGCGG read from the other strand). Recognition is the textbook case. The 2.1 A crystal structure of the three Zif268 fingers bound to a consensus site showed the fingers lying in the major groove and wrapping part way around B-DNA, each finger contacting a three-base subsite through residues at positions -1, 3 and 6 of its recognition helix (Pavletich and Pabo 1991); the structure was later refined to 1.6 A (Elrod-Erickson et al. 1996) and became the basis of the general C2H2 code (Wolfe et al. 2000; Zhang et al. 2024). Random-site selection showed that EGR1, EGR2, EGR3 and EGR4 all bind and activate from GCGGGGGCG and from a family of closely related variants, with only modest differences among them (Swirnoff and Milbrandt 1995). The atlas data agree emphatically: 15 matrices, four gene symbols, cohesion 0.90, and the JASPAR profiles for EGR1, EGR2, EGR3 and EGR4 are all the same 11-mer, ACGCCCACGCA. Nothing distinguishes the paralogues. The useful comparison is outward, to the other GC-rich families. EGR's signature is the CACGC / GCGTG triplet immediately adjacent to a GGGCG block; the KLF/SP GC-box, GGGGCGGGG, lacks it, and the KLF/SP in vitro consensus CCACGCCC shares the pentamer CCACG with the reverse complement of the EGR site but places it differently. Where a nine-mer matches both models at comparable scores, sequence cannot decide, and that situation is common.\n\n## Where it acts\n\nEGR sites are promoter-proximal and GC-rich, concentrated near CpG islands and in the promoters of rapidly inducible genes. Because EGR protein appears only after stimulation, occupancy is condition-dependent in a way that the sequence does not reveal: the same site can be empty in a resting cell and bound minutes after serum addition. The classic co-occurrence problem is with the GC-box factors. When the CT/GC-rich element of the human IL-3 promoter (positions -76 to -47) was used as bait in an expression screen, the clones recovered were EGR1, EGR2 and the unrelated zinc-finger protein DB1/VEZF1; in gel-shift assays DB1 bound the element constitutively while EGR1 bound only after T-cell activation (Koyano-Nakagawa et al. 1994). That single experiment is a compact demonstration of both the overlap and its resolution: the same element, different factors, distinguished by condition rather than by sequence. EGR sites also overlap WT1 sites directly, and the two proteins compete at shared sequences.\n\n## Biology and disease\n\nEgr1-null mice are viable but females are infertile because of a specific failure to produce luteinizing hormone beta, identifying EGR1 as the factor required for LH-beta expression (Lee et al. 1996). Egr2/Krox-20 null mice fail to myelinate peripheral nerves, establishing EGR2 as a control point for Schwann cell myelination (Topilko et al. 1994), and human EGR2 mutations cause hereditary myelinopathies in the Charcot-Marie-Tooth and congenital hypomyelinating neuropathy spectrum (Warner et al. 1998). EGR1 has been implicated in growth-factor responses, apoptosis and tumor suppression in various tissues, though the direction of effect is context-dependent and the literature is not settled. EGR3 and EGR4 have narrower documented roles, largely neuronal.\n\n## Reading a hit\n\nA match identifies the EGR site, not an EGR protein - and possibly not even an EGR protein, since WT1 binds the same sequence. The evidence that EGR factors really bind this sequence is unusually good: the HOCOMOCO models for EGR1, EGR2 and EGR3 carry combined ChIP and HT-SELEX or methyl-HT-SELEX evidence at grade A, so the label is in vitro supported, not ChIP-inferred. Two entries in the family are weaker and should not be used alone: EGR4.H14CORE.0.S.B is an eight-position model whose nearest neighbors across the databases lie outside this family, and the Vierstra archetype AC0262:EGR carries only 5.6 bits, too little to call anything. One archetype is explicitly named AC0519:EGR/WT, which is the clustering telling you that the EGR and WT1 motifs merged. Practically: a nine-base GC-rich site is common in promoters, so treat an isolated hit as weak evidence; and because EGR proteins are stimulus-induced, a real site may be unoccupied in whatever cell state you sampled.",
+ "long": "## The factors\n\nEGR1, EGR2, EGR3 and EGR4 are four paralogous immediate-early transcription factors, each with three Cys2-His2 zinc fingers and a set of aliases reflecting their independent discovery: EGR1 is also Zif268, NGFI-A, Krox-24 and zif/268; EGR2 is Krox-20; EGR4 is NGFI-C (Christy and Nathans 1989; Patwardhan et al. 1991) [PMID:2510170,1906159]. Their mRNAs are induced within minutes of exposure to growth factors, serum, mitogens or neuronal activity, which is what \"immediate-early\" means here: the protein is largely absent from unstimulated cells. EGR1 is broadly inducible; EGR2 is prominent in Schwann cells and the developing hindbrain; EGR3 in neurons and muscle spindles; EGR4 is largely restricted to brain. All four bind DNA as monomers. One further protein must be kept in mind: the Wilms tumor suppressor WT1 has a closely related four-finger domain and recognizes essentially the same site (Rauscher et al. 1990) [PMID:2244209]. WT1 is a separate family in this atlas, but it is not separable from EGR by sequence alone.\n\n## The motif\n\nThe site is nine base pairs, usually written GCGTGGGCG or GCGGGGGCG; the reverse-complement form, CGCCCACGC, is how several matrices in this atlas are stored (the medoid, CIS-BP M04461_2.00, is CCGCCCACGCA, which is TGCGTGGGCGG read from the other strand). Recognition is the textbook case. The 2.1 A crystal structure of the three Zif268 fingers bound to a consensus site showed the fingers lying in the major groove and wrapping part way around B-DNA, each finger contacting a three-base subsite through residues at positions -1, 3 and 6 of its recognition helix (Pavletich and Pabo 1991) [PMID:2028256]; the structure was later refined to 1.6 A (Elrod-Erickson et al. 1996) [PMID:8939742] and became the basis of the general C2H2 code (Wolfe et al. 2000; Zhang et al. 2024) [PMID:10940247,38754172]. Random-site selection showed that EGR1, EGR2, EGR3 and EGR4 all bind and activate from GCGGGGGCG and from a family of closely related variants, with only modest differences among them (Swirnoff and Milbrandt 1995) [PMID:7891721]. The atlas data agree emphatically: 15 matrices, four gene symbols, cohesion 0.90, and the JASPAR profiles for EGR1, EGR2, EGR3 and EGR4 are all the same 11-mer, ACGCCCACGCA. Nothing distinguishes the paralogues. The useful comparison is outward, to the other GC-rich families. EGR's signature is the CACGC / GCGTG triplet immediately adjacent to a GGGCG block; the KLF/SP GC-box, GGGGCGGGG, lacks it, and the KLF/SP in vitro consensus CCACGCCC shares the pentamer CCACG with the reverse complement of the EGR site but places it differently. Where a nine-mer matches both models at comparable scores, sequence cannot decide, and that situation is common.\n\n## Where it acts\n\nEGR sites are promoter-proximal and GC-rich, concentrated near CpG islands and in the promoters of rapidly inducible genes. Because EGR protein appears only after stimulation, occupancy is condition-dependent in a way that the sequence does not reveal: the same site can be empty in a resting cell and bound minutes after serum addition. The classic co-occurrence problem is with the GC-box factors. When the CT/GC-rich element of the human IL-3 promoter (positions -76 to -47) was used as bait in an expression screen, the clones recovered were EGR1, EGR2 and the unrelated zinc-finger protein DB1/VEZF1; in gel-shift assays DB1 bound the element constitutively while EGR1 bound only after T-cell activation (Koyano-Nakagawa et al. 1994) [PMID:8035792]. That single experiment is a compact demonstration of both the overlap and its resolution: the same element, different factors, distinguished by condition rather than by sequence. EGR sites also overlap WT1 sites directly, and the two proteins compete at shared sequences [PMID:2244209,7862142].\n\n## Biology and disease\n\nEgr1-null mice are viable but females are infertile because of a specific failure to produce luteinizing hormone beta, identifying EGR1 as the factor required for LH-beta expression (Lee et al. 1996) [PMID:8703054]. Egr2/Krox-20 null mice fail to myelinate peripheral nerves, establishing EGR2 as a control point for Schwann cell myelination (Topilko et al. 1994) [PMID:7935840], and human EGR2 mutations cause hereditary myelinopathies in the Charcot-Marie-Tooth and congenital hypomyelinating neuropathy spectrum (Warner et al. 1998) [PMID:9537424]. EGR1 has been implicated in growth-factor responses, apoptosis and tumor suppression in various tissues, though the direction of effect is context-dependent and the literature is not settled. EGR3 and EGR4 have narrower documented roles, largely neuronal.\n\n## Reading a hit\n\nA match identifies the EGR site, not an EGR protein - and possibly not even an EGR protein, since WT1 binds the same sequence. The evidence that EGR factors really bind this sequence is unusually good: the HOCOMOCO models for EGR1, EGR2 and EGR3 carry combined ChIP and HT-SELEX or methyl-HT-SELEX evidence at grade A, so the label is in vitro supported, not ChIP-inferred. Two entries in the family are weaker and should not be used alone: EGR4.H14CORE.0.S.B is an eight-position model whose nearest neighbors across the databases lie outside this family, and the Vierstra archetype AC0262:EGR carries only 5.6 bits, too little to call anything. One archetype is explicitly named AC0519:EGR/WT, which is the clustering telling you that the EGR and WT1 motifs merged. Practically: a nine-base GC-rich site is common in promoters, so treat an isolated hit as weak evidence; and because EGR proteins are stimulus-induced, a real site may be unoccupied in whatever cell state you sampled.",
  "caveats": "EGR1 to EGR4 share one matrix, so a hit names the family at best. Worse, WT1 binds essentially the same nine-base site, and one Vierstra archetype in this family is explicitly labelled EGR/WT - a strong EGR match is also a candidate WT1 site. Overlap with the KLF/SP GC-box is frequent and often unresolvable from sequence. The in vitro evidence behind the EGR label is good (grade-A HT-SELEX and methyl-SELEX models for EGR1-EGR3), but the EGR4 HT-SELEX model and the low-information AC0262 archetype should not be used on their own. Because EGR proteins are stimulus-induced, occupancy depends on cell state, not sequence.",
  "refs": [
   {
@@ -74,6 +74,88 @@
    "cite": "Zhang X, Blumenthal RM, Cheng X. Updated understanding of the protein-DNA recognition code used by C2H2 zinc finger proteins. Curr Opin Struct Biol 2024;87:102836.",
    "pmid": "38754172",
    "url": "https://pubmed.ncbi.nlm.nih.gov/38754172/"
+  },
+  {
+   "cite": "Nakagama H, Heinrich G, Pelletier J, et al. Sequence and structural requirements for high-affinity DNA binding by the WT1 gene product. Mol Cell Biol 1995;15:1489-98.",
+   "pmid": "7862142",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7862142/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1989,
+   "finding": "Zif268 (EGR1) expressed in bacteria binds sites upstream of its own gene and in other promoters; footprinting and methylation interference give the high-affinity consensus GCGTGGGGCG.",
+   "methods": "DNase I footprinting, methylation interference, synthetic oligonucleotide binding",
+   "confidence": "medium",
+   "pmids": [
+    "2510170"
+   ],
+   "open": "How three zinc fingers specify a GC-rich site was unknown."
+  },
+  {
+   "year": 1990,
+   "finding": "Site selection with the zinc-finger region of the Wilms tumor protein WT1 recovers sequences similar to the EGR-1 consensus, so the EGR site is not unique to EGR proteins.",
+   "methods": "Selection from degenerate oligonucleotides, gel shift",
+   "confidence": "medium",
+   "pmids": [
+    "2244209"
+   ],
+   "open": "Whether WT1 and EGR1 prefer different variants of the site was not tested."
+  },
+  {
+   "year": 1991,
+   "finding": "The 2.1 A crystal structure of the three Zif268 fingers on a consensus site shows the fingers following the major groove, each making its primary contacts in a three-base subsite, mostly on the G-rich strand; refinement to 1.6 A in 1996 sharpened the contact map.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "2028256",
+    "8939742"
+   ],
+   "open": "Whether the contacts seen in the crystal account for the full binding energy and site length was not measured."
+  },
+  {
+   "year": 1994,
+   "finding": "Krox-20 (Egr2)-null mice fail to myelinate peripheral nerves; in 1998 EGR2 mutations were found in human hereditary myelinopathies, making EGR2 the best-supported disease gene in the family.",
+   "methods": "Gene targeting in mice; mutation screening in patients",
+   "confidence": "high",
+   "pmids": [
+    "7935840",
+    "9537424"
+   ]
+  },
+  {
+   "year": 1995,
+   "finding": "Random-site selection shows EGR1, EGR2, EGR3 and EGR4 select nearly the same consensus, but revises the site: binding tolerates more divergence than assumed, contacts not apparent in the crystal structure contribute substantially to binding energy, and an optimal site is at least 10 bp rather than 9. EGR4 (NGFI-C) binds with more than threefold lower affinity than the others.",
+   "methods": "PCR-mediated random site selection, gel shift, dissociation kinetics",
+   "confidence": "medium",
+   "pmids": [
+    "7891721"
+   ],
+   "open": "Whether the EGR4 affinity difference changes its targets in vivo was not addressed."
+  },
+  {
+   "year": 1996,
+   "finding": "Egr1-null female mice are infertile because of LH-beta deficiency, and a canonical EGR site in the LH-beta promoter is needed for synergistic activation with SF-1, giving the clearest single physiological target of an EGR site.",
+   "methods": "Knockout mice, promoter mutagenesis and co-transfection",
+   "confidence": "medium",
+   "pmids": [
+    "8703054"
+   ]
+  },
+  {
+   "year": 2024,
+   "finding": "An updated review of C2H2 structures restates the recognition code: positions -1, -4 and -7, counted back from the first zinc-coordinating histidine (the classical helix positions 6, 3 and -1), read the 5', central and 3' bases of each triplet, positions -5 and -8 also contribute, and residue identity maps onto base identity (Arg, Lys or His for G; Asn or Gln for A; Glu for T or 5-methylcytosine; Asp for C).",
+   "methods": "Review of crystal structures",
+   "confidence": "high",
+   "pmids": [
+    "38754172"
+   ]
+  }
+ ],
+ "open": [
+  "How long the EGR site is depends on which evidence is used: the Zif268 structure and most matrices treat it as a 9-bp site, whereas random-site selection found that an optimal site is at least 10 bp and that contacts not seen in the crystal contribute substantially to binding energy.",
+  "Whether the four EGR paralogues differ at the sequence level in any way that matters in cells is unresolved: their selected consensus sites are nearly identical, yet EGR4 binds with more than threefold lower affinity, and the one EGR4 in vitro model here is shorter than the others and clusters with matrices outside the family.",
+  "Which of EGR1 and WT1 occupies a shared site when both are expressed, and whether their effects on the target gene oppose each other, has not been settled beyond individual promoters.",
+  "EGR1's role in cancer is disputed: it has been described as a tumor suppressor in some tissues and as growth-promoting in others, and the literature has not settled what determines the direction of effect."
  ]
 }

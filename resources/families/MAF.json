@@ -11,7 +11,7 @@
  ],
  "consensus": "TGCTGACTCAGCA",
  "short": "Maf proteins are basic region-leucine zipper factors that recognise an unusually long site, the Maf recognition element or MARE: 13 base pairs as TGCTGACTCAGCA, or 14 as TGCTGACGTCAGCA. The MARE is an AP-1 or CRE core with GC extensions added on both sides, and those extensions are read by two residues, an arginine and an asparagine, that are unique to the Maf basic region. The large Mafs - MAF, MAFA, MAFB and NRL - have transactivation domains; the small Mafs - MAFF, MAFG and MAFK - do not, so their homodimers repress and they serve instead as the obligate DNA-binding partners of the CNC and BACH proteins. Family members control lens, pancreatic beta cell, rod photoreceptor and erythroid programs, and are mutated or translocated in retinitis pigmentosa, insulinomatosis, carpotarsal osteolysis and myeloma.",
- "long": "## The factors\n\nTwo subgroups share this element. The large Mafs - MAF (c-Maf), MAFA, MAFB and NRL - have an N-terminal transactivation domain in addition to the bZIP module, and an extended homology region adjacent to the basic region that contributes to DNA contact. The small Mafs - MAFF, MAFG and MAFK - are bZIP and little else; they have no activation domain, so small Maf homodimers act as repressors. Their more important role is as partners: the cap-n-collar (CNC) factors NFE2, NFE2L1, NFE2L2 and NFE2L3, and the BTB-bZIP repressors BACH1 and BACH2, cannot bind DNA as monomers, and require a small Maf to form a functional heterodimer. No functional difference is established among MAFF, MAFG and MAFK at the bZIP level. Expression differs a great deal: MAFG and MAFK are broadly expressed, MAFF is stress-inducible, MAFA is largely confined to pancreatic beta cells and lens, MAFB to macrophages, kidney podocytes and hindbrain, and NRL to rod photoreceptors. Maf proteins also heterodimerize with FOS and JUN, and those mixed dimers have binding specificities distinct from either homodimer.\n\n## The motif\n\nThe MARE is 13 or 14 bases. Selection with v-Maf recovered two forms at roughly equal efficiency: the T-MARE, TGCTGACTCAGCA, and the C-MARE, TGCTGACGTCAGCA. Strip the flanks from either and you are left with exactly the AP-1 TRE or the CREB/ATF CRE; the Maf-specific information is entirely in the GC pairs added at each end. The crystal structure of MafG on DNA showed how those extensions are read: two well-conserved basic-region residues, Arg57 and Asn61, adopt unusual side-chain orientations and contact the extended GC bases directly, while Maf-specific residues in the N-terminal and basic regions stabilize the complex through backbone phosphate contacts. This is why the MARE is long and why no other bZIP family reads it. Because only one subunit of a heterodimer is a Maf, CNC-Maf and BACH-Maf heterodimers read a half-MARE: GC-extended on the Maf side, AP-1-like on the other side. That element is the antioxidant response element, treated here as the NFE2/BACH family. The 34 models collected for MAF show the split plainly. Full-length models carry both flanks (HOCOMOCO MAFG, MAFK, MAFA and MAFB read AATGCTGACTCAGCA-like sequences), while many others are truncated to one flank, which is why the consensus derived from these models is only the 7 bp TGCTGAC rather than the full 13-mer. Two heterodimer matrices assigned here, JASPAR MAF::NFE2 and MAFG::NFE2L1, read ATGACTCAGCA - GC on one side only - and nine of their ten nearest neighbours across the four databases carry labels from outside this family. Within the family, members are not distinguishable: MAFF, MAFG and MAFK are interchangeable, and the large Mafs differ from them mainly in affinity for degenerate sites. Even the heterodimer distinction is narrow: Nrf2-MafG and MafG homodimers bind the consensus MARE equally well and differ only on suboptimal sequences, traced to Ala502 of Nrf2, where Mafs have tyrosine.\n\n## Where it acts\n\nMAREs sit in tissue-specific enhancers and promoters: the alpha-A-crystallin and other crystallin genes in lens, insulin and beta-cell identity genes, rhodopsin and the rod gene set through NRL, and the HS2 enhancer of the beta-globin locus, whose NF-E2 site is a tandem MARE. Through CNC-small Maf heterodimers the same family of elements controls the cytoprotective and proteasome gene batteries. Half-MAREs outnumber full MAREs by a wide margin in real genomes, so most Maf-family occupancy in ChIP data reflects heterodimers rather than Maf homodimers. Because small Mafs are obligate partners, their genomic distribution largely follows that of the CNC and BACH proteins.\n\n## Biology and disease\n\nNRL determines rod photoreceptor fate: Nrl-null mice make cones in place of rods, and dominant NRL mutations cause autosomal dominant retinitis pigmentosa. A MAFA missense change causes familial insulinomatosis and diabetes in the same pedigrees. Mutations clustering in the N-terminal transactivation domain of MAFB cause multicentric carpotarsal osteolysis. MAF itself is dysregulated by translocation to immunoglobulin loci in a subset of multiple myeloma. Small Maf compound knockouts in mice reproduce aspects of CNC and BACH loss, as expected when the obligate partner is removed rather than the signal-responsive subunit.\n\n## Reading a hit\n\nThe useful rule is to count the flanks. If your match carries GC extensions on both sides of a TGAC(G)TCA core, a Maf homodimer or large-Maf dimer is the best explanation and AP-1 is not, even though the AP-1 site is literally inside it. If the GC extension is on one side only, you are looking at a CNC-Maf or BACH-Maf half-MARE, that is, the NFE2/BACH family; two matrices assigned to MAF here are exactly that, so the MAF / NFE2-BACH boundary is a labelling convention rather than a separation in sequence space. If there is no GC extension at all, read AP-1 or CREB/ATF instead. Short models are a trap: several HOCOMOCO and CIS-BP entries here are truncated to TGCTGAC, TGCTGA or GTCAGCA, and a 6 or 7 base match of that kind will occur tens of thousands of times genome-wide. No member call is available - not MAFF versus MAFG versus MAFK, not MAF versus MAFA versus MAFB versus NRL, and not whether a Maf is the activating subunit at all. The original selection paper already warned that some sites reported in the literature as TREs are in fact Maf sites; the converse error, calling a MARE an AP-1 site, is the one a motif scanner will make for you.",
+ "long": "## The factors\n\nTwo subgroups share this element. The large Mafs - MAF (c-Maf), MAFA, MAFB and NRL - have an N-terminal transactivation domain in addition to the bZIP module, and an extended homology region adjacent to the basic region that contributes to DNA contact [PMID:7936637]. The small Mafs - MAFF, MAFG and MAFK - are bZIP and little else; they have no activation domain, so small Maf homodimers act as repressors [PMID:8107826,27058431]. Their more important role is as partners: the cap-n-collar (CNC) factors NFE2, NFE2L1, NFE2L2 and NFE2L3, and the BTB-bZIP repressors BACH1 and BACH2, cannot bind DNA as monomers, and require a small Maf to form a functional heterodimer [PMID:27058431]. No functional difference is established among MAFF, MAFG and MAFK at the bZIP level [PMID:27058431]. Expression differs a great deal: MAFG and MAFK are broadly expressed, MAFF is stress-inducible, MAFA is largely confined to pancreatic beta cells and lens, MAFB to macrophages, kidney podocytes and hindbrain, and NRL to rod photoreceptors. Maf proteins also heterodimerize with FOS and JUN, and those mixed dimers have binding specificities distinct from either homodimer [PMID:8264639,7936637].\n\n## The motif\n\nThe MARE is 13 or 14 bases. Selection with v-Maf recovered two forms at roughly equal efficiency: the T-MARE, TGCTGACTCAGCA, and the C-MARE, TGCTGACGTCAGCA [PMID:8264639]. Strip the flanks from either and you are left with exactly the AP-1 TRE or the CREB/ATF CRE; the Maf-specific information is entirely in the GC pairs added at each end. The crystal structure of MafG on DNA showed how those extensions are read: two well-conserved basic-region residues, Arg57 and Asn61, adopt unusual side-chain orientations and contact the extended GC bases directly, while Maf-specific residues in the N-terminal and basic regions stabilize the complex through backbone phosphate contacts [PMID:19797082]. This is why the MARE is long and why no other bZIP family reads it. Because only one subunit of a heterodimer is a Maf, CNC-Maf and BACH-Maf heterodimers read a half-MARE: GC-extended on the Maf side, AP-1-like on the other side [PMID:7936637]. That element is the antioxidant response element, treated here as the NFE2/BACH family. The 34 models collected for MAF show the split plainly. Full-length models carry both flanks (HOCOMOCO MAFG, MAFK, MAFA and MAFB read AATGCTGACTCAGCA-like sequences), while many others are truncated to one flank, which is why the consensus derived from these models is only the 7 bp TGCTGAC rather than the full 13-mer. Two heterodimer matrices assigned here, JASPAR MAF::NFE2 and MAFG::NFE2L1, read ATGACTCAGCA - GC on one side only - and nine of their ten nearest neighbours across the four databases carry labels from outside this family. Within the family, members are not distinguishable: MAFF, MAFG and MAFK are interchangeable, and the large Mafs differ from them mainly in affinity for degenerate sites. Even the heterodimer distinction is narrow: Nrf2-MafG and MafG homodimers bind the consensus MARE equally well and differ only on suboptimal sequences, traced to Ala502 of Nrf2, where Mafs have tyrosine [PMID:17875642].\n\n## Where it acts\n\nMAREs sit in tissue-specific enhancers and promoters: the alpha-A-crystallin and other crystallin genes in lens, insulin and beta-cell identity genes, rhodopsin and the rod gene set through NRL [PMID:11694879], and the HS2 enhancer of the beta-globin locus, whose NF-E2 site is a tandem MARE. Through CNC-small Maf heterodimers the same family of elements controls the cytoprotective and proteasome gene batteries [PMID:27058431]. Half-MAREs outnumber full MAREs by a wide margin in real genomes, so most Maf-family occupancy in ChIP data reflects heterodimers rather than Maf homodimers. Because small Mafs are obligate partners, their genomic distribution largely follows that of the CNC and BACH proteins.\n\n## Biology and disease\n\nNRL determines rod photoreceptor fate: Nrl-null mice make cones in place of rods [PMID:11694879], and dominant NRL mutations cause autosomal dominant retinitis pigmentosa [PMID:10192380]. A MAFA missense change causes familial insulinomatosis and diabetes in the same pedigrees [PMID:29339498]. Mutations clustering in the N-terminal transactivation domain of MAFB cause multicentric carpotarsal osteolysis [PMID:22387013]. MAF itself is dysregulated by translocation to immunoglobulin loci in a subset of multiple myeloma [PMID:9616139]. Small Maf compound knockouts in mice reproduce aspects of CNC and BACH loss, as expected when the obligate partner is removed rather than the signal-responsive subunit [PMID:27058431].\n\n## Reading a hit\n\nThe useful rule is to count the flanks. If your match carries GC extensions on both sides of a TGAC(G)TCA core, a Maf homodimer or large-Maf dimer is the best explanation and AP-1 is not, even though the AP-1 site is literally inside it. If the GC extension is on one side only, you are looking at a CNC-Maf or BACH-Maf half-MARE, that is, the NFE2/BACH family; two matrices assigned to MAF here are exactly that, so the MAF / NFE2-BACH boundary is a labelling convention rather than a separation in sequence space. If there is no GC extension at all, read AP-1 or CREB/ATF instead. Short models are a trap: several HOCOMOCO and CIS-BP entries here are truncated to TGCTGAC, TGCTGA or GTCAGCA, and a 6 or 7 base match of that kind will occur tens of thousands of times genome-wide. No member call is available - not MAFF versus MAFG versus MAFK, not MAF versus MAFA versus MAFB versus NRL, and not whether a Maf is the activating subunit at all. The original selection paper already warned that some sites reported in the literature as TREs are in fact Maf sites [PMID:8264639]; the converse error, calling a MARE an AP-1 site, is the one a motif scanner will make for you.",
  "caveats": "The full 13 to 14 base MARE is one of the most specific bZIP calls available, because the GC extensions are read by residues no other bZIP family has. Everything short of that is ambiguous. A bare core is AP-1 or CRE; a one-sided GC extension is an antioxidant response element and belongs to NFE2/BACH, where two matrices filed under MAF in fact sit. Several models here are truncated to six or seven bases and should not be used for genome-wide scanning. No member can be inferred: the three small Mafs are interchangeable, the four large Mafs nearly so, and a hit does not say whether the partner subunit is another Maf, a CNC factor or a BACH repressor - which is the difference between activation and repression.",
  "refs": [
   {
@@ -69,5 +69,87 @@
    "pmid": "29339498",
    "url": "https://pubmed.ncbi.nlm.nih.gov/29339498/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1994,
+   "finding": "Selection with v-Maf recovers two long palindromes at similar efficiency, TGCTGACTCAGCA and TGCTGACGTCAGCA, whose centers are exactly the TRE and CRE; Maf also heterodimerizes with Fos and Jun.",
+   "methods": "In vitro binding-site selection, EMSA",
+   "confidence": "medium",
+   "pmids": [
+    "8264639"
+   ],
+   "open": "How a bZIP protein reads the extra GC flanks was unknown."
+  },
+  {
+   "year": 1994,
+   "finding": "MafF, MafG and MafK are identified as the small partner of NF-E2 p45: small Maf homodimers repress through the NF-E2 site, while p45-Maf heterodimers activate.",
+   "methods": "Protein interaction, DNA binding and transfection assays",
+   "confidence": "medium",
+   "pmids": [
+    "8107826"
+   ],
+   "open": "Whether repression or activation dominates in cells was proposed to depend on the relative amounts of p45 and small Maf, which was not measured."
+  },
+  {
+   "year": 1994,
+   "finding": "Maf and Nrl homodimers bind TGC(N)6-7GCA, Fos-Maf and Jun-Nrl heterodimers bind hybrid TGAC(N)3-4GCA sites with each subunit reading one half, and the extended site requires a conserved region N-terminal to the basic domain.",
+   "methods": "DNA-binding assays with defined homo- and heterodimers, deletion mutants",
+   "confidence": "medium",
+   "pmids": [
+    "7936637"
+   ]
+  },
+  {
+   "year": 1998,
+   "finding": "c-maf is dysregulated by t(14;16) and related translocations to immunoglobulin loci in multiple myeloma lines, the first human tumor in which a Maf bZIP acts as an oncogene.",
+   "methods": "Breakpoint cloning, expression analysis in myeloma lines",
+   "confidence": "medium",
+   "pmids": [
+    "9616139"
+   ]
+  },
+  {
+   "year": 2001,
+   "finding": "Nrl-null mice lose rod function and their photoreceptors take on S-cone identity, establishing NRL as the rod-fate determinant among the large Mafs.",
+   "methods": "Mouse knockout, electroretinography, retinal expression profiling",
+   "confidence": "high",
+   "pmids": [
+    "11694879"
+   ]
+  },
+  {
+   "year": 2007,
+   "finding": "Nrf2-MafG heterodimers and MafG homodimers bind the consensus MARE equally well but differ on degenerate sites, a difference traced to Ala502 of Nrf2 (tyrosine in Mafs) and reflected in different target genes.",
+   "methods": "Surface plasmon resonance microarrays, mutagenesis, expression profiling",
+   "confidence": "high",
+   "pmids": [
+    "17875642"
+   ]
+  },
+  {
+   "year": 2009,
+   "finding": "The MafG-DNA crystal structure shows that two conserved basic-region residues, Arg57 and Asn61, adopt unusual orientations to contact the GC extensions directly, explaining the long MARE.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "19797082"
+   ]
+  },
+  {
+   "year": 2012,
+   "finding": "Human dominant disease maps to the large-Maf activation domain: MAFB mutations clustered in the N-terminal transactivation domain cause multicentric carpotarsal osteolysis, and in 2018 a MAFA Ser64Phe change was found to cause familial insulinomatosis and diabetes.",
+   "methods": "Exome sequencing, functional assays in beta-cell lines",
+   "confidence": "medium",
+   "pmids": [
+    "22387013",
+    "29339498"
+   ]
+  }
+ ],
+ "open": [
+  "How often small Maf homodimers repress at genomic MAREs, as opposed to binding as CNC or BACH heterodimers, is not measured: homodimers repress in reporter assays and the balance with partners was proposed to set activation versus repression, but the in vivo proportion of each dimer is unknown.",
+  "Where the MAF and NFE2/BACH families divide is a database convention rather than a settled distinction: JASPAR MAF::NFE2 and MAFG::NFE2L1 are filed here but read as one-sided half-MAREs, ATGACTCAGCA, whose nearest neighbours carry NFE2/BACH labels.",
+  "Whether the truncated 6 to 7 base models (TGCTGAC, GTCAGCA) reflect a genuine half-site binding mode or are trimming artifacts of motif discovery is not established; they include grade-A HOCOMOCO models for MAF, MAFG and MAFF that have full-length companions in the same database."
  ]
 }

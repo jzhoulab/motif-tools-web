@@ -10,7 +10,7 @@
  ],
  "consensus": "TTGCGCAA",
  "short": "The C/EBP family - CEBPA, CEBPB (NF-IL6), CEBPD, CEBPE, CEBPG, with DDIT3 (CHOP) as a heterodimer partner - binds the palindromic element TT(G/A)CGCAA, most often written as the 10-mer ATTGCGCAAT. These are basic region-leucine zipper proteins; the leucine zipper itself was first described in C/EBP, and the family's distinctive DNA contacts centre on an arginine that is conserved in C/EBPs but not in other bZIPs. Family members control hepatic and adipose metabolism, the acute-phase response, and granulocyte maturation, and CEBPA and CEBPE are mutated in human myeloid disease. The paralogues are indistinguishable from sequence. The boundary with the CREB/ATF family is genuinely blurred: CHOP-containing dimers and ATF4 read a hybrid half-C/EBP, half-CRE site, and CpG methylation converts a CRE into a C/EBP-alpha site.",
- "long": "## The factors\n\nFive C/EBP proteins bind DNA as this family: CEBPA, CEBPB (also NF-IL6 or LAP/LIP), CEBPD, CEBPE and CEBPG. All are basic region-leucine zipper (bZIP) factors, and the leucine zipper was in fact first proposed from the C/EBP sequence, with the scissors-grip model of DNA recognition advanced for the same family a year later. CEBPA, CEBPB, CEBPD and CEBPE have N-terminal activation domains; CEBPG has essentially none and works mainly through heterodimers. Expression differs sharply even though the motif does not: CEBPB and CEBPG are broad, CEBPA is concentrated in liver, adipose tissue, lung and granulocytes, CEBPD is stress- and cytokine-inducible, and CEBPE is restricted to the granulocyte and eosinophil lineages. Alternative translation initiation produces short LIP isoforms of CEBPA and CEBPB that dimerize and occupy sites without activating, so the same motif can be read as an activator or a competitive repressor depending on isoform ratio. DDIT3 (CHOP/GADD153) is included here because it is an obligate C/EBP partner, but its basic region is substituted at positions that matter for C/EBP-site contact, so CHOP-C/EBP heterodimers bind a different, hybrid sequence rather than the C/EBP palindrome. C/EBPs also pair outside the family, notably with ATF4 and with NF-kappa-B subunits.\n\n## The motif\n\nThe consensus is the palindrome TT(G/A)CGCAA, usually presented with flanks as ATTGCGCAAT. It is an inverted repeat of the half-site TTGC, one half per subunit. The C/EBP-alpha crystal structure resolved the contacts across ATTGCGCAAT and identified Arg289 as the keystone residue: it hydrogen-bonds to an adenine in the half-site, to the DNA backbone, and to Asn292, the asparagine invariant across bZIPs. A second residue explains the family boundary. Val296, which is alanine in most other bZIPs, discriminates against purines and restrains the invariant Arg300; mutating it to alanine strongly increased C/EBP-alpha binding to CRE sites while leaving C/EBP-site affinity intact. In other words a single side chain, not a different reading frame, separates the C/EBP site from the cyclic-AMP response element. Common variants replace the central CG: ATTGCACAAT and ATTGCGTAAT are both well represented among the 25 models here, as are half-degenerate forms in which only one TTGC half is intact. Methylation adds a twist in the same direction: CpG methylation of the CRE TGACGTCA, and of the half-sites CGTCA and CGCAA, increases C/EBP-alpha binding, and methylated promoters bound by C/EBP-alpha lose that binding when demethylated. The paralogues are not distinguishable - JASPAR CEBPB MA0466.4 and CEBPE MA0837.3 are 0.997 similar, and every CEBPA, CEBPD and CEBPG model here falls within 0.95 of the family medoid. What does look different is the CHOP-partnered and ATF4-adjacent set: JASPAR Ddit3::Cebpa, HOCOMOCO DDIT3 and JASPAR CEBPG MA1636.2 all read ATGATGCAAT-like sequences, which is the C/EBP-ATF composite element (CARE), half CRE and half C/EBP.\n\n## Where it acts\n\nC/EBP sites occur at both promoters and enhancers, with less CpG-island bias than the CRE. In macrophages and adipocytes they are among the motifs that lineage-determining factors use when priming enhancers, and C/EBP-beta co-occupies acute-phase promoters with NF-kappa-B while C/EBP-alpha and C/EBP-beta act with PPARG at adipocyte enhancers and with RUNX1 and SPI1 at myeloid enhancers. The named composite element is the CARE, TTGCATCA or TGATGCAAT, at integrated-stress-response genes including DDIT3 itself, TRIB3, ASNS and ATF3; there C/EBP-family proteins and ATF4 occupy the same element. On frequency: the exact palindrome TTGCGCAA is expected of order 10^4 times in 3.1 Gb before allowing for the genome's CpG depletion, while its non-CpG relatives TTGCACAA and TTGTGCAA are several-fold more common, so scans at usual thresholds return large numbers of C/EBP-like matches.\n\n## Biology and disease\n\nCebpa-null mice die soon after birth from hypoglycemia, with no hepatic glycogen and disrupted adipose tissue. Cebpb-null mice survive but their macrophages fail at bacterial killing and tumor cytotoxicity. Cebpe-null mice have impaired granulopoiesis, myelodysplasia and early lethality, and in humans loss-of-function CEBPE mutation causes neutrophil-specific granule deficiency, a disorder of defective secondary granules and recurrent bacterial infection. Dominant-negative CEBPA mutations that truncate the N-terminus define a recurrent subtype of acute myeloid leukemia, and germline CEBPA variants cause familial AML. C/EBP-beta and C/EBP-delta are the transcriptional arm of the IL-6 acute-phase response. DDIT3/CHOP, acting with ATF4, raises protein synthesis during sustained ER stress to the point of cell death, which makes the CARE element a control point for stress-induced apoptosis.\n\n## Reading a hit\n\nA full ATTGCGCAAT palindrome is among the more distinctive bZIP matches: TTGC half-sites are not shared with AP-1, CREB/ATF, MAF or NFE2/BACH, so the family call is comparatively safe. The member call is not available at all. CEBPA, CEBPB, CEBPD, CEBPE and CEBPG give one motif, and which of them is bound is a question about expression, not sequence. A lone TTGC half-site is not interpretable. The real ambiguity is with the C/EBP-ATF composite: if your match reads ATGATGCAAT or TTGCATCA, it is a CARE, and ATF4 in the CREB/ATF family accounts for it as well as any C/EBP does; the DDIT3 and CEBPG matrices here are the same element. Methylation cuts both ways: a methylated CRE can be a genuine C/EBP-alpha site, and a CGCAA-containing hit may require methylation to be occupied. None of the 25 models is flagged as belonging elsewhere, and the in vitro (HT-SELEX and methyl-SELEX) models agree with the ChIP-derived ones, which is the reassuring case for a ChIP-heavy family.",
+ "long": "## The factors\n\nFive C/EBP proteins bind DNA as this family: CEBPA, CEBPB (also NF-IL6 or LAP/LIP), CEBPD, CEBPE and CEBPG. All are basic region-leucine zipper (bZIP) factors, and the leucine zipper was in fact first proposed from the C/EBP sequence [PMID:3289117], with the scissors-grip model of DNA recognition advanced for the same family a year later [PMID:2683088]. CEBPA, CEBPB, CEBPD and CEBPE have N-terminal activation domains; CEBPG has essentially none and works mainly through heterodimers. Expression differs sharply even though the motif does not: CEBPB and CEBPG are broad, CEBPA is concentrated in liver, adipose tissue, lung and granulocytes, CEBPD is stress- and cytokine-inducible, and CEBPE is restricted to the granulocyte and eosinophil lineages. Alternative translation initiation produces short LIP isoforms of CEBPA and CEBPB that dimerize and occupy sites without activating, so the same motif can be read as an activator or a competitive repressor depending on isoform ratio. DDIT3 (CHOP/GADD153) is included here because it is an obligate C/EBP partner, but its basic region is substituted at positions that matter for C/EBP-site contact, so CHOP-C/EBP heterodimers bind a different, hybrid sequence rather than the C/EBP palindrome [PMID:8657121]. C/EBPs also pair outside the family, notably with ATF4 and with NF-kappa-B subunits.\n\n## The motif\n\nThe consensus is the palindrome TT(G/A)CGCAA, usually presented with flanks as ATTGCGCAAT [PMID:8632009]. It is an inverted repeat of the half-site TTGC, one half per subunit. The C/EBP-alpha crystal structure resolved the contacts across ATTGCGCAAT and identified Arg289 as the keystone residue: it hydrogen-bonds to an adenine in the half-site, to the DNA backbone, and to Asn292, the asparagine invariant across bZIPs [PMID:12578822]. A second residue explains the family boundary. Val296, which is alanine in most other bZIPs, discriminates against purines and restrains the invariant Arg300; mutating it to alanine strongly increased C/EBP-alpha binding to CRE sites while leaving C/EBP-site affinity intact [PMID:12578822]. In other words a single side chain, not a different reading frame, separates the C/EBP site from the cyclic-AMP response element. Common variants replace the central CG: ATTGCACAAT and ATTGCGTAAT are both well represented among the 25 models here, as are half-degenerate forms in which only one TTGC half is intact. Methylation adds a twist in the same direction: CpG methylation of the CRE TGACGTCA, and of the half-sites CGTCA and CGCAA, increases C/EBP-alpha binding, and methylated promoters bound by C/EBP-alpha lose that binding when demethylated [PMID:21059933]. The paralogues are not distinguishable - JASPAR CEBPB MA0466.4 and CEBPE MA0837.3 are 0.997 similar, and every CEBPA, CEBPD and CEBPG model here falls within 0.95 of the family medoid. What does look different is the CHOP-partnered and ATF4-adjacent set: JASPAR Ddit3::Cebpa, HOCOMOCO DDIT3 and JASPAR CEBPG MA1636.2 all read ATGATGCAAT-like sequences, which is the C/EBP-ATF composite element (CARE), half CRE and half C/EBP [PMID:10085237].\n\n## Where it acts\n\nC/EBP sites occur at both promoters and enhancers, with less CpG-island bias than the CRE. In macrophages and adipocytes they are among the motifs that lineage-determining factors use when priming enhancers, and C/EBP-beta co-occupies acute-phase promoters with NF-kappa-B while C/EBP-alpha and C/EBP-beta act with PPARG at adipocyte enhancers and with RUNX1 and SPI1 at myeloid enhancers. The named composite element is the CARE, TTGCATCA or TGATGCAAT, at integrated-stress-response genes including DDIT3 itself, TRIB3, ASNS and ATF3; there C/EBP-family proteins and ATF4 occupy the same element [PMID:10085237]. On frequency: the exact palindrome TTGCGCAA is expected of order 10^4 times in 3.1 Gb before allowing for the genome's CpG depletion, while its non-CpG relatives TTGCACAA and TTGTGCAA are several-fold more common, so scans at usual thresholds return large numbers of C/EBP-like matches.\n\n## Biology and disease\n\nCebpa-null mice die soon after birth from hypoglycemia, with no hepatic glycogen and disrupted adipose tissue [PMID:7652557]. Cebpb-null mice survive but their macrophages fail at bacterial killing and tumor cytotoxicity [PMID:7530603]. Cebpe-null mice have impaired granulopoiesis, myelodysplasia and early lethality [PMID:9371821], and in humans loss-of-function CEBPE mutation causes neutrophil-specific granule deficiency, a disorder of defective secondary granules and recurrent bacterial infection [PMID:10359588]. Dominant-negative CEBPA mutations that truncate the N-terminus define a recurrent subtype of acute myeloid leukemia [PMID:11242107], and germline CEBPA variants cause familial AML [PMID:15575056]. C/EBP-beta and C/EBP-delta are the transcriptional arm of the IL-6 acute-phase response. DDIT3/CHOP, acting with ATF4, raises protein synthesis during sustained ER stress to the point of cell death [PMID:23624402], which makes the CARE element a control point for stress-induced apoptosis.\n\n## Reading a hit\n\nA full ATTGCGCAAT palindrome is among the more distinctive bZIP matches: TTGC half-sites are not shared with AP-1, CREB/ATF, MAF or NFE2/BACH, so the family call is comparatively safe. The member call is not available at all. CEBPA, CEBPB, CEBPD, CEBPE and CEBPG give one motif, and which of them is bound is a question about expression, not sequence. A lone TTGC half-site is not interpretable. The real ambiguity is with the C/EBP-ATF composite: if your match reads ATGATGCAAT or TTGCATCA, it is a CARE, and ATF4 in the CREB/ATF family accounts for it as well as any C/EBP does; the DDIT3 and CEBPG matrices here are the same element. Methylation cuts both ways: a methylated CRE can be a genuine C/EBP-alpha site, and a CGCAA-containing hit may require methylation to be occupied. None of the 25 models is flagged as belonging elsewhere, and the in vitro (HT-SELEX and methyl-SELEX) models agree with the ChIP-derived ones, which is the reassuring case for a ChIP-heavy family.",
  "caveats": "C/EBP is one of the more trustworthy family calls in this atlas: the motif is cohesive across all four databases, its in vitro and ChIP-derived models agree, and the TTGC half-site is not shared with the other bZIP families. Do not read a member into it - the five paralogues are identical at this resolution, and the biological consequence differs between them and between full-length and LIP isoforms of the same protein. Two caveats are specific. Matches of the form ATGATGCAAT are C/EBP-ATF composites and are equally well explained by ATF4. And because methylated CpG creates C/EBP-alpha sites at half-CRE and half-C/EBP sequences, a scan run without methylation data will both miss real sites and over-call unmethylated ones.",
  "refs": [
   {
@@ -69,9 +69,104 @@
    "url": "https://pubmed.ncbi.nlm.nih.gov/12578822/"
   },
   {
+   "cite": "Smith ML, Cavenagh JD, Lister TA, et al. Mutation of CEBPA in familial acute myeloid leukemia. N Engl J Med 2004;351:2403-7.",
+   "pmid": "15575056",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15575056/"
+  },
+  {
    "cite": "Rishi V, Bhattacharya P, Chatterjee R, et al. CpG methylation of half-CRE sequences creates C/EBPalpha binding sites that activate some tissue-specific genes. Proc Natl Acad Sci U S A 2010;107:20311-6.",
    "pmid": "21059933",
    "url": "https://pubmed.ncbi.nlm.nih.gov/21059933/"
+  },
+  {
+   "cite": "Han J, Back SH, Hur J, et al. ER-stress-induced transcriptional regulation increases protein synthesis leading to cell death. Nat Cell Biol 2013;15:481-90.",
+   "pmid": "23624402",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23624402/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1988,
+   "finding": "A periodic array of leucines every seventh residue in C/EBP, also present in Fos, Jun, Myc and GCN4, is proposed to form an interdigitating dimerization helix, the leucine zipper.",
+   "methods": "Sequence analysis and helical modeling",
+   "confidence": "medium",
+   "pmids": [
+    "3289117"
+   ],
+   "open": "The zipper was a hypothesis, and how the adjacent region contacts DNA was not addressed."
+  },
+  {
+   "year": 1989,
+   "finding": "The scissors-grip model places the basic regions of a zipper-linked dimer in the major groove of a dyad-symmetric site, explaining why bZIP sites are abutted half-sites.",
+   "methods": "Sequence comparison of 11 basic regions, chemical probing of protein-DNA complexes",
+   "confidence": "medium",
+   "pmids": [
+    "2683088"
+   ],
+   "open": "No atomic structure of a bZIP-DNA complex yet existed."
+  },
+  {
+   "year": 1995,
+   "finding": "Knockouts separate member functions despite a shared motif: Cebpa-null mice die of neonatal hypoglycemia, Cebpb-null macrophages fail to kill bacteria, and Cebpe-null mice (1997) fail to make functional neutrophils.",
+   "methods": "Mouse gene targeting",
+   "confidence": "medium",
+   "pmids": [
+    "7652557",
+    "7530603",
+    "9371821"
+   ]
+  },
+  {
+   "year": 1996,
+   "finding": "Random site selection shows the C/EBP family members share one consensus, RTTGCGYAAY, so the paralogues are not separable by sequence preference.",
+   "methods": "PCR-mediated random site selection",
+   "confidence": "medium",
+   "pmids": [
+    "8632009"
+   ]
+  },
+  {
+   "year": 1996,
+   "finding": "CHOP-C/EBP heterodimers cannot bind classic C/EBP sites but select a distinct core, PuPuPuTGCAAT(A/C)CCC, giving CHOP a dual role as inhibitor and direct activator.",
+   "methods": "PCR-based selection, DNase I footprinting, methylation interference",
+   "confidence": "medium",
+   "pmids": [
+    "8657121"
+   ],
+   "open": "How much CHOP's own DNA binding contributes in cells, as against sequestering C/EBP partners, was unresolved."
+  },
+  {
+   "year": 1999,
+   "finding": "At the Gadd153/CHOP promoter, C/EBP-beta, ATF4 and ATF3 bind in sequence to one C/EBP-ATF composite site during stress, defining the half-CRE, half-C/EBP element shared with the CREB/ATF family.",
+   "methods": "EMSA and supershift, reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "10085237"
+   ]
+  },
+  {
+   "year": 2003,
+   "finding": "The C/EBP-alpha bZIP crystal structure on ATTGCGCAAT shows Arg289 as the keystone contact and Val296 as a residue that excludes CRE binding; V296A gains CRE affinity without losing C/EBP sites.",
+   "methods": "X-ray crystallography, mutagenesis",
+   "confidence": "high",
+   "pmids": [
+    "12578822"
+   ]
+  },
+  {
+   "year": 2010,
+   "finding": "Reversing the usual rule that CpG methylation blocks binding, methylation of the CRE and of CGTCA and CGCAA half-sites creates C/EBP-alpha sites, and demethylation removes C/EBP-alpha from methylated tissue-specific promoters.",
+   "methods": "DNA-binding assays, transfection, ChIP in primary keratinocytes, 5-azacytidine and DNMT1 depletion",
+   "confidence": "high",
+   "pmids": [
+    "21059933"
+   ],
+   "open": "The genome-wide fraction of C/EBP sites that depend on methylation, and whether other paralogues share the preference, were not measured."
+  }
+ ],
+ "open": [
+  "How much of C/EBP-alpha's genomic binding depends on methylated CpG is unclear: methylation of CGTCA and CGCAA half-sites creates binding at some tissue-specific promoters, but whether this is a minor class of sites or a general feature, and whether the other C/EBP paralogues share it, has not been established.",
+  "Whether the CEBPG matrices describe CEBPG or its partners is unresolved in the databases: the ChIP-derived HOCOMOCO model and JASPAR MA1636.2 read as the C/EBP-ATF composite ATTGCATCAT, while the HT-SELEX and methyl-HT-SELEX models read as the C/EBP palindrome, consistent with a protein that works mainly as a heterodimer.",
+  "How CHOP acts at DNA is not settled: CHOP-C/EBP heterodimers are excluded from classic C/EBP sites and select a distinct core in vitro, while genome-wide ChIP-seq places CHOP together with ATF4 at shared directly induced genes, and the relative weight of inhibition by sequestration and direct activation in cells is unknown."
  ]
 }

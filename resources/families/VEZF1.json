@@ -9,8 +9,8 @@
   "CT/GC-rich element"
  ],
  "short": "VEZF1, originally cloned twice as DB1 and as Vezf1, is a broadly expressed six-fingered C2H2 zinc-finger protein first defined on CT/GC-rich promoter elements and on the chicken beta-globin HS4 insulator, where its sites protect against DNA methylation. It has no established consensus sequence: the matrices in motif databases reduce either to a plain poly-C/poly-G run (JASPAR MA1578.2 is six positions long) or to GGGGGAGGGGG, which is the MAZ motif. That is the central problem with this family - the data cannot separate it from MAZ, PATZ1, ZNF281 or ZNF148. Its documented functions are in vascular development, in maintaining DNA methylation levels through Dnmt3b, and in slowing elongating RNA polymerase II.",
- "long": "## The factors\n\nVEZF1 is one protein, cloned independently twice. It was first isolated as DB1, one of three Cys2/His2 zinc-finger cDNAs recovered by screening with the CT/GC-rich region (positions -76 to -47) of the human interleukin-3 promoter; the other two clones were EGR1 and EGR2. DB1 encoded a novel 516-residue protein with six zinc fingers, expressed ubiquitously across human tissues, and it bound the IL-3 element constitutively while EGR1 bound only after T-cell activation (Koyano-Nakagawa et al. 1994). Independently, a retroviral entrapment screen in mouse identified Vezf1 (vascular endothelial zinc finger 1) as a gene whose expression is restricted to vascular endothelial cells and their precursors in the yolk sac blood islands (Xiong et al. 1999). The two literatures have not fully merged: one describes a ubiquitous factor, the other an endothelial one, and current work generally treats VEZF1 as broadly expressed with a particular requirement in endothelium. The chicken homolog is BGP1, which has binding sites in the beta-globin locus including the upstream HS4 insulator (Gowher et al. 2008). There are no paralogues; the gene is also catalogued as ZNF161.\n\n## The motif\n\nThis family has no consensus sequence that the literature agrees on. The elements VEZF1 was defined on are described only as CT/GC-rich, and the matrices assembled here do not converge. The medoid (CIS-BP M01172_2.00) is CCCCCCAC and the JASPAR profile (MA1578.2) is CCCCCC - six positions, a poly-C run, which will match an enormous number of genomic positions and carries almost no discriminating information. The two HOCOMOCO models are longer but point somewhere else: VEZF1.H14CORE.0.P.C is GGGGGAGGGGG and VEZF1.H14CORE.1.P.B is a 21-position G-run, GGGGGGGGGGGAGGGGGAGGGGG. The first of those has its single best-matching matrix, across all four databases, inside the MAZ family rather than in its own - so as a matter of data, VEZF1's motif is MAZ's motif. The family flags it as a suspect assignment for exactly that reason. Cohesion across the four matrices is 0.69, and label agreement for each of them is 0 to 0.1, meaning that for every one of them the nearest neighbors are mostly labelled with some other factor. Two things follow. First, there is no sequence feature that identifies a VEZF1 site as opposed to a MAZ, PATZ1, ZNF281 or ZNF148 site; the single-base discriminator that separates the GGGAGGG group from the SP1 GC-box (an A where the GC-box has a C, Song et al. 2001) is the only sequence-level distinction available anywhere in this neighborhood, and it does not help here. Second, a poly-C or poly-G match should be treated as a statement about base composition, not about a transcription factor.\n\n## Where it acts\n\nVEZF1 sites were characterized at promoters (IL-3, endothelin-1) and at an insulator. In the chicken beta-globin HS4 element, the VEZF1-binding CT/GC-rich sub-elements are the part that confers protection from DNA methylation: they can defend a transgene from encroaching methylation independently of the enhancer-blocking activity of the same insulator (Dickson et al. 2010). Genome-wide in HeLa S3 cells, VEZF1 binding correlates strongly with peaks of Ser2-phosphorylated elongating RNA polymerase II, reflecting a VEZF1-dependent slowing of elongation (Gowher et al. 2012). That is an unusual place for a zinc-finger factor to act and is one of the few properties that distinguishes VEZF1 functionally from its motif neighbors, though it is a property of the protein, not something readable from a match.\n\n## Biology and disease\n\nVezf1 is required for vascular development in a dose-dependent manner: targeted inactivation in mice causes vascular defects and embryonic lethality with localized hemorrhage, and heterozygotes are affected (Kuhnert et al. 2005). Vezf1-null embryonic stem cells fail to form normal vascular structures on differentiation (Zou et al. 2010). In endothelial cells VEZF1 acts pro-angiogenically, in part by repressing the anti-angiogenic factor Cited2 (AlAbdi et al. 2018), and it activates the endothelin-1 promoter (Aitsebaomo et al. 2001). Its most striking phenotype is epigenetic: deleting both copies of Vezf1 in mouse embryonic stem cells reduces expression of the full-length active isoform of the Dnmt3b methyltransferase and causes widespread loss of DNA methylation genome-wide (Gowher et al. 2008). So VEZF1 influences methylation both indirectly, through Dnmt3b levels, and locally, through methylation-protecting elements. No human Mendelian disease has been established for VEZF1.\n\n## Reading a hit\n\nTreat a VEZF1 match with more suspicion than almost any other entry in this atlas. All four matrices are derived from binding data in cells (ChIP-seq for both HOCOMOCO models, at grades B and C) and none is an in vitro model, so none of them is evidence that VEZF1 itself prefers that sequence. Two of them are so short or so uniform - CCCCCC, and a 21-base G-run - that they function as composition filters. The longest and most confident model has its best match inside the MAZ family. In practice, then: a VEZF1 hit means \"G-rich or C-rich promoter sequence\", and the candidate binders include MAZ, PATZ1, ZNF281, ZNF148, the ChIP-derived WT1 models and, one base away, the SP1/KLF GC-box. If you specifically need VEZF1, the useful evidence is not the motif but the context in which VEZF1 has documented function: methylation-protected insulator sub-elements, and regions where elongating Pol II accumulates. Confirm with VEZF1 ChIP or knockdown rather than with a score.",
- "caveats": "This is the least trustworthy family in the batch. VEZF1 has no agreed literature consensus; its sites are described only as CT/GC-rich. Of the four matrices, JASPAR's is six positions of poly-C, one HOCOMOCO model is a 21-base G-run, and the most informative model has its single best match across all four databases inside the MAZ family - the data cannot tell VEZF1 from MAZ, and flags the assignment as suspect. All models are ChIP-derived; none is in vitro. Read a hit as a statement about G/C-rich composition, not about VEZF1, and confirm by ChIP or knockdown.",
+ "long": "## The factors\n\nVEZF1 is one protein, cloned independently twice. It was first isolated as DB1, one of three Cys2/His2 zinc-finger cDNAs recovered by screening with the CT/GC-rich region (positions -76 to -47) of the human interleukin-3 promoter; the other two clones were EGR1 and EGR2. DB1 encoded a novel 516-residue protein with six zinc fingers, expressed ubiquitously across human tissues, and it bound the IL-3 element constitutively while EGR1 bound only after T-cell activation (Koyano-Nakagawa et al. 1994) [PMID:8035792]. Independently, a retroviral entrapment screen in mouse identified Vezf1 (vascular endothelial zinc finger 1) as a gene whose expression is restricted to vascular endothelial cells and their precursors in the yolk sac blood islands (Xiong et al. 1999) [PMID:9986727]. The two literatures have not fully merged: one describes a ubiquitous factor, the other an endothelial one, and current work generally treats VEZF1 as broadly expressed with a particular requirement in endothelium. The chicken homolog is BGP1, which has binding sites in the beta-globin locus including the upstream HS4 insulator (Gowher et al. 2008) [PMID:18676812]. There are no paralogues; the gene is also catalogued as ZNF161.\n\n## The motif\n\nThis family has no consensus sequence that the literature agrees on. The IL-3 element VEZF1 was cloned on was described only as a CT/GC-rich region [PMID:8035792]. The one short site mapped since is the 6-bp ACCCCC in the endothelin-1 promoter, which recombinant VEZF1 binds and whose 2-bp mutation abolishes the response [PMID:11504723], and the HS4 insulator elements it was purified on are G-rich [PMID:20062523]. These point to C/G runs without defining a consensus, and the matrices assembled here do not converge. The medoid (CIS-BP M01172_2.00) is CCCCCCAC and the JASPAR profile (MA1578.2) is CCCCCC - six positions, a poly-C run, which will match an enormous number of genomic positions and carries almost no discriminating information. The two HOCOMOCO models are longer but point somewhere else: VEZF1.H14CORE.0.P.C is GGGGGAGGGGG and VEZF1.H14CORE.1.P.B is a 23-position G-run, GGGGGGGGGGAGGGGGAGGGGGG [PMID:37971293]. The first of those has its single best-matching matrix, across all four databases, inside the MAZ family rather than in its own - so as a matter of data, VEZF1's motif is MAZ's motif. The family flags it as a suspect assignment for exactly that reason. Cohesion across the four matrices is 0.69, and label agreement for each of them is 0 to 0.1, meaning that for every one of them the nearest neighbors are mostly labelled with some other factor. Two things follow. First, there is no sequence feature that identifies a VEZF1 site as opposed to a MAZ, PATZ1, ZNF281 or ZNF148 site; the single-base discriminator that separates the GGGAGGG group from the SP1 GC-box (an A where the GC-box has a C, Song et al. 2001) [PMID:11395515] is the only sequence-level distinction available anywhere in this neighborhood, and it does not help here. Second, a poly-C or poly-G match should be treated as a statement about base composition, not about a transcription factor.\n\n## Where it acts\n\nVEZF1 sites were characterized at promoters (IL-3, endothelin-1) and at an insulator [PMID:8035792,11504723,20062523]. In the chicken beta-globin HS4 element, the G-rich sub-elements bound by VEZF1 are the part that confers protection from DNA methylation: they can defend a transgene from encroaching methylation independently of the enhancer-blocking activity of the same insulator (Dickson et al. 2010) [PMID:20062523]. Genome-wide in HeLa S3 cells, VEZF1 binding correlates strongly with peaks of Ser2-phosphorylated elongating RNA polymerase II, reflecting a VEZF1-dependent slowing of elongation (Gowher et al. 2012) [PMID:22308494]. That is an unusual place for a zinc-finger factor to act and is one of the few properties that distinguishes VEZF1 functionally from its motif neighbors, though it is a property of the protein, not something readable from a match.\n\n## Biology and disease\n\nVezf1 is required for vascular development in a dose-dependent manner: targeted inactivation in mice causes vascular defects and embryonic lethality with localized hemorrhage, and heterozygotes are affected (Kuhnert et al. 2005) [PMID:15882861]. Vezf1-null embryonic stem cells fail to form normal vascular structures on differentiation (Zou et al. 2010) [PMID:20431070]. In endothelial cells VEZF1 acts pro-angiogenically, in part by repressing the anti-angiogenic factor Cited2 (AlAbdi et al. 2018) [PMID:29794136], and it activates the endothelin-1 promoter (Aitsebaomo et al. 2001) [PMID:11504723]. Its most striking phenotype is epigenetic: deleting both copies of Vezf1 in mouse embryonic stem cells reduces expression of the full-length active isoform of the Dnmt3b methyltransferase and causes widespread loss of DNA methylation genome-wide (Gowher et al. 2008) [PMID:18676812]. So VEZF1 influences methylation both indirectly, through Dnmt3b levels, and locally, through methylation-protecting elements. No human Mendelian disease has been established for VEZF1.\n\n## Reading a hit\n\nTreat a VEZF1 match with more suspicion than almost any other entry in this atlas. All four matrices are derived from binding data in cells (ChIP-seq for both HOCOMOCO models, at grades B and C) [PMID:37971293] and none is an in vitro model, so none of them is evidence that VEZF1 itself prefers that sequence. Two of them are so short or so uniform - CCCCCC, and a 23-base G-run - that they function as composition filters. The most informative model has its best match inside the MAZ family. In practice, then: a VEZF1 hit means \"G-rich or C-rich promoter sequence\", and the candidate binders include MAZ, PATZ1, ZNF281, ZNF148, the ChIP-derived WT1 models and, one base away, the SP1/KLF GC-box. If you specifically need VEZF1, the useful evidence is not the motif but the context in which VEZF1 has documented function: methylation-protected insulator sub-elements, and regions where elongating Pol II accumulates. Confirm with VEZF1 ChIP or knockdown rather than with a score.",
+ "caveats": "This is the least trustworthy family in the batch. VEZF1 has no agreed literature consensus: the one short site mapped in a promoter is ACCCCC in endothelin-1, and its insulator elements are G-rich. Of the four matrices, JASPAR's is six positions of poly-C, one HOCOMOCO model is a 23-base G-run, and the most informative model has its single best match across all four databases inside the MAZ family - the data cannot tell VEZF1 from MAZ, and flags the assignment as suspect. All models are ChIP-derived; none is in vitro. Read a hit as a statement about G/C-rich composition, not about VEZF1, and confirm by ChIP or knockdown.",
  "refs": [
   {
    "cite": "Koyano-Nakagawa N, Nishida J, Baldwin D, et al. Molecular cloning of a novel human cDNA encoding a zinc finger protein that binds to the interleukin-3 promoter. Mol Cell Biol 1994;14:5099-107.",
@@ -67,5 +67,88 @@
    "pmid": "37971293",
    "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1994,
+   "finding": "DB1 is cloned as one of three zinc-finger cDNAs binding the CT/GC-rich element of the IL-3 promoter, alongside EGR1 and EGR2: a six-finger protein whose mRNA is present in all human tissues tested and which binds the element constitutively, while EGR1 binds only after T-cell activation.",
+   "methods": "Expression cloning with a promoter element, gel shift with specific antibodies, transfection",
+   "confidence": "medium",
+   "pmids": [
+    "8035792"
+   ],
+   "open": "The bound sequence was defined only as a 30-bp CT/GC-rich region."
+  },
+  {
+   "year": 1999,
+   "finding": "A retroviral entrapment screen identifies mouse Vezf1, homologous to DB1, with expression restricted to vascular endothelial cells and their yolk-sac precursors, the opposite of the ubiquitous pattern reported for human DB1.",
+   "methods": "Gene-trap screen, in situ hybridization",
+   "confidence": "medium",
+   "pmids": [
+    "9986727"
+   ],
+   "open": "The two expression reports were not reconciled."
+  },
+  {
+   "year": 2001,
+   "finding": "VEZF1/DB1 activates the endothelin-1 promoter through a 6-bp element, ACCCCC; recombinant protein binds it and a 2-bp mutation abolishes the response, the one short site mapped for VEZF1 in a promoter.",
+   "methods": "Deletion mutagenesis, gel shift with recombinant protein and endothelial nuclear extracts, transfection",
+   "confidence": "medium",
+   "pmids": [
+    "11504723"
+   ]
+  },
+  {
+   "year": 2005,
+   "finding": "Vezf1-null mouse embryos show vascular remodeling defects, loss of vascular integrity and localized hemorrhage, and heterozygotes show lymphatic hypervascularization, establishing a dose-dependent vascular requirement.",
+   "methods": "Gene targeting in mice, ultrastructural analysis",
+   "confidence": "medium",
+   "pmids": [
+    "15882861"
+   ]
+  },
+  {
+   "year": 2008,
+   "finding": "Deleting both Vezf1 copies in mouse ES cells causes loss of DNA methylation at LINE-1 elements, minor satellites, some imprinted genes and several CpG islands, attributed to a large drop in Dnmt3b.",
+   "methods": "Knockout ES cells, methylation and expression analysis",
+   "confidence": "medium",
+   "pmids": [
+    "18676812"
+   ],
+   "open": "How a zinc-finger factor controls Dnmt3b levels was unknown."
+  },
+  {
+   "year": 2010,
+   "finding": "VEZF1 is purified as the factor that binds the methylation-protection sub-elements of the chicken HS4 insulator, which are separable from the CTCF-dependent enhancer-blocking part; G-rich VEZF1 elements alone protect the APRT CpG-island promoter from methylation.",
+   "methods": "Stable reporter assays, protein purification on DNA elements, methylation analysis",
+   "confidence": "medium",
+   "pmids": [
+    "20062523"
+   ],
+   "open": "Whether VEZF1 protects CpG islands genome-wide was proposed but not tested."
+  },
+  {
+   "year": 2012,
+   "finding": "Genome-wide, VEZF1 binding coincides with peaks of Ser2-phosphorylated elongating Pol II reflecting VEZF1-dependent slowing of elongation, including near VEZF1 sites in the dnmt3b gene, with effects on alternative splicing.",
+   "methods": "ChIP-seq in HeLa S3, Pol II ChIP in knockout ES cells, splicing analysis",
+   "confidence": "medium",
+   "pmids": [
+    "22308494"
+   ]
+  },
+  {
+   "year": 2024,
+   "finding": "The HOCOMOCO v14 VEZF1 models are ChIP-only G-runs (grades B and C), and the more confident has its best match in the MAZ family, so the database models cannot separate VEZF1 from other G-rich binders.",
+   "methods": "ChIP-seq-derived motif models, cross-database comparison",
+   "confidence": "medium",
+   "pmids": [
+    "37971293"
+   ]
+  }
+ ],
+ "open": [
+  "Whether VEZF1 is a broadly expressed factor or an endothelial one is unresolved: the human DB1 cloning found its mRNA in all tissues tested, whereas the mouse studies describe expression largely restricted to endothelium and its precursors, with additional mesodermal and neuronal sites.",
+  "What VEZF1 itself recognizes is not pinned down: the one element mapped in a promoter is the 6-bp ACCCCC in endothelin-1, the insulator elements it was purified on are G-rich, and the database matrices are poly-C or poly-G runs whose best matches lie in the MAZ family; whether these reflect one preference for C/G strings is unknown.",
+  "Whether VEZF1 affects genome-wide methylation mainly through Dnmt3b, by slowing Pol II and shaping splicing within the dnmt3b gene, or also by directly protecting CpG islands, as its insulator sub-elements do in reporter assays, has not been separated experimentally."
  ]
 }

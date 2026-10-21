@@ -12,7 +12,7 @@
  ],
  "consensus": "GGGGCGGGG",
  "short": "The SP and KLF proteins are about 26 human transcription factors that each use three C2H2 zinc fingers to read a nine- to ten-base GC-rich element. Two classical forms of that element exist: the GC-box GGGGCGGGG, found in the SV40 21-bp repeats and in most CpG-island promoters, and the CACCC-box CCACACCC of erythroid promoters such as beta-globin. In vitro selection puts the family consensus at CCACGCCC, which is the same site read from the other strand. Because all 26 proteins share the same finger code, sequence alone cannot say which one is bound; a GC-box hit identifies the family and, given how common GC-rich sequence is in promoters, often identifies very little else.",
- "long": "## The factors\n\nThe mammalian SP/KLF family comprises roughly 26 genes - SP1 to SP9 and KLF1 to KLF17/18 - unified under a single nomenclature by Suske et al. (2005). Each protein carries three Cys2-His2 zinc fingers at its C terminus; the SP subgroup additionally has the Sp-box and a buttonhead box, while the KLF subgroup is more variable outside the fingers. SP1 was the first mammalian sequence-specific activator purified, isolated as the factor that activates the SV40 early promoter through its 21-bp repeats (Dynan and Tjian 1983), and its DNA-binding activity was mapped to the C-terminal zinc-finger region (Kadonaga et al. 1987). The KLF branch was opened by the cloning of erythroid Kruppel-like factor, KLF1/EKLF, as a CACCC-element-binding protein (Miller and Bieker 1993). Older aliases persist: KLF1 = EKLF, KLF2 = LKLF, KLF4 = GKLF, KLF9 = BTEB1, SP7 = Osterix. Expression splits the family into broadly expressed members (SP1, SP2, SP3, KLF6, KLF7, KLF9-KLF11, KLF13, KLF16) and restricted ones (KLF1 in erythroid cells, KLF2 in lymphocytes and endothelium, KLF4 and KLF5 in gut and skin, SP4 in neurons, SP7 in osteoblasts, SP8 and SP9 in limb bud and forebrain, KLF17 in oocytes). They bind DNA as monomers.\n\n## The motif\n\nThree fingers read nine to ten bases, three per finger, following the Zif268 code. Two canonical forms are described in the literature. The GC-box, GGGGCGGGG, is the Sp1 site. The CACCC-box, CCACACCC, is the erythroid form found in the beta-globin promoter. The 100 matrices collected here converge on a third way of writing the same thing: the medoid (SP3, JASPAR MA0746.3) is GCCACGCCCAC, and in vitro selection models across the family read CCACGCCC or, on the opposite strand, GGGCGTGG. Which of these a given paralogue prefers is a graded matter, not a switch. Matrices for SP1-SP4 and most KLFs keep a CpG in the central triplet (GGGGCGGGG, GGGCGTGG), whereas KLF1, KLF3, KLF4 and KLF5 tolerate A or T there and yield the CACCC-type models seen in this atlas (KLF4: TGGGTGTGGC; KLF9: GCCACACCCAC). Structurally, the Klf4 three-finger domain has been solved bound to fully methylated DNA at 1.85 A, where an arginine and a glutamate contact the 5-methyl group and binding to methylated DNA is only slightly tighter than to unmodified DNA (Liu et al. 2014); methyl-SELEX across 542 human factors confirmed that many C2H2 proteins, KLFs included, are methylation-tolerant rather than methylation-blocked (Yin et al. 2017). Several HOCOMOCO models here span 18-23 positions and contain two copies of the core, reflecting how often these sites occur in tandem. With 100 matrices from 27 gene labels and a cohesion of 0.84, the honest summary is that this family has one motif: no matrix distinguishes SP1 from SP3, or KLF10 from KLF11.\n\n## Where it acts\n\nGC-boxes are the characteristic element of CpG-island promoters and are the reason many housekeeping promoters have no TATA box. They cluster with NRF1, NFY and ETS sites in the same promoters, while CACCC-type sites dominate erythroid regulatory elements such as the beta-globin promoter and locus control region. The family's real problem is neighbors, not partners. The gastrin EGF-response element GGGGCGGGGTGGGGGG binds Sp1 and, independently, ZBP-89/ZNF148 (Merchant et al. 1996). When the CT/GC-rich element of the IL-3 promoter was used as a bait, the clones recovered were EGR1, EGR2 and DB1/VEZF1 (Koyano-Nakagawa et al. 1994). In other words, a single GC-rich element can be a legitimate binding site for members of four or five different families in this atlas.\n\n## Biology and disease\n\nSp1-null mouse embryos are retarded and die around day 11, yet Sp1-/- cells grow and differentiate, so the requirement is developmental rather than cell-autonomous (Marin et al. 1997). KLF1 is required for beta-globin transcription and activates the beta-globin promoter through its CACCC box but not the gamma-globin promoter, whose CACCC sequence differs (Asano and Stamatoyannopoulos 1998); dominant human KLF1 mutations cause severe anemia, including congenital dyserythropoietic anemia type IV (Kulczynska-Figurny et al. 2020). KLF4 is one of the four factors in the original reprogramming cocktail for induced pluripotent stem cells. SP7/Osterix is required for osteoblast differentiation, and its mode of action is unusual (below).\n\n## Reading a hit\n\nA hit identifies the GC-box family and nothing narrower. Beyond that, ask three questions. Is the site informative at all? GGGGCGGGG and CCACGCCC are very common in GC-rich sequence, so a match inside a CpG-island promoter carries little information by itself. Which matrix matched? Of the 100 profiles here, 45 come from HOCOMOCO and many rest on ChIP-seq evidence at grade B or C; the grade-A models (KLF3-KLF5, KLF10, KLF12-KLF14) carry in vitro support and are the ones worth trusting for \"this protein binds this sequence\". Two HOCOMOCO models are not GC-box motifs at all: SP7.H14CORE.0.P.B and SP9.H14CORE.0.P.B are AT-rich (TAATTACAGGTT). For SP7 this is understood - amino-acid differences in the Sp7 zinc-finger domain reduce its affinity for the GC-box, and Sp7 reaches osteoblast enhancers inside Dlx-containing complexes bound to AT-rich motifs (Hojo et al. 2016) - which makes the SP7 ChIP motif a textbook case of a factor \"having\" its recruiter's motif. One CIS-BP matrix labelled SP5 (M03682_2.00) is not from a human protein at all: it is transferred from a Drosophila melanogaster protein at 94% DNA-binding-domain identity. Finally, MAZ/PATZ1, ZNF281/ZNF148, VEZF1, EGR and WT1 all read GC- or GA-rich sequence, and where a match scores well against both a GC-box and a GGGAGGG model, sequence cannot decide between them.",
+ "long": "## The factors\n\nThe mammalian SP/KLF family comprises roughly 26 genes - SP1 to SP9 and KLF1 to KLF17/18 - unified under a single nomenclature by Suske et al. (2005) [PMID:15820306]. Each protein carries three Cys2-His2 zinc fingers at its C terminus; the SP subgroup additionally has the Sp-box and a buttonhead box, while the KLF subgroup is more variable outside the fingers. SP1 was the first mammalian sequence-specific activator purified, isolated as the factor that activates the SV40 early promoter through its 21-bp repeats (Dynan and Tjian 1983) [PMID:6313230], and its DNA-binding activity was mapped to the C-terminal zinc-finger region (Kadonaga et al. 1987) [PMID:3319186]. The KLF branch was opened by the cloning of erythroid Kruppel-like factor, KLF1/EKLF, as a CACCC-element-binding protein (Miller and Bieker 1993) [PMID:7682653]. Older aliases persist: KLF1 = EKLF, KLF2 = LKLF, KLF4 = GKLF, KLF9 = BTEB1, SP7 = Osterix. Expression splits the family into broadly expressed members (SP1, SP2, SP3, KLF6, KLF7, KLF9-KLF11, KLF13, KLF16) and restricted ones (KLF1 in erythroid cells, KLF2 in lymphocytes and endothelium, KLF4 and KLF5 in gut and skin, SP4 in neurons, SP7 in osteoblasts, SP8 and SP9 in limb bud and forebrain, KLF17 in oocytes). They bind DNA as monomers.\n\n## The motif\n\nThree fingers read nine to ten bases, three per finger, following the Zif268 code. Two canonical forms are described in the literature. The GC-box, GGGGCGGGG, is the Sp1 site. The CACCC-box, CCACACCC, is the erythroid form found in the beta-globin promoter [PMID:7682653]. The 100 matrices collected here converge on a third way of writing the same thing: the medoid (SP3, JASPAR MA0746.3) is GCCACGCCCAC, and in vitro selection models across the family read CCACGCCC or, on the opposite strand, GGGCGTGG. Which of these a given paralogue prefers is a graded matter, not a switch. Matrices for SP1-SP4 and most KLFs keep a CpG in the central triplet (GGGGCGGGG, GGGCGTGG), whereas KLF1, KLF3, KLF4 and KLF5 tolerate A or T there and yield the CACCC-type models seen in this atlas (KLF4: TGGGTGTGGC; KLF9: GCCACACCCAC). Structurally, the Klf4 three-finger domain has been solved bound to fully methylated DNA at 1.85 A, where an arginine and a glutamate contact the 5-methyl group and binding to methylated DNA is only slightly tighter than to unmodified DNA (Liu et al. 2014) [PMID:24520114]; methyl-SELEX across 542 human factors confirmed that many C2H2 proteins, KLFs included, are methylation-tolerant rather than methylation-blocked (Yin et al. 2017) [PMID:28473536]. Several HOCOMOCO models here span 18-23 positions and contain two copies of the core, reflecting how often these sites occur in tandem. With 100 matrices from 27 gene labels and a cohesion of 0.84, the honest summary is that this family has one motif: no matrix distinguishes SP1 from SP3, or KLF10 from KLF11.\n\n## Where it acts\n\nGC-boxes are the characteristic element of CpG-island promoters and are the reason many housekeeping promoters have no TATA box. They cluster with NRF1, NFY and ETS sites in the same promoters, while CACCC-type sites dominate erythroid regulatory elements such as the beta-globin promoter and locus control region. The family's real problem is neighbors, not partners. The gastrin EGF-response element GGGGCGGGGTGGGGGG binds Sp1 and, independently, ZBP-89/ZNF148 (Merchant et al. 1996) [PMID:8943318]. When the CT/GC-rich element of the IL-3 promoter was used as a bait, the clones recovered were EGR1, EGR2 and DB1/VEZF1 (Koyano-Nakagawa et al. 1994) [PMID:8035792]. In other words, a single GC-rich element can be a legitimate binding site for members of four or five different families in this atlas.\n\n## Biology and disease\n\nSp1-null mouse embryos are retarded and die around day 11, yet Sp1-/- cells grow and differentiate, so the requirement is developmental rather than cell-autonomous (Marin et al. 1997) [PMID:9160753]. KLF1 is required for beta-globin transcription and activates the beta-globin promoter through its CACCC box but not the gamma-globin promoter; swapping the two CACCC boxes showed that this selectivity is set by the overall structure of the beta promoter, not by the CACCC sequence itself (Asano and Stamatoyannopoulos 1998) [PMID:9418858]; dominant human KLF1 mutations cause severe anemia, including congenital dyserythropoietic anemia type IV (Kulczynska-Figurny et al. 2020) [PMID:33339573]. KLF4 is one of the four factors in the original reprogramming cocktail for induced pluripotent stem cells [PMID:16904174]. SP7/Osterix is required for osteoblast differentiation, and its mode of action is unusual (below).\n\n## Reading a hit\n\nA hit identifies the GC-box family and nothing narrower. Beyond that, ask three questions. Is the site informative at all? GGGGCGGGG and CCACGCCC are very common in GC-rich sequence, so a match inside a CpG-island promoter carries little information by itself. Which matrix matched? Of the 100 profiles here, 45 come from HOCOMOCO and many rest on ChIP-seq evidence at grade B or C; the grade-A models (KLF3-KLF5, KLF10, KLF12-KLF14) carry in vitro support and are the ones worth trusting for \"this protein binds this sequence\". Two HOCOMOCO models are not GC-box motifs at all: SP7.H14CORE.0.P.B and SP9.H14CORE.0.P.B are AT-rich (TAATTACAGGTT). For SP7 this is understood - amino-acid differences in the Sp7 zinc-finger domain reduce its affinity for the GC-box, and Sp7 reaches osteoblast enhancers inside Dlx-containing complexes bound to AT-rich motifs (Hojo et al. 2016) [PMID:27134141] - which makes the SP7 ChIP motif a textbook case of a factor \"having\" its recruiter's motif. One CIS-BP matrix labelled SP5 (M03682_2.00) is not from a human protein at all: it is transferred from a Drosophila melanogaster protein at 94% DNA-binding-domain identity. Finally, MAZ/PATZ1, ZNF281/ZNF148, VEZF1, EGR and WT1 all read GC- or GA-rich sequence, and where a match scores well against both a GC-box and a GGGAGGG model, sequence cannot decide between them.",
  "caveats": "A match tells you the GC-box family, not the member: 100 matrices from 27 gene labels share essentially one motif. GC-rich nine-mers are also very common, so a hit in a CpG-island promoter may be no more than a statement about base composition. Most matrices are ChIP-derived at grade B or C; prefer the grade-A in vitro models. Two HOCOMOCO models labelled SP7 and SP9 are AT-rich and are not this motif - for SP7, indirect recruitment by Dlx factors explains it - and one CIS-BP matrix labelled SP5 is inherited from a Drosophila protein. Overlap with MAZ, ZNF281/ZNF148, VEZF1, EGR and WT1 is frequently unresolvable from sequence alone.",
  "refs": [
   {
@@ -74,6 +74,96 @@
    "cite": "Kulczynska-Figurny K, Bieker JJ, Siatecka M. Severe anemia caused by dominant mutations in Krüppel-like factor 1 (KLF1). Mutat Res Rev Mutat Res 2020;786:108336.",
    "pmid": "33339573",
    "url": "https://pubmed.ncbi.nlm.nih.gov/33339573/"
+  },
+  {
+   "cite": "Takahashi K, Yamanaka S. Induction of pluripotent stem cells from mouse embryonic and adult fibroblast cultures by defined factors. Cell 2006;126:663-76.",
+   "pmid": "16904174",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16904174/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1983,
+   "finding": "Sp1 is purified from HeLa cells as a promoter-specific activator that footprints and activates the SV40 early promoter through its tandem 21-bp repeats, defining the GC-box as a sequence-specific activator site.",
+   "methods": "Biochemical fractionation, DNase I footprinting, in vitro transcription of deletion mutants",
+   "confidence": "medium",
+   "pmids": [
+    "6313230"
+   ],
+   "open": "The site was defined on one viral promoter, and the protein's DNA-binding domain was unknown."
+  },
+  {
+   "year": 1987,
+   "finding": "Cloning of Sp1 maps its sequence-specific, zinc-dependent DNA binding to three C-terminal zinc fingers.",
+   "methods": "cDNA cloning, truncation mapping of bacterially expressed fragments",
+   "confidence": "medium",
+   "pmids": [
+    "3319186"
+   ]
+  },
+  {
+   "year": 1993,
+   "finding": "EKLF (KLF1) is cloned as an erythroid-restricted protein with three Kruppel-type fingers that binds CCACACCCT, an essential element of the beta-globin promoter, opening the KLF branch and the CACCC-box form of the motif.",
+   "methods": "Subtractive cDNA cloning, binding-site prediction from finger sequence, gel shift, co-transfection",
+   "confidence": "medium",
+   "pmids": [
+    "7682653"
+   ],
+   "open": "Whether GC-box and CACCC-box factors are separable specificities or variations on one was not addressed."
+  },
+  {
+   "year": 1997,
+   "finding": "Sp1-null mouse embryos die around day 11, yet many putative Sp1 target genes are expressed normally and CpG islands remain methylation-free, contradicting the expectation that Sp1 is broadly required for GC-box promoters and island protection.",
+   "methods": "Gene targeting in mice and ES cells",
+   "confidence": "medium",
+   "pmids": [
+    "9160753"
+   ],
+   "open": "Whether other SP paralogues compensate at GC-boxes was not tested."
+  },
+  {
+   "year": 1998,
+   "finding": "Swapping CACCC boxes between the beta- and gamma-globin promoters shows that EKLF's selective activation of beta-globin is set by the overall promoter structure, not by the sequence of the CACCC box: the gamma promoter stays inactive even with the beta CACCC box in place.",
+   "methods": "Promoter swap and repositioning constructs in transient transfection",
+   "confidence": "medium",
+   "pmids": [
+    "9418858"
+   ],
+   "open": "Which features of promoter architecture confer the selectivity was not identified."
+  },
+  {
+   "year": 2005,
+   "finding": "A unified nomenclature groups the mammalian three-finger GC-box and CACCC-box binders into one SP/KLF family, SP1-SP9 and KLF1-KLF17.",
+   "methods": "Sequence classification and nomenclature",
+   "confidence": "medium",
+   "pmids": [
+    "15820306"
+   ]
+  },
+  {
+   "year": 2014,
+   "finding": "The 1.85 A structure of the Klf4 three-finger domain on fully methylated DNA shows an arginine and a glutamate contacting the 5-methyl group, with affinity only slightly higher than for unmodified DNA; methylation-sensitive SELEX across 542 human factors in 2017 then showed that many factors are not blocked by CpG methylation, and some prefer it.",
+   "methods": "X-ray crystallography, binding assays; methylation-sensitive SELEX",
+   "confidence": "high",
+   "pmids": [
+    "24520114",
+    "28473536"
+   ]
+  },
+  {
+   "year": 2016,
+   "finding": "Sp7/Osterix ChIP-seq and binding studies show that amino-acid differences in the Sp7 fingers reduce its GC-box affinity and that Sp7 reaches osteoblast enhancers in Dlx-containing complexes on AT-rich motifs, which explains why the SP7 ChIP motif is not a GC-box.",
+   "methods": "ChIP-seq, transgenic enhancer assays, binding and interaction mapping",
+   "confidence": "medium",
+   "pmids": [
+    "27134141"
+   ],
+   "open": "Whether other SP members with AT-rich ChIP motifs, such as SP9, are recruited the same way was not examined."
+  }
+ ],
+ "open": [
+  "How individual SP/KLF paralogues reach different targets when their matrices cannot be told apart is not settled: the globin promoter-swap experiments point to promoter architecture rather than site sequence, and how much the graded preference for a central CpG versus a CACCC triplet contributes in vivo has not been measured across the family.",
+  "Whether GC-box binding by SP factors helps keep CpG islands unmethylated is unresolved: islands stayed methylation-free in Sp1-null embryos, which argues against a requirement, but redundancy among SP1, SP3 and other paralogues could mask one.",
+  "The SP9 ChIP model in HOCOMOCO is the same AT-rich sequence as the SP7 model, which suggests, but does not establish, that SP9 is also recruited indirectly through homeodomain partners rather than binding GC-boxes at those sites."
  ]
 }

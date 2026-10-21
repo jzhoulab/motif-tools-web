@@ -11,7 +11,7 @@
  ],
  "consensus": "CCAAT",
  "short": "NF-Y is a heterotrimer of NFYA, NFYB and NFYC that binds the CCAAT box, one of the most frequent elements in eukaryotic promoters. NFYB and NFYC carry histone-fold domains and pair like H2A/H2B, gripping the DNA backbone and bending it; NFYA supplies the only sequence-specific contacts, inserting an alpha helix into the minor groove to read CCAAT. All three subunits are required for binding, so the three gene symbols describe one molecular entity and one motif. NF-Y is ubiquitous, sits at a fixed distance upstream of transcription start sites, and helps open chromatin for cell-type-specific factors. NF-YA is overexpressed and alternatively spliced in several cancers.",
- "long": "## The factors\n\nNF-Y, also called CBF and historically CP1, is an obligate heterotrimer. NFYB and NFYC each\ncontain a histone-fold domain (HFD) and first dimerize with each other; the NFYB/NFYC dimer then\nrecruits NFYA, and only the complete trimer binds DNA. Yeast HAP2, HAP3 and HAP5 are the\northologues of NFYA, NFYB and NFYC respectively, and the conservation is high enough that subunits\nare interchangeable across large evolutionary distances. NFYA exists as two major splice isoforms,\nlong and short, differing in the glutamine-rich activation region; the short isoform is enriched\nin embryonic stem cells. NFYB and NFYC are encoded by single genes with essentially constitutive\nexpression, so NF-Y activity is regulated largely through NFYA levels and isoform choice. Because\nall three subunits are needed, a motif labelled NFYA, NFYB or NFYC in these databases refers to\nthe same complex and the same site; the three-way split in this family's data (nine models across\nthree symbols) reflects which subunit was tagged in an experiment, not three specificities.\n\n## The motif\n\nThe consensus is the 5-base CCAAT box, generally quoted with flanking preferences as CCAATCA or,\non the reverse strand, TGATTGG; databases here report both renderings plus CCAATCAG and CATTGGCC.\nThe crystal structure of NF-Y on a 25-bp CCAAT oligonucleotide explained the division of labor.\nThe NFYB/NFYC histone-fold dimer binds the sugar-phosphate backbone over about 25 bp, mimicking\nthe H2A/H2B-DNA interaction in a nucleosome and bending the DNA, but makes no base-specific\ncontacts. NFYA contributes the specificity: a short alpha helix inserts deeply into the minor\ngroove and reads the CCAAT bases directly. This architecture explains two features of the motif.\nFirst, information is concentrated on five bases with modest preferences a few positions to each\nside, giving models of 10-14 bits, and the flanking positions matter partly because they set the\nDNA's bendability rather than because they are read. Second, NF-Y has nucleosome-like,\nnon-sequence-specific affinity in addition to its specific contacts, which is why it behaves like\na chromatin protein as well as a transcription factor. Not every CCAAT box is an NF-Y site: the\nelement was long used as a generic label, and several unrelated families were grouped under\n\"CCAAT-binding protein\", including the C/EBPs and NFI/CTF. Those are different proteins with\ndifferent folds.\n\n## Where it acts\n\nNF-Y is the most positionally constrained factor in this batch. Its CCAAT boxes sit\noverwhelmingly in core and proximal promoters, classically between 60 and 100 bp upstream of the\nmajor transcription start site, and frequently in bidirectional promoters. ChIP-on-chip and later\ngenome-wide work showed that a substantial minority of NF-Y sites nonetheless lie outside core\npromoters. NF-Y is bound to a large fraction of cell cycle gene promoters (cyclin A, CDC25C, CDK1)\noften together with E2F factors, to the Y box of MHC class II promoters where it binds\ncooperatively with the RFX complex about 15-20 bp away, to the CCAAT boxes of heat shock gene\npromoters, and to the globin promoters. It recruits histone acetyltransferases including GCN5/PCAF\nand p300, contacts TBP, and imposes H3K4 trimethylation through Ash2L. In embryonic stem cells NF-Y\nis required to maintain identity and opens chromatin for lineage-determining factors, which makes\nit one of the clearest examples of a ubiquitous factor acting as a chromatin accessibility\nprovider rather than a specificity determinant.\n\n## Biology and disease\n\nNF-Y is essential: loss of NFYA or of the histone-fold subunits is lethal in cells and in mice, and\nNF-Y regulates cell cycle progression, cholesterol and lipid metabolism genes, and the\nendoplasmic-reticulum stress and heat shock programs. Because the CCAAT box is so widespread, the\ndownstream consequences are broad rather than tissue-specific. In disease, the clearest links are\nquantitative: NF-YA is overexpressed, and its isoform ratio shifted, in breast cancer and in lung\nadenocarcinoma, and NF-YA is required for proliferation of epithelial ovarian cancer cells through\nEZH2 upregulation. NF-YA splice isoform status has been reported as a prognostic variable in low\ngrade endometrial cancer. There is no well-established Mendelian disease caused by NFYA, NFYB or\nNFYC mutation, which is consistent with the complex being required in every cell.\n\n## Reading a hit\n\nA CCAAT match is 5 bp of information and occurs roughly a million times in the human genome, so a\nhit in isolation is not evidence. What makes a CCAAT hit credible is position: an NF-Y site 60-100\nbp upstream of an annotated transcription start site, ideally with a preferred flank (CCAATCA or\nits reverse complement TGATTGG), is a reasonable prediction, while the same 5-mer in an intron or\na distal enhancer is usually noise. The paralogue problem is unusual here and easy: there are no\nparalogues to separate, because NFYA, NFYB and NFYC are three subunits of one complex. Treat all\nthree labels as synonyms for NF-Y. The main real confusion is with other families historically\ncalled CCAAT-binding. C/EBP factors bind ATTGC-containing palindromes, not CCAAT, and NFI/CTF,\nwhose old name is literally \"CCAAT box transcription factor\", binds TTGGC(N5)GCCAA; its GCCAA\nhalf-site contains a CCAAT-like string and will cross-score on loose CCAAT models. If a scan\nreturns both NF-Y and NFI matches at the same position, they are competing explanations. Finally,\nnote that every HOCOMOCO model in this family is ChIP-only (evidence code P, grade B) and the\nlabel agreement scores are correspondingly moderate; the structural and biochemical evidence for\nNFYA reading CCAAT is strong, but these particular matrices are peak-derived.",
+ "long": "## The factors\n\nNF-Y, also called CBF and historically CP1, is an obligate heterotrimer. NFYB and NFYC each\ncontain a histone-fold domain (HFD) and first dimerize with each other; the NFYB/NFYC dimer then\nrecruits NFYA, and only the complete trimer binds DNA [PMID:9153318]. Yeast HAP2, HAP3 and HAP5 are the\northologues of NFYA, NFYB and NFYC respectively [PMID:22050321], and the conservation is high enough that subunits\nare interchangeable across large evolutionary distances. NFYA exists as two major splice isoforms,\nlong and short, differing in the glutamine-rich activation region; the short isoform is enriched\nin embryonic stem cells. NFYB and NFYC are encoded by single genes with essentially constitutive\nexpression, so NF-Y activity is regulated largely through NFYA levels and isoform choice [PMID:22050321]. Because\nall three subunits are needed, a motif labelled NFYA, NFYB or NFYC in these databases refers to\nthe same complex and the same site; the three-way split in this family's data (nine models across\nthree symbols) reflects which subunit was tagged in an experiment, not three specificities.\n\n## The motif\n\nThe consensus is the 5-base CCAAT box, generally quoted with flanking preferences as CCAATCA or,\non the reverse strand, TGATTGG [PMID:3476205,22050321]; databases here report both renderings plus CCAATCAG and CATTGGCC.\nThe crystal structure of NF-Y on a 25-bp CCAAT oligonucleotide explained the division of labor.\nThe NFYB/NFYC histone-fold dimer binds the sugar-phosphate backbone over about 25 bp, mimicking\nthe H2A/H2B-DNA interaction in a nucleosome and bending the DNA, but makes no base-specific\ncontacts [PMID:23332751,12401788]. NFYA contributes the specificity: a short alpha helix inserts deeply into the minor\ngroove and reads the CCAAT bases directly [PMID:23332751]. This architecture explains two features of the motif.\nFirst, information is concentrated on five bases with modest preferences a few positions to each\nside, giving models of 10-14 bits, and the flanking positions matter partly because they set the\nDNA's bendability rather than because they are read. Second, NF-Y has nucleosome-like,\nnon-sequence-specific affinity in addition to its specific contacts, which is why it behaves like\na chromatin protein as well as a transcription factor [PMID:23332751]. Not every CCAAT box is an NF-Y site: the\nelement was long used as a generic label, and several unrelated families were grouped under\n\"CCAAT-binding protein\", including the C/EBPs and NFI/CTF [PMID:3476205,3398920]. Those are different proteins with\ndifferent folds.\n\n## Where it acts\n\nNF-Y is the most positionally constrained factor in this batch. Its CCAAT boxes sit\noverwhelmingly in core and proximal promoters, classically between 60 and 100 bp upstream of the\nmajor transcription start site, and frequently in bidirectional promoters [PMID:15647281]. ChIP-on-chip and later\ngenome-wide work showed that a substantial minority of NF-Y sites nonetheless lie outside core\npromoters [PMID:15647281]. NF-Y is bound to a large fraction of cell cycle gene promoters (cyclin A, CDC25C, CDK1)\noften together with E2F factors [PMID:12771133], to the Y box of MHC class II promoters where it binds\ncooperatively with the RFX complex about 15-20 bp away [PMID:10779326], to the CCAAT boxes of heat shock gene\npromoters, and to the globin promoters. It recruits histone acetyltransferases including GCN5/PCAF\nand p300, contacts TBP [PMID:12771133,9153318], and imposes H3K4 trimethylation through Ash2L. In embryonic stem cells NF-Y\nis required to maintain identity and opens chromatin for lineage-determining factors [PMID:25132174], which makes\nit one of the clearest examples of a ubiquitous factor acting as a chromatin accessibility\nprovider rather than a specificity determinant.\n\n## Biology and disease\n\nNF-Y is essential: loss of NFYA or of the histone-fold subunits is lethal in cells and in mice, and\nNF-Y regulates cell cycle progression, cholesterol and lipid metabolism genes, and the\nendoplasmic-reticulum stress and heat shock programs. Because the CCAAT box is so widespread, the\ndownstream consequences are broad rather than tissue-specific. In disease, the clearest links are\nquantitative: NF-YA is overexpressed, and its isoform ratio shifted, in breast cancer [PMID:31506469] and in lung\nadenocarcinoma, and NF-YA is required for proliferation of epithelial ovarian cancer cells through\nEZH2 upregulation [PMID:23360797]. NF-YA splice isoform status has been reported as a prognostic variable in low\ngrade endometrial cancer. There is no well-established Mendelian disease caused by NFYA, NFYB or\nNFYC mutation, which is consistent with the complex being required in every cell.\n\n## Reading a hit\n\nA CCAAT match is 5 bp of information and occurs roughly a million times in the human genome, so a\nhit in isolation is not evidence. What makes a CCAAT hit credible is position: an NF-Y site 60-100\nbp upstream of an annotated transcription start site, ideally with a preferred flank (CCAATCA or\nits reverse complement TGATTGG), is a reasonable prediction, while the same 5-mer in an intron or\na distal enhancer is usually noise. The paralogue problem is unusual here and easy: there are no\nparalogues to separate, because NFYA, NFYB and NFYC are three subunits of one complex. Treat all\nthree labels as synonyms for NF-Y. The main real confusion is with other families historically\ncalled CCAAT-binding. C/EBP factors bind ATTGC-containing palindromes, not CCAAT, and NFI/CTF,\nwhose old name is literally \"CCAAT box transcription factor\", binds TTGGC(N5)GCCAA [PMID:3398920]; its GCCAA\nhalf-site contains a CCAAT-like string and will cross-score on loose CCAAT models. If a scan\nreturns both NF-Y and NFI matches at the same position, they are competing explanations. Finally,\nnote that every HOCOMOCO model in this family is ChIP-only (evidence code P, grade B) and the\nlabel agreement scores are correspondingly moderate; the structural and biochemical evidence for\nNFYA reading CCAAT is strong [PMID:23332751], but these particular matrices are peak-derived.",
  "caveats": "CCAAT is 5 bp and occurs about a million times in the genome, so only position makes a hit credible: NF-Y sites cluster 60-100 bp upstream of transcription start sites. NFYA, NFYB and NFYC are subunits of one obligate trimer, so the three labels denote one motif, not three specificities, and only NFYA makes base contacts. The recurring confusion is with other families once called CCAAT-binding: NFI/CTF's GCCAA half-site and C/EBP sites will cross-score on loose CCAAT models and are competing explanations, not corroboration. All HOCOMOCO models here are ChIP-derived (grade B), though the structure independently confirms CCAAT reading.",
  "refs": [
   {
@@ -74,5 +74,78 @@
    "pmid": "23360797",
    "url": "https://pubmed.ncbi.nlm.nih.gov/23360797/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1987,
+   "finding": "NF-Y, the factor binding the Y box of MHC class II promoters, is shown to recognize the reversed CCAAT box within it and to be distinct from the other CCAAT-binding activities then known, CBP and CTF/NF-I, plus a further thymidine kinase promoter factor.",
+   "methods": "Gel retardation, methylation interference, saturation mutagenesis, cross-competition",
+   "confidence": "medium",
+   "pmids": [
+    "3476205"
+   ],
+   "open": "Which CCAAT boxes are NF-Y sites rather than sites for the other CCAAT-binding proteins."
+  },
+  {
+   "year": 1997,
+   "finding": "All three subunits are required for DNA binding, and NF-YB and NF-YC contact TBP through short conserved stretches adjacent to their histone-fold motifs.",
+   "methods": "Immunopurification, sedimentation, in vitro binding with deletion and point mutants",
+   "confidence": "medium",
+   "pmids": [
+    "9153318"
+   ]
+  },
+  {
+   "year": 2003,
+   "finding": "The NF-YB/NF-YC structure shows a histone-fold pair closely related to H2A/H2B and NC2, and modeling suggests nonspecific DNA contact by the dimer within the full NF-Y/CCAAT complex.",
+   "methods": "X-ray crystallography, structural modeling",
+   "confidence": "high",
+   "pmids": [
+    "12401788"
+   ],
+   "open": "How NF-YA reads the CCAAT bases remained unseen."
+  },
+  {
+   "year": 2003,
+   "finding": "On cell-cycle promoters NF-Y binding is timed and lost on repression, with PCAF/GCN5 and p300 recruited in a hierarchy, contrary to the picture of NF-Y as a constitutive factor that presets promoters.",
+   "methods": "ChIP in serum-starved and restimulated cells, drug-induced cell-cycle arrest",
+   "confidence": "medium",
+   "pmids": [
+    "12771133"
+   ]
+  },
+  {
+   "year": 2005,
+   "finding": "ChIP-on-chip on CpG-island arrays places 40-50% of NF-Y sites outside core promoters, in introns or distant 5' and 3' positions, and finds 40% of targets in divergent, convergent or tandem promoter units.",
+   "methods": "ChIP-on-chip, conventional ChIP, EMSA, dominant-negative NF-YA",
+   "confidence": "medium",
+   "pmids": [
+    "15647281"
+   ],
+   "open": "Whether the non-promoter sites are functional."
+  },
+  {
+   "year": 2013,
+   "finding": "The structure of the NF-Y trimer on a 25-bp CCAAT oligonucleotide shows the histone-fold dimer binding the backbone like H2A/H2B in a nucleosome, while an NF-YA helix inserts into the minor groove and makes the CCAAT-specific contacts.",
+   "methods": "X-ray crystallography, mutagenesis",
+   "confidence": "high",
+   "pmids": [
+    "23332751"
+   ]
+  },
+  {
+   "year": 2014,
+   "finding": "In embryonic stem cells and neurons NF-Y binds cell-type-invariant promoters and also cell-type-specific enhancers together with master factors, where it promotes a permissive chromatin conformation; it is required to maintain ES cell identity.",
+   "methods": "ChIP-seq, chromatin accessibility assays, knockdown",
+   "confidence": "medium",
+   "pmids": [
+    "25132174"
+   ]
+  }
+ ],
+ "open": [
+  "How promoter-restricted functional NF-Y binding is remains unsettled: the classical CCAAT box sits 60-100 bp upstream of the start site, but ChIP-on-chip placed 40-50% of NF-Y sites outside core promoters and genome-wide data in ES cells and neurons find NF-Y at cell-type-specific enhancers, so distal CCAAT matches may be real more often than the promoter-position rule assumes.",
+  "Whether NF-Y is a constitutive promoter-presetting factor or a regulated one is not settled: its histone-fold subunits are ubiquitous and it occupies promoters broadly, yet on cell-cycle promoters its binding is timed and lost on repression.",
+  "Why the flanks matter is unclear: the trimer structure shows base-specific contacts concentrated on CCAAT, yet every model here carries flank preferences (CCAATCA, CCAATCAG), which could reflect DNA shape and bendability or contacts outside the crystallized site."
  ]
 }

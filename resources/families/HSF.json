@@ -10,7 +10,7 @@
  ],
  "consensus": "nTTCnnGAAnnTTCn",
  "short": "Heat shock factors bind the heat shock element (HSE), an array of the 5-base unit nGAAn in alternating orientation: nTTCn-nGAAn-nTTCn and longer runs. The DNA-binding domain is a winged helix, and HSF proteins trimerize through a coiled coil so that three subunits each read one 5-base unit, with further trimers loading cooperatively onto longer arrays. Humans have HSF1, HSF2, HSF4, HSF5 and the Y-linked HSFY1/HSFY2. HSF1 is the stress-inducible member, held inactive as a monomer until proteotoxic stress triggers trimerization. HSEs drive heat shock protein genes, and HSF1 activity also supports malignant transformation; HSF4 mutations cause congenital cataract.",
- "long": "## The factors\n\nHuman HSF1 is the stress-responsive member, kept as an inactive monomer by intramolecular\ncoiled-coil interactions and by chaperone binding, and converted on proteotoxic stress into a\nDNA-binding trimer that is further tuned by phosphorylation, acetylation and SUMOylation. HSF2 is\ndevelopmentally and differentiation-regulated, binds many of the same elements, and forms\nheterotrimers with HSF1. HSF4 is expressed mainly in lens and other epithelia and, unlike HSF1, is\nconstitutively trimeric and can act as a repressor at HSF1 targets. HSF5 is poorly characterized\nand largely testis-restricted. HSFY1 and HSFY2 lie in multicopy on the Y chromosome within the\nAZFb interval and are expressed in testis. All members share an N-terminal winged-helix DNA-binding\ndomain followed by hydrophobic repeats (HR-A/B) that mediate trimerization; the domain is among the\nmost conserved DNA-binding domains in eukaryotes.\n\n## The motif\n\nThe recognition unit is 5 bases, nGAAn, and a functional heat shock element is an inverted array of\nat least three of them. The classical rendering is nTTCnnGAAnnTTCn; the two permutations,\nhead-to-head and tail-to-tail repeats of the 5-bp unit, bind with similar affinity and with\nstriking two-fold symmetry, which was the original evidence that the unit and not a longer\npalindrome is the recognition module. HSF binds arrays cooperatively, so four, five or six units\ngive progressively higher affinity and are common in strongly inducible promoters. The crystal\nstructure of an HSF DNA-binding domain showed a three-helix bundle capped by a four-stranded\nantiparallel beta sheet, a winged-helix variant of the helix-turn-helix motif, and the human HSF1\nstructure in complex with DNA showed how the trimer positions three such domains around the helix.\nEach domain reads GAA in the major groove, so the information sits on the GAA/TTC triplets while\nthe two flanking bases of each unit are nearly free. That is why database models for HSF1, HSF2 and\nHSF4 look like TTCTAGAA-cg-TTC or aGAA-cg-TTCTAGAA: they are the same three-unit array written with\ndifferent phase and strand. The HSFY and HSF5 models are different in a real way, favoring TTCGAA\nand CGTTCGAA arrangements, so the family separates loosely into an HSF1/2/4 group and an\nHSFY/HSF5 group; overall cohesion (0.66) is the lowest in this batch. Within the HSF1/2/4 group no\nmember is distinguishable from sequence.\n\n## Where it acts\n\nHSEs are promoter-proximal at the classic targets: HSPA1A/HSPA1B, HSP90AA1, DNAJB1, HSPB1 and the\nother chaperone and co-chaperone genes carry clustered HSEs within a few hundred bases of the\nstart site, usually with a paused RNA polymerase already engaged so that induction is a release\nstep rather than a recruitment step. HSF1 is also found at thousands of distal enhancers, and the\nenhancer repertoire differs between stress types: heat shock and oxidative stress drive HSF1 and\nHSF2 to partly distinct gene and enhancer sets. GAGA-type factors and, in mammals, SP1 and NF-Y\noccupy the same promoters; NF-Y binds the CCAAT boxes of several heat shock promoters. In cancer\ncells, HSF1 occupies a large set of non-chaperone genes that is distinct from the classical heat\nshock program, and in tumor stroma it drives a separate program in cancer-associated fibroblasts.\nHSF1 also localizes to sex chromatin during meiotic repression.\n\n## Biology and disease\n\nHsf1-null mice are viable but lack thermotolerance, show tissue-specific failure of stress-inducible\nchaperone expression, and develop demyelination and protein aggregate accumulation in the CNS;\nHsf1 is also required for oocyte meiosis. HSF1 activity extends lifespan in C. elegans together\nwith chaperones, linking the pathway to proteostasis in aging. In cancer, HSF1 supports malignant\ntransformation through a transcriptional program distinct from the heat shock response, high\nnuclear HSF1 predicts poor outcome in breast cancer, and loss of Hsf1 suppresses lymphoma in\np53-deficient mice. HSF4 mutations in the DNA-binding domain cause autosomal dominant lamellar and\nMarner cataract, and a homozygous splice mutation causes recessive congenital cataract; Hsf4-null\nmice develop cataract with reduced gamma-S-crystallin. HSF2 contributes to inducible hsp expression\nthrough heterotrimerization with HSF1 rather than acting alone. HSFY copy loss accompanies AZFb\ndeletions in azoospermia, though targeted studies argue HSFY genes are not themselves required for\nspermatocyte maturation, so the association may be positional.\n\n## Reading a hit\n\nA three-unit HSE is reasonably informative, and models here reach 17-21 bits, so a good match is\nworth following up. Two specific traps make this family riskier than that number suggests. First,\nnGAAn arrays overlap other purine-rich motifs. A GGAA core is the ETS recognition sequence and\nGGAAA is the NFAT core, so loose HSF models score on ETS and NFAT sites and vice versa; one\nVierstra archetype in this family is explicitly labelled HSF/NFATC for that reason. A single\nnGAAn unit is worthless as evidence. Second, and more concretely, several ChIP-derived HSF1 models\nin these collections are not HSEs at all but resemble the tRNA internal B-box promoter element\n(GTTCGAANNC): consensus strings such as GGGTTCGAATCCC appear in CIS-BP, HOCOMOCO and Vierstra\nentries labelled HSF1 or HSF, and these are the entries whose label agreement with the rest of the\nfamily is lowest. Treat a GGGTTCGAATCC-like match as a possible tRNA gene rather than an HSE. The\nevidence codes help: HSF1, HSF2 and HSF4 grade-A or grade-B models built on SELEX plus methyl-SELEX\n(PSM, SM) give the canonical three-unit HSE, while the B-box-like models are ChIP-only (P). Finally,\na genuine HSE hit does not mean the gene is stress-inducible, because HSF2 and HSF4 occupy the same\nelements constitutively and HSF4 can repress there.",
+ "long": "## The factors\n\nHuman HSF1 is the stress-responsive member, kept as an inactive monomer by intramolecular\ncoiled-coil interactions and by chaperone binding, and converted on proteotoxic stress into a\nDNA-binding trimer that is further tuned by phosphorylation, acetylation and SUMOylation [PMID:20628411]. HSF2 is\ndevelopmentally and differentiation-regulated, binds many of the same elements, and forms\nheterotrimers with HSF1 [PMID:17213196]. HSF4 is expressed mainly in lens and other epithelia and, unlike HSF1, is\nconstitutively trimeric and can act as a repressor at HSF1 targets [PMID:20628411]. HSF5 is poorly characterized\nand largely testis-restricted. HSFY1 and HSFY2 lie in multicopy on the Y chromosome within the\nAZFb interval and are expressed in testis [PMID:22158087]. All members share an N-terminal winged-helix DNA-binding\ndomain followed by hydrophobic repeats (HR-A/B) that mediate trimerization; the domain is among the\nmost conserved DNA-binding domains in eukaryotes.\n\n## The motif\n\nThe recognition unit is 5 bases, nGAAn, and a functional heat shock element is an inverted array of\nat least three of them [PMID:3146692,2590940]. The classical rendering is nTTCnnGAAnnTTCn; the two permutations,\nhead-to-head and tail-to-tail repeats of the 5-bp unit, bind with similar affinity and with\nstriking two-fold symmetry, which was the original evidence that the unit and not a longer\npalindrome is the recognition module [PMID:2590940]. HSF binds arrays cooperatively, so four, five or six units\ngive progressively higher affinity and are common in strongly inducible promoters [PMID:1899357]. The crystal\nstructure of an HSF DNA-binding domain showed a three-helix bundle capped by a four-stranded\nantiparallel beta sheet, a winged-helix variant of the helix-turn-helix motif [PMID:8284672], and the human HSF1\nstructure in complex with DNA showed how the trimer positions three such domains around the helix [PMID:26727489].\nEach domain reads GAA in the major groove, so most of the information sits on the GAA/TTC triplets,\nbut the flanks are not free: the two positions just 5' of each GAA affect whether an element works\n[PMID:3146692], and the in vitro models here fix them as the TA of TTCTAGAA, with a weaker CG preference\nin GAAcgTTC. That is why database models for HSF1, HSF2 and\nHSF4 look like TTCTAGAA-cg-TTC or aGAA-cg-TTCTAGAA: they are the same three-unit array written with\ndifferent phase and strand. The HSFY and HSF5 models are different in a real way, favoring TTCGAA\nand CGTTCGAA arrangements, so the family separates loosely into an HSF1/2/4 group and an\nHSFY/HSF5 group; overall cohesion (0.66) is the lowest in this batch. Within the HSF1/2/4 group no\nmember is distinguishable from sequence.\n\n## Where it acts\n\nHSEs are promoter-proximal at the classic targets: HSPA1A/HSPA1B, HSP90AA1, DNAJB1, HSPB1 and the\nother chaperone and co-chaperone genes carry clustered HSEs within a few hundred bases of the\nstart site, usually with a paused RNA polymerase already engaged so that induction is a release\nstep rather than a recruitment step [PMID:35687139]. HSF1 is also found at thousands of distal enhancers, and the\nenhancer repertoire differs between stress types: heat shock and oxidative stress drive HSF1 and\nHSF2 to partly distinct gene and enhancer sets [PMID:35687139]. GAGA-type factors and, in mammals, SP1 and NF-Y\noccupy the same promoters; NF-Y binds the CCAAT boxes of several heat shock promoters. In cancer\ncells, HSF1 occupies a large set of non-chaperone genes that is distinct from the classical heat\nshock program [PMID:22863008], and in tumor stroma it drives a separate program in cancer-associated fibroblasts.\nHSF1 also localizes to sex chromatin during meiotic repression.\n\n## Biology and disease\n\nHsf1-null mice are viable but lack thermotolerance, show tissue-specific failure of stress-inducible\nchaperone expression [PMID:12112007], and develop demyelination and protein aggregate accumulation in the CNS;\nHsf1 is also required for oocyte meiosis. HSF1 activity extends lifespan in C. elegans together\nwith chaperones, linking the pathway to proteostasis in aging [PMID:20628411]. In cancer, HSF1 supports malignant\ntransformation through a transcriptional program distinct from the heat shock response [PMID:22863008], high\nnuclear HSF1 predicts poor outcome in breast cancer, and loss of Hsf1 suppresses lymphoma in\np53-deficient mice. HSF4 mutations in the DNA-binding domain cause autosomal dominant lamellar and\nMarner cataract [PMID:12089525], and a homozygous splice mutation causes recessive congenital cataract; Hsf4-null\nmice develop cataract with reduced gamma-S-crystallin. HSF2 contributes to inducible hsp expression\nthrough heterotrimerization with HSF1 rather than acting alone [PMID:17213196]. HSFY copy loss accompanies AZFb\ndeletions in azoospermia, though targeted studies argue HSFY genes are not themselves required for\nspermatocyte maturation [PMID:22158087], so the association may be positional.\n\n## Reading a hit\n\nA three-unit HSE is reasonably informative, and models here reach 17-21 bits, so a good match is\nworth following up. Two specific traps make this family riskier than that number suggests. First,\nnGAAn arrays overlap other purine-rich motifs. A GGAA core is the ETS recognition sequence and\nGGAAA is the NFAT core, so loose HSF models score on ETS and NFAT sites and vice versa; one\nVierstra archetype in this family is explicitly labelled HSF/NFATC for that reason. A single\nnGAAn unit is worthless as evidence. Second, and more concretely, several ChIP-derived HSF1 models\nin these collections are not HSEs at all but resemble the tRNA internal B-box promoter element\n(GTTCGAANNC) [PMID:2109308]: consensus strings such as GGGTTCGAATCCC appear in CIS-BP, HOCOMOCO and Vierstra\nentries labelled HSF1 or HSF, and these are the entries whose label agreement with the rest of the\nfamily is lowest. Treat a GGGTTCGAATCC-like match as a possible tRNA gene rather than an HSE. The\nevidence codes help: HSF1, HSF2 and HSF4 grade-A or grade-B models built on SELEX plus methyl-SELEX\n(PSM, SM) give the canonical three-unit HSE, while the B-box-like models are ChIP-only (P). Finally,\na genuine HSE hit does not mean the gene is stress-inducible, because HSF2 and HSF4 occupy the same\nelements constitutively and HSF4 can repress there.",
  "caveats": "The 5-base unit nGAAn is useless alone; require at least three alternating units. nGAAn arrays cross-score with ETS (GGAA) and NFAT (GGAAA) sites, and one archetype here is labelled HSF/NFATC for that reason. Several ChIP-only models labelled HSF1 or HSF match the tRNA B-box (GGGTTCGAATCC) rather than an HSE and have the lowest label agreement in the family; a hit of that shape may be a tRNA gene. The family also splits into an HSF1/2/4 group and a distinct HSFY/HSF5 group, and cohesion is the lowest in this batch. A hit does not imply stress-inducibility, since HSF2 and HSF4 bind the same elements constitutively.",
  "refs": [
   {
@@ -72,6 +72,103 @@
    "cite": "Gaëta BA, Sharp SJ, Stewart TS. Saturation mutagenesis of the Drosophila tRNA(Arg) gene B-Box intragenic promoter element: requirements for transcription activation and stable complex formation. Nucleic Acids Res 1990;18:1541-8.",
    "pmid": "2109308",
    "url": "https://pubmed.ncbi.nlm.nih.gov/2109308/"
+  },
+  {
+   "cite": "Pelham HR. A regulatory upstream promoter element in the Drosophila hsp 70 heat-shock gene. Cell 1982;30:517-28.",
+   "pmid": "6814763",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/6814763/"
+  },
+  {
+   "cite": "Amin J, Ananthan J, Voellmy R. Key features of heat shock regulatory elements. Mol Cell Biol 1988;8:3761-9.",
+   "pmid": "3146692",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3146692/"
+  },
+  {
+   "cite": "Pelham HR, Bienz M. A synthetic heat-shock promoter element confers heat-inducibility on the herpes simplex virus thymidine kinase gene. EMBO J 1982;1:1473-7.",
+   "pmid": "6327271",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/6327271/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1982,
+   "finding": "Deletion analysis of the Drosophila hsp70 promoter in COS cells shows that residues -47 to -66, upstream of the TATA box, are needed for heat-inducible transcription; the region carries a sequence shared by heat shock genes, and a synthetic copy of the inverted-repeat consensus CT-GAA-TTC-AG makes a heterologous promoter heat-inducible.",
+   "methods": "Promoter deletion mutants, synthetic element transfer, transfection, S1 mapping",
+   "confidence": "medium",
+   "pmids": [
+    "6814763",
+    "6327271"
+   ],
+   "open": "What bound the element, and whether the palindrome or a smaller unit was the recognition module."
+  },
+  {
+   "year": 1988,
+   "finding": "Heat shock elements are modular, built from GAA blocks in alternating orientation at 2-nucleotide intervals, giving a 5-nucleotide periodicity; functional elements need three or more blocks, and the two nucleotides upstream of each GAA affect competence.",
+   "methods": "Synthetic element mutagenesis, reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "3146692"
+   ]
+  },
+  {
+   "year": 1989,
+   "finding": "The minimal site for stable binding by Drosophila HSF is an inverted repeat of the 5-bp unit nGAAn; head-to-head and tail-to-tail arrangements bind equally, footprints grow with each added unit, and cross-linking indicates HSF binds as a trimer.",
+   "methods": "EMSA, DNase I footprinting, protein cross-linking",
+   "confidence": "high",
+   "pmids": [
+    "2590940"
+   ]
+  },
+  {
+   "year": 1991,
+   "finding": "HSF binding is cooperative both within a trimer and between trimers: occupying one of two adjacent trimer sites raises binding to the second by more than 2000-fold, explaining why strong heat shock promoters carry multiple elements.",
+   "methods": "Quantitative DNA-binding assays",
+   "confidence": "medium",
+   "pmids": [
+    "1899357"
+   ]
+  },
+  {
+   "year": 1994,
+   "finding": "The 1.8 A structure of the HSF DNA-binding domain is a three-helix bundle capped by a four-stranded antiparallel beta sheet, a variant of the helix-turn-helix fold.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "8284672"
+   ],
+   "open": "The domain was solved without DNA, so base contacts were inferred."
+  },
+  {
+   "year": 2012,
+   "finding": "In highly malignant human cancer cells HSF1 drives a transcriptional program distinct from the heat shock response, including many non-chaperone genes, and the program is active in primary breast, colon and lung tumors and associated with metastasis and death.",
+   "methods": "ChIP-seq, expression profiling, analysis of patient tumors",
+   "confidence": "medium",
+   "pmids": [
+    "22863008"
+   ]
+  },
+  {
+   "year": 2016,
+   "finding": "Cocrystal structures of the human HSF1 DNA-binding domain with heat shock element DNA, compared with the paralogue Skn7, show that single amino acid changes in the domain can switch DNA-binding specificity, and support a model of the trimer embracing the element.",
+   "methods": "X-ray crystallography, comparative mutagenesis, structural modeling",
+   "confidence": "high",
+   "pmids": [
+    "26727489"
+   ],
+   "open": "Whether natural paralogues such as HSFY use such substitutions to read different sites."
+  },
+  {
+   "year": 2022,
+   "finding": "HSF1 and HSF2 bind distinct genes and enhancers in oxidative stress and heat shock, release paused RNA polymerase II at promoters, and HSF1 occupies many chaperone genes under oxidative stress without activating them.",
+   "methods": "PRO-seq, ChIP-seq",
+   "confidence": "medium",
+   "pmids": [
+    "35687139"
+   ]
+  }
+ ],
+ "open": [
+  "The GGGTTCGAATCC-like models labelled HSF1 or HSF are ChIP-only and match the tRNA B-box, and whether they reflect genuine HSF1 occupancy at tRNA genes or contamination of HSF1 peak sets by heavily occupied tRNA loci has not been established.",
+  "Whether HSFY and HSF5 have their own specificity is not resolved: the in vitro HSFY1 models favor TTCGAA-type arrays unlike HSF1/2/4, and the two low-grade HSF5 models disagree with each other (ACGTTCYA versus AACATTCCA, the latter resembling a TEAD site); single-residue changes can switch HSF specificity, but in vivo targets of HSFY and HSF5 are unknown."
  ]
 }

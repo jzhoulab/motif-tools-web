@@ -11,7 +11,7 @@
  ],
  "consensus": "TCCCNNGGGA",
  "short": "EBF1-EBF4 (COE1-COE4, also Olf-1 and O/E-1 to O/E-3) bind a 10-base palindrome, TCCCNNGGGA, as homodimers. Despite being filed with the bHLH proteins, their DNA-binding domain is a pseudo-immunoglobulin fold structurally similar to the Rel homology domains of NF-κB and NFAT, contacting DNA through two loops and a unique zinc-coordination motif, with each subunit reaching across both half-sites; the HLH they carry is used for dimerisation, not DNA contact. EBF1 is required at the earliest committed step of B-lymphocyte development and shows pioneer-like activity on closed chromatin; EBF2 establishes brown adipocyte identity; de novo EBF3 variants cause a hypotonia-ataxia-developmental-delay syndrome. The motif is long enough that scans for it are relatively clean.",
- "long": "## The factors\n\nEBF1, EBF2, EBF3 and EBF4 — also called COE1-COE4, and in the olfactory literature Olf-1 and O/E-1 to O/E-3 — make up the vertebrate COE (Collier/Olf-1/EBF) family. They were discovered twice in the same year: EBF1 as a regulator of the B-cell-specific *mb-1*/*Cd79a* promoter, and Olf-1 as the factor binding a conserved element in olfactory neuron gene promoters. The family is conventionally filed with the bHLH proteins, and the atlas inherits that placement, but structurally it is not one. Crystallography shows that the EBF DNA-binding domain adopts a pseudo-immunoglobulin fold with novel topology that is structurally similar to the Rel homology domains of NF-κB and NFAT, and that it contacts DNA through two loop-based modules plus a unique zinc-coordination motif, the \"zinc knuckle\", with each monomer reaching across to touch both halves of the palindrome. Biochemistry had already identified that zinc motif and multiple dimerisation and activation domains. The proteins also carry an IPT/TIG domain and an atypical helix-loop-helix with its own novel dimerisation motif — an HLH used for dimerisation, not for DNA contact. The Vierstra archetype covering this family is named `AC0500:EBF:Rel_homology_region_(RHR)_factors`, which reflects the structure better than the bHLH label does. EBF1 acts in B lymphocytes, olfactory neurons, adipocytes, striatal neurons and osteoblasts; EBF2 in brown adipocytes, olfactory epithelium and cerebellum; EBF3 broadly in the central nervous system; EBF4 is the least characterised. They function as homodimers and can heterodimerise with each other.\n\n## The motif\n\nThe site is a 10-base palindrome, TCCCNNGGGA: two inverted TCCC half-sites separated by two degenerate positions. The databases' versions fill those central positions in slightly different ways — HOCOMOCO EBF1 reads TCCCCTGGGA, HOCOMOCO EBF3 and JASPAR EBF1 read TCCCCAGGGA/TCCCCAGGGGA, the CIS-BP EBF1 model reads AKTCCCTWGGGAAT with extended flanks — but they are all the same element, and the representative model is the archetype consensus TCCCTGGGGA. Because the palindrome is read symmetrically by a dimer, with each subunit contacting both half-sites, the two central bases are the tolerant ones and the TCCC/GGGA blocks are essentially invariant.\n\nTwo practical consequences follow. First, this is an information-rich motif by the standards of a transcription factor site: eight effectively fixed positions rather than the four or five of an E-box. An exact TCCCNNGGGA is expected around 47,000 times in a 3.1-Gb genome, and because the pattern is its own reverse complement that count is not doubled — roughly one site per 65 kb, against roughly one per 4 kb for a six-mer. Scans for this motif are correspondingly cleaner. Second, the motif resembles nothing else in the atlas: the best match of any member to a motif outside the family is 0.93 and typically much lower, while within-family similarities run 0.91-1.00 (cohesion 0.91). The four paralogues are completely indistinguishable from sequence.\n\nOne provenance note: the CIS-BP EBF2 model `M03721_2.00` is inherited from a *Drosophila melanogaster* protein (Collier/Knot) at 91% DNA-binding-domain identity. Because COE proteins are deeply conserved and the fly motif (AATTCCCTAGGGAATT) matches the human models closely, this transfer is benign, but it is a transfer.\n\n## Where it acts\n\nEBF1 in B cells binds thousands of sites, mostly at enhancers of the B-lineage programme — *Cd79a*, *Pax5*, *Cd19*, *Igll1*, *Vpreb*, *Blnk*, *Foxo1* — and acts by activation, by repression, and by a transcription-independent poising of chromatin at genes that only become active later. Its C-terminal domain confers pioneer-like activity, letting EBF1 engage closed and nucleosomal chromatin and open it for subsequent factors, which is unusual and consistent with the extended DNA contact area seen in the structure. In B cells EBF1 sites co-occur with E2A/TCF3, PAX5, FOXO1 and RUNX1 motifs. In brown fat, EBF2 occupies and activates the PPARG/PRDM16 thermogenic enhancer programme. In olfactory sensory neurons the same element sits in promoters of olfactory marker and signalling genes.\n\n## Biology and disease\n\n*Ebf1*-null mice arrest B-cell development before the pro-B stage, with no immunoglobulin heavy-chain DJ rearrangement — EBF1 is required at the earliest committed step of the B lineage. EBF2 is required to establish and maintain brown adipocyte identity, and forced EBF2 expression imposes a brown-fat programme. In human genetics, de novo variants in *EBF3*, largely missense changes in the DNA-binding domain, cause a neurodevelopmental syndrome with hypotonia, ataxia, developmental delay and expressive language impairment, reported independently by two groups in the same issue; the mutations reduce DNA binding and transactivation, consistent with a dominant-negative or haploinsufficient mechanism.\n\n## Reading a hit\n\nBecause the site is long, palindromic and unlike any other family's, a TCCCNNGGGA hit is unusually trustworthy at the family level: if you find a good match, EBF-family binding is a reasonable hypothesis. What it will not tell you is which EBF, since all four share the motif, and in most tissues only one or two are expressed, so expression data resolve the question that sequence cannot. Two cautions. All three HOCOMOCO models here are ChIP-derived (evidence letter `P`, grade B), so the in vitro support for the recognition sequence comes from the original biochemistry and the crystal structure rather than from SELEX models in the current collection. And the family label \"bHLH\" is misleading: EBF has an HLH, but it is a dimerisation module, and an E-box search will neither find EBF sites nor be found by them.",
+ "long": "## The factors\n\nEBF1, EBF2, EBF3 and EBF4 — also called COE1-COE4, and in the olfactory literature Olf-1 and O/E-1 to O/E-3 — make up the vertebrate COE (Collier/Olf-1/EBF) family. They were discovered twice in the same year: EBF1 as a regulator of the B-cell-specific *mb-1*/*Cd79a* promoter, and Olf-1 as the factor binding a conserved element in olfactory neuron gene promoters [PMID:8491377,8321284]. The family is conventionally filed with the bHLH proteins, and the atlas inherits that placement, but structurally it is not one. Crystallography shows that the EBF DNA-binding domain adopts a pseudo-immunoglobulin fold with novel topology that is structurally similar to the Rel homology domains of NF-κB and NFAT, and that it contacts DNA through two loop-based modules plus a unique zinc-coordination motif, the \"zinc knuckle\", with each monomer reaching across to touch both halves of the palindrome [PMID:20876732]. Biochemistry had already identified that zinc motif and multiple dimerisation and activation domains [PMID:7796816]. The proteins also carry an IPT/TIG domain and an atypical helix-loop-helix with its own novel dimerisation motif — an HLH used for dimerisation, not for DNA contact [PMID:20592035]. The Vierstra archetype covering this family is named `AC0500:EBF:Rel_homology_region_(RHR)_factors`, which reflects the structure better than the bHLH label does. EBF1 acts in B lymphocytes, olfactory neurons, adipocytes, striatal neurons and osteoblasts; EBF2 in brown adipocytes, olfactory epithelium and cerebellum; EBF3 broadly in the central nervous system; EBF4 is the least characterised. They function as homodimers and can heterodimerise with each other.\n\n## The motif\n\nThe site is a 10-base palindrome, TCCCNNGGGA: two inverted TCCC half-sites separated by two degenerate positions [PMID:8491377]. The databases' versions fill those central positions in slightly different ways — HOCOMOCO EBF1 reads TCCCCTGGGA, HOCOMOCO EBF3 and JASPAR EBF1 read TCCCCAGGGA/TCCCCAGGGGA, the CIS-BP EBF1 model reads AKTCCCTWGGGAAT with extended flanks — but they are all the same element, and the representative model is the archetype consensus TCCCTGGGGA. Because the palindrome is read symmetrically by a dimer, with each subunit contacting both half-sites, the two central bases are the tolerant ones and the TCCC/GGGA blocks are essentially invariant [PMID:20876732].\n\nTwo practical consequences follow. First, this is an information-rich motif by the standards of a transcription factor site: eight effectively fixed positions rather than the four or five of an E-box. An exact TCCCNNGGGA is expected around 47,000 times in a 3.1-Gb genome, and because the pattern is its own reverse complement that count is not doubled — roughly one site per 65 kb, against roughly one per 4 kb for a six-mer. Scans for this motif are correspondingly cleaner. Second, the motif resembles nothing else in the atlas: the best match of any member to a motif outside the family is 0.93 and typically much lower, while within-family similarities run 0.91-1.00 (cohesion 0.91). The four paralogues are completely indistinguishable from sequence.\n\nOne provenance note: the CIS-BP EBF2 model `M03721_2.00` is inherited from a *Drosophila melanogaster* protein (Collier/Knot) at 91% DNA-binding-domain identity. Because COE proteins are deeply conserved and the fly motif (AATTCCCTAGGGAATT) matches the human models closely, this transfer is benign, but it is a transfer.\n\n## Where it acts\n\nEBF1 in B cells binds thousands of sites, mostly at enhancers of the B-lineage programme — *Cd79a*, *Pax5*, *Cd19*, *Igll1*, *Vpreb*, *Blnk*, *Foxo1* — and acts by activation, by repression, and by a transcription-independent poising of chromatin at genes that only become active later [PMID:20451411]. Its C-terminal domain confers pioneer-like activity, letting EBF1 engage closed and nucleosomal chromatin and open it for subsequent factors, which is unusual and consistent with the extended DNA contact area seen in the structure [PMID:26982363]. In B cells EBF1 sites co-occur with E2A/TCF3, PAX5, FOXO1 and RUNX1 motifs. In brown fat, EBF2 occupies and activates the PPARG/PRDM16 thermogenic enhancer programme [PMID:23499423]. In olfactory sensory neurons the same element sits in promoters of olfactory marker and signalling genes [PMID:8321284].\n\n## Biology and disease\n\n*Ebf1*-null mice arrest B-cell development before the pro-B stage, with no immunoglobulin heavy-chain DJ rearrangement — EBF1 is required at the earliest committed step of the B lineage [PMID:7542362]. EBF2 is required to establish and maintain brown adipocyte identity, and forced EBF2 expression imposes a brown-fat programme [PMID:23499423]. In human genetics, de novo variants in *EBF3*, largely missense changes in the DNA-binding domain, cause a neurodevelopmental syndrome with hypotonia, ataxia, developmental delay and expressive language impairment, reported independently by two groups in the same issue; the mutations reduce DNA binding and transactivation, consistent with a dominant-negative or haploinsufficient mechanism [PMID:28017372,28017370].\n\n## Reading a hit\n\nBecause the site is long, palindromic and unlike any other family's, a TCCCNNGGGA hit is unusually trustworthy at the family level: if you find a good match, EBF-family binding is a reasonable hypothesis. What it will not tell you is which EBF, since all four share the motif, and in most tissues only one or two are expressed, so expression data resolve the question that sequence cannot. Two cautions. All three HOCOMOCO models here are ChIP-derived (evidence letter `P`, grade B), so the in vitro support for the recognition sequence comes from the original biochemistry and the crystal structure rather than from SELEX models in the current collection. And the family label \"bHLH\" is misleading: EBF has an HLH, but it is a dimerisation module, and an E-box search will neither find EBF sites nor be found by them.",
  "caveats": "The site is long, palindromic and unlike any other family's, so a good match is reasonable evidence for EBF-family binding — unusual in this atlas. It is no evidence at all about which EBF: all four paralogues share one motif (cohesion 0.91) and only expression can separate them. All three HOCOMOCO models here are ChIP-derived (evidence letter P, grade B), so the sequence preference rests on the original biochemistry and the crystal structure rather than on in vitro models in the current collection. One CIS-BP EBF2 model is inherited from a Drosophila protein at 91% domain identity, which is benign but is a transfer. The \"bHLH\" class label is structurally wrong; do not expect E-box searches to find these sites.",
  "refs": [
   {
@@ -69,5 +69,84 @@
    "pmid": "28017370",
    "url": "https://pubmed.ncbi.nlm.nih.gov/28017370/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1993,
+   "finding": "The same factor is cloned twice in one year from unrelated tissues: EBF as the regulator of the B-cell-specific mb-1/Cd79a promoter, and Olf-1 as the protein binding a conserved element in olfactory neuron gene promoters, both reading a palindromic TCCC...GGGA site.",
+   "methods": "biochemical purification and cloning; yeast genetic selection",
+   "confidence": "medium",
+   "pmids": [
+    "8491377",
+    "8321284"
+   ],
+   "open": "How a protein with no recognisable DNA-binding fold of a known class reads that palindrome."
+  },
+  {
+   "year": 1995,
+   "finding": "Protein dissection identifies a novel zinc-coordination motif required for DNA binding plus separate dimerization and activation domains, and the Ebf-null mouse shows B-cell development arrested before the pro-B stage with no immunoglobulin heavy-chain DJ rearrangement.",
+   "methods": "deletion and mutagenesis biochemistry; mouse gene targeting",
+   "confidence": "medium",
+   "pmids": [
+    "7796816",
+    "7542362"
+   ]
+  },
+  {
+   "year": 2010,
+   "finding": "Two structural studies show the EBF DNA-binding domain is a pseudo-immunoglobulin fold structurally similar to the Rel homology domains of NF-kB and NFAT, binding DNA through two loop modules and a zinc knuckle with each monomer contacting both halves of the palindrome, and that the atypical HLH serves dimerization rather than DNA contact — the family's bHLH label is structurally wrong.",
+   "methods": "X-ray crystallography of an Ebf1:DNA complex and of isolated domains",
+   "confidence": "high",
+   "pmids": [
+    "20876732",
+    "20592035"
+   ]
+  },
+  {
+   "year": 2010,
+   "finding": "Genome-wide analysis in B cells shows Ebf1 acts by activation, by repression, and by a transcription-independent poising of chromatin at genes expressed only at later stages; the poising works in T cells but not in fibroblasts, so the pioneer-like behaviour is context dependent.",
+   "methods": "ChIP-seq, expression profiling and ectopic expression in several cell types",
+   "confidence": "medium",
+   "pmids": [
+    "20451411"
+   ],
+   "open": "What limits the poising activity to a haematopoietic chromatin context."
+  },
+  {
+   "year": 2013,
+   "finding": "EBF2 is shown to determine and maintain brown adipocyte identity by occupying and activating the PPARG/PRDM16 thermogenic enhancer programme, extending the family well beyond lymphocytes and olfactory neurons.",
+   "methods": "ChIP-seq, knockdown and ectopic expression in adipocytes",
+   "confidence": "medium",
+   "pmids": [
+    "23499423"
+   ]
+  },
+  {
+   "year": 2016,
+   "finding": "The pioneering activity is mapped to the EBF1 C-terminal domain, which is required for de novo gain of chromatin accessibility at a specific target set independently of the protein's activation and repression functions.",
+   "methods": "domain deletion with ATAC-seq and ChIP-seq in B-cell progenitors",
+   "confidence": "medium",
+   "pmids": [
+    "26982363"
+   ],
+   "open": "Whether the C-terminal domain engages nucleosomal DNA directly or recruits remodelling activity."
+  },
+  {
+   "year": 2017,
+   "finding": "Two groups report in the same issue that de novo EBF3 variants, mostly missense changes at conserved DNA-binding residues including the zinc motif, cause a neurodevelopmental syndrome with hypotonia, ataxia and expressive language impairment, and reduce DNA binding and transactivation.",
+   "methods": "trio exome sequencing with binding and reporter assays; structural modelling",
+   "confidence": "medium",
+   "pmids": [
+    "28017372",
+    "28017370"
+   ],
+   "open": "Whether the variants act by haploinsufficiency or dominant-negatively through mixed dimers was not settled."
+  }
+ ],
+ "open": [
+  "No comparative in vitro measurement separates EBF1, EBF2, EBF3 and EBF4: their models are near-identical, every HOCOMOCO model here is ChIP-derived, and whether the paralogues differ at all in sequence preference or only in expression domain is untested.",
+  "The two central positions of TCCCNNGGGA are filled differently by different databases (TCCCCTGGGA in HOCOMOCO EBF1, TCCCCAGGGA in EBF3 and JASPAR EBF1), and whether those bases carry a real, measurable preference or are genuinely unconstrained has not been resolved.",
+  "How EBF1 opens closed chromatin is unknown: the activity maps to the C-terminal domain and works in haematopoietic and T-cell but not fibroblast chromatin, leaving open whether the domain engages nucleosomal DNA directly or depends on a lineage-restricted cofactor.",
+  "Whether pathogenic EBF3 variants act by haploinsufficiency or as dominant negatives through heterodimers with wild-type EBF3 and other COE proteins is unresolved, and the two mechanisms predict different consequences for occupancy at the palindromic site."
  ]
 }

@@ -13,7 +13,7 @@
  ],
  "consensus": "TGACCA",
  "short": "BCL11A and BCL11B (originally CTIP1 and CTIP2) are paralogous C2H2 zinc-finger repressors with six fingers, of which a C-terminal cluster binds DNA while the N-terminal region recruits NuRD. They are best known not as motif proteins but as switches: BCL11A silences the fetal gamma-globin genes and is the target of approved gene-editing therapies for sickle cell disease and beta-thalassemia, while BCL11B enforces T-lineage commitment, so that its loss converts T cells into natural-killer-like cells. Reported DNA preferences conflict. In vitro selection on BCL11A gave a GC-box-like GGCCGG core, whereas the site it occupies at the gamma-globin promoter is written TGACCA. The family's matrices are heterogeneous and several look like other factors' motifs.",
- "long": "## The factors\n\nBCL11A and BCL11B were isolated as COUP-TF-interacting proteins 1 and 2 (CTIP1 and CTIP2) and are\nalso known as EVI9 (BCL11A) and RIT1 (Bcl11b in mouse). Both are large C2H2 zinc-finger proteins with\nsix fingers: an N-terminal region that includes the COUP-TF interaction domains and a short\nNuRD-interacting motif, and a C-terminal cluster of fingers that carries the DNA-binding activity.\nNeither is a simple monomeric binder. BCL11A forms a tetramer through a single zinc finger (ZnF0),\nand tetramer formation is required both for steady-state protein accumulation and for gamma-globin\nrepression, because an engineered monomer fails to engage its corepressor complex. BCL11A's original\nin vitro selection likewise recovered binding by an oligomeric complex rather than a monomer.\n\nExpression is tissue-restricted and largely complementary. BCL11A is expressed in B cells, adult\nerythroid cells and brain; BCL11B is T-cell-specific among hematopoietic cells and is also expressed\nin skin, tooth and central nervous system. Both repress transcription, and the repression seen in\nreporter assays was not reversed by the class I/II HDAC inhibitor trichostatin A.\n\n## The motif\n\nThe literature gives two answers and they do not agree. A selection procedure for high-affinity\nCTIP1 (BCL11A) sites recovered the core GGCCGG, described at the time as closely related to the\ncanonical GC box. Separately, the functionally best-characterized BCL11A element is in the HBG1 and\nHBG2 (gamma-globin) promoters about 115 base pairs upstream of the transcription start site, where\nBCL11A binds directly and where naturally occurring hereditary-persistence-of-fetal-hemoglobin point\nmutations disrupt binding and raise gamma-globin expression; the JASPAR matrix built from that class\nof data has the consensus CTGACCA. The family data consensus here, TGACC, follows the second form,\nand we give TGACCA as the headline consensus because it is the site with direct functional\nvalidation. But the GGCCGG form is not an error: two of the eight matrices assigned to this family\n(a CIS-BP BCL11B model with consensus TCCGGCC and a Vierstra archetype with THCGGCC) are\nGGCCGG-related, and they are the ones that agree with the in vitro selection.\n\nCohesion in this family is the lowest in the zinc-finger set at 0.50, and the individual matrices are\nworth listing because they illustrate what goes wrong. Besides the TGACC and GGCCGG groups, a CIS-BP\nBCL11A model and a Vierstra archetype share the consensus TTTCACTTCCTC, and the archetype is named\nBCL11A/IRF, reflecting the IRF/ISRE-like TTTC core. One Vierstra BCL11B archetype has a long,\nhigh-information consensus (GTGAACGCNDNHGCTACAC) with no close neighbor anywhere in the four\ndatabases. And the JASPAR Bcl11B matrix has the consensus AAACCACAA, whose reverse complement,\nTTGTGGTTT, contains the RUNX core TGTGGT; its nearest neighbors across all four databases are RUNX\nmodels rather than BCL11 models, and it is flagged in these data as belonging with RUNX. Since RUNX1\nand RUNX3 are dominant occupants of T-cell regulatory elements, where BCL11B ChIP is performed, the\nsimplest reading is indirect binding or co-occupancy at RUNX sites rather than a genuine BCL11B\nspecificity; we are not aware of literature that settles this either way.\n\n## Where it acts\n\nBCL11A acts through a small number of intensively studied elements rather than a diffuse cistrome:\nsites in the beta-globin cluster, its own erythroid-specific +58 intronic enhancer (whose common\nvariants set fetal-hemoglobin level), and B-lymphoid and neural regulatory regions. BCL11B occupies\nT-lineage enhancers and promoters, frequently alongside RUNX, TCF7, GATA3 and ETS factors. Both\nproteins sit in NuRD-containing complexes, so much of their genomic footprint is complex-driven.\n\n## Biology and disease\n\nBCL11A is the developmental-stage-specific repressor of fetal hemoglobin: it is expressed in adult\nbut not fetal erythroid cells, knockdown reactivates HbF, and it occupies discrete sites in the\nbeta-globin cluster. Because its erythroid enhancer is dispensable outside erythroid cells,\ndisrupting that enhancer raises HbF without compromising B-cell development, which is the basis of\nthe CRISPR-Cas9 therapy now approved for sickle cell disease and transfusion-dependent\nbeta-thalassemia. Heterozygous BCL11A microdeletions and variants (2p15-p16.1) cause an\nintellectual-disability and autism-spectrum phenotype (Dias-Logan syndrome) with persistent fetal\nhemoglobin but otherwise near-normal blood counts.\n\nBCL11B is the T-lineage commitment factor. It is first expressed immediately before commitment,\nsuppresses natural-killer-cell and progenitor programs, and is required for alpha-beta T-cell\ndifferentiation and survival; deleting it converts T cells at all developmental stages into\nnatural-killer-like cells that retain cytotoxic activity. In disease, BCL11B is targeted by\nenhancer-hijacking translocations in T-cell and T/myeloid acute leukemias, and germline heterozygous\nvariants cause immune dysregulation with severe atopic disease.\n\n## Reading a hit\n\nDo not trust a BCL11 motif hit. The family has no single validated consensus: the in vitro selection\nand the functionally validated gamma-globin element point at different sequences, and both are short\n(five to seven informative bases). Several matrices in the family are almost certainly other factors'\nmotifs recovered from ChIP data, most clearly the JASPAR Bcl11B matrix that scores as a RUNX site.\nNothing distinguishes BCL11A from BCL11B in sequence. And because BCL11A works as a tetramer bound to\na corepressor complex and BCL11B works within NuRD, occupancy in vivo depends on partners as much as\non sequence, so peaks are a poor guide to intrinsic specificity and motif hits are a poor guide to\npeaks. Practical advice: for BCL11A, work from the known validated elements (the gamma-globin -115\nregion and the +58 enhancer) rather than from a genome-wide scan; for BCL11B, check whether your hit\nis better explained as a RUNX site before attributing it here.",
+ "long": "## The factors\n\nBCL11A and BCL11B were isolated as COUP-TF-interacting proteins 1 and 2 (CTIP1 and CTIP2) [PMID:10744719] and are\nalso known as EVI9 (BCL11A) and RIT1 (Bcl11b in mouse). Both are large C2H2 zinc-finger proteins with\nsix fingers: an N-terminal region that includes the COUP-TF interaction domains and a short\nNuRD-interacting motif, and a C-terminal cluster of fingers that carries the DNA-binding activity.\nNeither is a simple monomeric binder. BCL11A forms a tetramer through a single zinc finger (ZnF0),\nand tetramer formation is required both for steady-state protein accumulation and for gamma-globin\nrepression, because an engineered monomer fails to engage its corepressor complex [PMID:39607926]. BCL11A's original\nin vitro selection likewise recovered binding by an oligomeric complex rather than a monomer [PMID:12196208].\n\nExpression is tissue-restricted and largely complementary. BCL11A is expressed in B cells, adult\nerythroid cells and brain; BCL11B is T-cell-specific among hematopoietic cells and is also expressed\nin skin, tooth and central nervous system [PMID:10744719]. Both repress transcription, and the repression seen in\nreporter assays was not reversed by the class I/II HDAC inhibitor trichostatin A [PMID:12196208].\n\n## The motif\n\nThe literature gives two answers and they do not agree. A selection procedure for high-affinity\nCTIP1 (BCL11A) sites recovered the core GGCCGG, described at the time as closely related to the\ncanonical GC box [PMID:12196208]. Separately, the functionally best-characterized BCL11A element is in the HBG1 and\nHBG2 (gamma-globin) promoters about 115 base pairs upstream of the transcription start site, where\nBCL11A binds directly and where naturally occurring hereditary-persistence-of-fetal-hemoglobin point\nmutations disrupt binding and raise gamma-globin expression [PMID:29610478]; the JASPAR matrix built from that class\nof data has the consensus CTGACCA. The family data consensus here, TGACC, follows the second form,\nand we give TGACCA as the headline consensus because it is the site with direct functional\nvalidation. But the GGCCGG form is not an error: two of the eight matrices assigned to this family\n(a CIS-BP BCL11B model with consensus TCCGGCC and a Vierstra archetype with THCGGCC) are\nGGCCGG-related, and they are the ones that agree with the in vitro selection.\n\nCohesion in this family is the lowest in the zinc-finger set at 0.50, and the individual matrices are\nworth listing because they illustrate what goes wrong. Besides the TGACC and GGCCGG groups, a CIS-BP\nBCL11A model and a Vierstra archetype share the consensus TTTCACTTCCTC, and the archetype is named\nBCL11A/IRF, reflecting the IRF/ISRE-like TTTC core. One Vierstra BCL11B archetype has a long,\nhigh-information consensus (GTGAACGCNDNHGCTACAC) with no close neighbor anywhere in the four\ndatabases. And the JASPAR Bcl11B matrix has the consensus AAACCACAA, whose reverse complement,\nTTGTGGTTT, contains the RUNX core TGTGGT; its nearest neighbors across all four databases are RUNX\nmodels rather than BCL11 models, and it is flagged in these data as belonging with RUNX. Since RUNX1\nand RUNX3 are dominant occupants of T-cell regulatory elements, where BCL11B ChIP is performed, the\nsimplest reading is indirect binding or co-occupancy at RUNX sites rather than a genuine BCL11B\nspecificity; we are not aware of literature that settles this either way.\n\n## Where it acts\n\nBCL11A acts through a small number of intensively studied elements rather than a diffuse cistrome:\nsites in the beta-globin cluster, its own erythroid-specific +58 intronic enhancer (whose common\nvariants set fetal-hemoglobin level) [PMID:24115442], and B-lymphoid and neural regulatory regions. BCL11B occupies\nT-lineage enhancers and promoters, frequently alongside RUNX, TCF7, GATA3 and ETS factors. Both\nproteins sit in NuRD-containing complexes, so much of their genomic footprint is complex-driven.\n\n## Biology and disease\n\nBCL11A is the developmental-stage-specific repressor of fetal hemoglobin: it is expressed in adult\nbut not fetal erythroid cells, knockdown reactivates HbF, and it occupies discrete sites in the\nbeta-globin cluster [PMID:19056937]. Because its erythroid enhancer is dispensable outside erythroid cells,\ndisrupting that enhancer raises HbF without compromising B-cell development [PMID:24115442], which is the basis of\nthe CRISPR-Cas9 therapy now approved for sickle cell disease and transfusion-dependent\nbeta-thalassemia [PMID:33283989]. Heterozygous BCL11A microdeletions and variants (2p15-p16.1) cause an\nintellectual-disability and autism-spectrum phenotype (Dias-Logan syndrome) with persistent fetal\nhemoglobin but otherwise near-normal blood counts [PMID:25938782].\n\nBCL11B is the T-lineage commitment factor. It is first expressed immediately before commitment,\nsuppresses natural-killer-cell and progenitor programs [PMID:20595614], and is required for alpha-beta T-cell\ndifferentiation and survival [PMID:12717433]; deleting it converts T cells at all developmental stages into\nnatural-killer-like cells that retain cytotoxic activity [PMID:20538915]. In disease, BCL11B is targeted by\nenhancer-hijacking translocations in T-cell and T/myeloid acute leukemias [PMID:34103329], and germline heterozygous\nvariants cause immune dysregulation with severe atopic disease [PMID:34887873].\n\n## Reading a hit\n\nDo not trust a BCL11 motif hit. The family has no single validated consensus: the in vitro selection\nand the functionally validated gamma-globin element point at different sequences, and both are short\n(five to seven informative bases). Several matrices in the family are almost certainly other factors'\nmotifs recovered from ChIP data, most clearly the JASPAR Bcl11B matrix that scores as a RUNX site.\nNothing distinguishes BCL11A from BCL11B in sequence. And because BCL11A works as a tetramer bound to\na corepressor complex and BCL11B works within NuRD, occupancy in vivo depends on partners as much as\non sequence, so peaks are a poor guide to intrinsic specificity and motif hits are a poor guide to\npeaks. Practical advice: for BCL11A, work from the known validated elements (the gamma-globin -115\nregion and the +58 enhancer) rather than from a genome-wide scan; for BCL11B, check whether your hit\nis better explained as a RUNX site before attributing it here.",
  "caveats": "Trust this family least. There is no agreed consensus: in vitro selection on BCL11A gave a GC-box-like GGCCGG core, while the functionally validated site at the gamma-globin promoter is written TGACCA, and both appear among the family's matrices. Cohesion is 0.50. At least three matrices look like other factors: two Vierstra/CIS-BP models with an IRF-like TTTCACTTCC consensus (one archetype is named BCL11A/IRF), and the JASPAR Bcl11B matrix whose AAACCACAA consensus is the RUNX core and whose nearest neighbors in all four databases are RUNX models, most plausibly indirect binding at RUNX sites in T cells. BCL11A and BCL11B are not separable by sequence, and both act within corepressor complexes.",
  "refs": [
   {
@@ -75,6 +75,96 @@
    "cite": "Lu HY, Sertori R, Contreras AV, et al. A Novel Germline Heterozygous BCL11B Variant Causing Severe Atopic Disease and Immune Dysregulation. Front Immunol 2021;12:788278.",
    "pmid": "34887873",
    "url": "https://pubmed.ncbi.nlm.nih.gov/34887873/"
+  },
+  {
+   "cite": "Montefiori LE, Bendig S, Gu Z, et al. Enhancer Hijacking Drives Oncogenic BCL11B Expression in Lineage-Ambiguous Stem Cell Leukemia. Cancer Discov 2021;11:2846-2867.",
+   "pmid": "34103329",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34103329/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 2000,
+   "finding": "CTIP1 and CTIP2, later renamed BCL11A and BCL11B, are isolated as COUP-TF-interacting zinc-finger proteins expressed in brain and the immune system and shown to repress transcription.",
+   "methods": "Yeast two-hybrid and biochemical interaction screening, reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "10744719"
+   ],
+   "open": "Whether they bound DNA themselves or acted only as COUP-TF cofactors."
+  },
+  {
+   "year": 2002,
+   "finding": "In vitro selection gives CTIP1/BCL11A a high-affinity core of GGCCGG, closely related to the GC box, recovered by an oligomeric rather than monomeric complex, and shows repression independent of COUP-TF and insensitive to trichostatin A.",
+   "methods": "SELEX-type binding-site selection, EMSA, reporter assays with HDAC inhibition",
+   "confidence": "medium",
+   "pmids": [
+    "12196208"
+   ],
+   "open": "The selected GC-box-like site was never matched to a validated genomic element."
+  },
+  {
+   "year": 2003,
+   "finding": "Bcl11b is shown to be required for alpha-beta T-cell differentiation and survival in mouse, giving the paralogue a defined developmental role.",
+   "methods": "Conditional and germline mouse knockouts with immunophenotyping",
+   "confidence": "medium",
+   "pmids": [
+    "12717433"
+   ]
+  },
+  {
+   "year": 2008,
+   "finding": "BCL11A is identified as the developmental-stage-specific repressor of fetal hemoglobin: it is present in adult but not fetal erythroid cells, its knockdown reactivates gamma-globin, and it occupies discrete sites in the beta-globin cluster.",
+   "methods": "GWAS follow-up, expression analysis, knockdown in primary erythroid cells, ChIP",
+   "confidence": "medium",
+   "pmids": [
+    "19056937"
+   ],
+   "open": "Which sequence BCL11A reads at those sites was not resolved; the occupied regions did not match the GGCCGG selection."
+  },
+  {
+   "year": 2010,
+   "finding": "Two studies show Bcl11b is the T-lineage commitment factor: it is required at the commitment checkpoint, and deleting it at any stage converts T cells into natural-killer-like cells.",
+   "methods": "Stage-specific conditional deletion in mouse, transcriptional profiling, functional assays",
+   "confidence": "high",
+   "pmids": [
+    "20595614",
+    "20538915"
+   ]
+  },
+  {
+   "year": 2013,
+   "finding": "An erythroid-specific enhancer in BCL11A intron 2, containing the common variants that set fetal-hemoglobin level, is identified and shown to be dispensable outside erythroid cells, which converts a transcription factor that cannot be drugged into a cell-type-specific target.",
+   "methods": "Fine-mapping of GWAS variants, enhancer dissection with reporter and genome editing",
+   "confidence": "medium",
+   "pmids": [
+    "24115442"
+   ]
+  },
+  {
+   "year": 2018,
+   "finding": "Hereditary-persistence-of-fetal-hemoglobin point mutations at the gamma-globin promoter are shown to act by disrupting direct BCL11A binding, giving the family its one element where a specific sequence, a bound factor and a human phenotype all line up; the matrix from this class of data reads CTGACCA, not the GGCCGG of the in vitro selection.",
+   "methods": "Genome editing of promoter variants in erythroid cells, binding assays",
+   "confidence": "medium",
+   "pmids": [
+    "29610478"
+   ],
+   "open": "Why the functionally validated site and the selected site are unrelated sequences is unexplained."
+  },
+  {
+   "year": 2024,
+   "finding": "BCL11A is shown to work as a tetramer assembled through a single zinc finger, with tetramerization required for protein accumulation and for gamma-globin silencing, so the unit that engages DNA and the corepressor complex is not a monomer and intrinsic specificity cannot be read off a monomer-based matrix.",
+   "methods": "Structural and biochemical analysis of the oligomerization domain, engineered monomer in erythroid cells",
+   "confidence": "high",
+   "pmids": [
+    "39607926"
+   ]
+  }
+ ],
+ "open": [
+  "The family has two incompatible consensus sequences and no accepted reconciliation: in vitro selection on BCL11A gives a GC-box-like GGCCGG core, while the functionally validated gamma-globin element and the matrices derived from that class of data give TGACCA.",
+  "Whether the JASPAR Bcl11B matrix reflects any BCL11B specificity is unresolved: its reverse complement contains the RUNX core TGTGGT and its nearest neighbors in all four databases are RUNX models, which is consistent with indirect binding at RUNX-occupied T-cell elements, but no published experiment settles it.",
+  "How a tetrameric BCL11A engages DNA is unknown, including whether the four subunits contact several copies of a short core or whether only one subunit binds sequence specifically, which determines whether any single-site matrix can describe this family.",
+  "Whether BCL11A and BCL11B differ in intrinsic specificity at all has not been tested; they are pooled here because their matrices are not separable, yet their biological targets barely overlap."
  ]
 }

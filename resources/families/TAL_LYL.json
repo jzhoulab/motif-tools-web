@@ -11,7 +11,7 @@
  ],
  "consensus": "CAGNTG",
  "short": "TAL1 (SCL), LYL1 and TAL2 are haematopoietic and endothelial class II basic helix-loop-helix proteins with no intrinsic DNA-binding activity: they bind only as heterodimers with the class I E-proteins E12/E47, TCF4 or TCF12. In blood cells the functional unit is larger still — a pentameric complex in which LMO2 bridges the TAL1-E47 dimer to GATA1 or GATA2 with LDB1 — and it reads a composite element made of an E-box followed about nine base pairs later by a GATA site. TAL1 is required for all primitive haematopoiesis and is the most frequently activated oncogene in T-cell acute lymphoblastic leukaemia. The family is the atlas's clearest example of a motif that is really a composite, and partly a partner's.",
- "long": "## The factors\n\nTAL1 (also called SCL), LYL1 and TAL2 are class II bHLH proteins of the blood and endothelial lineages. TAL1 is the founding member, identified through the chromosomal rearrangements that activate it in T-cell acute lymphoblastic leukaemia. None of them binds DNA on its own: binding-site selection showed that TAL1 polypeptides have no intrinsic DNA-binding activity, presumably because they cannot homodimerise, and acquire it only on heterodimerising with a class A (class I) partner — E12, E47, TCF4/E2-2 or TCF12/HEB. In blood cells TAL1 rarely acts as a bare heterodimer either. It sits in a pentameric complex in which the LIM-only protein LMO2 bridges the TAL1-E47 dimer to GATA1 (or GATA2), with LDB1/NLI completing the assembly; a crystal structure of LMO2 bound to the SCL:E47 bHLH heterodimer shows how the bridge is made. Expression: TAL1 in haematopoietic stem cells, erythroid, megakaryocytic and mast lineages and in endothelium; LYL1 in stem, endothelial and myeloid cells; TAL2 is narrowly expressed and poorly characterised. Because all three depend on the same E-proteins and the same partners, there is no expectation that they differ in sequence preference.\n\n## The motif\n\nThe TAL1 heterodimer's selected consensus is AACAGATGGT, which decomposes into a half-site read by the class A partner (AACAG) and one read by TAL1 (ATGGT). In erythroid cells, an unbiased search of TAL1 ChIP-seq peaks gave CAGNTG as the preferred E-box, which is why the atlas consensus is written that way; the representative model here is the Vierstra archetype `AC0077:LYL/OLIG:bHLH` with consensus AACAGCTG.\n\nThe functional site in blood is not the E-box alone. The LMO2/LDB1 complex binds a bipartite element: an E-box, canonically CAGGTG, followed roughly nine base pairs downstream by a GATA site (WGATAA). This composite E-box-GATA element is the signature of TAL1 activity at erythroid and megakaryocytic enhancers, and it is the reason this family is a textbook case of an indirect or composite motif. The highest-information TAL1 model in HOCOMOCO, `TAL1.H14CORE.0.P.B`, reads TGGNNNNNVCAGATAAG — the 3' end of an E-box, a short spacer, and then AGATAAG, which is the GATA motif. The atlas flags this model as matching the GATA family, and it is right to: viewed as a position weight matrix, most of the information in that \"TAL1 motif\" is GATA information. A second flagged model, JASPAR TAL1::TCF3 MA0091.2 (ACCATCTGTT), matches the MYOD family instead. So of seven motifs assigned here, the two best known are each closer to another family than to their own label.\n\nThere is a further structural limitation: every HOCOMOCO model in this family carries the evidence letter `P` (ChIP-seq) with grade B or C. There is no HT-SELEX or methyl-SELEX model for TAL1 or LYL1 in the collection at all. Cohesion is 0.75 over just seven motifs, the smallest and weakest of the tissue-specific bHLH families here.\n\n## Where it acts\n\nTAL1 occupies thousands of sites in erythroid and megakaryocytic cells, concentrated at lineage-specific enhancers of red-cell and platelet genes rather than at CpG-island promoters. About four fifths of erythroid targets require TAL1's own DNA-binding activity; the remaining fifth, enriched among the highest-affinity peaks, are occupied by a DNA-binding-deficient TAL1, which is direct evidence that some \"TAL1 sites\" are recruitment sites, not recognition sites. Target sets are lineage-specific: TAL1 occupies largely different regions in erythroid and megakaryocytic cells. Co-occurring motifs are GATA (GATA1 in erythroid cells, GATA2 in progenitors), KLF1, NFE2, RUNX1 and FLI1; simultaneous mapping of GATA1/GATA2, RUNX1, FLI1 and SCL in megakaryocytes showed heavy combinatorial overlap. In T-ALL, TAL1 forms a core regulatory circuit with GATA3, RUNX1 and MYB at large enhancer clusters.\n\n## Biology and disease\n\n*Tal1*/*Scl*-null mouse embryos make no blood: yolk-sac haematopoiesis is absent and the embryos die at mid-gestation, the cleanest demonstration that this factor sits at the top of the haematopoietic hierarchy. In humans, TAL1 is the most commonly activated oncogene in T-ALL, through t(1;14)(p32;q11), through the *SIL-TAL1* interstitial deletion, and through small somatic insertions in a non-coding region upstream of *TAL1* that create a MYB binding site and nucleate a new super-enhancer. LYL1 is activated by t(7;19) in T-ALL. The TAL1-driven circuit in T-ALL is a candidate therapeutic target because it depends on the large enhancer clusters it creates.\n\n## Reading a hit\n\nLittle in this family licenses a factor-level conclusion. CAGNTG or AACAGATGGT is an ordinary E-box and matches E-proteins, MYOD-family and NEUROD-family models; the archetype covering LYL1 is named LYL/OLIG because the two could not be separated. If you want evidence of TAL1 complex activity, look for the composite architecture — an E-box and a WGATAA about nine bases apart — and not for the E-box alone. Conversely, if a GATA-like motif is the top hit in a TAL1 ChIP experiment, that is the expected result for the composite element and is not evidence that TAL1 binds GATA sites directly; the same logic applies in reverse to GATA1 experiments recovering E-boxes. Because this family has no in vitro model, \"TAL1 binds this sequence\" rests on the older biochemistry rather than on the database entries, and the database entries should be read as occupancy models for a multiprotein complex.",
+ "long": "## The factors\n\nTAL1 (also called SCL), LYL1 and TAL2 are class II bHLH proteins of the blood and endothelial lineages. TAL1 is the founding member, identified through the chromosomal rearrangements that activate it in T-cell acute lymphoblastic leukaemia. None of them binds DNA on its own: binding-site selection showed that TAL1 polypeptides have no intrinsic DNA-binding activity, presumably because they cannot homodimerise, and acquire it only on heterodimerising with a class A (class I) partner — E12, E47, TCF4/E2-2 or TCF12/HEB [PMID:8289805]. In blood cells TAL1 rarely acts as a bare heterodimer either. It sits in a pentameric complex in which the LIM-only protein LMO2 bridges the TAL1-E47 dimer to GATA1 (or GATA2), with LDB1/NLI completing the assembly [PMID:9214632]; a crystal structure of LMO2 bound to the SCL:E47 bHLH heterodimer shows how the bridge is made [PMID:23831025]. Expression: TAL1 in haematopoietic stem cells, erythroid, megakaryocytic and mast lineages and in endothelium; LYL1 in stem, endothelial and myeloid cells; TAL2 is narrowly expressed and poorly characterised. Because all three depend on the same E-proteins and the same partners, there is no expectation that they differ in sequence preference.\n\n## The motif\n\nThe TAL1 heterodimer's selected consensus is AACAGATGGT, which decomposes into a half-site read by the class A partner (AACAG) and one read by TAL1 (ATGGT) [PMID:8289805]. In erythroid cells, an unbiased search of TAL1 ChIP-seq peaks gave CAGNTG as the preferred E-box [PMID:20566737], which is why the atlas consensus is written that way; the representative model here is the Vierstra archetype `AC0077:LYL/OLIG:bHLH` with consensus AACAGCTG.\n\nThe functional site in blood is not the E-box alone. The LMO2/LDB1 complex binds a bipartite element: an E-box, canonically CAGGTG, followed roughly nine base pairs downstream by a GATA site (WGATAA) [PMID:9214632]. This composite E-box-GATA element is the signature of TAL1 activity at erythroid and megakaryocytic enhancers, and it is the reason this family is a textbook case of an indirect or composite motif. The highest-information TAL1 model in HOCOMOCO, `TAL1.H14CORE.0.P.B`, reads TGGNNNNNVCAGATAAG — the 3' end of an E-box, a short spacer, and then AGATAAG, which is the GATA motif. The atlas flags this model as matching the GATA family, and it is right to: viewed as a position weight matrix, most of the information in that \"TAL1 motif\" is GATA information. A second flagged model, JASPAR TAL1::TCF3 MA0091.2 (ACCATCTGTT), matches the MYOD family instead. So of seven motifs assigned here, the two best known are each closer to another family than to their own label.\n\nThere is a further structural limitation: every HOCOMOCO model in this family carries the evidence letter `P` (ChIP-seq) with grade B or C. There is no HT-SELEX or methyl-SELEX model for TAL1 or LYL1 in the collection at all. Cohesion is 0.75 over just seven motifs, the smallest and weakest of the tissue-specific bHLH families here.\n\n## Where it acts\n\nTAL1 occupies thousands of sites in erythroid and megakaryocytic cells, concentrated at lineage-specific enhancers of red-cell and platelet genes rather than at CpG-island promoters. About four fifths of erythroid targets require TAL1's own DNA-binding activity; the remaining fifth, enriched among the highest-affinity peaks, are occupied by a DNA-binding-deficient TAL1, which is direct evidence that some \"TAL1 sites\" are recruitment sites, not recognition sites [PMID:20566737]. Target sets are lineage-specific: TAL1 occupies largely different regions in erythroid and megakaryocytic cells [PMID:21179004]. Co-occurring motifs are GATA (GATA1 in erythroid cells, GATA2 in progenitors), KLF1, NFE2, RUNX1 and FLI1; simultaneous mapping of GATA1/GATA2, RUNX1, FLI1 and SCL in megakaryocytes showed heavy combinatorial overlap [PMID:21571218]. In T-ALL, TAL1 forms a core regulatory circuit with GATA3, RUNX1 and MYB at large enhancer clusters [PMID:22897851].\n\n## Biology and disease\n\n*Tal1*/*Scl*-null mouse embryos make no blood: yolk-sac haematopoiesis is absent and the embryos die at mid-gestation, the cleanest demonstration that this factor sits at the top of the haematopoietic hierarchy [PMID:7624372,7830794]. In humans, TAL1 is the most commonly activated oncogene in T-ALL, through t(1;14)(p32;q11), through the *SIL-TAL1* interstitial deletion, and through small somatic insertions in a non-coding region upstream of *TAL1* that create a MYB binding site and nucleate a new super-enhancer [PMID:25394790]. LYL1 is activated by t(7;19) in T-ALL. The TAL1-driven circuit in T-ALL is a candidate therapeutic target because it depends on the large enhancer clusters it creates.\n\n## Reading a hit\n\nLittle in this family licenses a factor-level conclusion. CAGNTG or AACAGATGGT is an ordinary E-box and matches E-proteins, MYOD-family and NEUROD-family models; the archetype covering LYL1 is named LYL/OLIG because the two could not be separated. If you want evidence of TAL1 complex activity, look for the composite architecture — an E-box and a WGATAA about nine bases apart — and not for the E-box alone. Conversely, if a GATA-like motif is the top hit in a TAL1 ChIP experiment, that is the expected result for the composite element and is not evidence that TAL1 binds GATA sites directly; the same logic applies in reverse to GATA1 experiments recovering E-boxes. Because this family has no in vitro model, \"TAL1 binds this sequence\" rests on the older biochemistry rather than on the database entries, and the database entries should be read as occupancy models for a multiprotein complex.",
  "caveats": "Read this family's database entries as occupancy models for a complex, not as recognition sequences. Every HOCOMOCO model here is ChIP-only (evidence letter P, grade B or C); there is no HT-SELEX or methyl-SELEX model for TAL1 or LYL1. The highest-information TAL1 model is essentially the GATA motif with an E-box fragment upstream, which is the composite E-box-GATA element rather than a TAL1 recognition site, and a second widely used model (JASPAR TAL1::TCF3) matches the MYOD family. The bare E-box CAGNTG carries almost no discriminating information. TAL1, TAL2 and LYL1 are not separable from sequence; the archetype covering LYL1 also covers OLIG.",
  "refs": [
   {
@@ -64,5 +64,91 @@
    "pmid": "25394790",
    "url": "https://pubmed.ncbi.nlm.nih.gov/25394790/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1994,
+   "finding": "Binding-site selection shows TAL1 has no intrinsic DNA-binding activity and cannot homodimerise, but as a heterodimer with E12, E47, E2-2 or HEB it selects AACAGATGGT, an asymmetric E-box in which each partner reads its own half-site.",
+   "methods": "in vitro binding-site selection with recombinant proteins",
+   "confidence": "medium",
+   "pmids": [
+    "8289805"
+   ],
+   "open": "Whether the selected site is the one used in blood cells was untested."
+  },
+  {
+   "year": 1995,
+   "finding": "Two groups show that Tal1/Scl-null mouse embryos make no blood at all, with yolk-sac haematopoiesis absent and death at mid-gestation.",
+   "methods": "mouse gene targeting",
+   "confidence": "medium",
+   "pmids": [
+    "7624372",
+    "7830794"
+   ]
+  },
+  {
+   "year": 1997,
+   "finding": "The functional element in erythroid cells is redefined as a composite: LMO2 bridges a TAL1-E47 dimer to GATA1 with LDB1/NLI, and the assembled pentamer binds an E-box (CAGGTG) followed about nine base pairs downstream by a GATA site, so the free E-box is not the unit of recognition.",
+   "methods": "co-immunoprecipitation and gel-shift assays on a bipartite element",
+   "confidence": "medium",
+   "pmids": [
+    "9214632"
+   ],
+   "open": "How strict the nine-base spacing is, and whether the same architecture operates outside erythroid cells."
+  },
+  {
+   "year": 2010,
+   "finding": "Genome-wide mapping in primary erythroid cells gives CAGNTG as the TAL1-preferred E-box, and shows that while most targets need TAL1's own DNA-binding activity, about one fifth — concentrated among the highest-affinity peaks — still recruit a DNA-binding-deficient TAL1.",
+   "methods": "ChIP-seq plus rescue with a DNA-binding mutant",
+   "confidence": "medium",
+   "pmids": [
+    "20566737"
+   ],
+   "open": "Which partner tethers TAL1 at the binding-independent sites was not resolved."
+  },
+  {
+   "year": 2011,
+   "finding": "TAL1 is shown to occupy largely different regions in erythroid and megakaryocytic cells, and simultaneous mapping of GATA1/GATA2, RUNX1, FLI1 and SCL in megakaryocytes shows heavy combinatorial overlap, so the target set is set by partners and lineage rather than by the E-box.",
+   "methods": "ChIP-seq in two haematopoietic lineages",
+   "confidence": "medium",
+   "pmids": [
+    "21179004",
+    "21571218"
+   ]
+  },
+  {
+   "year": 2012,
+   "finding": "In T-cell acute lymphoblastic leukaemia TAL1 is found at the centre of a self-reinforcing core regulatory circuit with GATA3, RUNX1 and MYB at large enhancer clusters.",
+   "methods": "ChIP-seq and knockdown in T-ALL lines",
+   "confidence": "medium",
+   "pmids": [
+    "22897851"
+   ]
+  },
+  {
+   "year": 2013,
+   "finding": "The crystal structure of (SCL:E47)bHLH:LMO2:LDB1 on DNA shows that LMO2 strengthens the SCL-E47 heterodimer but rotates E47 in a way that weakens its own contact with DNA, shifting DNA binding onto other complex members — a structural basis for TAL1 acting without reading DNA itself.",
+   "methods": "X-ray crystallography with biochemistry",
+   "confidence": "high",
+   "pmids": [
+    "23831025"
+   ],
+   "open": "How far this explains the binding-independent occupancy seen genome-wide."
+  },
+  {
+   "year": 2014,
+   "finding": "Small somatic insertions in a precise noncoding site upstream of TAL1 are shown to create a MYB binding motif that nucleates a new super-enhancer and recruits the RUNX1-GATA3-TAL1 complex, activating the oncogene by motif creation rather than by translocation.",
+   "methods": "targeted sequencing of noncoding regions, ChIP and editing in T-ALL lines",
+   "confidence": "high",
+   "pmids": [
+    "25394790"
+   ]
+  }
+ ],
+ "open": [
+  "Whether the matrices stored for this family describe TAL1 recognition or complex occupancy is unresolved: every HOCOMOCO model is ChIP-only, no HT-SELEX or methyl-SELEX model exists for TAL1 or LYL1, and the one published selection consensus (AACAGATGGT) does not match the ChIP-derived CAGNTG well.",
+  "The split between direct and tethered binding is unsettled: about one fifth of erythroid TAL1 targets, concentrated among the strongest peaks, remain occupied by a DNA-binding-deficient protein, and a crystal structure shows LMO2 weakening the heterodimer's own DNA contact, but which partner holds TAL1 at those sites genome-wide has not been established.",
+  "It is unclear whether the composite E-box-GATA element requires the roughly nine-base spacing reported for the erythroid pentamer or merely prefers it, and no spacing-aware matrix for the composite element exists in these databases, so scans must look for the two parts separately.",
+  "Whether TAL1, TAL2 and LYL1 differ in sequence preference at all has never been tested side by side in vitro; the Vierstra archetype covering LYL1 is named LYL/OLIG because footprint-derived motifs for the two groups could not be separated."
  ]
 }

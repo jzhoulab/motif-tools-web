@@ -11,7 +11,7 @@
  ],
  "consensus": "TTAGGG",
  "short": "The telobox factors TERF1 (TRF1) and TERF2 (TRF2) bind the vertebrate telomeric repeat TTAGGG through a single Myb-type helix-turn-helix domain that is, structurally, a homeodomain-like fold. Both work as preformed homodimers, and the dimer reads two YTAGGGTTR half-sites whose spacing and orientation are almost unconstrained, so the footprint on a tandem repeat array is flexible rather than fixed. ZBTB48 (TZAP) is a zinc-finger protein that binds the same telomeric and subtelomeric variant repeats and triggers telomere trimming. Because the motif is the telomeric repeat itself, a match in the genome is almost always either a true telomere, a subtelomeric region, or an interstitial telomeric sequence - not a conventional regulatory element.",
- "long": "## The factors\n\nHuman telomeres end in several kilobases of tandem TTAGGG repeats, bound by the six-protein shelterin\ncomplex. Two shelterin subunits supply the double-stranded DNA contact: TERF1 (TRF1) and TERF2 (TRF2).\nEach has an N-terminal domain (acidic in TRF1, basic in TRF2), a central TRFH homodimerization domain, and\na C-terminal Myb/SANT-type helix-turn-helix DNA-binding domain. The Myb domain here is a single repeat, not\nthe three-repeat array of c-MYB, and crystal and NMR structures show that it adopts a homeodomain-like\nfold, the same solution the budding-yeast telomere protein Rap1 uses. Both proteins bind DNA as preformed\nhomodimers in which the two DNA-binding domains are independent structural units on a flexible tether. The\nfamily name comes from the telobox, a Myb-related telomeric DNA-binding motif recognized as a conserved\nmodule across yeast, plants and humans.\n\nZBTB48, also called TZAP or HKR3, is grouped here because it binds the same sequence, but it is a\ndifferent protein class: a BTB/POZ zinc-finger factor, not a telobox protein. It binds telomeric and\nsubtelomeric variant repeats directly, competes with TRF1 and TRF2 for long telomeres, and also acts as a\nconventional transcriptional activator at a small set of promoters. TRF1 and TRF2 are broadly expressed\nand essential; ZBTB48 is a more transient telomere visitor.\n\n## The motif\n\nThe literature consensus is the telomeric repeat itself, TTAGGG, and in practice the unit the protein\nreads is the 7-9 bp half-site YTAGGGTTR. High-resolution crystal structures of the TRF1 and TRF2\nDNA-binding domains on telomeric DNA show that both recognize the same TAGGGTT site, that two of the three\nG-C base pairs characteristic of the repeat are read specifically, and that an unusually large number of\nordered water molecules mediate the protein-DNA interface. SELEX with dimeric TRF1 defined the site as\nbipartite: two YTAGGGTTR half-sites with essentially no constraint on distance or relative orientation,\nsimultaneously contacted by one dimer, with the intervening DNA looped out. A tandem repeat array\ntherefore does not have one canonical binding register.\n\nThe matrices in this atlas all describe fragments of this repeat in one orientation or the other: AGGGTT\n(HOCOMOCO TERF1), AACCCTA (CIS-BP TERF2), TCCCTAA and GGTCCCTDA (ZBTB48/TZAP), GGTCCCT (a Vierstra ZBTB\narchetype). These are the same repeat unit read on opposite strands and phased differently, which is why\nthe atlas medoid, TCCCTAA, looks unlike TTAGGG at first glance - it is CCCTAA, the reverse complement,\nshifted by one. Family cohesion is about 0.81, and the residual spread is phase and strand, not genuine\nspecificity differences. None of these short matrices captures the dimeric bipartite logic, so a scan\nreports individual half-sites rather than functional dimer footprints. The members are not distinguishable\nfrom sequence: TRF1, TRF2 and ZBTB48 all read the same repeat.\n\n## Where it acts\n\nAlmost everywhere this motif occurs it is a telomeric repeat. ChIP-seq for TRF1 and TRF2 recovers\ntelomeres, subtelomeric regions, and a defined subset of interstitial telomeric sequences (ITSs) -\ninternal blocks of degenerate TTAGGG repeats scattered through the genome, many of them near or within\ngene introns - plus some centromeric and pericentromeric satellite DNA. ITSs are themselves unstable and\nare recombination-prone. ZBTB48 additionally binds subtelomeric variant repeats. So the honest description\nof the genomic distribution is: chromosome ends, subtelomeres, ITSs and satellite arrays, with only a\nsmall number of genuine promoter sites, such as the ZBTB48 target MTFP1. This motif is not a promoter\nelement in the ordinary sense, and CpG-island promoter enrichment is not expected.\n\n## Biology and disease\n\nTRF1 is a negative regulator of telomere length: overexpression shortens telomeres progressively and a\ndominant-negative form lengthens them, in telomerase-positive cells. TRF2 protects chromosome ends from\nbeing processed as double-strand breaks; its inhibition causes end-to-end chromosome fusions and triggers\nan ATM-dependent damage response, and TRF2 is implicated in the t-loop structure at telomeres, although\nthe crystal structures show no DNA distortion that would explain that activity. ZBTB48/TZAP binds\npreferentially to long telomeres, where shelterin density is low, and initiates telomere trimming - rapid\ndeletion of telomeric repeats - which sets an upper limit on telomere length; it is also a negative\nregulator of telomere length in cancer cells regardless of their telomere-maintenance mechanism. Telomere\ndysfunction through these routes connects to senescence, genome instability in cancer, and the\ntelomere-biology disorders, and TRF1 and TRF2 are reviewed as shelterin components in that context.\n\n## Reading a hit\n\nThe practical rule for this family is different from every other family in the atlas: a match is a\ntelomeric repeat, so ask where it is before asking who bound it. If the hit is at a chromosome end or in a\nsubtelomere, it is telomeric. If it is internal, the most likely explanation is an interstitial telomeric\nsequence or a satellite array, and a TTAGGG-rich internal block will score highly whether or not any\nprotein binds it. Only after excluding those should a hit be read as a regulatory element. The members\ncannot be separated by sequence - TRF1, TRF2 and ZBTB48 all read TTAGGG - and the short matrices available\nrepresent single half-sites rather than the flexible bipartite site a TRF dimer actually occupies, so\nscores will not track dimer affinity. The CIS-BP TERF2 model is inferred from mouse Terf2 at 92%\nDNA-binding-domain identity rather than measured on the human protein, the HOCOMOCO TZAP model is\nChIP-only (grade B), and the Vierstra archetype is labelled for the broad ZBTB group rather than for\nZBTB48 specifically.",
+ "long": "## The factors\n\nHuman telomeres end in several kilobases of tandem TTAGGG repeats, bound by the six-protein shelterin\ncomplex. Two shelterin subunits supply the double-stranded DNA contact: TERF1 (TRF1) and TERF2 (TRF2) [PMID:7502076,9326950].\nEach has an N-terminal domain (acidic in TRF1, basic in TRF2), a central TRFH homodimerization domain, and\na C-terminal Myb/SANT-type helix-turn-helix DNA-binding domain [PMID:7502076,9326950]. The Myb domain here is a single repeat, not\nthe three-repeat array of c-MYB, and crystal and NMR structures show that it adopts a homeodomain-like\nfold, the same solution the budding-yeast telomere protein Rap1 uses [PMID:9739097,15608617]. Both proteins bind DNA as preformed\nhomodimers in which the two DNA-binding domains are independent structural units on a flexible tether [PMID:15608617,10523316]. The\nfamily name comes from the telobox, a Myb-related telomeric DNA-binding motif recognized as a conserved\nmodule across yeast, plants and humans [PMID:8614633].\n\nZBTB48, also called TZAP or HKR3, is grouped here because it binds the same sequence, but it is a\ndifferent protein class: a BTB/POZ zinc-finger factor, not a telobox protein. It binds telomeric and\nsubtelomeric variant repeats directly [PMID:28500257], competes with TRF1 and TRF2 for long telomeres [PMID:28082411], and also acts as a\nconventional transcriptional activator at a small set of promoters [PMID:28500257]. TRF1 and TRF2 are broadly expressed [PMID:9326950]\nand essential; ZBTB48 is a more transient telomere visitor.\n\n## The motif\n\nThe literature consensus is the telomeric repeat itself, TTAGGG, and in practice the unit the protein\nreads is the 7-9 bp half-site YTAGGGTTR [PMID:10523316]. High-resolution crystal structures of the TRF1 and TRF2\nDNA-binding domains on telomeric DNA show that both recognize the same TAGGGTT site, that two of the three\nG-C base pairs characteristic of the repeat are read specifically, and that an unusually large number of\nordered water molecules mediate the protein-DNA interface [PMID:15608617]. SELEX with dimeric TRF1 defined the site as\nbipartite: two YTAGGGTTR half-sites with essentially no constraint on distance or relative orientation,\nsimultaneously contacted by one dimer, with the intervening DNA looped out [PMID:10523316]. A tandem repeat array\ntherefore does not have one canonical binding register.\n\nThe matrices in this atlas all describe fragments of this repeat in one orientation or the other: AGGGTT\n(HOCOMOCO TERF1), AACCCTA (CIS-BP TERF2), TCCCTAA and GGTCCCTDA (ZBTB48/TZAP), GGTCCCT (a Vierstra ZBTB\narchetype). These are the same repeat unit read on opposite strands and phased differently, which is why\nthe atlas medoid, TCCCTAA, looks unlike TTAGGG at first glance - it is CCCTAA, the reverse complement,\nshifted by one. Family cohesion is about 0.81, and the residual spread is phase and strand, not genuine\nspecificity differences. None of these short matrices captures the dimeric bipartite logic, so a scan\nreports individual half-sites rather than functional dimer footprints. The members are not distinguishable\nfrom sequence: TRF1, TRF2 and ZBTB48 all read the same repeat.\n\n## Where it acts\n\nAlmost everywhere this motif occurs it is a telomeric repeat. ChIP-seq for TRF1 and TRF2 recovers\ntelomeres, subtelomeric regions, and a defined subset of interstitial telomeric sequences (ITSs) -\ninternal blocks of degenerate TTAGGG repeats scattered through the genome, many of them near or within\ngene introns - plus some centromeric and pericentromeric satellite DNA [PMID:21423270]. ITSs are themselves unstable and\nare recombination-prone. ZBTB48 additionally binds subtelomeric variant repeats [PMID:28500257]. So the honest description\nof the genomic distribution is: chromosome ends, subtelomeres, ITSs and satellite arrays, with only a\nsmall number of genuine promoter sites, such as the ZBTB48 target MTFP1 [PMID:28500257]. This motif is not a promoter\nelement in the ordinary sense, and CpG-island promoter enrichment is not expected.\n\n## Biology and disease\n\nTRF1 is a negative regulator of telomere length: overexpression shortens telomeres progressively and a\ndominant-negative form lengthens them, in telomerase-positive cells [PMID:9034193]. TRF2 protects chromosome ends from\nbeing processed as double-strand breaks; its inhibition causes end-to-end chromosome fusions [PMID:9476899] and triggers\nan ATM-dependent damage response, and TRF2 is implicated in the t-loop structure at telomeres, although\nthe crystal structures show no DNA distortion that would explain that activity [PMID:15608617]. ZBTB48/TZAP binds\npreferentially to long telomeres, where shelterin density is low, and initiates telomere trimming - rapid\ndeletion of telomeric repeats - which sets an upper limit on telomere length [PMID:28082411]; it is also a negative\nregulator of telomere length in cancer cells regardless of their telomere-maintenance mechanism [PMID:28500257]. Telomere\ndysfunction through these routes connects to senescence, genome instability in cancer, and the\ntelomere-biology disorders, and TRF1 and TRF2 are reviewed as shelterin components in that context.\n\n## Reading a hit\n\nThe practical rule for this family is different from every other family in the atlas: a match is a\ntelomeric repeat, so ask where it is before asking who bound it. If the hit is at a chromosome end or in a\nsubtelomere, it is telomeric. If it is internal, the most likely explanation is an interstitial telomeric\nsequence or a satellite array, and a TTAGGG-rich internal block will score highly whether or not any\nprotein binds it. Only after excluding those should a hit be read as a regulatory element. The members\ncannot be separated by sequence - TRF1, TRF2 and ZBTB48 all read TTAGGG - and the short matrices available\nrepresent single half-sites rather than the flexible bipartite site a TRF dimer actually occupies, so\nscores will not track dimer affinity. The CIS-BP TERF2 model is inferred from mouse Terf2 at 92%\nDNA-binding-domain identity rather than measured on the human protein, the HOCOMOCO TZAP model is\nChIP-only (grade B), and the Vierstra archetype is labelled for the broad ZBTB group rather than for\nZBTB48 specifically.",
  "caveats": "This motif is the telomeric repeat, so most matches are telomeric, subtelomeric, interstitial telomeric sequence or satellite DNA rather than regulatory elements - check location before interpreting. TRF1, TRF2 and ZBTB48 all read the same TTAGGG repeat and cannot be separated by sequence. The available matrices (6-9 bp fragments in both orientations; the medoid TCCCTAA is the reverse complement, phase shifted) capture single half-sites, whereas TRF dimers bind two YTAGGGTTR half-sites with almost no spacing or orientation constraint, so scores do not track real affinity. The CIS-BP TERF2 model is inferred from mouse Terf2 (92% DBD identity), the HOCOMOCO TZAP model is ChIP-only at grade B, and the Vierstra archetype is labelled for ZBTB generally.",
  "refs": [
   {
@@ -74,5 +74,88 @@
    "pmid": "28500257",
    "url": "https://pubmed.ncbi.nlm.nih.gov/28500257/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1992,
+   "finding": "A nuclear activity, TRF, is found in human, mouse and monkey cells that binds duplex TTAGGG repeat arrays but not closely related repeats such as TTGGGG or TTAGGC.",
+   "methods": "Electrophoretic mobility shift assays with nuclear extracts",
+   "confidence": "medium",
+   "pmids": [
+    "1406665"
+   ],
+   "open": "The protein behind the activity was unidentified."
+  },
+  {
+   "year": 1995,
+   "finding": "TRF (later TRF1) is cloned as a telomeric protein with one Myb-type DNA-binding repeat that colocalizes with telomeric DNA in interphase and at metaphase chromosome ends.",
+   "methods": "Protein purification and cDNA cloning; immunofluorescence",
+   "confidence": "medium",
+   "pmids": [
+    "7502076"
+   ]
+  },
+  {
+   "year": 1996,
+   "finding": "The telobox is defined as a Myb-related telomeric DNA-binding motif shared by yeast Tbf1, several plant proteins and human TRF and a second human protein.",
+   "methods": "Deletion mapping; sequence comparison; DNA-binding assays",
+   "confidence": "medium",
+   "pmids": [
+    "8614633"
+   ]
+  },
+  {
+   "year": 1997,
+   "finding": "TRF2 is cloned as a distant TRF1 homologue with a very similar Myb-related domain that also binds duplex TTAGGG; the two proteins exist predominantly as separate homodimers.",
+   "methods": "cDNA cloning; in vitro binding; dimerization assays; metaphase localization",
+   "confidence": "medium",
+   "pmids": [
+    "9326950"
+   ],
+   "open": "Why two proteins read one repeat, and whether they discriminate between sites, was unknown."
+  },
+  {
+   "year": 1999,
+   "finding": "SELEX with dimeric TRF1 reveals a bipartite site of two YTAGGGTTR half-sites with no constraint on spacing or orientation, contacted simultaneously by one dimer with the intervening DNA looped out.",
+   "methods": "SELEX; binding affinities; DNase I footprinting; electron microscopy",
+   "confidence": "high",
+   "pmids": [
+    "10523316"
+   ]
+  },
+  {
+   "year": 2005,
+   "finding": "Crystal structures of the TRF1 and TRF2 DNA-binding domains on telomeric DNA show both recognize the same TAGGGTT site through homeodomain-like folds, reading two of the three G-C pairs, with many water-mediated contacts.",
+   "methods": "X-ray crystallography (2.0 and 1.8 angstrom)",
+   "confidence": "high",
+   "pmids": [
+    "15608617"
+   ],
+   "open": "No DNA distortion was seen that would explain TRF2's proposed role in t-loop formation."
+  },
+  {
+   "year": 2011,
+   "finding": "Genome-wide ChIP-seq maps TRF1 and TRF2 beyond telomeres to a subset of interstitial telomeric sequences and to centromeric and pericentromeric satellites, often near genes or in introns.",
+   "methods": "ChIP-seq",
+   "confidence": "medium",
+   "pmids": [
+    "21423270"
+   ],
+   "open": "Whether these extratelomeric sites have regulatory function was not tested."
+  },
+  {
+   "year": 2017,
+   "finding": "Two groups characterize ZBTB48 (TZAP) as a C2H2 zinc-finger protein that binds telomeric and subtelomeric variant repeats directly, prefers long telomeres with low shelterin, triggers telomere trimming, and also activates a small set of genes including MTFP1.",
+   "methods": "Telomere-binding protein screens; ChIP-seq; RNA-seq; telomere-length assays",
+   "confidence": "high",
+   "pmids": [
+    "28082411",
+    "28500257"
+   ]
+  }
+ ],
+ "open": [
+  "How TRF2 promotes t-loop formation is unexplained: TRF2 is implicated in t-loops, but its DNA-binding domain does not distort the duplex in crystal structures, so the activity must come from other parts of the protein or complex.",
+  "Whether TRF1 and TRF2 binding at interstitial telomeric sequences and satellites has a regulatory role is unsettled: ChIP-seq places them at a subset of such sites, often near genes or within introns, and a role in long-range chromosome organization and gene regulation has been proposed but not demonstrated."
  ]
 }

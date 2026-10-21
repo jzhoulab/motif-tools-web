@@ -11,7 +11,7 @@
  ],
  "consensus": "TTTTACGAC",
  "short": "HOX paralogue groups 9 to 13 - the Abdominal-B-like or posterior HOX proteins - read a different core from the rest of the homeodomain superfamily. Where most homeodomains require TAAT, these prefer TTAT, and their in vitro sites extend to TTTTACGAC (equivalently GTCGTAAAA on the opposite strand). This family collects 63 motifs for the 16 posterior HOX genes: HOXA9-A13, HOXB9, HOXB13, HOXC9-C13 and HOXD9-D13. The longer, AT-rich site makes these motifs considerably rarer and more informative than a bare TAAT hit, but the 16 paralogues remain indistinguishable from each other. Groups 9-10 partner with PBX, groups 11-13 with MEIS instead.",
- "long": "## The factors\n\nSixteen genes, 63 motifs: HOXA9, HOXA10, HOXA11, HOXA13, HOXB9, HOXB13, HOXC9-C13 and HOXD9-D13. These are the 5' genes of each HOX cluster, expressed latest and most posteriorly under colinearity, and they pattern the posterior trunk, the limb autopod and the urogenital tract; HOXA9 and HOXA10 are also central to hematopoietic progenitor regulation.\n\nCofactor usage splits the group. Paralogues 9 and 10 still form cooperative complexes with the TALE protein PBX1, although HOXA10 lacks a canonical hexapeptide and uses a tryptophan-containing motif instead. Paralogues 11, 12 and 13 do not bind PBX1a and instead heterodimerize with MEIS1, which was identified as a common retroviral integration site in myeloid leukemias where Hoxa9 is co-activated; the heterodimer occupies a composite target with a MEIS1 half-site (TGACAG) adjacent to an Abd-B-like HOX site (TTTTACGAC), and HOXA9 additionally forms trimeric complexes with PBX2 and MEIS1 in myeloid cells.\n\n## The motif\n\nThe defining difference is the core. In a direct comparison of four Drosophila HOM proteins, Abdominal-B bound a site with an unusual TTAT core while Ultrabithorax, Antennapedia and Deformed all preferred TAAT; the responsible residues lie in the homeodomain N-terminal arm, and the same arm differences are conserved in the vertebrate Abd-B-like proteins. Concretely, posterior HOX homeodomains begin GRKKRVPYTK or TRKKRCPYTK where anterior ones begin GKRARTAYTR or RKRGRQTYTR. Position 50 is glutamine throughout, so this split is not a position-50 effect; the HoxA9-Pbx1 crystal structure showed directly that these arm residues set specificity without contacting bases, through DNA conformation, and that the posterior hexapeptide adopts a different conformation from the anterior one.\n\nIn vitro models across the family converge tightly. HOCOMOCO HT-SELEX and methyl-HT-SELEX models for HOXD9, HOXA10, HOXA11, HOXC9-C12 and HOXD10-D12 read TTTTACGAC, with the group-13 genes (HOXA13, HOXB13, HOXC13, HOXD13) shifting the last base to give TTTACGAG. CIS-BP and JASPAR models for several of the same genes report the variant TTTTATTGC/TTTTATTGG, and the family medoid is HOXC9 (HOCOMOCO HXC9.H14CORE.1.S.C) at TTTATGAC. A degenerate rendering of the same core is often written TTTTATKR, including in this atlas's own family definition; it describes the 5'-TTTAT-3' core with the 3' bases left ambiguous and is not a separate site. Cohesion is 0.89, the highest of the homeodomain families here, and no member is flagged as belonging elsewhere.\n\nParalogues are not separable. Nothing in these matrices distinguishes HOXA9 from HOXD9, and the only within-family distinction with support is group 13 versus groups 9-12. ChIP-derived models look different from the in vitro ones because they capture the cofactor composite: HOXA9, HOXC9 and HOXC10 ChIP models read TGATTTATGG, that is, the PBX half-site ATGAT followed by a posterior TTAT half-site, consistent with the finding that within the PBX composite the HOX half-site core shifts stepwise from TTAT to TGAT along the cluster.\n\n## Where it acts\n\nPosterior HOX sites are in distal developmental enhancers, prominently in the limb autopod regulatory landscape 5' of HOXD and in hematopoietic progenitor enhancers. Unlike TAATTA, the site is genuinely rare: at human base composition the 9-mer TTTTACGAC is expected only a few tens of thousands of times in 3.1 Gb, so a strong full-length match is worth taking seriously. Co-occurring motifs are the informative context - MEIS (TGACAG) for groups 11-13 and PBX (ATGAT) for groups 9-10 - and in leukemia HOXA9 sites overlap extensively with MEIS1 occupancy.\n\n## Biology and disease\n\nHuman posterior HOX mutations produce distinctive limb and urogenital phenotypes. HOXD13 polyalanine expansion causes synpolydactyly; HOXA13 mutation causes hand-foot-genital syndrome; HOXA11 mutation causes amegakaryocytic thrombocytopenia with radioulnar synostosis. HOXB13 carries the recurrent germline G84E variant that raises prostate cancer risk. In leukemia, the NUP98-HOXA9 fusion arising from t(7;11)(p15;p15) drives myeloid transformation, and deregulation of the HOXA9/MEIS1 axis is the shared downstream program of MLL-rearranged and NPM1-mutant acute myeloid leukemia, making it an active therapeutic target.\n\n## Reading a hit\n\nA full TTTTACGAC or TTTTATTG match is one of the more informative homeodomain hits available, because the site is long and rare. What it does not do is name a protein: all 16 posterior HOX genes share it, and a hit should be reported as a posterior/Abd-B-like HOX site. Two further practical points. First, matches truncated to TTTAT are no more specific than a generic AT-rich homeodomain hit and should not be counted. Second, five of the 30 HOCOMOCO models in this family are ChIP-only and four more combine ChIP with SELEX; the ChIP-derived versions are PBX-HOX composites (TGATTTATGG) rather than HOX monomer sites, so scanning with them tests for the composite element, not for the HOX protein. One JASPAR entry here, HOXD12::ELK1, is a measured heterodimer motif whose information is dominated by the ETS half-site and will match ETS-driven promoters.",
+ "long": "## The factors\n\nSixteen genes, 63 motifs: HOXA9, HOXA10, HOXA11, HOXA13, HOXB9, HOXB13, HOXC9-C13 and HOXD9-D13. These are the 5' genes of each HOX cluster, expressed latest and most posteriorly under colinearity, and they pattern the posterior trunk, the limb autopod and the urogenital tract; HOXA9 and HOXA10 are also central to hematopoietic progenitor regulation.\n\nCofactor usage splits the group. Paralogues 9 and 10 still form cooperative complexes with the TALE protein PBX1, although HOXA10 lacks a canonical hexapeptide and uses a tryptophan-containing motif instead [PMID:8657149,9079637]. Paralogues 11, 12 and 13 do not bind PBX1a [PMID:9079637] and instead heterodimerize with MEIS1, which was identified as a common retroviral integration site in myeloid leukemias where Hoxa9 is co-activated; the heterodimer occupies a composite target with a MEIS1 half-site (TGACAG) adjacent to an Abd-B-like HOX site (TTTTACGAC) [PMID:9343407], and HOXA9 additionally forms trimeric complexes with PBX2 and MEIS1 in myeloid cells [PMID:10082572].\n\n## The motif\n\nThe defining difference is the core. In a direct comparison of four Drosophila HOM proteins, Abdominal-B bound a site with an unusual TTAT core while Ultrabithorax, Antennapedia and Deformed all preferred TAAT; the responsible residues lie in the homeodomain N-terminal arm, and the same arm differences are conserved in the vertebrate Abd-B-like proteins [PMID:7914870]. Concretely, posterior HOX homeodomains begin GRKKRVPYTK or TRKKRCPYTK where anterior ones begin GKRARTAYTR or RKRGRQTYTR. Position 50 is glutamine throughout, so this split is not a position-50 effect; the HoxA9-Pbx1 crystal structure showed directly that these arm residues set specificity without contacting bases, through DNA conformation, and that the posterior hexapeptide adopts a different conformation from the anterior one [PMID:12923056].\n\nIn vitro models across the family converge tightly. HOCOMOCO HT-SELEX and methyl-HT-SELEX models for HOXD9, HOXA10, HOXA11, HOXC9-C12 and HOXD10-D12 read TTTTACGAC, with the group-13 genes (HOXA13, HOXB13, HOXC13, HOXD13) shifting the last base to give TTTACGAG. CIS-BP and JASPAR models for several of the same genes report the variant TTTTATTGC/TTTTATTGG, and the family medoid is HOXC9 (HOCOMOCO HXC9.H14CORE.1.S.C) at TTTATGAC. A degenerate rendering of the same core is often written TTTTATKR, including in this atlas's own family definition; it describes the 5'-TTTAT-3' core with the 3' bases left ambiguous and is not a separate site. Cohesion is 0.89, among the highest of the homeodomain families here, and no member is flagged as belonging elsewhere.\n\nParalogues are not separable. Nothing in these matrices distinguishes HOXA9 from HOXD9, and the only within-family distinction with support is group 13 versus groups 9-12. ChIP-derived models look different from the in vitro ones because they capture the cofactor composite: HOXA9, HOXC9 and HOXC10 ChIP models read TGATTTATGG, that is, the PBX half-site ATGAT followed by a posterior TTAT half-site, consistent with the finding that within the PBX composite the HOX half-site core shifts stepwise from TTAT to TGAT along the cluster [PMID:8657149].\n\n## Where it acts\n\nPosterior HOX sites are in distal developmental enhancers, prominently in the limb autopod regulatory landscape 5' of HOXD and in hematopoietic progenitor enhancers. Unlike TAATTA, the site is genuinely rare: at human base composition the 9-mer TTTTACGAC is expected only a few tens of thousands of times in 3.1 Gb, so a strong full-length match is worth taking seriously. Co-occurring motifs are the informative context - MEIS (TGACAG) for groups 11-13 and PBX (ATGAT) for groups 9-10 [PMID:9079637,9343407] - and in leukemia HOXA9 sites overlap extensively with MEIS1 occupancy [PMID:22072553].\n\n## Biology and disease\n\nHuman posterior HOX mutations produce distinctive limb and urogenital phenotypes. HOXD13 polyalanine expansion causes synpolydactyly [PMID:8614804]; HOXA13 mutation causes hand-foot-genital syndrome [PMID:9020844]; HOXA11 mutation causes amegakaryocytic thrombocytopenia with radioulnar synostosis [PMID:11101832]. HOXB13 carries the recurrent germline G84E variant that raises prostate cancer risk [PMID:22236224]. In leukemia, the NUP98-HOXA9 fusion arising from t(7;11)(p15;p15) drives myeloid transformation, and deregulation of the HOXA9/MEIS1 axis is the shared downstream program of MLL-rearranged and NPM1-mutant acute myeloid leukemia, making it an active therapeutic target [PMID:27258906].\n\n## Reading a hit\n\nA full TTTTACGAC or TTTTATTG match is one of the more informative homeodomain hits available, because the site is long and rare. What it does not do is name a protein: all 16 posterior HOX genes share it, and a hit should be reported as a posterior/Abd-B-like HOX site. Two further practical points. First, matches truncated to TTTAT are no more specific than a generic AT-rich homeodomain hit and should not be counted. Second, five of the 30 HOCOMOCO models in this family are ChIP-only and four more combine ChIP with SELEX; the ChIP-derived versions are PBX-HOX composites (TGATTTATGG) rather than HOX monomer sites, so scanning with them tests for the composite element, not for the HOX protein. One JASPAR entry here, HOXD12::ELK1, is a measured heterodimer motif whose information is dominated by the ETS half-site and will match ETS-driven promoters.",
  "caveats": "Better than most homeodomain families, but still a class-level call. All 16 posterior HOX paralogues share one motif, so report a hit as \"Abd-B-like/posterior HOX\", never as HOXA9 or HOXD13. The strength of the call depends on match length: the full 9-mer TTTTACGAC is expected only tens of thousands of times genome-wide and is meaningful, whereas a TTTAT-only match is an ordinary AT-rich homeodomain hit. Five of 30 HOCOMOCO models are ChIP-only and read the PBX-HOX composite TGATTTATGG rather than the monomer site; scanning with these tests for the composite element. The HOXD12::ELK1 entry is a heterodimer motif dominated by its ETS half.",
  "refs": [
   {
@@ -73,6 +73,98 @@
    "cite": "Collins CT, Hess JL. Deregulation of the HOXA9/MEIS1 axis in acute leukemia. Curr Opin Hematol 2016;23:354-61.",
    "pmid": "27258906",
    "url": "https://pubmed.ncbi.nlm.nih.gov/27258906/"
+  },
+  {
+   "cite": "Huang Y, Sitwala K, Bronstein J, et al. Identification and characterization of Hoxa9 binding sites in hematopoietic cells. Blood 2012;119:388-98.",
+   "pmid": "22072553",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22072553/"
+  },
+  {
+   "cite": "Yin Y, Morgunova E, Jolma A, et al. Impact of cytosine methylation on DNA binding specificities of human transcription factors. Science 2017;356.",
+   "pmid": "28473536",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28473536/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1994,
+   "finding": "Abdominal-B, the Drosophila founder of the posterior group, prefers a TTAT core where Ultrabithorax, Antennapedia and Deformed prefer TAAT. N-terminal arm residues are responsible, and the differing arm residues are conserved in the vertebrate Abd-B-like HOX proteins.",
+   "methods": "In vitro binding-site selection, homeodomain chimeras",
+   "confidence": "medium",
+   "pmids": [
+    "7914870"
+   ]
+  },
+  {
+   "year": 1997,
+   "finding": "Site selection for HOXB9 with PBX1a yields ATGATTTACGAC, a PBX half-site next to a new TTAC HOX site. Paralogues 9 and 10 bind cooperatively with PBX1a through a tryptophan N-terminal to the homeodomain; paralogues 11-13 do not, and in the presence of PBX1a they select a TTAC site with no PBX half-site.",
+   "methods": "Binding-site selection, EMSA, mutagenesis",
+   "confidence": "medium",
+   "pmids": [
+    "9079637"
+   ],
+   "open": "Which partner groups 11-13 use in place of PBX."
+  },
+  {
+   "year": 1997,
+   "finding": "HOXA9, HOXA10, HOXA11, HOXD12 and HOXB13 form DNA-binding complexes with MEIS1 on a composite of a MEIS site (TGACAG) and an Abd-B-like site (TTTTACGAC), and slow MEIS1 dissociation. Meis1 and Hoxa9 are co-activated by retroviral integration in mouse myeloid leukemia.",
+   "methods": "EMSA, binding-site selection, dissociation kinetics",
+   "confidence": "medium",
+   "pmids": [
+    "9343407"
+   ]
+  },
+  {
+   "year": 1999,
+   "finding": "HOXA9, PBX2 and MEIS1 co-immunoprecipitate from myeloid cell extracts and form a trimeric complex on a PBX-HOXA9 site.",
+   "methods": "EMSA with nuclear extracts, co-immunoprecipitation, immunolocalization",
+   "confidence": "medium",
+   "pmids": [
+    "10082572"
+   ],
+   "open": "The trimer barely changed reporter transcription, so what it does at genomic sites was unclear."
+  },
+  {
+   "year": 2003,
+   "finding": "The 1.9 A HoxA9-Pbx1-DNA structure shows that the posterior hexapeptide adopts a different conformation from the anterior one, and that extra nonspecific contacts and altered DNA conformation account for the stronger affinity and altered specificity of posterior HOX proteins. N-terminal arm residues are needed for correct sequence recognition without contacting bases.",
+   "methods": "X-ray crystallography, mutant binding studies",
+   "confidence": "high",
+   "pmids": [
+    "12923056"
+   ]
+  },
+  {
+   "year": 2011,
+   "finding": "SELEX-seq with Exd-Homothorax sorts the eight Drosophila Hox proteins into three colinear classes, and DNA-shape predictions indicate that anterior and posterior Hox proteins prefer sites with different minor-groove topographies.",
+   "methods": "SELEX-seq, DNA-shape prediction",
+   "confidence": "medium",
+   "pmids": [
+    "22153072"
+   ]
+  },
+  {
+   "year": 2012,
+   "finding": "Genome-wide, Hoxa9 and Meis1 co-bind hundreds of conserved sites in hematopoietic cells, mostly distal enhancers marked by H3K4me1 and CBP/P300 and often shared with PU.1.",
+   "methods": "ChIP-seq, histone-mark profiling, enhancer reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "22072553"
+   ]
+  },
+  {
+   "year": 2017,
+   "finding": "Methylation-sensitive SELEX of 542 human TFs finds many that prefer CpG-methylated sites, most of them extended homeodomain proteins, through hydrophobic contact with the 5-methyl group. This matters here because the posterior HOX site TTTACGAC contains a CpG, and the methyl-HT-SELEX (M) models in this family come from this type of assay.",
+   "methods": "Methyl-HT-SELEX, X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "28473536"
+   ],
+   "open": "Whether occupied genomic posterior HOX sites are methylated or unmethylated."
+  }
+ ],
+ "open": [
+  "Whether posterior HOX proteins bind the CpG in TTTACGAC in its methylated form in vivo is unsettled. Methyl-SELEX shows that many homeodomain proteins prefer methylated CpG, but most genomic CpGs are methylated while active regulatory elements are generally hypomethylated, so which state the occupied sites are in has not been established.",
+  "For the group-13 proteins the databases disagree: JASPAR models read CCAATAAAA (TTTTATTGG on the other strand) while HOCOMOCO HT-SELEX and methyl-HT-SELEX models read TTTACGAG. Whether the two reflect different assays, methylation states or binding modes is not settled.",
+  "How paralogues 11-13, which do not bind PBX1a, are directed to their targets in vivo is incompletely defined: MEIS1 heterodimers on TGACAG-TTTTACGAC composites were shown in vitro, but whether MEIS complexes account for most of their genomic binding has not been established."
  ]
 }

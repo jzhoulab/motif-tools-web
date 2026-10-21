@@ -10,7 +10,7 @@
  ],
  "consensus": "TGASTCA",
  "short": "AP-1 is the collective name for dimers of the JUN proteins (JUN, JUNB, JUND) with the FOS proteins (FOS, FOSB, FOSL1, FOSL2), together with the related basic region-leucine zipper partners ATF3, JDP2 and BATF/BATF2/BATF3. They bind the seven-base TPA response element TGA(C/G)TCA, two TGAC half-sites read one per subunit, and also the one-base-longer cyclic-AMP response element TGACGTCA. FOS and JUN were among the first proto-oncogenes described, and AP-1 activity rises within minutes of growth-factor, cytokine, ultraviolet or oxidative stimulation. The site is one of the most frequently occupied sequences in accessible chromatin, concentrated in distal enhancers, where AP-1 binding helps keep regions open for other factors. Because every member reads the same seven bases, a match names the family rather than the protein.",
- "long": "## The factors\n\nAP-1 is a dimer pool rather than a single protein. The JUN subfamily (JUN, JUNB, JUND) and the FOS subfamily (FOS, FOSB, FOSL1/FRA-1, FOSL2/FRA-2) are basic region-leucine zipper (bZIP) factors: a roughly 60-residue module in which a basic region lies along the DNA major groove and an adjacent leucine-rich heptad repeat forms a parallel two-stranded coiled coil with the partner subunit. Fos proteins barely homodimerize and need a Jun partner; Jun homodimerizes weakly and prefers Fos, a bias the c-Fos-c-Jun crystal structure traced to an asymmetric network of interhelical electrostatic contacts in the zipper. Three further groups join the same pool and read the same site: ATF3, JDP2, and the immune bZIPs BATF, BATF2 and BATF3. JUN, JUND, FOSL1, FOSL2 and ATF3 are broadly expressed; FOS and FOSB are immediate-early genes whose transcription rises within minutes of stimulation; BATF and BATF3 are largely confined to lymphoid and dendritic lineages. Measuring DNA specificity for 102 bZIP dimers showed that about 72% of heterodimer motifs are simply the partners' half-sites joined, which is why this pool behaves as one motif.\n\n## The motif\n\nThe classical site is the 7 bp TPA response element (TRE), TGA(C/G)TCA, written TGASTCA. It is two TGAC half-sites in opposed orientations sharing a central base, one read by each subunit. TGACTCA and TGAGTCA are exact reverse complements, so these are not two variants but one site seen from either strand. The 8 bp cyclic-AMP response element (CRE), TGACGTCA, is the same half-site pair with one extra base between them, and Jun-, ATF3-, JDP2- and BATF-containing dimers bind it as well. Information sits almost entirely on TGA and TCA; the central base and the flanks are weakly constrained, although an A or T immediately outside each half-site is common, giving the ATGACTCAT of many models. In the crystal structure the coiled coil is flexibly joined to the basic regions and the heterodimer does not occupy the asymmetric TGAGTCA in a unique orientation, which is the structural reason no base distinguishes the Fos half from the Jun half. The 77 models gathered here bear this out: the JASPAR dimer matrices FOS::JUN, FOSL2::JUNB, FOSL2::JUND and BATF::JUN each have a same-family neighbour at 0.99 similarity or better. The consensus derived from these models is ATGACTCA, but the highest-information members - BATF3, BATF2, FOS, JUNB, JDP2 and ATF3 - are the 8 bp ATGACGTCAT. That split follows evidence type rather than biology: in vitro selection recovers the CRE as the higher-affinity site for these dimers, whereas ChIP-derived models recover the 7 bp TRE, which is what cells actually occupy. BATF models carry a second element, a TTTC placed two or three bases from the TRE: the AP-1-IRF composite element (AICE) through which BATF dimers recruit IRF4 or IRF8.\n\n## Where it acts\n\nAP-1 sites are enriched at distal enhancers rather than in CpG-island promoters, and AP-1-like footprints are among the most frequently recovered classes in genome-wide DNase I footprint maps. The site is genuinely common: a 7-mer of this composition is expected roughly 4 x 10^5 times in 3.1 Gb of human sequence, so most matches are not functional. AP-1 occupancy is better described as collaborative than instructive: AP-1 binding raises local accessibility and licenses glucocorticoid receptor binding at shared elements, and AP-1 motifs are among the sequences that lineage-determining factors use to prime enhancers in macrophages and B cells. Named composites include the AICE with IRF4 and IRF8, the NFAT-AP-1 composite of the IL2 and CSF2 enhancers, and glucocorticoid receptor tethering sites.\n\n## Biology and disease\n\nAP-1 converts short-lived signals - growth factors, cytokines, ultraviolet light, oxidative stress - into transcription, and its targets span proliferation, differentiation, apoptosis, wound repair and bone remodeling. Mice lacking c-fos are osteopetrotic because osteoclasts fail to form, and have hematopoietic defects; c-jun-null embryos die in mid-gestation with hepatic failure. Batf3-null mice lack CD8-alpha-positive (cDC1) dendritic cells and prime cytotoxic T cells poorly. In cancer AP-1 acts in both directions depending on tissue and member: JUN is amplified in dedifferentiated liposarcoma, FOS and FOSB are recurrently rearranged in epithelioid hemangioma, and FOSL1 is elevated in many epithelial tumors, while JUNB and JUND can be growth-suppressive.\n\n## Reading a hit\n\nA TGASTCA match identifies the family, not the member: nothing in the sequence separates FOS from FOSB or FOSL1/2, or JUN from JUNB or JUND, and the ATF3, JDP2 and BATF models are equally close. At seven informative bases a single occurrence in a promoter is not evidence of regulation; ask instead whether it falls in accessible chromatin in your cell type. The site is also hard to separate from its siblings. If your match is TGACGTCA, the CREB/ATF family is at least as likely, and ATF6/CREB3 if the 3-prime flank is GTGG. If GC extensions flank the core, as in TGCTGACTCAGCA, read MAF; if only the 3-prime side is GC, as in TGACTCAGC, read NFE2/BACH. ChIP-derived AP-1 models are also prone to indirect recovery: a JUN-like motif is one of a handful repeatedly enriched in ChIP-seq datasets for unrelated factors, accounting for up to 45% of peaks in some sets. One CIS-BP entry labelled ATF3 in this family (M07822) is a CACGTG E-box whose nearest neighbours are USF motifs; treat it as out of place here.",
+ "long": "## The factors\n\nAP-1 is a dimer pool rather than a single protein. The JUN subfamily (JUN, JUNB, JUND) and the FOS subfamily (FOS, FOSB, FOSL1/FRA-1, FOSL2/FRA-2) are basic region-leucine zipper (bZIP) factors: a roughly 60-residue module in which a basic region lies along the DNA major groove and an adjacent leucine-rich heptad repeat forms a parallel two-stranded coiled coil with the partner subunit. Fos proteins barely homodimerize and need a Jun partner; Jun homodimerizes weakly and prefers Fos, a bias the c-Fos-c-Jun crystal structure traced to an asymmetric network of interhelical electrostatic contacts in the zipper [PMID:7816143]. Three further groups join the same pool and read the same site: ATF3, JDP2, and the immune bZIPs BATF, BATF2 and BATF3. JUN, JUND, FOSL1, FOSL2 and ATF3 are broadly expressed; FOS and FOSB are immediate-early genes whose transcription rises within minutes of stimulation; BATF and BATF3 are largely confined to lymphoid and dendritic lineages. Measuring DNA specificity for 102 bZIP dimers showed that about 72% of heterodimer motifs are simply the partners' half-sites joined [PMID:28186491], which is why this pool behaves as one motif.\n\n## The motif\n\nThe classical site is the 7 bp TPA response element (TRE), TGA(C/G)TCA, written TGASTCA [PMID:3034433]. It is two TGAC half-sites in opposed orientations sharing a central base, one read by each subunit. TGACTCA and TGAGTCA are exact reverse complements, so these are not two variants but one site seen from either strand. The 8 bp cyclic-AMP response element (CRE), TGACGTCA, is the same half-site pair with one extra base between them, and Jun-, ATF3-, JDP2- and BATF-containing dimers bind it as well [PMID:1827203,28186491]. Information sits almost entirely on TGA and TCA; the central base and the flanks are weakly constrained, although an A or T immediately outside each half-site is common, giving the ATGACTCAT of many models. In the crystal structure the coiled coil is flexibly joined to the basic regions and the heterodimer does not occupy the asymmetric TGAGTCA in a unique orientation, which is the structural reason no base distinguishes the Fos half from the Jun half [PMID:7816143]. The 77 models gathered here bear this out: the JASPAR dimer matrices FOS::JUN, FOSL2::JUNB, FOSL2::JUND and BATF::JUN each have a same-family neighbour at 0.99 similarity or better. The consensus derived from these models is ATGACTCA, but the highest-information members - BATF3, BATF2, FOS, JUNB, JDP2 and ATF3 - are the 8 bp ATGACGTCAT. That split follows evidence type rather than biology: in vitro selection recovers the CRE as the higher-affinity site for these dimers, whereas ChIP-derived models recover the 7 bp TRE, which is what cells actually occupy. BATF models carry a second element, a TTTC placed two or three bases from the TRE: the AP-1-IRF composite element (AICE) through which BATF dimers recruit IRF4 or IRF8 [PMID:22983707].\n\n## Where it acts\n\nAP-1 sites are enriched at distal enhancers rather than in CpG-island promoters [PMID:31034924], and AP-1-like footprints are among the most frequently recovered classes in genome-wide DNase I footprint maps. The site is genuinely common: a 7-mer of this composition is expected roughly 4 x 10^5 times in 3.1 Gb of human sequence, so most matches are not functional. AP-1 occupancy is better described as collaborative than instructive: AP-1 binding raises local accessibility and licenses glucocorticoid receptor binding at shared elements [PMID:21726817], and AP-1 motifs are among the sequences that lineage-determining factors use to prime enhancers in macrophages and B cells [PMID:20513432]. Named composites include the AICE with IRF4 and IRF8, the NFAT-AP-1 composite of the IL2 and CSF2 enhancers, and glucocorticoid receptor tethering sites.\n\n## Biology and disease\n\nAP-1 converts short-lived signals - growth factors, cytokines, ultraviolet light, oxidative stress - into transcription, and its targets span proliferation, differentiation, apoptosis, wound repair and bone remodeling. Mice lacking c-fos are osteopetrotic because osteoclasts fail to form, and have hematopoietic defects [PMID:1465144,7939685]; c-jun-null embryos die in mid-gestation with hepatic failure [PMID:8371760]. Batf3-null mice lack CD8-alpha-positive (cDC1) dendritic cells and prime cytotoxic T cells poorly [PMID:19008445]. In cancer AP-1 acts in both directions depending on tissue and member: JUN is amplified in dedifferentiated liposarcoma, FOS and FOSB are recurrently rearranged in epithelioid hemangioma, and FOSL1 is elevated in many epithelial tumors, while JUNB and JUND can be growth-suppressive.\n\n## Reading a hit\n\nA TGASTCA match identifies the family, not the member: nothing in the sequence separates FOS from FOSB or FOSL1/2, or JUN from JUNB or JUND, and the ATF3, JDP2 and BATF models are equally close. At seven informative bases a single occurrence in a promoter is not evidence of regulation; ask instead whether it falls in accessible chromatin in your cell type. The site is also hard to separate from its siblings. If your match is TGACGTCA, the CREB/ATF family is at least as likely, and ATF6/CREB3 if the 3-prime flank is GTGG. If GC extensions flank the core, as in TGCTGACTCAGCA, read MAF; if only the 3-prime side is GC, as in TGACTCAGC, read NFE2/BACH. ChIP-derived AP-1 models are also prone to indirect recovery: a JUN-like motif is one of a handful repeatedly enriched in ChIP-seq datasets for unrelated factors, accounting for up to 45% of peaks in some sets [PMID:25070602]. One CIS-BP entry labelled ATF3 in this family (M07822) is a CACGTG E-box whose nearest neighbours are USF motifs; treat it as out of place here.",
  "caveats": "An AP-1 match is one of the safest family calls in this atlas and one of the least informative member calls. All 13 proteins share the motif, so a hit licenses \"an AP-1-family dimer could bind here\" and nothing more; it does not say which subunits, whether the site is occupied, or whether occupancy activates or represses. The 7 bp core occurs a few hundred thousand times in the genome, so require accessibility, conservation or allelic evidence before calling a site functional. Half of the models here come from ChIP-seq, and AP-1 motifs are a well-documented contaminant of ChIP-seq peaks for unrelated factors, so an AP-1 motif under someone else's peak is not evidence that the two proteins interact.",
  "refs": [
   {
@@ -32,6 +32,11 @@
    "cite": "Hilberg F, Aguzzi A, Howells N, et al. c-jun is essential for normal mouse development and hepatogenesis. Nature 1993;365:179-81.",
    "pmid": "8371760",
    "url": "https://pubmed.ncbi.nlm.nih.gov/8371760/"
+  },
+  {
+   "cite": "Grigoriadis AE, Wang ZQ, Cecchini MG, et al. c-Fos: a key regulator of osteoclast-macrophage lineage determination and bone remodeling. Science 1994;266:443-8.",
+   "pmid": "7939685",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7939685/"
   },
   {
    "cite": "Glover JN, Harrison SC. Crystal structure of the heterodimeric bZIP transcription factor c-Fos-c-Jun bound to DNA. Nature 1995;373:257-61.",
@@ -73,5 +78,94 @@
    "pmid": "31034924",
    "url": "https://pubmed.ncbi.nlm.nih.gov/31034924/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1987,
+   "finding": "AP-1 purified from HeLa cells footprints a conserved TGACTCA in the TPA-inducible enhancers of metallothionein IIA, SV40 and collagenase, and multimerized copies of the site confer TPA inducibility.",
+   "methods": "DNA-affinity purification, DNase I footprinting, in vitro transcription, reporter transfection",
+   "confidence": "high",
+   "pmids": [
+    "3034433"
+   ],
+   "open": "AP-1 was a 47 kDa activity, not yet a named gene product or a dimer family."
+  },
+  {
+   "year": 1991,
+   "finding": "Fos/Jun and ATF/CREB proteins form selective cross-family heterodimers whose DNA specificities differ from either parent, blurring the earlier one-family-one-site split between TRE and CRE.",
+   "methods": "In vitro dimerization and DNA-binding assays",
+   "confidence": "medium",
+   "pmids": [
+    "1827203"
+   ],
+   "open": "Which dimers prefer the TRE and which the CRE was not mapped systematically."
+  },
+  {
+   "year": 1992,
+   "finding": "Gene targeting shows the members are not redundant in vivo: c-fos-null mice are osteopetrotic with altered hematopoiesis, traced in 1994 to a block in osteoclast differentiation, and c-jun-null embryos die in mid to late gestation with impaired hepatogenesis.",
+   "methods": "Mouse knockouts, bone-marrow transplantation",
+   "confidence": "high",
+   "pmids": [
+    "1465144",
+    "8371760",
+    "7939685"
+   ],
+   "open": "Why members that share one DNA motif have distinct knockout phenotypes was not explained by DNA specificity."
+  },
+  {
+   "year": 1995,
+   "finding": "The c-Fos-c-Jun bZIP heterodimer crystal structure on TGAGTCA shows each basic helix reading one half-site, a coiled coil flexibly joined to the basic regions, and no unique orientation of the heterodimer on the asymmetric site.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "7816143"
+   ]
+  },
+  {
+   "year": 2011,
+   "finding": "Genome-wide maps recast AP-1 as an enhancer factor that works collaboratively: AP-1 maintains accessibility needed for glucocorticoid receptor recruitment, and AP-1 motifs co-occur with lineage-determining factors at macrophage enhancers.",
+   "methods": "ChIP-seq, DNase-seq",
+   "confidence": "high",
+   "pmids": [
+    "20513432",
+    "21726817"
+   ],
+   "open": "Whether AP-1 opens closed chromatin on its own or only maintains sites opened by others was not settled."
+  },
+  {
+   "year": 2012,
+   "finding": "BATF-containing AP-1 dimers bind cooperatively with IRF4 or IRF8 at AP-1-IRF composite elements (AICEs), explaining the TTTC extension seen in BATF models.",
+   "methods": "ChIP-seq in TH17 cells, cooperative DNA-binding assays",
+   "confidence": "high",
+   "pmids": [
+    "22983707"
+   ]
+  },
+  {
+   "year": 2014,
+   "finding": "A JUN-like motif is one of a few motifs repeatedly enriched in ChIP-seq peaks for unrelated factors, making up to 45% of some datasets, so an AP-1 motif under another factor's peak is not evidence of interaction.",
+   "methods": "Meta-analysis of hundreds of ChIP-seq datasets",
+   "confidence": "medium",
+   "pmids": [
+    "25070602"
+   ],
+   "open": "The proposed cohesin-associated loading-station mechanism was not tested."
+  },
+  {
+   "year": 2017,
+   "finding": "DNA specificity of 102 bZIP dimers: 72% of heterodimer motifs are the partners' half-sites joined, 12% are variably spaced half-sites and 16% are emergent sites not predictable from either partner.",
+   "methods": "SELEX-seq-based cognate site identification, EMSA-FRET, comparison to ChIP-seq",
+   "confidence": "high",
+   "pmids": [
+    "28186491"
+   ],
+   "open": "How often the emergent heterodimer sites are used in cells was shown only for ATF3."
+  }
+ ],
+ "open": [
+  "Why in vitro selection and ChIP-seq disagree for this family is not explained: HT-SELEX models for JUN, FOS, ATF3, JDP2 and BATF3 rank the 8 bp CRE TGACGTCA highest, while ChIP-seq models for the same proteins recover the 7 bp TRE TGASTCA, and the genomic rarity of the CpG-containing CRE, its methylation, and the cellular partner pool have not been separated as explanations.",
+  "Whether AP-1 acts as a pioneer that opens nucleosomal DNA itself, or as a collaborator that maintains accessibility at sites selected with lineage-determining factors, is not settled by the genome-wide studies cited here.",
+  "Why AP-1 motifs turn up under ChIP-seq peaks for unrelated factors is not established: genuine co-binding at shared open enhancers and a non-specific recovery mechanism (the proposed cohesin-associated loading station) predict different things, and neither has been confirmed.",
+  "Which FOS, JUN, ATF or BATF dimer occupies a given site in a given cell cannot yet be predicted, because partner choice can change specificity in vitro (the 16% of emergent heterodimer sites) and the in vivo dimer pool is rarely measured."
  ]
 }

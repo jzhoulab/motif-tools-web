@@ -53,6 +53,19 @@ for (const f of assign.families) {
             if (r.pmid && !/^\d{6,8}$/.test(String(r.pmid))) problems.push(`${f.key}: implausible PMID ${r.pmid}`);
         }
         if (e.caveats && words(e.caveats) < 35) problems.push(`${f.key}: caveats is only ${words(e.caveats)} words`);
+        // addendum fields: inline anchors, a dated history, and what is still unresolved
+        const cited = new Set((e.refs || []).map((r) => String(r.pmid)).filter(Boolean));
+        const anchors = [...String(e.long || '').matchAll(/\[PMID:([\d,\s]+)\]/g)]
+            .flatMap((m) => m[1].split(',').map((x) => x.trim()).filter(Boolean));
+        for (const id of anchors) if (!cited.has(id)) problems.push(`${f.key}: anchored PMID ${id} is not in refs`);
+        if (!anchors.length) problems.push(`${f.key}: long has no inline citations`);
+        if (!e.timeline?.length) problems.push(`${f.key}: no timeline`);
+        for (const t of e.timeline || []) {
+            if (!t.year || !t.finding) problems.push(`${f.key}: a timeline step is missing year or finding`);
+            if (t.confidence && !['high', 'medium', 'low'].includes(t.confidence)) problems.push(`${f.key}: timeline confidence "${t.confidence}"`);
+            for (const id of t.pmids || []) if (!/^\d{6,8}$/.test(String(id))) problems.push(`${f.key}: timeline PMID ${id}`);
+        }
+        if (!e.open) problems.push(`${f.key}: no open-questions field`);
     }
 
     const members = (byFam.get(f.key) || []).map((m) => ({
@@ -68,6 +81,7 @@ for (const f of assign.families) {
         consensusChip: isConsensusString(e.consensus) ? e.consensus.trim() : '',
         short: e.short || '',
         long: e.long || '', caveats: e.caveats || '', refs: e.refs || [],
+        timeline: e.timeline || [], open: e.open || [],
         repPwm: pwmById.has(f.representative) ? round(trimmed(pwmById.get(f.representative))) : null,
         members,
     });

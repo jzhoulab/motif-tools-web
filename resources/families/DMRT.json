@@ -11,7 +11,7 @@
  ],
  "consensus": "ACAWTGTW",
  "short": "DMRT proteins are the DM-domain transcription factors, named after Drosophila Doublesex and C. elegans MAB-3, the sexual regulators in which the domain was found. Humans have seven well-studied genes, DMRT1, DMRT2, DMRT3, DMRTA1, DMRTA2, DMRTB1 and DMRTC2, plus DMRTC1 paralogues. The DM domain is not a classical zinc finger: two zinc ions are chelated by an intertwined arrangement of cysteines and histidines that cannot be split into independent fingers, and the module ends in a recognition helix. The proteins bind a pseudopalindromic element built from two ACA/TGT half-sites, canonically ACAWTGTW, as dimers and higher-order oligomers. DMRT1 is required for testis differentiation and sustains it after birth; it is the sex-determining gene in chicken, and the 9p24 region containing it is deleted in human 46,XY sex reversal.",
- "long": "## The factors\n\nThe DM domain was identified in Drosophila Doublesex (DSX) and C. elegans MAB-3 and is conserved\nacross animals. Vertebrates have a small family: the seven human genes usually discussed are\nDMRT1, DMRT2, DMRT3, DMRTA1 (DMRT4), DMRTA2 (DMRT5), DMRTB1 (DMRT6) and DMRTC2 (DMRT7), with\nadditional DMRTC1 paralogues that also have measured binding. Outside the DM domain the proteins\nshare almost no sequence, so the family is defined by its DNA-binding module and not by any\ncommon architecture. That module is structurally unusual. Rather than the independent zinc\nfingers of C2H2 or GATA proteins, the DM domain chelates two zinc ions through an intertwined\nset of cysteine and histidine ligands that cannot be separated into discrete fingers, followed by\na C-terminal recognition helix and a basic tail. DMRT proteins do not bind as simple monomers:\nthe crystal structures of human DMRT1 on DNA show tetrameric, trimeric and dimeric modes on the\nsame kind of site, and ChIP with exonuclease treatment indicates that several of these modes are\nused in cells. Expression is restricted. DMRT1 is essentially gonad-specific (Sertoli cells and\ngerm cells); DMRT2 acts in somites; DMRT3 is in spinal interneurons and gonad; DMRTA2 is in\ndeveloping cortex; DMRTB1 and DMRTC2 are germ-cell proteins.\n\n## The motif\n\nThe element is a pseudopalindrome assembled from two trinucleotide half-sites that are reverse\ncomplements of one another, ACA and TGT, separated by one or two variable bases. Written as the\nliterature usually does, the core is ACAWTGTW; the equivalent forward-strand rendering with the\nhalf-sites in the other order is TGTWACA, and this is what the data consensus here,\nAATGTAACAA, represents. The two are the same element, not a disagreement. Information is\nconcentrated on the two ACA/TGT triplets; the spacer base and the flanks are weakly constrained,\nwhich is why individual database models range from a bare six-base TGTADC to a full 13-base\nAATGTATCAATTT. Structurally, the early NMR work on the DSX DM domain described contacts in the\nminor groove of an undistorted duplex, whereas the later crystal structures of DMRT1 showed two\nadjacent antiparallel recognition helices inserted into a widened major groove making\nbase-specific contacts; the current picture is major-groove reading with minor-groove\nstabilization, and this shift is worth knowing when reading older descriptions. In vitro\nselection across six of the seven vertebrate proteins returned sites resembling the DSX site for\nall of them, differing only in efficiency and in preference at individual positions. The family\nis correspondingly cohesive here (0.86 across 20 motifs) and no paralogue is separable by\nsequence. Some DMRT models drift toward pure AT-richness: the Vierstra archetype\nAC0092:DMRT/HOXB is an ATATATT-like model shared with HOXB, and its nearest neighbours lie\noutside the family, a reminder that AT-rich DM sites and AT-rich homeodomain sites are hard to\ntell apart.\n\n## Where it acts\n\nDMRT1 occupancy in mouse testis is largely promoter-proximal and promoter-distal in roughly equal\nmeasure, with thousands of sites, and the strongest targets are genes of the male pathway\n(SOX9, PTGDS) and genes that DMRT1 must keep off (FOXL2, and the retinoic-acid-responsive meiotic\ninitiator STRA8). DMRT1 works with and against other gonadal regulators: it opposes FOXL2 and\nESR1/ESR2 in the ovarian program, and cooperates with SOX9 and SF1/NR5A1 in the testis. DMRT3\nacts in the spinal cord in circuits that coordinate limb movement. Because the factors are\ntissue-restricted, the genomic distribution of DM sites is much broader than the set that is\never occupied: in a cell that expresses no DMRT protein, the sequence is inert.\n\n## Biology and disease\n\nDmrt1-null mice have severely dysgenic testes, and postnatal loss of DMRT1 in Sertoli cells\nreprograms them toward granulosa cells with activation of FOXL2 and ESR2, so DMRT1 is needed\ncontinuously, not just at the sex-determining step. In chicken, the Z-linked DMRT1 is the male\nsex-determining gene, and knockdown feminizes male gonads. In humans, deletions of distal 9p\nthat remove DMRT1 cause 46,XY gonadal dysgenesis and sex reversal, and point mutations in\nresidues that contact DNA have the same effect; common variants near DMRT1 are associated with\ntesticular germ cell tumor risk. Outside sex determination, a premature stop codon in horse\nDMRT3 underlies the ability to perform alternate gaits, and the same mutation modeled in mice\ndisturbs spinal circuit function.\n\n## Reading a hit\n\nThe element is short and AT-rich in its flanks, so chance matches are common and the AT-rich\ntails are readily confused with homeodomain and other minor-groove AT binders. A match cannot\nbe assigned to a paralogue: the seven vertebrate DM proteins select nearly the same sequence in\nvitro, and most models in these databases come from HT-SELEX or methyl-HT-SELEX on isolated\ndomains, which measure intrinsic specificity and cannot distinguish family members. The strongest\ninterpretive constraint is expression: DM sites are only meaningful in tissues where a DMRT\nprotein is present, which for DMRT1 means gonad. Note also that the JASPAR mouse Dmrt1 matrix\nMA1603.2 (TACAAAGT) is an outlier here, with nearest neighbours outside the family, so a hit\nscored against that specific model deserves a second look.",
+ "long": "## The factors\n\nThe DM domain was identified in Drosophila Doublesex (DSX) and C. elegans MAB-3 and is conserved\nacross animals [PMID:9490411]. Vertebrates have a small family: the seven human genes usually discussed are\nDMRT1, DMRT2, DMRT3, DMRTA1 (DMRT4), DMRTA2 (DMRT5), DMRTB1 (DMRT6) and DMRTC2 (DMRT7), with\nadditional DMRTC1 paralogues that also have measured binding. Outside the DM domain the proteins\nshare almost no sequence [PMID:17605809], so the family is defined by its DNA-binding module and not by any\ncommon architecture. That module is structurally unusual. Rather than the independent zinc\nfingers of C2H2 or GATA proteins, the DM domain chelates two zinc ions through an intertwined\nset of cysteine and histidine ligands that cannot be separated into discrete fingers, followed by\na C-terminal recognition helix and a basic tail [PMID:10898790,26005864]. DMRT proteins do not bind as simple monomers:\nthe crystal structures of human DMRT1 on DNA show tetrameric, trimeric and dimeric modes on the\nsame kind of site, and ChIP with exonuclease treatment indicates that several of these modes are\nused in cells [PMID:26005864]. Expression is restricted. DMRT1 is essentially gonad-specific (Sertoli cells and\ngerm cells) [PMID:9490411,20616082]; DMRT2 acts in somites; DMRT3 is in spinal interneurons and gonad; DMRTA2 is in\ndeveloping cortex; DMRTB1 and DMRTC2 are germ-cell proteins.\n\n## The motif\n\nThe element is a pseudopalindrome assembled from two trinucleotide half-sites that are reverse\ncomplements of one another, ACA and TGT, separated by one or two variable bases [PMID:17605809,26005864]. Written as the\nliterature usually does, the core is ACAWTGTW; the equivalent forward-strand rendering with the\nhalf-sites in the other order is TGTWACA, and this is what the data consensus here,\nAATGTAACAA, represents. The two are the same element, not a disagreement. Information is\nconcentrated on the two ACA/TGT triplets; the spacer base and the flanks are weakly constrained,\nwhich is why individual database models range from a bare six-base TGTADC to a full 13-base\nAATGTATCAATTT. Structurally, the early NMR work on the DSX DM domain described contacts in the\nminor groove of an undistorted duplex [PMID:10898790], whereas the later crystal structures of DMRT1 showed two\nadjacent antiparallel recognition helices inserted into a widened major groove making\nbase-specific contacts [PMID:26005864]; the current picture is major-groove reading with minor-groove\nstabilization, and this shift is worth knowing when reading older descriptions. In vitro\nselection across six of the seven vertebrate proteins returned sites resembling the DSX site for\nall of them, differing only in efficiency and in preference at individual positions [PMID:17605809]. The family\nis correspondingly cohesive here (0.86 across 20 motifs) and no paralogue is separable by\nsequence. Some DMRT models drift toward pure AT-richness: the Vierstra archetype\nAC0092:DMRT/HOXB is an ATATATT-like model shared with HOXB, and its nearest neighbours lie\noutside the family, a reminder that AT-rich DM sites and AT-rich homeodomain sites are hard to\ntell apart.\n\n## Where it acts\n\nDMRT1 occupancy in mouse testis is largely promoter-proximal and promoter-distal in roughly equal\nmeasure, with thousands of sites, and the strongest targets are genes of the male pathway\n(SOX9, PTGDS) and genes that DMRT1 must keep off (FOXL2, and the retinoic-acid-responsive meiotic\ninitiator STRA8). DMRT1 works with and against other gonadal regulators: it opposes FOXL2 and\nESR1/ESR2 in the ovarian program [PMID:21775990], and cooperates with SOX9 and SF1/NR5A1 in the testis. DMRT3\nacts in the spinal cord in circuits that coordinate limb movement [PMID:22932389]. Because the factors are\ntissue-restricted, the genomic distribution of DM sites is much broader than the set that is\never occupied: in a cell that expresses no DMRT protein, the sequence is inert.\n\n## Biology and disease\n\nDmrt1-null mice have severely dysgenic testes [PMID:11040213], and postnatal loss of DMRT1 in Sertoli cells\nreprograms them toward granulosa cells with activation of FOXL2 and ESR2, so DMRT1 is needed\ncontinuously, not just at the sex-determining step [PMID:21775990]. In chicken, the Z-linked DMRT1 is the male\nsex-determining gene, and knockdown feminizes male gonads [PMID:19710650]. In humans, deletions of distal 9p\nthat remove DMRT1 cause 46,XY gonadal dysgenesis and sex reversal [PMID:9490411,11040213], and point mutations in\nresidues that contact DNA have the same effect [PMID:26005864]; common variants near DMRT1 are associated with\ntesticular germ cell tumor risk [PMID:20543847]. Outside sex determination, a premature stop codon in horse\nDMRT3 underlies the ability to perform alternate gaits, and the same mutation modeled in mice\ndisturbs spinal circuit function [PMID:22932389].\n\n## Reading a hit\n\nThe element is short and AT-rich in its flanks, so chance matches are common and the AT-rich\ntails are readily confused with homeodomain and other minor-groove AT binders. A match cannot\nbe assigned to a paralogue: the seven vertebrate DM proteins select nearly the same sequence in\nvitro [PMID:17605809], and most models in these databases come from HT-SELEX or methyl-HT-SELEX on isolated\ndomains [PMID:23332764], which measure intrinsic specificity and cannot distinguish family members. The strongest\ninterpretive constraint is expression: DM sites are only meaningful in tissues where a DMRT\nprotein is present, which for DMRT1 means gonad. Note also that the JASPAR mouse Dmrt1 matrix\nMA1603.2 (TACAAAGT) is an outlier here, with nearest neighbours outside the family, so a hit\nscored against that specific model deserves a second look.",
  "caveats": "The informative part of a DM site is two ACA/TGT triplets separated by one or two bases, so an effective width of about seven bases plus AT-rich flanks: chance matches are frequent. All seven vertebrate paralogues select nearly identical sequences in vitro, so a hit identifies the family, never the member, and expression is the only practical discriminator. AT-rich renderings of the site overlap homeodomain space, which is visible in the Vierstra AC0092:DMRT/HOXB archetype. Most models here derive from in vitro selection on isolated DM domains, which supports the sequence preference but says nothing about genomic occupancy. The JASPAR mouse Dmrt1 model MA1603.2 does not match the family consensus.",
  "refs": [
   {
@@ -73,6 +73,85 @@
    "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
    "pmid": "25215497",
    "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  },
+  {
+   "cite": "Murphy MW, Sarver AL, Rice D, et al. Genome-wide analysis of DNA binding and transcriptional regulation by the mammalian Doublesex homolog DMRT1 in the juvenile testis. Proc Natl Acad Sci U S A 2010;107:13360-5.",
+   "pmid": "20616082",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20616082/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1998,
+   "finding": "The C. elegans male regulator mab-3 is related to Drosophila doublesex; their shared DNA-binding motif is named the DM domain, and a human DM gene (DMT1, now DMRT1) is testis-specific and maps to distal 9p, a region implicated in XY sex reversal.",
+   "methods": "Gene cloning, sequence comparison, cross-species transgene expression",
+   "confidence": "medium",
+   "pmids": [
+    "9490411"
+   ],
+   "open": "What DNA sequence the domain reads, and whether vertebrate DM genes act in sex development."
+  },
+  {
+   "year": 2000,
+   "finding": "NMR structure of the DSX DM domain: an intertwined CCHC/HCCC zinc module with a disordered tail that acts as a nascent recognition helix, described as binding the minor groove without sharp DNA bending.",
+   "methods": "NMR spectroscopy, mutagenesis",
+   "confidence": "high",
+   "pmids": [
+    "10898790"
+   ],
+   "open": "How a minor-groove binder achieves the unusually high sequence specificity measured for DSX and MAB-3."
+  },
+  {
+   "year": 2000,
+   "finding": "Dmrt1-null mice fail postnatal testis differentiation, with phenotypes like those of human 9p deletions, while ovaries develop normally: the first functional evidence for a vertebrate DM gene in male development.",
+   "methods": "Mouse gene targeting",
+   "confidence": "medium",
+   "pmids": [
+    "11040213"
+   ]
+  },
+  {
+   "year": 2007,
+   "finding": "Random-oligonucleotide selection on six of the seven vertebrate DMRT proteins returns DSX-like sites for all of them, differing in efficiency and per-position preference, and some DMRTs bind DNA as heterodimers.",
+   "methods": "In vitro selection, gel mobility shift, transfection assays",
+   "confidence": "medium",
+   "pmids": [
+    "17605809"
+   ],
+   "open": "How paralogues with near-identical sites reach different targets."
+  },
+  {
+   "year": 2010,
+   "finding": "ChIP in juvenile mouse testis identifies almost 1,400 DMRT1-bound promoter-proximal regions, enriched for a motif closely resembling the in vitro site; DMRT1 activates some targets and represses others, differently in germ cells and Sertoli cells.",
+   "methods": "ChIP-chip, conditional knockouts, expression profiling",
+   "confidence": "medium",
+   "pmids": [
+    "20616082"
+   ]
+  },
+  {
+   "year": 2011,
+   "finding": "Deleting DMRT1 in Sertoli cells, even in adults, activates Foxl2 and reprograms them into granulosa-like cells, so testis identity has to be maintained continuously.",
+   "methods": "Conditional mouse knockout",
+   "confidence": "medium",
+   "pmids": [
+    "21775990"
+   ]
+  },
+  {
+   "year": 2015,
+   "finding": "Crystal structures of DMRT1 on DNA show two adjacent antiparallel recognition helices in a widened major groove making base-specific contacts, with tetramer, trimer and dimer binding modes, and ChIP-exo suggests several modes are used in vivo. This replaced the minor-groove picture drawn from the DSX NMR structure.",
+   "methods": "X-ray crystallography, ChIP-exo, analysis of fly and human mutations",
+   "confidence": "high",
+   "pmids": [
+    "26005864"
+   ],
+   "open": "Which stoichiometry operates at which genomic sites."
+  }
+ ],
+ "open": [
+  "Which binding stoichiometry operates at functional sites is unresolved: DMRT1 binds DNA as a tetramer, trimer or dimer in crystals and ChIP-exo suggests more than one mode in testis, but which mode a given genomic site uses, and whether the mode changes the transcriptional outcome, is not known.",
+  "How DMRT paralogues with near-identical in vitro preferences reach different targets is unclear: the proposed explanations, subtle per-position preferences and DMRT heterodimers, compete with the simpler view that non-overlapping expression does all the work.",
+  "The JASPAR mouse Dmrt1 matrix MA1603.2 (TACAAAGT) breaks the second half-site of the pseudopalindrome (ACAAAGT against ACAWTGT) and its nearest neighbours lie outside the family; whether it records a real in vivo variant of the site or a misassigned motif is not settled by the data."
  ]
 }

@@ -10,7 +10,7 @@
  ],
  "consensus": "TATAWAWR",
  "short": "The TATA box is the oldest known eukaryotic core promoter element and the binding site of TBP, the TATA-box-binding protein. TBP is a saddle-shaped, internally pseudo-symmetric protein that straddles about eight base pairs of AT-rich DNA, reads them entirely from the minor groove, kinks the duplex at both ends and bends it by roughly 80 degrees. It works within TFIID for RNA polymerase II and within SL1 and TFIIIB for polymerases I and III, so a single protein serves all three. Because minor-groove contacts barely distinguish A:T from T:A, the element carries little information: the canonical TATAWAWR is present in only a small minority of human promoters, most of which are instead GC-rich and TATA-less. A TATA match on its own is therefore very weak evidence of anything.",
- "long": "## The factors\n\nTBP is a single small protein, about 180 residues in its conserved core, encoded by one gene. Its\nfold is a pseudo-symmetric saddle: two structurally similar halves, each contributing a curved\nbeta sheet that forms the concave underside, with helices on the convex top surface where general\nfactors and activators dock. TBP does not act alone. For RNA polymerase II it is the anchoring\nsubunit of TFIID, a roughly one-megadalton complex of thirteen or more TAF subunits; for\npolymerase I it sits in SL1 and for polymerase III in TFIIIB. Two paralogues exist, TBPL1\n(TRF2/TLF) and TBPL2 (TRF3), which have the TBP fold but altered DNA-contacting surfaces and do\nnot bind TATA boxes; neither has a motif in the databases used here. TAF1, the largest TFIID\nsubunit, is included in this key because its motif models are attributed to a promoter-binding\ncomponent of the same machinery, but TAF1 is not a sequence-specific DNA-binding protein in the\nway TBP is: its promoter contacts involve the initiator and downstream regions, and it carries\nhistone-acetyltransferase and bromodomain activities.\n\n## The motif\n\nThe literature consensus is the eight-base TATAWAWR, most often realized as TATAAAAG or TATATAAG,\npositioned roughly 25-30 bp upstream of the transcription start site in a focused promoter. The\nco-crystal structures of human and yeast TBP on TATA DNA showed why the information content is\nlow: TBP makes no major-groove base contacts at all. It binds the minor groove, where an A:T and a\nT:A base pair present nearly the same pattern of hydrogen-bond acceptors, and inserts pairs of\nphenylalanine side chains between the first two and last two base pairs, kinking the helix at both\nends and bending the whole element by about 80 degrees while partially unwinding it. What TBP\nreally reads is a short run of deformable, narrow-minor-groove AT-rich DNA, and later work showed\nthat a wide range of AT-rich variants are bound with comparable affinity. The consequence for\nmotif models is direct: every matrix in this family is a low-information AT-rich model. The\nrepresentative here, the Vierstra archetype AC0057, is TATAAAAG; JASPAR MA0108.3 is TATAAAA;\nHOCOMOCO's TBP model is CTATAAAAGG. There is no half-site structure and no spacing rule, and\nbecause TBP is a monomer on a pseudo-symmetric site, orientation is only weakly determined by\nsequence, which is one reason TATA-box orientation prediction is unreliable. Family cohesion here\nis only 0.64, and two of the five motifs are flagged as belonging elsewhere, discussed below.\n\n## Where it acts\n\nTATA boxes belong to focused, or sharp-initiation, promoters: a single dominant start site,\nAT-rich surroundings, no CpG island. These are a minority of mammalian promoters. A genome-scale\nanalysis found that about 76% of human core promoters have no TATA-like element, are GC-rich and\nare enriched for SP1 sites; about 24% have something TATA-like, but only about 10% of those match\nthe canonical TATAWAWR, which puts canonical TATA boxes at a few percent of human genes. Broad,\ndispersed-initiation promoters in CpG islands dominate the mammalian genome, and these use the\ninitiator, downstream elements and TFIID-DNA contacts rather than a TATA box. Functionally the\nsplit is informative: TATA-less promoters skew toward housekeeping genes, while TATA-containing\npromoters are enriched for highly regulated, stimulus-responsive and tissue-specific genes,\nincluding many that are strongly induced by stress or hormones. Cryo-EM structures of\npromoter-bound TFIID show TBP being loaded onto the TATA region while other TAFs contact the\ninitiator and downstream promoter, so the TATA box is one anchor point in an extended,\nmulti-contact interaction rather than the sole determinant of where transcription starts.\n\n## Biology and disease\n\nTBP is essential in every organism tested; there is no viable null. Its N-terminal region in\nhumans contains a polyglutamine tract, and expansion of that tract to roughly 43 repeats or more\ncauses spinocerebellar ataxia type 17, a rare autosomal dominant neurodegenerative disorder,\nplacing TBP among the polyglutamine diseases. Mutations in individual TAFs cause developmental\nsyndromes and intellectual disability, and TAF1 variants are associated with X-linked\nneurodevelopmental disease. TATA-box variants in individual promoters cause disease in their own\nright, the classic cases being promoter mutations that reduce beta-globin expression in\nbeta-thalassemia and the TATA-box polymorphism in the UGT1A1 promoter that contributes to\nGilbert syndrome.\n\n## Reading a hit\n\nTreat a TATA match as almost no evidence. TATAWAWR is an eight-base AT-rich pattern with two\ndegenerate positions, expected by chance roughly once every few kilobases on either strand, which\nis hundreds of thousands of matches in a human genome, the overwhelming majority of them nowhere\nnear a promoter. A match is only interesting if it sits 25-30 bp upstream of an annotated or\nmeasured start site in a promoter that otherwise looks focused and AT-rich. It also says nothing\nabout TBP itself, since TBP is present at essentially all active promoters, including TATA-less\nones, where it is positioned by TFIID rather than by sequence. This family is also a good place to\nsee what happens when a ChIP-derived matrix is assigned to the wrong protein. The HOCOMOCO model\nTAF1.H14CORE.0.P.B is AAGATGGCGGC, which is the YY1 motif, not a TBP-like or TAF1-specific\nsequence; YY1 sites are common at focused promoters, so a TAF1 ChIP experiment recovers them.\nLikewise the CIS-BP TBP entry M08231_2.00 is TATTTGCATA, whose core ATTTGCAT is the POU octamer\nread in reverse. Neither model should be used as a TATA box.",
+ "long": "## The factors\n\nTBP is a single small protein, about 180 residues in its conserved core, encoded by one gene. Its\nfold is a pseudo-symmetric saddle: two structurally similar halves, each contributing a curved\nbeta sheet that forms the concave underside, with helices on the convex top surface where general\nfactors and activators dock [PMID:8413605,8413604]. TBP does not act alone. For RNA polymerase II it is the anchoring\nsubunit of TFIID, a roughly one-megadalton complex of thirteen or more TAF subunits [PMID:27007846]; for\npolymerase I it sits in SL1 and for polymerase III in TFIIIB. Two paralogues exist, TBPL1\n(TRF2/TLF) and TBPL2 (TRF3), which have the TBP fold but altered DNA-contacting surfaces and do\nnot bind TATA boxes; neither has a motif in the databases used here. TAF1, the largest TFIID\nsubunit, is included in this key because its motif models are attributed to a promoter-binding\ncomponent of the same machinery, but TAF1 is not a sequence-specific DNA-binding protein in the\nway TBP is: its promoter contacts involve the initiator and downstream regions [PMID:27007846], and it carries\nhistone-acetyltransferase and bromodomain activities.\n\n## The motif\n\nThe literature consensus is the eight-base TATAWAWR, most often realized as TATAAAAG or TATATAAG,\npositioned roughly 25-30 bp upstream of the transcription start site in a focused promoter [PMID:17123746,28808065]. The\nco-crystal structures of plant (Arabidopsis) and yeast TBP on TATA DNA showed why the information content is\nlow: TBP makes no major-groove base contacts at all [PMID:8413605,8413604,7634103]. It binds the minor groove, where an A:T and a\nT:A base pair present nearly the same pattern of hydrogen-bond acceptors, and inserts pairs of\nphenylalanine side chains between the first two and last two base pairs, kinking the helix at both\nends and bending the whole element by about 80 degrees while partially unwinding it [PMID:7634103,10617571]. What TBP\nreally reads is a short run of deformable, narrow-minor-groove AT-rich DNA, and later work showed\nthat a wide range of AT-rich variants are bound with comparable affinity [PMID:10617571]. The consequence for\nmotif models is direct: every matrix in this family is a low-information AT-rich model. The\nrepresentative here, the Vierstra archetype AC0057, is TATAAAAG; JASPAR MA0108.3 is TATAAAA;\nHOCOMOCO's TBP model is CTATAAAAGG [PMID:37971293]. There is no half-site structure and no spacing rule, and\nbecause TBP is a monomer on a pseudo-symmetric site, orientation is only weakly determined by\nsequence, which is one reason TATA-box orientation prediction is unreliable. Family cohesion here\nis only 0.64, and two of the five motifs are flagged as belonging elsewhere, discussed below.\n\n## Where it acts\n\nTATA boxes belong to focused, or sharp-initiation, promoters: a single dominant start site,\nAT-rich surroundings, no CpG island [PMID:16645617]. These are a minority of mammalian promoters. A genome-scale\nanalysis found that about 76% of human core promoters have no TATA-like element, are GC-rich and\nare enriched for SP1 sites; about 24% have something TATA-like, but only about 10% of those match\nthe canonical TATAWAWR, which puts canonical TATA boxes at a few percent of human genes [PMID:17123746]. Broad,\ndispersed-initiation promoters in CpG islands dominate the mammalian genome, and these use the\ninitiator, downstream elements and TFIID-DNA contacts rather than a TATA box [PMID:16645617,28808065]. Functionally the\nsplit is informative: TATA-less promoters skew toward housekeeping genes, while TATA-containing\npromoters are enriched for highly regulated, stimulus-responsive and tissue-specific genes,\nincluding many that are strongly induced by stress or hormones [PMID:17123746]. The cryo-EM structure of\npromoter-bound human TFIID shows TBP on the TATA region while TAF subunits contact the\ninitiator and downstream promoter, so the TATA box is one anchor point in an extended,\nmulti-contact interaction rather than the sole determinant of where transcription starts [PMID:27007846].\n\n## Biology and disease\n\nTBP is essential in every organism tested; there is no viable null. Its N-terminal region in\nhumans contains a polyglutamine tract, and expansion of that tract to roughly 43 repeats or more\ncauses spinocerebellar ataxia type 17, a rare autosomal dominant neurodegenerative disorder,\nplacing TBP among the polyglutamine diseases [PMID:11448935]. Mutations in individual TAFs cause developmental\nsyndromes and intellectual disability, and TAF1 variants are associated with X-linked\nneurodevelopmental disease. TATA-box variants in individual promoters cause disease in their own\nright, the classic cases being promoter mutations that reduce beta-globin expression in\nbeta-thalassemia and the TATA-box polymorphism in the UGT1A1 promoter that contributes to\nGilbert syndrome.\n\n## Reading a hit\n\nTreat a TATA match as almost no evidence. TATAWAWR is an eight-base AT-rich pattern with two\ndegenerate positions, expected by chance roughly once every few kilobases on either strand, which\nis hundreds of thousands of matches in a human genome, the overwhelming majority of them nowhere\nnear a promoter. A match is only interesting if it sits 25-30 bp upstream of an annotated or\nmeasured start site in a promoter that otherwise looks focused and AT-rich. It also says nothing\nabout TBP itself, since TBP is present at essentially all active promoters, including TATA-less\nones, where it is positioned by TFIID rather than by sequence. This family is also a good place to\nsee what happens when a ChIP-derived matrix is assigned to the wrong protein. The HOCOMOCO model\nTAF1.H14CORE.0.P.B is AAGATGGCGGC, which is the YY1 motif, not a TBP-like or TAF1-specific\nsequence; YY1 sites are common at focused promoters, so a TAF1 ChIP experiment recovers them [PMID:22955990,29224777].\nLikewise the CIS-BP TBP entry M08231_2.00 is TATTTGCATA, whose core ATTTGCAT is the POU octamer\nread in reverse. Neither model should be used as a TATA box.",
  "caveats": "The TATA box is the least informative element in common use: eight AT-rich bases read entirely from the minor groove, where A:T and T:A are nearly interchangeable, so the matrix cannot be much better than the physics allows. Expect hundreds of thousands of chance matches per genome and only a few percent of human promoters to carry a real one. A match means nothing without position 25-30 bp upstream of a start site. Two of the five motifs under this key are not TATA boxes: the HOCOMOCO ChIP-derived TAF1 matrix is the YY1 motif, and the CIS-BP TBP entry M08231_2.00 is the POU octamer. Family cohesion is correspondingly low at 0.64.",
  "refs": [
   {
@@ -72,6 +72,91 @@
    "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
    "pmid": "37971293",
    "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  },
+  {
+   "cite": "Wasylyk B, Derbyshire R, Guy A, et al. Specific in vitro transcription of conalbumin gene is drastically decreased by single-point mutation in T-A-T-A box homology sequence. Proc Natl Acad Sci U S A 1980;77:7024-8.",
+   "pmid": "6938951",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/6938951/"
+  },
+  {
+   "cite": "Nakamura K, Jeong SY, Uchihara T, et al. SCA17, a novel autosomal dominant cerebellar ataxia caused by an expanded polyglutamine in TATA-binding protein. Hum Mol Genet 2001;10:1441-8.",
+   "pmid": "11448935",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11448935/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1980,
+   "finding": "A single T-to-G point mutation in the TATAAAA ('Goldberg-Hogness') box of the conalbumin promoter drastically reduces specific transcription in vitro, establishing the TATA box as a functional promoter element.",
+   "methods": "Site-directed mutagenesis, in vitro transcription",
+   "confidence": "medium",
+   "pmids": [
+    "6938951"
+   ],
+   "open": "The protein that recognizes the element was unknown."
+  },
+  {
+   "year": 1993,
+   "finding": "Co-crystal structures of plant and yeast TBP on TATA DNA show a saddle-shaped protein binding a widened, underwound minor groove, with phenylalanines kinking the DNA at both ends and no major-groove base contacts.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "8413605",
+    "8413604"
+   ],
+   "open": "How TBP accommodates the variety of natural TATA sequences."
+  },
+  {
+   "year": 1995,
+   "finding": "Structure of the TFIIB-TBP-TATA ternary complex: TFIIB recognizes the preformed TBP-DNA complex and its N-terminal domain forms the downstream face, where it could fix the start site.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "7675079"
+   ],
+   "open": "Whether TBP itself chooses an orientation on a nearly symmetric site."
+  },
+  {
+   "year": 1999,
+   "finding": "Structures of TBP on ten natural TATA variants show the same DNA deformation in every case; A-to-T and T-to-A transversions leave the minor-groove face unchanged, explaining why many AT-rich sequences are bound.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "10617571"
+   ]
+  },
+  {
+   "year": 2006,
+   "finding": "Genome-wide CAGE mapping of mouse and human start sites splits promoters into a sharp, conserved, TATA-enriched class and a broad, CpG-rich class.",
+   "methods": "CAGE tag sequencing",
+   "confidence": "medium",
+   "pmids": [
+    "16645617"
+   ]
+  },
+  {
+   "year": 2007,
+   "finding": "A genome-scale analysis estimates that about 76% of human core promoters lack any TATA-like element and that only about 10% of the TATA-like ones match the canonical TATAWAWR, overturning the textbook picture of the TATA box as a general core-promoter element.",
+   "methods": "Computational promoter analysis",
+   "confidence": "medium",
+   "pmids": [
+    "17123746"
+   ]
+  },
+  {
+   "year": 2016,
+   "finding": "Cryo-EM of human TFIID bound to promoter DNA shows every core promoter element contacted by TFIID subunits, with TAF1 and TAF2 holding the downstream promoter and TFIIA bridging TBP-TATA to lobe B.",
+   "methods": "Single-particle cryo-electron microscopy",
+   "confidence": "high",
+   "pmids": [
+    "27007846"
+   ],
+   "open": "How TBP is placed at the majority of promoters that lack a TATA box."
+  }
+ ],
+ "open": [
+  "How much orientation is intrinsic to TBP is unsettled: the TFIIB-TBP-TATA structure fixes the complex's polarity, but TBP alone reads a nearly symmetric minor-groove surface, and the share of orientation set by TBP, by TFIIB and by flanking sequence has not been agreed.",
+  "How TBP is positioned at TATA-less promoters, which are most human promoters, is unresolved: TFIID contacts initiator and downstream elements, but whether TBP still engages a degenerate AT-rich sequence near -30 or is placed purely by TAF contacts is not settled.",
+  "Two of the five matrices under this key are other factors' motifs, YY1 for the ChIP-derived HOCOMOCO TAF1 model and the POU octamer for CIS-BP M08231_2.00; whether these record indirect binding at promoters or misattribution in the source data is not stated by the databases."
  ]
 }

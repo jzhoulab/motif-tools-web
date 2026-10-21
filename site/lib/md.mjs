@@ -3,8 +3,18 @@
 // first, so nothing an entry contains can inject markup.
 export const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
+// [PMID:12345678] or [PMID:123,456] -> superscript links, so a reader can see which
+// sentence rests on which paper without breaking the line.
+function citations(html) {
+    return html.replace(/\[PMID:([\d,\s]+)\]/g, (_, ids) => {
+        const list = ids.split(',').map((x) => x.trim()).filter(Boolean);
+        return '<sup class="cite">' + list.map((id) =>
+            `<a href="https://pubmed.ncbi.nlm.nih.gov/${id}/" rel="noopener nofollow" title="PMID ${id}">${id}</a>`
+        ).join('<i>,</i>') + '</sup>';
+    });
+}
 function inline(s) {
-    return esc(s)
+    return citations(esc(s))
         // absolute links go out, site-relative links stay in
         .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" rel="noopener">$1</a>')
         .replace(/\[([^\]]+)\]\((\/[^)\s]*)\)/g, '<a href="$2">$1</a>')

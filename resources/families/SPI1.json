@@ -12,8 +12,8 @@
  ],
  "consensus": "AAAGAGGAAGTG",
  "short": "SPI1 (PU.1), SPIB and SPIC are the class III branch of the ETS family. They read the same GGA(A/T) core as other ETS proteins but demand a purine-rich 5' flank, giving the hematopoietic PU-box AAAGAGGAAGTG - the one ETS subfamily that a scan can usually tell apart from the rest. SPI1 is required for macrophage, neutrophil, dendritic cell and B-cell development; SPIB acts in B cells and plasmacytoid dendritic cells; SPIC specifies red pulp macrophages. PU.1 also nucleates the ETS-IRF composite element (EICE), GGAAGTGAAAC, by recruiting IRF4 or IRF8 to DNA it has already bound. Reduced PU.1 dosage causes acute myeloid leukemia in mice, and SPI1 fusions occur in high-risk pediatric T-cell acute lymphoblastic leukemia.",
- "long": "## The factors\n\nThree human genes - SPI1 (PU.1, Spi-1), SPIB (Spi-B) and SPIC (Spi-C) - form the SPI subfamily.\nEach carries one ETS domain of about 85 residues with the family's winged helix-turn-helix fold and\nbinds DNA as a monomer; outside the domain they have acidic and glutamine-rich activation regions\nand, in PU.1, a PEST region whose Ser148 must be phosphorylated for cooperative assembly with IRF\npartners. Systematic profiling of all human and mouse ETS proteins puts these three in their own\nclass (class III), the most sequence-distinct group in the family; a tyrosine that sets specificity\nat the position immediately 3' of the core in other ETS proteins is replaced by asparagine here.\nExpression is hematopoietic and essentially non-overlapping with the rest of the family: SPI1 in\nmyeloid cells, macrophages, dendritic cells, microglia and B cells; SPIB in B cells and\nplasmacytoid dendritic cells; SPIC narrowly in red pulp macrophages and related tissue macrophages.\nThe first crystal structure of any ETS domain on DNA was PU.1's, which established the\nloop-helix-loop mode of DNA contact for the whole family.\n\n## The motif\n\nThe site is usually written AAAGAGGAAGTG, and the models grouped here agree on AAAGAGGAAGT. The\ninvariant part is the same GGA(A/T) core all ETS proteins read, contacted by two invariant\narginines in recognition helix H3 that hydrogen-bond the two guanines, with a wing lysine 5' of the\ncore and a turn lysine on the opposite strand 3' of it. What sets this family apart is the 5' flank.\nClass I ETS proteins prefer ACC immediately 5' of GGA; the SPI proteins prefer purines - AGA, with\na marked preference for G two bases 5' of the core - and tolerate a run of As further out. Because\nthat difference spans three or four positions rather than one, class III motifs are the only ETS\nsubfamily that a sequence scan separates from the rest with any reliability. Within the family,\nSPI1, SPIB and SPIC are not separable: their models are near-identical, and the Vierstra archetype\nthat represents them is named for two of the three factors at once (AC0642:SPIB/SPI). Note that\nthe published PU.1 site contains no CpG, so unlike the class I CCGGAAGT it is insensitive to\nCpG methylation. The composite EICE, GGAAGTGAAAC, is a PU.1 site fused to an IRF half-site and is\ncaptured by only one model in this family - the CIS-BP entry M07944, whose consensus AAAGAGGAAGTGAAA\nruns from the PU.1 site into the IRF half-site.\n\n## Where it acts\n\nPU.1 sites are found at myeloid and B-lineage promoters and, more heavily, at the enhancers that\ndefine those lineages; the classic example is the macrophage colony-stimulating factor receptor\n(CSF1R) promoter, where PU.1 directs macrophage-specific expression. PU.1 behaves as a lineage\n\"pioneer\" in the sense that its binding precedes and is required for much of the accessible\nchromatin landscape of myeloid cells, so its motif is enriched in macrophage and B-cell DNase and\nATAC footprints far more than in other cell types. Two named composite elements dominate its\ncooperative biology. The EICE (ETS-IRF composite element, GGAAGTGAAAC) was defined at\nimmunoglobulin light-chain enhancers, where DNA-bound and Ser148-phosphorylated PU.1 recruits IRF4\n(originally Pip) or IRF8, raising IRF affinity 20- to 40-fold; the crystal structure of the\nPU.1/IRF4/DNA complex shows the DNA bent into an S shape that juxtaposes the two domains across the\ncentral minor groove, and explains why IRF1 and IRF2 are anti-cooperative with PU.1 at the same\nelement. PU.1 sites also cluster with CEBP, RUNX and GATA sites in myeloid enhancers.\n\n## Biology and disease\n\nSpi1-null mice lack macrophages, neutrophils and B cells and have severely disrupted myeloid and\nlymphoid development, the most striking single-gene hematopoietic phenotype among the ETS family.\nDosage matters as much as presence: reducing PU.1 expression to roughly a fifth of normal in mice\ncauses acute myeloid leukemia, placing SPI1 among the transcription factors whose partial loss is\nleukemogenic. SPIC is required for red pulp macrophage development and splenic iron recycling.\nIn human disease, recurrent SPI1 fusions (STMN1-SPI1, TCF7-SPI1) define a high-risk subgroup of\npediatric T-cell acute lymphoblastic leukemia, and PU.1 activity is a recurring theme in myeloid\nleukemia biology more broadly.\n\n## Reading a hit\n\nA purine-rich AAAGAGGAAGTG match is one of the few ETS hits that genuinely localizes the signal to\na subfamily - but only to the subfamily. SPI1, SPIB and SPIC cannot be told apart by sequence, and\nthe atlas's representative model for this family is itself named for two factors. The distinction\nfrom class I ETS is real but not absolute: degenerate members of this family, such as HOCOMOCO's\nshort SPI1.H14CORE.1.S.B model whose consensus is only GGAAGT, will match generic ETS sites, and\nthe GGAA core alone is expected millions of times per strand in a 3.1-Gb genome. Cell type carries\nmuch of the inference: outside myeloid, B-lineage or microglial contexts a PU-box match is far more\nlikely to be a chance GGAA than a bound PU.1 site. Two caveats specific to this family: only one of its\ntwelve models (CIS-BP M07944, AAAGAGGAAGTGAAA) reaches into the IRF half-site, so scanning with the\nrest will find the PU.1 half of an EICE without flagging the composite - look explicitly for GTGAAAC\na few bases 3' of the core; and the JASPAR\nSPIB model (MA0081.3) is stored on the reverse strand as CACTTCCTCTT, the same site as AAGAGGAAGTG.",
- "caveats": "This is one of the few ETS subfamilies a scan can separate from the others, because\nits purine-rich 5' flank differs over three or four positions rather than one. It cannot separate\nits own members: SPI1, SPIB and SPIC share one motif, and the atlas representative is a Vierstra\narchetype named for two of them. Expression usually decides - SPIC is confined to red pulp\nmacrophages, SPIB to B cells and plasmacytoid dendritic cells - so a PU-box hit outside a\nhematopoietic context deserves scepticism. The family is small (12 models) and includes short,\ndegenerate entries that behave like a generic ETS site. Only one of the twelve models reaches into the IRF half-site of\nthe EICE composite, so a scan will usually register the PU.1 half-site and miss the element that\ngives it specificity.",
+ "long": "## The factors\n\nThree human genes - SPI1 (PU.1, Spi-1), SPIB (Spi-B) and SPIC (Spi-C) - form the SPI subfamily.\nEach carries one ETS domain of about 85 residues with the family's winged helix-turn-helix fold and\nbinds DNA as a monomer [PMID:8602247]; outside the domain they have acidic and glutamine-rich activation regions\nand, in PU.1, a PEST region whose Ser148 must be phosphorylated for cooperative assembly with IRF\npartners [PMID:7797077]. Systematic profiling of all human and mouse ETS proteins puts these three in their own\nclass (class III), the most sequence-distinct group in the family [PMID:20517297,21548782]; a tyrosine that sets specificity\nat the position immediately 3' of the core in other ETS proteins is replaced by asparagine here [PMID:20517297].\nExpression is hematopoietic and essentially non-overlapping with the rest of the family: SPI1 in\nmyeloid cells, macrophages, dendritic cells, microglia and B cells; SPIB in B cells and\nplasmacytoid dendritic cells; SPIC narrowly in splenic red pulp macrophages, with none detected in monocytes, dendritic cells or the\nother tissue macrophages examined [PMID:19037245], and later also in a heme-induced, VCAM1-positive bone\nmarrow macrophage subset [PMID:24630724].\nThe first crystal structure of any ETS domain on DNA was PU.1's, which established the\nloop-helix-loop mode of DNA contact for the whole family [PMID:8602247].\n\n## The motif\n\nThe site is usually written AAAGAGGAAGTG, and the models grouped here agree on AAAGAGGAAGT. The\ninvariant part is the same GGA(A/T) core all ETS proteins read, contacted by two invariant\narginines in recognition helix H3 that hydrogen-bond the two guanines, with a wing lysine 5' of the\ncore and a turn lysine on the opposite strand 3' of it [PMID:8602247]. What sets this family apart is the 5' flank.\nClass I ETS proteins prefer ACC immediately 5' of GGA [PMID:20517297]; the SPI proteins prefer purines - AGA, with\na marked preference for G two bases 5' of the core - and tolerate a run of As further out [PMID:2180582,20517297,21548782]. Because\nthat difference spans three or four positions rather than one, class III motifs are the only ETS\nsubfamily that a sequence scan separates from the rest with any reliability [PMID:20517297]. Within the family,\nSPI1, SPIB and SPIC are not separable: their models are near-identical, and the Vierstra archetype\nthat represents them is named for two of the three factors at once (AC0642:SPIB/SPI). Note that\nthe published PU.1 site contains no CpG, so unlike the class I CCGGAAGT it is insensitive to\nCpG methylation. The composite EICE, GGAAGTGAAAC, is a PU.1 site fused to an IRF half-site [PMID:7797077,12453417] and is\ncaptured by only one model in this family - the CIS-BP entry M07944, whose consensus AAAGAGGAAGTGAAA\nruns from the PU.1 site into the IRF half-site.\n\n## Where it acts\n\nPU.1 sites are found at myeloid and B-lineage promoters and, more heavily, at the enhancers that\ndefine those lineages; the classic example is the macrophage colony-stimulating factor receptor\n(CSF1R) promoter, where PU.1 directs macrophage-specific expression [PMID:8264604]. PU.1 behaves as a lineage\n\"pioneer\" in the sense that its binding precedes and is required for much of the accessible\nchromatin landscape of myeloid cells [PMID:20513432], so its motif is enriched in macrophage and B-cell DNase and\nATAC footprints far more than in other cell types. Two named composite elements dominate its\ncooperative biology. The EICE (ETS-IRF composite element, GGAAGTGAAAC) was defined at\nimmunoglobulin light-chain enhancers, where DNA-bound and Ser148-phosphorylated PU.1 recruits IRF4\n(originally Pip) or IRF8 [PMID:7797077,12453417]; cooperativity between the two DNA-binding\ndomains has been measured at 20- to 40-fold [PMID:12453417]. The\ncrystal structure of the PU.1/IRF4/DNA complex shows the DNA bent into an S shape that juxtaposes the two domains across the\ncentral minor groove, and explains why IRF1 and IRF2 are anti-cooperative with PU.1 at the same\nelement [PMID:12453417]. PU.1 sites also cluster with CEBP, RUNX and GATA sites in myeloid enhancers.\n\n## Biology and disease\n\nSpi1-null mice lack macrophages, neutrophils and B cells and have severely disrupted myeloid and\nlymphoid development [PMID:8079170,8896458], the most striking single-gene hematopoietic phenotype among the ETS family.\nDosage matters as much as presence: reducing PU.1 expression to roughly a fifth of normal in mice\ncauses acute myeloid leukemia [PMID:15146183], placing SPI1 among the transcription factors whose partial loss is\nleukemogenic. SPIC is required for red pulp macrophage development and splenic iron recycling [PMID:19037245].\nIn human disease, recurrent SPI1 fusions (STMN1-SPI1, TCF7-SPI1) define a high-risk subgroup of\npediatric T-cell acute lymphoblastic leukemia [PMID:28671687], and PU.1 activity is a recurring theme in myeloid\nleukemia biology more broadly.\n\n## Reading a hit\n\nA purine-rich AAAGAGGAAGTG match is one of the few ETS hits that genuinely localizes the signal to\na subfamily - but only to the subfamily. SPI1, SPIB and SPIC cannot be told apart by sequence, and\nthe atlas's representative model for this family is itself named for two factors. The distinction\nfrom class I ETS is real but not absolute: degenerate members of this family, such as HOCOMOCO's\nshort SPI1.H14CORE.1.S.B model whose consensus is only GGAAGT, will match generic ETS sites, and\nthe GGAA core alone is expected millions of times per strand in a 3.1-Gb genome. Cell type carries\nmuch of the inference: outside myeloid, B-lineage or microglial contexts a PU-box match is far more\nlikely to be a chance GGAA than a bound PU.1 site. Two caveats specific to this family: only one of its\ntwelve models (CIS-BP M07944, AAAGAGGAAGTGAAA) reaches into the IRF half-site, so scanning with the\nrest will find the PU.1 half of an EICE without flagging the composite - look explicitly for GTGAAAC\na few bases 3' of the core; and the JASPAR\nSPIB model (MA0081.3) is stored on the reverse strand as CACTTCCTCTT, the same site as AAGAGGAAGTG.",
+ "caveats": "This is one of the few ETS subfamilies a scan can separate from the others, because\nits purine-rich 5' flank differs over three or four positions rather than one. It cannot separate\nits own members: SPI1, SPIB and SPIC share one motif, and the atlas representative is a Vierstra\narchetype named for two of them. Expression usually decides - SPIC is confined to iron-recycling macrophages of the splenic red pulp\nand bone marrow, SPIB to B cells and plasmacytoid dendritic cells - so a PU-box hit outside a\nhematopoietic context deserves scepticism. The family is small (12 models) and includes short,\ndegenerate entries that behave like a generic ETS site. Only one of the twelve models reaches into the IRF half-site of\nthe EICE composite, so a scan will usually register the PU.1 half-site and miss the element that\ngives it specificity.",
  "refs": [
   {
    "cite": "Kodandapani R, Pio F, Ni CZ, et al. A new pattern for helix-turn-helix recognition revealed by the PU.1 ETS-domain-DNA complex. Nature 1996;380:456-60.",
@@ -69,6 +69,104 @@
    "cite": "Seki M, Kimura S, Isobe T, et al. Recurrent SPI1 (PU.1) fusions in high-risk pediatric T cell acute lymphoblastic leukemia. Nat Genet 2017;49:1274-1281.",
    "pmid": "28671687",
    "url": "https://pubmed.ncbi.nlm.nih.gov/28671687/"
+  },
+  {
+   "cite": "Klemsz MJ, McKercher SR, Celada A, et al. The macrophage and B cell-specific transcription factor PU.1 is related to the ets oncogene. Cell 1990;61:113-24.",
+   "pmid": "2180582",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2180582/"
+  },
+  {
+   "cite": "Heinz S, Benner C, Spann N, et al. Simple combinations of lineage-determining transcription factors prime cis-regulatory elements required for macrophage and B cell identities. Mol Cell 2010;38:576-89.",
+   "pmid": "20513432",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20513432/"
+  },
+  {
+   "cite": "Haldar M, Kohyama M, So AY, et al. Heme-mediated SPI-C induction promotes monocyte differentiation into iron-recycling macrophages. Cell 2014;156:1223-1234.",
+   "pmid": "24630724",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24630724/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1990,
+   "finding": "PU.1 is cloned as a macrophage- and B-cell-specific activator that recognizes the purine-rich PU box, GAGGAA, through a carboxy-terminal DNA-binding domain related to the ets oncogene.",
+   "methods": "cDNA cloning, methylation interference, DNase I protection, deletion mapping",
+   "confidence": "high",
+   "pmids": [
+    "2180582"
+   ],
+   "open": "How the domain read the PU box, and what set it apart from other ETS sites, was unknown."
+  },
+  {
+   "year": 1994,
+   "finding": "Two Spi1 knockouts establish PU.1 as essential for blood development: one gives late-gestation lethality with a multilineage defect in lymphoid and myeloid progenitors; the second (1996) gives live-born pups lacking macrophages, neutrophils, B and T cells, in which T cells and a few neutrophils later appear while B cells and macrophages never do.",
+   "methods": "Gene targeting in mice",
+   "confidence": "high",
+   "pmids": [
+    "8079170",
+    "8896458"
+   ],
+   "open": "The two lines disagreed on whether PU.1 acts at lineage commitment of a multipotential progenitor or only at later B-cell and macrophage differentiation."
+  },
+  {
+   "year": 1995,
+   "finding": "Pip (IRF4) is cloned as the lymphoid partner that binds the immunoglobulin light-chain enhancer composite element only alongside DNA-bound PU.1, and complex formation requires phosphorylation of PU.1 Ser148.",
+   "methods": "cDNA cloning, EMSA, co-transfection reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "7797077"
+   ]
+  },
+  {
+   "year": 1996,
+   "finding": "The PU.1 ETS domain-DNA crystal structure, the first for the family, shows a winged helix-turn-helix contacting ten base pairs through a loop-helix-loop, with two recognition-helix arginines on the GGA core and conserved wing and turn lysines on either side.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "8602247"
+   ],
+   "open": "The structure did not explain the purine-rich 5' flank that distinguishes the SPI proteins."
+  },
+  {
+   "year": 2002,
+   "finding": "The PU.1/IRF4/DNA ternary structure shows the composite element bent into an S shape that juxtaposes the two DNA-binding domains across the central minor groove, accounting for cooperativity with IRF4 and IRF8 and anti-cooperativity with IRF1 and IRF2.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "12453417"
+   ]
+  },
+  {
+   "year": 2004,
+   "finding": "Hypomorphic alleles that lower PU.1 to about 20% of normal cause acute myeloid leukemia in mice, whereas complete or 50% loss does not, so graded reduction rather than absence of PU.1 is leukemogenic.",
+   "methods": "Hypomorphic knock-in mice, retroviral rescue",
+   "confidence": "medium",
+   "pmids": [
+    "15146183"
+   ]
+  },
+  {
+   "year": 2010,
+   "finding": "PU.1, together with small sets of lineage-determining partners (C/EBP in macrophages, E2A, EBF and Oct-2 in B cells), establishes most promoter-distal H3K4me1 regions; PU.1 binding initiates nucleosome remodeling followed by H3K4 monomethylation.",
+   "methods": "ChIP-seq, histone-mark profiling, motif analysis, genetic complementation",
+   "confidence": "high",
+   "pmids": [
+    "20513432"
+   ],
+   "open": "Whether PU.1 can open closed sites alone, or only with its collaborating factors, was not resolved."
+  },
+  {
+   "year": 2017,
+   "finding": "Recurrent STMN1-SPI1 and TCF7-SPI1 fusions mark 3.9% (7 of 181) of pediatric T-cell acute lymphoblastic leukemias, a distinct subgroup with uniformly poor survival; the fusion proteins keep transcriptional activity and block maturation of mouse progenitors.",
+   "methods": "Transcriptome and targeted capture sequencing, transduction of mouse stem/progenitor cells",
+   "confidence": "medium",
+   "pmids": [
+    "28671687"
+   ]
+  }
+ ],
+ "open": [
+  "The base immediately 5' of the GGA core is reported inconsistently: the PU box and the ChIP-derived models read GAGGAA, whereas systematic in vitro profiling characterizes class III by G at -2 and C at -1, and one HT-SELEX SPIB model here reads AAAAGCGGAAGT; if C is genuinely favored, the site can contain a CpG, and the methylation insensitivity of the classic PU.1 site would not extend to it.",
+  "How much PU.1 alone selects myeloid and B-cell enhancers is unsettled: its binding initiates nucleosome remodeling and H3K4 monomethylation at many distal sites, yet those sites are established together with lineage partners such as C/EBP in macrophages and E2A in B cells, and whether PU.1 can open closed chromatin without them is not settled by the studies cited here."
  ]
 }

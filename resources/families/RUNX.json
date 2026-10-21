@@ -12,7 +12,7 @@
  ],
  "consensus": "TGYGGT",
  "short": "RUNX sites are read by RUNX1, RUNX2 and RUNX3 through the Runt domain, a 128-residue immunoglobulin-like fold in the same structural class as NF-kB and p53. The core is a six-base element, TGYGGT, written ACCRCA on the other strand, and it is the retroviral enhancer \"core\" site originally described for core-binding factor. None of the three proteins binds efficiently alone: all require the non-DNA-binding subunit CBFB, which clamps the Runt domain into its DNA-bound conformation and raises affinity substantially. RUNX1 is the hematopoietic member and one of the most frequent targets of chromosomal translocation in leukemia; RUNX2 controls osteoblast differentiation and RUNX3 gut and immune programmes. The three paralogues are indistinguishable by sequence preference.",
- "long": "## The factors\n\nRUNX1 (AML1, CBFA2), RUNX2 (CBFA1) and RUNX3 (CBFA3) each carry one Runt domain near their N terminus. The domain is about 128 residues and adopts an s-type immunoglobulin fold, placing RUNX in the same structural superfamily as NF-kB, NFAT, STAT and p53 rather than with any classical helix-turn-helix family. It binds DNA as a monomer, but not effectively on its own: the shared subunit CBFB (CBFbeta, PEBP2beta) makes no DNA contact yet is required in practice. Two crystal structures of the Runt domain-CBFB-DNA ternary complex showed how - CBFB stabilises the DNA-bound conformation of the domain's C-terminal \"tail\" and \"wing\", which together clamp the phosphate backbone across both grooves, and the extended tail contributes most of the NF-kB-like base-specific major-groove contacts. Expression is largely complementary: RUNX1 in hematopoietic stem and progenitor cells and lymphocytes, RUNX2 in osteoblasts, chondrocytes and some epithelia, RUNX3 in gut epithelium, sensory neurons and T and NK cells. All three interact with CBFB and with the same corepressor and coactivator machinery, so which one is present is usually a matter of cell type rather than of DNA sequence.\n\n## The motif\n\nThe core is six bases. Binding-site selection with core-binding factor gave the consensus PyGPyGGTPy, most compactly written TGYGGT, and its reverse complement ACCRCA is equally common in the literature. The Y at position three is the one genuinely ambiguous base, and it explains a discrepancy visible in these databases: ChIP-derived models for all three paralogues read TGTGGTT (ACCACA), whereas HT-SELEX and methyl-SELEX models for RUNX2 and RUNX3, the JASPAR RUNX2 model, and the Vierstra archetypes read TGCGGTT (ACCGCA). Both are correct readings of TGYGGT; in vitro selection favours the C variant, genomic occupancy the T variant. Structurally, the guanines of the GG step are read by arginine and lysine side chains from the Runt domain tail in the major groove, while the flanking T and the distorted, bent B-form geometry of the site account for the rest of the specificity. Six informative positions is little, and the databases compensate in two ways. Several models are tandem repeats of the core (AACCGCAAAAACCGCA, GTGGTTTTTGTGGTTT), which reflects the real tendency of RUNX enhancers to carry paired sites rather than any dimeric binding by the protein. Others extend one or two positions into the flank. No model distinguishes RUNX1, RUNX2 and RUNX3 - family cohesion is 0.86 and the three ChIP-derived HOCOMOCO consensuses are character-for-character identical. Note also that one CIS-BP RUNX1 entry was measured on the mouse protein, whose Runt domain is identical to the human one at 100% identity.\n\n## Where it acts\n\nRUNX motifs are enhancer features more than promoter features, and are not enriched in CpG islands. In hematopoietic cells RUNX1 occupies tens of thousands of sites, and its motif is one of the commonest in the accessible chromatin of blood lineages; RUNX2 shows the same pattern in osteoblasts. The characteristic arrangement is a composite with ETS. Cooperative binding of ETS1 and core-binding factor to adjacent sites was described at the T-cell receptor enhancers, and genome-wide work later showed that the ETS-RUNX composite is what distinguishes ETS1's T-cell-specific enhancer occupancy from its redundant, consensus-driven occupancy at housekeeping promoters. RUNX sites also co-occur with GATA (the GATA-RUNX pairing at hematopoietic enhancers), with SPI1/PU.1 in myeloid cells, with TCF/LEF and with AP-1.\n\n## Biology and disease\n\nRunx1-null mice fail definitive hematopoiesis and die in mid-gestation with central nervous system hemorrhage; the Cbfb knockout reproduces this, which was the genetic demonstration that the partner subunit is required in vivo. Runx2-null mice have no bone formation at all because osteoblasts arrest before maturation, and heterozygous loss-of-function mutations in human RUNX2 cause cleidocranial dysplasia. RUNX3 silencing by promoter hypermethylation and loss of expression was linked causally to gastric carcinoma. RUNX1 is among the most frequently rearranged genes in human leukemia: t(8;21) creates RUNX1-RUNX1T1 in acute myeloid leukemia, t(12;21) creates ETV6-RUNX1 in the commonest subtype of childhood B-cell acute lymphoblastic leukemia, and inv(16) fuses CBFB to MYH11; germline RUNX1 mutations cause familial platelet disorder with predisposition to myeloid malignancy. Most of these lesions keep an intact Runt domain and convert RUNX1 into a repressor at its normal sites.\n\n## Reading a hit\n\nTGYGGT is short. Expect roughly one match every few hundred base pairs per strand, so an isolated hit is close to meaningless; weight matches by clustering, by conservation, and above all by the presence of a partner site. An adjacent ETS core (GGAA/GGAT) within a few base pairs, or a nearby GATA site, turns a weak RUNX match into a plausible composite element. The hit cannot name the paralogue, and it cannot distinguish RUNX from CBFB-containing complexes generally, since CBFB has no motif of its own - a \"CBFB site\" in any database is a RUNX site. Decide which variant to scan with deliberately: an in vitro TGCGGT model will score differently from a ChIP-derived TGTGGT model on the same sequence, and neither is wrong. The HOCOMOCO RUNX1, RUNX2 and RUNX3 primary models are ChIP-only (grade B); because RUNX travels in composites with ETS and GATA, ChIP-derived RUNX models can absorb flanking partner information, and conversely ETS models derived from T-cell ChIP can absorb the RUNX core.",
+ "long": "## The factors\n\nRUNX1 (AML1, CBFA2), RUNX2 (CBFA1) and RUNX3 (CBFA3) each carry one Runt domain near their N terminus. The domain is about 128 residues and adopts an s-type immunoglobulin fold, placing RUNX in the same structural superfamily as NF-kB, NFAT, STAT and p53 rather than with any classical helix-turn-helix family [PMID:10404214]. It binds DNA as a monomer, but not effectively on its own: the shared subunit CBFB (CBFbeta, PEBP2beta) makes no DNA contact yet is required in practice. Two crystal structures of the Runt domain-CBFB-DNA ternary complex showed how - CBFB stabilises the DNA-bound conformation of the domain's C-terminal \"tail\" and \"wing\", which together clamp the phosphate backbone across both grooves, and the extended tail contributes most of the NF-kB-like base-specific major-groove contacts [PMID:11257229,11276260]. Expression is largely complementary: RUNX1 in hematopoietic stem and progenitor cells and lymphocytes, RUNX2 in osteoblasts, chondrocytes and some epithelia, RUNX3 in gut epithelium, sensory neurons and T and NK cells. All three interact with CBFB and with the same corepressor and coactivator machinery, so which one is present is usually a matter of cell type rather than of DNA sequence.\n\n## The motif\n\nThe core is six bases. Binding-site selection with core-binding factor gave the consensus PyGPyGGTPy [PMID:8445737], most compactly written TGYGGT, and its reverse complement ACCRCA is equally common in the literature. The Y at position three is the one genuinely ambiguous base, and it explains a discrepancy visible in these databases: ChIP-derived models for all three paralogues read TGTGGTT (ACCACA), whereas HT-SELEX and methyl-SELEX models for RUNX2 and RUNX3, the JASPAR RUNX2 model, and the Vierstra archetypes read TGCGGTT (ACCGCA) [PMID:23332764]. Both are correct readings of TGYGGT; in vitro selection favours the C variant, genomic occupancy the T variant. Structurally, the guanines of the GG step are read by arginine and lysine side chains from the Runt domain tail in the major groove, while the flanking T and the distorted, bent B-form geometry of the site account for the rest of the specificity [PMID:11257229,11276260]. Six informative positions is little, and the databases compensate in two ways. Some models extend one or two positions into the flank; others are tandem repeats of the core (AACCGCAAAAACCGCA, GTGGTTTTTGTGGTTT). RUNX enhancers do tend to carry paired sites, but the tandem models are not read off enhancers: the HOCOMOCO ones come from HT-SELEX (RUNX3.H14CORE.1.S.B) and methyl-HT-SELEX (RUNX2.H14CORE.2.M.C) on random ligands, which recovered two cores at a fixed spacing [PMID:23332764]. Every structure of the complex shows a monomeric Runt domain [PMID:11257229,11276260], so whether a pair of cores is bound cooperatively is unresolved rather than excluded. No model distinguishes RUNX1, RUNX2 and RUNX3 - family cohesion is 0.86 and the three ChIP-derived HOCOMOCO consensuses are character-for-character identical. Note also that one CIS-BP RUNX1 entry was measured on the mouse protein, whose Runt domain is identical to the human one at 100% identity.\n\n## Where it acts\n\nRUNX motifs are enhancer features more than promoter features, and are not enriched in CpG islands. In hematopoietic cells RUNX1 occupies tens of thousands of sites, and its motif is one of the commonest in the accessible chromatin of blood lineages; RUNX2 shows the same pattern in osteoblasts. The characteristic arrangement is a composite with ETS. Cooperative binding of ETS1 and core-binding factor to adjacent sites was described at the T-cell receptor enhancers [PMID:8264651], and genome-wide work later showed that the ETS-RUNX composite is what distinguishes ETS1's T-cell-specific enhancer occupancy from its redundant, consensus-driven occupancy at housekeeping promoters [PMID:20019798]. RUNX sites also co-occur with GATA (the GATA-RUNX pairing at hematopoietic enhancers), with SPI1/PU.1 in myeloid cells, with TCF/LEF and with AP-1.\n\n## Biology and disease\n\nRunx1-null mice fail definitive hematopoiesis and die in mid-gestation with central nervous system hemorrhage [PMID:8565077]; the Cbfb knockout reproduces this, which was the genetic demonstration that the partner subunit is required in vivo [PMID:8929538]. Runx2-null mice have no bone formation at all because osteoblasts arrest before maturation [PMID:9182763], and heterozygous loss-of-function mutations in human RUNX2 cause cleidocranial dysplasia [PMID:9182765]. RUNX3 silencing by promoter hypermethylation and loss of expression was linked causally to gastric carcinoma [PMID:11955451]. RUNX1 is among the most frequently rearranged genes in human leukemia: t(8;21) creates RUNX1-RUNX1T1 in acute myeloid leukemia, t(12;21) creates ETV6-RUNX1 in the commonest subtype of childhood B-cell acute lymphoblastic leukemia, and inv(16) fuses CBFB to MYH11; germline RUNX1 mutations cause familial platelet disorder with predisposition to myeloid malignancy [PMID:28179279]. Most of these lesions keep an intact Runt domain and convert RUNX1 into a repressor at its normal sites [PMID:28179279].\n\n## Reading a hit\n\nTGYGGT is short. Expect roughly one match every few hundred base pairs per strand, so an isolated hit is close to meaningless; weight matches by clustering, by conservation, and above all by the presence of a partner site. An adjacent ETS core (GGAA/GGAT) within a few base pairs, or a nearby GATA site, turns a weak RUNX match into a plausible composite element. The hit cannot name the paralogue, and it cannot distinguish RUNX from CBFB-containing complexes generally, since CBFB has no motif of its own - a \"CBFB site\" in any database is a RUNX site. Decide which variant to scan with deliberately: an in vitro TGCGGT model will score differently from a ChIP-derived TGTGGT model on the same sequence, and neither is wrong. The HOCOMOCO RUNX1, RUNX2 and RUNX3 primary models are ChIP-only (grade B); because RUNX travels in composites with ETS and GATA, ChIP-derived RUNX models can absorb flanking partner information, and conversely ETS models derived from T-cell ChIP can absorb the RUNX core.",
  "caveats": "A six-base core means chance matches dominate: treat a lone TGYGGT as no evidence and look for a composite, most often an ETS core within a few base pairs or a nearby GATA site. The three paralogues cannot be told apart - the ChIP-derived RUNX1, RUNX2 and RUNX3 models here are identical, so a hit is RUNX-family and the responsible protein follows from cell type. CBFB has no motif of its own, so any database entry labelled for it is a RUNX motif. Be deliberate about the variant: in vitro models read TGCGGT, ChIP models TGTGGT, and they score real sequence differently. All three primary HOCOMOCO models are ChIP-only.",
  "refs": [
   {
@@ -74,6 +74,95 @@
    "cite": "Sood R, Kamikubo Y, Liu P. Role of RUNX1 in hematological malignancies. Blood 2017;129:2070-2082.",
    "pmid": "28179279",
    "url": "https://pubmed.ncbi.nlm.nih.gov/28179279/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1993,
+   "finding": "Selected-and-amplified binding-site footprinting with core-binding factor defines the consensus PyGPyGGTPy, and ethylation interference shows phosphate contacts spanning 9 bp around the core.",
+   "methods": "Binding-site selection (SAAB); ethylation interference",
+   "confidence": "medium",
+   "pmids": [
+    "8445737"
+   ],
+   "open": "How the DNA-binding alpha subunit and the partner beta subunit divide the work of recognition was not known."
+  },
+  {
+   "year": 1994,
+   "finding": "ETS1 and core-binding factor bind cooperatively to adjacent sites in the T-cell receptor beta enhancer, and site selection shows that the relative spacing and orientation of the two sites are loosely constrained.",
+   "methods": "Electrophoretic mobility shift assays; mutagenesis; binding-site selection",
+   "confidence": "medium",
+   "pmids": [
+    "8264651"
+   ]
+  },
+  {
+   "year": 1996,
+   "finding": "Runx1-null and Cbfb-null mice share one phenotype - no definitive hematopoiesis and mid-gestation hemorrhage - showing that the non-DNA-binding CBFB subunit is required for RUNX1 function in vivo.",
+   "methods": "Mouse gene targeting (two independent knockouts)",
+   "confidence": "high",
+   "pmids": [
+    "8565077",
+    "8929538"
+   ]
+  },
+  {
+   "year": 1997,
+   "finding": "Runx2 (Cbfa1) is required for bone formation in the mouse, and heterozygous RUNX2 mutations cause human cleidocranial dysplasia.",
+   "methods": "Mouse gene targeting; human linkage and mutation analysis",
+   "confidence": "high",
+   "pmids": [
+    "9182763",
+    "9182765"
+   ]
+  },
+  {
+   "year": 1999,
+   "finding": "The DNA-bound Runt domain is an S-type immunoglobulin fold, structurally related to the DNA-binding domains of NF-kB, NFAT, p53 and the STATs rather than to helix-turn-helix factors, and NMR of the ternary complex maps the surface that binds CBFB.",
+   "methods": "NMR spectroscopy",
+   "confidence": "high",
+   "pmids": [
+    "10404214"
+   ]
+  },
+  {
+   "year": 2001,
+   "finding": "Two crystal structures of the Runt domain-CBFB-DNA complex show a monomeric Runt domain clamping the DNA and CBFB acting allosterically, stabilising the DNA-binding loops without itself contacting DNA.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "11257229",
+    "11276260"
+   ],
+   "open": "Whether CBFB changes sequence preference or only affinity."
+  },
+  {
+   "year": 2009,
+   "finding": "Genome-wide ETS1 occupancy in T cells separates redundant promoter binding with other ETS proteins from ETS1-specific enhancer binding, and one route to that specificity is an ETS-RUNX composite that supports cooperative binding.",
+   "methods": "ChIP-seq; DNase I hypersensitivity",
+   "confidence": "medium",
+   "pmids": [
+    "20019798"
+   ]
+  },
+  {
+   "year": 2013,
+   "finding": "HT-SELEX yields a RUNX2 model built on ACCGCA (TGCGGT) with paired cores, whereas ChIP-derived RUNX models favour TGTGGT, so in vitro and in vivo collections now disagree at the one ambiguous position of TGYGGT.",
+   "methods": "HT-SELEX",
+   "confidence": "medium",
+   "pmids": [
+    "23332764"
+   ],
+   "open": "Whether the C variant is intrinsically preferred and rare in vivo because of CpG depletion and methylation, or favoured by the assay."
+  }
+ ],
+ "open": [
+  "Why in vitro selection favours TGCGGT while ChIP-derived models favour TGTGGT is not settled: the C variant may be the higher-affinity site that is scarce in the genome because CpG is depleted and usually methylated, or the preference may be shifted by selection conditions, including the absence of CBFB from most selection experiments.",
+  "Whether paired RUNX cores are bound cooperatively is unresolved: every structure shows a monomeric Runt domain, yet HT-SELEX and methyl-HT-SELEX recover two cores at fixed spacings from random ligands, which would be unexpected for fully independent binding."
  ]
 }

@@ -13,8 +13,8 @@
  ],
  "consensus": "CACGTG",
  "short": "BHLHE40 and BHLHE41 - also known as DEC1/STRA13/SHARP-2 and DEC2/SHARP-1 - are bHLH repressors without a leucine zipper that bind the class-B E-box CACGTG and shut down transcription, both by competing for E-boxes with activating dimers such as CLOCK-BMAL1 and by recruiting histone deacetylases without contacting DNA. Their own promoters carry hypoxia response elements, so they couple HIF signalling to the E-box landscape. A BHLHE41 missense change causes familial natural short sleep in humans and mice, BHLHE40 is required for pathogenic T cell cytokine output, and the two together control alveolar macrophage identity. Because they read the same site as circadian activators, the sequence alone cannot tell you whether an E-box is being activated or repressed.",
- "long": "## The factors\n\nBHLHE40 and BHLHE41 are two closely related basic helix-loop-helix repressors that have accumulated an unusual number of names: BHLHE40 is also DEC1, STRA13, SHARP-2 and BHLHB2; BHLHE41 is also DEC2, SHARP-1 and BHLHB3. Unlike MYC, MAX, USF and the MiT/TFE proteins, they are plain bHLH proteins with no leucine zipper; they homodimerize, heterodimerize with each other, and contain a C-terminal repression region rather than an activation domain. They were found independently several times - as a retinoic-acid-inducible gene that blocked mesodermal and promoted neuronal differentiation of P19 cells, as neuronal-activity-coupled enhancer-of-split- and hairy-related proteins, and as clock components - which is why the nomenclature is so tangled. Both are broadly expressed and strongly inducible: their promoters contain functional hypoxia response elements and are direct HIF targets, and they also respond to serum, TGF-beta and retinoic acid. That makes them stimulus-driven repressors superimposed on a constitutive E-box landscape. They repress by two mechanisms: competing for E-boxes with activating bHLH dimers, and binding proteins - notably BMAL1 and histone deacetylases - without necessarily contacting DNA. The atlas assigns 7 motifs here (2 JASPAR, 3 HOCOMOCO, 2 CIS-BP) over both symbols, cohesion 0.93, with BHLHE40 (MA0464.3) as the representative.\n\n## The motif\n\nThe site is the class-B E-box CACGTG, the same 6-bp palindrome read by MYC-MAX, USF and MiT/TFE, with each CAC half-site contacted by the conserved histidine, glutamate and arginine of one basic region. What is worth noticing in the data is that the two paralogues are described differently by the databases. The BHLHE41 models carry the T/A-flanked extended palindrome GTCACGTGAC or GTCACGTGC - that is, the USF and CLEAR-box form - while the BHLHE40 models are shorter and prefer G/C flanks (GCACGTG, tCACGTGa), closer to the MYC-MAX form. Whether that reflects a real difference in flanking preference between the two proteins or differences in the underlying experiments is not settled by these models alone, and the similarity scores show BHLHE41 models matching other families' motifs about as well as they match BHLHE40's. One HOCOMOCO BHLHE40 model is not a single site at all but a tandem pair, CACGTGnnnvgCACGTGa: two E-boxes separated by three base pairs, which matches the clustered E-boxes typical of circadian target promoters. The Vierstra footprint archetype covering these motifs is labelled AC0066:USF/BHLHE:bHLH, an explicit statement that USF and BHLHE40/41 motifs did not separate in footprint data.\n\n## Where it acts\n\nThese factors act at promoter-proximal E-boxes in accessible chromatin, in three recurring contexts: circadian genes, where they sit on the same E-boxes used by CLOCK-BMAL1 in PER and DBP promoters; hypoxia-responsive genes, where they are both HIF targets and themselves repressors, giving a feed-forward loop; and immune and metabolic loci, where BHLHE40 in particular is induced by activation signals. Because a substantial part of their repression is protein-mediated, a fraction of their ChIP signal can be expected at sites they do not contact directly. Their binding does not mark a cell type: both are widely expressed, and what changes is induction level and the time of day.\n\n## Biology and disease\n\nDEC1 and DEC2 were shown to repress CLOCK-BMAL1-driven transactivation of the mPer1 promoter and to shift the behavioural clock, placing them in the negative limb of the mammalian oscillator alongside the cryptochromes. The clearest human genetic result is a BHLHE41 missense change (P384R) segregating with the familial natural short sleep trait; the same substitution shortens sleep in transgenic mice. Immunologically, Bhlhe40-deficient mice show defective T cell activation and develop autoimmune disease, and Bhlhe40 is required for the cytokine output that makes T cells pathogenic in autoimmune neuroinflammation. Both paralogues together control alveolar macrophage self-renewal and identity. They have also been linked to hypoxic repression of specific targets, including the mismatch-repair gene MLH1 and SREBP-1c, and to tumour behaviour, though the direction varies by tissue.\n\n## Reading a hit\n\nA CACGTG hit does not distinguish BHLHE40 or BHLHE41 from MYC-MAX, USF, MITF/TFE3/TFEB, SREBP, HIF-ARNT or CLOCK-BMAL1. In the circadian case this ambiguity is biologically real rather than a technical limitation: the same E-box is an activating element when CLOCK-BMAL1 occupies it and a repressing one when DEC1/DEC2 do, so the sequence alone cannot even tell you the sign of the effect. BHLHE40 and BHLHE41 are not distinguishable from one another by sequence; the apparent flanking difference between their models is not a reliable discriminator. Because both repress partly through protein interaction, a ChIP peak without a motif is an expected outcome here, not necessarily an artifact - and conversely, a motif match is not evidence that repression at that site is DNA-binding-dependent.",
- "caveats": "A CACGTG match cannot separate BHLHE40/41 from MYC-MAX, USF, MITF/TFE, SREBP, HIF-ARNT or CLOCK-BMAL1, and the Vierstra archetype carrying these motifs is explicitly labelled USF/BHLHE because the two did not separate in footprint data. The two paralogues are not distinguishable from each other; their models differ in apparent flanking preference (T/A for BHLHE41, G/C for BHLHE40) but that difference may reflect the experiments rather than the proteins. Since both repress partly by protein-protein interaction with BMAL1 and HDACs, motif-free ChIP peaks are expected, and a motif match does not establish that repression at that site requires DNA binding.",
+ "long": "## The factors\n\nBHLHE40 and BHLHE41 are two closely related basic helix-loop-helix repressors that have accumulated an unusual number of names: BHLHE40 is also DEC1, STRA13, SHARP-2 and BHLHB2; BHLHE41 is also DEC2, SHARP-1 and BHLHB3. Unlike MYC, MAX, USF and the MiT/TFE proteins, they are plain bHLH proteins with no leucine zipper; they homodimerize, heterodimerize with each other, and contain a C-terminal repression region rather than an activation domain. They were found independently several times - as a retinoic-acid-inducible gene that blocked mesodermal and promoted neuronal differentiation of P19 cells, as neuronal-activity-coupled enhancer-of-split- and hairy-related proteins, and as clock components [PMID:9284045,9532582,12397359] - which is why the nomenclature is so tangled. Both are broadly expressed and strongly inducible: their promoters contain functional hypoxia response elements and are direct HIF targets [PMID:12354771], and they also respond to serum, TGF-beta and retinoic acid. That makes them stimulus-driven repressors superimposed on a constitutive E-box landscape. They repress by two mechanisms: competing for E-boxes with activating bHLH dimers, and binding proteins - notably BMAL1 and histone deacetylases - without necessarily contacting DNA [PMID:12397359,12657651]. The atlas assigns 7 motifs here (2 JASPAR, 3 HOCOMOCO, 2 CIS-BP) over both symbols, cohesion 0.93, with BHLHE40 (MA0464.3) as the representative.\n\n## The motif\n\nThe site is the class-B E-box CACGTG [PMID:12297495,12657651], the same 6-bp palindrome read by MYC-MAX, USF and MiT/TFE, with each CAC half-site contacted by the conserved histidine, glutamate and arginine of one basic region. In vitro, BHLHE40 homodimers bind best when the core is preceded by a T and/or followed by an A [PMID:12297495], and the models for both paralogues mostly show the same T/A flanks. The BHLHE41 models carry the longer extended palindrome GTCACGTGAC or GTCACGTGC - the USF and CLEAR-box form - and the JASPAR and CIS-BP BHLHE40 models read tCACGTGa and CACGTGa. The one G-flanked model is the A-grade HOCOMOCO BHLHE40 model, GCACGTG, which prefers G over T before the core but keeps a weaker A after it, so it is still compatible with the in vitro preference. The BHLHE40 models are shorter and carry less flanking information than the BHLHE41 ones, and the similarity scores show BHLHE41 models matching other families' motifs about as well as they match BHLHE40's. One HOCOMOCO BHLHE40 model is not a single site at all but a tandem pair, CACGTGnnnvgCACGTGa: two E-boxes separated by five base pairs. Clock-gene promoters do carry tandem E-boxes, but there the spacing that supports rhythmic transcription is six or seven base pairs, and a five-base spacer nearly abolished oscillation of a Per2 reporter [PMID:18177499], so the model should not be read as the circadian element. The Vierstra footprint archetype covering these motifs is labelled AC0066:USF/BHLHE:bHLH, an explicit statement that USF and BHLHE40/41 motifs did not separate in footprint data [PMID:32728250].\n\n## Where it acts\n\nThese factors act at promoter-proximal E-boxes in accessible chromatin, in three recurring contexts: circadian genes, where they sit on the same E-boxes used by CLOCK-BMAL1 in PER and DBP promoters [PMID:12397359]; hypoxia-responsive genes, where they are both HIF targets and themselves repressors, giving a feed-forward loop [PMID:12354771,18345027]; and immune and metabolic loci, where BHLHE40 in particular is induced by activation signals [PMID:11668339]. Because a substantial part of their repression is protein-mediated, a fraction of their ChIP signal can be expected at sites they do not contact directly. Their binding does not mark a cell type: both are widely expressed, and what changes is induction level and the time of day.\n\n## Biology and disease\n\nDEC1 and DEC2 were shown to repress CLOCK-BMAL1-driven transactivation of the mPer1 promoter [PMID:12397359] and to shift the behavioural clock, placing them in the negative limb of the mammalian oscillator alongside the cryptochromes. The clearest human genetic result is a BHLHE41 missense change (reported as P385R, and numbered P384R in the same group's later work) segregating with the familial natural short sleep trait; the same substitution shortens sleep in transgenic mice [PMID:19679812,29531056]. Immunologically, Bhlhe40-deficient mice show defective T cell activation and develop autoimmune disease [PMID:11668339], and Bhlhe40 is required for the cytokine output that makes T cells pathogenic in autoimmune neuroinflammation [PMID:24699451]. Both paralogues together control alveolar macrophage self-renewal and identity [PMID:31414712]. They have also been linked to hypoxic repression of specific targets, including the mismatch-repair gene MLH1 [PMID:18345027] and SREBP-1c, and to tumour behaviour, though the direction varies by tissue.\n\n## Reading a hit\n\nA CACGTG hit does not distinguish BHLHE40 or BHLHE41 from MYC-MAX, USF, MITF/TFE3/TFEB, SREBP, HIF-ARNT or CLOCK-BMAL1. In the circadian case this ambiguity is biologically real rather than a technical limitation: the same E-box is an activating element when CLOCK-BMAL1 occupies it and a repressing one when DEC1/DEC2 do [PMID:12397359], so the sequence alone cannot even tell you the sign of the effect. BHLHE40 and BHLHE41 are not distinguishable from one another by sequence; models for both favor the same T/A flanks, and the differences in model length are not a reliable discriminator. Because both repress partly through protein interaction, a ChIP peak without a motif is an expected outcome here, not necessarily an artifact - and conversely, a motif match is not evidence that repression at that site is DNA-binding-dependent.",
+ "caveats": "A CACGTG match cannot separate BHLHE40/41 from MYC-MAX, USF, MITF/TFE, SREBP, HIF-ARNT or CLOCK-BMAL1, and the Vierstra archetype carrying these motifs is explicitly labelled USF/BHLHE because the two did not separate in footprint data. The two paralogues are not distinguishable from each other: models for both favor a T before and an A after the core, and only one HOCOMOCO BHLHE40 model prefers a G before it. Since both repress partly by protein-protein interaction with BMAL1 and HDACs, motif-free ChIP peaks are expected, and a motif match does not establish that repression at that site requires DNA binding.",
  "refs": [
   {
    "cite": "Boudjelal M, Taneja R, Matsubara S, et al. Overexpression of Stra13, a novel retinoic acid-inducible gene of the basic helix-loop-helix family, inhibits mesodermal and promotes neuronal differentiation of P19 cells. Genes Dev 1997;11:2052-65.",
@@ -75,6 +75,108 @@
    "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
    "pmid": "32728250",
    "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  },
+  {
+   "cite": "St-Pierre B, Flock G, Zacksenhaus E, et al. Stra13 homodimers repress transcription through class B E-box elements. J Biol Chem 2002;277:46544-51.",
+   "pmid": "12297495",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12297495/"
+  },
+  {
+   "cite": "Azmi S, Sun H, Ozog A, et al. mSharp-1/DEC2, a basic helix-loop-helix protein functions as a transcriptional repressor of E box activity and Stra13 expression. J Biol Chem 2003;278:20098-109.",
+   "pmid": "12657651",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12657651/"
+  },
+  {
+   "cite": "Hirano A, Hsu PK, Zhang L, et al. DEC2 modulates orexin expression and regulates sleep. Proc Natl Acad Sci U S A 2018;115:3434-3439.",
+   "pmid": "29531056",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29531056/"
+  },
+  {
+   "cite": "Nakahata Y, Yoshida M, Takano A, et al. A direct repeat of E-box-like elements is required for cell-autonomous circadian rhythm of clock genes. BMC Mol Biol 2008;9:1.",
+   "pmid": "18177499",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18177499/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1997,
+   "finding": "The genes are cloned independently, as retinoic-acid-inducible Stra13, whose overexpression drives P19 cells toward neurons, and as the neuronal-activity-induced SHARP-1 and SHARP-2; Stra13 is reported not to bind E-boxes or N-boxes and to repress through the basal machinery.",
+   "methods": "cDNA cloning, expression analysis, overexpression, EMSA, reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "9284045",
+    "9532582"
+   ],
+   "open": "Whether the proteins bind DNA directly, and to what."
+  },
+  {
+   "year": 2001,
+   "finding": "Stra13 (Bhlhe40)-deficient mice show defective CD4+ T cell activation and develop age-dependent autoimmune disease.",
+   "methods": "Mouse gene targeting, immunophenotyping",
+   "confidence": "medium",
+   "pmids": [
+    "11668339"
+   ]
+  },
+  {
+   "year": 2002,
+   "finding": "DEC1 and DEC2 repress CLOCK-BMAL1 transactivation of the mPer1 promoter by binding BMAL1 and/or competing for E-boxes, and are expressed rhythmically in the suprachiasmatic nucleus.",
+   "methods": "Reporter assays, protein interaction assays, in situ hybridization",
+   "confidence": "medium",
+   "pmids": [
+    "12397359"
+   ]
+  },
+  {
+   "year": 2002,
+   "finding": "Stra13 is shown to bind CACGTG class B E-boxes with high affinity as a homodimer, preferring a T before and an A after the core, and to repress from them; DEC2 is shown in 2003 to bind E-boxes as a homodimer and to repress both through and without DNA binding. This reverses the 1997 report that Stra13 does not bind E-boxes.",
+   "methods": "EMSA, binding-site analysis, transient transfection, ChIP",
+   "confidence": "medium",
+   "pmids": [
+    "12297495",
+    "12657651"
+   ]
+  },
+  {
+   "year": 2002,
+   "finding": "DEC1 and DEC2 promoters carry functional hypoxia response elements bound by HIF-1, making both genes direct HIF targets.",
+   "methods": "Promoter deletion and reporter assays, EMSA",
+   "confidence": "medium",
+   "pmids": [
+    "12354771"
+   ]
+  },
+  {
+   "year": 2009,
+   "finding": "A BHLHE41 missense change (reported as hDEC2-P385R) is associated with a human short-sleep phenotype, and transgenic mice carrying it sleep less.",
+   "methods": "Human genetics, transgenic mice, sleep recording",
+   "confidence": "medium",
+   "pmids": [
+    "19679812"
+   ],
+   "open": "Which target genes mediate the sleep phenotype."
+  },
+  {
+   "year": 2014,
+   "finding": "Bhlhe40 is required T-cell-intrinsically for GM-CSF production and against IL-10, and Bhlhe40-deficient mice resist autoimmune neuroinflammation.",
+   "methods": "Knockout mice, EAE model, cytokine assays, IL-10 receptor blockade",
+   "confidence": "medium",
+   "pmids": [
+    "24699451"
+   ]
+  },
+  {
+   "year": 2019,
+   "finding": "Bhlhe40 and Bhlhe41 together sustain alveolar macrophage self-renewal and identity, with genome-wide binding suggesting direct repression of lineage-inappropriate genes.",
+   "methods": "Double-knockout mice, competitive transfer, expression profiling, ChIP-seq",
+   "confidence": "medium",
+   "pmids": [
+    "31414712"
+   ]
+  }
+ ],
+ "open": [
+  "How much DEC repression requires DNA binding is not known: DEC1 and DEC2 repress CLOCK-BMAL1 both by competing for E-boxes and by binding BMAL1, and DEC2 also acts on MyoD, E-proteins and SP1 without DNA contact, but the relative contributions at endogenous targets are not established.",
+  "Whether the tandem HOCOMOCO BHLHE40 model (CACGTGnnnvgCACGTGa, HT-SELEX only, grade C) reflects cooperative binding to paired E-boxes in cells has not been established; its five-base spacing differs from the six or seven bases of the tandem E-box element of clock genes, so circadian promoters do not by themselves support it."
  ]
 }

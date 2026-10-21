@@ -8,7 +8,7 @@
  ],
  "consensus": "CACGTG",
  "short": "A residual bucket rather than a real family: it holds bHLH motifs that could not be placed in any of the defined bHLH families. In the current release that is three models, all labelled SOHLH2, a germ-cell-restricted bHLH protein that heterodimerizes with SOHLH1 and controls spermatogonial differentiation and early folliculogenesis in mice. All three read an ordinary class-B E-box with a G/C flank (CACGTGC), and the data flags each one as resembling MYC/MAX or BHLHE40/41 motifs instead. The family definition also reserves space for MYRF-like factors and unclassified E-box archetypes, though none are assigned here. A hit means \"canonical E-box\", not SOHLH2.",
- "long": "## The factors\n\nThis is a residual bucket, not a protein family. The atlas groups bHLH motifs that could not be placed in one of the defined bHLH families - MYC/MAX, USF, MITF/TFE, SREBP, TFAP4, BHLHE40/41, the E-proteins, HES/HEY, MYOD, NEUROD/ATOH, HAND/TWIST, TAL/LYL, CLOCK/BMAL, HIF/ARNT and the others - and in the current release that leaves exactly one gene with motifs: SOHLH2. SOHLH1 and SOHLH2 (spermatogenesis- and oogenesis-specific basic helix-loop-helix 1 and 2) are germ-cell-restricted bHLH proteins. They are expressed in spermatogonia and in oocytes rather than in somatic tissue, they heterodimerize with each other, and they sit outside the well-studied class I/class II pairing scheme because their usual partner is the other SOHLH protein rather than an E-protein. The family definition also reserves this bucket for MYRF-like factors and for unclassified E-box archetypes. MYRF is worth a word because its inclusion in a bHLH-adjacent bucket is a naming accident rather than a structural claim: myelin gene regulatory factor is a membrane-bound, self-cleaving transcription factor whose DNA-binding domain is an Ndt80/PhoG-like beta-sandwich that trimerizes, with no helix-loop-helix at all. No MYRF motif is assigned here in the current data. The atlas assigns 3 motifs to this family: one JASPAR, one HOCOMOCO and one CIS-BP model, all labelled SOHLH2, with SOLH2.H14CORE.0.S.C as the representative.\n\n## The motif\n\nAll three models read a class-B E-box with G/C flanks: CACGTGC in HOCOMOCO (HT-SELEX evidence, quality grade C), GCACGTGC in JASPAR (MA1560.2), and a low-information gCACGtG in CIS-BP carrying only 8.1 bits of total information. The data consensus for the family is therefore CACGTGC, which is simply the canonical palindrome CACGTG with one extra flanking base. There is no family-specific motif here, and the family data says so explicitly: each of the three models is flagged as resembling a different family. The HOCOMOCO model's nearest neighbours across all four databases are BHLHE40/41 motifs; the JASPAR and CIS-BP models' nearest neighbours are MYC/MAX motifs. Label agreement - the fraction of a motif's nearest neighbours that carry the same factor label - is 0 to 0.2 for all three. The cohesion figure of 0.92 describes only how similar the three SOHLH2 models are to each other, which is not informative when all three come from the same gene. In short, a SOHLH2 model is a CACGTG E-box that happens to be labelled SOHLH2, and nothing in its information content separates it from the canonical MYC or BHLHE40 site.\n\n## Where it acts\n\nBecause the site is an ordinary CACGTG E-box, matches occur throughout the genome: a 6-bp palindrome is expected several hundred thousand times in 3 Gb, reduced somewhat by CpG depletion but still far beyond the number of sites any factor occupies. Nothing is known here about promoter versus enhancer preference or chromatin context, because none of the three models is ChIP-derived - the HOCOMOCO model carries only in vitro (HT-SELEX) evidence, and there is no Vierstra footprint archetype in this family. SOHLH1 and SOHLH2 expression is confined to germ cells, so whatever occupancy exists is restricted to spermatogonia and oocytes and has not been mapped genome-wide at the scale available for the common factors. Reported targets sit in the spermatogonial differentiation program, which the two proteins control jointly.\n\n## Biology and disease\n\nThe phenotypes come from mouse genetics. Sohlh1-null mice fail spermatogonial differentiation. Sohlh2-null males are sterile because differentiating type A spermatogonia degenerate, and Sohlh2 is separately required in females for early folliculogenesis and for oocyte-specific gene expression. The two genes act together rather than redundantly: SOHLH1 and SOHLH2 coordinate the spermatogonial differentiation step, consistent with their obligate heterodimerization. Human evidence is thin by comparison and consists largely of individual case reports in infertility cohorts, so the human disease picture should be treated as provisional. There is no cancer or developmental syndrome robustly attributed to either gene.\n\n## Reading a hit\n\nTreat a hit against anything in this bucket as a hit against a generic CACGTG E-box and nothing more. This family exists so that motifs which do not belong to a defined bHLH family are not silently forced into MYC/MAX or BHLHE40/41; it is a holding pen, and membership is expected to change between releases as the assignments are revised. Concretely: do not report a \"SOHLH2 site\" on the basis of a sequence match. If a BHLH_OTHER model is your top hit, rescore the same sequence against MYC_MAX, USF, MITF_TFE, BHLHE40_41, CLOCK_BMAL and HIF_ARNT and expect comparable scores, then argue from expression - SOHLH2 is only a plausible candidate in germ-cell material. None of these three models has ChIP support, so they say nothing about in vivo occupancy either way.",
+ "long": "## The factors\n\nThis is a residual bucket, not a protein family. The atlas groups bHLH motifs that could not be placed in one of the defined bHLH families - MYC/MAX, USF, MITF/TFE, SREBP, TFAP4, BHLHE40/41, the E-proteins, HES/HEY, MYOD, NEUROD/ATOH, HAND/TWIST, TAL/LYL, CLOCK/BMAL, HIF/ARNT and the others - and in the current release that leaves exactly one gene with motifs: SOHLH2. SOHLH1 and SOHLH2 (spermatogenesis- and oogenesis-specific basic helix-loop-helix 1 and 2) are germ-cell-restricted bHLH proteins. They are expressed in spermatogonia and in oocytes rather than in somatic tissue [PMID:16564520,16765102], they heterodimerize with each other and each can also homodimerize [PMID:22056784]. Whether they also pair with E-proteins, the usual partners of tissue-specific bHLH proteins in the class I/class II scheme [PMID:10611221], was not tested in that work. The family definition also reserves this bucket for MYRF-like factors and for unclassified E-box archetypes. MYRF is worth a word because its inclusion in a bHLH-adjacent bucket is a naming accident rather than a structural claim: myelin gene regulatory factor is a membrane-bound, self-cleaving transcription factor whose DNA-binding domain is an Ndt80/PhoG-like beta-sandwich that trimerizes, with no helix-loop-helix at all [PMID:28623291]. No MYRF motif is assigned here in the current data. The atlas assigns 3 motifs to this family: one JASPAR, one HOCOMOCO and one CIS-BP model, all labelled SOHLH2, with SOLH2.H14CORE.0.S.C as the representative.\n\n## The motif\n\nAll three models read a class-B E-box with G/C flanks: CACGTGC in HOCOMOCO (HT-SELEX evidence, quality grade C), GCACGTGC in JASPAR (MA1560.2) [PMID:37971293,37962376], and a low-information gCACGtG in CIS-BP carrying only 8.1 bits of total information. The data consensus for the family is therefore CACGTGC, which is simply the canonical palindrome CACGTG with one extra flanking base. There is no family-specific motif here, and the family data says so explicitly: each of the three models is flagged as resembling a different family. The HOCOMOCO model's nearest neighbours across all four databases are BHLHE40/41 motifs; the JASPAR and CIS-BP models' nearest neighbours are MYC/MAX motifs. Label agreement - the fraction of a motif's nearest neighbours that carry the same factor label - is 0 to 0.2 for all three. The cohesion figure of 0.92 describes only how similar the three SOHLH2 models are to each other, which is not informative when all three come from the same gene. In short, a SOHLH2 model is a CACGTG E-box that happens to be labelled SOHLH2, and nothing in its information content separates it from the canonical MYC or BHLHE40 site.\n\n## Where it acts\n\nBecause the site is an ordinary CACGTG E-box, matches occur throughout the genome: a 6-bp palindrome is expected several hundred thousand times in 3 Gb, reduced somewhat by CpG depletion but still far beyond the number of sites any factor occupies. Nothing is known here about promoter versus enhancer preference or chromatin context, because none of the three models is ChIP-derived - the HOCOMOCO model carries only in vitro (HT-SELEX) evidence, and there is no Vierstra footprint archetype in this family [PMID:32728250]. SOHLH1 and SOHLH2 expression is confined to germ cells, so whatever occupancy exists is restricted to spermatogonia and oocytes and has not been mapped genome-wide at the scale available for the common factors. Reported targets sit in the spermatogonial differentiation program, which the two proteins control jointly [PMID:22056784].\n\n## Biology and disease\n\nThe phenotypes come from mouse genetics. Sohlh1-null mice fail spermatogonial differentiation [PMID:16564520]. Sohlh2-null males are sterile because differentiating type A spermatogonia degenerate [PMID:18339773], and Sohlh2 is separately required in females for early folliculogenesis and for oocyte-specific gene expression [PMID:18753606]. The two genes act together rather than redundantly: the double mutant phenocopies the single mutants, and SOHLH1 and SOHLH2 coordinate the spermatogonial differentiation step [PMID:22056784]. That is consistent with an essential role for the SOHLH1-SOHLH2 heterodimer, but heterodimerization is not obligate: each protein can also homodimerize [PMID:22056784]. Human evidence is thin by comparison and consists largely of individual case reports in infertility cohorts, so the human disease picture should be treated as provisional. There is no cancer or developmental syndrome robustly attributed to either gene.\n\n## Reading a hit\n\nTreat a hit against anything in this bucket as a hit against a generic CACGTG E-box and nothing more. This family exists so that motifs which do not belong to a defined bHLH family are not silently forced into MYC/MAX or BHLHE40/41; it is a holding pen, and membership is expected to change between releases as the assignments are revised. Concretely: do not report a \"SOHLH2 site\" on the basis of a sequence match. If a BHLH_OTHER model is your top hit, rescore the same sequence against MYC_MAX, USF, MITF_TFE, BHLHE40_41, CLOCK_BMAL and HIF_ARNT and expect comparable scores, then argue from expression - SOHLH2 is only a plausible candidate in germ-cell material. None of these three models has ChIP support, so they say nothing about in vivo occupancy either way.",
  "caveats": "This bucket has no motif of its own. All three assigned models are CACGTG E-boxes whose nearest neighbours across the four databases belong to other families - BHLHE40/41 for the HOCOMOCO model, MYC/MAX for the JASPAR and CIS-BP models - with label agreement between 0 and 0.2. None is ChIP-derived, and the CIS-BP model carries only 8.1 bits of information. A match therefore licenses no factor assignment at all; report it as a canonical E-box. Membership in a residual bucket is provisional by construction and should be expected to change as the family assignments are revised, so do not build a pipeline that depends on this key's contents.",
  "refs": [
   {
@@ -71,5 +71,78 @@
    "pmid": "37971293",
    "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1997,
+   "finding": "A phylogenetic classification of 242 bHLH proteins groups them into lineages and five higher groups by E-box binding, motif features and presence of a leucine zipper, and finds that zipper-containing bHLH proteins are not a monophyletic group.",
+   "methods": "Phylogenetic analysis of bHLH sequences",
+   "confidence": "medium",
+   "pmids": [
+    "9144210"
+   ]
+  },
+  {
+   "year": 2001,
+   "finding": "Comparative genomics of fly, nematode and vertebrate bHLH genes defines 44 orthologous families, the framework into which unplaced bHLH proteins are later sorted.",
+   "methods": "Genome-wide sequence searches, phylogenetic analysis",
+   "confidence": "medium",
+   "pmids": [
+    "11337472"
+   ]
+  },
+  {
+   "year": 2006,
+   "finding": "SOHLH1 and SOHLH2 are identified as germ-cell-specific bHLH factors expressed in spermatogonia and oocytes, and Sohlh1-null males fail spermatogonial differentiation.",
+   "methods": "Gene discovery, expression analysis, mouse gene targeting",
+   "confidence": "medium",
+   "pmids": [
+    "16564520",
+    "16765102"
+   ]
+  },
+  {
+   "year": 2008,
+   "finding": "Sohlh2 knockout males are sterile because differentiating type A spermatogonia degenerate, and knockout females lose oocytes and misexpress oocyte-specific genes.",
+   "methods": "Mouse gene targeting (independent male and female studies), histology, expression analysis",
+   "confidence": "medium",
+   "pmids": [
+    "18339773",
+    "18753606"
+   ]
+  },
+  {
+   "year": 2012,
+   "finding": "SOHLH1 and SOHLH2 heterodimerize in testis and each can also homodimerize, the double mutant phenocopies the single mutants, and the proteins directly regulate Gfra1, Sox3 and Kit.",
+   "methods": "Protein interaction assays, double-knockout mice, expression profiling, promoter binding assays",
+   "confidence": "medium",
+   "pmids": [
+    "22056784"
+   ]
+  },
+  {
+   "year": 2017,
+   "finding": "The crystal structure of the MYRF DNA-binding domain shows an Ndt80-like beta-sandwich that trimerizes, confirming that MYRF has no bHLH despite its place in this bucket.",
+   "methods": "X-ray crystallography, mutagenesis",
+   "confidence": "high",
+   "pmids": [
+    "28623291"
+   ]
+  },
+  {
+   "year": 2024,
+   "finding": "Current JASPAR and HOCOMOCO releases carry SOHLH2 models that read a plain G/C-flanked CACGTG, supported only by in vitro data and indistinguishable from MYC/MAX and BHLHE40/41 motifs.",
+   "methods": "Database curation of in vitro-derived motifs",
+   "confidence": "medium",
+   "pmids": [
+    "37962376",
+    "37971293"
+   ],
+   "open": "No in vivo binding data exist for SOHLH2 in these collections."
+  }
+ ],
+ "open": [
+  "Which dimer reads DNA in germ cells is unresolved: SOHLH1 and SOHLH2 heterodimerize in testis and each can also homodimerize, but the only motifs available are for SOHLH2 alone, and no SOHLH1 model exists to show whether the heterodimer reads the same site.",
+  "Whether SOHLH2 has any specificity beyond the canonical E-box is unknown: its three models are in vitro-only, their nearest neighbours are BHLHE40/41 and MYC/MAX motifs, and label agreement is 0 to 0.2."
  ]
 }

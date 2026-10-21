@@ -10,7 +10,7 @@
  ],
  "consensus": "WGATAA",
  "short": "GATA factors are zinc-finger transcription factors that bind the six-base core WGATAA (usually AGATAA or TGATAA) through a single C4-type zinc finger plus a basic tail. Humans have six canonical members, GATA1-6, in two expression groups: GATA1/2/3 in blood, lymphocytes and mammary epithelium, GATA4/5/6 in heart, gut and gonad. The atypical protein TRPS1 carries one GATA-type finger and binds the same core as a repressor. Sites are short and very common, and are often read in pairs or next to an E-box occupied by TAL1. GATA binding sites underlie globin gene switching, cardiac septation and T-helper-2 commitment, and the factors are mutated in congenital heart disease, HDR syndrome and breast cancer.",
- "long": "## The factors\n\nSix canonical human GATA proteins (GATA1-6) share a pair of C4-type zinc fingers. Only the\nC-terminal finger, with its adjacent basic tail, is required for sequence-specific binding; the\nN-terminal finger stabilizes binding to certain palindromic and double sites and is the docking\nsurface for the cofactors ZFPM1/ZFPM2 (FOG1/FOG2). GATA proteins bind DNA as monomers, not as\nobligate dimers, although two molecules can occupy adjacent sites on the same or opposite faces\nof the helix. Expression splits the family in two: GATA1 (erythroid, megakaryocytic, mast,\neosinophil), GATA2 (hematopoietic stem and progenitor cells, endothelium) and GATA3\n(T lymphocytes, mammary luminal epithelium, kidney, parathyroid, inner ear) versus GATA4, GATA5\nand GATA6 (heart, endoderm-derived gut, lung, liver, gonad, pancreas). TRPS1 is an outlier: it\nhas a single GATA-type finger, binds the same core, and represses rather than activates. ZGLP1\nis annotated as GATA-like but its measured specificity in these databases (ATGATCGAT) is not the\nGATA core, and it clusters here only weakly.\n\n## The motif\n\nThe literature consensus is WGATAA, sometimes written (A/T)GATA(A/G) to include the less common\n3' G. The NMR structure of the chicken GATA-1 finger-plus-tail bound to DNA showed that the core\nmodule contacts GAT in the major groove while the basic C-terminal tail wraps into the minor\ngroove to read the 3' AA and the 5' W; this is why the invariant information sits on GATA and\nfalls off sharply outside it. Only about 6 bp carry real information, so a GATA PWM is one of the\nleast specific vertebrate models in routine use. Many database entries are written on the reverse\nstrand as TTATCT or CTTATCT, which is the same site; the data consensus here, AGATAAg, is simply\nthe forward-strand form of the same six-base core. Extended versions exist. Tandem sites in the\narrangement GATAA-N(n)-TTATC are common in real regulatory elements and give the double-GATA\narchetype seen in footprint clustering. The GATA-E-box composite element places WGATAA 8-10 bp\nfrom a CAGNTG E-box and is bound by the TAL1/E47/LMO2/LDB1/GATA1 pentameric complex; JASPAR\nmodels this as a GATA1::TAL1 dimer motif. No experiment distinguishes GATA1 from GATA2 from\nGATA6 by sequence: their in vitro and ChIP-derived models are effectively the same matrix.\n\n## Where it acts\n\nGATA sites are enhancer elements far more than promoter elements, and they are not associated\nwith CpG islands. Because WGATAA occurs roughly once every few kilobases by chance, the human\ngenome contains on the order of a million matches and only a small fraction are occupied in any\ncell type. Occupancy is set by chromatin: GATA1 and GATA2 mark erythroid enhancers, GATA3 marks\nluminal breast and Th2 enhancers, GATA4 and GATA6 mark cardiac and gut enhancers, and the same\nsequence is invisible in the wrong lineage. GATA2 and GATA1 exchange at many of the same sites\nduring erythroid maturation, the so-called GATA switch. Frequent neighbors are the E-box of TAL1,\nKLF1 CACCC boxes, RUNX1, SP1, FOXA1 and estrogen receptor (in breast), and NKX2-5, TBX5 and MEF2\n(in heart). GATA3 and GATA4 both behave as chromatin-opening factors at a subset of their sites.\n\n## Biology and disease\n\nGata1-null mouse embryonic stem cells arrest at the proerythroblast stage and die of apoptosis,\nand a megakaryocyte-selective knockdown causes thrombocytopenia. In humans, GATA1 exon 2\nmutations producing the short GATA1s isoform cause transient abnormal myelopoiesis and Down\nsyndrome-associated acute megakaryoblastic leukemia; other GATA1 mutations cause X-linked\ndyserythropoietic anemia and thrombocytopenia. GATA2 haploinsufficiency causes MonoMAC syndrome\nand familial MDS/AML. GATA3 is required for and sufficient to drive Th2 cytokine expression in\nCD4 T cells; heterozygous mutations cause HDR syndrome (hypoparathyroidism, deafness, renal\ndysplasia), and GATA3 is one of the most frequently mutated genes in luminal breast cancer.\nGATA4 mutations cause septal defects and interact genetically with TBX5. TRPS1 loss causes\ntricho-rhino-phalangeal syndrome; TRPS1 immunostaining is now used as a breast-carcinoma marker.\n\n## Reading a hit\n\nA WGATAA match tells you the family and nothing about the member. Treat any claim that a site is\n\"the GATA1 site\" rather than \"a GATA site\" as an inference from expression or ChIP data, not from\nsequence. Because the informative core is six bases, isolated matches in a random background are\nexpected and carry almost no evidence by themselves; a hit becomes interesting when it is\nconserved, sits in open chromatin of a tissue that expresses a GATA factor, or is doubled or\npaired with an E-box. Two specific confusions are worth knowing. AT-rich homeodomain sites\n(TAAT-containing) and the reverse-complement TTATCT can score on loose GATA models, and vice\nversa. And the CIS-BP human TRPS1 motif is not measured on human TRPS1: it is transferred from a\nDrosophila protein at 63% DNA-binding-domain identity, so the model's fine structure should not\nbe read as TRPS1-specific even though TRPS1 genuinely binds GATA cores. HOCOMOCO GATA models\ngraded A are backed by both ChIP-seq and in vitro SELEX (evidence codes PSM), which is stronger\nsupport than ChIP alone.",
+ "long": "## The factors\n\nSix canonical human GATA proteins (GATA1-6) share a pair of C4-type zinc fingers. Only the\nC-terminal finger, with its adjacent basic tail, is required for sequence-specific binding; the\nN-terminal finger stabilizes binding to certain palindromic and double sites and is the docking\nsurface for the cofactors ZFPM1/ZFPM2 (FOG1/FOG2) [PMID:14985365,23142663]. GATA proteins bind DNA as monomers, not as\nobligate dimers, although two molecules can occupy adjacent sites on the same or opposite faces\nof the helix. Expression splits the family in two: GATA1 (erythroid, megakaryocytic, mast,\neosinophil), GATA2 (hematopoietic stem and progenitor cells, endothelium) and GATA3\n(T lymphocytes, mammary luminal epithelium, kidney, parathyroid, inner ear) versus GATA4, GATA5\nand GATA6 (heart, endoderm-derived gut, lung, liver, gonad, pancreas). TRPS1 is an outlier: it\nhas a single GATA-type finger, binds the same core, and represses rather than activates [PMID:11285235]. ZGLP1\nis annotated as GATA-like but its measured specificity in these databases (ATGATCGAT) is not the\nGATA core, and it clusters here only weakly.\n\n## The motif\n\nThe literature consensus is WGATAA, sometimes written (A/T)GATA(A/G) to include the less common\n3' G [PMID:8321208,8321207]. The NMR structure of the chicken GATA-1 finger-plus-tail bound to DNA showed that the core\nmodule contacts GAT in the major groove while the basic C-terminal tail wraps into the minor\ngroove to read the 3' AA and the 5' W [PMID:8332909]; this is why the invariant information sits on GATA and\nfalls off sharply outside it. Only about 6 bp carry real information, so a GATA PWM is one of the\nleast specific vertebrate models in routine use. Many database entries are written on the reverse\nstrand as TTATCT or CTTATCT, which is the same site; the data consensus here, AGATAAg, is simply\nthe forward-strand form of the same six-base core. Extended versions exist. Tandem sites in the\narrangement GATAA-N(n)-TTATC are common in real regulatory elements and give the double-GATA\narchetype seen in footprint clustering. The GATA-E-box composite element places WGATAA 8-10 bp\nfrom a CAGNTG E-box and is bound by the TAL1/E47/LMO2/LDB1/GATA1 pentameric complex [PMID:9214632]; JASPAR\nmodels this as a GATA1::TAL1 dimer motif. Systematic in vitro surveys find near-identical preferences for closely related DNA-binding domains [PMID:23332764,25215497], and the current in vitro and ChIP-derived models for GATA1-6 are effectively the same AGATAA matrix, so the primary site does not distinguish the paralogues. The one reported difference comes from random-site selection with chicken GATA1, GATA2 and GATA3, which recovered an alternative site, AGATCTTA, bound well by GATA2 and GATA3 but poorly by GATA1 [PMID:8321208].\n\n## Where it acts\n\nGATA sites are enhancer elements far more than promoter elements, and they are not associated\nwith CpG islands. Because WGATAA occurs roughly once every few kilobases by chance, the human\ngenome contains on the order of a million matches and only a small fraction are occupied in any\ncell type. Occupancy is set by chromatin: GATA1 and GATA2 mark erythroid enhancers, GATA3 marks\nluminal breast and Th2 enhancers, GATA4 and GATA6 mark cardiac and gut enhancers, and the same\nsequence is invisible in the wrong lineage. GATA2 and GATA1 exchange at many of the same sites\nduring erythroid maturation, the so-called GATA switch. Frequent neighbors are the E-box of TAL1,\nKLF1 CACCC boxes, RUNX1, SP1, FOXA1 and estrogen receptor (in breast), and NKX2-5, TBX5 and MEF2\n(in heart). GATA3 and GATA4 both behave as chromatin-opening factors at a subset of their sites.\n\n## Biology and disease\n\nGata1-null mouse embryonic stem cells arrest at the proerythroblast stage and die of apoptosis [PMID:1987478,7568185],\nand a megakaryocyte-selective knockdown causes thrombocytopenia. In humans, GATA1 exon 2\nmutations producing the short GATA1s isoform cause transient abnormal myelopoiesis and Down\nsyndrome-associated acute megakaryoblastic leukemia [PMID:12172547]; other GATA1 mutations cause X-linked\ndyserythropoietic anemia and thrombocytopenia. GATA2 haploinsufficiency causes MonoMAC syndrome\nand familial MDS/AML [PMID:21670465]. GATA3 is required for and sufficient to drive Th2 cytokine expression in\nCD4 T cells [PMID:9160750]; heterozygous mutations cause HDR syndrome (hypoparathyroidism, deafness, renal\ndysplasia) [PMID:14985365], and GATA3 is one of the most frequently mutated genes in luminal breast cancer.\nGATA4 mutations cause septal defects and interact genetically with TBX5 [PMID:12845333]. TRPS1 loss causes\ntricho-rhino-phalangeal syndrome [PMID:11285235,12446778]; TRPS1 immunostaining is now used as a breast-carcinoma marker.\n\n## Reading a hit\n\nA WGATAA match tells you the family and nothing about the member. Treat any claim that a site is\n\"the GATA1 site\" rather than \"a GATA site\" as an inference from expression or ChIP data, not from\nsequence. Because the informative core is six bases, isolated matches in a random background are\nexpected and carry almost no evidence by themselves; a hit becomes interesting when it is\nconserved, sits in open chromatin of a tissue that expresses a GATA factor, or is doubled or\npaired with an E-box. Two specific confusions are worth knowing. AT-rich homeodomain sites\n(TAAT-containing) and the reverse-complement TTATCT can score on loose GATA models, and vice\nversa. And the CIS-BP human TRPS1 motif is not measured on human TRPS1: it is transferred from a\nDrosophila protein at 63% DNA-binding-domain identity [PMID:25215497], so the model's fine structure should not\nbe read as TRPS1-specific even though TRPS1 genuinely binds GATA cores. HOCOMOCO GATA models\ngraded A are backed by both ChIP-seq and in vitro SELEX (evidence codes PSM), which is stronger\nsupport than ChIP alone.",
  "caveats": "The core is only 6 bp, so chance matches are abundant and a single hit is weak evidence. All six canonical paralogues share one matrix; sequence cannot assign a member, and neither can ChIP-seq in a cell expressing several of them. Reverse-strand renderings (CTTATCT) and AT-rich homeodomain sites are the two commonest misreadings. The CIS-BP TRPS1 model is inferred from a Drosophila protein, and the HOCOMOCO ZGLP1 model does not match the GATA core despite ZGLP1's GATA-like domain annotation. Vierstra archetypes labelled GATA/TAL describe a composite element, not a claim that GATA and TAL1 motifs are separable.",
  "refs": [
   {
@@ -72,6 +72,99 @@
    "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
    "pmid": "25215497",
    "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  },
+  {
+   "cite": "Ko LJ, Engel JD. DNA-binding specificities of the GATA transcription factor family. Mol Cell Biol 1993;13:4011-22.",
+   "pmid": "8321208",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8321208/"
+  },
+  {
+   "cite": "Merika M, Orkin SH. DNA-binding specificity of GATA family transcription factors. Mol Cell Biol 1993;13:3999-4010.",
+   "pmid": "8321207",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/8321207/"
+  },
+  {
+   "cite": "Weiss MJ, Orkin SH. Transcription factor GATA-1 permits survival and maturation of erythroid precursors by preventing apoptosis. Proc Natl Acad Sci U S A 1995;92:9623-7.",
+   "pmid": "7568185",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/7568185/"
+  },
+  {
+   "cite": "Wechsler J, Greene M, McDevitt MA, et al. Acquired mutations in GATA1 in the megakaryoblastic leukemia of Down syndrome. Nat Genet 2002;32:148-52.",
+   "pmid": "12172547",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12172547/"
+  },
+  {
+   "cite": "Hsu AP, Sampaio EP, Khan J, et al. Mutations in GATA2 are associated with the autosomal dominant and sporadic monocytopenia and mycobacterial infection (MonoMAC) syndrome. Blood 2011;118:2653-5.",
+   "pmid": "21670465",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21670465/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1991,
+   "finding": "Disrupting the X-linked Gata1 gene in embryonic stem cells blocks their contribution to mature red cells in chimeric mice, showing that the factor binding erythroid GATA elements is required and that other GATA proteins cannot substitute.",
+   "methods": "Gene targeting, chimeric mice",
+   "confidence": "medium",
+   "pmids": [
+    "1987478"
+   ],
+   "open": "Which GATA elements carry the requirement, and why GATA2 present in the same precursors does not compensate."
+  },
+  {
+   "year": 1993,
+   "finding": "Random-site selection with GATA1, GATA2 and GATA3 confirms the WGATAR consensus and AGATAA as the high-affinity core, but also recovers high-affinity non-consensus sites and partly distinct preferences, notably an AGATCTTA site bound well by GATA2 and GATA3 and poorly by GATA1.",
+   "methods": "PCR-based random-site selection (SELEX), EMSA, cotransfection",
+   "confidence": "high",
+   "pmids": [
+    "8321208",
+    "8321207"
+   ],
+   "open": "Whether the paralogue differences seen in vitro are used at genomic sites."
+  },
+  {
+   "year": 1993,
+   "finding": "The NMR structure of the chicken GATA-1 C-terminal finger plus basic tail on DNA shows the zinc module in the major groove and the tail wrapping into the minor groove, with about 8 bp in contact; the tail is an essential determinant of specific binding.",
+   "methods": "Multidimensional heteronuclear NMR",
+   "confidence": "high",
+   "pmids": [
+    "8332909"
+   ],
+   "open": "The N-terminal finger was absent, so its role in site choice remained unexplained."
+  },
+  {
+   "year": 1997,
+   "finding": "In erythroid cells LMO2 bridges GATA1, TAL1, E2A and LDB1 into one DNA-binding complex that recognizes an E-box followed about 9 bp downstream by a GATA site, defining the GATA-E-box composite element.",
+   "methods": "Co-immunoprecipitation, binding-site selection, EMSA, transactivation assays",
+   "confidence": "medium",
+   "pmids": [
+    "9214632"
+   ]
+  },
+  {
+   "year": 2012,
+   "finding": "Crystal structures of the full GATA3 DNA-binding domain show both zinc fingers wrapping a palindromic GATA site, which raises affinity and kinetic stability, or the two fingers binding GATA sites on separate DNA molecules, a possible basis for DNA looping.",
+   "methods": "X-ray crystallography, in-gel FRET",
+   "confidence": "high",
+   "pmids": [
+    "23142663"
+   ],
+   "open": "Whether the DNA-bridging mode occurs at endogenous loci."
+  },
+  {
+   "year": 2014,
+   "finding": "High-throughput SELEX and protein-binding-microarray surveys extend measured models across the family and show that closely related DNA-binding domains have near-identical preferences; the GATA1-6 matrices now in JASPAR, HOCOMOCO and CIS-BP converge on AGATAA, and the CIS-BP TRPS1 model is inferred from a Drosophila protein rather than measured.",
+   "methods": "HT-SELEX, ChIP-seq, protein-binding microarrays, homology-based inference",
+   "confidence": "high",
+   "pmids": [
+    "23332764",
+    "25215497"
+   ],
+   "open": "The 1993 report of paralogue-specific sites has not been reconciled with these identical matrices."
+  }
+ ],
+ "open": [
+  "Whether GATA paralogues differ in intrinsic sequence preference is unsettled: 1993 random-site selection found an alternative AGATCTTA site bound well by GATA2 and GATA3 but poorly by GATA1, whereas the HT-SELEX, PBM and ChIP-derived matrices for GATA1-6 in the current collections are effectively identical.",
+  "How the N-terminal finger contributes to site choice at genomic double-GATA sites is unresolved: GATA3 structures show it can either wrap a palindromic site together with the C-terminal finger or bind a second DNA molecule, and which mode operates in cells is not known.",
+  "ZGLP1 is annotated as GATA-like, yet its in vitro-supported HOCOMOCO model (ATGATCGAT, grade A) does not contain the WGATAA core, so whether it should be read as a divergent GATA-family specificity or a separate one is not settled by the data."
  ]
 }

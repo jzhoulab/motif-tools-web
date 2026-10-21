@@ -8,7 +8,7 @@
  ],
  "consensus": "TTCATTCATTCA",
  "short": "HBP1 is a single HMG-box transcriptional repressor and cell-cycle inhibitor, identified as a target of the retinoblastoma protein family. Its highest-affinity site, found in the human CD2 locus control region, is the twelve-base element TTCATTCATTCA, which is explicitly not the canonical HMG-box consensus used by SOX and TCF/LEF proteins; read on the other strand it is three tandem copies of TGAATGAA, the octamer that CIC recognizes. HBP1 represses the N-MYC and cyclin D1 promoters, opposes E2F at N-MYC, activates p16 and p21, and arrests the cell cycle even under strong growth signals. It is suppressed by AKT signaling and by several microRNAs, and behaves as a tumor suppressor without being a commonly mutated cancer gene.",
- "long": "## The factors\n\nOne protein. HBP1 (HMG-box transcription factor 1) is a roughly 514-residue nuclear protein with\na single HMG box. It was cloned twice independently: first by expression cloning in a potassium\ntransport-defective yeast screen, and then as a repressor that binds the retinoblastoma family.\nIt carries two RB-interaction motifs, LXCXE and IXCXE, and interacts selectively with RB and\np130 but not p107; HBP1, RB and p130 all rise during differentiation while p107 falls. HBP1 is\nbroadly expressed. Functionally it is a repressor and a brake on proliferation: it represses the\nN-MYC promoter and acts there as the opposite signal to E2F-1, represses CCND1, activates CDKN2A\n(p16) and CDKN1A (p21), and its expression arrests the cell cycle even in the presence of\noptimal proliferation signals. Much of its effect is exerted through proteins rather than DNA -\nit neutralizes LEF1, TCF4 and MYC in the WNT/beta-catenin pathway. It sits downstream of growth\nfactor signaling in two ways: AKT phosphorylates HBP1 and inhibits its transcriptional activity,\nand the PI3K/PKB/FOXO pathway controls HBP1 transcription by regulating FOXO binding to the HBP1\npromoter.\n\n## The motif\n\nThe consensus given here, TTCATTCATTCA, is the highest-affinity HBP1 binding sequence described.\nIt was found in HSS3 of the human CD2 locus control region and binds more tightly than the HBP1\nsites reported earlier in cell-cycle promoters. The authors noted explicitly that it differs\nfrom the canonical (T/A)(T/A)CAA(A/T)G consensus of other HMG-box proteins, so HBP1 should not\nbe scanned with a SOX or TCF/LEF model. The element is a tandem trimer: read on the opposite\nstrand it is TGAATGAATGAA, three copies of the octamer TGAATGAA that CIC binds, and both\nproteins are HMG-box repressors, which makes sequence-only discrimination between them\nimpossible at the level of a single octamer. Length matters a great deal here. An exact twelve-\nbase match is expected only a few hundred times in a 3.1 Gb double-stranded genome, which makes\na full match informative; a single TTCATTCA octamer is expected of order a hundred thousand\ntimes and is not. The motif model carried in these databases is of no use for scanning: the sole\nentry, CIS-BP M00194_2.00, derived from mouse Hbp1 at full DNA-binding-domain identity, contains\n1.1 bits of information in total, and its consensus string collapses to a single degenerate\nbase. Species is not the problem - the DNA-binding domains are identical - the problem is that\nthe model records almost no preference. Its best similarity to any motif outside the family is\n0.797, and being a one-member family it has no within-family comparison.\n\n## Where it acts\n\nThe place HBP1 binding was best characterized is unusual. HSS3 of the hCD2 locus control region\nhas no enhancer activity of its own but is required to prevent position-effect variegation:\ntransgenes carrying an HSS3 deletion of the HBP1 sites variegate when they integrate into\ncentromeric or telomeric heterochromatin. The interpretation offered was architectural - HBP1\nbinds and bends the DNA, making protein-DNA and protein-protein contacts more likely and raising\nthe probability that an active locus is established. Elsewhere HBP1 is documented at cell-cycle\ngene promoters, including N-MYC, CCND1, CDKN2A, CDKN1A and DNMT1. There is no genome-scale map\nof HBP1 occupancy in these collections, and no HBP1 model from ChIP-seq in any of the four\ndatabases.\n\n## Biology and disease\n\nHBP1 behaves as a cell-cycle inhibitor and candidate tumor suppressor. It contributes to\noncogene-induced senescence downstream of RAS and to terminal differentiation, and its\nrepression of DNMT1 links it to the senescence program. It is not among the frequently mutated\ncancer driver genes, but its expression is lower in several tumor types than in matched normal\ntissue, and alterations of HBP1 have been reported in invasive breast cancer. Loss of HBP1\nexpression is more often post-transcriptional or signaling-driven than mutational: miR-155,\nmiR-17-92 and miR-29a each reduce HBP1 levels in different tumor contexts, and growth factor\nsignaling through PI3K/PKB/FOXO downregulates HBP1 transcription while AKT inactivates the\nprotein directly.\n\n## Reading a hit\n\nDo not use the database model for this family; at 1.1 bits it will match essentially anywhere.\nIf you want HBP1 candidate sites, scan the published element TTCATTCATTCA, and treat a full\ntwelve-base match as meaningful and a single octamer as not. The main interpretive hazard is\nCIC: the octamer unit is identical, so a TTCATTCA or TGAATGAA hit is compatible with either\nprotein, and expression data or the presence of a tandem trimer versus a lone octamer is what\nseparates them. Do not read a SOX- or TCF/LEF-type WWCAAWG match as an HBP1 site; HBP1 was\nexplicitly shown not to use that consensus. Because there is no ChIP-derived HBP1 model here,\nnothing in this entry is contaminated by indirect binding - but equally, nothing has been tested\ngenome-wide. Finally, remember that a large part of HBP1's activity is protein-protein: absence\nof a site near a gene HBP1 regulates does not mean HBP1 is not involved.\n",
+ "long": "## The factors\n\nOne protein. HBP1 (HMG-box transcription factor 1) is a roughly 514-residue nuclear protein with\na single HMG box. It was cloned twice independently: first by expression cloning in a potassium\ntransport-defective yeast screen [PMID:7937077], and then as a repressor that binds the retinoblastoma family [PMID:9030690].\nIt carries two RB-interaction motifs, LXCXE and IXCXE, and interacts selectively with RB and\np130 but not p107; HBP1, RB and p130 all rise during differentiation while p107 falls [PMID:9030690]. HBP1 is\nbroadly expressed. Functionally it is a repressor and a brake on proliferation: it represses the\nN-MYC promoter and acts there as the opposite signal to E2F-1 [PMID:9030690], represses CCND1 [PMID:11500377], activates CDKN2A\n(p16) and CDKN1A (p21) [PMID:23249948], and its expression arrests the cell cycle even in the presence of\noptimal proliferation signals [PMID:9030690]. Much of its effect is exerted through proteins rather than DNA -\nit neutralizes LEF1, TCF4 and MYC in the WNT/beta-catenin pathway [PMID:11500377,30683982]. It sits downstream of growth\nfactor signaling in two ways: AKT phosphorylates HBP1 and inhibits its transcriptional activity [PMID:30683982],\nand the PI3K/PKB/FOXO pathway controls HBP1 transcription by regulating FOXO binding to the HBP1\npromoter [PMID:24762137].\n\n## The motif\n\nThe consensus given here, TTCATTCATTCA, is the highest-affinity HBP1 binding sequence described.\nIt was found in HSS3 of the human CD2 locus control region and binds more tightly than the HBP1\nsites reported earlier in cell-cycle promoters [PMID:10562551]. The authors noted explicitly that it differs\nfrom the canonical (T/A)(T/A)CAA(A/T)G consensus of other HMG-box proteins [PMID:10562551,8190643], so HBP1 should not\nbe scanned with a SOX or TCF/LEF model. The element is a tandem trimer: read on the opposite\nstrand it is TGAATGAATGAA, three copies of the octamer TGAATGAA that CIC binds, and both\nproteins are HMG-box repressors, which makes sequence-only discrimination between them\nimpossible at the level of a single octamer. Length matters a great deal here. An exact twelve-\nbase match is expected only a few hundred times in a 3.1 Gb double-stranded genome, which makes\na full match informative; a single TTCATTCA octamer is expected of order a hundred thousand\ntimes and is not. The motif model carried in these databases is of no use for scanning: the sole\nentry, CIS-BP M00194_2.00, derived from mouse Hbp1 at full DNA-binding-domain identity, contains\n1.1 bits of information in total [PMID:25215497], and its consensus string collapses to a single degenerate\nbase. Species is not the problem - the DNA-binding domains are identical - the problem is that\nthe model records almost no preference. Its best similarity to any motif outside the family is\n0.797, and being a one-member family it has no within-family comparison.\n\n## Where it acts\n\nThe place HBP1 binding was best characterized is unusual. HSS3 of the hCD2 locus control region\nhas no enhancer activity of its own but is required to prevent position-effect variegation:\ntransgenes carrying an HSS3 deletion of the HBP1 sites variegate when they integrate into\ncentromeric or telomeric heterochromatin [PMID:10562551]. The interpretation offered was architectural - HBP1\nbinds and bends the DNA, making protein-DNA and protein-protein contacts more likely and raising\nthe probability that an active locus is established [PMID:10562551]. Elsewhere HBP1 is documented at cell-cycle\ngene promoters, including N-MYC, CCND1, CDKN2A, CDKN1A and DNMT1 [PMID:9030690,11500377,23249948]. There is no genome-scale map\nof HBP1 occupancy in these collections, and no HBP1 model from ChIP-seq in any of the four\ndatabases.\n\n## Biology and disease\n\nHBP1 behaves as a cell-cycle inhibitor and candidate tumor suppressor. It contributes to\noncogene-induced senescence downstream of RAS and to terminal differentiation, and its\nrepression of DNMT1 links it to the senescence program [PMID:23249948]. It is not among the frequently mutated\ncancer driver genes, but its expression is lower in several tumor types than in matched normal\ntissue, and alterations of HBP1 have been reported in invasive breast cancer [PMID:17616670]. Loss of HBP1\nexpression is more often post-transcriptional or signaling-driven than mutational: miR-155,\nmiR-17-92 and miR-29a each reduce HBP1 levels in different tumor contexts [PMID:30683982], and growth factor\nsignaling through PI3K/PKB/FOXO downregulates HBP1 transcription while AKT inactivates the\nprotein directly [PMID:24762137,30683982].\n\n## Reading a hit\n\nDo not use the database model for this family; at 1.1 bits it will match essentially anywhere.\nIf you want HBP1 candidate sites, scan the published element TTCATTCATTCA, and treat a full\ntwelve-base match as meaningful and a single octamer as not. The main interpretive hazard is\nCIC: the octamer unit is identical, so a TTCATTCA or TGAATGAA hit is compatible with either\nprotein, and expression data or the presence of a tandem trimer versus a lone octamer is what\nseparates them. Do not read a SOX- or TCF/LEF-type WWCAAWG match as an HBP1 site; HBP1 was\nexplicitly shown not to use that consensus [PMID:10562551]. Because there is no ChIP-derived HBP1 model here,\nnothing in this entry is contaminated by indirect binding - but equally, nothing has been tested\ngenome-wide. Finally, remember that a large part of HBP1's activity is protein-protein: absence\nof a site near a gene HBP1 regulates does not mean HBP1 is not involved.\n",
  "caveats": "Low confidence in any motif-based call. The single database model for HBP1 carries 1.1 bits and is unusable for scanning; the entry here gives the published high-affinity site instead, which rests mainly on one study of the human CD2 locus control region. The octamer unit of that site is identical to the CIC recognition octamer read on the other strand, so single-octamer matches cannot be assigned to HBP1 rather than CIC. A full twelve-base match is rare enough to be informative; a partial one is not. HBP1 also works substantially through protein-protein antagonism of LEF1, TCF4 and MYC, so its regulatory targets need not contain an HBP1 site at all.",
  "refs": [
   {
@@ -66,5 +66,88 @@
    "pmid": "25215497",
    "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1994,
+   "finding": "HBP1 is cloned from rat by its ability to suppress a potassium transport defect in yeast, turns out to encode a 513-residue HMG-box protein unrelated to any transporter, and is found to rise with differentiation in adipocyte and myogenic cell lines.",
+   "methods": "Expression cloning in yeast, Northern blots",
+   "confidence": "low",
+   "pmids": [
+    "7937077"
+   ],
+   "open": "Neither a DNA-binding site nor a transcriptional function had been demonstrated."
+  },
+  {
+   "year": 1997,
+   "finding": "HBP1 is isolated as a target of the retinoblastoma family: it carries LXCXE and IXCXE motifs, binds RB and p130 but not p107, represses the N-MYC promoter in opposition to E2F-1, and its expression arrests the cell cycle despite optimal growth signals.",
+   "methods": "Interaction cloning, co-immunoprecipitation, reporter assays, cell-cycle analysis",
+   "confidence": "medium",
+   "pmids": [
+    "9030690"
+   ]
+  },
+  {
+   "year": 1998,
+   "finding": "HBP1 is shown to separate cell-cycle exit from differentiation: in C2C12 myoblasts it blocks MyoD-family-driven muscle differentiation while leaving cell-cycle exit intact, with the outcome set by the RB/HBP1 ratio.",
+   "methods": "Ectopic expression in muscle cells, reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "9671483"
+   ]
+  },
+  {
+   "year": 1999,
+   "finding": "The highest-affinity HBP1 site is identified as TTCATTCATTCA in HSS3 of the human CD2 locus control region, explicitly different from the canonical HMG-box consensus; deleting it makes transgenes variegate when they land in heterochromatin.",
+   "methods": "Site selection and binding assays, transgenic mice",
+   "confidence": "medium",
+   "pmids": [
+    "10562551"
+   ],
+   "open": "Whether this element is used at HBP1's cell-cycle target promoters, or anywhere else in the genome, was not tested."
+  },
+  {
+   "year": 2001,
+   "finding": "HBP1 is shown to inhibit Wnt signaling by binding TCF/LEF proteins and blocking their DNA binding, and to repress cyclin D1: a large part of its activity does not require an HBP1 site at all.",
+   "methods": "Co-immunoprecipitation, EMSA, reporter and growth assays",
+   "confidence": "medium",
+   "pmids": [
+    "11500377"
+   ]
+  },
+  {
+   "year": 2013,
+   "finding": "During senescence HBP1 represses DNMT1 through a site at -115 to -134 of its promoter while activating p16, and the two opposite activities are shown to proceed through different DNA sequences and different protein acetylation states.",
+   "methods": "Promoter mapping, chromatin immunoprecipitation, senescence assays",
+   "confidence": "medium",
+   "pmids": [
+    "23249948"
+   ],
+   "open": "Leaves unclear what single sequence, if any, defines an HBP1 site."
+  },
+  {
+   "year": 2014,
+   "finding": "HBP1 is placed downstream of growth factor signaling as a FOXO target: FOXO binds a conserved site in the HBP1 promoter, PDGF and FGF lower HBP1 mRNA through PI3K and PKB, and HBP1 knockdown increases fibroblast proliferation.",
+   "methods": "Microarray meta-analysis, reporter assays, chromatin immunoprecipitation, knockdown",
+   "confidence": "medium",
+   "pmids": [
+    "24762137"
+   ]
+  },
+  {
+   "year": 2019,
+   "finding": "A synthesis of the field argues that HBP1 behaves as a tumor suppressor without being a recurrently mutated driver, lost instead through microRNAs such as miR-155, miR-17-92 and miR-29a and through direct AKT phosphorylation.",
+   "methods": "Review of published genetic, expression and signaling data",
+   "confidence": "low",
+   "pmids": [
+    "30683982"
+   ]
+  }
+ ],
+ "open": [
+  "Whether TTCATTCATTCA is the sequence HBP1 uses generally is unresolved: it was defined at one locus, the cell-cycle promoters HBP1 regulates were mapped to different and shorter sequences, and the repression and activation functions were shown to work through different DNA sequences, so no single element has been validated across targets.",
+  "Whether HBP1 has any strong intrinsic sequence preference is unclear: the published CD2 element is a high-affinity site, yet the only in vitro model in these databases carries 1.1 bits, and no modern high-throughput measurement of HBP1 specificity has been published to settle whether the weak model reflects the protein or a failed assay.",
+  "Nothing distinguishes an HBP1 site from a CIC site by sequence: the HBP1 element read on the other strand is three copies of the CIC octamer TGAATGAA, no genome-wide occupancy map exists for either protein in these collections, and whether the two repressors compete at shared sequences has not been examined.",
+  "How much of HBP1's regulatory output requires DNA binding is open: it represses cyclin D1 and Wnt targets by sequestering LEF1, TCF4 and MYC, so the relative contributions of site occupancy and protein-protein antagonism at any given target gene are unmeasured."
  ]
 }

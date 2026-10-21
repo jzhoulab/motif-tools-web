@@ -11,7 +11,7 @@
  ],
  "consensus": "TGCRCNC",
  "short": "MTF1 (MTF-1) is a six-finger C2H2 zinc-finger protein that binds the metal response element, a short TGCRCNC core first defined as the 12-base-pair repeat that makes metallothionein promoters metal-inducible. MTF1 is constitutively present but only becomes an activator when free zinc rises, so the same site is quiet in resting cells and strongly occupied after exposure to zinc, cadmium, copper or other heavy metals, and under oxidative and hypoxic stress. Metallothionein promoters carry several MREs in tandem, and that clustering, rather than any single site, is what produces a large induction. Mouse Mtf1 knockout is embryonic-lethal with liver degeneration. Because the core is only seven informative bases, isolated genomic matches are common and mostly meaningless.",
- "long": "## The factors\n\nMTF1 is a single gene with no paralogue that shares its specificity; the human protein was cloned in 1994 after the mouse factor was identified biochemically as the zinc-responsive activity binding the metallothionein-I enhancer. Its DNA-binding region is a tandem array of six C2H2 zinc fingers, and the fingers differ from each other in how tightly they hold zinc. That heterogeneity is the basis of metal sensing: at low free zinc some fingers are unloaded and the array binds DNA poorly, while rising zinc fills them and licenses binding. Three separate transactivation domains (acidic, proline-rich and serine/threonine-rich) lie C-terminal to the fingers, and nuclear import, phosphorylation and interaction with coactivators add further layers of regulation; the Hippo kinases LATS1 and LATS2 phosphorylate MTF1 and dampen the heavy-metal response. Homologues exist from Drosophila to mammals and the protein is broadly expressed, with the highest activity in liver.\n\n## The motif\n\nThe metal response element was defined genetically before any protein was known: a 12-base-pair motif repeated several times in metallothionein promoters was shown to be sufficient to make a heterologous gene metal-inducible, and fine mapping narrowed the essential part to a core now written TGCRCNC (reverse complement GNGYGCA). Only about seven positions carry real information, and the strongest of these are the invariant TGC and the following purine. The in vitro matrices in this family extend the core with flanking preferences: the HT-SELEX and methyl-SELEX word is GCCGTGTGCAAAA (reverse complement TTTTGCACACGGC), which is the TGCACAC core with a 5' GCC and a 3' A-tract, and JASPAR MA0863.1 is the same element written on the other strand. The family consensus quoted here is the literature core, TGCRCNC, because that is what functional work defines; the longer database words reflect flanking base preferences measured in vitro and should not be treated as required. Individual MREs vary considerably and have been grouped into subtypes with different affinities. There are no half-sites and no dimerization: MTF1 binds as a monomer to a single core, and the potency of a promoter comes from having several cores in a row.\n\n## Where it acts\n\nMREs sit in proximal promoters, typically within a few hundred base pairs of the start site, and the classic arrangement is a tandem cluster: the mouse and human metallothionein promoters carry five or more. Beyond metallothioneins, target-gene searches identified zinc transporters (including SLC30A1/ZnT1), selenoprotein and glutathione-pathway genes, and stress-response genes, so the element marks a metal-and-oxidative-stress promoter module rather than a tissue-specific enhancer. Occupancy is inducible, which sets this motif apart from most in the atlas: in unstressed cells many strong MREs are unoccupied, and the same promoter can go from no signal to heavy signal within an hour of zinc or cadmium exposure. MTF1 also handles the opposite extreme, activating a different gene set under copper starvation, so the direction of the response depends on context. No named composite element pairs MTF1 with another factor, but MREs frequently sit next to antioxidant response elements and major late transcription factor sites in the same promoters.\n\n## Biology and disease\n\nCells lacking MTF1 lose both basal and metal-induced metallothionein expression and become hypersensitive to cadmium. Mouse Mtf1 knockout dies around embryonic day 14 with liver degeneration; Drosophila MTF-1 null flies are viable in normal conditions but cannot survive heavy-metal load or copper starvation, which frames the factor as a homeostatic buffer rather than a developmental regulator. In humans the interest is largely toxicological and oncological: MTF1 mediates cadmium responses implicated in prostate carcinogenesis, contributes to chemoresistance through metallothionein induction, and has been recovered in screens as a modifier of mutant huntingtin toxicity. There is no classical Mendelian MTF1 disease.\n\n## Reading a hit\n\nTGCRCNC is short. A genome of three billion base pairs contains millions of matches, the great majority of which are never bound, so a single MRE match in a promoter is weak evidence on its own. Two things strengthen it: a tandem cluster of two or more cores within about 100 base pairs, and a promoter whose expression is metal-, zinc- or cadmium-responsive. Conversely, absence of MTF1 signal in a resting-cell ChIP dataset says nothing, because occupancy requires induction. Paralogue ambiguity is not an issue here, since no other human factor is known to read this word, but the short core does overlap by chance with parts of longer GC-rich motifs, so check whether a hit is better explained by a neighbouring family. The in vitro (S/M) evidence behind the HOCOMOCO and CIS-BP matrices supports direct binding, so this is one motif where the label is well grounded.",
+ "long": "## The factors\n\nMTF1 is a single gene with no paralogue that shares its specificity; the human protein was cloned in 1994 after the mouse factor was identified biochemically as the zinc-responsive activity binding the metallothionein-I enhancer [PMID:3208749,8467794,8065932]. Its DNA-binding region is a tandem array of six C2H2 zinc fingers [PMID:8467794], and the fingers differ from each other in how tightly they hold zinc. That heterogeneity is the basis of metal sensing: at low free zinc some fingers are unloaded and the array binds DNA poorly, while rising zinc fills them and licenses binding [PMID:8026472]. Three separate transactivation domains (acidic, proline-rich and serine/threonine-rich) lie C-terminal to the fingers [PMID:7610056], and nuclear import, phosphorylation and interaction with coactivators add further layers of regulation; the Hippo kinases LATS1 and LATS2 phosphorylate MTF1 and dampen the heavy-metal response [PMID:35027733]. Homologues exist from Drosophila to mammals and the protein is broadly expressed, with the highest activity in liver.\n\n## The motif\n\nThe metal response element was defined genetically before any protein was known: a 12-base-pair motif repeated several times in metallothionein promoters was shown to be sufficient to make a heterologous gene metal-inducible [PMID:6095286], and fine mapping narrowed the essential part to a core now written TGCRCNC (reverse complement GNGYGCA) [PMID:2725504]. Only about seven positions carry real information, and the strongest of these are the invariant TGC and the following purine. The in vitro matrices in this family extend the core with flanking preferences: the HT-SELEX and methyl-SELEX word is GCCGTGTGCAAAA (reverse complement TTTTGCACACGGC), which is the TGCACAC core with a 5' GCC and a 3' A-tract, and JASPAR MA0863.1 is the same element written on the other strand. The family consensus quoted here is the literature core, TGCRCNC, because that is what functional work defines; the longer database words reflect flanking base preferences measured in vitro and should not be treated as required. Individual MREs vary considerably and have been grouped into subtypes with different affinities. There are no half-sites and no dimerization: MTF1 binds as a monomer to a single core, and the potency of a promoter comes from having several cores in a row.\n\n## Where it acts\n\nMREs sit in proximal promoters, typically within a few hundred base pairs of the start site, and the classic arrangement is a tandem cluster: the mouse and human metallothionein promoters carry five or more [PMID:6095286,8467794]. Beyond metallothioneins, target-gene searches identified zinc transporters (including SLC30A1/ZnT1), selenoprotein and glutathione-pathway genes, and stress-response genes, so the element marks a metal-and-oxidative-stress promoter module rather than a tissue-specific enhancer [PMID:11266553]. Occupancy is inducible, which sets this motif apart from most in the atlas: in unstressed cells many strong MREs are unoccupied, and the same promoter can go from no signal to heavy signal within an hour of zinc or cadmium exposure. MTF1 also handles the opposite extreme, activating a different gene set under copper starvation [PMID:15833915], so the direction of the response depends on context. No named composite element pairs MTF1 with another factor, but MREs frequently sit next to antioxidant response elements and major late transcription factor sites in the same promoters.\n\n## Biology and disease\n\nCells lacking MTF1 lose both basal and metal-induced metallothionein expression and become hypersensitive to cadmium [PMID:8026472,9582278]. Mouse Mtf1 knockout dies around embryonic day 14 with liver degeneration [PMID:9582278]; Drosophila MTF-1 null flies are viable in normal conditions but cannot survive heavy-metal load or copper starvation [PMID:12505988,15833915], which frames the factor as a homeostatic buffer rather than a developmental regulator. In humans the interest is largely toxicological and oncological, though the evidence is from cell and animal models rather than from patients: cadmium induces MTF1 in prostate epithelial cells, and silencing it blocks the spheroid formation and xenograft growth of cadmium-transformed cells [PMID:40520016]; MTF1-driven metallothionein induction raises the cisplatin IC50 of cancer lines several-fold, and re-expressing MT1A or MT2A partly restores resistance to MTF1-null cells [PMID:39920630]; and a genome-wide screen in mouse embryonic stem cells recovered Mtf1 as a suppressor of mutant huntingtin toxicity, with forced expression reducing aggregates and motor defects in R6/2 mice [PMID:37407555]. There is no classical Mendelian MTF1 disease.\n\n## Reading a hit\n\nTGCRCNC is short. A genome of three billion base pairs contains millions of matches, the great majority of which are never bound, so a single MRE match in a promoter is weak evidence on its own. Two things strengthen it: a tandem cluster of two or more cores within about 100 base pairs, and a promoter whose expression is metal-, zinc- or cadmium-responsive. Conversely, absence of MTF1 signal in a resting-cell ChIP dataset says nothing, because occupancy requires induction. Paralogue ambiguity is not an issue here, since no other human factor is known to read this word, but the short core does overlap by chance with parts of longer GC-rich motifs, so check whether a hit is better explained by a neighbouring family. The in vitro (S/M) evidence behind the HOCOMOCO and CIS-BP matrices supports direct binding, so this is one motif where the label is well grounded.",
  "caveats": "The protein-to-motif link is solid: MREs were defined functionally, MTF1 was purified on them, and the database matrices rest on in vitro selection rather than ChIP alone. The weakness is length. With roughly seven informative positions, matches occur by chance throughout the genome and most are not bound, so a lone MRE is not evidence of regulation. Require a tandem cluster, or a demonstrated metal response, before calling a site functional. Occupancy is also conditional: MTF1 only binds when free zinc is elevated, so both positive and negative ChIP results depend entirely on the metal status of the cells assayed. The longer in vitro consensus adds flanking preferences that functional MREs frequently violate.",
  "refs": [
   {
@@ -73,6 +73,109 @@
    "cite": "Han H, Nakaoka HJ, Hofmann L, et al. The Hippo pathway kinases LATS1 and LATS2 attenuate cellular responses to heavy metals through phosphorylating MTF1. Nat Cell Biol 2022;24:74-87.",
    "pmid": "35027733",
    "url": "https://pubmed.ncbi.nlm.nih.gov/35027733/"
+  },
+  {
+   "cite": "Chandrasekaran B, Tyagi B, Tyagi A, et al. Mechanistic role of metal-responsive transcription factor-1 (MTF1) in cadmium-induced prostate carcinogenesis. Int J Biol Sci 2025;21:3614-3630.",
+   "pmid": "40520016",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40520016/"
+  },
+  {
+   "cite": "Chen H, Xu Y, Chen D, et al. The Hippo pathway promotes platinum-based chemotherapy by inhibiting MTF1-dependent heavy metal response. BMC Cancer 2025;25:223.",
+   "pmid": "39920630",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39920630/"
+  },
+  {
+   "cite": "Ferlazzo GM, Gambetta AM, Amato S, et al. Genome-wide screening in pluripotent cells identifies Mtf1 as a suppressor of mutant huntingtin toxicity. Nat Commun 2023;14:3962.",
+   "pmid": "37407555",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37407555/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1984,
+   "finding": "Deletion and linker-scanning mutants of the mouse metallothionein-I promoter, assayed by microinjection into mouse eggs, pin metal regulation to a 12-base-pair sequence repeated several times in the promoter; one copy placed in a thymidine kinase promoter confers limited metal regulation and two copies confer as much as the whole MT-I promoter.",
+   "methods": "Promoter mutagenesis, oligonucleotide insertion, microinjection into mouse eggs",
+   "confidence": "high",
+   "pmids": [
+    "6095286"
+   ],
+   "open": "No protein binding the element had been identified."
+  },
+  {
+   "year": 1988,
+   "finding": "A zinc-inducible binding activity, named MTF-1, is detected on the mouse MREd element, and the zinc-dependent formation of the complex in vitro tracks zinc-inducible transcription in cells; Sp1 binds the same element with a similar but non-identical interference pattern.",
+   "methods": "Band-shift assays, methylation interference, transient transfection",
+   "confidence": "medium",
+   "pmids": [
+    "3208749"
+   ],
+   "open": "It was unclear whether MTF-1 or Sp1 carried the metal response, and MTF-1 had not been cloned."
+  },
+  {
+   "year": 1989,
+   "finding": "Point mutagenesis of MREd separates the two: the conserved core TGCPuCXC is critical for metal induction while substitutions in the flanks, including the putative Sp1 site, barely matter, and two copies act cooperatively.",
+   "methods": "Point mutagenesis with reporter assays in transient transfection",
+   "confidence": "high",
+   "pmids": [
+    "2725504"
+   ]
+  },
+  {
+   "year": 1993,
+   "finding": "Mouse MTF-1 is cloned: a 72.5-kDa protein with six zinc fingers and separate acidic and proline-rich activation domains, whose DNA complex increases in zinc-treated cells and whose ectopic expression activates MRE-driven reporters; the human gene follows in 1994, and mapping of the activation domains in 1995 shows they work constitutively, so metal responsiveness is conferred by the zinc-finger region together with the acidic and proline-rich region in the intact protein.",
+   "methods": "cDNA cloning, band-shift assays, reporter assays, GAL4 domain-swap analysis",
+   "confidence": "high",
+   "pmids": [
+    "8467794",
+    "8065932",
+    "7610056"
+   ]
+  },
+  {
+   "year": 1994,
+   "finding": "Disruption of both Mtf1 alleles in mouse embryonic stem cells silences metallothionein I and II and abolishes activation of metal-responsive promoters by zinc, cadmium, copper, nickel and lead, establishing MTF-1 as required for basal as well as induced expression and as a zinc sensor.",
+   "methods": "Homologous recombination in embryonic stem cells, expression and reporter analysis",
+   "confidence": "high",
+   "pmids": [
+    "8026472"
+   ]
+  },
+  {
+   "year": 1998,
+   "finding": "Mtf1-null mouse embryos die around day 14 with impaired hepatocyte development and liver decay, and their fibroblasts are hypersensitive to cadmium and hydrogen peroxide; a later target-gene search finds few robust additional targets and shows that some apparent ones reflect the dying liver rather than direct regulation.",
+   "methods": "Mouse knockout, histology, cytotoxicity assays, microarray and promoter-reporter screening",
+   "confidence": "high",
+   "pmids": [
+    "9582278",
+    "11266553"
+   ],
+   "open": "Which targets besides the metallothioneins explain the lethal phenotype remained unsettled."
+  },
+  {
+   "year": 2003,
+   "finding": "Drosophila MTF-1 knockouts are viable but sensitive to copper, cadmium and zinc, and unexpectedly also to copper depletion; in 2005 this is explained when MTF-1 is shown to activate the copper importer Ctr1B through the same MRE motifs under copper starvation, so one factor and one element serve both detoxification and acquisition.",
+   "methods": "Targeted gene disruption in Drosophila, metal challenge, promoter analysis and reporter assays",
+   "confidence": "high",
+   "pmids": [
+    "12505988",
+    "15833915"
+   ],
+   "open": "How the same element directs opposite responses to copper load and copper starvation was not resolved."
+  },
+  {
+   "year": 2022,
+   "finding": "The Hippo pathway kinases LATS1 and LATS2 phosphorylate and inhibit MTF1 independently of YAP and TAZ; heavy-metal exposure inhibits LATS, with zinc binding LATS directly, adding a signaling layer to metal sensing.",
+   "methods": "Kinase assays, mass spectrometry, cell-based metal toxicity assays",
+   "confidence": "medium",
+   "pmids": [
+    "35027733"
+   ]
+  }
+ ],
+ "open": [
+  "What MTF1 regulates besides the metallothioneins is still unsettled: the knockout dies of liver degeneration while metallothionein-null mice are viable, yet a systematic target search recovered only a few candidates and showed that some differential expression reflected the dying liver rather than direct regulation.",
+  "How one element produces opposite responses is unexplained: MREs of the same type drive metallothionein induction under copper load and Ctr1B induction under copper starvation, so what distinguishes the two promoter contexts is unknown.",
+  "The relationship between the literature core TGCRCNC and the longer in vitro word is unresolved: HT-SELEX and methyl-SELEX matrices add a 5' GCC and a 3' A-tract to the core, and whether those flanks matter at functional MREs has not been tested.",
+  "How zinc occupancy of the six fingers is converted into DNA binding is not settled at the structural level, since the fingers differ in zinc affinity but no structure of the array on an MRE across a range of zinc concentrations has been reported."
  ]
 }

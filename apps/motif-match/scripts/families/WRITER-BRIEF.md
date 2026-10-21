@@ -112,3 +112,58 @@ Neutral, specific, American spelling. Define jargon on first use. No marketing l
 no "plays a crucial role", no "master regulator" unless attributed. Prefer numbers to
 adjectives. Claim no novelty. Hedge only where the literature is genuinely unsettled,
 and then say what the disagreement is.
+
+---
+
+## Addendum: anchoring, history, open questions
+
+Three fields were added after the first pass. They are optional in the schema but every
+entry should have them.
+
+### `long` — anchor the claims
+
+A reference list at the foot of a page does not tell a reader which sentence rests on
+which paper. Mark each substantive claim with the PMID(s) that support it, inline:
+
+```
+Two invariant arginines in recognition helix H3 hydrogen-bond the core
+guanines [PMID:8602247]. The family splits into four classes by
+preference [PMID:20517297,21548782].
+```
+
+- Put the marker before the full stop, at the end of the claim it supports.
+- Use PMIDs **already in this entry's `refs`**. If a claim needs a paper that is not
+  there, add it to `refs` as well — and only after retrieving and verifying it.
+- Do not anchor every sentence. Anchor the ones a sceptical reader would want to check:
+  structures, consensus definitions, specific numbers, disease links, and any claim that
+  revises or contradicts an earlier one. Framing sentences need no marker.
+- Leave `short` and `caveats` unanchored.
+
+### `timeline` — how the understanding was reached
+
+```json
+"timeline": [
+  {"year": 1995, "finding": "Crystal structure of the FOS-JUN heterodimer on the TRE explains base-specific contacts.",
+   "methods": "X-ray crystallography", "confidence": "high", "pmids": ["7816143"],
+   "open": "Did not address why the CRE differs by one base."}
+]
+```
+
+4–8 entries, oldest first. `confidence` is `high` (structure, or several independent
+methods), `medium` (one solid method), or `low` (single observational claim). `open` is
+what was still unresolved *at that point* — omit it where nothing notable was. Prefer
+turning points over a list of papers: the first definition of the site, the structure that
+explained it, the survey that revised it, and any result that overturned a previous one.
+Where a recent paper reversed an older consensus, say so — that is the most useful row on
+the page.
+
+### `open` — what is still unresolved
+
+```json
+"open": ["Whether the central G is required is unsettled: genome-wide data give TTYGAA, biochemical selection gives TTYRAA."]
+```
+
+2–5 items, each a full sentence naming the disagreement and, where possible, the two
+positions. Real scientific uncertainty only — not "more work is needed". If the databases
+disagree with the literature for this family, that belongs here. If a family genuinely has
+no open questions worth stating, give an empty array rather than padding it.

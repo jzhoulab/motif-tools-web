@@ -13,7 +13,7 @@
  ],
  "consensus": "CAGATG",
  "short": "TWIST1/2, HAND1/2, TCF21, SCX and MESP1/2 are class II basic helix-loop-helix factors of mesoderm and neural crest. They bind the E-box CANNTG as heterodimers with the ubiquitous E-proteins TCF3/TCF4/TCF12, with each other, or as homodimers, and this group prefers CAGATG (CATCTG on the opposite strand). Because the two central E-box bases are barely contacted by the protein, the distinction from the muscle E-box CAGCTG and the neural CATATG is weak. TWIST has one genuinely diagnostic feature: a double E-box with the two boxes five bases apart, which aligns two TWIST-E47 dimers on one face of the helix so they can tetramerise. The family runs craniofacial, cardiac, tendon and epithelial-mesenchymal transition programmes.",
- "long": "## The factors\n\nTWIST1, TWIST2 (DERMO-1), HAND1 (eHAND/Thing1), HAND2 (dHAND/Thing2), TCF21 (capsulin/epicardin/POD1), SCX (scleraxis) and MESP1/MESP2 make up this family. All are class II bHLH proteins of mesodermal and neural-crest lineages, and all bind DNA as dimers: heterodimers with the ubiquitous class I E-proteins TCF3, TCF4 and TCF12, homodimers, and heterodimers with each other. The TWIST1-HAND2 pairing matters functionally, because different dimer species have different activities and the balance between them is set post-translationally. Phosphorylation of two conserved residues in helix I by protein kinase A and protein kinase C, reversed by protein phosphatase 2A, shifts TWIST1 and HAND2 dimer choice, and mutations that alter that balance produce limb and craniofacial phenotypes overlapping the TWIST1 loss-of-function syndrome. TWIST1 additionally carries a C-terminal WR (\"Twist-box\") domain that dimerises, allowing two TWIST1-E47 dimers to assemble into a tetramer. Expression is lineage-restricted but broad within those lineages: TWIST1/2 in cranial and limb mesenchyme, dermis and many mesenchymal tumours; HAND1 in extraembryonic mesoderm, left ventricle and trophoblast; HAND2 in right ventricle, branchial arches and sympathoadrenal cells; TCF21 in epicardium, kidney, lung mesenchyme and vascular smooth muscle; SCX in tendon; MESP1/2 in nascent mesoderm.\n\n## The motif\n\nThe core is again a six-base E-box, CANNTG, with each monomer reading one CAN half-site. This family's preference is written CAGATG, or equivalently CATCTG read on the other strand, and that is what the data give: the representative model is `CCAGATGT` (CIS-BP TWIST1 and JASPAR TWIST1 MA1123.3 agree exactly), with HOCOMOCO TWIST1 ChIP models reading ACATCTG. The distinction from the muscle E-box CAGCTG and the neural CAGATG/CATATG is weak by construction — the two central bases are the ones that vary, and in the one solved class I/class II structure on an asymmetric E-box (E47-NEUROD1 on CATCTG) no side chain contacts the central base pairs directly. Expect substantial cross-matching.\n\nThe one feature in this family with real discriminating power is architectural rather than compositional. High-resolution mapping of TWIST occupancy in human and *Drosophila* genomes found that TWIST, and not other bHLH proteins tested, prefers a double E-box with the two boxes separated by five nucleotides; the spacing aligns two TWIST-E47 dimers on the same face of the helix so that the WR domains can contact each other and form a stable tetramer. The data carry that signature: `TWST2.H14CORE.0.P.B` reads CAGCTGGNNNCCAGATGT, two E-boxes five bases apart, in a single model.\n\nCohesion here is the lowest of the E-box families at 0.76, and label agreement is poor for most members. TCF21 has one high-grade model reading AACAGCTGG (a myogenic-type site) and another reading CATATGGT (a NeuroD/Atonal-type site). MESP1/MESP2 models read CATATG or CACCTG. The HAND models are the weakest: `HAND1.H14CORE.0.P.B` and `HAND2.H14CORE.0.P.B` are nearly identical to one another (TCTGGNTTNTGTCA) but resemble nothing else, and JASPAR's Hand1 MA2123.1 (CCAGACCT) and Hand1::Tcf3 MA0092.2 (GTCTGGCA) are not recognisable E-boxes at all, while the one HT-SELEX HAND2 model reads GCACCTGC. Three mutually inconsistent HAND2 models exist across the four databases.\n\n## Where it acts\n\nThese are enhancer factors in mesenchymal, cardiac and neural-crest chromatin, not CpG-island promoter factors. TWIST1 sites occur in epithelial-mesenchymal transition (EMT) programmes alongside SNAI, ZEB, TEAD and AP-1 motifs; the double E-box is the TWIST-specific arrangement. HAND2 sites sit in the core regulatory circuitry of the adrenergic/noradrenergic state of neuroblastoma, co-occurring with PHOX2B, GATA3, ASCL1 and TBX2 motifs in large super-enhancer clusters, and the same circuit can switch to a mesenchymal state with an entirely different motif complement. TCF21 acts in smooth-muscle and fibroblast enhancers; the coronary artery disease association at 6q23.2 maps to an enhancer regulating *TCF21* expression rather than to coding variation.\n\n## Biology and disease\n\nTWIST1 haploinsufficiency causes Saethre-Chotzen syndrome, with coronal craniosynostosis, facial asymmetry and limb anomalies; both founding reports identified loss-of-function and missense changes clustered in the bHLH domain. TWIST1 is also required for EMT-associated metastasis in mammary tumour models. *Hand1*-null mouse embryos die with extraembryonic and cardiac defects; *Hand2* (dHAND) loss disrupts right ventricle and branchial-arch development and sympathetic neuron differentiation. *Mesp1* is expressed in heart precursors and required for a single heart tube. HAND2 is a dependency of adrenergic neuroblastoma. TCF21 variation contributes to coronary artery disease risk through smooth-muscle phenotype.\n\n## Reading a hit\n\nA CAGATG or CATCTG match says a class II bHLH-E-protein dimer of this general kind could bind. It does not tell you which factor, and the separation from the NEUROD/ATOH family (CAGATG/CATATG) and the MYOD family (CAGCTG) is one or two bases at positions the protein barely touches. If you want evidence that a site is genuinely TWIST-type rather than generically bHLH, look for the double E-box with a five-base spacer; a single E-box will not settle it. Treat HAND1 and HAND2 models with particular caution: all of the HAND ChIP-derived models in this family are HOCOMOCO grade B with `P` (ChIP-only) evidence, they do not look like E-boxes, and they match nothing else in the collection, which is the expected signature of an indirect or low-quality model rather than of a HAND recognition sequence. One CIS-BP TWIST2 model is inherited from the mouse protein at 100% DBD identity, which is harmless. Because the family's own members disagree about their preferred site, do not use a hit to assign a specific paralogue.",
+ "long": "## The factors\n\nTWIST1, TWIST2 (DERMO-1), HAND1 (eHAND/Thing1), HAND2 (dHAND/Thing2), TCF21 (capsulin/epicardin/POD1), SCX (scleraxis) and MESP1/MESP2 make up this family. All are class II bHLH proteins of mesodermal and neural-crest lineages, and all bind DNA as dimers: heterodimers with the ubiquitous class I E-proteins TCF3, TCF4 and TCF12, homodimers, and heterodimers with each other. The TWIST1-HAND2 pairing matters functionally, because different dimer species have different activities and the balance between them is set post-translationally. Phosphorylation of conserved helix I residues, regulated by protein kinase A and protein phosphatase 2A, shifts TWIST1 and HAND2 dimer choice, and mutations that alter that balance produce limb and craniofacial phenotypes overlapping the TWIST1 loss-of-function syndrome [PMID:15735646]. TWIST1 additionally carries a C-terminal WR (\"Twist-box\") domain that dimerises, allowing two TWIST1-E47 dimers to assemble into a tetramer [PMID:25762439]. Expression is lineage-restricted but broad within those lineages: TWIST1/2 in cranial and limb mesenchyme, dermis and many mesenchymal tumours; HAND1 in extraembryonic mesoderm, left ventricle and trophoblast; HAND2 in right ventricle, branchial arches and sympathoadrenal cells; TCF21 in epicardium, kidney, lung mesenchyme and vascular smooth muscle; SCX in tendon; MESP1/2 in nascent mesoderm.\n\n## The motif\n\nThe core is again a six-base E-box, CANNTG, with each monomer reading one CAN half-site. This family's preference is written CAGATG, or equivalently CATCTG read on the other strand, and that is what the data give: the representative model is `CCAGATGT` (CIS-BP TWIST1 and JASPAR TWIST1 MA1123.3 agree exactly), with HOCOMOCO TWIST1 ChIP models reading ACATCTG. The distinction from the muscle E-box CAGCTG and the neural CAGATG/CATATG is weak by construction — the two central bases are the ones that vary, and in the one solved class I/class II structure on an asymmetric E-box (E47-NEUROD1 on CATCTG) no side chain contacts the central base pairs directly [PMID:18069799]. Expect substantial cross-matching.\n\nThe one feature in this family with real discriminating power is architectural rather than compositional. High-resolution mapping of TWIST occupancy in human and *Drosophila* genomes found that TWIST, and not other bHLH proteins tested, prefers a double E-box with the two boxes separated by five nucleotides; the spacing aligns two TWIST-E47 dimers on the same face of the helix so that the WR domains can contact each other and form a stable tetramer [PMID:25762439]. The data carry that signature: `TWST2.H14CORE.0.P.B` reads CAGCTGGNNNCCAGATGT, two E-boxes five bases apart, in a single model.\n\nCohesion here is the lowest of the E-box families at 0.76, and label agreement is poor for most members. TCF21 has one high-grade model reading AACAGCTGG (a myogenic-type site) and another reading CATATGGT (a NeuroD/Atonal-type site). MESP1/MESP2 models read CATATG or CACCTG. The HAND models are the weakest: `HAND1.H14CORE.0.P.B` and `HAND2.H14CORE.0.P.B` are nearly identical to one another (TCTGGNTTNTGTCA) but resemble nothing else, and JASPAR's Hand1 MA2123.1 (CCAGACCT) and Hand1::Tcf3 MA0092.2 (GTCTGGCA) are not recognisable E-boxes at all, while the one HT-SELEX HAND2 model reads GCACCTGC. Three mutually inconsistent HAND2 models exist across the four databases.\n\n## Where it acts\n\nThese are enhancer factors in mesenchymal, cardiac and neural-crest chromatin, not CpG-island promoter factors. TWIST1 sites occur in epithelial-mesenchymal transition (EMT) programmes alongside SNAI, ZEB, TEAD and AP-1 motifs; the double E-box is the TWIST-specific arrangement. HAND2 sites sit in the core regulatory circuitry of the adrenergic/noradrenergic state of neuroblastoma, co-occurring with PHOX2B, GATA3, ASCL1 and TBX2 motifs in large super-enhancer clusters, and the same circuit can switch to a mesenchymal state with an entirely different motif complement [PMID:28740262,28650485]. TCF21 acts in smooth-muscle and fibroblast enhancers; the coronary artery disease association at 6q23.2 maps to an enhancer regulating *TCF21* expression rather than to coding variation [PMID:23874238].\n\n## Biology and disease\n\nTWIST1 haploinsufficiency causes Saethre-Chotzen syndrome, with coronal craniosynostosis, facial asymmetry and limb anomalies; both founding reports identified loss-of-function and missense changes clustered in the bHLH domain [PMID:8988166,8988167]. TWIST1 is also required for EMT-associated metastasis in mammary tumour models [PMID:15210113]. *Hand1*-null mouse embryos die with extraembryonic and cardiac defects [PMID:9500550]; *Hand2* (dHAND) loss disrupts right ventricle and branchial-arch development and sympathetic neuron differentiation [PMID:9171826]. *Mesp1* is expressed in heart precursors and required for a single heart tube [PMID:10393122]. HAND2 is a dependency of adrenergic neuroblastoma [PMID:28740262]. TCF21 variation contributes to coronary artery disease risk through smooth-muscle phenotype.\n\n## Reading a hit\n\nA CAGATG or CATCTG match says a class II bHLH-E-protein dimer of this general kind could bind. It does not tell you which factor, and the separation from the NEUROD/ATOH family (CAGATG/CATATG) and the MYOD family (CAGCTG) is one or two bases at positions the protein barely touches. If you want evidence that a site is genuinely TWIST-type rather than generically bHLH, look for the double E-box with a five-base spacer; a single E-box will not settle it [PMID:25762439]. Treat HAND1 and HAND2 models with particular caution: all of the HAND ChIP-derived models in this family are HOCOMOCO grade B with `P` (ChIP-only) evidence, they do not look like E-boxes, and they match nothing else in the collection, which is the expected signature of an indirect or low-quality model rather than of a HAND recognition sequence. One CIS-BP TWIST2 model is inherited from the mouse protein at 100% DBD identity, which is harmless. Because the family's own members disagree about their preferred site, do not use a hit to assign a specific paralogue.",
  "caveats": "This is the least cohesive of the E-box families in the atlas (cohesion 0.76), and its members disagree with each other. TCF21 has one high-grade model reading a myogenic AACAGCTGG and another reading a NeuroD-type CATATGGT; HAND2 has three mutually inconsistent models across the four databases. The HAND1 and HAND2 models from ChIP are nearly identical to one another, are not recognisable E-boxes, and resemble nothing else in the collection — treat them as unreliable rather than as HAND recognition sequences. A single CAGATG or CATCTG hit identifies the general class II bHLH site, not the factor. Only the five-base-spaced double E-box discriminates TWIST specifically.",
  "refs": [
   {
@@ -76,5 +76,93 @@
    "pmid": "18069799",
    "url": "https://pubmed.ncbi.nlm.nih.gov/18069799/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1997,
+   "finding": "Two groups report that heterozygous TWIST1 loss-of-function and bHLH-domain missense mutations cause Saethre-Chotzen syndrome, placing the family in human craniofacial and limb development.",
+   "methods": "positional cloning and mutation screening in families",
+   "confidence": "medium",
+   "pmids": [
+    "8988166",
+    "8988167"
+   ],
+   "open": "Whether the missense changes act by abolishing DNA binding or by some other mechanism was not determined."
+  },
+  {
+   "year": 1997,
+   "finding": "Mouse knockouts show the HAND factors are required for cardiac and neural-crest development: dHAND/Hand2 loss disrupts the right ventricle, branchial arches and sympathetic neurons (1997), and Hand1 loss causes extraembryonic and cardiac failure (1998).",
+   "methods": "mouse gene targeting",
+   "confidence": "medium",
+   "pmids": [
+    "9171826",
+    "9500550"
+   ],
+   "open": "No DNA recognition sequence had been established for either HAND protein."
+  },
+  {
+   "year": 2004,
+   "finding": "Twist1 is shown to be required for metastasis in a mouse mammary tumour model, tying the family to epithelial-mesenchymal transition in cancer.",
+   "methods": "RNAi knockdown in a mouse tumour model",
+   "confidence": "medium",
+   "pmids": [
+    "15210113"
+   ]
+  },
+  {
+   "year": 2005,
+   "finding": "Twist1 and Hand2 are found to antagonise each other in a dosage-dependent way, with dimerization partner choice set by phosphorylation of conserved helix I residues; several Saethre-Chotzen mutations alter that phosphorylation, so the syndrome is reframed as misregulated dimerization rather than simple loss of DNA binding.",
+   "methods": "mouse genetics, phosphorylation and dimerization assays",
+   "confidence": "medium",
+   "pmids": [
+    "15735646"
+   ],
+   "open": "Whether different dimer species also differ in preferred DNA sequence, rather than only in activity."
+  },
+  {
+   "year": 2008,
+   "finding": "The E47-NEUROD1 bHLH structure on the asymmetric E-box CATCTG shows that no side chain contacts the central base pairs, which explains why CAGATG, CATCTG and CAGCTG assignments cannot be separated by sequence across the class II bHLH families.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "18069799"
+   ]
+  },
+  {
+   "year": 2013,
+   "finding": "The 6q23.2 coronary artery disease association is mapped to an enhancer that modulates TCF21 expression rather than to coding variation, making this family's regulatory sites the disease-relevant element.",
+   "methods": "fine mapping, reporter and allele-specific assays in vascular cells",
+   "confidence": "medium",
+   "pmids": [
+    "23874238"
+   ]
+  },
+  {
+   "year": 2015,
+   "finding": "High-resolution occupancy mapping in human and Drosophila finds that TWIST, unlike other bHLH proteins tested, recognises a double E-box with a preferred five-nucleotide spacer that aligns two TWIST-E47 dimers on one face of the DNA for WR-domain-mediated tetramer formation, so target specificity comes from architecture rather than from a distinct core sequence.",
+   "methods": "ChIP-exo-type occupancy mapping, molecular modelling, binding kinetics",
+   "confidence": "high",
+   "pmids": [
+    "25762439"
+   ],
+   "open": "Most database models for this family are still single E-boxes, so how much of TWIST occupancy genome-wide requires the spacing is unsettled."
+  },
+  {
+   "year": 2017,
+   "finding": "Two independent super-enhancer studies place HAND2 in the core regulatory circuitry of the adrenergic state of neuroblastoma, alongside PHOX2B, GATA3 and ASCL1, with an alternative mesenchymal state built on a different factor set.",
+   "methods": "H3K27ac super-enhancer mapping and ChIP-seq in tumours and cell lines",
+   "confidence": "medium",
+   "pmids": [
+    "28740262",
+    "28650485"
+   ],
+   "open": "Whether HAND2 occupancy in that circuit reflects direct DNA recognition or recruitment by its partners."
+  }
+ ],
+ "open": [
+  "Whether the HAND proteins have a definable recognition sequence is unresolved: the HAND1 and HAND2 ChIP models in HOCOMOCO are nearly identical to each other, are not recognisable E-boxes and match nothing else in the collection, and the one HT-SELEX HAND2 model reads GCACCTGC instead, so three mutually inconsistent HAND2 models coexist across the four databases.",
+  "How general the TWIST double E-box is remains open: the five-base-spaced arrangement was found to be conserved between human and Drosophila and is required for TWIST-induced EMT, yet nearly every database model for this family is a single E-box, and what fraction of genuine TWIST1 sites carries the spacing has not been established genome-wide.",
+  "It is not known whether the phospho-regulated choice between TWIST1 homodimers, TWIST1-E-protein heterodimers and TWIST1-HAND2 heterodimers changes the preferred DNA sequence or only the transcriptional output, so the single matrix stored per factor may be averaging over dimers with different specificities.",
+  "TCF21's placement in this family is contradicted by its own models, one high-grade model reading the myogenic site AACAGCTGG and another the NeuroD-type CATATGGT, and it is unsettled whether TCF21 genuinely reads a TWIST-type site or has been grouped here by domain similarity alone."
  ]
 }

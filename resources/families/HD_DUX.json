@@ -10,7 +10,7 @@
  ],
  "consensus": "TAATCTAATCA",
  "short": "DUX4 and its relatives DUXA and DUXB carry two homeodomains in tandem within a single polypeptide, an architecture found only in placental mammals and derived from a retrotransposed copy of an ancestral homeobox gene. The two domains bind side by side, head to head, and together read an eleven-base site, TAATCTAATCA, that is far longer and more specific than a single homeodomain site. These genes are normally expressed only for a few cell divisions after fertilisation, where they help switch on the embryonic genome and a set of endogenous retroviral promoters. Misexpression of DUX4 in skeletal muscle causes facioscapulohumeral muscular dystrophy, and DUX4 rearrangements define a subtype of B-cell acute lymphoblastic leukaemia, so this motif marks one of the better understood pathogenic regulatory programs.",
- "long": "## The factors\n\nDUX genes exist only in eutherian mammals. Each encodes two complete homeodomains in tandem, joined by a\nshort linker, in a protein of a few hundred residues. Human DUX4 is encoded inside the D4Z4 macrosatellite\nrepeat at 4q35, with a nearly identical array at 10q26 and many DUX4L pseudogenes elsewhere; DUXA and DUXB\nare single-copy genes. The mouse counterpart is *Dux*. DUX4 has a C-terminal transactivation domain that\nbinds p300/CBP, so it is a strong activator; DUXA is transcriptionally inert but binds an overlapping set\nof sequences and competes with DUX4, and because DUXA is itself a DUX4 target this constitutes a negative\nfeedback loop that limits the window of DUX4 activity. The ancestral state is a single homeodomain: the\nplatypus sDUX protein has one, binds DNA as a homodimer, and is already able to activate\nzygotic-genome-activation genes and long terminal repeats. Expression of the human genes is confined to\nthe cleavage-stage embryo, testis and thymus.\n\n## The motif\n\nThe site is TAATCTAATCA, about 11 informative positions. The crystal structure of the DUX4 tandem\nhomeodomains bound to DNA explained its shape. The two domains bind head to head, and the linker between\nthem makes anchoring minor-groove contacts plus protein-protein contacts that fix their relative\npositions, so the spacing between the two half sites is not variable the way it is for two independent\nhomeodomain monomers. The surprise from that structure is that the two homeodomains, although tandem\nduplicates of each other, do not read the same core sequence: an arginine-to-glutamate substitution unique\nto primates repositions a key arginine side chain in one recognition helix. That is why the consensus is\nnot a clean palindrome but an asymmetric TAATC-TAATCA. The same divergence explains why mouse DUX and\nhuman DUX4 have different motifs, and the difference tracks with which retrotransposon promoters each one\ncan activate. In the assembled data, DUX4 and DUXA models are similar but not identical: DUX4 models read\nTAATTTAATCA or TGATTAGGTTA, DUXA models TGATTAAATTA or TGATTTAATCA, with within-family similarities from\n0.84 to 1.0 and overall cohesion of 0.89. One low-information entry, a 5.8-bit CIS-BP DUXA model reading\nonly TGATTG, is flagged in the data as belonging with Q50 homeodomains instead: a six-base TGATTA fragment\nis simply a generic paired-like homeodomain half site and carries no double-homeodomain information.\n\n## Where it acts\n\nDUX4 sites are overwhelmingly repeat-resident. DUX4 occupies MERVL/HERVL long terminal repeats,\nERVL-MaLR elements and other retrotransposon promoters, along with conventional promoters of\ncleavage-stage genes including ZSCAN4, TRIM43, MBD3L family members, PRAMEF family members, KHDC1L and\nLEUTX. Because the motif sits inside repeat families, the number of genomic matches is large, in the tens\nof thousands, and DUX4 ChIP-seq peaks are heavily biased toward repeats. Where DUX4 binds it recruits\np300/CBP and deposits H3K27 acetylation, so the sites behave as bona fide enhancers and promoters rather\nthan as passive footprints. In adult somatic tissue these sequences are silent and the motif is not\noccupied, because the factors are not expressed.\n\n## Biology and disease\n\nFacioscapulohumeral muscular dystrophy is the clearest example of a disease caused by a single\ntranscription factor being switched on in the wrong tissue. In FSHD1, contraction of the D4Z4 array to\nbetween one and ten units on a permissive 4qA haplotype, which supplies a polyadenylation signal\ndownstream of the last repeat, allows a stable DUX4 transcript to accumulate in muscle. In FSHD2 the same\nend is reached through mutations in chromatin repressors such as SMCHD1. DUX4 expressed in myoblasts\nactivates germline and cleavage-stage genes, retroelements and immune mediators, and is cytotoxic.\nIn normal development, mouse Dux and human DUX4 activate cleavage-stage genes and MERVL/HERVL elements at\nzygotic genome activation, and DUX4 also has roles in priming the human embryonic genome beyond\ntranscriptional activation. Rearrangements that place DUX4 under the IGH enhancer, and related DUX4\nfusions, define a distinct subtype of B-cell acute lymphoblastic leukaemia in adolescents and young\nadults; the retained portion is the double homeodomain.\n\n## Reading a hit\n\nAn 11-base double-homeodomain match is a distinctive shape, but three cautions apply. First, it does not\ntell you which DUX protein. DUX4 and DUXA have overlapping specificity and opposite activity, so the same\nsite can be an activated enhancer or a competitively blocked one. Second, half-site-only matches, TAATCA\nor TGATTA, fall straight back into the large generic paired-like homeodomain pool and are not DUX\nevidence. Third, one JASPAR entry in this family is the mouse Dux motif, which is genuinely different from\nthe human one, and the JASPAR DUX4 model and one HOCOMOCO DUX4 model are ChIP-derived from overexpression\nsystems rather than from in vitro selection on the purified protein. Finally, a match in an ERVL or MaLR\nrepeat is expected by composition and says little on its own.",
+ "long": "## The factors\n\nDUX genes exist only in eutherian mammals [PMID:21110847]. Each encodes two complete homeodomains in tandem, joined by a\nshort linker, in a protein of a few hundred residues. Human DUX4 is encoded inside the D4Z4 macrosatellite\nrepeat at 4q35, with a nearly identical array at 10q26 and many DUX4L pseudogenes elsewhere [PMID:40855454]; DUXA and DUXB\nare single-copy genes. The mouse counterpart is *Dux*. DUX4 has a C-terminal transactivation domain that\nbinds p300/CBP, so it is a strong activator [PMID:26951377]; DUXA is transcriptionally inert but binds an overlapping set\nof sequences and competes with DUX4, and because DUXA is itself a DUX4 target this constitutes a negative\nfeedback loop that limits the window of DUX4 activity [PMID:37744032]. The ancestral state is a single homeodomain: the\nplatypus sDUX protein has one, binds DNA as a homodimer, and is already able to activate\nzygotic-genome-activation genes and long terminal repeats [PMID:37744032]. Expression of the human genes is confined to\nthe cleavage-stage embryo, testis and thymus.\n\n## The motif\n\nThe site is TAATCTAATCA, about 11 informative positions. The crystal structure of the DUX4 tandem\nhomeodomains bound to DNA explained its shape. The two domains bind head to head, and the linker between\nthem makes anchoring minor-groove contacts plus protein-protein contacts that fix their relative\npositions, so the spacing between the two half sites is not variable the way it is for two independent\nhomeodomain monomers. The surprise from that structure is that the two homeodomains, although tandem\nduplicates of each other, do not read the same core sequence: an arginine-to-glutamate substitution unique\nto primates repositions a key arginine side chain in one recognition helix [PMID:30540931]. That is why the consensus is\nnot a clean palindrome but an asymmetric TAATC-TAATCA. The same divergence explains why mouse DUX and\nhuman DUX4 have different motifs, and the difference tracks with which retrotransposon promoters each one\ncan activate [PMID:28459454]. In the assembled data, DUX4 and DUXA models are similar but not identical: DUX4 models read\nTAATTTAATCA or TGATTAGGTTA, DUXA models TGATTAAATTA or TGATTTAATCA, with within-family similarities from\n0.84 to 1.0 and overall cohesion of 0.89. One low-information entry, a 5.8-bit CIS-BP DUXA model reading\nonly TGATTG, is flagged in the data as belonging with Q50 homeodomains instead: a six-base TGATTA fragment\nis simply a generic paired-like homeodomain half site and carries no double-homeodomain information.\n\n## Where it acts\n\nDUX4 sites are overwhelmingly repeat-resident. DUX4 occupies MERVL/HERVL long terminal repeats,\nERVL-MaLR elements and other retrotransposon promoters, along with conventional promoters of\ncleavage-stage genes including ZSCAN4, TRIM43, MBD3L family members, PRAMEF family members, KHDC1L and\nLEUTX [PMID:22209328,28459457]. Because the motif sits inside repeat families, the number of genomic matches is large, in the tens\nof thousands, and DUX4 ChIP-seq peaks are heavily biased toward repeats [PMID:22209328,26951377]. Where DUX4 binds it recruits\np300/CBP and deposits H3K27 acetylation, so the sites behave as bona fide enhancers and promoters rather\nthan as passive footprints [PMID:26951377]. In adult somatic tissue these sequences are silent and the motif is not\noccupied, because the factors are not expressed.\n\n## Biology and disease\n\nFacioscapulohumeral muscular dystrophy is the clearest example of a disease caused by a single\ntranscription factor being switched on in the wrong tissue. In FSHD1, contraction of the D4Z4 array to\nbetween one and ten units on a permissive 4qA haplotype, which supplies a polyadenylation signal\ndownstream of the last repeat, allows a stable DUX4 transcript to accumulate in muscle [PMID:20724583]. In FSHD2 the same\nend is reached through mutations in chromatin repressors such as SMCHD1 [PMID:23143600]. DUX4 expressed in myoblasts\nactivates germline and cleavage-stage genes, retroelements and immune mediators, and is cytotoxic [PMID:22209328,37744032].\nIn normal development, mouse Dux and human DUX4 activate cleavage-stage genes and MERVL/HERVL elements at\nzygotic genome activation [PMID:28459457,28459456], and DUX4 also has roles in priming the human embryonic genome beyond\ntranscriptional activation [PMID:35402882]. Rearrangements that place DUX4 under the IGH enhancer, and related DUX4\nfusions, define a distinct subtype of B-cell acute lymphoblastic leukaemia in adolescents and young\nadults; the retained portion is the double homeodomain [PMID:27019113].\n\n## Reading a hit\n\nAn 11-base double-homeodomain match is a distinctive shape, but three cautions apply. First, it does not\ntell you which DUX protein. DUX4 and DUXA have overlapping specificity and opposite activity, so the same\nsite can be an activated enhancer or a competitively blocked one. Second, half-site-only matches, TAATCA\nor TGATTA, fall straight back into the large generic paired-like homeodomain pool and are not DUX\nevidence. Third, one JASPAR entry in this family is the mouse Dux motif, which is genuinely different from\nthe human one, and the JASPAR DUX4 model and one HOCOMOCO DUX4 model are ChIP-derived from overexpression\nsystems rather than from in vitro selection on the purified protein [PMID:22209328]. Finally, a match in an ERVL or MaLR\nrepeat is expected by composition and says little on its own.",
  "caveats": "The motif shape is good but the label is not resolvable: DUX4, DUXA and DUXB bind overlapping sequences, and DUXA represses what DUX4 activates, so a hit does not predict direction of effect. One JASPAR entry here is mouse Dux, whose motif differs from human DUX4 because of a primate-specific change in one recognition helix; do not transfer it to human sequence. The best DUX4 models are ChIP-derived from forced expression, not from in vitro selection. Because the site lives inside MERVL/HERVL and MaLR repeats, matches are numerous and largely explained by repeat content; outside the cleavage-stage embryo, testis, thymus, FSHD muscle or DUX4-rearranged leukaemia, no DUX protein is present to occupy them.",
  "refs": [
   {
@@ -67,6 +67,109 @@
    "cite": "Belayew A, Rosa AL, Zammit PS. DUX4 at 25: how it emerged from \"junk DNA\" to become the cause of facioscapulohumeral muscular dystrophy. Skelet Muscle 2025;15:24.",
    "pmid": "40855454",
    "url": "https://pubmed.ncbi.nlm.nih.gov/40855454/"
+  },
+  {
+   "cite": "Gabriëls J, Beckers MC, Ding H, et al. Nucleotide sequence of the partially deleted D4Z4 locus in a patient with FSHD identifies a putative gene within each 3.3 kb element. Gene 1999;236:25-32.",
+   "pmid": "10433963",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10433963/"
+  },
+  {
+   "cite": "Lemmers RJ, Tawil R, Petek LM, et al. Digenic inheritance of an SMCHD1 mutation and an FSHD-permissive D4Z4 allele causes facioscapulohumeral muscular dystrophy type 2. Nat Genet 2012;44:1370-4.",
+   "pmid": "23143600",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23143600/"
+  },
+  {
+   "cite": "Choi SH, Gearhart MD, Cui Z, et al. DUX4 recruits p300/CBP through its C-terminus and induces global H3K27 acetylation changes. Nucleic Acids Res 2016;44:5161-73.",
+   "pmid": "26951377",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26951377/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1999,
+   "finding": "Sequencing the partially deleted D4Z4 locus of an FSHD patient identifies an open reading frame with two homeoboxes inside each 3.3-kb repeat unit, the gene later named DUX4.",
+   "methods": "cloning and nucleotide sequencing of the contracted repeat array",
+   "confidence": "medium",
+   "pmids": [
+    "10433963"
+   ],
+   "open": "The repeat was widely regarded as non-coding, and there was no evidence that the predicted gene was transcribed or that its product bound DNA."
+  },
+  {
+   "year": 2010,
+   "finding": "A unifying genetic model shows that repeat contraction causes disease only on a 4qA haplotype carrying a polymorphism that creates a polyadenylation signal distal to the last repeat, stabilizing the DUX4 transcript, which explains why contraction alone is not sufficient.",
+   "methods": "haplotype and SNP analysis of patient chromosomes plus transfection assays of transcript stability",
+   "confidence": "high",
+   "pmids": [
+    "20724583"
+   ],
+   "open": "It remained unclear what DUX4 does to muscle once the transcript is stabilized."
+  },
+  {
+   "year": 2012,
+   "finding": "DUX4 is shown to activate germline and early stem-cell genes, MaLR retrotransposon long terminal repeats and innate-immune mediators, and these targets are detectable in FSHD muscle but not controls, giving direct support for the misexpression model.",
+   "methods": "inducible expression in myoblasts with ChIP-seq and expression profiling of patient muscle",
+   "confidence": "medium",
+   "pmids": [
+    "22209328"
+   ],
+   "open": "Which of these induced programs is responsible for muscle damage was not resolved."
+  },
+  {
+   "year": 2012,
+   "finding": "FSHD2, which occurs without repeat contraction, is shown to arise from mutations in the chromatin repressor SMCHD1 inherited together with a permissive D4Z4 allele, bringing both forms of the disease under a single mechanism of DUX4 derepression.",
+   "methods": "exome sequencing, linkage and D4Z4 methylation analysis in families",
+   "confidence": "high",
+   "pmids": [
+    "23143600"
+   ]
+  },
+  {
+   "year": 2016,
+   "finding": "Insertion of D4Z4 repeats containing DUX4 into the IGH locus is found recurrently in Philadelphia-negative B-cell acute lymphoblastic leukemia of adolescents and young adults, and DUX4-IGH expression in pro-B cells generates leukemia in mice.",
+   "methods": "RNA-seq of 73 patient specimens and a mouse transplantation assay",
+   "confidence": "medium",
+   "pmids": [
+    "27019113"
+   ]
+  },
+  {
+   "year": 2017,
+   "finding": "Three studies establish mouse Dux and human DUX4 as activators of the cleavage-stage program and of MERVL/HERVL elements at zygotic genome activation, and show that the two orthologs have diverged in sequence preference, with motif divergence tracking which retrotransposon promoters each can activate.",
+   "methods": "expression profiling, ChIP-seq and knockout or knockdown in embryonic stem cells and embryos",
+   "confidence": "high",
+   "pmids": [
+    "28459457",
+    "28459456",
+    "28459454"
+   ],
+   "open": "Whether human DUX4 is required for zygotic genome activation in human embryos, rather than merely sufficient in cultured cells, was untested."
+  },
+  {
+   "year": 2018,
+   "finding": "The crystal structure of the DUX4 tandem homeodomains on DNA shows head-to-head binding with the linker making minor-groove and protein-protein contacts, and reveals that the two duplicated homeodomains read different core sequences because of a primate-specific arginine-to-glutamate change that repositions an arginine in one recognition helix.",
+   "methods": "X-ray crystallography with mutational binding assays",
+   "confidence": "high",
+   "pmids": [
+    "30540931"
+   ],
+   "open": "Explains the asymmetric site but not how DUX4 and DUXA, which bind overlapping sequences, are partitioned in cells."
+  },
+  {
+   "year": 2023,
+   "finding": "Comparison of the three human DUX proteins with the single-homeodomain platypus sDUX shows that cytotoxicity is a property of DUX4 and of ancestral sDUX but not of DUXA or DUXB, and that DUXA, itself a DUX4 target, competes for DUX4 sites and antagonizes DUX4 in FSHD patient cells.",
+   "methods": "comparative expression, DNA-binding and cytotoxicity assays in human cells",
+   "confidence": "medium",
+   "pmids": [
+    "37744032"
+   ],
+   "open": "The relative occupancy of DUX4 and DUXA at shared sites in intact tissue has not been measured."
+  }
+ ],
+ "open": [
+  "What makes DUX4 cytotoxic is unsettled: in human myoblasts the C-terminal p300/CBP-binding region is required for both target activation and cell death, yet the ancestral single-homeodomain platypus sDUX protein is also cytotoxic, so toxicity may not depend on the double-homeodomain architecture or on the primate C-terminus.",
+  "Whether human DUX4 is required for embryonic genome activation or only contributes to it is disputed: mouse Dux depletion impairs zygotic genome activation and the 2-cell-like state, whereas DUX4 knockdown in human zygotes altered the activation transcriptome without terminating the embryos, which fits a priming role rather than a switch.",
+  "Nothing in the sequence distinguishes a DUX4-occupied site from a DUXA-occupied one, and because the two proteins have opposite transcriptional output, how occupancy is partitioned between them in cells that express both is unknown.",
+  "The usability of the mouse Dux motif for human sequence is contested: motif collections list it alongside human DUX4 models, while the comparative work shows that the primate-specific change in one recognition helix gives the two orthologs genuinely different preferences and different retrotransposon targets."
  ]
 }

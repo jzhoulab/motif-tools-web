@@ -13,7 +13,7 @@
  ],
  "consensus": "CACCTG",
  "short": "TCF3 (E2A/E12/E47), TCF4 (E2-2) and TCF12 (HEB) are the broadly expressed class I bHLH proteins that serve as the general dimerization partners for tissue-restricted bHLH factors - MYOD in muscle, ASCL and NEUROD in neurons, TWIST in mesenchyme, TAL1 in blood - and are sequestered by ID proteins. They bind the class-A E-box, written CACCTG or equivalently CAGGTG, and also CAGCTG. Because most functional sites are heterodimeric, only one half-site is read by the E-protein itself. E2A loss abolishes B-cell development; TCF4 haploinsufficiency causes Pitt-Hopkins syndrome, TCF12 loss causes coronal craniosynostosis, and TCF3 is a recurrent fusion partner in pre-B leukaemia.",
- "long": "## The factors\n\nThe E-proteins are TCF3 (E2A, whose splice isoforms are E12 and E47), TCF4 (E2-2, ITF2) and TCF12 (HEB, HTF4). They are class I basic helix-loop-helix proteins: broadly expressed, lacking a leucine zipper, and defined by the fact that they are the general dimerization partners for the class II, tissue-restricted bHLH factors. The HLH motif itself was recognized by comparing the immunoglobulin enhancer-binding E12/E47 proteins with Drosophila daughterless, MyoD and MYC, and the following paper showed the central property directly: heterodimers between different HLH proteins form readily and bind a common DNA sequence. That is what E-proteins do. TCF3, TCF4 and TCF12 heterodimerize with MYOD and MYF5 in muscle, ASCL1, NEUROD and ATOH in neural tissue, TWIST1 and HAND in mesenchyme, TAL1 and LYL1 in blood, PTF1A in pancreas, and OLIG proteins in glia, as well as with each other. They are also the targets of the ID proteins (ID1-ID4), which have an HLH but no basic region and therefore sequester E-proteins into non-binding dimers. This family also collects TCFL5, a more distant protein, and the ontology lists TCF15; in the current data, motifs exist for TCF3, TCF4, TCF12 and TCFL5. The atlas assigns 13 motifs here (5 JASPAR, 4 HOCOMOCO, 4 CIS-BP), cohesion 0.87, representative TCF4 (MA0830.3).\n\n## The motif\n\nE-proteins read the class-A E-box, most often written CACCTG or, equivalently, CAGGTG - these are the same six base pairs read from opposite strands, which is worth keeping in mind when comparing database consensus strings. The other class-A variant, CAGCTG, is also bound; together the preference is CAG[C/G]TG on one strand. The immunoglobulin enhancer sites that defined the family, muE5 and kappaE2, are of this type. The E47 crystal structure showed how the site is read: a parallel four-helix bundle with one basic helix per monomer in the major groove, a glutamate contacting the CA of each half-site and an arginine the guanine on the complementary strand - the same chemistry as MAX, with the residue at one position determining class A versus class B preference. Because heterodimers are the functional unit, the real in vivo site is often asymmetric: one half-site is read by the E-protein and the other by the tissue partner, so MyoD-E47 and TAL1-TCF3 sites differ from E-protein homodimer sites mainly in one half. Systematic binding-site selection comparing MyoD and E2A complexes established this early, and it is the reason paralogue assignment from sequence fails here. In the atlas data, TCF3, TCF4 and TCF12 models are mutually similar at 0.96-0.995, so they are one motif. Two entries are not: the TCFL5 models read tCACGCGC, which is not an E-box, and the JASPAR Tcf12 model MA0521.3 is a bare CAGCTG whose nearest neighbour across all four databases lies outside this family. These two account for the modest cohesion score.\n\n## Where it acts\n\nE-protein sites are found at both promoters and enhancers, but the striking pattern is that their genomic distribution is essentially that of whichever partner is expressed. In B cells, TCF3 occupies the immunoglobulin heavy- and light-chain enhancers and the B-lineage gene set; in muscle, E-protein occupancy coincides with MyoD enhancers; in the T-lineage, TCF12 and TCF3 sit at TAL1 and thymocyte enhancers. Because CAGCTG and CACCTG contain no CpG, they are not depleted in mammalian DNA and occur very frequently - a 6-bp palindrome is expected roughly every 4 kb. The practical consequence is that E-proteins appear in an unusually large number of ChIP datasets, both as the tagged factor and as the apparent motif inside someone else's peaks, because they are physically present at almost every class-II bHLH site in every tissue that expresses one.\n\n## Biology and disease\n\nE2A/TCF3-null mice lack B cells entirely and fail to initiate immunoglobulin gene rearrangement, which established E-proteins as required for lymphoid specification rather than merely modulatory. Human disease follows the paralogues. TCF4 haploinsufficiency causes Pitt-Hopkins syndrome, a severe neurodevelopmental disorder with epilepsy and autonomic dysfunction, and common TCF4 variants are among the strongest transcription-factor associations with schizophrenia. TCF12 loss-of-function, acting through its partnership with TWIST1, is a frequent cause of coronal craniosynostosis. TCF3 is a recurrent fusion partner in pre-B acute lymphoblastic leukaemia, where the t(1;19) translocation joins the TCF3 activation domain to the PBX1 homeodomain. ID protein overexpression, which titrates E-proteins away from DNA, is a common feature of tumours and of proliferating progenitors.\n\n## Reading a hit\n\nA CACCTG or CAGCTG match identifies a class-A E-box. It does not identify an E-protein, and it certainly does not identify which one: TCF3, TCF4 and TCF12 share a single motif. Worse, the same core is read by MYOD, NEUROD/ATOH, ASCL, TWIST/HAND, TAL1/LYL1, TFAP4, ZEB1/2 and SNAI-associated E-boxes. Most real E-protein sites are occupied by a heterodimer, so only one half of the match belongs to the E-protein at all. Treat an E-protein motif inside someone else's ChIP peaks as expected co-occupancy rather than evidence of indirect binding artifact - and treat an E-protein ChIP peak as most likely marking the partner's locus. The TCFL5 models here are not E-boxes and should not be scanned as such.",
+ "long": "## The factors\n\nThe E-proteins are TCF3 (E2A, whose splice isoforms are E12 and E47), TCF4 (E2-2, ITF2) and TCF12 (HEB, HTF4). They are class I basic helix-loop-helix proteins: broadly expressed, lacking a leucine zipper, and defined by the fact that they are the general dimerization partners for the class II, tissue-restricted bHLH factors. The HLH motif itself was recognized by comparing the immunoglobulin enhancer-binding E12/E47 proteins with Drosophila daughterless, MyoD and MYC [PMID:2493990], and the following paper showed the central property directly: heterodimers between different HLH proteins form readily and bind a common DNA sequence [PMID:2503252]. That is what E-proteins do. TCF3, TCF4 and TCF12 heterodimerize with MYOD and MYF5 in muscle, ASCL1, NEUROD and ATOH in neural tissue, TWIST1 and HAND in mesenchyme, TAL1 and LYL1 in blood, PTF1A in pancreas, and OLIG proteins in glia, as well as with each other [PMID:10611221,26555048]. They are also the targets of the ID proteins (ID1-ID4), which have an HLH but no basic region and therefore sequester E-proteins into non-binding dimers [PMID:2156629]. This family also collects TCFL5, a more distant protein, and the ontology lists TCF15; in the current data, motifs exist for TCF3, TCF4, TCF12 and TCFL5. The atlas assigns 13 motifs here (5 JASPAR, 4 HOCOMOCO, 4 CIS-BP), cohesion 0.87, representative TCF4 (MA0830.3).\n\n## The motif\n\nE-proteins read the class-A E-box, most often written CACCTG or, equivalently, CAGGTG - these are the same six base pairs read from opposite strands, which is worth keeping in mind when comparing database consensus strings. The other class-A variant, CAGCTG, is also bound; together the preference is CAG[C/G]TG on one strand. The immunoglobulin enhancer sites that defined the family, muE5 and kappaE2, are of this type [PMID:2493990,2503252]. The E47 crystal structure showed how the site is read: a parallel four-helix bundle with one basic helix per monomer in the major groove, a glutamate contacting the CA of each half-site and an arginine the guanine on the complementary strand - the same chemistry as MAX, with the residue at one position determining class A versus class B preference [PMID:7926781]. Because heterodimers are the functional unit, the real in vivo site is often asymmetric: one half-site is read by the E-protein and the other by the tissue partner, so MyoD-E47 and TAL1-TCF3 sites differ from E-protein homodimer sites mainly in one half. Systematic binding-site selection comparing MyoD and E2A complexes established this early [PMID:2174572], and it is the reason paralogue assignment from sequence fails here. In the atlas data, TCF3, TCF4 and TCF12 models are mutually similar at 0.96-0.995, so they are one motif. Two entries are not: the TCFL5 models read tCACGCGC, which is not an E-box, and the JASPAR Tcf12 model MA0521.3 is a bare CAGCTG whose nearest neighbour across all four databases lies outside this family. These two account for the modest cohesion score.\n\n## Where it acts\n\nE-protein sites are found at both promoters and enhancers, but the striking pattern is that their genomic distribution is essentially that of whichever partner is expressed. In B cells, TCF3 occupies the immunoglobulin heavy- and light-chain enhancers and the B-lineage gene set; in muscle, E-protein occupancy coincides with MyoD enhancers; in the T-lineage, TCF12 and TCF3 sit at TAL1 and thymocyte enhancers. Because CAGCTG and CACCTG contain no CpG, they are not depleted in mammalian DNA and occur very frequently - a 6-bp palindrome is expected roughly every 4 kb. The practical consequence is that E-proteins appear in an unusually large number of ChIP datasets, both as the tagged factor and as the apparent motif inside someone else's peaks, because they are physically present at almost every class-II bHLH site in every tissue that expresses one.\n\n## Biology and disease\n\nE2A/TCF3-null mice lack B cells entirely and fail to initiate immunoglobulin gene rearrangement [PMID:8001124,8001125], which established E-proteins as required for lymphoid specification rather than merely modulatory. Human disease follows the paralogues. TCF4 haploinsufficiency causes Pitt-Hopkins syndrome, a severe neurodevelopmental disorder with epilepsy and autonomic dysfunction [PMID:17436254], and a common marker in intron 4 of TCF4 was one of three loci, with the MHC region and NRGN, significantly associated with schizophrenia in a 2009 combined genome-wide scan [PMID:19571808]. TCF12 loss-of-function, acting through its partnership with TWIST1, is a frequent cause of coronal craniosynostosis [PMID:23354436]. TCF3 is a recurrent fusion partner in pre-B acute lymphoblastic leukaemia, where the t(1;19) translocation joins the TCF3 activation domain to the PBX1 homeodomain [PMID:1967983]. ID protein overexpression, which titrates E-proteins away from DNA, is a common feature of tumours and of proliferating progenitors [PMID:26555048].\n\n## Reading a hit\n\nA CACCTG or CAGCTG match identifies a class-A E-box. It does not identify an E-protein, and it certainly does not identify which one: TCF3, TCF4 and TCF12 share a single motif. Worse, the same core is read by MYOD, NEUROD/ATOH, ASCL, TWIST/HAND, TAL1/LYL1, TFAP4, ZEB1/2 and SNAI-associated E-boxes. Most real E-protein sites are occupied by a heterodimer, so only one half of the match belongs to the E-protein at all. Treat an E-protein motif inside someone else's ChIP peaks as expected co-occupancy rather than evidence of indirect binding artifact - and treat an E-protein ChIP peak as most likely marking the partner's locus. The TCFL5 models here are not E-boxes and should not be scanned as such.",
  "caveats": "TCF3, TCF4 and TCF12 share one motif at 0.96-0.995 similarity, so a hit names the E-proteins at best, never a paralogue. The class-A core is also read by MYOD, NEUROD/ATOH, ASCL, TWIST/HAND, TAL1/LYL1, TFAP4 and ZEB, contains no CpG and is not depleted, so it occurs by chance every few kilobases. Most genuine sites are heterodimeric, meaning half the match belongs to the partner. E-proteins consequently show up in a very large number of ChIP datasets as the apparent motif inside other factors' peaks; that is real co-occupancy, not necessarily mislabelling. The TCFL5 models assigned here read tCACGCGC, which is not an E-box, and one JASPAR Tcf12 model is a bare CAGCTG whose nearest neighbours lie outside this family.",
  "refs": [
   {
@@ -75,6 +75,92 @@
    "cite": "Wang LH, Baker NE. E Proteins and ID Proteins: Helix-Loop-Helix Partners in Development and Disease. Dev Cell 2015;35:269-80.",
    "pmid": "26555048",
    "url": "https://pubmed.ncbi.nlm.nih.gov/26555048/"
+  },
+  {
+   "cite": "Stefansson H, Ophoff RA, Steinberg S, et al. Common variants conferring risk of schizophrenia. Nature 2009;460:744-7.",
+   "pmid": "19571808",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19571808/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1989,
+   "finding": "Cloning of the kappaE2-binding proteins E12 and E47 reveals a shared helix-loop-helix motif, also present in daughterless, MyoD and MYC, required for both dimerization and DNA binding.",
+   "methods": "Expression cloning, sequence comparison, mutagenesis, EMSA",
+   "confidence": "medium",
+   "pmids": [
+    "2493990"
+   ]
+  },
+  {
+   "year": 1989,
+   "finding": "Heterodimers between E12, E47 or daughterless and tissue-specific HLH proteins such as MyoD and achaete-scute bind the kappaE2 site with high affinity, more strongly than most homodimers.",
+   "methods": "In vitro translation, EMSA with mixed proteins",
+   "confidence": "medium",
+   "pmids": [
+    "2503252"
+   ],
+   "open": "Which half of a heterodimer site each partner reads."
+  },
+  {
+   "year": 1990,
+   "finding": "Id, an HLH protein without a basic region, binds MyoD, E12 and E47 and blocks their DNA binding, establishing sequestration of E-proteins as a regulatory mechanism.",
+   "methods": "cDNA cloning, EMSA, transfection",
+   "confidence": "medium",
+   "pmids": [
+    "2156629"
+   ]
+  },
+  {
+   "year": 1990,
+   "finding": "Binding-site selection shows that MyoD and E2A homo- and heterodimers share the CA..TG core but differ at flanking and internal positions, consistent with half-site recognition.",
+   "methods": "Selected and amplified binding-site (SAAB) imprinting",
+   "confidence": "medium",
+   "pmids": [
+    "2174572"
+   ]
+  },
+  {
+   "year": 1994,
+   "finding": "The E47 bHLH crystal structure on CACCTG shows a parallel four-helix bundle distinct from MAX and nonequivalent contacts to the two half-sites.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "7926781"
+   ]
+  },
+  {
+   "year": 1994,
+   "finding": "Two independent E2A knockouts lack B cells, with the block before immunoglobulin DH-JH rearrangement, establishing E-proteins as required for B-lineage specification.",
+   "methods": "Mouse gene targeting (two independent lines), hematopoietic analysis",
+   "confidence": "high",
+   "pmids": [
+    "8001124",
+    "8001125"
+   ]
+  },
+  {
+   "year": 2007,
+   "finding": "De novo TCF4 deletions and basic-region missense mutations cause Pitt-Hopkins syndrome, the first human disorder attributed to a class I bHLH defect.",
+   "methods": "Array CGH, sequencing of patients",
+   "confidence": "medium",
+   "pmids": [
+    "17436254"
+   ]
+  },
+  {
+   "year": 2013,
+   "finding": "Heterozygous TCF12 mutations account for a substantial fraction of coronal craniosynostosis, and Tcf12/Twist1 double-heterozygous mice show that TCF12-TWIST1 heterodimer dosage controls suture development.",
+   "methods": "Exome sequencing, transactivation assays, compound-heterozygous mice",
+   "confidence": "high",
+   "pmids": [
+    "23354436"
+   ]
+  }
+ ],
+ "open": [
+  "How well the E-protein models describe sites in cells is uncertain: most functional sites are heterodimer sites in which the E-protein reads only one half, binding-site selection showed that MyoD and E2A complexes differ at flanking and internal positions, and the database models come from single-protein in vitro selections or from ChIP peaks that include partner sites.",
+  "Whether TCF12 differs from TCF3 and TCF4 in preferring CAGCTG is unclear: the JASPAR Tcf12 model MA0521.3 and the CIS-BP TCF12 model read CAGCTG, but the HOCOMOCO TCF12 model and JASPAR MA1648.2 read CAGGTG/CACCTG like the other E-proteins.",
+  "What TCFL5 binds is unresolved on the data: both of its models read tCACGCGC, a CpG-containing non-E-box site, which does not fit its grouping with the class I E-proteins."
  ]
 }

@@ -9,7 +9,7 @@
  ],
  "consensus": "CTCCCATCC",
  "short": "GTF3A encodes TFIIIA, the transcription factor in which the C2H2 zinc finger was first recognized, and the protein that made the zinc finger a general concept. It is an RNA polymerase III factor with nine fingers that binds the internal control region of 5S ribosomal RNA genes, a roughly 50-base-pair sequence inside the transcribed region rather than upstream of it, and nucleates assembly of TFIIIC and TFIIIB. TFIIIA also binds 5S rRNA itself, storing it in the 7S ribonucleoprotein particle of amphibian oocytes. Because the functional element is a long internal sequence rather than a short word, the short motifs held in databases for this factor are abstractions and should be treated with caution.",
- "long": "## The factors\n\nTFIIIA, the product of the human GTF3A gene, is a single protein with no paralogue. Its DNA-binding region is a tandem array of nine C2H2 zinc fingers; the repeating zinc-binding unit was identified in this protein in the mid-1980s and gave the fold its name, so every other family in this atlas classed as C2H2 zinc finger traces its nomenclature here. The human gene was cloned in 1995 on the basis of homology to the long-studied Xenopus laevis protein. TFIIIA is not a conventional gene-specific activator: it is a basal factor for one class of RNA polymerase III promoter, and its role is to bind DNA and then recruit TFIIIC, which in turn positions TFIIIB and polymerase III. It works as a monomer, with no dimerization and no partner requirement at the DNA-binding step. It is broadly expressed, as 5S rRNA is needed by every cell. TFIIIA is also an RNA-binding protein: in Xenopus oocytes it sequesters 5S rRNA in the 7S particle, and its nuclear import depends on that dual capacity.\n\n## The motif\n\nThe functional element is the internal control region (ICR) of the 5S rRNA gene, which lies inside the transcribed sequence rather than upstream of it, in the middle third of the roughly 120-base-pair Xenopus gene. Mutational analysis of the 5S promoter defined several separable blocks within it, and the crystal structure of the six N-terminal fingers bound to 31 base pairs of the gene explained why the element is so long: the fingers are not wound continuously in the major groove. Some sit in the major groove, one crosses the minor groove, and the array spans the whole duplex, so six fingers cover a stretch that continuous major-groove binding would need far more fingers to reach. The consequence for motif analysis is that TFIIIA does not have a conventional short consensus. The nine-base word CTCCCATCC held by CIS-BP and by the Vierstra archetype for this family is a database abstraction extracted from high-throughput data, not the element defined by 40 years of functional work, and the two databases agree with each other only because one is derived from the other. There is no half-site, no spacing rule, and no paralogue to confuse: this family has just two matrices and a single member.\n\n## Where it acts\n\nIn the human genome the genuine targets are the 5S rRNA gene arrays, a tandem cluster on chromosome 1 plus dispersed 5S-derived pseudogenes, and the element sits within the gene body rather than in a promoter. Some tRNA-like and SINE-derived sequences contain ICR-like stretches, and RNA5SP141, a 5S pseudogene, is a functionally important TFIIIA product because its transcript is a RIG-I ligand. This is not a motif that marks enhancers, CpG islands or cell-type-specific regulatory regions, and it has no known composite elements with other transcription factors; its partners are the polymerase III machinery, TFIIIC and TFIIIB. TFIIIA binding also has a chromatin consequence beyond transcription: bound TFIIIA blocks nucleotide excision repair within the 5S gene, so the footprint is a locally repair-refractory region.\n\n## Biology and disease\n\nThe Xenopus 5S system was for decades the main model for developmental gene switching and for storage of a ribosomal RNA in a protein particle, and much of the classical literature is amphibian. Human genetics has caught up recently. Biallelic GTF3A mutations predispose to herpes simplex encephalitis by disrupting biogenesis of RNA5SP141, the host-derived RIG-I ligand needed for the innate antiviral response, which is a striking example of a basal polymerase III factor producing a narrow immunological phenotype. In zebrafish, the somatic paralogue gtf3aa is required for somatic 5S rRNA transcription and affects embryonic organ development. There is no established cancer driver role. 5S rRNA supply itself feeds into the ribosomal-protein/p53 surveillance pathway, so severe loss of TFIIIA function is expected to be poorly tolerated.\n\n## Reading a hit\n\nBe sceptical. A match to CTCCCATCC is not useful evidence for TFIIIA occupancy, because the real element is a long internal control region and the short word is a low-information abstraction; the same nine bases occur in many GC/CT-rich promoters that belong to other families. The practical test is positional: TFIIIA acts inside 5S rRNA genes and 5S-derived sequences, so if the hit is not in one of those, it almost certainly does not mean TFIIIA. If you actually want to find 5S genes, sequence homology to the 5S rRNA gene is the right tool, not motif scanning. Neither of the two matrices in this family is backed by a published in vitro binding experiment for the human protein, and there is no ChIP-seq-derived matrix here at all, so the evidence base for the motif as a scanning model is thin and we say so rather than dressing it up.",
+ "long": "## The factors\n\nTFIIIA, the product of the human GTF3A gene, is a single protein with no paralogue. Its DNA-binding region is a tandem array of nine C2H2 zinc fingers; the repeating zinc-binding unit was identified in this protein in the mid-1980s and gave the fold its name [PMID:4040853], so every other family in this atlas classed as C2H2 zinc finger traces its nomenclature here. The human gene was cloned in 1995 on the basis of homology to the long-studied Xenopus laevis protein [PMID:7789179]. TFIIIA is not a conventional gene-specific activator: it is a basal factor for one class of RNA polymerase III promoter, and its role is to bind DNA and then recruit TFIIIC, which in turn positions TFIIIB and polymerase III [PMID:41783558]. It works as a monomer, with no dimerization and no partner requirement at the DNA-binding step. It is broadly expressed, as 5S rRNA is needed by every cell. TFIIIA is also an RNA-binding protein: in Xenopus oocytes it sequesters 5S rRNA in the 7S particle, and its nuclear import depends on that dual capacity [PMID:3456603,15146977].\n\n## The motif\n\nThe functional element is the internal control region (ICR) of the 5S rRNA gene, which lies inside the transcribed sequence rather than upstream of it, in the middle third of the roughly 120-base-pair Xenopus gene. Mutational analysis of the 5S promoter defined several separable blocks within it [PMID:2992947,3004969], and the crystal structure of the six N-terminal fingers bound to 31 base pairs of the gene explained why the element is so long [PMID:9501194]: the fingers are not wound continuously in the major groove. Some sit in the major groove, one crosses the minor groove, and the array spans the whole duplex, so six fingers cover a stretch that continuous major-groove binding would need far more fingers to reach [PMID:9501194]. The consequence for motif analysis is that TFIIIA does not have a conventional short consensus. The nine-base word CTCCCATCC held by CIS-BP and by the Vierstra archetype for this family is a database abstraction extracted from high-throughput data, not the element defined by 40 years of functional work, and the two databases agree with each other only because one is derived from the other. There is no half-site, no spacing rule, and no paralogue to confuse: this family has just two matrices and a single member.\n\n## Where it acts\n\nIn the human genome the genuine targets are the 5S rRNA gene arrays, a tandem cluster on chromosome 1 plus dispersed 5S-derived pseudogenes, and the element sits within the gene body rather than in a promoter. Some tRNA-like and SINE-derived sequences contain ICR-like stretches, and RNA5SP141, a 5S pseudogene, is a functionally important TFIIIA product because its transcript is a RIG-I ligand [PMID:36399538]. This is not a motif that marks enhancers, CpG islands or cell-type-specific regulatory regions, and it has no known composite elements with other transcription factors; its partners are the polymerase III machinery, TFIIIC and TFIIIB. TFIIIA binding also has a chromatin consequence beyond transcription: bound TFIIIA blocks nucleotide excision repair within the 5S gene, so the footprint is a locally repair-refractory region [PMID:10064604].\n\n## Biology and disease\n\nThe Xenopus 5S system was for decades the main model for developmental gene switching and for storage of a ribosomal RNA in a protein particle, and much of the classical literature is amphibian. Human genetics has caught up recently. Biallelic GTF3A mutations predispose to herpes simplex encephalitis by disrupting biogenesis of RNA5SP141, the host-derived RIG-I ligand needed for the innate antiviral response [PMID:36399538], which is a striking example of a basal polymerase III factor producing a narrow immunological phenotype. In zebrafish, the somatic paralogue gtf3aa is required for somatic 5S rRNA transcription and affects embryonic organ development [PMID:41783558]. There is no established cancer driver role. 5S rRNA supply itself feeds into the ribosomal-protein/p53 surveillance pathway [PMID:21957041], so severe loss of TFIIIA function is expected to be poorly tolerated.\n\n## Reading a hit\n\nBe sceptical. A match to CTCCCATCC is not useful evidence for TFIIIA occupancy, because the real element is a long internal control region and the short word is a low-information abstraction; the same nine bases occur in many GC/CT-rich promoters that belong to other families. The practical test is positional: TFIIIA acts inside 5S rRNA genes and 5S-derived sequences, so if the hit is not in one of those, it almost certainly does not mean TFIIIA. If you actually want to find 5S genes, sequence homology to the 5S rRNA gene is the right tool, not motif scanning. Neither of the two matrices in this family is backed by a published in vitro binding experiment for the human protein, and there is no ChIP-seq-derived matrix here at all, so the evidence base for the motif as a scanning model is thin and we say so rather than dressing it up.",
  "caveats": "This family should be read as a weak entry. Both matrices are short, low-information and mutually derived, and neither corresponds to the element that functional work defines, namely the roughly 50-base-pair internal control region inside the 5S rRNA gene. A CTCCCATCC match therefore carries almost no specific information about TFIIIA, and will often be better explained by one of the many CT/GC-rich promoter families. Positional context does almost all the work: TFIIIA binds within 5S rRNA genes and 5S-derived pseudogenes, so a hit elsewhere should not be attributed to it. There is no ChIP evidence in this family and no paralogue problem, only a mismatch between the biological element and the motif format.",
  "refs": [
   {
@@ -66,6 +66,85 @@
    "cite": "Luo J, Tao B, Chen J, et al. General transcription factor IIIAa regulates the transcription of somatic 5S rRNA and influences embryonic organ development in zebrafish. Mar Life Sci Technol 2026;8:68-81.",
    "pmid": "41783558",
    "url": "https://pubmed.ncbi.nlm.nih.gov/41783558/"
+  },
+  {
+   "cite": "Miller J, McLachlan AD, Klug A. Repetitive zinc-binding domains in the protein transcription factor IIIA from Xenopus oocytes. EMBO J 1985;4:1609-14.",
+   "pmid": "4040853",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/4040853/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1985,
+   "finding": "Sequence and metal analysis of Xenopus TFIIIA reveals nine repeated zinc-binding units of the Cys2-His2 type, defining the zinc finger and the fold that names the largest family of eukaryotic DNA-binding proteins. In the same year, point mutations and transversions across the 5S gene split its internal control region into a box A element, two spacers and a 3' block that carries the main TFIIIA binding domain, and show that the spacing between the blocks must be preserved.",
+   "methods": "Protein sequence and metal analysis, oligonucleotide mutagenesis with in vitro transcription and complex formation assays",
+   "confidence": "high",
+   "pmids": [
+    "4040853",
+    "2992947",
+    "3004969"
+   ],
+   "open": "How nine fingers were arranged on a 50-base-pair internal element was unknown."
+  },
+  {
+   "year": 1986,
+   "finding": "Nuclease protection in the 7S particle maps the TFIIIA footprint on 5S rRNA to nucleotides 64-116 and notes two CCUGG helices also present in the binding site on the gene, suggesting the protein recognizes a shared structural feature in the gene and its product.",
+   "methods": "Ribonuclease protection of the 7S ribonucleoprotein",
+   "confidence": "medium",
+   "pmids": [
+    "3456603"
+   ]
+  },
+  {
+   "year": 1995,
+   "finding": "The human TFIIIA gene GTF3A is cloned by homology to the Xenopus protein: 423 amino acids with nine C2H2 fingers, 58% amino acid identity to the Xenopus factor, broadly expressed, mapped to 13q12.3-q13.1.",
+   "methods": "cDNA cloning, northern analysis, fluorescence in situ hybridization",
+   "confidence": "medium",
+   "pmids": [
+    "7789179"
+   ]
+  },
+  {
+   "year": 1998,
+   "finding": "The crystal structure of the six N-terminal fingers on 31 base pairs of the 5S gene promoter shows the fingers placed differently along the duplex, some in the major groove and one crossing the minor groove, so TFIIIA reads several separated sequence blocks with fewer fingers than continuous major-groove winding would require; this is why the element has no short consensus.",
+   "methods": "X-ray crystallography at 3.1 A",
+   "confidence": "high",
+   "pmids": [
+    "9501194"
+   ]
+  },
+  {
+   "year": 1999,
+   "finding": "Bound TFIIIA suppresses nucleotide excision repair of UV photoproducts across the internal control region in vitro, while repair proceeds normally just outside the footprint, showing that the binding site is a locally repair-refractory stretch.",
+   "methods": "In vitro repair assays with Xenopus oocyte nuclear extracts on the TFIIIA-5S rDNA complex",
+   "confidence": "medium",
+   "pmids": [
+    "10064604"
+   ]
+  },
+  {
+   "year": 2022,
+   "finding": "Compound heterozygous loss-of-function GTF3A mutations are found in a patient with common variable immunodeficiency and herpes simplex encephalitis; ChIP-seq identifies the 5S pseudogene RNA5SP141 as a TFIIIA target, and mutant cells fail to make this RIG-I ligand and to mount antiviral responses, giving a basal polymerase III factor a narrow immunological phenotype.",
+   "methods": "Patient genetics, patient fibroblasts and gene-edited cells, ChIP-seq, infection assays",
+   "confidence": "high",
+   "pmids": [
+    "36399538"
+   ]
+  },
+  {
+   "year": 2026,
+   "finding": "Knockout of the zebrafish somatic paralogue gtf3aa suppresses somatic 5S rRNA transcription, reduces mature mono- and polyribosomes, and causes slow growth with impaired eye, heart, liver, swim bladder and intestinal development; the mutants die by seven days post-fertilization.",
+   "methods": "Zebrafish knockout, expression profiling, ribosome profiling of larvae",
+   "confidence": "medium",
+   "pmids": [
+    "41783558"
+   ]
+  }
+ ],
+ "open": [
+  "What the two database matrices for this family represent is unclear: CTCCCATCC is a nine-base abstraction from high-throughput data with no published in vitro binding experiment for the human protein behind it, while the functionally defined element is a roughly 50-base-pair internal control region read by fingers spaced along both grooves.",
+  "Whether TFIIIA recognizes a shared structural feature in the 5S gene and the 5S rRNA, as the matching CCUGG helices in the two footprints suggested, or uses separable surfaces for DNA and RNA has not been settled structurally, since the crystal structure covers only six fingers on DNA.",
+  "How many TFIIIA targets exist beyond the 5S genes is open: ChIP-seq identified the pseudogene RNA5SP141 as a functionally important target, and whether other 5S-derived or SINE-derived loci are genuinely transcribed through TFIIIA is not established.",
+  "Why loss of a factor needed for all 5S rRNA synthesis produces a narrow phenotype in humans, susceptibility to herpes simplex encephalitis, while zebrafish gtf3aa mutants die as larvae with broad organ defects, is unexplained; the human mutations are hypomorphic, but how much 5S output is required has not been measured."
  ]
 }

@@ -1,80 +1,165 @@
 {
-  "key": "ZNF_SCAN_OTHER",
-  "aka": [
-    "other SCAN / SSX / MSANT factors",
-    "small families with limited literature",
-    "holding pen",
-    "MSANTD1 / MSANTD3 / MSANTD4",
-    "DNTTIP1 (TdT-interacting factor 1, MiDAC)",
-    "FLYWCH1",
-    "FAM200B / ZBED11",
-    "ELYS / AHCTF1",
-    "NACC2",
-    "XPA (not a transcription factor)"
-  ],
-  "short": "This is not a motif family. It is a holding pen for small, thinly characterized factors that needed somewhere to go, and it currently holds eleven matrices for nine unrelated proteins: MSANTD1, MSANTD3 and MSANTD4, DNTTIP1, FLYWCH1, FAM200B, ELYS/AHCTF1, NACC2 and XPA. Internal cohesion is 0.47, the lowest of any group in this atlas. Two warnings about the label. The name mentions SCAN and SSX domains, but no SCAN-domain or SSX protein has a motif here; and BANP, named in the definition, is not here either - its only model sits in the other-BTB-zinc-finger bucket. XPA is the central scaffold of nucleotide excision repair, not a transcription factor. The motifs themselves are mostly well supported.",
-  "long": "## The factors\n\nNine proteins, eleven models, no shared biology; read the list, not the label, which mentions SCAN and SSX domains that are not represented.\n\nBANP is named in the definition and is the most interesting protein in the set, but its motif is filed elsewhere. The CGCG element was for years an orphan promoter motif, enriched near the start sites of a subset of CpG-island promoters and associated with highly expressed genes; single-molecule footprinting combined with interaction proteomics identified BTG3-associated nuclear protein as its binder. Methylation of the motif repels BANP, confining it to unmethylated CpG islands, and on binding it opens chromatin, phases nucleosomes and activates essential metabolic genes. Structures of BEN domains later showed that oligomerization lets BANP select unmethylated CGCG. Here that motif rides on a Vierstra archetype with a joint ZBTB/BANP label, so it went to the other-BTB-zinc-finger entry instead.\n\nThe BEN domain reaches one protein that is here: of nine human BEN-domain proteins, NACC1 prefers CATG-containing sequence, and the NACC2 model here reads ACATGC. DNTTIP1, originally TdT-interacting factor 1, is a subunit of the mitotic deacetylase complex MiDAC; its C-terminal SKI/SNO/DAC-like domain binds DNA and nucleosomes, making it a chromatin-binding module rather than an activator. FLYWCH1 is a FLYWCH-type zinc finger studied as a suppressor of nuclear beta-catenin in colorectal cancer. FAM200B, also called ZBED11, is transposase-derived, of the hAT/ZBED lineage with an RNase H-like fold. MSANTD1, MSANTD3 and MSANTD4 carry Myb/SANT-like DNA-binding domains and almost no documented function. ELYS/AHCTF1 was named a transcription factor when cloned from mouse foetal haematopoietic tissue, then shown to be a nucleoporin that seeds Nup107-160 assembly and doubles as a kinetochore protein. XPA was cloned in 1990 as an excision-repair gene \"containing a zinc-finger domain\", which is how censuses of putative transcription factors caught it; it is the scaffold of nucleotide excision repair and reads splayed-arm junction geometry, not sequence.\n\n## The motif\n\nThere is no consensus: the reported CACTCAc is only the MSANTD3 medoid of eleven unrelated matrices, and cohesion is 0.47.\n\nHOCOMOCO v14 encodes assays in the model name: P is ChIP-seq, S HT-SELEX, M methyl-HT-SELEX, G genomic HT-SELEX, I SMiLE-seq, B protein-binding microarray, and grade A means at least two assay types agreed. Most are good on that scale. FLYWCH1 gives aTTCGAhcCGATTCGA, a 19-bit tandem TTCGA repeat, from PSGB at grade A. FAM200B gives the 13-bp palindrome TGGGTCGCGaCCC, 16 bits, PSGIB grade A, the shape a dimeric domesticated transposase should give. MSANTD4 gives acTTACTACtcg (13.8 bits, SGIB, A), MSANTD1 CACTTAAG (10.8 bits, PSGIB, A), DNTTIP1 GcatGCAC (PSG, A) and NACC2 ACATgc (PSGIB, A). Six of the seven HOCOMOCO models are grade A from up to five platforms, the assay set used by the recent systematic effort on poorly characterized human factors that produced motifs for 177 of 332 candidates. A protein with no literature can still have a well-measured motif.\n\nThree entries are weaker. MSANTD3 appears twice, as JASPAR MA1523.2 and CIS-BP M01259, both reading CACTCAc and both flagged as resembling the NKX homeodomain family at 0.94-0.97, so that hexamer is not separable from an NKX site. ELYS contributes AAAT, 8.5 bits, from PBM alone at grade B, with a best match outside the bucket of 0.99: an AT-rich four-mer indistinguishable from any other AT-rich model. XPA appears twice, as CIS-BP M05827 and the Vierstra archetype AC0333:XPA:Unknown, whose domain label is literally \"Unknown\"; neither carries an assay label here.\n\n## Where it acts\n\nUnmapped for almost everything here; BANP, filed elsewhere, is the exception, at unmethylated CpG-island promoters near transcription start sites, with binding lost where those promoters are aberrantly methylated in cancer. For the rest, the systematic work on understudied factors found in vitro motifs enriched at cellular binding sites concentrated in promoters, making promoter-proximal the prior. Scan arithmetic matters more than location: ACATGC or CACTCA is expected several hundred thousand times per strand in 3.1 Gb and AAAT tens of millions of times, so the ELYS and MSANTD3 models cannot localise anything, while FLYWCH1's or FAM200B's long matrices are genuinely rare.\n\n## Biology and disease\n\nXPA is the only member with a Mendelian disease of its own, and it is a repair disease: biallelic mutations cause xeroderma pigmentosum group A, with extreme ultraviolet sensitivity and, in severe alleles, neurodegeneration. MiDAC, the complex DNTTIP1 assembles, is essential for mouse embryonic development. MSANTD3 appears as an HTN3-MSANTD3 fusion defining a subset of salivary acinic cell carcinoma. ELYS loss blocks nuclear pore assembly and chromosome segregation. MSANTD1, MSANTD4, FAM200B and NACC2 have no established disease link.\n\n## Reading a hit\n\nName the matrix, not the family: a hit here is on one of eleven unrelated models. Then triage. If you came for the BANP motif, it is TCTCGCGAGA on archetype AC0312:ZBTB/BANP in the other-BTB-zinc-finger entry, and it matches the ZBTB33/Kaiso archetype at 0.99, so sequence alone will not say which of the two bound - use methylation state and expression. If the hit is XPA, discard it: XPA has no sequence specificity. If it is ELYS AAAT, discard it as AT-rich background. If it is MSANTD3 CACTCA, check the NKX entry first. If it is FLYWCH1, FAM200B, MSANTD1, MSANTD4, DNTTIP1 or NACC2, the matrix is reasonable evidence and the protein is not: treat the site as a candidate for an understudied factor, confirm the gene is expressed, and note that on structure FAM200B belongs with the ZBED entry and the MSANTD proteins with MYB.",
-  "caveats": "This is an administrative holding pen, not a family. Eleven matrices for nine unrelated proteins, cohesion 0.47, the lowest in the atlas; there is no consensus and none should be quoted. The label misleads twice: no SCAN-domain or SSX protein has a motif here, and BANP, named in the definition, has its only model filed under other BTB-zinc-fingers as the joint ZBTB/BANP archetype. XPA is a nucleotide excision repair scaffold that binds DNA by shape, so its two models should not be scanned at all, and the ELYS model is a PBM-only AT-rich four-mer. Conversely, do not dismiss the whole group: six of the seven HOCOMOCO models are grade A from several independent assay platforms.",
-  "refs": [
-    {
-      "cite": "Tanaka K, Miura N, Satokata I, et al. Analysis of a human DNA excision repair gene involved in group A xeroderma pigmentosum and containing a zinc-finger domain. Nature 1990;348:73-6.",
-      "pmid": "2234061",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/2234061/"
-    },
-    {
-      "cite": "Kimura N, Takizawa M, Okita K, et al. Identification of a novel transcription factor, ELYS, expressed predominantly in mouse foetal haematopoietic tissues. Genes Cells 2002;7:435-46.",
-      "pmid": "11952839",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/11952839/"
-    },
-    {
-      "cite": "Rasala BA, Orjalo AV, Shen Z, et al. ELYS is a dual nucleoporin/kinetochore protein required for nuclear pore assembly and proper cell division. Proc Natl Acad Sci U S A 2006;103:17801-6.",
-      "pmid": "17098863",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/17098863/"
-    },
-    {
-      "cite": "Itoh T, Fairall L, Muskett FW, et al. Structural and functional characterization of a cell cycle associated HDAC1/2 complex reveals the structural basis for complex assembly and nucleosome targeting. Nucleic Acids Res 2015;43:2033-44.",
-      "pmid": "25653165",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/25653165/"
-    },
-    {
-      "cite": "Sugitani N, Sivley RM, Perry KE, et al. XPA: A key scaffold for human nucleotide excision repair. DNA Repair (Amst) 2016;44:123-135.",
-      "pmid": "27247238",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/27247238/"
-    },
-    {
-      "cite": "Muhammad BA, Almozyan S, Babaei-Jadidi R, et al. FLYWCH1, a Novel Suppressor of Nuclear β-Catenin, Regulates Migration and Morphology in Colorectal Cancer. Mol Cancer Res 2018;16:1977-1990.",
-      "pmid": "30097457",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/30097457/"
-    },
-    {
-      "cite": "Andreasen S, Varma S, Barasch N, et al. The HTN3-MSANTD3 Fusion Gene Defines a Subset of Acinic Cell Carcinoma of the Salivary Gland. Am J Surg Pathol 2019;43:489-496.",
-      "pmid": "30520817",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/30520817/"
-    },
-    {
-      "cite": "Turnbull RE, Fairall L, Saleh A, et al. The MiDAC histone deacetylase complex is essential for embryonic development and has a unique multivalent structure. Nat Commun 2020;11:3252.",
-      "pmid": "32591534",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/32591534/"
-    },
-    {
-      "cite": "Grand RS, Burger L, Gräwe C, et al. BANP opens chromatin and activates CpG-island-regulated genes. Nature 2021;596:133-137.",
-      "pmid": "34234345",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/34234345/"
-    },
-    {
-      "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
-      "pmid": "37971293",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
-    },
-    {
-      "cite": "Ren J, Wang J, Ren Y, et al. Structural basis of DNA recognition by BEN domain proteins reveals a role for oligomerization in unmethylated DNA selection by BANP. Nucleic Acids Res 2024;52:11349-11361.",
-      "pmid": "39225042",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/39225042/"
-    },
-    {
-      "cite": "Jolma A, Laverty KU, Fathi A, et al. An expanded codebook of human transcription factor DNA-binding specificity. Nature 2026;657:275-283.",
-      "pmid": "42557334",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42557334/"
-    }
-  ]
+ "key": "ZNF_SCAN_OTHER",
+ "aka": [
+  "other SCAN / SSX / MSANT factors",
+  "small families with limited literature",
+  "holding pen",
+  "MSANTD1 / MSANTD3 / MSANTD4",
+  "DNTTIP1 (TdT-interacting factor 1, MiDAC)",
+  "FLYWCH1",
+  "FAM200B / ZBED11",
+  "ELYS / AHCTF1",
+  "NACC2",
+  "XPA (not a transcription factor)"
+ ],
+ "short": "This is not a motif family. It is a holding pen for small, thinly characterized factors that needed somewhere to go, and it currently holds eleven matrices for nine unrelated proteins: MSANTD1, MSANTD3 and MSANTD4, DNTTIP1, FLYWCH1, FAM200B, ELYS/AHCTF1, NACC2 and XPA. Internal cohesion is 0.47, the lowest of any group in this atlas. Two warnings about the label. The name mentions SCAN and SSX domains, but no SCAN-domain or SSX protein has a motif here; and BANP, named in the definition, is not here either - its only model sits in the other-BTB-zinc-finger bucket. XPA is the central scaffold of nucleotide excision repair, not a transcription factor. The motifs themselves are mostly well supported.",
+ "long": "## The factors\n\nNine proteins, eleven models, no shared biology; read the list, not the label, which mentions SCAN and SSX domains that are not represented.\n\nBANP is named in the definition and is the most interesting protein in the set, but its motif is filed elsewhere. The CGCG element was for years an orphan promoter motif, enriched near the start sites of a subset of CpG-island promoters and associated with highly expressed genes; single-molecule footprinting combined with interaction proteomics identified BTG3-associated nuclear protein as its binder [PMID:34234345]. Methylation of the motif repels BANP, confining it to unmethylated CpG islands, and on binding it opens chromatin, phases nucleosomes and activates essential metabolic genes [PMID:34234345]. Structures of BEN domains later showed that oligomerization lets BANP select unmethylated CGCG [PMID:39225042]. Here that motif rides on a Vierstra archetype with a joint ZBTB/BANP label, so it went to the other-BTB-zinc-finger entry instead.\n\nThe BEN domain reaches one protein that is here: of nine human BEN-domain proteins, NACC1 prefers CATG-containing sequence [PMID:39225042], and the NACC2 model here reads ACATGC. DNTTIP1, originally TdT-interacting factor 1, is a subunit of the mitotic deacetylase complex MiDAC; its C-terminal SKI/SNO/DAC-like domain binds DNA and nucleosomes, making it a chromatin-binding module rather than an activator [PMID:25653165]. FLYWCH1 is a FLYWCH-type zinc finger studied as a suppressor of nuclear beta-catenin in colorectal cancer [PMID:30097457]. FAM200B, also called ZBED11, is transposase-derived, of the hAT/ZBED lineage with an RNase H-like fold. MSANTD1, MSANTD3 and MSANTD4 carry Myb/SANT-like DNA-binding domains and almost no documented function [PMID:29425488]. ELYS/AHCTF1 was named a transcription factor when cloned from mouse foetal haematopoietic tissue [PMID:11952839], then shown to be a nucleoporin that seeds Nup107-160 assembly and doubles as a kinetochore protein [PMID:17098863]. XPA was cloned in 1990 as an excision-repair gene \"containing a zinc-finger domain\" [PMID:2234061]; the 2018 census of human transcription factors nevertheless lists it because of a strong HT-SELEX motif, not because of that domain [PMID:29425488]; it is the scaffold of nucleotide excision repair and reads splayed-arm junction geometry, not sequence [PMID:27247238].\n\n## The motif\n\nThere is no consensus: the reported CACTCAc is only the MSANTD3 medoid of eleven unrelated matrices, and cohesion is 0.47.\n\nHOCOMOCO v14 encodes assays in the model name: P is ChIP-seq, S HT-SELEX, M methyl-HT-SELEX, G genomic HT-SELEX, I SMiLE-seq, B protein-binding microarray, and grade A means at least two assay types agreed [PMID:37971293]. Most are good on that scale. FLYWCH1 gives aTTCGAhcCGATTCGA, a 19-bit tandem TTCGA repeat, from PSGB at grade A. FAM200B gives the 13-bp palindrome TGGGTCGCGaCCC, 16 bits, PSGIB grade A, the shape a dimeric domesticated transposase should give. MSANTD4 gives acTTACTACtcg (13.8 bits, SGIB, A), MSANTD1 CACTTAAG (10.8 bits, PSGIB, A), DNTTIP1 GcatGCAC (PSG, A) and NACC2 ACATgc (PSGIB, A). Six of the seven HOCOMOCO models are grade A from up to five platforms, the assay set used by the recent systematic effort on poorly characterized human factors that produced motifs for 177 of 332 candidates [PMID:42557334]. A protein with no literature can still have a well-measured motif.\n\nThree entries are weaker. MSANTD3 appears twice, as JASPAR MA1523.2 and CIS-BP M01259, both reading CACTCAc and both flagged as resembling the NKX homeodomain family at 0.94-0.97, so that hexamer is not separable from an NKX site. ELYS contributes AAAT, 8.5 bits, from PBM alone at grade B, with a best match outside the bucket of 0.99: an AT-rich four-mer indistinguishable from any other AT-rich model. XPA appears twice, as CIS-BP M05827 and the Vierstra archetype AC0333:XPA:Unknown, whose domain label is literally \"Unknown\"; neither carries an assay label here.\n\n## Where it acts\n\nUnmapped for almost everything here; BANP, filed elsewhere, is the exception, at unmethylated CpG-island promoters near transcription start sites, with binding lost where those promoters are aberrantly methylated in cancer [PMID:34234345]. For the rest, the systematic work on understudied factors found in vitro motifs enriched at cellular binding sites concentrated in promoters, making promoter-proximal the prior [PMID:42557334]. Scan arithmetic matters more than location: ACATGC or CACTCA is expected several hundred thousand times per strand in 3.1 Gb and AAAT tens of millions of times, so the ELYS and MSANTD3 models cannot localise anything, while FLYWCH1's or FAM200B's long matrices are genuinely rare.\n\n## Biology and disease\n\nXPA is the only member with a Mendelian disease of its own, and it is a repair disease: biallelic mutations cause xeroderma pigmentosum group A, with extreme ultraviolet sensitivity and, in severe alleles, neurodegeneration [PMID:2234061,27247238]. MiDAC, the complex DNTTIP1 assembles, is essential for mouse embryonic development [PMID:32591534]. MSANTD3 appears as an HTN3-MSANTD3 fusion defining a subset of salivary acinic cell carcinoma [PMID:30520817]. ELYS loss blocks nuclear pore assembly and chromosome segregation [PMID:17098863]. MSANTD1, MSANTD4, FAM200B and NACC2 have no established disease link.\n\n## Reading a hit\n\nName the matrix, not the family: a hit here is on one of eleven unrelated models. Then triage. If you came for the BANP motif, it is TCTCGCGAGA on archetype AC0312:ZBTB/BANP in the other-BTB-zinc-finger entry, and it matches the ZBTB33/Kaiso archetype at 0.99, so sequence alone will not say which of the two bound - use methylation state and expression. If the hit is XPA, discard it: XPA has no sequence specificity [PMID:27247238]. If it is ELYS AAAT, discard it as AT-rich background. If it is MSANTD3 CACTCA, check the NKX entry first. If it is FLYWCH1, FAM200B, MSANTD1, MSANTD4, DNTTIP1 or NACC2, the matrix is reasonable evidence and the protein is not: treat the site as a candidate for an understudied factor, confirm the gene is expressed, and note that on structure FAM200B belongs with the ZBED entry and the MSANTD proteins with MYB.",
+ "caveats": "This is an administrative holding pen, not a family. Eleven matrices for nine unrelated proteins, cohesion 0.47, the lowest in the atlas; there is no consensus and none should be quoted. The label misleads twice: no SCAN-domain or SSX protein has a motif here, and BANP, named in the definition, has its only model filed under other BTB-zinc-fingers as the joint ZBTB/BANP archetype. XPA is a nucleotide excision repair scaffold that binds DNA by shape, so its two models should not be scanned at all, and the ELYS model is a PBM-only AT-rich four-mer. Conversely, do not dismiss the whole group: six of the seven HOCOMOCO models are grade A from several independent assay platforms.",
+ "refs": [
+  {
+   "cite": "Tanaka K, Miura N, Satokata I, et al. Analysis of a human DNA excision repair gene involved in group A xeroderma pigmentosum and containing a zinc-finger domain. Nature 1990;348:73-6.",
+   "pmid": "2234061",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2234061/"
+  },
+  {
+   "cite": "Kimura N, Takizawa M, Okita K, et al. Identification of a novel transcription factor, ELYS, expressed predominantly in mouse foetal haematopoietic tissues. Genes Cells 2002;7:435-46.",
+   "pmid": "11952839",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11952839/"
+  },
+  {
+   "cite": "Rasala BA, Orjalo AV, Shen Z, et al. ELYS is a dual nucleoporin/kinetochore protein required for nuclear pore assembly and proper cell division. Proc Natl Acad Sci U S A 2006;103:17801-6.",
+   "pmid": "17098863",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17098863/"
+  },
+  {
+   "cite": "Xuan C, Wang Q, Han X, et al. RBB, a novel transcription repressor, represses the transcription of HDM2 oncogene. Oncogene 2013;32:3711-21.",
+   "pmid": "22926524",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22926524/"
+  },
+  {
+   "cite": "Itoh T, Fairall L, Muskett FW, et al. Structural and functional characterization of a cell cycle associated HDAC1/2 complex reveals the structural basis for complex assembly and nucleosome targeting. Nucleic Acids Res 2015;43:2033-44.",
+   "pmid": "25653165",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25653165/"
+  },
+  {
+   "cite": "Sugitani N, Sivley RM, Perry KE, et al. XPA: A key scaffold for human nucleotide excision repair. DNA Repair (Amst) 2016;44:123-135.",
+   "pmid": "27247238",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27247238/"
+  },
+  {
+   "cite": "Muhammad BA, Almozyan S, Babaei-Jadidi R, et al. FLYWCH1, a Novel Suppressor of Nuclear β-Catenin, Regulates Migration and Morphology in Colorectal Cancer. Mol Cancer Res 2018;16:1977-1990.",
+   "pmid": "30097457",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30097457/"
+  },
+  {
+   "cite": "Lambert SA, Jolma A, Campitelli LF, et al. The Human Transcription Factors. Cell 2018;172:650-665.",
+   "pmid": "29425488",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29425488/"
+  },
+  {
+   "cite": "Andreasen S, Varma S, Barasch N, et al. The HTN3-MSANTD3 Fusion Gene Defines a Subset of Acinic Cell Carcinoma of the Salivary Gland. Am J Surg Pathol 2019;43:489-496.",
+   "pmid": "30520817",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30520817/"
+  },
+  {
+   "cite": "Turnbull RE, Fairall L, Saleh A, et al. The MiDAC histone deacetylase complex is essential for embryonic development and has a unique multivalent structure. Nat Commun 2020;11:3252.",
+   "pmid": "32591534",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32591534/"
+  },
+  {
+   "cite": "Grand RS, Burger L, Gräwe C, et al. BANP opens chromatin and activates CpG-island-regulated genes. Nature 2021;596:133-137.",
+   "pmid": "34234345",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34234345/"
+  },
+  {
+   "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
+   "pmid": "37971293",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  },
+  {
+   "cite": "Ren J, Wang J, Ren Y, et al. Structural basis of DNA recognition by BEN domain proteins reveals a role for oligomerization in unmethylated DNA selection by BANP. Nucleic Acids Res 2024;52:11349-11361.",
+   "pmid": "39225042",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39225042/"
+  },
+  {
+   "cite": "Jolma A, Laverty KU, Fathi A, et al. An expanded codebook of human transcription factor DNA-binding specificity. Nature 2026;657:275-283.",
+   "pmid": "42557334",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42557334/"
+  }
+ ],
+ "timeline": [
+  {
+   "year": 1990,
+   "finding": "Human and mouse XPAC cDNAs are cloned by complementing the ultraviolet sensitivity of xeroderma pigmentosum group A cells; the 273-residue human protein carries a zinc-finger motif.",
+   "methods": "cDNA cloning, complementation of UV sensitivity, mRNA analysis of patient cell lines",
+   "confidence": "high",
+   "pmids": [
+    "2234061"
+   ],
+   "open": "Whether the zinc finger conferred any DNA sequence preference was not addressed."
+  },
+  {
+   "year": 2002,
+   "finding": "ELYS is cloned from mouse embryonic haematopoietic tissue and described as a nuclear transcription factor, on the strength of a predicted AT-hook DNA-binding domain, nuclear localization signals and transcriptional activity of GAL4-fusion constructs.",
+   "methods": "cDNA cloning, expression analysis, GAL4-fusion reporter assays",
+   "confidence": "low",
+   "pmids": [
+    "11952839"
+   ],
+   "open": "The transcription-factor label rested on domain prediction and fusion assays rather than on a mapped binding site or target gene."
+  },
+  {
+   "year": 2006,
+   "finding": "ELYS copurifies with the Nup107-160 complex in Xenopus and human extracts, localizes to nuclear pores and, at mitosis, to kinetochores, and is required for nuclear pore assembly. The putative transcription factor is recast as a nucleoporin.",
+   "methods": "Immunoprecipitation and mass spectrometry, immunofluorescence, RNAi",
+   "confidence": "high",
+   "pmids": [
+    "17098863"
+   ]
+  },
+  {
+   "year": 2013,
+   "finding": "NACC2, reported under the name RBB, is described as a BTB- and BEN-domain transcriptional repressor that binds a specific DNA motif as a homodimer, interacts with the NuRD complex and represses HDM2 from its internal promoter.",
+   "methods": "SELEX, ChIP-seq, protein interaction and reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "22926524"
+   ]
+  },
+  {
+   "year": 2015,
+   "finding": "Crystal structures of two DNTTIP1 domains show an N-terminal dimerization domain of a new fold that assembles the HDAC1:MIDEAS complex, and a C-terminal domain related to SKI/SNO/DAC that binds DNA and nucleosomes. DNTTIP1 is a dimeric chromatin-binding module of MiDAC, not a classical activator.",
+   "methods": "X-ray crystallography, DNA and nucleosome binding assays",
+   "confidence": "high",
+   "pmids": [
+    "25653165"
+   ],
+   "open": "How MiDAC is directed to particular loci was not established."
+  },
+  {
+   "year": 2018,
+   "finding": "The human transcription factor census keeps XPA as a transcription factor with a known motif, noting that it functions in DNA repair but has a strong HT-SELEX-derived motif. It lists DNTTIP1, ELYS/AHCTF1, FAM200B, FLYWCH1, MSANTD1, MSANTD4 and NACC2 as likely sequence-specific factors with no motif, and comments that MSANTD4, with a single Myb-like domain, is likely non-specific.",
+   "methods": "Expert curation of candidate transcription factors",
+   "confidence": "medium",
+   "pmids": [
+    "29425488"
+   ],
+   "open": "Why a repair scaffold yields a strong HT-SELEX motif was not explained."
+  },
+  {
+   "year": 2026,
+   "finding": "The Codebook effort assays 332 putative and poorly characterized human transcription factors in more than 4,000 experiments on multiple in vitro and in vivo platforms and obtains motifs for 177, most tied to a single protein. In vitro motifs are strongly enriched at cellular binding sites concentrated in promoters. Six of the seven HOCOMOCO models in this bucket carry grade-A, multi-platform evidence of this kind, among them a 13.8-bit model for MSANTD4, the protein the census had expected to bind non-specifically.",
+   "methods": "HT-SELEX, genomic HT-SELEX, SMiLE-seq, protein-binding microarrays and ChIP-seq, cross-validated",
+   "confidence": "high",
+   "pmids": [
+    "42557334"
+   ],
+   "open": "Nearly half of the 332 targets still yielded no motif."
+  }
+ ],
+ "open": [
+  "Why XPA has a strong sequence motif is unexplained. The repair literature describes a scaffold that recognizes damaged-DNA junction geometry rather than sequence, yet HT-SELEX gave it a 10-bit TGTGAGGTG matrix that CIS-BP and a Vierstra archetype carry, and the human transcription factor census kept it as a transcription factor on the strength of that motif.",
+  "NACC2's specificity is inconsistent across sources. The 2013 description of NACC2 as RBB reported a homodimer-bound SELEX motif, which the human transcription factor census records as TGTCRSWWYYGWC, whereas the grade-A HOCOMOCO model reads ACATGC, in line with the CATG preference of the BEN domain of its paralogue NACC1; the work cited here does not reconcile the two.",
+  "Whether MSANTD3 has a specificity of its own is unresolved. Both of its models read CACTCA and match NKX homeodomain models at 0.94-0.97, and unlike MSANTD1 and MSANTD4 it has no multi-platform HOCOMOCO model against which to check them."
+ ]
 }

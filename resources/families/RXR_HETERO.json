@@ -18,7 +18,7 @@
  ],
  "consensus": "AGGTCA",
  "short": "This family covers retinoid X receptors (RXRA/B/G) and the receptors that heterodimerize with them: retinoic acid receptors (RARA/B/G), thyroid hormone receptors (THRA/THRB), the vitamin D receptor (VDR), the PPARs, the liver X receptors (NR1H2/NR1H3), FXR (NR1H4) and the xenobiotic sensors PXR and CAR (NR1I2/NR1I3). Every member reads the same hexameric half-site, AGGTCA (more precisely RGKTCA), so the half-site sequence tells you nothing about which receptor bound. What does carry information is how two half-sites are arranged: direct repeats separated by 1 to 5 bp (DR1 through DR5), inverted repeats and everted repeats. Spacing and orientation, not half-site identity, are the readable signal here.",
- "long": "## The factors\n\nRXRA, RXRB and RXRG are the shared partner of much of the nuclear receptor superfamily (Mangelsdorf and Evans 1995; Evans and Mangelsdorf 2014). The partners collected here are RARA/RARB/RARG (retinoic acid), THRA/THRB (T3), VDR (1,25-dihydroxyvitamin D3), PPARA/PPARD/PPARG (fatty acids, fibrates), NR1H3/NR1H2 (LXRalpha/beta, oxysterols), NR1H4 (FXR, bile acids) and NR1I2/NR1I3 (PXR, CAR, xenobiotics). All share a C4 double-zinc-finger DNA-binding domain (DBD) with a C-terminal extension (CTE). Heterodimers are permissive (PPAR:RXR, LXR:RXR, FXR:RXR, where an RXR ligand alone activates) or non-permissive (RAR:RXR, THR:RXR, VDR:RXR); RXR also homodimerizes. Expression ranges from near-ubiquitous (RXRA, RARA) to narrow (PPARG in adipocytes; PXR and CAR in liver and intestine). It is the largest family here: 106 models, 19 gene symbols.\n\n## The motif\n\nThe half-site is AGGTCA, written RGKTCA when the degeneracy is spelled out (Moutier et al. 2012). It is the same hexamer the estrogen receptor reads; two hexamers make an element, and the variables are orientation and gap:\n\n- Direct repeat (DRn): both half-sites on the same strand, AGGTCA-(n)-AGGTCA. Heterodimers read n = 1 to 5 (Rastinejad et al. 1995).\n- Inverted repeat (IRn): head to head, AGGTCA-(n)-TGACCT. IR0 is the classic palindromic thyroid element; IR1 is the FXR element.\n- Everted repeat (ERn): tail to tail, TGACCT-(n)-AGGTCA. ER6 is a documented PXR and thyroid element.\n\nThe gap is read by the CTE: in the RXR-THR DBD heterodimer on a DR4 the thyroid receptor's CTE lies in the minor groove across the spacer, measuring its length directly (Rastinejad et al. 1995); five residues in the second zinc finger set the tolerated spacing (Umesono and Evans 1989). The intact PPARgamma-RXRalpha complex shows the same asymmetry in full-length receptors (Chandra et al. 2008).\n\nThe usual assignments are the 3-4-5 rule: DR3 for VDR, DR4 for THR, DR5 for RAR, established by showing that adding or removing one spacer base converts a thyroid element into a retinoic acid or vitamin D element and abolishes the original response (Umesono et al. 1991). DR1 is used by PPAR:RXR and RXR homodimers; the PPAR element also needs a 5' extension (the malic enzyme PPRE is AACTAGGTCAAAGGTCA) and has fixed polarity, PPAR on the 5' half-site and RXR on the 3' (IJpenberg et al. 1997) - visible in the HOCOMOCO PPARA/PPARG models, acTaGGtcAAAGGTCA. LXR:RXR uses DR4; the FXR (NR1H4) models here are inverted repeats with a single-base spacer, AGGtCAnTGACCt. The PXR, CAR and VDR models drift from AGGTCA towards a GTTCA-type half-site (JASPAR NR1I2 tGAACTcnaTGAACT, VDR GAGTTCA). In vivo the rule is looser than it sounds: RAR-RXR occupies DR0, DR2, DR5, DR8 and IR0 elements in mouse cells and binds these non-canonical spacings about as well as DR2 and DR5 (Moutier et al. 2012).\n\nWhat is distinguishable is the spacing class, and only sometimes the receptor. The JASPAR DR1 matrices for RXRA, RXRB, RXRG, PPARD and THRB are 0.997-0.998 similar - effectively one model. By contrast the THRB everted-repeat and PXR/CAR/VDR GTTCA models sit far from anything outside the family (best outside match 0.62-0.70), so those two shapes genuinely separate.\n\n## Where it acts\n\nMostly distal enhancers, with some promoter-proximal elements such as the VDR sites at CYP24A1. Occupancy is ligand-modulated re-use of pre-existing sites, and is small relative to motif counts: 2,776 VDR-occupied positions after calcitriol in lymphoblastoid cells, with 229 genes changing expression (Ramagopalan et al. 2010). Sharing between heterodimers is extensive - in mouse liver PPARalpha occupies 71-88% of LXR-RXR binding regions, and sequential ChIP indicated they use degenerate shared elements mutually exclusively (Boergesen et al. 2012). Co-occurring motifs are typically CEBP in adipocytes (Nielsen et al. 2008) and liver, SPI1 in macrophages.\n\n## Biology and disease\n\nRetinoid signalling through RAREs patterns the anteroposterior axis, limbs and face; the PML-RARA fusion in acute promyelocytic leukemia blocks it and is treated with all-trans retinoic acid. THRB mutations cause resistance to thyroid hormone, VDR mutations hereditary vitamin D-resistant rickets, and PPARG mutations familial partial lipodystrophy type 3; VDR binding regions are enriched near autoimmune and cancer association loci (Ramagopalan et al. 2010). PPARgamma and PPARalpha are the targets of thiazolidinediones and fibrates, LXRs drive reverse cholesterol transport, FXR agonists treat cholestatic liver disease, and PXR and CAR induce CYP3A4 and CYP2B6, a major source of drug-drug interactions.\n\n## Reading a hit\n\nReport the architecture, not the label. A bare AGGTCA occurs roughly a million times per haploid genome and means nothing on its own. Measure the gap between the two hexamers and state DR1-DR5, IRn or ERn; that narrows the candidates more than any motif name here does. Then accept the limit: a DR1 is compatible with RXR homodimers, PPAR:RXR, HNF4, COUP-TF/NR2F and TR2/TR4, and no PWM separates them. Watch the counting convention - the same 13 bp element is DR1 if the half-site is called as AGGTCA and 'GGTCA with a 2 bp gap' if it is called as GGTCA. JASPAR's explicit dimer entries (RXRA::VDR MA0074.1, Pparg::Rxra MA0065.3) name both partners but still cannot say which heterodimer bound a site. Prefer in vitro evidence codes (S, M, SM) for claims about direct binding: ChIP-only models here often carry flanking or partner signal, for instance RXRA.H14CORE.3.P.B (gGGkganvvagAGGTCAaGG). One Vierstra archetype here, AC0094:NR1H/WT, is the AT-rich model TATTATAT with no half-site at all - a clustering artefact, and a reminder that archetype names describe a majority of members, not a verified specificity (Vierstra et al. 2020).",
+ "long": "## The factors\n\nRXRA, RXRB and RXRG are the shared partner of much of the nuclear receptor superfamily (Mangelsdorf and Evans 1995; Evans and Mangelsdorf 2014) [PMID:8521508,24679540]. The partners collected here are RARA/RARB/RARG (retinoic acid), THRA/THRB (T3), VDR (1,25-dihydroxyvitamin D3), PPARA/PPARD/PPARG (fatty acids, fibrates), NR1H3/NR1H2 (LXRalpha/beta, oxysterols), NR1H4 (FXR, bile acids) and NR1I2/NR1I3 (PXR, CAR, xenobiotics). All share a C4 double-zinc-finger DNA-binding domain (DBD) with a C-terminal extension (CTE). Heterodimers are permissive (PPAR:RXR, LXR:RXR, FXR:RXR, where an RXR ligand alone activates) or non-permissive (RAR:RXR, THR:RXR, VDR:RXR); RXR also homodimerizes [PMID:8521508]. Expression ranges from near-ubiquitous (RXRA, RARA) to narrow (PPARG in adipocytes; PXR and CAR in liver and intestine). It is the largest family here: 106 models, 19 gene symbols.\n\n## The motif\n\nThe half-site is AGGTCA, written RGKTCA when the degeneracy is spelled out (Moutier et al. 2012) [PMID:22661711]. It is the same hexamer the estrogen receptor reads; two hexamers make an element, and the variables are orientation and gap:\n\n- Direct repeat (DRn): both half-sites on the same strand, AGGTCA-(n)-AGGTCA. Heterodimers read n = 1 to 5 (Rastinejad et al. 1995) [PMID:7746322].\n- Inverted repeat (IRn): head to head, AGGTCA-(n)-TGACCT. IR0 is the classic palindromic thyroid element; IR1 is the FXR element.\n- Everted repeat (ERn): tail to tail, TGACCT-(n)-AGGTCA. ER6 is a documented PXR and thyroid element.\n\nThe gap is read by the CTE: in the RXR-THR DBD heterodimer on a DR4 the thyroid receptor's CTE lies in the minor groove across the spacer, measuring its length directly (Rastinejad et al. 1995) [PMID:7746322]; five residues in the second zinc finger set the tolerated spacing (Umesono and Evans 1989) [PMID:2500251]. The intact PPARgamma-RXRalpha complex shows the same asymmetry in full-length receptors (Chandra et al. 2008) [PMID:19043829].\n\nThe usual assignments are the 3-4-5 rule: DR3 for VDR, DR4 for THR, DR5 for RAR, established by showing that adding or removing one spacer base converts a thyroid element into a retinoic acid or vitamin D element and abolishes the original response (Umesono et al. 1991) [PMID:1648450]. DR1 is used by PPAR:RXR and RXR homodimers; the PPAR element also needs a 5' extension (the malic enzyme PPRE is AACTAGGTCAAAGGTCA) and has fixed polarity, PPAR on the 5' half-site and RXR on the 3' (IJpenberg et al. 1997) [PMID:9242684] - visible in the HOCOMOCO PPARA/PPARG models, acTaGGtcAAAGGTCA. LXR:RXR uses DR4; the FXR (NR1H4) models here are inverted repeats with a single-base spacer, AGGtCAnTGACCt. The PXR, CAR and VDR models drift from AGGTCA towards a GTTCA-type half-site (JASPAR NR1I2 tGAACTcnaTGAACT, VDR GAGTTCA). In vivo the rule is looser than it sounds: RAR-RXR occupies DR0, DR2, DR5, DR8 and IR0 elements in mouse cells and binds these non-canonical spacings about as well as DR2 and DR5 (Moutier et al. 2012) [PMID:22661711].\n\nWhat is distinguishable is the spacing class, and only sometimes the receptor. The JASPAR DR1 matrices for RXRA, RXRB, RXRG, PPARD and THRB are 0.997-0.998 similar - effectively one model. By contrast the THRB everted-repeat and PXR/CAR/VDR GTTCA models sit far from anything outside the family (best outside match 0.62-0.70), so those two shapes genuinely separate.\n\n## Where it acts\n\nMostly distal enhancers, with some promoter-proximal elements such as the VDR sites at CYP24A1. Occupancy is ligand-modulated re-use of pre-existing sites, and is small relative to motif counts: 2,776 VDR-occupied positions after calcitriol in lymphoblastoid cells, with 229 genes changing expression (Ramagopalan et al. 2010) [PMID:20736230]. Sharing between heterodimers is extensive - in mouse liver PPARalpha occupies 71-88% of LXR-RXR binding regions, and sequential ChIP indicated they use degenerate shared elements mutually exclusively (Boergesen et al. 2012) [PMID:22158963]. Co-occurring motifs are typically CEBP in adipocytes (Nielsen et al. 2008) [PMID:18981474] and liver, SPI1 in macrophages.\n\n## Biology and disease\n\nRetinoid signalling through RAREs patterns the anteroposterior axis, limbs and face; the PML-RARA fusion in acute promyelocytic leukemia blocks it and is treated with all-trans retinoic acid. THRB mutations cause resistance to thyroid hormone, VDR mutations hereditary vitamin D-resistant rickets, and PPARG mutations familial partial lipodystrophy type 3; VDR binding regions are enriched near autoimmune and cancer association loci (Ramagopalan et al. 2010) [PMID:20736230]. PPARgamma and PPARalpha are the targets of thiazolidinediones and fibrates, LXRs drive reverse cholesterol transport, FXR agonists treat cholestatic liver disease, and PXR and CAR induce CYP3A4 and CYP2B6, a major source of drug-drug interactions.\n\n## Reading a hit\n\nReport the architecture, not the label. A bare AGGTCA occurs roughly a million times per haploid genome and means nothing on its own. Measure the gap between the two hexamers and state DR1-DR5, IRn or ERn; that narrows the candidates more than any motif name here does. Then accept the limit: a DR1 is compatible with RXR homodimers, PPAR:RXR, HNF4, COUP-TF/NR2F and TR2/TR4 [PMID:8521508], and no PWM separates them. Watch the counting convention - the same 13 bp element is DR1 if the half-site is called as AGGTCA and 'GGTCA with a 2 bp gap' if it is called as GGTCA. JASPAR's explicit dimer entries (RXRA::VDR MA0074.1, Pparg::Rxra MA0065.3) name both partners but still cannot say which heterodimer bound a site. Prefer in vitro evidence codes (S, M, SM) for claims about direct binding: ChIP-only models here often carry flanking or partner signal, for instance RXRA.H14CORE.3.P.B (gGGkganvvagAGGTCAaGG). One Vierstra archetype here, AC0094:NR1H/WT, is the AT-rich model TATTATAT with no half-site at all - a clustering artefact, and a reminder that archetype names describe a majority of members, not a verified specificity (Vierstra et al. 2020) [PMID:32728250].",
  "caveats": "Treat a hit here as evidence for the superfamily half-site plus a spacing class, never for a receptor. Many DR1 matrices for RXRA/B/G, PPARD and THRB in this collection are 0.997 similar - effectively interchangeable - and the same DR1 is used by HNF4, COUP-TF and TR2/TR4 outside this family. Only the THR everted repeats and the PXR/CAR/VDR GTTCA-type half-sites separate cleanly. A lone AGGTCA occurs about a million times per haploid genome and is not evidence of anything. ChIP-derived models frequently include partner or flanking signal, and one Vierstra archetype placed here (AC0094:NR1H/WT, TATTATAT) contains no half-site at all.",
  "refs": [
   {
@@ -80,6 +80,97 @@
    "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
    "pmid": "32728250",
    "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  },
+  {
+   "cite": "Kliewer SA, Umesono K, Mangelsdorf DJ, et al. Retinoid X receptor interacts with nuclear receptors in retinoic acid, thyroid hormone and vitamin D3 signalling. Nature 1992;355:446-9.",
+   "pmid": "1310351",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1310351/"
+  },
+  {
+   "cite": "Rochel N, Ciesielski F, Godet J, et al. Common architecture of nuclear receptor heterodimers on DNA direct repeat elements with different spacings. Nat Struct Mol Biol 2011;18:564-70.",
+   "pmid": "21478865",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21478865/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1991,
+   "finding": "Thyroid hormone response elements can be direct repeats of the half-site; adding one spacer base converts a thyroid element into a retinoic acid element and removing one converts it into a vitamin D3 element, each losing the original response - the 3-4-5 spacing rule.",
+   "methods": "Reporter assays with spacing mutants, DNA-binding affinity",
+   "confidence": "medium",
+   "pmids": [
+    "1648450"
+   ],
+   "open": "How a receptor pair measures a one-base difference in spacing, and why these receptors bind poorly on their own."
+  },
+  {
+   "year": 1992,
+   "finding": "RXR binds cooperatively with RAR and directly enhances DNA binding by the vitamin D3 and thyroid hormone receptors, identifying it as the shared heterodimer partner of several hormone pathways.",
+   "methods": "In vitro DNA-binding assays, transactivation assays",
+   "confidence": "medium",
+   "pmids": [
+    "1310351"
+   ]
+  },
+  {
+   "year": 1995,
+   "finding": "The 1.9 Å structure of RXR and thyroid receptor DNA-binding domains on a DR4 element shows the subunits meeting at a DNA-supported interface formed by the thyroid receptor's C-terminal extension, suggesting how heterodimers read half-site spacing.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "7746322"
+   ]
+  },
+  {
+   "year": 1997,
+   "finding": "On the DR1 PPAR response element of the malic enzyme gene, PPAR occupies the 5' half-site, which needs an extended 5' flank, and RXR the 3' half-site - the reverse of the polarity of RXR-TR and RXR-RAR on DR4 and DR5.",
+   "methods": "Reciprocal mutation analysis, binding and reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "9242684"
+   ]
+  },
+  {
+   "year": 2008,
+   "finding": "The first crystal structure of an intact heterodimer, PPARgamma-RXRalpha on DNA, shows a non-symmetric compact complex in which the PPARgamma ligand-binding domain contacts both DNA-binding domains and enhances element binding.",
+   "methods": "X-ray crystallography, hydrogen-deuterium exchange",
+   "confidence": "high",
+   "pmids": [
+    "19043829"
+   ],
+   "open": "Whether the compact domain arrangement seen in the crystal holds for other heterodimers or in solution."
+  },
+  {
+   "year": 2011,
+   "finding": "Solution structures of RXR-RAR, PPAR-RXR and RXR-VDR on their direct repeats instead show an extended, asymmetric shape with the ligand-binding domains placed at the 5' end of the element and one coactivator per heterodimer, at odds with the compact crystal arrangement.",
+   "methods": "SAXS, SANS, FRET",
+   "confidence": "medium",
+   "pmids": [
+    "21478865"
+   ]
+  },
+  {
+   "year": 2012,
+   "finding": "Genome-wide, RAR occupies many DR0, DR8 and IR0 elements in addition to DR1, DR2 and DR5, and recombinant RAR-RXR binds the non-canonical spacings about as well as DR2 and DR5, loosening the spacing code derived from reporter assays.",
+   "methods": "ChIP-chip and ChIP-seq, in vitro binding, reporter assays",
+   "confidence": "high",
+   "pmids": [
+    "22661711"
+   ]
+  },
+  {
+   "year": 2012,
+   "finding": "In mouse liver PPARalpha occupies 71-88% of LXR-RXR binding regions, and sequential ChIP indicates the two heterodimers use the shared degenerate elements in a mutually exclusive way.",
+   "methods": "ChIP-seq, sequential ChIP, sequence analysis",
+   "confidence": "medium",
+   "pmids": [
+    "22158963"
+   ]
+  }
+ ],
+ "open": [
+  "The arrangement of full-length heterodimers on DNA is disputed: the PPARgamma-RXRalpha crystal structure shows a compact complex in which the PPARgamma ligand-binding domain touches the DNA-binding domains, whereas solution scattering and FRET of three heterodimers show an extended, asymmetric shape with the ligand-binding domains toward the 5' end of the element.",
+  "How strictly half-site spacing selects the partner in cells is unresolved: the 3-4-5 rule came from reporter assays, but genome-wide RAR binding includes DR0, DR8 and IR0 elements, and LXR and PPARalpha share most of their liver sites, so occupancy may depend more on which receptors and ligands are present than on spacing.",
+  "The physiological RXR ligand is not settled: 9-cis-retinoic acid binds and activates RXR in vitro but is barely detectable in most tissues, and other candidates, including 9-cis-13,14-dihydroretinoic acid and polyunsaturated fatty acids, have been proposed; this bears on how permissive heterodimers are activated in vivo."
  ]
 }

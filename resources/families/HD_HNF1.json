@@ -11,7 +11,7 @@
  ],
  "consensus": "GTTAATNATTAAC",
  "short": "HNF1A and HNF1B are the only two members of this family, and they bind an unusually long 13-bp near-palindrome, GTTAATNATTAAC, as an obligate dimer. Each subunit contributes an atypical homeodomain carrying a 21-residue insertion, paired with a POU-specific-like domain that was only recognized once the protein-DNA structure was solved. Because the dimer is rigid, the spacing between the two half-sites is fixed and the resulting motif carries about 15-16 bits of information - among the most specific sites of any homeodomain-related family. The two factors drive liver, pancreatic islet, kidney tubule and intestinal gene expression, and heterozygous loss of either causes a distinct form of monogenic diabetes (MODY3 for HNF1A, MODY5 with renal cysts for HNF1B).",
- "long": "## The factors\n\nThe family has exactly two human members: HNF1A (historically TCF1, LFB1) and HNF1B (TCF2, vHNF1). Both are modular. An N-terminal dimerization domain of roughly 32 residues forms an intertwined four-helix bundle in the dimer; a central region provides an atypical POU-specific-like fold; and the DNA-contacting homeodomain carries a 21-amino-acid insertion in the loop between helices 2 and 3 that no other homeodomain has. Dimerization is obligate for high-affinity binding, and HNF1A and HNF1B form homodimers as well as heterodimers, so the two proteins compete for and share the same sites. The dimerization domain is stabilized by the cofactor DCoH/PCBD1. Expression is restricted and partly complementary: HNF1B appears earlier and more broadly in the developing pancreas, liver and kidney, while HNF1A dominates in adult hepatocytes, pancreatic islets, renal proximal tubule, stomach and intestine.\n\n## The motif\n\nThe site is the 13-bp near-palindrome GTTAATNATTAAC. Each GTTAAT half-site is read by one homeodomain, and the central position carries essentially no information, which is why the databases render it as an N. The cocrystal of HNF1A residues 83-279 with a high-affinity promoter showed two identical protein molecules on one site and revealed a second domain structurally similar to POU-specific domains that could not be predicted from the amino acid sequence; atypical elements in both domains create a stable interface, distinguishing HNF1A from the flexible POU-homeodomain proteins whose linker allows half-sites to be rearranged. That rigidity is the whole story of the motif: the half-site spacing cannot vary, so the site is long, palindromic and highly informative. All four collections agree closely - JASPAR MA0046.3 and MA0153.2, the HOCOMOCO A-grade models HNF1A.H14CORE.0.PS.A and HNF1B.H14CORE.0.PS.A, two CIS-BP models and the Vierstra archetype AC0650 all give GTTAATNATTAAC at 13-16 bits, and family cohesion is 0.86. HNF1A and HNF1B are not distinguishable from sequence. One JASPAR entry labelled Hnf1A (MA1991.2) instead reads cCTTTGATcT; its nearest neighbours across all four databases lie in the TCF/LEF family, and CTTTG(A/T)T is the canonical TCF7/LEF1 site, so that model should not be used as an HNF1 motif.\n\n## Where it acts\n\nHNF1 sites sit in the promoters of tissue-specific genes - albumin, alpha-1-antitrypsin, fibrinogen, phenylalanine hydroxylase, pyruvate kinase, and many transporters of the renal proximal tubule - and a systematic survey of vertebrate sequence found them concentrated in such promoters rather than spread through the genome. Genome-scale location analysis in human liver and pancreatic islets placed HNF1A on a large set of promoters shared extensively with HNF4A and ONECUT1/HNF6, with the three factors binding overlapping target sets and each other's genes, so HNF1 hits very often occur in clusters with those motifs rather than alone. Arithmetically the site is rare: with 12 informative positions, an exact 13-mer match is expected only a few hundred times in 3.1 Gb, which is orders of magnitude below a typical 6-8 bp transcription factor site.\n\n## Biology and disease\n\nHeterozygous loss-of-function mutations in HNF1A are the most common Mendelian cause of diabetes mellitus (MODY3), and the mutational hotspot in the DNA-binding region was the reason for solving the protein-DNA structure. Mutations in HNF1B cause MODY5, generally with extrapancreatic features - renal cysts and dysplasia, genital tract malformations and pancreatic hypoplasia - described as renal cysts and diabetes syndrome. Hnf1a-null mice develop hepatic dysfunction, phenylketonuria from loss of phenylalanine hydroxylase, and a renal Fanconi syndrome, which maps neatly onto the human phenotypes. Biallelic HNF1A inactivation also defines a recognized molecular subtype of hepatocellular adenoma.\n\n## Reading a hit\n\nOf all the families in this atlas that derive from a homeodomain, this is the one where a sequence match is most informative. A full GTTAATNATTAAC is long enough that chance matches are rare, and finding one in a hepatocyte, islet, renal tubule or intestinal regulatory region is reasonable evidence of real HNF1 occupancy. Two limitations. First, the hit cannot tell you whether HNF1A, HNF1B or a heterodimer is responsible; use expression, since the two genes are expressed in overlapping but not identical tissues. Second, do not call a single GTTAAT half-site an HNF1 site - on its own it is a generic TAAT-type homeodomain core shared with most of the superfamily. The A-grade HOCOMOCO models carry HT-SELEX (S) support, so the claim that these proteins bind this sequence in vitro is solid and does not rest on ChIP alone.",
+ "long": "## The factors\n\nThe family has exactly two human members: HNF1A (historically TCF1, LFB1) and HNF1B (TCF2, vHNF1). Both are modular. An N-terminal dimerization domain of roughly 32 residues forms an intertwined four-helix bundle in the dimer [PMID:11439029]; a central region provides an atypical POU-specific-like fold [PMID:12453420]; and the DNA-contacting homeodomain carries a 21-amino-acid insertion in the loop between helices 2 and 3 that no other homeodomain has [PMID:1985954]. Dimerization is obligate for high-affinity binding, and HNF1A and HNF1B form homodimers as well as heterodimers, so the two proteins compete for and share the same sites [PMID:1985954]. The dimerization domain is stabilized by the cofactor DCoH/PCBD1 [PMID:11439029]. Expression is restricted and partly complementary: HNF1B appears earlier and more broadly in the developing pancreas, liver and kidney, while HNF1A dominates in adult hepatocytes, pancreatic islets, renal proximal tubule, stomach and intestine.\n\n## The motif\n\nThe site is the 13-bp near-palindrome GTTAATNATTAAC [PMID:1985954,9047360]. Each GTTAAT half-site is read by one homeodomain, and the central position carries essentially no information, which is why the databases render it as an N. The cocrystal of HNF1A residues 83-279 with a high-affinity promoter showed two identical protein molecules on one site and revealed a second domain structurally similar to POU-specific domains that could not be predicted from the amino acid sequence; atypical elements in both domains create a stable interface, distinguishing HNF1A from the flexible POU-homeodomain proteins whose linker allows half-sites to be rearranged [PMID:12453420]. That rigidity is the whole story of the motif: the half-site spacing cannot vary, so the site is long, palindromic and highly informative. All four collections agree closely - JASPAR MA0046.3 and MA0153.2, the HOCOMOCO A-grade models HNF1A.H14CORE.0.PS.A and HNF1B.H14CORE.0.PS.A, two CIS-BP models and the Vierstra archetype AC0650 all give GTTAATNATTAAC at 13-16 bits [PMID:23332764,32728250], and family cohesion is 0.86. HNF1A and HNF1B are not distinguishable from sequence. One JASPAR entry labelled Hnf1A (MA1991.2) instead reads cCTTTGATcT; its nearest neighbours across all four databases lie in the TCF/LEF family, and CTTTG(A/T)T is the canonical TCF7/LEF1 site, so that model should not be used as an HNF1 motif.\n\n## Where it acts\n\nHNF1 sites sit in the promoters of tissue-specific genes - albumin, alpha-1-antitrypsin, fibrinogen, phenylalanine hydroxylase, pyruvate kinase, and many transporters of the renal proximal tubule [PMID:8598044] - and a systematic survey of vertebrate sequence found them 2.5 to 5 times more frequent in hepatic genes than expected, most markedly in promoter regions, but also common in genes transcribed in cells that lack HNF1, with no sign of counter-selection in the rest of the genome [PMID:9047360]. Genome-scale location analysis in human liver and pancreatic islets placed HNF1A on a large set of promoters shared extensively with HNF4A and ONECUT1/HNF6, with the three factors binding overlapping target sets and each other's genes, so HNF1 hits very often occur in clusters with those motifs rather than alone [PMID:14988562]. Arithmetically the site is rare: with 12 informative positions, an exact 13-mer match is expected only a few hundred times in 3.1 Gb, which is orders of magnitude below a typical 6-8 bp transcription factor site.\n\n## Biology and disease\n\nHeterozygous loss-of-function mutations in HNF1A are the most common Mendelian cause of diabetes mellitus (MODY3), and the mutational hotspot in the DNA-binding region was the reason for solving the protein-DNA structure [PMID:8945470,12453420]. Mutations in HNF1B cause MODY5, generally with extrapancreatic features - renal cysts and dysplasia, genital tract malformations and pancreatic hypoplasia - described as renal cysts and diabetes syndrome [PMID:9398836,10484768]. Hnf1a-null mice develop hepatic dysfunction, phenylketonuria from loss of phenylalanine hydroxylase, and a renal Fanconi syndrome, which maps neatly onto the human phenotypes [PMID:8598044]. Biallelic HNF1A inactivation also defines a recognized molecular subtype of hepatocellular adenoma [PMID:12355088].\n\n## Reading a hit\n\nOf all the families in this atlas that derive from a homeodomain, this is the one where a sequence match is most informative. A full GTTAATNATTAAC is long enough that chance matches are rare, and finding one in a hepatocyte, islet, renal tubule or intestinal regulatory region is reasonable evidence of real HNF1 occupancy. Two limitations. First, the hit cannot tell you whether HNF1A, HNF1B or a heterodimer is responsible; use expression, since the two genes are expressed in overlapping but not identical tissues. Second, do not call a single GTTAAT half-site an HNF1 site - on its own it is a generic TAAT-type homeodomain core shared with most of the superfamily. The A-grade HOCOMOCO models carry HT-SELEX (S) support, so the claim that these proteins bind this sequence in vitro is solid [PMID:23332764] and does not rest on ChIP alone.",
  "caveats": "The two members are indistinguishable from sequence, so a hit means HNF1A, HNF1B or a heterodimer. The full 13-bp palindrome is specific enough that false positives are uncommon, but half-site-only matches (GTTAAT) are generic homeodomain cores and should not be reported as HNF1. One JASPAR model labelled Hnf1A (MA1991.2) is a TCF/LEF-type site (CTTTGAT) and is flagged as such by its nearest neighbours; avoid it. Evidence for the canonical motif is in vitro as well as ChIP-based, so the sequence claim is well supported. Occupancy is still tissue-restricted: outside liver, islet, kidney and gut, a match is unlikely to be bound.",
  "refs": [
   {
@@ -68,6 +68,94 @@
    "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
    "pmid": "32728250",
    "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  },
+  {
+   "cite": "Bluteau O, Jeannot E, Bioulac-Sage P, et al. Bi-allelic inactivation of TCF1 in hepatic adenomas. Nat Genet 2002;32:312-5.",
+   "pmid": "12355088",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12355088/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1991,
+   "finding": "HNF1 is recognized as a new class of dimerizing homeodomain protein: an N-terminal dimerization domain plus a homeodomain with a 21-residue insertion, binding as a dimer to the palindromic GTTAATNATTAAC, with HNF1A and the variant form (HNF1B) able to heterodimerize.",
+   "methods": "Biochemistry and cDNA cloning (reviewed)",
+   "confidence": "medium",
+   "pmids": [
+    "1985954"
+   ],
+   "open": "The rest of the DNA-binding region had no recognizable fold, and how it contributed to the 13-bp site was unknown."
+  },
+  {
+   "year": 1996,
+   "finding": "Heterozygous HNF1A mutations are found to cause MODY3, and Hnf1a-null mice show hepatic dysfunction, a silent phenylalanine hydroxylase gene with phenylketonuria, and renal Fanconi syndrome, fixing the factor's main targets in liver, islet and proximal tubule.",
+   "methods": "Human linkage and mutation screening; mouse gene targeting",
+   "confidence": "high",
+   "pmids": [
+    "8945470",
+    "8598044"
+   ]
+  },
+  {
+   "year": 1997,
+   "finding": "A weighted-matrix search of vertebrate sequence finds several hundred candidate sites, 52 of 54 tested bind HNF1, and the sites are 2.5- to 5-fold enriched in hepatic genes and in promoters, but are also common in genes of cells that lack HNF1, with no sign of counter-selection.",
+   "methods": "Matrix-based database search with in vitro binding assays",
+   "confidence": "medium",
+   "pmids": [
+    "9047360"
+   ],
+   "open": "Whether the many sites outside liver genes are ever used was left open."
+  },
+  {
+   "year": 1997,
+   "finding": "An HNF1B mutation is found in MODY (MODY5); in 1999 a pseudo-POU deletion that abolishes DNA binding is shown to cosegregate with diabetes, non-diabetic renal disease and Mullerian aplasia, defining the extrapancreatic syndrome.",
+   "methods": "Human mutation screening, pedigree cosegregation, DNA-binding and reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "9398836",
+    "10484768"
+   ]
+  },
+  {
+   "year": 2001,
+   "finding": "The HNF1A dimerization domain is an intertwined four-helix bundle whose N-terminal mini-zipper is complementary to the coactivator DCoH; MODY mutations L12H and G20R destabilize it in different ways.",
+   "methods": "X-ray crystallography (1.7 A), NMR",
+   "confidence": "high",
+   "pmids": [
+    "11439029"
+   ]
+  },
+  {
+   "year": 2002,
+   "finding": "The HNF1A 83-279-DNA cocrystal shows two molecules on one site and reveals a POU-specific-like domain that sequence had not predicted; a stable interface between it and the homeodomain, unlike the flexible POU proteins, explains the fixed half-site spacing.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "12453420"
+   ]
+  },
+  {
+   "year": 2004,
+   "finding": "Promoter-wide ChIP in human liver and islets shows HNF1A, HNF4A and HNF6/ONECUT1 occupying extensive overlapping target sets and each other's genes.",
+   "methods": "ChIP-chip on promoter arrays",
+   "confidence": "medium",
+   "pmids": [
+    "14988562"
+   ]
+  },
+  {
+   "year": 2013,
+   "finding": "HT-SELEX for human HNF1A and HNF1B returns the same GTTAATNATTAAC palindrome for both, confirming in vitro that the paralogues cannot be separated by sequence.",
+   "methods": "HT-SELEX",
+   "confidence": "medium",
+   "pmids": [
+    "23332764"
+   ]
+  }
+ ],
+ "open": [
+  "Why full-length, high-affinity HNF1 palindromes are common in genes expressed in cells that lack HNF1 is unresolved: a genome-wide matrix survey found them only 2.5- to 5-fold enriched in hepatic genes with no counter-selection elsewhere, and whether those extra-hepatic sites are neutral, used by HNF1B in other epithelia, or used only in development has not been established.",
+  "Whether HNF1A homodimers, HNF1B homodimers and HNF1A-HNF1B heterodimers differ in which sites they occupy is not settled; their in vitro models are indistinguishable, so the distinct MODY3 and MODY5 phenotypes are currently attributed to expression pattern rather than to sequence preference.",
+  "The databases disagree with the literature over one model: JASPAR MA1991.2, labelled Hnf1A and derived from mouse ChIP-seq, reads the TCF/LEF-type CTTTGAT rather than the HNF1 palindrome, and the literature does not explain whether this reflects co-occupancy with TCF/LEF factors or a mislabelled dataset."
  ]
 }

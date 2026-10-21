@@ -16,7 +16,7 @@
  ],
  "consensus": "CAGGTG",
  "short": "The SNAIL/SCRATCH proteins - SNAI1 (Snail), SNAI2 (Slug), SNAI3 (Smuc), SCRT1 and SCRT2 - are C2H2 zinc-finger repressors that read the E-box CAGGTG, the same 6 bp core that basic helix-loop-helix activators use. They carry no HLH domain; specificity comes from four or five zinc fingers, and repression from an N-terminal SNAG peptide that recruits LSD1/CoREST. SNAI1 and SNAI2 repress E-cadherin and drive epithelial-mesenchymal transition in gastrulation, neural crest migration, fibrosis and carcinoma; SCRT1 and SCRT2 do related work in neurons. SCRATCH sites carry an extra CAAC, giving the only sequence feature that separates part of this family. SNAI2 deletion causes Waardenburg syndrome type 2D and piebaldism.",
- "long": "## The factors\n\nFive human proteins fall in this family: SNAI1 (Snail), SNAI2 (Slug), SNAI3 (Smuc) and the more distant SCRT1 and SCRT2 (Scratch). All are small, 250-330 residue proteins with four to five C-terminal C2H2 zinc fingers and an N-terminal SNAG domain - a short, highly conserved peptide that docks into the substrate pocket of the histone demethylase LSD1 and so brings the LSD1/CoREST corepressor complex to DNA. They bind DNA as monomers; there is no dimerization interface, and no HLH or leucine zipper. SNAI1 is labile, phosphorylated by GSK3-beta and degraded by beta-TrCP, which makes its protein level a signaling readout rather than a transcriptional one. SNAI1 and SNAI2 are expressed in mesoderm, neural crest, and in mesenchymal and carcinoma cells; SNAI3 is largely restricted to hematopoietic tissue and muscle; SCRT1 and SCRT2 are neural. The superfamily is ancient - Snail and Scratch orthologues are present throughout bilaterians, with the SNAG domain a vertebrate/arthropod-shared feature - and the Drosophila Snail protein that gave the family its name performs the same kind of repression in dorsoventral patterning.\n\n## The motif\n\nThe defining site is the E-box CAGGTG (CACCTG on the other strand). It was mapped for Drosophila SNAIL by random-site selection as 5'-(G/A)(A/T)(G/A)A-CAGGTG-(C/T)AC-3', with a highly conserved 6 bp core; the same study noted that the core is identical to the bHLH binding core and that SNAIL bound CAGGTG far better than other CANNTG boxes. Vertebrate SNAI1/2/3 models agree: HOCOMOCO and JASPAR render them gCAGGTG, ggCAGGTGc or gCACCTGT, 10-14 bits, and they are mutually indistinguishable (pairwise similarities 0.95-0.99). The SCRATCH paralogues are the exception worth knowing: SCRT1 and SCRT2 models are consistently GCAACAGGTG, 16-18 bits, with a 5' CAAC that adds real information and separates them from the SNAI models (best similarity to a SNAI motif only 0.80-0.84). Structurally the fingers contact the major groove over the core; because the flanks in the SNAI models are weak, essentially all the discriminating power is in the six core bases plus, for SCRATCH, the upstream CAAC. The family data also contains a Vierstra archetype, AC0083:SNAI/TCF:bHLH, in which SNAIL motifs cluster with TCF (E-protein) motifs and the cluster is labelled bHLH - a direct demonstration that these C2H2 motifs are not separable from bHLH motifs by sequence.\n\n## Where it acts\n\nSNAI sites are classically proximal-promoter elements. The human CDH1 promoter carries three E-boxes, including the E-pal element, and both SNAI1 and SNAI2 bind them; other epithelial targets (CLDNs, OCLN, KRT8) follow the same pattern. Beyond promoters, SNAI1 occupies thousands of enhancers in mesenchymal cells. CAGGTG contains no CpG, is not CpG-island-restricted, and occurs on the order of a million times in the human genome by chance, so genome-wide occupancy is chromatin- and cofactor-limited. SNAI factors co-occur with ZEB1/ZEB2 on the same boxes (the two families cooperate sequentially in EMT, with SNAI1 induction preceding ZEB1), with TGF-beta-driven SMAD complexes, and with LSD1/CoREST and PRC2. SCRT1/SCRT2 act at neuronal promoters, where SCRT2 represses miR-25.\n\n## Biology and disease\n\nSnai1-null mouse embryos die during gastrulation with a mesodermal layer that fails to complete EMT and retains E-cadherin. Snai2-null mice are viable with pigmentation and hair defects, and in humans heterozygous or homozygous SNAI2 deletions cause Waardenburg syndrome type 2D and piebaldism, a neural crest phenotype. SNAI1 also blocks the cell cycle and confers resistance to apoptosis, which is part of why EMT and proliferation are often anticorrelated. Sustained SNAI1 expression in kidney tubular epithelium produces a partial EMT that drives renal fibrosis and is reversible in mice. In carcinoma, SNAI1 and SNAI2 are induced at invasive fronts and correlate with loss of E-cadherin, but the degree to which a complete EMT occurs in human tumors, and its necessity for metastasis, remains disputed; consensus guidelines now favor describing hybrid intermediate states and caution against inferring EMT from any single marker.\n\n## Reading a hit\n\nA CAGGTG hit tells you that an E-box is present, not which protein family reads it. The candidate list includes the bHLH factors (TCF3/4/12, MYOD, TWIST, NEUROD, MAX, USF), ZEB1/ZEB2, INSM-related repressors and ZBTB18, alongside SNAI1-3. E-box does not mean bHLH. Within this family, SNAI1, SNAI2 and SNAI3 cannot be told apart from sequence; a hit identifies \"a SNAIL-family site\" at best. SCRT1/SCRT2 are the one real discrimination available: if the match extends to GCAACAGGTG, SCRATCH becomes the better guess, and the neural expression restriction helps. Evidence codes matter here. The HOCOMOCO SNAI1, SNAI2, SCRT1 and SCRT2 models are grade A with PSM evidence, meaning they are supported by ChIP-seq plus HT-SELEX and methyl-HT-SELEX, so \"this protein binds this sequence\" is on firm in vitro ground. SNAI3 rests on HT-SELEX alone at grade C, and the JASPAR SNAI2 (MA0745.3) and SCRT1 (MA0743.3) matrices are ChIP-seq-derived from ReMap, where indirect binding through a partner on the same E-box cannot be excluded.",
+ "long": "## The factors\n\nFive human proteins fall in this family: SNAI1 (Snail), SNAI2 (Slug), SNAI3 (Smuc) and the more distant SCRT1 and SCRT2 (Scratch). All are small, 250-330 residue proteins with four to five C-terminal C2H2 zinc fingers and an N-terminal SNAG domain [PMID:11994736] - a short, highly conserved peptide that docks into the substrate pocket of the histone demethylase LSD1 and so brings the LSD1/CoREST corepressor complex to DNA [PMID:20389281]. They bind DNA as monomers; there is no dimerization interface, and no HLH or leucine zipper. SNAI1 is labile, phosphorylated by GSK3-beta and degraded by beta-TrCP, which makes its protein level a signaling readout rather than a transcriptional one [PMID:15448698]. SNAI1 and SNAI2 are expressed in mesoderm, neural crest, and in mesenchymal and carcinoma cells; SNAI3 is largely restricted to hematopoietic tissue and muscle; SCRT1 and SCRT2 are neural [PMID:11274425]. The superfamily is ancient - Snail and Scratch orthologues are present throughout bilaterians, with the SNAG domain a vertebrate/arthropod-shared feature [PMID:19427053] - and the Drosophila Snail protein that gave the family its name performs the same kind of repression in dorsoventral patterning.\n\n## The motif\n\nThe defining site is the E-box CAGGTG (CACCTG on the other strand). It was mapped for Drosophila SNAIL by random-site selection as 5'-(G/A)(A/T)(G/A)A-CAGGTG-(C/T)AC-3', with a highly conserved 6 bp core; the same study noted that the core is identical to the bHLH binding core and that SNAIL bound CAGGTG far better than other CANNTG boxes [PMID:8371971]. Vertebrate SNAI1/2/3 models agree: HOCOMOCO and JASPAR render them gCAGGTG, ggCAGGTGc or gCACCTGT, 10-14 bits, and they are mutually indistinguishable (pairwise similarities 0.95-0.99). The SCRATCH paralogues are the exception worth knowing: SCRT1 and SCRT2 models are consistently GCAACAGGTG, 16-18 bits, with a 5' CAAC that adds real information and separates them from the SNAI models (best similarity to a SNAI motif only 0.80-0.84). Structurally the fingers contact the major groove over the core; because the flanks in the SNAI models are weak, essentially all the discriminating power is in the six core bases plus, for SCRATCH, the upstream CAAC. The family data also contains a Vierstra archetype, AC0083:SNAI/TCF:bHLH, in which SNAIL motifs cluster with TCF (E-protein) motifs and the cluster is labelled bHLH - a direct demonstration that these C2H2 motifs are not separable from bHLH motifs by sequence.\n\n## Where it acts\n\nSNAI sites are classically proximal-promoter elements. The human CDH1 promoter carries three E-boxes, including the E-pal element, and both SNAI1 and SNAI2 bind them [PMID:10655586,10655587]; other epithelial targets (CLDNs, OCLN, KRT8) follow the same pattern. Beyond promoters, SNAI1 occupies thousands of enhancers in mesenchymal cells. CAGGTG contains no CpG, is not CpG-island-restricted, and occurs on the order of a million times in the human genome by chance, so genome-wide occupancy is chromatin- and cofactor-limited. SNAI factors co-occur with ZEB1/ZEB2 on the same boxes (the two families cooperate sequentially in EMT, with SNAI1 induction preceding ZEB1), with TGF-beta-driven SMAD complexes, and with LSD1/CoREST and PRC2. SCRT1/SCRT2 act at neuronal promoters, where SCRT2 represses miR-25 [PMID:23516276].\n\n## Biology and disease\n\nSnai1-null mouse embryos die during gastrulation with a mesodermal layer that fails to complete EMT and retains E-cadherin [PMID:11689706]. Snai2-null mice are viable with pigmentation and hair defects, and in humans heterozygous or homozygous SNAI2 deletions cause Waardenburg syndrome type 2D and piebaldism, a neural crest phenotype [PMID:12444107]. SNAI1 also blocks the cell cycle and confers resistance to apoptosis, which is part of why EMT and proliferation are often anticorrelated [PMID:15155580]. Sustained SNAI1 expression in kidney tubular epithelium produces a partial EMT that drives renal fibrosis and is reversible in mice [PMID:26236989]. In carcinoma, SNAI1 and SNAI2 are induced at invasive fronts and correlate with loss of E-cadherin, but the degree to which a complete EMT occurs in human tumors, and its necessity for metastasis, remains disputed; consensus guidelines now favor describing hybrid intermediate states and caution against inferring EMT from any single marker [PMID:32300252].\n\n## Reading a hit\n\nA CAGGTG hit tells you that an E-box is present, not which protein family reads it. The candidate list includes the bHLH factors (TCF3/4/12, MYOD, TWIST, NEUROD, MAX, USF), ZEB1/ZEB2, INSM-related repressors and ZBTB18, alongside SNAI1-3. E-box does not mean bHLH. Within this family, SNAI1, SNAI2 and SNAI3 cannot be told apart from sequence; a hit identifies \"a SNAIL-family site\" at best. SCRT1/SCRT2 are the one real discrimination available: if the match extends to GCAACAGGTG, SCRATCH becomes the better guess, and the neural expression restriction helps. Evidence codes matter here. The HOCOMOCO SNAI1, SNAI2, SCRT1 and SCRT2 models are grade A with PSM evidence, meaning they are supported by ChIP-seq plus HT-SELEX and methyl-HT-SELEX, so \"this protein binds this sequence\" is on firm in vitro ground. SNAI3 rests on HT-SELEX alone at grade C, and the JASPAR SNAI2 (MA0745.3) and SCRT1 (MA0743.3) matrices are ChIP-seq-derived from ReMap, where indirect binding through a partner on the same E-box cannot be excluded.",
  "caveats": "The core is 6 bp, CpG-free, and shared with bHLH activators as well as with ZEB, INSM and ZBTB18, so an unqualified CAGGTG match supports \"E-box\" only; expect roughly a million chance occurrences genome-wide. SNAI1, SNAI2 and SNAI3 are indistinguishable from each other. SCRT1/SCRT2 are separable only because of the 5' CAAC extension. One Vierstra archetype in this family (AC0083:SNAI/TCF:bHLH) merges SNAIL with E-protein motifs and is labelled bHLH, which should be read as a statement about clustering, not about biology. ChIP-derived matrices here (JASPAR SNAI2, SCRT1) can reflect a partner bound to the same box.",
  "refs": [
   {
@@ -78,6 +78,100 @@
    "cite": "Yang J, Antin P, Berx G, et al. Guidelines and definitions for research on epithelial-mesenchymal transition. Nat Rev Mol Cell Biol 2020;21:341-352.",
    "pmid": "32300252",
    "url": "https://pubmed.ncbi.nlm.nih.gov/32300252/"
+  },
+  {
+   "cite": "Zhou BP, Deng J, Xia W, et al. Dual regulation of Snail by GSK-3beta-mediated phosphorylation in control of epithelial-mesenchymal transition. Nat Cell Biol 2004;6:931-40.",
+   "pmid": "15448698",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15448698/"
+  },
+  {
+   "cite": "Lin Y, Wu Y, Li J, et al. The SNAG domain of Snail1 functions as a molecular hook for recruiting lysine-specific demethylase 1. EMBO J 2010;29:1803-16.",
+   "pmid": "20389281",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20389281/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1993,
+   "finding": "Random-site selection with recombinant Drosophila SNAIL defined the binding repertoire as a 6 bp CAGGTG core with weakly specified flanks, and showed that SNAIL bound CAGGTG better than other CANNTG boxes although the core is the same word bHLH proteins read.",
+   "methods": "random-oligonucleotide site selection, EMSA, transfection reporters",
+   "confidence": "medium",
+   "pmids": [
+    "8371971"
+   ],
+   "open": "Whether vertebrate Snail proteins use the same site, and how a zinc-finger protein and a bHLH protein share a core without interfering."
+  },
+  {
+   "year": 2000,
+   "finding": "Two groups independently showed that Snail represses E-cadherin by binding E-boxes in the CDH1 promoter and that its expression converts epithelial cells to an invasive mesenchymal phenotype, establishing the motif as the entry point of an epithelial repression program.",
+   "methods": "promoter reporters, EMSA, ectopic expression and knockdown in cell lines",
+   "confidence": "high",
+   "pmids": [
+    "10655586",
+    "10655587"
+   ]
+  },
+  {
+   "year": 2001,
+   "finding": "Snail-null mouse embryos were shown to form a mesoderm layer that keeps epithelial junctions and E-cadherin, giving the family an in vivo requirement in gastrulation; in parallel, mammalian Scratch was identified as a neural-restricted family member that antagonizes proneural bHLH factors at E-boxes.",
+   "methods": "mouse gene targeting with electron microscopy, cDNA cloning and reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "11689706",
+    "11274425"
+   ]
+  },
+  {
+   "year": 2002,
+   "finding": "Homozygous SNAI2 deletions were found in patients with Waardenburg syndrome type 2, tying loss of a SNAIL-family factor to a human neural crest pigmentary and auditory phenotype.",
+   "methods": "patient genotyping, mouse genetic interaction",
+   "confidence": "medium",
+   "pmids": [
+    "12444107"
+   ]
+  },
+  {
+   "year": 2004,
+   "finding": "Snail was shown to attenuate the cell cycle and to confer resistance to apoptosis, which separated the invasive program it drives from proliferation and explained why EMT markers and proliferation markers are often anticorrelated in tumors.",
+   "methods": "ectopic expression in epithelial cells and chick embryos, survival assays",
+   "confidence": "medium",
+   "pmids": [
+    "15155580"
+   ]
+  },
+  {
+   "year": 2010,
+   "finding": "The SNAG domain was shown to resemble a histone H3 tail and to act as a hook that docks into the amine oxidase pocket of LSD1, recruiting LSD1/CoREST; repression by SNAIL is therefore a property of the recruited complex rather than of the zinc fingers.",
+   "methods": "interaction mapping, competition with H3 peptide and LSD1 inhibitors, chromatin immunoprecipitation",
+   "confidence": "medium",
+   "pmids": [
+    "20389281"
+   ]
+  },
+  {
+   "year": 2015,
+   "finding": "Snail1 reactivation in mouse renal tubular epithelium was shown to drive fibrosis through a partial transition in which cells signal to the interstitium without themselves becoming myofibroblasts, and the disease was reversible when Snail1 was switched off.",
+   "methods": "conditional mouse alleles, lineage tracing, obstructive nephropathy model",
+   "confidence": "medium",
+   "pmids": [
+    "26236989"
+   ],
+   "open": "Whether the partial state seen in mouse kidney is the same state described in human carcinoma."
+  },
+  {
+   "year": 2020,
+   "finding": "A consensus statement redefined EMT as a spectrum of partial states and advised against inferring a transition from a single marker, which revised the earlier reading of SNAI1 or SNAI2 expression in a tumor as evidence of a completed EMT.",
+   "methods": "consensus guidelines",
+   "confidence": "medium",
+   "pmids": [
+    "32300252"
+   ]
+  }
+ ],
+ "open": [
+  "What keeps SNAIL factors and bHLH activators off each other's boxes in vivo is unresolved: selection experiments show SNAIL prefers CAGGTG over other CANNTG boxes, while genome-wide data place SNAI peaks on the same boxes that E-proteins occupy, and no study has shown whether flanking sequence, chromatin state or relative abundance decides.",
+  "Whether SNAI1, SNAI2 and SNAI3 have genuinely distinct direct target sets is unknown, because their motifs are 0.95-0.99 similar and reported target differences could equally reflect their different expression domains and cofactor availability.",
+  "The Vierstra archetype AC0083:SNAI/TCF is labelled bHLH, and it is unsettled whether SNAIL and E-protein motifs are truly inseparable or whether the archetype clustering is simply too coarse to resolve the modest flanking differences the HT-SELEX models show.",
+  "Whether a complete EMT occurs in human carcinomas, and whether it is required for metastasis, remains disputed: culture and developmental systems support a full transition, while consensus guidelines for human tumors describe partial, reversible states."
  ]
 }

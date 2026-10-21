@@ -11,7 +11,7 @@
  ],
  "consensus": "AAAGGTCA",
  "short": "NR4A1 (NUR77), NR4A2 (NURR1) and NR4A3 (NOR-1) are orphan nuclear receptors and immediate-early genes: they are transcribed within minutes of serum stimulation, depolarization or antigen-receptor signaling and their proteins turn over quickly. Unlike most nuclear receptors they bind DNA as monomers, to a single AGGTCA half-site carried on an A/T-rich 5' extension, giving the eight-base NGFI-B response element AAAGGTCA. A separate protein surface, the A box, reads those A-T base pairs in the minor groove. The same receptors can also act as homodimers on the everted NurRE and as heterodimers with RXR. Because a monomeric half-site constrains only eight or nine positions, matches are common by chance, and the AGGTCA core is shared with most of the nuclear receptor superfamily.",
- "long": "## The factors\n\nThe NR4A subfamily has three paralogues: NR4A1 (NUR77, NGFI-B, TR3), NR4A2 (NURR1) and NR4A3 (NOR-1, MINOR). Each has the standard nuclear receptor layout: an AF-1 region, a DNA-binding domain of two C4 zinc modules, a carboxy-terminal extension containing the A box, and a ligand-binding domain. All three are immediate-early genes induced by serum, growth factors, depolarization, antigen-receptor signaling and stress, with short protein half-lives, so levels are low in resting tissue; NR4A1 was cloned as a nerve growth factor-induced transcript. They are orphans in a strong sense: the NURR1 ligand-binding domain has no accessible ligand pocket, its interior filled with bulky side chains, defining a class of receptors that activate without a ligand (Wang et al. 2003). The three paralogues are largely redundant: NR4A1-null mice have normal thymocyte apoptosis (Lee et al. 1995). Ten motifs are collected here across all four sources.\n\n## The motif\n\nThe core element is the NGFI-B response element, NBRE, AAAGGTCA, identified by genetic selection in yeast (Wilson et al. 1991). Its structure explains its length. The two zinc modules read the AGGTCA half-site through the major groove as in other nuclear receptors, while a substructure carboxy-terminal to them, the A box, reaches into the minor groove and reads the three A-T base pairs extending 5' of the half-site; this was the first structure of a nuclear receptor bound to DNA as a monomer (Meinke and Sigler 1999). Domain swaps had already shown that NR4A1 and SF-1 (NR5A1) bind by the same monomeric mechanism with distinct 5' requirements: an amino group in the minor groove of the SF-1 sequence and an asparagine in the SF-1 A box (Wilson et al. 1993). The same receptors use two other arrangements: homodimers on the NurRE, an everted pair of NBRE-related octamers with an unusual spacer, which mediates signaling at the POMC promoter (Philips et al. 1997), and heterodimers with RXR on a direct repeat (Perlmann and Jansson 1995). The collected data agree: the pooled consensus is AAAGGTCA, and five models from three databases give exactly that string. The highest-information model, the Vierstra archetype AC0119:NR4A at 25 bits, is GACCTTTAAAGGTCA: two NBRE octamers head to head with no spacer, not the classic NurRE spacing. Two entries need care. JASPAR NR4A2::RXRA (MA1147.2) is an inverted-repeat dimer model whose nearest neighbors sit outside this family, so it describes a heterodimer, not monomer binding. The archetype AC0114:NR4A/NR2C is flagged in the data as probably belonging with the RXR heterodimers: it is a bare aAGGTCA half-site, exactly what one expects to be ambiguous. Nothing distinguishes the three paralogues by sequence.\n\n## Where it acts\n\nNR4A sites behave like those of other stimulus-induced factors: promoters and signal-responsive enhancers, with occupancy tracking induction of the receptor rather than presence of the motif. They act in T cells, neurons, pituitary corticotropes, macrophages, vascular smooth muscle, liver and adipose tissue, so target programs are cell-type specific. A specific eight-mer is expected about 47,000 times per strand in a 3-Gb genome, so tens of thousands of NBRE matches exist and only a small fraction is ever bound. Composite arrangement matters: NurRE-type pairs and NBRE-RXR direct repeats bind more tightly and are the configurations shown to respond to physiological signals, while a lone NBRE is often weak or non-functional.\n\n## Biology and disease\n\nNR4A2 loss abolishes midbrain dopaminergic neurons in mice and the gene has been examined in Parkinson disease (Zetterstrom et al. 1997). Although single knockouts are near-normal, the subfamily as a group limits T cell effector function: deleting all three NR4A genes relieves an exhaustion-like program and improves tumor control by CAR T cells (Chen et al. 2019). In the pituitary, NR4A1 mediates CRH-induced POMC transcription through the NurRE (Philips et al. 1997). The clearest cancer link is structural: extraskeletal myxoid chondrosarcoma is defined by a translocation fusing EWSR1 to NR4A3, converting the receptor into a constitutive activator (Labelle et al. 1995).\n\n## Reading a hit\n\nA monomeric half-site is much harder to call than a spaced dimer; this is the central practical point. A dimeric element such as a DR3, DR4 or DR5 constrains two 6-bp half-sites plus a fixed spacer, 13-15 positions in all, so a scanner can demand a rare pattern and the arrangement itself is evidence. The NBRE constrains only eight or nine positions, of which six are the AGGTCA half-site shared by most of the nuclear receptor superfamily, so all the family-level information lives in the two or three A-T bases of the 5' extension, and there is no spacer to check. One or two substitutions convert a predicted NBRE into an SF-1 element or into one half of a genuine RXR heterodimer site. Prediction of nuclear receptor elements improves substantially when dimer configuration is modeled, which is unavailable here (Sandelin and Wasserman 2005). Treat a hit as \"a nuclear receptor half-site\" first. Provenance is comparatively good here: NR4A1.H14CORE.0.PSM.A is grade A with ChIP, HT-SELEX and methyl-HT-SELEX support and NR4A2.H14CORE.0.SM.B has both in vitro assays, so AAAGGTCA is well supported as directly bound. The one NR4A3 model, CIS-BP M00818_2.00, is inferred from the mouse protein at 97% DNA-binding-domain identity rather than measured for human NR4A3 (Weirauch et al. 2014).",
+ "long": "## The factors\n\nThe NR4A subfamily has three paralogues: NR4A1 (NUR77, NGFI-B, TR3), NR4A2 (NURR1) and NR4A3 (NOR-1, MINOR). Each has the standard nuclear receptor layout: an AF-1 region, a DNA-binding domain of two C4 zinc modules, a carboxy-terminal extension containing the A box, and a ligand-binding domain. All three are immediate-early genes induced by serum, growth factors, depolarization, antigen-receptor signaling and stress, with short protein half-lives, so levels are low in resting tissue; NR4A1 was cloned as a nerve growth factor-induced transcript. They are orphans in a strong sense: the NURR1 ligand-binding domain has no accessible ligand pocket, its interior filled with bulky side chains, defining a class of receptors that activate without a ligand (Wang et al. 2003) [PMID:12774125]. The three paralogues are largely redundant: NR4A1-null mice have normal thymocyte apoptosis (Lee et al. 1995) [PMID:7624775]. Ten motifs are collected here across all four sources.\n\n## The motif\n\nThe core element is the NGFI-B response element, NBRE, AAAGGTCA, identified by genetic selection in yeast (Wilson et al. 1991) [PMID:1925541]. Its structure explains its length. The two zinc modules read the AGGTCA half-site through the major groove as in other nuclear receptors, while a substructure carboxy-terminal to them, the A box, reaches into the minor groove and reads the three A-T base pairs extending 5' of the half-site; this was the first structure of a nuclear receptor bound to DNA as a monomer (Meinke and Sigler 1999) [PMID:10331876]. Domain swaps had already shown that NR4A1 and SF-1 (NR5A1) bind by the same monomeric mechanism with distinct 5' requirements: an amino group in the minor groove of the SF-1 sequence and an asparagine in the SF-1 A box (Wilson et al. 1993) [PMID:8395013]. The same receptors use two other arrangements: homodimers on the NurRE, an everted pair of NBRE-related octamers with an unusual spacer, which mediates signaling at the POMC promoter (Philips et al. 1997) [PMID:9315652], and heterodimers with RXR on a direct repeat (Perlmann and Jansson 1995) [PMID:7705655]. The collected data agree: the pooled consensus is AAAGGTCA, and five models from three databases give exactly that string. The highest-information model, the Vierstra archetype AC0119:NR4A at 25 bits, is GACCTTTAAAGGTCA: two NBRE octamers head to head with no spacer, not the classic NurRE spacing. Two entries need care. JASPAR NR4A2::RXRA (MA1147.2) is an inverted-repeat dimer model whose nearest neighbors sit outside this family, so it describes a heterodimer, not monomer binding. The archetype AC0114:NR4A/NR2C is flagged in the data as probably belonging with the RXR heterodimers: it is a bare aAGGTCA half-site, exactly what one expects to be ambiguous. Nothing distinguishes the three paralogues by sequence.\n\n## Where it acts\n\nNR4A sites behave like those of other stimulus-induced factors: promoters and signal-responsive enhancers, with occupancy tracking induction of the receptor rather than presence of the motif. They act in T cells, neurons, pituitary corticotropes, macrophages, vascular smooth muscle, liver and adipose tissue, so target programs are cell-type specific. A specific eight-mer is expected about 47,000 times per strand in a 3-Gb genome, so tens of thousands of NBRE matches exist and only a small fraction is ever bound. Composite arrangement matters: NurRE-type pairs and NBRE-RXR direct repeats bind more tightly and are the configurations shown to respond to physiological signals, while a lone NBRE is often weak or non-functional.\n\n## Biology and disease\n\nNR4A2 loss abolishes midbrain dopaminergic neurons in mice and the gene has been examined in Parkinson disease (Zetterstrom et al. 1997) [PMID:9092472]. Although single knockouts are near-normal, the subfamily as a group limits T cell effector function: deleting all three NR4A genes relieves an exhaustion-like program and improves tumor control by CAR T cells (Chen et al. 2019) [PMID:30814732]. In the pituitary, NR4A1 mediates CRH-induced POMC transcription through the NurRE (Philips et al. 1997) [PMID:9315652]. The clearest cancer link is structural: extraskeletal myxoid chondrosarcoma is defined by a translocation fusing EWSR1 to NR4A3, converting the receptor into a constitutive activator (Labelle et al. 1995) [PMID:8634690].\n\n## Reading a hit\n\nA monomeric half-site is much harder to call than a spaced dimer; this is the central practical point. A dimeric element such as a DR3, DR4 or DR5 constrains two 6-bp half-sites plus a fixed spacer, 13-15 positions in all, so a scanner can demand a rare pattern and the arrangement itself is evidence. The NBRE constrains only eight or nine positions, of which six are the AGGTCA half-site shared by most of the nuclear receptor superfamily, so all the family-level information lives in the two or three A-T bases of the 5' extension, and there is no spacer to check. One or two substitutions convert a predicted NBRE into an SF-1 element or into one half of a genuine RXR heterodimer site. Prediction of nuclear receptor elements improves substantially when dimer configuration is modeled, which is unavailable here (Sandelin and Wasserman 2005) [PMID:15563547]. Treat a hit as \"a nuclear receptor half-site\" first. Provenance is comparatively good here: NR4A1.H14CORE.0.PSM.A is grade A with ChIP, HT-SELEX and methyl-HT-SELEX support and NR4A2.H14CORE.0.SM.B has both in vitro assays, so AAAGGTCA is well supported as directly bound. The one NR4A3 model, CIS-BP M00818_2.00, is inferred from the mouse protein at 97% DNA-binding-domain identity rather than measured for human NR4A3 (Weirauch et al. 2014) [PMID:25215497].",
  "caveats": "The sequence identifies a nuclear receptor half-site, not a receptor. AAAGGTCA constrains eight positions, six of which are the AGGTCA half-site used across the superfamily, so tens of thousands of chance matches exist and one or two substitutions turn a predicted NBRE into an SF-1 element or into half of an RXR heterodimer site. Nothing separates NR4A1, NR4A2 and NR4A3. The AAAGGTCA string itself is well supported in vitro (a grade-A HOCOMOCO model with HT-SELEX and methyl-HT-SELEX evidence), but the only NR4A3 model is inferred from mouse, one Vierstra archetype in this family is flagged as probably belonging with the RXR heterodimers, and the JASPAR NR4A2::RXRA entry is a dimer model rather than an NR4A monomer motif. Occupancy requires the receptor to have been induced.",
  "refs": [
   {
@@ -74,5 +74,88 @@
    "pmid": "30814732",
    "url": "https://pubmed.ncbi.nlm.nih.gov/30814732/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1991,
+   "finding": "The NGFI-B response element was defined as AAAGGTCA by genetic selection in yeast, showing that the receptor recognizes a single half-site carried on an A/T-rich 5' extension rather than a spaced repeat.",
+   "methods": "Genetic selection in yeast with binding assays",
+   "confidence": "medium",
+   "pmids": [
+    "1925541"
+   ],
+   "open": "Why three extra base pairs 5' of the half-site were needed was not yet explained structurally."
+  },
+  {
+   "year": 1993,
+   "finding": "Domain swaps between NGFI-B and SF-1 established monomer binding as a third paradigm of nuclear receptor-DNA interaction alongside homodimers and RXR heterodimers, and traced the different 5' requirements of the two receptors to residues in the A box.",
+   "methods": "Chimeric protein domain swaps with binding and reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "8395013"
+   ],
+   "open": "The minor-groove contacts inferred from swaps had no direct structural support."
+  },
+  {
+   "year": 1995,
+   "finding": "NGFI-B and NURR1 were shown to heterodimerize with RXR on a direct repeat and to respond to retinoid signaling, so the same receptors read at least two unrelated DNA arrangements and a monomeric half-site is not the whole story.",
+   "methods": "Gel-shift, reporter assays, retinoid response",
+   "confidence": "medium",
+   "pmids": [
+    "7705655"
+   ]
+  },
+  {
+   "year": 1995,
+   "finding": "Nur77-null mice were found to have unimpaired thymic and peripheral T cell death, overturning the expectation from dominant-negative experiments that the receptor is required for negative selection and pointing instead to redundancy among the three paralogues.",
+   "methods": "Mouse germline knockout with immunological phenotyping",
+   "confidence": "high",
+   "pmids": [
+    "7624775"
+   ]
+  },
+  {
+   "year": 1997,
+   "finding": "A dimeric arrangement, the NurRE, was shown to mediate CRH-induced POMC transcription in pituitary cells, establishing an everted pair of NBRE-related octamers as the configuration that carries a physiological signal.",
+   "methods": "Promoter dissection, gel-shift, reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "9315652"
+   ]
+  },
+  {
+   "year": 1999,
+   "finding": "The crystal structure of the NGFI-B DNA-binding region on the NBRE showed a single receptor molecule using its zinc modules on the AGGTCA half-site and an A-box substructure reaching into the minor groove of the 5' A-T base pairs, the first structure of a nuclear receptor bound to DNA as a monomer.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "10331876"
+   ]
+  },
+  {
+   "year": 2003,
+   "finding": "The NURR1 ligand-binding domain was found to have no accessible ligand pocket, its interior filled with bulky side chains, defining a class of receptors that activate without a ligand.",
+   "methods": "X-ray crystallography of the ligand-binding domain",
+   "confidence": "high",
+   "pmids": [
+    "12774125"
+   ],
+   "open": "Whether the domain can still be targeted pharmacologically."
+  },
+  {
+   "year": 2019,
+   "finding": "Deleting all three NR4A genes in CAR T cells relieved an exhaustion-like transcriptional program and improved tumor control, demonstrating at the level of the whole subfamily the redundancy that single knockouts had obscured.",
+   "methods": "Combined knockout in mouse CAR T cells with tumor models and genomics",
+   "confidence": "high",
+   "pmids": [
+    "30814732"
+   ]
+  }
+ ],
+ "open": [
+  "Whether an isolated NBRE is functional in vivo is unsettled: the monomeric element is well measured in vitro, yet the configurations shown to respond to physiological signals are the dimeric NurRE and the NBRE-RXR direct repeat, and a lone octamer is often weak in reporter assays.",
+  "Whether the three paralogues have distinct target sets cannot currently be answered: their motifs are identical, single knockouts are near-normal, and the clearest phenotypes appear only when all three are removed together.",
+  "Whether the ligand-binding domain can be engaged pharmacologically despite the absence of a conventional pocket remains contested, with the crystal structure showing the interior filled by side chains while small molecules continue to be reported as acting through that domain.",
+  "The boundary between this family and the RXR heterodimers is not settled in the data: one Vierstra archetype assigned here is a bare AGGTCA half-site flagged as belonging with the RXR heterodimers, and the JASPAR NR4A2::RXRA entry is a dimer model whose nearest neighbors lie outside the family."
  ]
 }

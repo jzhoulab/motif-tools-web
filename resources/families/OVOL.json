@@ -10,7 +10,7 @@
  ],
  "consensus": "CCGTTA",
  "short": "OVOL1 and OVOL2 are C2H2 zinc-finger repressors, the mammalian counterparts of Drosophila OVO/shavenbaby, that bind a short AT-flanked core, CCGTTA (equivalently TAACGG on the other strand). They act mainly as repressors of the epithelial-to-mesenchymal transition, holding epithelial cells in an epithelial state by shutting down ZEB1, ZEB2 and other EMT inducers, and OVOL1 additionally represses its own promoter and MYC. Mouse knockouts show defects in hair follicles, sperm, kidney, mammary ductal morphogenesis and epidermal progenitor arrest. In humans, a promoter point mutation that mis-expresses OVOL2 in corneal endothelium causes posterior polymorphous corneal dystrophy type 1. OVOL1 and OVOL2 share one motif and cannot be separated from sequence.",
- "long": "## The factors\n\nThe OVOL genes are the vertebrate orthologues of Drosophila ovo/shavenbaby (svb), a single locus whose\nalternative transcripts supply two genetic functions: svb for the extracellular projections of epidermal\ncells and ovo for female germ-cell survival. Humans have OVOL1 (11q13) and OVOL2 (20p11). A third gene,\nOVOL3, is annotated in some species but has no measured motif in these databases and is not represented\nhere. The proteins carry four C2H2 zinc fingers, of which only about three contribute to specificity,\nand they bind DNA as monomers. OVOL1 and OVOL2 are epithelial: skin and hair follicle, kidney, mammary\nand corneal epithelium, placenta, and germ cells. Both act predominantly as transcriptional repressors;\nOVOL1 represses by competing with the activator MYB at overlapping sites and by recruiting histone\ndeacetylase activity, and OVOL2 exists in repressor and non-repressor isoforms whose balance sets its\noutput.\n\n## The motif\n\nThe consensus is CCGTTA, usually written with AT-rich flanks, and it appears in these databases in both\norientations: ACCGTTAT (JASPAR OVOL1 and OVOL2) and TAACGGT (HOCOMOCO OVOL2, and the atlas\nrepresentative). These are the same element read on opposite strands, so the apparent disagreement\nbetween AT-rich and CG-containing renderings is only a strand convention. The information sits almost\nentirely on the six-base core; the flanking A/T positions add affinity but little specificity, which is\nwhy the shortest matrices here carry only about 6 bits.\n\nThe site was first defined by random-oligomer selection with the Drosophila OVO zinc-finger array, which\ngave a statistically significant 9-bp consensus and showed that the recognition does not follow the usual\nzinc-finger contact rules, consistent with the conclusion that some fingers in the array have degenerated\nand no longer read bases. Mouse Ovol1 binding sites in genomic DNA converge on the same CCGTTA core, and\ncross-species ChIP work in the Drosophila germline finds OVO at genomic CCGTTA motifs, so the core is\nconserved from fly to mouse. The permissive hexamer CC/TGTTA is also reported, with high-affinity sites\nfavouring AT-rich flanks.\n\nOVOL1 and OVOL2 are not distinguishable from sequence. Their matrices in all four databases converge\n(family cohesion about 0.89, and the best cross-member similarities exceed 0.98), so a hit identifies the\nfamily, not the member. One Vierstra archetype in this family, ACAGTTACA, is a variant with a different\nthird position and does not match the others closely; treat it as a separate, weakly supported model.\n\n## Where it acts\n\nOVOL sites are found in promoters and enhancers of epithelial-identity and EMT genes. Documented direct\ntargets include ZEB1 and other EMT inducers, MYC (repressed by OVOL1 in embryonic epidermal\nprogenitors), the OVOL1 promoter itself, and in flies the ovarian tumor (otu) promoter, where OVO binds\nunusually close to the transcription start site. That proximity to start sites is a recurring feature:\nOVO/OVOL sites cluster near TSSs rather than in distal enhancer deserts. In epithelial cells the factors\nsit inside a double-negative feedback loop with ZEB1/ZEB2, so OVOL peaks tend to co-occur with ZEB and\nSNAI motifs in the same regulatory regions, and with GRHL and KLF4 motifs that mark epithelial promoters.\nThe core is only 6 bp, so genomic occurrences are numerous in any sequence composition.\n\n## Biology and disease\n\nMouse Ovol1 (movo1) knockouts are small, make aberrant hairs, show hypogenitalism with reduced fertility\nand develop kidney abnormalities; the epidermal phenotype traces to failure of embryonic epidermal\nprogenitors to arrest and to de-repression of MYC. Ovol2 deletion blocks mammary ductal morphogenesis,\ndepletes stem and progenitor pools, and lets epithelial cells undergo EMT in vivo; conversely, forced\nexpression of the repressor isoform of OVOL2 reverts metastatic breast cancer cells toward an epithelial\nstate. OVOL1 and OVOL2 can both induce mesenchymal-to-epithelial transition in human cancer cell lines.\nIn human disease, posterior polymorphous corneal dystrophy type 1 is caused by point mutations in the\nOVOL2 promoter (c.-307T>C and related variants) that switch the gene on ectopically in corneal\nendothelium, and OVOL2 maintains the corneal epithelial program by suppressing EMT. Reports in lung,\ncolorectal and breast cancer describe both tumour-suppressive and context-dependent pro-tumour effects,\nand the literature here is not settled.\n\n## Reading a hit\n\nCCGTTA is six informative bases, so chance matches are frequent: expect many hits per megabase and treat\na single match as weak evidence. Sequence cannot distinguish OVOL1 from OVOL2, and in most epithelial\ntissues both are expressed, so ChIP-seq in such a cell will not resolve them either. The evidence base\nfor this family is comparatively good: the HOCOMOCO OVOL1 and OVOL2 models carry in vitro support\n(HT-SELEX and methyl-SELEX), so \"this protein binds this sequence\" is well established even though\n\"this sequence was bound by this protein here\" is not. Be alert to the reverse-complement rendering\nTAACGGT, which is the same site and is easy to mistake for an unrelated motif. A match in an\nEMT-associated promoter alongside ZEB or SNAI sites is more interpretable than an isolated hit, but the\ndirection of effect still has to come from expression or perturbation data.",
+ "long": "## The factors\n\nThe OVOL genes are the vertebrate orthologues of Drosophila ovo/shavenbaby (svb), a single locus whose\nalternative transcripts supply two genetic functions: svb for the extracellular projections of epidermal\ncells and ovo for female germ-cell survival [PMID:9808631,10637336]. Humans have OVOL1 (11q13) and OVOL2 (20p11). A third gene,\nOVOL3, is annotated in some species but has no measured motif in these databases and is not represented\nhere. The proteins carry four C2H2 zinc fingers, of which only about three contribute to specificity [PMID:10637336],\nand they bind DNA as monomers. OVOL1 and OVOL2 are epithelial: skin and hair follicle, kidney, mammary\nand corneal epithelium, placenta, and germ cells. Both act predominantly as transcriptional repressors;\nOVOL1 represses by competing with the activator MYB at overlapping sites and by recruiting histone\ndeacetylase activity [PMID:17311813], and OVOL2 exists in repressor and non-repressor isoforms whose balance sets its\noutput [PMID:24735879].\n\n## The motif\n\nThe consensus is CCGTTA, usually written with AT-rich flanks, and it appears in these databases in both\norientations: ACCGTTAT (JASPAR OVOL1 and OVOL2) [PMID:28473536] and TAACGGT (HOCOMOCO OVOL2, and the atlas\nrepresentative). These are the same element read on opposite strands, so the apparent disagreement\nbetween AT-rich and CG-containing renderings is only a strand convention. The information sits almost\nentirely on the six-base core; the flanking A/T positions add affinity but little specificity, which is\nwhy the shortest matrices here carry only about 6 bits.\n\nThe site was first defined by random-oligomer selection with the Drosophila OVO zinc-finger array, which\ngave a statistically significant 9-bp consensus and showed that the recognition does not follow the usual\nzinc-finger contact rules, consistent with the conclusion that some fingers in the array have degenerated\nand no longer read bases [PMID:10637336]. Mouse Ovol1 binding sites in genomic DNA converge on the same CCGTTA core [PMID:16636146,17311813], and in OVO ChIP-seq from the Drosophila female germline the top peak motif, TAACGGTAAA, contains\nthe same core on the other strand, although the authors define the core more permissively as TAACNGT\n[PMID:39291827]; the core is conserved from fly to mouse. The permissive hexamer CC/TGTTA is also reported, with high-affinity sites\nfavouring AT-rich flanks [PMID:17311813].\n\nOVOL1 and OVOL2 are not distinguishable from sequence. Their matrices in all four databases converge\n(family cohesion about 0.89, and the best cross-member similarities exceed 0.98), so a hit identifies the\nfamily, not the member. One Vierstra archetype in this family, ACAGTTACA [PMID:32728250], is a variant with a different\nthird position and does not match the others closely; treat it as a separate, weakly supported model.\n\n## Where it acts\n\nOVOL sites are found in promoters and enhancers of epithelial-identity and EMT genes. Documented direct\ntargets include ZEB1 and other EMT inducers [PMID:24124593,24735879], MYC (repressed by OVOL1 in embryonic epidermal\nprogenitors) [PMID:16636146], the OVOL1 promoter itself [PMID:17311813], and in flies the ovarian tumor (otu) promoter, where OVO binds\nunusually close to the transcription start site [PMID:11290304]. That proximity to start sites is a recurring feature:\nOVO/OVOL sites cluster near TSSs rather than in distal enhancer deserts [PMID:39291827]. In epithelial cells the factors\nsit inside a double-negative feedback loop with ZEB1/ZEB2 [PMID:24124593,24735879], so OVOL peaks tend to co-occur with ZEB and\nSNAI motifs in the same regulatory regions, and with GRHL and KLF4 motifs that mark epithelial promoters.\nThe core is only 6 bp, so genomic occurrences are numerous in any sequence composition.\n\n## Biology and disease\n\nMouse Ovol1 (movo1) knockouts are small, make aberrant hairs, show hypogenitalism with reduced fertility\nand develop kidney abnormalities [PMID:9808631]; the epidermal phenotype traces to failure of embryonic epidermal\nprogenitors to arrest and to de-repression of MYC [PMID:16636146]. Ovol2 deletion blocks mammary ductal morphogenesis,\ndepletes stem and progenitor pools, and lets epithelial cells undergo EMT in vivo; conversely, forced\nexpression of the repressor isoform of OVOL2 reverts metastatic breast cancer cells toward an epithelial\nstate [PMID:24735879]. OVOL1 and OVOL2 can both induce mesenchymal-to-epithelial transition in human cancer cell lines [PMID:24124593].\nIn human disease, posterior polymorphous corneal dystrophy type 1 is caused by point mutations in the\nOVOL2 promoter (c.-307T>C and related variants) that switch the gene on ectopically in corneal\nendothelium [PMID:26749309,28046031], and OVOL2 maintains the corneal epithelial program by suppressing EMT [PMID:27134177]. Reports in lung,\ncolorectal and breast cancer describe both tumour-suppressive and context-dependent pro-tumour effects,\nand the literature here is not settled.\n\n## Reading a hit\n\nCCGTTA is six informative bases, so chance matches are frequent: expect many hits per megabase and treat\na single match as weak evidence. Sequence cannot distinguish OVOL1 from OVOL2, and in most epithelial\ntissues both are expressed, so ChIP-seq in such a cell will not resolve them either. The evidence base\nfor this family is comparatively good: the HOCOMOCO OVOL1 and OVOL2 models carry in vitro support\n(HT-SELEX and methyl-SELEX) [PMID:28473536], so \"this protein binds this sequence\" is well established even though\n\"this sequence was bound by this protein here\" is not. Be alert to the reverse-complement rendering\nTAACGGT, which is the same site and is easy to mistake for an unrelated motif. A match in an\nEMT-associated promoter alongside ZEB or SNAI sites is more interpretable than an isolated hit, but the\ndirection of effect still has to come from expression or perturbation data.",
  "caveats": "The informative core is only 6 bp (CCGTTA / TAACGG), so chance matches are abundant and one hit is weak evidence. OVOL1 and OVOL2 share a single motif - cohesion here is about 0.89 with cross-member similarities above 0.98 - so a match identifies the family, not the member, and ChIP in epithelium cannot separate them either because both are usually expressed. The two strand renderings (ACCGTTAT and TAACGGT) are the same element and are often mistaken for different motifs. Evidence quality is good: the OVOL1 and OVOL2 HOCOMOCO models include in vitro HT-SELEX and methyl-SELEX support. The Vierstra ACAGTTACA archetype is a poorly matching variant and should be treated separately.",
  "refs": [
   {
@@ -72,6 +72,100 @@
    "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
    "pmid": "32728250",
    "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  },
+  {
+   "cite": "Nair M, Bilanchone V, Ortt K, et al. Ovol1 represses its own transcription by competing with transcription activator c-Myb and by recruiting histone deacetylase activity. Nucleic Acids Res 2007;35:1687-97.",
+   "pmid": "17311813",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17311813/"
+  },
+  {
+   "cite": "Davidson AE, Liskova P, Evans CJ, et al. Autosomal-Dominant Corneal Endothelial Dystrophies CHED1 and PPCD1 Are Allelic Disorders Caused by Non-coding Mutations in the Promoter of OVOL2. Am J Hum Genet 2016;98:75-89.",
+   "pmid": "26749309",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26749309/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1998,
+   "finding": "A mouse ovo orthologue, movo1 (Ovol1), is cloned; knockout mice are small, make aberrant hairs, have reduced fertility and kidney abnormalities, paralleling the fly epidermal and germline functions.",
+   "methods": "cDNA cloning; gene targeting in mouse",
+   "confidence": "medium",
+   "pmids": [
+    "9808631"
+   ],
+   "open": "The sequence bound by the vertebrate protein was not known."
+  },
+  {
+   "year": 2000,
+   "finding": "Random-oligomer selection with the Drosophila OVO zinc-finger array gives a 9-bp consensus that matches sites in known target genes but breaks the usual zinc-finger contact rules; only three of the four fingers appear to contribute.",
+   "methods": "In vitro random DNA oligomer selection",
+   "confidence": "medium",
+   "pmids": [
+    "10637336"
+   ]
+  },
+  {
+   "year": 2001,
+   "finding": "OVO is shown to activate ovarian tumor (otu) through a site unusually close to the transcription start, establishing a direct target and a TSS-proximal mode of action.",
+   "methods": "Loss- and gain-of-function and promoter-swap transgenes in Drosophila",
+   "confidence": "medium",
+   "pmids": [
+    "11290304"
+   ]
+  },
+  {
+   "year": 2006,
+   "finding": "Mouse Ovol1 is shown to bind CCGTTA sites to repress c-myc and its own promoter; site selection with recombinant Ovol1 then gives an AT-flanked CYGTTA consensus, and repression combines competition with c-Myb and HDAC recruitment.",
+   "methods": "Knockout epidermis analysis; EMSA; ChIP; CAST site selection; reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "16636146",
+    "17311813"
+   ]
+  },
+  {
+   "year": 2014,
+   "finding": "Ovol2 is required for mammary ductal morphogenesis, where it directly represses EMT inducers; its repressor isoform can push metastatic breast cancer cells back to an epithelial state.",
+   "methods": "Conditional knockout mice; target binding and expression analysis; forced-expression reprogramming",
+   "confidence": "medium",
+   "pmids": [
+    "24735879"
+   ]
+  },
+  {
+   "year": 2016,
+   "finding": "Non-coding mutations in the OVOL2 proximal promoter are found to cause the corneal endothelial dystrophies CHED1 and PPCD1, increasing promoter activity in a tissue where OVOL2 is normally not detected.",
+   "methods": "Linkage, targeted and whole-genome sequencing in large pedigrees; reporter assays",
+   "confidence": "high",
+   "pmids": [
+    "26749309",
+    "28046031"
+   ],
+   "open": "Which factor acts on the mutated promoter to switch OVOL2 on was not identified."
+  },
+  {
+   "year": 2017,
+   "finding": "HT-SELEX and methyl-SELEX with human OVOL1 and OVOL2 yield the ACCGTTA-type models now used in JASPAR and HOCOMOCO, confirming the core in vitro for both paralogues.",
+   "methods": "HT-SELEX; methylation-sensitive SELEX",
+   "confidence": "high",
+   "pmids": [
+    "28473536"
+   ]
+  },
+  {
+   "year": 2024,
+   "finding": "Genome-wide ChIP-seq of OVO in the Drosophila female germline finds binding concentrated near transcription start sites of essential maternal genes, with a TAACNGT motif that is degenerate at a position the vertebrate matrices fix.",
+   "methods": "ChIP-seq; RNA-seq with hypomorphic and rescue alleles; motif enrichment",
+   "confidence": "medium",
+   "pmids": [
+    "39291827"
+   ],
+   "open": "Whether the degenerate position reflects a real difference between fly and vertebrate proteins or a ChIP-versus-SELEX difference is untested."
+  }
+ ],
+ "open": [
+  "How strict the second base of the core is remains unsettled: human in vitro matrices give CCGTTA, mouse Ovol1 site selection allowed C or T there (CYGTTA), and Drosophila OVO ChIP-seq gave TAACNGT, which would also admit the CAGTTA variant seen in the Vierstra ACAGTTACA archetype that this atlas treats as a separate, weakly supported model.",
+  "Whether OVOL2 restrains or promotes carcinoma progression is not settled: it induces mesenchymal-to-epithelial transition and reduces metastatic potential in prostate and breast models, while reports in lung, colorectal and breast cancer also describe context-dependent pro-tumour effects.",
+  "How the OVOL2 promoter mutations in PPCD1 and CHED1 cause disease is not established: they raise promoter activity and are proposed to create cryptic regulatory sites that switch OVOL2 on ectopically in corneal endothelium, but the factor that binds them has not been identified."
  ]
 }

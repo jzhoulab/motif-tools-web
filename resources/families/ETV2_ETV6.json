@@ -11,8 +11,8 @@
  ],
  "consensus": "ACCGGAAGT",
  "short": "ETV2 (ER71), ETV6 (TEL) and ETV7 (TEL2) are ETS-domain proteins that read the same GGA(A/T) core as the rest of the family. ETV2 is a transient activator required for the specification of blood and endothelium; ETV6 and ETV7 are repressors, and ETV6 spreads repression by polymerizing through its PNT/SAM domain. They are grouped here because their motif models cluster together, not because they share a distinct binding preference: ETV2's selected sequence is the ordinary class I ETS site and ETV6/ETV7 differ from it only marginally. What does recur among these models is arrangement - several are two GGAA cores in tandem or head-to-head. ETV6 is one of the most frequently rearranged genes in leukemia, most famously as ETV6-RUNX1 in childhood B-lineage acute lymphoblastic leukemia.",
- "long": "## The factors\n\nThree genes sit in this family. ETV2 (also ER71 or ETSRP) is a transient transcriptional activator\nexpressed in a narrow window in nascent mesoderm and hemogenic endothelium and essentially silent\nin adult tissues. ETV6 (TEL) and ETV7 (TEL2) are transcriptional repressors; ETV6 is broadly\nexpressed, ETV7 more narrowly and largely in hematopoietic cells. All three carry one ETS domain of\nabout 85 residues, the family's winged helix-turn-helix fold, and bind DNA as monomers. ETV6 and\nETV7 additionally carry a PNT domain (a SAM domain) that self-associates head-to-tail into an\nopen-ended polymer, so one DNA-bound ETV6 molecule can nucleate a long repressive assembly; the\npolymer interface and its regulation have been mapped biophysically. ETV6 also has an\nautoinhibitory element that damps its DNA binding. It is worth stating plainly that this family is\nnot a biochemical class. Systematic profiling of every human and mouse ETS protein put ETV6 and\nETV7 in a small subclass of their own (class IIb) and did not group ETV2 with them; ETV2's\npreference is the ordinary class I preference.\n\n## The motif\n\nThe consensus is ACCGGAAGT - the same nine-mer as ETS class I, read the same way, by two invariant\narginines in recognition helix H3 that hydrogen-bond the two guanines of GGA, with wing and turn\nlysines contacting the flanks. The in vitro models differ only at the margins: JASPAR's HT-SELEX\nmodel for ETV2 (MA0762.2) is ACCGGAAAT, with A rather than G immediately 3' of the core, while the\nETV6 (MA0645.2) and ETV7 (MA1708.2) HT-SELEX models are plain CCGGAAGT and CGGAAGTG. There is no\nsequence that belongs to this family and not to ETS class I. What is distinctive in part of the\ncollection is arrangement rather than composition: three models here are doubled sites - CIS-BP\nM02990 (CCGGAAGCGGAAGT), CIS-BP M04712 (CGGAAGTACTTCCG) and the ETV7 in vitro model\n(CCCGGAAGTACTTC) - that is, two ETS cores in tandem or head-to-head. That is consistent with\nETV6's ability to polymerize and with the reported preference of these factors for repeated GGAA,\nbut doubled and repeated GGAA matrices also occur in ETS class I, where the EWS-FLI1 fusion's GGAA\nmicrosatellite matrices live, so a tandem arrangement does not on its own assign a motif here.\n\n## Where it acts\n\nETV2 binds enhancers of endothelial and hematopoietic genes during a short developmental window,\nacting downstream of BMP, Notch and Wnt signals. ETV6 and ETV7 occupy ETS sites at promoters and\nenhancers and repress them, recruiting corepressors rather than activating. The functional point\nthis family illustrates is competition: because ETV6, ETV7, ERF and ETV3 read the same sequence as\nETS1, ERG, FLI1 and GABPA, the output of a given ETS site depends on which family member happens to\noccupy it, not on the sequence. That is also why sites bound by these repressors are not\ndistinguishable in a scan from sites bound by activators. Notably, the genome-wide footprint\narchetypes derived from DNase data contain no archetype for this family: every archetype whose name\nincludes ETV clustered instead with ELF, ELK or ETS archetypes that are assigned elsewhere in this\natlas.\n\n## Biology and disease\n\nEtv2-null mouse embryos fail to make blood and endothelium, placing ETV2 at the top of the\nhematoendothelial program; the gene is now widely used to force endothelial fate in reprogramming\nexperiments. Mice lacking Tel/Etv6 die around mid-gestation with a yolk sac angiogenic defect and\nintra-embryonic apoptosis, and ETV6 is required for adult bone marrow hematopoiesis. ETV6 is among\nthe most frequently rearranged genes in human leukemia: the t(12;21) fusion ETV6-RUNX1 (TEL-AML1)\nis the most common recurrent fusion in childhood B-lineage acute lymphoblastic leukemia, and ETV6\nhas many other partners including kinases. Germline heterozygous ETV6 mutations cause autosomal\ndominant thrombocytopenia with predisposition to hematologic malignancy.\n\n## Reading a hit\n\nThis is the family in this atlas where the label deserves the least weight. The motifs assigned\nhere are not separable from ETS class I, and the data say so directly: for 15 of the 16 models in\nthis family, most of the nearest neighbours across the four databases are labelled with a different\nfamily, usually ETS class I, and for 14 of them the single best match anywhere is a motif\nrather than a motif from this family - including the CIS-BP model that this atlas picks as the\nfamily's representative. One JASPAR entry, the heterodimer model ETV2::FIGLA (MA1941.2), is flagged\noutright as belonging with class I. Practical consequences: read a hit as \"an ETS site\"; use\nexpression to decide the factor, remembering that ETV2 is effectively absent outside early mesoderm\nand engineered endothelial systems, so an ETV2 call in an adult tissue dataset is far more likely a\ngeneric ETS site; and do not try to tell ETV6 from ERF or ETV3, all repressors reading the same\nsequence. Four of the seven JASPAR models here are CAP-SELEX heterodimers (ETV2::HOXB13,\nETV2::FIGLA, ETV2::DRGX, ETV2::FOXI1) in which much of the matrix is a HOX, bHLH or FOX site rather\nthan an ETS site.",
- "caveats": "Treat the family label as provisional. Its separation from ETS class I is largely a\nclustering outcome: 15 of 16 models here have most of their cross-database nearest neighbours\nlabelled with another family, usually class I, 14 match a motif outside the family better than any\ninside it, and one JASPAR entry (ETV2::FIGLA) is flagged as belonging with class I. The published classification also does not support the grouping - ETV6 and ETV7\nform their own small subclass while ETV2 behaves like a class I factor. No genomic-footprint\narchetype corresponds to this family. Four of seven JASPAR models are CAP-SELEX heterodimers whose\nmatrices are partly a HOX, bHLH or FOX site. A hit therefore means \"an ETS site\"; which of ETV2,\nETV6, ETV7, ERF or ETV3 is bound has to come from expression and ChIP data.",
+ "long": "## The factors\n\nThree genes sit in this family. ETV2 (also ER71 or ETSRP) is a transient transcriptional activator\nexpressed in a narrow window in nascent mesoderm and hemogenic endothelium and essentially silent\nin adult tissues. ETV6 (TEL) and ETV7 (TEL2) are transcriptional repressors; ETV6 is broadly\nexpressed [PMID:9250681], ETV7 more narrowly and largely in hematopoietic cells. All three carry one ETS domain of\nabout 85 residues, the family's winged helix-turn-helix fold, and bind DNA as monomers [PMID:21548782]. ETV6 and\nETV7 additionally carry a PNT domain (a SAM domain) that self-associates head-to-tail into an\nopen-ended polymer [PMID:12193272,21548782], so one DNA-bound ETV6 molecule can nucleate a long repressive assembly; the\npolymer interface and its regulation have been mapped biophysically [PMID:33450226]. ETV6 also has an\nautoinhibitory element that damps its DNA binding [PMID:21548782]. It is worth stating plainly that this family is\nnot a biochemical class. Systematic profiling of every human and mouse ETS protein put ETV6 and\nETV7 in a small subclass of their own (class IIb) [PMID:20517297] and did not group ETV2 with them; ETV2's\npreference is the ordinary class I preference.\n\n## The motif\n\nThe consensus is ACCGGAAGT - the same nine-mer as ETS class I, read the same way, by two invariant\narginines in recognition helix H3 that hydrogen-bond the two guanines of GGA, with wing and turn\nlysines contacting the flanks [PMID:21548782]. The in vitro models differ only at the margins: JASPAR's HT-SELEX\nmodel for ETV2 (MA0762.2) is ACCGGAAAT, with A rather than G immediately 3' of the core, while the\nETV6 (MA0645.2) and ETV7 (MA1708.2) HT-SELEX models are plain CCGGAAGT and CGGAAGTG. There is no\nsequence that belongs to this family and not to ETS class I. What is distinctive in part of the\ncollection is arrangement rather than composition: three models here are doubled sites - CIS-BP\nM02990 (CCGGAAGCGGAAGT), CIS-BP M04712 (CGGAAGTACTTCCG) and the ETV7 in vitro model\n(CCCGGAAGTACTTC) - that is, two ETS cores in tandem or head-to-head. That is consistent with\nETV6's ability to polymerize [PMID:21548782,33450226] and with the reported preference of these factors for repeated GGAA [PMID:21548782],\nbut doubled and repeated GGAA matrices also occur in ETS class I, where the EWS-FLI1 fusion's GGAA\nmicrosatellite matrices live [PMID:18626011], so a tandem arrangement does not on its own assign a motif here.\n\n## Where it acts\n\nETV2 binds enhancers of endothelial and hematopoietic genes during a short developmental window,\nacting downstream of BMP, Notch and Wnt signals [PMID:18462699,21548782]. ETV6 and ETV7 occupy ETS sites at promoters and\nenhancers and repress them, recruiting corepressors rather than activating [PMID:21548782]. The functional point\nthis family illustrates is competition: because ETV6, ETV7, ERF and ETV3 read the same sequence as\nETS1, ERG, FLI1 and GABPA, the output of a given ETS site depends on which family member happens to\noccupy it, not on the sequence. That is also why sites bound by these repressors are not\ndistinguishable in a scan from sites bound by activators. Notably, the genome-wide footprint\narchetypes derived from DNase data contain no archetype for this family [PMID:32728250]: every archetype whose name\nincludes ETV clustered instead with ELF, ELK or ETS archetypes that are assigned elsewhere in this\natlas.\n\n## Biology and disease\n\nEtv2-null mouse embryos fail to make blood and endothelium [PMID:18462699], placing ETV2 at the top of the\nhematoendothelial program; the gene is now widely used to force endothelial fate in reprogramming\nexperiments. Mice lacking Tel/Etv6 die around mid-gestation with a yolk sac angiogenic defect and\nintra-embryonic apoptosis [PMID:9250681], and ETV6 is required for adult bone marrow hematopoiesis [PMID:9694803]. ETV6 is among\nthe most frequently rearranged genes in human leukemia: the t(12;21) fusion ETV6-RUNX1 (TEL-AML1)\nis the most common recurrent fusion in childhood B-lineage acute lymphoblastic leukemia [PMID:7761424], and ETV6\nhas many other partners including kinases [PMID:7761424,12193272]. Germline heterozygous ETV6 mutations cause autosomal\ndominant thrombocytopenia with predisposition to hematologic malignancy [PMID:25581430].\n\n## Reading a hit\n\nThis is the family in this atlas where the label deserves the least weight. The motifs assigned\nhere are not separable from ETS class I, and the data say so directly: for all 16 models in\nthis family, most of the nearest neighbours across the four databases are labelled with a different\nfamily, usually ETS class I, and for 14 of them the single best match anywhere is a motif from another\nfamily rather than one from this family - including the CIS-BP model that this atlas picks as the\nfamily's representative. One JASPAR entry, the heterodimer model ETV2::FIGLA (MA1941.2), is flagged\noutright as belonging with class I. Practical consequences: read a hit as \"an ETS site\"; use\nexpression to decide the factor, remembering that ETV2 is effectively absent outside early mesoderm\nand engineered endothelial systems, so an ETV2 call in an adult tissue dataset is far more likely a\ngeneric ETS site; and do not try to tell ETV6 from ERF or ETV3, all repressors reading the same\nsequence. Four of the seven JASPAR models here are CAP-SELEX heterodimers (ETV2::HOXB13,\nETV2::FIGLA, ETV2::DRGX, ETV2::FOXI1) in which much of the matrix is a HOX, bHLH or FOX site rather\nthan an ETS site [PMID:26550823].",
+ "caveats": "Treat the family label as provisional. Its separation from ETS class I is largely a\nclustering outcome: all 16 models here have most of their cross-database nearest neighbours\nlabelled with another family, usually class I, 14 match a motif outside the family better than any\ninside it, and one JASPAR entry (ETV2::FIGLA) is flagged as belonging with class I. The published classification also does not support the grouping - ETV6 and ETV7\nform their own small subclass while ETV2 behaves like a class I factor. No genomic-footprint\narchetype corresponds to this family. Four of seven JASPAR models are CAP-SELEX heterodimers whose\nmatrices are partly a HOX, bHLH or FOX site. A hit therefore means \"an ETS site\"; which of ETV2,\nETV6, ETV7, ERF or ETV3 is bound has to come from expression and ChIP data.",
  "refs": [
   {
    "cite": "Wei GH, Badis G, Berger MF, et al. Genome-wide analysis of ETS-family DNA-binding in vitro and in vivo. EMBO J 2010;29:2147-60.",
@@ -68,6 +68,94 @@
    "cite": "Gangwal K, Sankar S, Hollenhorst PC, et al. Microsatellites as EWS/FLI response elements in Ewing's sarcoma. Proc Natl Acad Sci U S A 2008;105:10149-54.",
    "pmid": "18626011",
    "url": "https://pubmed.ncbi.nlm.nih.gov/18626011/"
+  },
+  {
+   "cite": "Wang LC, Swat W, Fujiwara Y, et al. The TEL/ETV6 gene is required specifically for hematopoiesis in the bone marrow. Genes Dev 1998;12:2392-402.",
+   "pmid": "9694803",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9694803/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1995,
+   "finding": "Cloning of the t(12;21) breakpoint in childhood pre-B acute lymphoblastic leukemia shows the amino-terminal HLH domain of TEL (later recognized as the PNT domain) fused to the DNA-binding and transactivation domains of AML1 (RUNX1); TEL had already been found fused to the PDGFRB kinase in chronic myelomonocytic leukemia.",
+   "methods": "Translocation breakpoint cloning",
+   "confidence": "medium",
+   "pmids": [
+    "7761424"
+   ],
+   "open": "What normal TEL does, and which DNA sites it binds, was unknown."
+  },
+  {
+   "year": 1997,
+   "finding": "Tel-null embryos die at E10.5-11.5 with a yolk sac angiogenic defect and intra-embryonic apoptosis while yolk sac hematopoiesis is spared; chimeras built from Tel-null ES cells (1998) show TEL is needed to establish hematopoiesis of all lineages in the bone marrow, though not in yolk sac or fetal liver.",
+   "methods": "Gene targeting, ES-cell chimeras",
+   "confidence": "high",
+   "pmids": [
+    "9250681",
+    "9694803"
+   ]
+  },
+  {
+   "year": 2002,
+   "finding": "The structure of the native TEL SAM (PNT) domain interface confirms the head-to-tail helical polymer first seen in a mutant, and shows flat interacting surfaces without obvious pockets.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "12193272"
+   ],
+   "open": "How polymerization contributes to DNA binding and repression at genomic sites was not addressed."
+  },
+  {
+   "year": 2008,
+   "finding": "ER71 (ETV2) acts downstream of BMP, Notch and Wnt in specifying FLK1+ mesoderm: enforced expression induces FLK1+ mesoderm and blood and endothelium from ES cells, and Er71-deficient embryos die early with severe blood and vessel defects resembling Flk1-null mice.",
+   "methods": "ES-cell differentiation, gain and loss of function, knockout mice",
+   "confidence": "high",
+   "pmids": [
+    "18462699"
+   ]
+  },
+  {
+   "year": 2010,
+   "finding": "Systematic in vitro profiling splits ETV6 and ETV7 off from the ELF proteins as class IIb, marked by a strong preference for A at the fourth core position that tracks a tyrosine-to-histidine substitution in the ETS domain.",
+   "methods": "High-throughput microwell binding assay, protein-binding microarrays, site-directed mutagenesis",
+   "confidence": "high",
+   "pmids": [
+    "20517297"
+   ],
+   "open": "ChIP-seq was done for one member of the other classes but not for ETV6 or ETV7, so whether the class IIb preference matters in cells was untested."
+  },
+  {
+   "year": 2015,
+   "finding": "Consecutive-affinity SELEX of transcription factor pairs recovers 618 heterodimeric motifs, most of them composite sites markedly different from either partner's motif; this is the assay behind the ETS-HOX, ETS-bHLH and ETS-FOX heterodimer models that make up four of the seven JASPAR entries here.",
+   "methods": "CAP-SELEX, crystallography",
+   "confidence": "medium",
+   "pmids": [
+    "26550823"
+   ],
+   "open": "How many of these DNA-dependent pairs form in cells was not measured."
+  },
+  {
+   "year": 2015,
+   "finding": "Germline ETV6 missense variants segregating with dominant thrombocytopenia and diverse hematologic cancers in three kindreds abolish DNA binding, mislocalize the protein and reduce repression in a dominant-negative manner.",
+   "methods": "Family sequencing, functional assays",
+   "confidence": "medium",
+   "pmids": [
+    "25581430"
+   ]
+  },
+  {
+   "year": 2021,
+   "finding": "The two ETV6 PNT self-association interfaces are mapped in detail: monomeric variants keep a stable helical-bundle fold on association, and alanine scanning identifies hydrophobic and salt-bridge hot spots.",
+   "methods": "NMR spectroscopy, X-ray crystallography, molecular dynamics, surface plasmon resonance",
+   "confidence": "high",
+   "pmids": [
+    "33450226"
+   ]
+  }
+ ],
+ "open": [
+  "Whether this is a motif family at all is doubtful: its models cluster with ETS class I in every database, the published classification puts ETV6 and ETV7 in their own class IIb, and ETV2's in vitro models are indistinguishable from class I, so the grouping reflects a clustering outcome rather than a shared sequence preference.",
+  "Whether ETV6 and ETV7 polymers select clustered ETS sites in the genome is unresolved: PNT-domain self-association supports cooperative binding to neighboring sites in vitro, and three models here are doubled sites, but genome-wide evidence that the repressors prefer site clusters is not reported in the sources cited here."
  ]
 }

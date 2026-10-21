@@ -10,7 +10,7 @@
   "FkhSec"
  ],
  "short": "This entry collects the forkhead factors whose preferred site is not the ordinary RYAAAYA element. Two things are going on. FOXN1 and FOXN4 read a completely unrelated five-base sequence, GACGC, called the forkhead-like or FHL motif, using the same recognition helix in a shifted register; FOXN2, FOXN3, FOXJ2 and FOXJ3 are bispecific and bind both FHL and canonical sites. Separately, the FOXP proteins (FOXP1-4) are the only forkheads that can form a domain-swapped dimer, and their highest-information models are a head-to-head pair of forkhead half-sites rather than a single one. The factors matter clinically: FOXN1 loss causes human athymic immunodeficiency, FOXP2 a speech disorder, and FOXP3 the autoimmune syndrome IPEX.",
- "long": "## The factors\n\nSeven of the human forkhead proteins sit here. FOXN1 is restricted to thymic epithelium and skin\nkeratinocytes; FOXN4 to retinal and spinal neural progenitors; FOXN2, FOXN3, FOXJ2 and FOXJ3 are\nbroadly expressed. FOXP1, FOXP2 and FOXP4 are expressed in brain, lung, heart and lymphocytes,\nand FOXP3 almost only in regulatory T cells. All carry the same ~100-residue winged-helix domain\nas the rest of the family - three alpha-helices on a small beta-sheet, with wing 1 and wing 2\ngripping the backbone - so nothing about the fold predicts their unusual specificity. What\ndistinguishes the FOXP subfamily structurally is a single substitution: a proline conserved in\nother FOX proteins is an alanine in FOXP1-4, which allows the domain to swap helices with a\nsecond copy of itself. In the FOXP2 and FOXP3 crystal structures the swapped dimer is real, and\nin the FOXP3 ternary complex with NFAT1 on the interleukin-2 promoter it bridges two separate\nDNA duplexes rather than two half-sites on one. IPEX-causing FOXP3 mutations map either to the\nDNA-binding surface or to this dimer interface, and interface mutants bind DNA normally but\ncannot suppress T cell activation.\n\n## The motif\n\nThere is no single consensus for this family, which is why one is not given. The FHL site is\nGACGC, five bases with no resemblance to RYAAAYA. The FOXN1 co-crystal structure at 1.6 A shows\nwhy the same protein can read either: the recognition helix sits in the major groove in both\ncases, but the FKH and FHL sequences are contacted in two distinct modes with partially\ndifferent registers, using a mixture of direct and water-mediated hydrogen bonds, and a single\nalternative side-chain rotamer in the recognition helix is a major determinant of which mode is\nused. The FoxN3 structures make the same point from the other side: FoxN3 adopts essentially one\nconformation on both sites and uses the same amino acids to touch different bases, while the DNA\nshape differs between the two complexes. Bispecificity of this kind has arisen repeatedly and\nindependently in forkhead evolution and is generally not explained by changes in the known\nspecificity-determining residues. The FOXP side of the family looks different again. Most FOXP\nmodels here are ordinary canonical sites (JASPAR FOXP1, FOXP2, FOXP3, FOXP4 all GTAAACA;\nHOCOMOCO FOXP1 TGTTTACT), but the highest-information models, CIS-BP FOXP3 (25.6 bits) and\nVierstra AC0285 (24.8 bits), are ATTTGTCATACAAAT: two RYAAAYA half-sites in their ACAAAT flavor,\nfacing each other, with a three-base spacer. Whether that arrangement is bound by the domain-\nswapped dimer or by two independent monomers is not settled by the available structures, which\nshow the swapped dimer holding two different DNA molecules.\n\n## Where it acts\n\nBecause GACGC is only five bases, it is expected several million times in the genome and carries\nalmost no positional information on its own; FOXN1 needs its C-terminal region for high-affinity\nbinding, and its affinity drops on DNA containing 5-methylcytosine, so methylation state and\nflanking sequence matter more here than for canonical forkhead sites. FOXN1 acts at thymic\nepithelial enhancers controlling the genes that make the thymus permissive for T cell\ndevelopment, and at hair keratin genes in skin. FOXP1 and FOXP2 occupy large numbers of distal\nsites in brain and lymphoid cells, often with co-repressors of the NuRD and CtBP families rather\nthan with a named composite element; FOXP3 works in a multiprotein complex on T cell enhancers\ntogether with NFAT, RUNX1 and ETS factors, which is how the IL2 promoter site was solved. JASPAR\ncontains a CAP-SELEX composite, FOXJ2::ELF1, in which most of the information is the ETS GGAA\ncore.\n\n## Biology and disease\n\nFOXN1 null mice and rats are the classical nude strains: no thymus, no hair. Human FOXN1\nmutations produce the same picture - congenital alopecia, nail dystrophy and severe T cell\ndeficiency - and the human nude phenotype was the first clinical description of this. FOXP2 was\nidentified through a family with a severe developmental speech and language disorder segregating\nwith a forkhead-domain mutation. FOXP3 mutations cause IPEX (immune dysregulation,\npolyendocrinopathy, enteropathy, X-linked), and FOXP3 is the lineage-defining factor of\nregulatory T cells. FOXP1 haploinsufficiency causes intellectual disability with autistic\nfeatures, and FOXP1 is recurrently translocated and overexpressed in diffuse large B-cell\nlymphoma and MALT lymphoma. FOXN3 and FOXJ3 have weaker phenotypes; FOXN4 is required for\nretinal amacrine and horizontal cell production.\n\n## Reading a hit\n\nA GACGC match alone means very little: five bases, no degeneracy assumed, and no way to tell\nFOXN1 from FOXN4 or from a bispecific FOXN2/FOXN3 or FOXJ2/FOXJ3. Use it only in combination\nwith expression evidence or with a longer model that includes the flanks. A canonical RYAAAYA\nmatch cannot be assigned to this family at all, since FOXP1-4, FOXJ2, FOXJ3, FOXN2 and FOXN3 all\nalso read the ordinary site and are indistinguishable there from the 40-odd other forkheads. The\ndimeric ATTTGTCATACAAAT model is specific enough to be worth something, but it appears in only\ntwo of the 29 models here and is labelled FOXP3 in one database and simply \"FOXP\" in the other.\nHOCOMOCO contains no FOXN model at all; the two CIS-BP FOXN entries (FOXN1, 3.3 bits; FOXN4, 5.2\nbits) are inferred from mouse proteins at 99% and 95% DNA-binding-domain identity. Treat\nFOXJ2::ELF1 as an ETS motif: its nearest neighbors across all four databases are ETV-family\nmotifs, not forkhead ones.\n",
+ "long": "## The factors\n\nSeven of the human forkhead proteins sit here. FOXN1 is restricted to thymic epithelium and skin\nkeratinocytes; FOXN4 to retinal and spinal neural progenitors; FOXN2, FOXN3, FOXJ2 and FOXJ3 are\nbroadly expressed. FOXP1, FOXP2 and FOXP4 are expressed in brain, lung, heart and lymphocytes,\nand FOXP3 almost only in regulatory T cells. All carry the same ~100-residue winged-helix domain\nas the rest of the family - three alpha-helices on a small beta-sheet, with wing 1 and wing 2\ngripping the backbone - so nothing about the fold predicts their unusual specificity. What\ndistinguishes the FOXP subfamily structurally is a single substitution: a proline conserved in\nother FOX proteins is an alanine in FOXP1-4, which allows the domain to swap helices with a\nsecond copy of itself [PMID:16407075]. In the FOXP2 and FOXP3 crystal structures the swapped dimer is real, and\nin the FOXP3 ternary complex with NFAT1 on the interleukin-2 promoter it bridges two separate\nDNA duplexes rather than two half-sites on one [PMID:16407075,21458306]. IPEX-causing FOXP3 mutations map either to the\nDNA-binding surface or to this dimer interface [PMID:16407075], and interface mutants bind DNA normally but\ncannot suppress T cell activation [PMID:21458306].\n\n## The motif\n\nThere is no single consensus for this family, which is why one is not given. The FHL site is\nGACGC, five bases with no resemblance to RYAAAYA [PMID:9108066,23836653]. The FOXN1 co-crystal structure at 1.6 A shows\nwhy the same protein can read either: the recognition helix sits in the major groove in both\ncases, but the FKH and FHL sequences are contacted in two distinct modes with partially\ndifferent registers, using a mixture of direct and water-mediated hydrogen bonds, and a single\nalternative side-chain rotamer in the recognition helix is a major determinant of which mode is\nused [PMID:31914405]. The FoxN3 structures make the same point from the other side: FoxN3 adopts essentially one\nconformation on both sites and uses the same amino acids to touch different bases, while the DNA\nshape differs between the two complexes [PMID:30826165]. Bispecificity of this kind has arisen repeatedly and\nindependently in forkhead evolution and is generally not explained by changes in the known\nspecificity-determining residues [PMID:23836653]. The FOXP side of the family looks different again. Most FOXP\nmodels here are ordinary canonical sites (JASPAR FOXP1, FOXP2, FOXP3, FOXP4 all GTAAACA;\nHOCOMOCO FOXP1 TGTTTACT), but the highest-information models, CIS-BP FOXP3 (25.6 bits) and\nVierstra AC0285 (24.8 bits), are ATTTGTCATACAAAT: two RYAAAYA half-sites in their ACAAAT flavor,\nfacing each other, with a three-base spacer. Whether that arrangement is bound by the domain-\nswapped dimer or by two independent monomers is not settled by the available structures, which\nshow the swapped dimer holding two different DNA molecules [PMID:16407075,21458306].\n\n## Where it acts\n\nBecause GACGC is only five bases, it is expected several million times in the genome and carries\nalmost no positional information on its own; FOXN1 needs its C-terminal region for high-affinity\nbinding, and its affinity drops on DNA containing 5-methylcytosine [PMID:31914405], so methylation state and\nflanking sequence matter more here than for canonical forkhead sites. FOXN1 acts at thymic\nepithelial enhancers controlling the genes that make the thymus permissive for T cell\ndevelopment, and at hair keratin genes in skin. FOXP1 and FOXP2 occupy large numbers of distal\nsites in brain and lymphoid cells, often with co-repressors of the NuRD and CtBP families rather\nthan with a named composite element; FOXP3 works in a multiprotein complex on T cell enhancers\ntogether with NFAT, RUNX1 and ETS factors, which is how the IL2 promoter site was solved [PMID:21458306]. JASPAR\ncontains a CAP-SELEX composite, FOXJ2::ELF1, in which most of the information is the ETS GGAA\ncore [PMID:26550823].\n\n## Biology and disease\n\nFOXN1 null mice and rats are the classical nude strains: no thymus, no hair. Human FOXN1\nmutations produce the same picture - congenital alopecia, nail dystrophy and severe T cell\ndeficiency - and the human nude phenotype was the first clinical description of this [PMID:10206641]. FOXP2 was\nidentified through a family with a severe developmental speech and language disorder segregating\nwith a forkhead-domain mutation [PMID:11586359]. FOXP3 mutations cause IPEX (immune dysregulation,\npolyendocrinopathy, enteropathy, X-linked) [PMID:11137993], and FOXP3 is the lineage-defining factor of\nregulatory T cells. FOXP1 haploinsufficiency causes intellectual disability with autistic\nfeatures, and FOXP1 is recurrently translocated and overexpressed in diffuse large B-cell\nlymphoma and MALT lymphoma. FOXN3 and FOXJ3 have weaker phenotypes; FOXN4 is required for\nretinal amacrine and horizontal cell production.\n\n## Reading a hit\n\nA GACGC match alone means very little: five bases, no degeneracy assumed, and no way to tell\nFOXN1 from FOXN4 or from a bispecific FOXN2/FOXN3 or FOXJ2/FOXJ3. Use it only in combination\nwith expression evidence or with a longer model that includes the flanks. A canonical RYAAAYA\nmatch cannot be assigned to this family at all, since FOXP1-4, FOXJ2, FOXJ3, FOXN2 and FOXN3 all\nalso read the ordinary site and are indistinguishable there from the 40-odd other forkheads. The\ndimeric ATTTGTCATACAAAT model is specific enough to be worth something, but it appears in only\ntwo of the 29 models here and is labelled FOXP3 in one database and simply \"FOXP\" in the other.\nHOCOMOCO contains no FOXN model at all; the two CIS-BP FOXN entries (FOXN1, 3.3 bits; FOXN4, 5.2\nbits) are inferred from mouse proteins at 99% and 95% DNA-binding-domain identity. Treat\nFOXJ2::ELF1 as an ETS motif: its nearest neighbors across all four databases are ETV-family\nmotifs, not forkhead ones.\n",
  "caveats": "Moderate confidence in the family as a concept, low confidence in member assignment. The FHL site GACGC is too short to be informative alone and is not distinguishable between FOXN1, FOXN4 and the bispecific FOXN2/FOXN3, FOXJ2/FOXJ3 proteins. Most FOXP and FOXJ models in these databases are ordinary RYAAAYA sites, so a hit on them says \"forkhead\", not \"divergent forkhead\". Only two models capture the FOXP head-to-head arrangement. The FOXN1 and FOXN4 CIS-BP models are inferred from mouse orthologs, and HOCOMOCO has no FOXN entry. The JASPAR FOXJ2::ELF1 composite is dominated by its ETS half and its nearest neighbors are ETS motifs.",
  "refs": [
   {
@@ -62,6 +62,87 @@
    "cite": "Jolma A, Yin Y, Nitta KR, et al. DNA-dependent formation of transcription factor pairs alters their binding specificity. Nature 2015;527:384-8.",
    "pmid": "26550823",
    "url": "https://pubmed.ncbi.nlm.nih.gov/26550823/"
+  },
+  {
+   "cite": "Schlake T, Schorpp M, Nehls M, et al. The nude gene encodes a sequence-specific DNA binding protein with homologs in organisms that lack an anticipatory immune system. Proc Natl Acad Sci U S A 1997;94:3842-7.",
+   "pmid": "9108066",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9108066/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1997,
+   "finding": "The DNA-binding domain of the nude gene product (Whn, now FOXN1) selects an 11-base consensus built around an invariant ACGC, unrelated to the forkhead sites then known; the zebrafish and amphioxus orthologues read the same sequence.",
+   "methods": "In vitro binding-site selection, reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "9108066"
+   ],
+   "open": "Why a forkhead domain should read a sequence unrelated to the canonical site was unexplained."
+  },
+  {
+   "year": 2001,
+   "finding": "Forkhead-domain mutations in FOXP2 and FOXP3 are found to cause, respectively, a severe speech and language disorder and the IPEX autoimmune syndrome, making the FOXP subfamily clinically central.",
+   "methods": "Human genetics: linkage, breakpoint mapping, mutation screening",
+   "confidence": "high",
+   "pmids": [
+    "11586359",
+    "11137993"
+   ]
+  },
+  {
+   "year": 2006,
+   "finding": "The FOXP2 forkhead domain on DNA forms a domain-swapped dimer, made possible by an alanine in place of a proline conserved in other FOX proteins; disease mutations in FOXP2 and FOXP3 map to the DNA-binding surface or to the swap interface.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "16407075"
+   ],
+   "open": "Whether the swapped dimer forms in cells, and what DNA arrangement it binds, were open."
+  },
+  {
+   "year": 2011,
+   "finding": "In the FOXP3-NFAT1 complex on an IL2 promoter oligonucleotide, the FOXP3 swapped dimer bridges two DNA molecules; IPEX and structure-guided interface mutants keep DNA binding but lose dimerization and regulatory T cell suppressive function.",
+   "methods": "X-ray crystallography, mutagenesis, in vitro and in vivo suppression assays",
+   "confidence": "high",
+   "pmids": [
+    "21458306"
+   ],
+   "open": "Did not show whether the dimer can also occupy two half-sites on one duplex, as the head-to-head selection models imply."
+  },
+  {
+   "year": 2013,
+   "finding": "Profiling forkhead domains across the family's phylogeny shows that the FHL-type alternative specificity arose repeatedly, that some forkheads are bispecific for FKH and FHL sites, and that most specificity changes are not at the known DNA-contacting residues.",
+   "methods": "Protein-binding microarrays, phylogenetic inference",
+   "confidence": "medium",
+   "pmids": [
+    "23836653"
+   ],
+   "open": "Proposed, but did not show, that conformational rearrangement of the DNA-binding domain explains bispecificity."
+  },
+  {
+   "year": 2019,
+   "finding": "Co-crystal structures of the FoxN3 DNA-binding domain on an FKH site and on an FHL site show the protein in a similar conformation, using the same residues to contact different bases, while the DNA shape differs between the two complexes.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "30826165"
+   ]
+  },
+  {
+   "year": 2020,
+   "finding": "The 1.6 A FOXN1-FHL structure indicates that FKH and FHL sites are bound in two distinct modes with partially different contact registers, with one alternative side-chain rotamer in the recognition helix as a key determinant; FOXN1 also needs its C-terminal region for high-affinity binding and binds methylated DNA poorly.",
+   "methods": "X-ray crystallography, binding assays",
+   "confidence": "high",
+   "pmids": [
+    "31914405"
+   ],
+   "open": "Its emphasis on register and side-chain rearrangement sits uneasily with the FoxN3 account, in which protein conformation is unchanged and DNA shape carries the difference."
+  }
+ ],
+ "open": [
+  "Whether the head-to-head FOXP model ATTTGTCATACAAAT is bound by the domain-swapped dimer or by two monomers is unresolved: the FOXP2 and FOXP3 structures show the swapped dimer bridging two separate DNA molecules, whereas the selection-derived model places two half-sites on one duplex three bases apart.",
+  "How bispecific forkheads read two unrelated sites is not settled: the FoxN3 structures attribute it mainly to differences in DNA shape with an unchanged protein conformation, while the FOXN1 structure points to a shifted contact register and an alternative side-chain rotamer in the recognition helix.",
+  "Whether the bispecific factors FOXN2, FOXN3, FOXJ2 and FOXJ3 use the FHL site in cells is not established: their FHL preference rests on in vitro microarray and structural data, the only ChIP-supported model among them in the four databases (HOCOMOCO FOXJ2, grade A) is an ordinary RYAAAYA site, and HOCOMOCO has no FOXN model at all."
  ]
 }

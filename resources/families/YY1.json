@@ -14,7 +14,7 @@
  ],
  "consensus": "CGCCATNTT",
  "short": "YY1 is a ubiquitously expressed zinc-finger protein that binds a short CCAT-centered site, usually written CGCCATNTT or, on the other strand, AANATGGCGGC. It sits at or just inside the transcription start site of a large fraction of CpG-island promoters, works as an activator at some and a repressor at others, and is found on both the enhancer and the promoter side of enhancer-promoter contacts. Two retrogenes derived from YY1, YY2 and ZFP42/REX1, share the same zinc-finger domain; YY2 binds the same consensus more weakly, and REX1 prefers divergent sites that still contain the CCAT core. Because the motif is short and concentrated in CpG islands, a YY1 match is one of the most common hits in promoter sequence.",
- "long": "## The factors\n\nYY1 (Yin Yang 1) has four C2H2 zinc fingers at its C terminus and belongs to the GLI-Kruppel class;\nits Drosophila counterpart is Pleiohomeotic (Pho). It was described independently in the same period\nas a repressor whose activity is relieved by adenovirus E1A and as an initiator-binding protein that\ndirects and activates transcription in vitro, and it also appears in the older literature as NF-E1,\ndelta factor and UCRBP. It binds DNA as a monomer and is expressed in essentially all cell types.\n\nThe family in these databases has three human members. YY2 and ZFP42 (REX1) are both retrogenes\ngenerated from YY1 in placental mammals, and their zinc-finger domains remain highly similar to\nYY1's. Motif measurements show that YY2 binds the same consensus as YY1 but with much lower\naffinity, while REX1 binds sequences divergent from YY1's that nevertheless share the CCAT core.\nZFP42/REX1 is best known as a pluripotency marker in embryonic stem cells. All three are assigned\nhere to a single family because their matrices are not separable.\n\n## The motif\n\nThe literature core is CCAT. The short consensus most often quoted is CGCCATNTT, and the\nreverse-strand form AANATGGCGGC is what several databases show, including the form used in the\nontology entry for this family. Selection experiments give a longer high-affinity version,\nGCCGCCATTTTG, and the endogenous sites at Peg3 (GGCGCCATNTT) and Xist (CCGCCATNTT) are longer than\nthe classic motif. Substituting three residues in the first zinc finger, to mimic Drosophila Pho,\ncollapses specificity to a bare GCCAT, showing that the four fingers contribute jointly rather than\nmodularly and that the flanking information depends on finger one. The data consensus here,\nCCGCCATYTT, is the same site.\n\nThe cocrystal structure of the YY1 zinc fingers on the adeno-associated virus P5 initiator explains\nan unusual property. Upstream of the start sites the protein contacts both strands, whereas\ndownstream the contacts are essentially restricted to the template strand, leaving the non-template\nstrand free. That asymmetry is what allows YY1 to sit over an initiator, support TBP-independent\ninitiation with a fixed direction, and bind a preformed transcription bubble or a DNA/RNA hybrid.\nFunctionally the site is orientation-sensitive in context: in the c-fos promoter YY1 bends DNA and\nits effect depends on which way the site points. Sequence alone does not distinguish YY1 from YY2,\nand only partially separates ZFP42.\n\n## Where it acts\n\nYY1 is a promoter factor first. Its motif is strongly enriched at CpG-island promoters, where it\nco-occurs with a characteristic set of partners at active promoters, including HCFC1, ZNF143,\nTHAP11 and GABP, and it binds within a few tens of base pairs of the transcription start site far\nmore often than at a distance. It is also present at active enhancers, and the observation that it\noccupies both sides of many enhancer-promoter pairs led to the proposal that YY1 acts as a general\nstructural contributor to enhancer-promoter loops, in loose analogy to CTCF at structural loops.\nYY1 is additionally reported as a CTCF cofactor at the X-inactivation choice, and as the mammalian\nPho counterpart that helps recruit Polycomb complexes, an activity that requires both DNA binding\nand interaction with YAF2. Because the informative site is short and CpG islands are the preferred\ncontext, matches are extremely dense in promoter sequence: a YY1 hit near a TSS is close to the\ndefault expectation rather than a discovery.\n\n## Biology and disease\n\nYY1 is dosage-sensitive in humans: de novo heterozygous variants and deletions cause Gabriele-de\nVries syndrome, an intellectual-disability syndrome with movement abnormalities in which patient\ncells show transcriptional and chromatin dysfunction, consistent with partial loss of a general\npromoter factor rather than a tissue-restricted one. Mouse YY1 mutants show homeotic transformations\nof the axial skeleton and interact genetically with the Polycomb gene Ring1, placing YY1 in the\nPcG-dependent regulation of Hox genes. At the molecular level YY1 has been assigned both activating\nand repressing roles at different promoters, often through the cofactor it recruits (HDACs and\nPolycomb components on one side, coactivators and the basal machinery on the other), which is why\nthe same motif cannot be read as a sign. YY1 is frequently reported as overexpressed in tumors,\nthough the causal claims there are much less settled than the developmental genetics.\n\n## Reading a hit\n\nA YY1 match is common enough that on its own it is close to uninformative, particularly inside a\nCpG island. Treat it as a family-level call: YY1, YY2 and ZFP42 are not separable by sequence, and\nYY2 in particular binds the same consensus. A hit tells you nothing about direction of effect,\nbecause YY1 activates at some promoters and represses at others. Position matters more than score:\na site within tens of base pairs of a TSS, in the orientation seen at initiators, is a more credible\nYY1 element than a stronger match in intergenic DNA. Finally, YY1 has been used as a positive\ncontrol in so many ChIP experiments that the motif is over-represented in derived models generally;\nif a ChIP-derived matrix for some unrelated factor looks like AANATGGCGGC, indirect or\nco-occupancy-driven enrichment at active promoters is the first explanation to consider, not a new\nspecificity.",
+ "long": "## The factors\n\nYY1 (Yin Yang 1) has four C2H2 zinc fingers at its C terminus and belongs to the GLI-Kruppel class;\nits Drosophila counterpart is Pleiohomeotic (Pho). It was described independently in the same period\nas a repressor whose activity is relieved by adenovirus E1A [PMID:1655281] and as an initiator-binding protein that\ndirects and activates transcription in vitro [PMID:1720509], and it also appears in the older literature as NF-E1,\ndelta factor and UCRBP. It binds DNA as a monomer and is expressed in essentially all cell types.\n\nThe family in these databases has three human members. YY2 and ZFP42 (REX1) are both retrogenes\ngenerated from YY1 in placental mammals [PMID:17478514], and their zinc-finger domains remain highly similar to\nYY1's. Motif measurements show that YY2 binds the same consensus as YY1 but with much lower\naffinity, while REX1 binds sequences divergent from YY1's that nevertheless share the CCAT core [PMID:17478514].\nZFP42/REX1 is best known as a pluripotency marker in embryonic stem cells. All three are assigned\nhere to a single family because their matrices are not separable.\n\n## The motif\n\nThe literature core is CCAT. The short consensus most often quoted is CGCCATNTT, and the\nreverse-strand form AANATGGCGGC is what several databases show, including the form used in the\nontology entry for this family. Selection experiments give a longer high-affinity version,\nGCCGCCATTTTG, and the endogenous sites at Peg3 (GGCGCCATNTT) and Xist (CCGCCATNTT) are longer than\nthe classic motif [PMID:18950698]. Substituting three residues in the first zinc finger, to mimic Drosophila Pho,\ncollapses specificity to a bare GCCAT, showing that the four fingers contribute jointly rather than\nmodularly and that the flanking information depends on finger one [PMID:18950698]. The data consensus here,\nCCGCCATYTT, is the same site.\n\nThe cocrystal structure of the YY1 zinc fingers on the adeno-associated virus P5 initiator explains\nan unusual property. Upstream of the start sites the protein contacts both strands, whereas\ndownstream the contacts are essentially restricted to the template strand, leaving the non-template\nstrand free [PMID:8942976]. That asymmetry is what allows YY1 to sit over an initiator, support TBP-independent\ninitiation with a fixed direction, and bind a preformed transcription bubble or a DNA/RNA hybrid [PMID:8942976].\nFunctionally the site is orientation-sensitive in context: in the c-fos promoter YY1 bends DNA and\nits effect depends on which way the site points [PMID:8276234]. Sequence alone does not distinguish YY1 from YY2,\nand only partially separates ZFP42.\n\n## Where it acts\n\nYY1 is a promoter factor first. Its motif is strongly enriched at CpG-island promoters, where it\nco-occurs with a characteristic set of partners at active promoters, including HCFC1, ZNF143,\nTHAP11 and GABP [PMID:23539139], and it binds within a few tens of base pairs of the transcription start site far\nmore often than at a distance. It is also present at active enhancers, and the observation that it\noccupies both sides of many enhancer-promoter pairs led to the proposal that YY1 acts as a general\nstructural contributor to enhancer-promoter loops [PMID:29224777], in loose analogy to CTCF at structural loops.\nYY1 is additionally reported as a CTCF cofactor at the X-inactivation choice [PMID:17218270], and as the mammalian\nPho counterpart that helps recruit Polycomb complexes, an activity that requires both DNA binding\nand interaction with YAF2 [PMID:24285299]. Because the informative site is short and CpG islands are the preferred\ncontext, matches are extremely dense in promoter sequence: a YY1 hit near a TSS is close to the\ndefault expectation rather than a discovery.\n\n## Biology and disease\n\nYY1 is dosage-sensitive in humans: de novo heterozygous variants and deletions cause Gabriele-de\nVries syndrome, an intellectual-disability syndrome with movement abnormalities in which patient\ncells show transcriptional and chromatin dysfunction [PMID:28575647], consistent with partial loss of a general\npromoter factor rather than a tissue-restricted one. Mouse YY1 mutants show homeotic transformations\nof the axial skeleton and interact genetically with the Polycomb gene Ring1 [PMID:16624538], placing YY1 in the\nPcG-dependent regulation of Hox genes. At the molecular level YY1 has been assigned both activating\nand repressing roles at different promoters, often through the cofactor it recruits (HDACs and\nPolycomb components on one side, coactivators and the basal machinery on the other), which is why\nthe same motif cannot be read as a sign. YY1 is frequently reported as overexpressed in tumors,\nthough the causal claims there are much less settled than the developmental genetics.\n\n## Reading a hit\n\nA YY1 match is common enough that on its own it is close to uninformative, particularly inside a\nCpG island. Treat it as a family-level call: YY1, YY2 and ZFP42 are not separable by sequence, and\nYY2 in particular binds the same consensus. A hit tells you nothing about direction of effect,\nbecause YY1 activates at some promoters and represses at others. Position matters more than score:\na site within tens of base pairs of a TSS, in the orientation seen at initiators, is a more credible\nYY1 element than a stronger match in intergenic DNA. Finally, YY1 has been used as a positive\ncontrol in so many ChIP experiments that the motif is over-represented in derived models generally;\nif a ChIP-derived matrix for some unrelated factor looks like AANATGGCGGC, indirect or\nco-occupancy-driven enrichment at active promoters is the first explanation to consider, not a new\nspecificity.",
  "caveats": "The site is short, CpG-island-associated and present at a large share of active promoters, so a hit is expected rather than informative and should be weighted by position relative to the TSS. YY1, YY2 and ZFP42/REX1 all descend from the same zinc-finger domain and cannot be told apart from sequence; YY2 binds the identical consensus with lower affinity. A match says nothing about activation versus repression, since YY1 does both depending on the cofactor recruited. And because YY1 sits at essentially all active promoters, an AANATGGCGGC-like motif recovered from another factor's ChIP data is more likely promoter co-occupancy than that factor's own specificity.",
  "refs": [
   {
@@ -77,5 +77,89 @@
    "pmid": "16624538",
    "url": "https://pubmed.ncbi.nlm.nih.gov/16624538/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1991,
+   "finding": "Two groups describe the same protein from opposite directions: as a repressor of the adeno-associated virus P5 promoter whose repression is converted to activation by adenovirus E1A, and as an initiator-binding protein that sets the start site and activates transcription in vitro.",
+   "methods": "Promoter deletion and reporter assays, protein purification, in vitro transcription",
+   "confidence": "medium",
+   "pmids": [
+    "1655281",
+    "1720509"
+   ],
+   "open": "Why one protein gave activation in one assay and repression in the other."
+  },
+  {
+   "year": 1993,
+   "finding": "At the c-fos promoter YY1 bends the DNA, and whether it represses depends on the orientation of its site, showing the element is read in context rather than as a free-standing word.",
+   "methods": "Circular permutation bending assays, reporter constructs",
+   "confidence": "medium",
+   "pmids": [
+    "8276234"
+   ]
+  },
+  {
+   "year": 1996,
+   "finding": "The cocrystal structure of the four YY1 zinc fingers on the AAV P5 initiator shows contacts to both strands upstream of the start site but essentially template-strand-only contacts downstream, explaining how YY1 can sit over an initiator and leave the non-template strand accessible.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "8942976"
+   ],
+   "open": "The structure covered one site; the contribution of each finger to flanking specificity was not tested."
+  },
+  {
+   "year": 2007,
+   "finding": "Phylogenetic analysis identifies YY2 and ZFP42/REX1 as retroposed copies of YY1 that arose in placental mammals; YY2 keeps the YY1 consensus at much lower affinity while REX1 has diverged, retaining only the CCAT core.",
+   "methods": "Comparative genomics across 62 YY1-related sequences, binding-site selection",
+   "confidence": "medium",
+   "pmids": [
+    "17478514"
+   ]
+  },
+  {
+   "year": 2009,
+   "finding": "The functional YY1 site is longer than the classic CGCCATNTT: the Peg3 and Xist elements and an independent selection give GCCGCCATTTTG with higher affinity, and swapping three residues of finger 1 for the Drosophila Pho version collapses specificity to GCCAT, so the four fingers act jointly rather than modularly.",
+   "methods": "Gel-shift assays on endogenous sites, binding-site selection, zinc-finger mutagenesis",
+   "confidence": "medium",
+   "pmids": [
+    "18950698"
+   ]
+  },
+  {
+   "year": 2013,
+   "finding": "Genome-wide occupancy places YY1 in a fixed company of factors at active CpG-island promoters, coinciding with HCFC1, ZNF143, THAP11 and GABP, which sets the baseline expectation that a YY1 site near a TSS is unremarkable.",
+   "methods": "ChIP-seq across human cell lines",
+   "confidence": "medium",
+   "pmids": [
+    "23539139"
+   ]
+  },
+  {
+   "year": 2017,
+   "finding": "De novo heterozygous YY1 variants and deletions are shown to cause Gabriele-de Vries syndrome, establishing that this broadly expressed promoter factor is dosage-sensitive in human development.",
+   "methods": "Exome sequencing in a patient cohort, patient-cell transcriptomics and chromatin profiling",
+   "confidence": "medium",
+   "pmids": [
+    "28575647"
+   ]
+  },
+  {
+   "year": 2017,
+   "finding": "YY1 is proposed to be a general structural regulator of enhancer-promoter loops, by analogy to CTCF at larger loops: it binds both enhancers and promoter-proximal elements, and deleting its sites or depleting the protein disrupts looping and expression.",
+   "methods": "ChIP-seq, chromosome-conformation assays, site deletion and degron-based protein depletion in mouse embryonic stem cells",
+   "confidence": "medium",
+   "pmids": [
+    "29224777"
+   ],
+   "open": "Whether loss of looping is a direct structural effect or a consequence of losing transcription at the same promoters was not separated."
+  }
+ ],
+ "open": [
+  "Whether YY1 is a general structural component of enhancer-promoter loops is unsettled: the proposal rests on co-occupancy at loop anchors plus site deletion and protein depletion in a small number of cell lines, and an alternative reading is that YY1 marks active CpG-island promoters, so the contacts it is credited with follow from transcription rather than cause it.",
+  "Nothing in the sequence predicts whether YY1 will activate or repress a given promoter; the recruited cofactor (Polycomb and HDACs versus coactivators and the basal machinery) is the usual explanation, but no context feature has been shown to determine the choice.",
+  "Whether ZFP42/REX1 belongs with YY1 as a motif family member is debatable: selection experiments say its sites have diverged from YY1's apart from the CCAT core, yet its HOCOMOCO model (GGCAGCCATTTT) is close enough to the YY1 model to be pooled here.",
+  "What YY2 does that YY1 does not is unresolved, since it binds the same consensus with much lower affinity and no distinct target class has been established for it."
  ]
 }

@@ -12,7 +12,7 @@
  ],
  "consensus": "TCCTGCNA",
  "short": "ZBTB33, better known as Kaiso, is a BTB/POZ zinc-finger repressor with only three C2H2 fingers and two distinct ways of reading DNA. It binds the non-methylated consensus TCCTGCNA - the Kaiso binding site, or KBS, whose minimal core is CTGCNA - and, separately, methylated CpG dinucleotides, with higher affinity for the KBS of the two. Crystal structures show both modes use the same first two fingers, with methylcytosine read through CH-to-O hydrogen bonds. Kaiso was found as a partner of p120-catenin, which blocks its DNA binding, and it links adhesion to transcription. Note that all four database matrices for ZBTB33 describe a CGCG-containing palindrome, TCTCGCGAGA, not the KBS.",
- "long": "## The factors\n\nKaiso is a single-gene family. ZBTB33 encodes a roughly 670-residue protein with an N-terminal BTB/POZ dimerization and repression domain and, unusually for a BTB-ZF factor, only three C2H2 zinc fingers at the C terminus plus a short C-terminal extension. It was isolated in a yeast two-hybrid screen for partners of the Armadillo-family adhesion protein p120-catenin, and independently in Xenopus as a methylation-dependent repressor that associates with the N-CoR corepressor. p120-catenin binding inhibits Kaiso's DNA binding in both of its modes, which is the mechanistic basis for the claim that Kaiso couples cadherin-based adhesion to transcriptional output: when p120 is released from junctions it can sequester Kaiso off DNA. Repression is delivered through recruited corepressors including N-CoR and the MTG16/CBFA2T3 corepressor; Kaiso is also regulated by phosphorylation, with modification at Thr606 driving cytoplasmic accumulation and reduced repression of CDH1. Kaiso is broadly expressed and is not restricted to a lineage.\n\n## The motif\n\nThis is the family where the phrase \"dual specificity\" is literal, and where the databases and the literature describe different things. Site-selection experiments defined a sequence-specific consensus, TCCTGCNA, with a minimal sufficient core of CTGCNA; two copies occur in the human and mouse matrilysin (MMP7) promoters. The same work showed that Kaiso separately possesses a methyl-CpG-dependent binding activity, requiring consecutive methylated CpGs and biochemically distinct from KBS binding, and that affinity for the KBS is the higher of the two. Only zinc fingers 2 and 3 are needed for sequence-specific binding. Crystal structures of the Kaiso zinc-finger domain bound to the KBS and to a symmetrically methylated sequence from the E-cadherin promoter explain how one small domain does both jobs: bases are read in the major groove by residues in the first two fingers, using classical hydrogen bonds for the KBS and methyl CH-to-O hydrogen bonds for methylcytosine, while the C-terminal extension past finger 3 binds the opposing minor groove and is required for high affinity. That extension is disordered in the free protein and folds on binding. Now the discrepancy: all four matrices in this family - the JASPAR ENCODE-derived MA0527.2, both HOCOMOCO KAISO models (evidence P, grade B), and CIS-BP M08094 - read TCTCGCGAGA or a close variant. That palindrome is the CGCG element found at TATA-less, CpG-island-associated bidirectional promoters. It is CpG-containing, so it is compatible with the methyl-CpG mode, but it is not the KBS, and it is not what site selection returned. In other words, the collections capture one Kaiso mode and miss the other entirely. Genome-wide work with Kaiso-knockout cells as a control reports both: CGCG and CTGCNAT are the two principal enriched motifs, with about 60 percent of sites containing both.\n\n## Where it acts\n\nKaiso sites are overwhelmingly promoter-proximal and CpG-island-associated. ChIP in Kaiso-knockout-controlled experiments places Kaiso at CpG islands with a preference for methylated ones and for islands with partial methylation at their 5' or 3' boundaries, including a class showing wave-like methylation. Canonical KBS-containing targets include MMP7 (matrilysin) and Wnt-pathway genes; the methylation-dependent mode has been studied at the CDH1 promoter. Because the CGCG element is a general bidirectional-promoter feature, Kaiso motif hits cluster where CpG-island promoters cluster rather than at tissue-specific enhancers. Named partners are p120-catenin (negative), N-CoR, MTG16, and, at Wnt targets, the TCF/LEF-beta-catenin machinery.\n\n## Biology and disease\n\nKaiso-deficient mice are viable and fertile, and on an Apc(Min) background they show reduced intestinal tumor burden and longer survival, which put Kaiso forward as a tumor-promoting repressor rather than a suppressor. Much of the disease literature concerns Kaiso's subcellular distribution in carcinoma: nuclear versus cytoplasmic Kaiso correlates with p120-catenin status and with prognosis in several tumor types, and Thr606 phosphorylation shifts the balance toward the cytoplasm, releasing CDH1. Kaiso has also been linked to clonal hematopoiesis and myelodysplastic phenotypes, and to DNA-damage responses in breast cancer cells. The tumor-biology claims are more contested than the biochemistry: reported effects of Kaiso depletion vary between cell systems and between the two binding modes, and the field has not settled how much of Kaiso's function depends on methyl-CpG reading versus KBS binding.\n\n## Reading a hit\n\nFirst decide which motif you matched. A hit to a database ZBTB33 matrix is a hit to the TCTCGCGAGA CGCG element, which is a common CpG-island promoter feature also matched by other GC- and CpG-reading factors; on its own it is closer to evidence of \"this is a CpG-island bidirectional promoter\" than of Kaiso occupancy. A hit to TCCTGCNA is the literature KBS, but it is short, degenerate at one position, and therefore frequent by chance. Second, note that every matrix here is ChIP-derived: JASPAR MA0527.2 is ENCODE ChIP-seq and both HOCOMOCO models carry evidence code P at grade B, with no HT-SELEX or methyl-HT-SELEX model in this family's data. That is exactly the situation in which indirect binding cannot be excluded, and published Kaiso ChIP-seq datasets have been noted to conflict with the in vitro binding data. Third, methylation state is part of the specificity, and no PWM encodes it: a CpG-containing match that is unmethylated in your cell type may not be a Kaiso site at all, and vice versa. The practical recommendation is to pair a motif hit with methylation data and, where possible, with a knockout-controlled occupancy dataset.",
+ "long": "## The factors\n\nKaiso is a single-gene family. ZBTB33 encodes a roughly 670-residue protein with an N-terminal BTB/POZ dimerization and repression domain and, unusually for a BTB-ZF factor, only three C2H2 zinc fingers at the C terminus plus a short C-terminal extension. It was isolated in a yeast two-hybrid screen for partners of the Armadillo-family adhesion protein p120-catenin [PMID:10207085], and was later identified as the DNA-binding component of a mammalian methyl-CpG-binding activity that acts as a methylation-dependent repressor [PMID:11445535]; it recruits the N-CoR corepressor complex [PMID:14527417], and its Xenopus orthologue is required to keep genes silent before the mid-blastula transition [PMID:15548582]. p120-catenin binding inhibits Kaiso's DNA binding in both of its modes [PMID:12087177], which is the mechanistic basis for the claim that Kaiso couples cadherin-based adhesion to transcriptional output: when p120 is released from junctions it can sequester Kaiso off DNA. Repression is delivered through recruited corepressors including N-CoR and the MTG16/CBFA2T3 corepressor [PMID:11445535,23251453]; Kaiso is also regulated by phosphorylation, with modification at Thr606 driving cytoplasmic accumulation and reduced repression of CDH1 [PMID:35851744]. Kaiso is broadly expressed and is not restricted to a lineage.\n\n## The motif\n\nThis is the family where the phrase \"dual specificity\" is literal, and where the databases and the literature describe different things. Site-selection experiments defined a sequence-specific consensus, TCCTGCNA, with a minimal sufficient core of CTGCNA; two copies occur in the human and mouse matrilysin (MMP7) promoters [PMID:12087177]. The same work showed that Kaiso separately possesses a methyl-CpG-dependent binding activity, requiring consecutive methylated CpGs and biochemically distinct from KBS binding, and that affinity for the KBS is the higher of the two [PMID:11445535,12087177]. Only zinc fingers 2 and 3 are needed for sequence-specific binding [PMID:12087177]. Crystal structures of the Kaiso zinc-finger domain bound to the KBS and to a symmetrically methylated sequence from the E-cadherin promoter explain how one small domain does both jobs: bases are read in the major groove by residues in the first two fingers, using classical hydrogen bonds for the KBS and methyl CH-to-O hydrogen bonds for methylcytosine, while the C-terminal extension past finger 3 binds the opposing minor groove and is required for high affinity [PMID:22949637]. That extension is disordered in the free protein and folds on binding. Now the discrepancy: all four matrices in this family - the JASPAR ENCODE-derived MA0527.2 [PMID:23693142], both HOCOMOCO KAISO models (evidence P, grade B), and CIS-BP M08094 - read TCTCGCGAGA or a close variant. That palindrome is the CGCG element found at TATA-less, CpG-island-associated bidirectional promoters [PMID:30332484]. It is CpG-containing, so it is compatible with the methyl-CpG mode, but it is not the KBS, and it is not what site selection returned. In other words, the collections capture one Kaiso mode and miss the other entirely. Genome-wide work with Kaiso-knockout cells as a control reports both: CGCG and CTGCNAT are the two principal enriched motifs, with about 60 percent of sites containing both [PMID:39702290].\n\n## Where it acts\n\nKaiso sites are overwhelmingly promoter-proximal and CpG-island-associated. ChIP in Kaiso-knockout-controlled experiments places Kaiso at CpG islands with a preference for methylated ones and for islands with partial methylation at their 5' or 3' boundaries, including a class showing wave-like methylation [PMID:39702290]. Canonical KBS-containing targets include MMP7 (matrilysin) and Wnt-pathway genes [PMID:12087177,23251453]; the methylation-dependent mode has been studied at the CDH1 promoter. Because the CGCG element is a general bidirectional-promoter feature, Kaiso motif hits cluster where CpG-island promoters cluster rather than at tissue-specific enhancers. Named partners are p120-catenin (negative), N-CoR, MTG16, and, at Wnt targets, the TCF/LEF-beta-catenin machinery.\n\n## Biology and disease\n\nKaiso-deficient mice are viable and fertile, and on an Apc(Min) background they show reduced intestinal tumor burden and longer survival [PMID:16354691], which put Kaiso forward as a tumor-promoting repressor rather than a suppressor. Much of the disease literature concerns Kaiso's subcellular distribution in carcinoma: nuclear versus cytoplasmic Kaiso correlates with p120-catenin status and with prognosis in several tumor types [PMID:30419310], and Thr606 phosphorylation shifts the balance toward the cytoplasm, releasing CDH1 [PMID:35851744]. Kaiso has also been linked to clonal hematopoiesis and myelodysplastic phenotypes [PMID:39702290], and to DNA-damage responses in breast cancer cells. The tumor-biology claims are more contested than the biochemistry: reported effects of Kaiso depletion vary between cell systems and between the two binding modes, and the field has not settled how much of Kaiso's function depends on methyl-CpG reading versus KBS binding.\n\n## Reading a hit\n\nFirst decide which motif you matched. A hit to a database ZBTB33 matrix is a hit to the TCTCGCGAGA CGCG element, which is a common CpG-island promoter feature also matched by other GC- and CpG-reading factors; on its own it is closer to evidence of \"this is a CpG-island bidirectional promoter\" than of Kaiso occupancy. A hit to TCCTGCNA is the literature KBS, but it is short, degenerate at one position, and therefore frequent by chance. Second, note that every matrix here is ChIP-derived: JASPAR MA0527.2 is ENCODE ChIP-seq and both HOCOMOCO models carry evidence code P at grade B, with no HT-SELEX or methyl-HT-SELEX model in this family's data [PMID:28473536,37971293]. That is exactly the situation in which indirect binding cannot be excluded, and published Kaiso ChIP-seq datasets have been noted to conflict with the in vitro binding data [PMID:23693142,39702290]. Third, methylation state is part of the specificity, and no PWM encodes it: a CpG-containing match that is unmethylated in your cell type may not be a Kaiso site at all, and vice versa. The practical recommendation is to pair a motif hit with methylation data and, where possible, with a knockout-controlled occupancy dataset.",
  "caveats": "Kaiso has two binding modes and the databases represent only one. All four ZBTB33 matrices here read the CGCG palindrome TCTCGCGAGA - a generic CpG-island bidirectional-promoter element - rather than the site-selection consensus TCCTGCNA, so the same gene symbol can mean two different motifs depending on the source. Every matrix in this family is ChIP-derived (ENCODE JASPAR; HOCOMOCO evidence P, grade B), with no in vitro model, and published Kaiso ChIP datasets are known to conflict with in vitro data, so indirect binding is a live possibility. Methylation state is part of the specificity and no position weight matrix captures it; interpret hits alongside methylation data.",
  "refs": [
   {
@@ -74,6 +74,105 @@
    "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
    "pmid": "37971293",
    "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  },
+  {
+   "cite": "Blattler A, Yao L, Wang Y, et al. ZBTB33 binds unmethylated regions of the genome associated with actively expressed genes. Epigenetics Chromatin 2013;6:13.",
+   "pmid": "23693142",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23693142/"
+  },
+  {
+   "cite": "Yoon HG, Chan DW, Reynolds AB, et al. N-CoR mediates DNA methylation-dependent repression through a methyl CpG binding protein Kaiso. Mol Cell 2003;12:723-34.",
+   "pmid": "14527417",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/14527417/"
+  },
+  {
+   "cite": "Ruzov A, Dunican DS, Prokhortchouk A, et al. Kaiso is a genome-wide repressor of transcription that is essential for amphibian development. Development 2004;131:6185-94.",
+   "pmid": "15548582",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15548582/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1999,
+   "finding": "Kaiso was cloned in a two-hybrid screen for p120-catenin partners as a BTB/POZ protein with only three C2H2 fingers, placing an adhesion cofactor in contact with a transcriptional repressor.",
+   "methods": "yeast two-hybrid, co-immunoprecipitation, immunolocalization",
+   "confidence": "medium",
+   "pmids": [
+    "10207085"
+   ],
+   "open": "What sequence, if any, Kaiso recognizes."
+  },
+  {
+   "year": 2001,
+   "finding": "Kaiso was identified as a methylation-dependent repressor that requires at least two symmetrically methylated CpGs, preferentially in the sequence CGCG, and as a component of the MeCP1 methyl-CpG binding activity.",
+   "methods": "methyl-DNA affinity purification, mass spectrometry, transfection reporters",
+   "confidence": "medium",
+   "pmids": [
+    "11445535"
+   ],
+   "open": "Whether Kaiso also reads unmethylated sequence specifically."
+  },
+  {
+   "year": 2002,
+   "finding": "Site selection defined the unmethylated Kaiso binding site TCCTGCNA with the minimal core CTGCNA, showed that fingers 2 and 3 suffice for it, established that the KBS is bound with higher affinity than methyl-CpG sites, and showed that p120-catenin blocks both modes.",
+   "methods": "random-oligonucleotide site selection, EMSA with finger deletions, competition assays",
+   "confidence": "medium",
+   "pmids": [
+    "12087177"
+   ],
+   "open": "How one three-finger domain can read two unrelated kinds of site."
+  },
+  {
+   "year": 2006,
+   "finding": "Kaiso-null mice were found to be viable and fertile with no overt developmental or expression phenotype, but crossing them to Apc(Min) mice delayed intestinal tumorigenesis, which framed Kaiso as tumor-promoting rather than as an essential repressor.",
+   "methods": "mouse gene targeting, tumor-susceptibility crosses, expression analysis",
+   "confidence": "medium",
+   "pmids": [
+    "16354691"
+   ]
+  },
+  {
+   "year": 2012,
+   "finding": "Crystal structures of the Kaiso zinc-finger domain on the KBS and on a symmetrically methylated E-cadherin sequence showed that the same first two fingers read both, using classical hydrogen bonds for the KBS and methyl CH-to-O bonds for methylcytosine, with a C-terminal extension that is disordered until it folds into the opposing minor groove.",
+   "methods": "X-ray crystallography, binding assays",
+   "confidence": "high",
+   "pmids": [
+    "22949637"
+   ]
+  },
+  {
+   "year": 2013,
+   "finding": "Analysis of ENCODE Kaiso ChIP-seq together with methylation maps reported that Kaiso occupies unmethylated, highly active promoters in vivo rather than methylated DNA, contradicting the model built from the in vitro methyl-binding work and leaving the two literatures in open conflict.",
+   "methods": "ChIP-seq and DNA methylation data integration",
+   "confidence": "medium",
+   "pmids": [
+    "23693142"
+   ],
+   "open": "Whether the discrepancy reflects antibody quality, chromatin accessibility or a genuinely different in vivo mode."
+  },
+  {
+   "year": 2018,
+   "finding": "The TCTCGCGAGA palindrome that all the ZBTB33 matrices describe was characterized in its own right as a conserved, methylation-sensitive element that drives bidirectional transcription at TATA-less CpG-island promoters, showing that the catalogued Kaiso motif is also a general core-promoter feature.",
+   "methods": "motif analysis of CpG-island promoters, nascent-transcript mapping, reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "30332484"
+   ]
+  },
+  {
+   "year": 2024,
+   "finding": "Kaiso ChIP in Caki-1 cells with a Kaiso-knockout line as the negative control recovered both motifs - CGCG and CTGCNAT, with about 60 percent of sites carrying both - and placed Kaiso at CpG islands with a preference for methylated and partially methylated ones, partially reconciling the in vitro and in vivo pictures.",
+   "methods": "knockout-controlled ChIP-seq, methylation profiling, binding-deficient mutant comparison",
+   "confidence": "medium",
+   "pmids": [
+    "39702290"
+   ]
+  }
+ ],
+ "open": [
+  "Whether Kaiso prefers methylated or unmethylated DNA in cells is still contested: an ENCODE-based analysis concluded that it occupies unmethylated, actively transcribed promoters, while knockout-controlled ChIP in kidney carcinoma cells reports enrichment at methylated and partially methylated CpG islands, and the crystal structures show that the protein is capable of both.",
+  "Which of the two binding modes carries Kaiso's biological function is unresolved, since no study has separated KBS-dependent from methyl-CpG-dependent target genes in the same cells with separation-of-function mutants beyond the single E535A allele.",
+  "It is unclear how much of a match to the catalogued TCTCGCGAGA matrix says anything about Kaiso at all, because the same element independently drives bidirectional transcription at TATA-less CpG-island promoters and would be recovered in any ChIP experiment centered on such promoters.",
+  "Whether Kaiso promotes or restrains tumor growth in humans is unsettled: loss delays intestinal tumorigenesis in Apc(Min) mice, whereas the correlative human data depend on whether the protein is nuclear or cytoplasmic and point in both directions across tumor types."
  ]
 }

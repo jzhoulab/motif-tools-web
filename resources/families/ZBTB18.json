@@ -11,7 +11,7 @@
  ],
  "consensus": "MACATCTGKM",
  "short": "ZBTB18, first described as RP58, is a BTB/POZ zinc-finger repressor that binds an E-box-like site, (A/C)ACATCTG(G/T)(A/C), whose CATCTG core reads CAGATG on the opposite strand. It is a C2H2 protein, not a bHLH one, so the E-box it occupies is a site that basic helix-loop-helix activators can also use - which makes competition, not just repression, part of how it works. RP58 concentrates in condensed chromatin and represses target promoters through its POZ domain. In the brain it controls the multipolar-to-bipolar transition of newborn cortical neurons and is required for cerebellar growth; human ZBTB18 mutations cause autosomal dominant intellectual disability and figure in 1q43-q44 deletion syndrome with corpus callosum malformation.",
- "long": "## The factors\n\nZBTB18 is a one-member family in this atlas. The gene, also known as RP58 and ZNF238, encodes a 522-residue protein with an N-terminal POZ/BTB domain - the feature that first placed it alongside BCL6 - and four C-terminal C2H2 zinc fingers. The POZ domain mediates homodimerization and autonomous repression; it does not contact DNA. An early and still striking observation is that almost all RP58 protein localizes to condensed chromatin regions by immunogold electron microscopy, which was the basis for proposing that this factor links sequence-specific repression to chromosome organization. ZBTB18 is expressed most prominently in the developing and adult central nervous system, in cortical and cerebellar neurons, and also in skeletal muscle and other tissues; it is not a lineage-restricted factor in the way GFI1 or ThPOK are. In neurons it behaves as a differentiation-promoting repressor: it shuts down programs belonging to other cell identities rather than activating neuronal genes directly.\n\n## The motif\n\nThe binding site was determined by cyclic amplification and selection of targets with recombinant protein, giving the high-affinity consensus (A/C)ACATCTG(G/T)(A/C). The internal CATCTG is a CANNTG E-box variant, and read on the opposite strand the same site presents CAGATG as its core. This is worth stating carefully because the two renderings look like different motifs: the JASPAR HT-SELEX matrix MA0698.2 reads TCCAGATGTT and the HOCOMOCO grade-A model reads CCAGATGTG, both of which are the reverse complement of the selected consensus, not a disagreement with it. Note also that the family definition used in this atlas describes the site as \"E-box-like CACATG\"; the experimentally selected core is CATCTG (equivalently CAGATG), with an A at the position where CACATG has a C, so the shorter label is slightly off and should not be used for scanning. Information content is 11-15 bits over nine or ten positions - better than a bare 6 bp E-box but still modest. Four adjacent fingers could cover more sequence than the consensus specifies, and the flanking A/C and G/T degeneracies suggest that only two or three fingers contribute strong base contacts. The family data flags one entry as inconsistent: the CIS-BP model M08257 for ZBTB18 reads CGCAGCTGCG, a canonical CAGCTG bHLH E-box whose nearest neighbors across databases fall in the NEUROD/ATOH family rather than with ZBTB18, and which matches no other ZBTB18 model. With only three matrices in the family, that single outlier drags the measured cohesion down to 0.79.\n\n## Where it acts\n\nZBTB18 acts mainly at promoters of genes belonging to alternative differentiation programs. In developing neurons it represses transcriptional programs linked to non-neuronal cell identity, including programs that correspond to glioblastoma subtypes, and the sites it uses are promoter-proximal E-boxes rather than distal enhancer clusters. Because the core is a CANNTG box with no CpG, matches are not concentrated in CpG islands and occur throughout the genome; a nine-position match with two degenerate positions still arises tens of thousands of times by chance in 3 Gb. The important co-occurrence to keep in mind is with bHLH factors: NEUROG2, NEUROD and ASCL1 bind overlapping CANNTG boxes in the same neuronal promoters, and the sequence alone cannot say which occupied a site.\n\n## Biology and disease\n\nMouse Rp58 mutants show defective cortical development: newborn neurons fail to complete the multipolar-to-bipolar transition needed for radial migration, and cerebellar growth and patterning are disrupted, with abnormal development of both glutamatergic and GABAergic neurons. In humans, heterozygous ZBTB18 loss-of-function and missense variants cause autosomal dominant non-syndromic intellectual disability 22 (MRD22), with developmental delay, seizures and frequent corpus callosum abnormalities; ZBTB18 lies in the critical region of 1q43-q44 deletion syndrome, and its loss is a principal candidate for the corpus callosum and microcephaly phenotypes in that contiguous gene syndrome. Missense variants have been shown to differ in how much they impair DNA binding versus repression, so the allelic series is informative rather than uniform. In glioblastoma, ZBTB18 behaves as a tumor suppressor that is silenced epigenetically, and restoring it represses mesenchymal and lipid-metabolic programs.\n\n## Reading a hit\n\nThe CATCTG/CAGATG core makes this an E-box family, with all the attendant ambiguity. Candidates for any CANNTG match include the bHLH factors of the NEUROD/ATOH, ASCL, NEUROG, TCF3/4/12, MYOD and TWIST groups, and among C2H2 proteins the SNAIL, ZEB and INSM-related repressors. An E-box hit is not evidence of a bHLH factor, and equally it is not evidence of ZBTB18. What tilts the balance toward ZBTB18 is the specific internal composition: CATCTG rather than CACCTG, CAGCTG or CACGTG, with the flanking A and G/T. The best-supported matrix here is JASPAR MA0698.2, which is HT-SELEX-derived and thus direct in vitro evidence, and the HOCOMOCO model is grade A with PSM evidence, so \"ZBTB18 binds this sequence\" is well established. Do not use the CIS-BP entry M08257 (CGCAGCTGCG): it looks like a NEUROD/ATOH-class site, and scanning with it will return bHLH sites labelled as ZBTB18. Finally, since ZBTB18 is one gene, there is no paralogue problem inside the family - but the outside-the-family problem is severe, and a hit should be reported as \"E-box consistent with ZBTB18\" rather than as a ZBTB18 site.",
+ "long": "## The factors\n\nZBTB18 is a one-member family in this atlas. The gene, also known as RP58 and ZNF238, encodes a 522-residue protein with an N-terminal POZ/BTB domain - the feature that first placed it alongside BCL6 - and four C-terminal C2H2 zinc fingers [PMID:9756912]. The POZ domain mediates homodimerization and autonomous repression; it does not contact DNA. An early and still striking observation is that almost all RP58 protein localizes to condensed chromatin regions by immunogold electron microscopy [PMID:9756912], which was the basis for proposing that this factor links sequence-specific repression to chromosome organization. ZBTB18 is expressed most prominently in the developing and adult central nervous system, in cortical and cerebellar neurons, and also in skeletal muscle and other tissues [PMID:32959890]; it is not a lineage-restricted factor in the way GFI1 or ThPOK are. In neurons it behaves as a differentiation-promoting repressor: it shuts down programs belonging to other cell identities rather than activating neuronal genes directly.\n\n## The motif\n\nThe binding site was determined by cyclic amplification and selection of targets with recombinant protein, giving the high-affinity consensus (A/C)ACATCTG(G/T)(A/C) [PMID:9756912]. The internal CATCTG is a CANNTG E-box variant, and read on the opposite strand the same site presents CAGATG as its core. This is worth stating carefully because the two renderings look like different motifs: the JASPAR HT-SELEX matrix MA0698.2 reads TCCAGATGTT and the HOCOMOCO grade-A model reads CCAGATGTG, both of which are the reverse complement of the selected consensus, not a disagreement with it [PMID:23332764,37971293]. Note also that the family definition used in this atlas describes the site as \"E-box-like CACATG\"; the experimentally selected core is CATCTG (equivalently CAGATG), with an A at the position where CACATG has a C, so the shorter label is slightly off and should not be used for scanning. Information content is 11-15 bits over nine or ten positions - better than a bare 6 bp E-box but still modest. Four adjacent fingers could cover more sequence than the consensus specifies, and the flanking A/C and G/T degeneracies suggest that only two or three fingers contribute strong base contacts. The family data flags one entry as inconsistent: the CIS-BP model M08257 for ZBTB18 reads CGCAGCTGCG, a canonical CAGCTG bHLH E-box whose nearest neighbors across databases fall in the NEUROD/ATOH family rather than with ZBTB18, and which matches no other ZBTB18 model. With only three matrices in the family, that single outlier drags the measured cohesion down to 0.79.\n\n## Where it acts\n\nZBTB18 acts mainly at promoters of genes belonging to alternative differentiation programs. In developing neurons it represses transcriptional programs linked to non-neuronal cell identity, including programs that correspond to glioblastoma subtypes [PMID:33903225], and the sites it uses are promoter-proximal E-boxes rather than distal enhancer clusters. Because the core is a CANNTG box with no CpG, matches are not concentrated in CpG islands and occur throughout the genome; a nine-position match with two degenerate positions still arises tens of thousands of times by chance in 3 Gb. The important co-occurrence to keep in mind is with bHLH factors: NEUROG2, NEUROD and ASCL1 bind overlapping CANNTG boxes in the same neuronal promoters, and the sequence alone cannot say which occupied a site.\n\n## Biology and disease\n\nMouse Rp58 mutants show defective cortical development: newborn neurons fail to complete the multipolar-to-bipolar transition needed for radial migration [PMID:23395638], and cerebellar growth and patterning are disrupted, with abnormal development of both glutamatergic and GABAergic neurons [PMID:22513377]. In humans, heterozygous ZBTB18 loss-of-function and missense variants cause autosomal dominant non-syndromic intellectual disability 22 (MRD22), with developmental delay, seizures and frequent corpus callosum abnormalities [PMID:38215144]; ZBTB18 lies in the critical region of 1q43-q44 deletion syndrome, and its loss is a principal candidate for the corpus callosum and microcephaly phenotypes in that contiguous gene syndrome [PMID:36192753]. Missense variants have been shown to differ in how much they impair DNA binding versus repression, so the allelic series is informative rather than uniform [PMID:35083747]. In glioblastoma, ZBTB18 behaves as a tumor suppressor that is silenced epigenetically, and restoring it represses mesenchymal and lipid-metabolic programs [PMID:28512252].\n\n## Reading a hit\n\nThe CATCTG/CAGATG core makes this an E-box family, with all the attendant ambiguity. Candidates for any CANNTG match include the bHLH factors of the NEUROD/ATOH, ASCL, NEUROG, TCF3/4/12, MYOD and TWIST groups, and among C2H2 proteins the SNAIL, ZEB and INSM-related repressors. An E-box hit is not evidence of a bHLH factor, and equally it is not evidence of ZBTB18. What tilts the balance toward ZBTB18 is the specific internal composition: CATCTG rather than CACCTG, CAGCTG or CACGTG, with the flanking A and G/T. The best-supported matrix here is JASPAR MA0698.2, which is HT-SELEX-derived and thus direct in vitro evidence [PMID:23332764], and the HOCOMOCO model is grade A with PSM evidence, so \"ZBTB18 binds this sequence\" is well established [PMID:37971293]. Do not use the CIS-BP entry M08257 (CGCAGCTGCG): it looks like a NEUROD/ATOH-class site, and scanning with it will return bHLH sites labelled as ZBTB18. Finally, since ZBTB18 is one gene, there is no paralogue problem inside the family - but the outside-the-family problem is severe, and a hit should be reported as \"E-box consistent with ZBTB18\" rather than as a ZBTB18 site.",
  "caveats": "The site is an E-box variant, so the crowd of bHLH factors plus SNAIL, ZEB and INSM-related C2H2 repressors all compete for interpretation of a match; report an E-box, then argue for ZBTB18 from the internal CATCTG composition and the cell type. The commonly quoted \"CACATG\" shorthand for this family is not the selected consensus and should not be scanned. Trust JASPAR MA0698.2 (HT-SELEX) and the HOCOMOCO grade-A model, which are reverse-complement renderings of the same site; discard the CIS-BP entry CGCAGCTGCG, which the cross-database analysis places with NEUROD/ATOH and which accounts for this family's low internal cohesion. Single gene, so no paralogue ambiguity within the family.",
  "refs": [
   {
@@ -69,5 +69,79 @@
    "pmid": "37971293",
    "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1998,
+   "finding": "RP58 was cloned as a POZ-domain zinc-finger protein, its high-affinity site was selected as (A/C)ACATCTG(G/T)(A/C) - an E-box core read by zinc fingers - and the protein was shown to repress from that site and to sit almost entirely in condensed chromatin.",
+   "methods": "binding-site selection (CAST), reporter assays, immunogold electron microscopy",
+   "confidence": "medium",
+   "pmids": [
+    "9756912"
+   ],
+   "open": "Whether the protein competes with bHLH activators for the same boxes in cells."
+  },
+  {
+   "year": 2012,
+   "finding": "Neural deletion of Rp58 in mice caused severe cerebellar hypoplasia with failure of Purkinje neuron, Bergmann glia and granule neuron development, showing that the factor is required for both glutamatergic and GABAergic lineages rather than for one neuronal class.",
+   "methods": "conditional mouse knockouts, lineage-specific deletion, histology",
+   "confidence": "medium",
+   "pmids": [
+    "22513377"
+   ]
+  },
+  {
+   "year": 2013,
+   "finding": "RP58 was shown to be required cell-autonomously for the multipolar-to-bipolar transition of newborn cortical neurons, acting by repressing Ngn2 and the Ngn2-Rnd2 pathway, which put a proneural bHLH gene directly downstream of this repressor.",
+   "methods": "conditional deletion with in utero electroporation, rescue by Ngn2 knockdown",
+   "confidence": "medium",
+   "pmids": [
+    "23395638"
+   ]
+  },
+  {
+   "year": 2013,
+   "finding": "HT-SELEX returned the same site from the other strand, TCCAGATGTT, independently confirming the 1998 selection and giving the collections an in vitro model for ZBTB18.",
+   "methods": "HT-SELEX across human transcription factors",
+   "confidence": "medium",
+   "pmids": [
+    "23332764"
+   ]
+  },
+  {
+   "year": 2017,
+   "finding": "ZBTB18 was found to be silenced by promoter hypermethylation specifically in the mesenchymal subtype of glioblastoma, and re-expression suppressed the aggressive phenotype, framing it as an epigenetically inactivated tumor suppressor.",
+   "methods": "methylation and expression profiling of tumors, re-expression and xenograft assays",
+   "confidence": "medium",
+   "pmids": [
+    "28512252"
+   ]
+  },
+  {
+   "year": 2021,
+   "finding": "Transcriptome analysis of Rp58 mutant cortical neurons showed that the repressed program consists largely of genes belonging to other cell identities, including mesodermal, pluripotency and glioma signatures, so the factor maintains neuronal identity by exclusion rather than by activating neuronal genes.",
+   "methods": "mouse conditional knockouts with RNA sequencing and gene set enrichment, glioma stem cell experiments",
+   "confidence": "medium",
+   "pmids": [
+    "33903225"
+   ]
+  },
+  {
+   "year": 2022,
+   "finding": "Functional dissection of patient missense alleles showed that they differ in whether they impair DNA binding or repression, and reviews of 1q43q44 deletions placed ZBTB18 as the principal candidate for the corpus callosum and microcephaly components of that contiguous gene syndrome.",
+   "methods": "variant functional assays in neural cells, array CGH and clinical correlation",
+   "confidence": "medium",
+   "pmids": [
+    "35083747",
+    "36192753"
+   ],
+   "open": "Whether any single gene in the 1q43q44 interval accounts for the callosal phenotype on its own."
+  }
+ ],
+ "open": [
+  "The CIS-BP entry M08257 reads CGCAGCTGCG and its cross-database neighbors are NEUROD/ATOH motifs, and it is unresolved whether ZBTB18 has a genuine secondary preference for a CAGCTG box or the model simply carries the wrong label; nothing in the literature reports CAGCTG binding by this protein.",
+  "Whether ZBTB18 and proneural bHLH factors contest the same boxes in neurons is not established: ZBTB18 represses the Ngn2 gene, which is a regulatory relationship rather than site-level competition, and no experiment has shown the two protein classes exchanging at individual CANNTG sites.",
+  "Which fingers of the four carry the specificity is unknown, since there is no structure of the ZBTB18 zinc-finger array on DNA and the degeneracy at the flanking positions of the selected consensus only suggests that two or three fingers make strong base contacts.",
+  "It remains unsettled how patient missense alleles cause disease, because the tested variants fall on a spectrum between loss of DNA binding and loss of repression, and whether some act as dominant negatives through the dimerizing POZ domain has not been determined."
  ]
 }

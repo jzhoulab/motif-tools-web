@@ -10,7 +10,7 @@
  ],
  "consensus": "GACCACCCA",
  "short": "GLI factors are five-fingered C2H2 zinc-finger proteins that read the nine-base site GACCACCCA and form the transcriptional output of the Hedgehog pathway. Humans have three canonical members: GLI1, an activator that is itself a Hedgehog target gene, and GLI2 and GLI3, which are made as full-length activators but are partially degraded into N-terminal repressors when Hedgehog signaling is off. The related GLIS1, GLIS2 and GLIS3 proteins read a close variant, GACCCCCCAC. Binding is monomeric and the informative bases are concentrated at the 3' end of the site, which fingers four and five contact directly. GLI sites control limb and neural-tube patterning, and pathway mutations cause polydactyly syndromes, basal cell carcinoma and SHH-subgroup medulloblastoma.",
- "long": "## The factors\n\nThree canonical human GLI proteins, GLI1, GLI2 and GLI3, are the vertebrate counterparts of\nDrosophila Cubitus interruptus. Each carries five tandem C2H2 zinc fingers and binds DNA as a\nmonomer. GLI2 and GLI3 are bifunctional: an N-terminal repressor domain and a C-terminal\nactivation domain flank the finger array, and limited proteolysis removes the activation domain to\nleave a repressor. GLI1 lacks the N-terminal repressor region and is a dedicated activator; because\nGLI1 transcription is itself induced by Hedgehog signaling, GLI1 mRNA is widely used as a pathway\nreadout. GLI2 and GLI3 are broadly expressed during development, whereas GLI1 accumulates only\nwhere the pathway is active.\n\nThe GLIS subfamily, GLIS1, GLIS2 and GLIS3, is the nearest relative: Kruppel-like proteins with\nfive fingers whose DNA-binding domains are close enough to GLI that their motifs cluster together,\nbut whose expression is largely non-overlapping (GLIS3 in thyroid, pancreatic islets and kidney,\nGLIS2 in kidney, GLIS1 in a restricted set of tissues and in oocytes). A fourth entry, GLI4\n(ZNF767P), is annotated as a family member but the matrices assigned to it in these databases do\nnot resemble a GLI site; treat it separately.\n\n## The motif\n\nThe consensus GACCACCCA was defined by selecting genomic fragments bound by recombinant GLI: the\nprotein protected 23-24 bases at each site, and all recovered sites contained the same nine-base\ncore. The crystal structure of the five GLI fingers on a high-affinity site explains the shape of\nthe information content. Finger one makes no DNA contact; fingers two through five wrap into the\nmajor groove without the strictly periodic geometry of Zif268; and fingers four and five make\nextensive base contacts across a conserved nine-base-pair stretch whose conformation is\nintermediate between B- and A-form DNA. The consequence is that the 3' half of the site\n(reverse-strand TGGGTGGTC) carries most of the specificity while the 5' flank is tolerant.\n\nSystematic affinity measurements of every single substitution show a wide dynamic range, and\nreporter assays with natural promoters show that many low-affinity variants still drive strong\nactivation at moderate GLI concentrations. So \"non-consensus\" GLI sites are functional, and a\nstrict consensus search under-counts real elements. The GLIS paralogues prefer GACCCCCCAC, with the\ncentral ACC replaced by CCC; the databases keep GLI and GLIS as separate matrices, but their\ncross-similarity is high enough that only strong matches can be assigned to one subfamily. The data\nconsensus here, GACCACCCACgdcG, is the same core with a weakly informative 3' extension.\n\n## Where it acts\n\nGLI binding is mostly at distal enhancers rather than core promoters, and GLI sites are not a\nCpG-island feature. ChIP of GLI activators in Hedgehog-responsive mouse neural tissue recovers on\nthe order of a thousand high-confidence regions, enriched at known pathway components (Ptch1, Gli1,\nHhip) and at patterning genes (Foxa2, Nkx2-2), with the motif recovered de novo. Because the\ninformative core is nine bases with degenerate flanks, exact matches occur tens of thousands of\ntimes in the human genome and the great majority are never occupied. Occupancy tracks pathway\nactivity and chromatin: the same sequence is silent in tissue where GLI2 and GLI3 are not\nstabilized. Frequent neighbors in Hedgehog-responsive enhancers include SOX2, FOXA2 and NKX\nfactors, and ZIC proteins, which bind an overlapping sequence and can physically associate with GLI\nzinc fingers.\n\n## Biology and disease\n\nHedgehog ligand binding to PTCH1 relieves inhibition of SMO, which blocks the phosphorylation of\nGLI2 and GLI3 by PKA, GSK3 and CK1 and thereby blocks their processing. In the unstimulated state\nGLI3 is converted into a truncated repressor, GLI3R; in the developing limb this produces a graded\nanterior-to-posterior distribution of repressor that patterns the digits. SUFU sequesters GLI\nproteins and opposes the pathway.\n\nGli2-null mice lack a floor plate and show reduced Shh responses; Gli1-null mice are viable and\nonly reveal defects in combination with a Gli2 mutation, consistent with GLI2 being the principal\nactivator and GLI1 an amplifier. Truncating GLI3 mutations cause Greig cephalopolysyndactyly\nsyndrome, while frameshifts in the middle third of the gene, which leave a repressor-like product,\ncause Pallister-Hall syndrome. GLI1 was originally cloned as an amplified, highly expressed gene in\na human glioma, and Hedgehog-driven tumors (basal cell carcinoma, SHH-subgroup medulloblastoma)\nsignal through GLI even when the initiating lesion is in PTCH1 or SMO. On the GLIS side, biallelic\nGLIS3 loss causes neonatal diabetes with congenital hypothyroidism, GLIS2 (NPHP7) loss causes\nnephronophthisis, and GLIS1 improves the efficiency of somatic-cell reprogramming.\n\n## Reading a hit\n\nA GACCACCCA match identifies the GLI/GLIS class and nothing finer. GLI1, GLI2 and GLI3 have\neffectively the same matrix, so no sequence argument distinguishes them; assignment to a member\ncomes from expression or ChIP data. More importantly, a hit does not tell you the sign of the\noutput, because GLI3R binds the same site as GLI2 full-length activator. With nine informative\nbases the site is common enough to occur by chance in any few-kilobase window, so an isolated match\nis weak evidence; conservation, open chromatin in a Hedgehog-responsive tissue, and proximity to\nother pathway targets all help. Conversely, the functional importance of low-affinity variants\nmeans absence of a consensus match does not exclude GLI regulation. In HOCOMOCO, the GLI2 and GLI3\nmodels carry in vitro support (HT-SELEX and methyl-SELEX, grade A), whereas the GLI1 model is\nChIP-only at grade C; the GLI4 entries are ChIP-only and do not look like a GLI site at all.",
+ "long": "## The factors\n\nThree canonical human GLI proteins, GLI1, GLI2 and GLI3, are the vertebrate counterparts of\nDrosophila Cubitus interruptus. Each carries five tandem C2H2 zinc fingers and binds DNA as a\nmonomer. GLI2 and GLI3 are bifunctional: an N-terminal repressor domain and a C-terminal\nactivation domain flank the finger array, and limited proteolysis removes the activation domain to\nleave a repressor [PMID:10693759,39576500]. GLI1 lacks the N-terminal repressor region and is a dedicated activator; because\nGLI1 transcription is itself induced by Hedgehog signaling, GLI1 mRNA is widely used as a pathway\nreadout. GLI2 and GLI3 are broadly expressed during development, whereas GLI1 accumulates only\nwhere the pathway is active.\n\nThe GLIS subfamily, GLIS1, GLIS2 and GLIS3, is the nearest relative: Kruppel-like proteins with\nfive fingers whose DNA-binding domains are close enough to GLI that their motifs cluster together [PMID:14500813],\nbut whose expression is largely non-overlapping (GLIS3 in thyroid, pancreatic islets and kidney,\nGLIS2 in kidney, GLIS1 in a restricted set of tissues and in oocytes). A fourth entry, GLI4\n(ZNF767P), is annotated as a family member but the matrices assigned to it in these databases do\nnot resemble a GLI site; treat it separately.\n\n## The motif\n\nThe consensus GACCACCCA was defined by selecting genomic fragments bound by recombinant GLI: the\nprotein protected 23-24 bases at each site, and all recovered sites contained the same nine-base\ncore [PMID:2105456]. The crystal structure of the five GLI fingers on a high-affinity site explains the shape of\nthe information content. Finger one makes no DNA contact; fingers two through five wrap into the\nmajor groove without the strictly periodic geometry of Zif268; and fingers four and five make\nextensive base contacts across a conserved nine-base-pair stretch whose conformation is\nintermediate between B- and A-form DNA [PMID:8378770]. The consequence is that the 3' half of the site\n(reverse-strand TGGGTGGTC) carries most of the specificity while the 5' flank is tolerant.\n\nSystematic affinity measurements of every single substitution show a wide dynamic range [PMID:16413481], and\nreporter assays with natural promoters show that many low-affinity variants still drive strong\nactivation at moderate GLI concentrations [PMID:20070907]. So \"non-consensus\" GLI sites are functional, and a\nstrict consensus search under-counts real elements. The GLIS paralogues prefer GACCCCCCAC, with the\ncentral ACC replaced by CCC [PMID:23332764]; the databases keep GLI and GLIS as separate matrices, but their\ncross-similarity is high enough that only strong matches can be assigned to one subfamily. The data\nconsensus here, GACCACCCACgdcG, is the same core with a weakly informative 3' extension.\n\n## Where it acts\n\nGLI binding is mostly at distal enhancers rather than core promoters, and GLI sites are not a\nCpG-island feature. ChIP of GLI activators in Hedgehog-responsive mouse neural tissue recovers on\nthe order of a thousand high-confidence regions, enriched at known pathway components (Ptch1, Gli1,\nHhip) and at patterning genes (Foxa2, Nkx2-2), with the motif recovered de novo [PMID:17442700]. Because the\ninformative core is nine bases with degenerate flanks, exact matches occur tens of thousands of\ntimes in the human genome and the great majority are never occupied. Occupancy tracks pathway\nactivity and chromatin: the same sequence is silent in tissue where GLI2 and GLI3 are not\nstabilized. Frequent neighbors in Hedgehog-responsive enhancers include SOX2, FOXA2 and NKX\nfactors, and ZIC proteins, which bind an overlapping sequence and can physically associate with GLI\nzinc fingers.\n\n## Biology and disease\n\nHedgehog ligand binding to PTCH1 relieves inhibition of SMO, which blocks the phosphorylation of\nGLI2 and GLI3 by PKA, GSK3 and CK1 and thereby blocks their processing [PMID:39576500]. In the unstimulated state\nGLI3 is converted into a truncated repressor, GLI3R; in the developing limb this produces a graded\nanterior-to-posterior distribution of repressor that patterns the digits [PMID:10693759]. SUFU sequesters GLI\nproteins and opposes the pathway.\n\nGli2-null mice lack a floor plate and show reduced Shh responses [PMID:9636069]; Gli1-null mice are viable and\nonly reveal defects in combination with a Gli2 mutation [PMID:10725236], consistent with GLI2 being the principal\nactivator and GLI1 an amplifier. Truncating GLI3 mutations cause Greig cephalopolysyndactyly\nsyndrome, while frameshifts in the middle third of the gene, which leave a repressor-like product,\ncause Pallister-Hall syndrome [PMID:20301619,15739154]. GLI1 was originally cloned as an amplified, highly expressed gene in\na human glioma [PMID:3563490], and Hedgehog-driven tumors (basal cell carcinoma, SHH-subgroup medulloblastoma)\nsignal through GLI even when the initiating lesion is in PTCH1 or SMO [PMID:39576500]. On the GLIS side, biallelic\nGLIS3 loss causes neonatal diabetes with congenital hypothyroidism [PMID:16715098], GLIS2 (NPHP7) loss causes\nnephronophthisis [PMID:17618285], and GLIS1 improves the efficiency of somatic-cell reprogramming [PMID:21654807].\n\n## Reading a hit\n\nA GACCACCCA match identifies the GLI/GLIS class and nothing finer. GLI1, GLI2 and GLI3 have\neffectively the same matrix, so no sequence argument distinguishes them; assignment to a member\ncomes from expression or ChIP data. More importantly, a hit does not tell you the sign of the\noutput, because GLI3R binds the same site as GLI2 full-length activator. With nine informative\nbases the site is common enough to occur by chance in any few-kilobase window, so an isolated match\nis weak evidence; conservation, open chromatin in a Hedgehog-responsive tissue, and proximity to\nother pathway targets all help. Conversely, the functional importance of low-affinity variants\nmeans absence of a consensus match does not exclude GLI regulation. In HOCOMOCO, the GLI2 and GLI3\nmodels carry in vitro support (HT-SELEX and methyl-SELEX, grade A), whereas the GLI1 model is\nChIP-only at grade C; the GLI4 entries are ChIP-only and do not look like a GLI site at all.",
  "caveats": "A hit tells you \"GLI/GLIS\", never which paralogue and never whether the factor present is an activator or the GLI3 repressor. The nine-base core occurs frequently by chance, so isolated matches carry little weight without conservation or Hedgehog-responsive chromatin. GLI and GLIS matrices differ at only one or two central positions, so weak matches cannot be assigned to a subfamily. Low-affinity, non-consensus sites are demonstrably functional, so consensus searching both over-calls inert sites and misses real ones. The GLI4/ZNF767P matrices in these databases are ChIP-derived and unlike the GLI site; the Vierstra archetype carrying that motif is named GLI but groups poorly with the rest of the family.",
  "refs": [
   {
@@ -72,6 +72,117 @@
    "cite": "Yoshida S, Yoshida K. Regulatory mechanisms governing GLI proteins in hedgehog signaling. Anat Sci Int 2025;100:143-154.",
    "pmid": "39576500",
    "url": "https://pubmed.ncbi.nlm.nih.gov/39576500/"
+  },
+  {
+   "cite": "Kinzler KW, Bigner SH, Bigner DD, et al. Identification of an amplified, highly expressed gene in a human glioma. Science 1987;236:70-3.",
+   "pmid": "3563490",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/3563490/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  },
+  {
+   "cite": "Johnston JJ, Olivos-Glander I, Killoran C, et al. Molecular and clinical analyses of Greig cephalopolysyndactyly and Pallister-Hall syndromes: robust phenotype prediction from the type and position of GLI3 mutations. Am J Hum Genet 2005;76:609-22.",
+   "pmid": "15739154",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15739154/"
+  },
+  {
+   "cite": "Senée V, Chelala C, Duchatelet S, et al. Mutations in GLIS3 are responsible for a rare syndrome with neonatal diabetes mellitus and congenital hypothyroidism. Nat Genet 2006;38:682-7.",
+   "pmid": "16715098",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16715098/"
+  },
+  {
+   "cite": "Attanasio M, Uhlenhaut NH, Sousa VH, et al. Loss of GLIS2 causes nephronophthisis in humans and mice by increased apoptosis and fibrosis. Nat Genet 2007;39:1018-24.",
+   "pmid": "17618285",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17618285/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1987,
+   "finding": "GLI is identified as a gene amplified more than 50-fold and highly expressed in a malignant glioma; its sequence predicts a zinc-finger protein.",
+   "methods": "Gene amplification analysis, cDNA cloning, chromosomal mapping",
+   "confidence": "medium",
+   "pmids": [
+    "3563490"
+   ],
+   "open": "Whether the protein bound DNA, and what sequence, was unknown."
+  },
+  {
+   "year": 1990,
+   "finding": "Binding-site selection from total human DNA with a recombinant GLI protein recovers three sites, each footprinted over 23-24 bases and each containing GACCACCCA.",
+   "methods": "Genomic binding-site selection with PCR recovery, DNase I footprinting",
+   "confidence": "medium",
+   "pmids": [
+    "2105456"
+   ],
+   "open": "The consensus rested on three natural sites; which positions were essential was not tested."
+  },
+  {
+   "year": 1993,
+   "finding": "Crystal structure of the five GLI fingers on a high-affinity site: finger 1 makes no DNA contact and fingers 4 and 5 make most base contacts across a nine-base-pair stretch, explaining why the 3' half of the site carries most of the specificity.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "8378770"
+   ],
+   "open": "A single site was solved; how variant sites are tolerated was not addressed."
+  },
+  {
+   "year": 2000,
+   "finding": "Hedgehog-regulated, PKA-dependent processing of GLI3 produces a repressor distributed as an anterior-posterior gradient in the limb, so the same site can receive activator or repressor input.",
+   "methods": "Biochemical analysis of GLI3 processing in chick and mouse limb; human syndrome and chick talpid2 mutants",
+   "confidence": "medium",
+   "pmids": [
+    "10693759"
+   ],
+   "open": "How an enhancer distinguishes activator from repressor bound to the same sequence."
+  },
+  {
+   "year": 2006,
+   "finding": "High-throughput affinity measurements for GLI1-3 across single-substitution variants of the site give a quantitative specificity model, used to predict Hedgehog-responsive enhancers genome-wide.",
+   "methods": "High-throughput in vitro binding-affinity assay, computational enhancer prediction, transgenic mouse reporters",
+   "confidence": "medium",
+   "pmids": [
+    "16413481"
+   ],
+   "open": "Many natural GLI target sites scored as low affinity, raising the question of whether they were functional."
+  },
+  {
+   "year": 2007,
+   "finding": "ChIP of an epitope-tagged GLI activator in differentiating mouse neural progenitors identifies direct targets, including enhancers of Nkx2-2 and Nkx2-1, confirmed in transgenic embryos.",
+   "methods": "ChIP-chip on targeted genomic tiling arrays, transgenic reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "17442700"
+   ],
+   "open": "Coverage was limited to candidate loci rather than the whole genome."
+  },
+  {
+   "year": 2010,
+   "finding": "Reporters carrying every single substitution of the site show that many low-affinity variants activate strongly at moderate GLI concentration, revising the view that only consensus GACCACCCA sites are functional.",
+   "methods": "Luciferase reporters in the PTCH1 promoter context, natural non-consensus promoters",
+   "confidence": "medium",
+   "pmids": [
+    "20070907"
+   ],
+   "open": "Reporter assays in cultured cells do not show how affinity is used to read the Hedgehog gradient in tissue."
+  },
+  {
+   "year": 2013,
+   "finding": "A large HT-SELEX survey of human transcription factors gives the GLIS paralogues a GACCCCCCAC site, which differs from the GLI1-3 site GACCACCCA at the central ACC.",
+   "methods": "HT-SELEX",
+   "confidence": "medium",
+   "pmids": [
+    "23332764"
+   ]
+  }
+ ],
+ "open": [
+  "Why many functional Hedgehog-responsive enhancers use low-affinity GLI sites is unresolved: one view is that weak sites restrict the response to cells with high activator levels and so sharpen the readout of the Hedgehog gradient, the other that weak sites are simply sufficient at moderate GLI concentration and are not selected against.",
+  "Whether GLI activators and the GLI3 repressor occupy the same genomic sites in vivo, or whether some sites are read preferentially by one form, is not settled; the three proteins share one matrix in vitro, so any difference would have to come from chromatin, partners or site arrangement.",
+  "Whether GLI4 binds a GLI-type site at all is unknown: the only matrices assigned to it are ChIP-derived and share a TGGCATTCAAGGCC consensus unrelated to GACCACCCA, and a Vierstra archetype labeled GLI carries the same sequence."
  ]
 }

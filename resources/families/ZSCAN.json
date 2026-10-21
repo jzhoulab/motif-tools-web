@@ -12,7 +12,7 @@
   "ZNF449"
  ],
  "short": "The larger, thinner-documented half of the human SCAN-domain zinc fingers: 26 labels including ZSCAN1, 2, 5, 9, 12, 16, 23, 25, 26, 30 and 31, ZKSCAN2, 4, 5, 7 and 8, and the older names ZNF165, ZNF174, ZNF232, ZNF396, ZNF444 and ZNF449. Each combines an N-terminal SCAN domain, an approximately 80-residue leucine-rich module that dimerizes, with a tandem C2H2 finger array; the ZKSCAN members also carry a KRAB domain. This is not a single motif. The 48 matrices here form roughly twenty per-protein groups that do not resemble one another, ranging from ZSCAN16's TGTTAACAGAGCCTC to ZNF444's poly-C run. Functional data exist for only a handful of members.",
- "long": "## The factors\n\nThe SCAN domain is a conserved, leucine-rich module of about 80 to 84 residues found near the N terminus of a subfamily of C2H2 zinc fingers. It contains three predicted helices and mediates self-association or selective association with other SCAN-bearing proteins (Williams et al. 1999). The one high-resolution structure, an NMR structure of the MZF1 SCAN domain, is a domain-swapped dimer of five-helix monomers with helix 3 at the core of the interface and a dissociation constant near 600 nM; more than 60 human C2H2 zinc-finger genes carry the domain (Peterson et al. 2006). SCAN genes sit in clusters, often tandem arrays, carry 3 to 14 fingers, and some combine SCAN with KRAB or SANT domains and generate alternative isoforms (Edelstein and Collins 2005). Nomenclature has churned: ZNF165, ZNF174, ZNF232, ZNF396, ZNF444 and ZNF449 predate the ZSCAN/ZKSCAN scheme and are the same class of protein. The ZKSCAN members can recruit TRIM28 through their KRAB domain. The atlas places the seven SCAN factors with the best-mapped sites in a separate ZNF24 entry; the members with thinner data are collected here.\n\n## The motif\n\nThere is no family consensus; cohesion is 0.39. The 48 matrices have a median consensus length of 14 bp and median information content 16.1 bits, with 15 above 20 bits and a maximum of 32.4 bits (ZSCAN2, AGGTTAGACTTCAGGAAGGACTTCC). Within-family similarity looks high (median 0.95, only 2 of 35 below 0.7), but that is an artefact of redundancy: the close neighbour is almost always the same protein measured again in another database, as for ZNF449 (AGCCCAACC, its reverse complement GGTTGGGCT, and the archetype AC0534) or ZSCAN5C (TTTGTTGACTCAC and TGTGAGTCAATAAA). Between proteins the motifs are unrelated: ZSCAN16 TGTTAACAGAGCCTC at 31 bits with methyl-SELEX support and an agreeing archetype AC0298; ZSCAN23 CATGTGCTAATTACA; ZSCAN31 GCATAACTGCCCTGC; ZSCAN9 TGATTCTTATCTTATCC, a direct TTATC repeat; ZNF174 GGCGAGTGATCGGC, whose CIS-BP model GNCGATCACTTGCC is the same sequence on the opposite strand; ZSCAN5/ZSCAN5A GTCCCCCCCAAA; ZKSCAN5 TCACCTCC; ZNF444 CCCCCTCCCCC. Because the SCAN domain dimerizes, dyadic sites would be a reasonable expectation, and a few models are compatible with one, but most are not obvious inverted repeats and no member has been tested for half-site organization. Do not assume a dyad. Several models are low-complexity rather than specific: the CIS-BP entry for ZSCAN16 (M08377) is a pure (AT)n tract, ZNF444's is a poly-C run flagged as matching the ZNF281 motif, and ZKSCAN2's is a poly-A run whose nearest neighbour outside this family scores 1.00.\n\n## Where it acts\n\nLittle systematic mapping has been published. The matrices themselves split into two groups with different expected genomic distributions: the GC- and CT-rich models (ZNF444, ZKSCAN5, ZSCAN25, ZNF165) will fall in promoters and CpG islands, where they are hard to separate from the general GC-box pool, while the longer AT-containing models (ZSCAN2, ZSCAN23, ZKSCAN8, ZNF232) will fall mostly in repeat-rich non-coding sequence. The genes themselves cluster in tandem arrays, several on chromosome 19 (Edelstein and Collins 2005). Systematic surveys of poorly characterized human transcription factors find that roughly half bind conventional promoters and enhancers while the other half bind repeat-rich closed chromatin at protein-specific sites (Razavi et al. 2026); most ZSCAN members have not been placed in either group. For ZNF165 the best evidence is that it acts with SMAD3 at TGF-beta target genes rather than autonomously (Gibbs et al. 2020), which matters for how its motif should be read.\n\n## Biology and disease\n\nThe functional literature is thin and uneven. ZNF165 is a cancer-testis antigen that elicits antibody responses in hepatocellular carcinoma patients (Dong et al. 2004) and acts as a SMAD3 cofactor coordinating oncogenic TGF-beta signalling in triple-negative breast cancer, where it is required for tumour cell growth (Gibbs et al. 2020). For most other members, published work is limited to expression surveys and to the systematic screens that generated the motifs in the first place (Najafabadi et al. 2015; Schmitges et al. 2016; Jolma et al. 2026). The KRAB-bearing ZKSCAN members are expected to repress through TRIM28, but this has been shown for very few of them. Absence of a phenotype in this entry reflects absence of study, not a demonstrated lack of function; these are among the proteins the Codebook effort was designed to address.\n\n## Reading a hit\n\nRead a hit as belonging to one named protein: there is no ZSCAN motif. Check the evidence code first. Of the 19 HOCOMOCO models here, 8 are ChIP-only (code P) and the rest carry some in vitro support, with grades splitting 4 A, 7 B and 8 C. Discard the low-complexity matrices for scanning: an (AT)n, poly-C or poly-A model will match millions of positions and carries no factor-specific information. Five matrices have their nearest neighbour in a different family: three are the ZSCAN4/ZNF24 motif (both ZSCAN1 models and the archetype AC0530), one is the ZNF281 poly-C motif (ZNF444), and one is a homeodomain TAATT site (the CIS-BP model for ZSCAN31) — so cross-check before naming a factor. One model, the CIS-BP entry for ZSCAN26, is transferred from the mouse orthologue at 0.89 DNA-binding-domain identity and carries under 10 bits; it should not be used. Finally, because SCAN factors heterodimerize with one another, an occupied site may have been contacted by a partner's fingers rather than by those of the protein whose name is on the motif.",
+ "long": "## The factors\n\nThe SCAN domain is a conserved, leucine-rich module of about 80 to 84 residues found near the N terminus of a subfamily of C2H2 zinc fingers. It contains three predicted helices and mediates self-association or selective association with other SCAN-bearing proteins (Williams et al. 1999) [PMID:10567577]. The one high-resolution structure, an NMR structure of the MZF1 SCAN domain, is a domain-swapped dimer of five-helix monomers with helix 3 at the core of the interface and a dissociation constant near 600 nM; more than 60 human C2H2 zinc-finger genes carry the domain (Peterson et al. 2006) [PMID:16950398]. SCAN genes sit in clusters, often tandem arrays, carry 3 to 14 fingers, and some combine SCAN with KRAB or SANT domains and generate alternative isoforms (Edelstein and Collins 2005) [PMID:16139965]. Nomenclature has churned: ZNF165, ZNF174, ZNF232, ZNF396, ZNF444 and ZNF449 predate the ZSCAN/ZKSCAN scheme and are the same class of protein. The ZKSCAN members can recruit TRIM28 through their KRAB domain. The atlas places the seven SCAN factors with the best-mapped sites in a separate ZNF24 entry; the members with thinner data are collected here.\n\n## The motif\n\nThere is no family consensus; cohesion is 0.39. The 48 matrices have a median consensus length of 14 bp and median information content 16.1 bits, with 15 above 20 bits and a maximum of 32.4 bits (ZSCAN2, AGGTTAGACTTCAGGAAGGACTTCC). Within-family similarity looks high (median 0.95, only 2 of 35 below 0.7), but that is an artefact of redundancy: the close neighbour is almost always the same protein measured again in another database, as for ZNF449 (AGCCCAACC, its reverse complement GGTTGGGCT, and the archetype AC0534) or ZSCAN5C (TTTGTTGACTCAC and TGTGAGTCAATAAA). Between proteins the motifs are unrelated: ZSCAN16 TGTTAACAGAGCCTC at 31 bits with methyl-SELEX support and an agreeing archetype AC0298; ZSCAN23 CATGTGCTAATTACA; ZSCAN31 GCATAACTGCCCTGC; ZSCAN9 TGATTCTTATCTTATCC, a direct TTATC repeat; ZNF174 GGCGAGTGATCGGC, whose CIS-BP model GNCGATCACTTGCC is the same sequence on the opposite strand; ZSCAN5/ZSCAN5A GTCCCCCCCAAA; ZKSCAN5 TCACCTCC; ZNF444 CCCCCTCCCCC. Because the SCAN domain dimerizes, dyadic sites would be a reasonable expectation, and a few models are compatible with one, but most are not obvious inverted repeats and no member has been tested for half-site organization. Do not assume a dyad. Several models are low-complexity rather than specific: the CIS-BP entry for ZSCAN16 (M08377) is a pure (AT)n tract, ZNF444's is a poly-C run flagged as matching the ZNF281 motif, and ZKSCAN2's is a poly-A run whose nearest neighbour outside this family scores 1.00.\n\n## Where it acts\n\nLittle systematic mapping has been published. The matrices themselves split into two groups with different expected genomic distributions: the GC- and CT-rich models (ZNF444, ZKSCAN5, ZSCAN25, ZNF165) will fall in promoters and CpG islands, where they are hard to separate from the general GC-box pool, while the longer AT-containing models (ZSCAN2, ZSCAN23, ZKSCAN8, ZNF232) will fall mostly in repeat-rich non-coding sequence. The genes themselves cluster in tandem arrays, several on chromosome 19 (Edelstein and Collins 2005) [PMID:16139965]. Systematic surveys of poorly characterized human transcription factors find that roughly half bind conventional promoters and enhancers while the other half bind repeat-rich closed chromatin at protein-specific sites (Razavi et al. 2026) [PMID:42557260]; most ZSCAN members have not been placed in either group. For ZNF165 the best evidence is that it acts with SMAD3 at TGF-beta target genes rather than autonomously (Gibbs et al. 2020) [PMID:32515734], which matters for how its motif should be read.\n\n## Biology and disease\n\nThe functional literature is thin and uneven. ZNF165 is a cancer-testis antigen that elicits antibody responses in hepatocellular carcinoma patients (Dong et al. 2004) [PMID:15354214] and acts as a SMAD3 cofactor coordinating oncogenic TGF-beta signalling in triple-negative breast cancer, where it is required for tumour cell growth (Gibbs et al. 2020) [PMID:32515734]. For most other members, published work is limited to expression surveys and to the systematic screens that generated the motifs in the first place (Najafabadi et al. 2015; Schmitges et al. 2016; Jolma et al. 2026) [PMID:25690854,27852650,42557334]. The KRAB-bearing ZKSCAN members are expected to repress through TRIM28, but this has been shown for very few of them. Absence of a phenotype in this entry reflects absence of study, not a demonstrated lack of function; these are among the proteins the Codebook effort was designed to address.\n\n## Reading a hit\n\nRead a hit as belonging to one named protein: there is no ZSCAN motif. Check the evidence code first. Of the 19 HOCOMOCO models here, 8 are ChIP-only (code P) and the rest carry some in vitro support, with grades splitting 4 A, 7 B and 8 C [PMID:37971293]. Discard the low-complexity matrices for scanning: an (AT)n, poly-C or poly-A model will match millions of positions and carries no factor-specific information. Five matrices have their nearest neighbour in a different family: three are the ZSCAN4/ZNF24 motif (both ZSCAN1 models and the archetype AC0530), one is the ZNF281 poly-C motif (ZNF444), and one is a homeodomain TAATT site (the CIS-BP model for ZSCAN31) — so cross-check before naming a factor. One model, the CIS-BP entry for ZSCAN26, is transferred from the mouse orthologue at 0.89 DNA-binding-domain identity and carries under 10 bits; it should not be used. Finally, because SCAN factors heterodimerize with one another, an occupied site may have been contacted by a partner's fingers rather than by those of the protein whose name is on the motif.",
  "caveats": "This entry is a structural class, not a motif: 26 proteins, 48 matrices, cohesion 0.39, and no consensus. A hit names one protein at best. Several matrices are low-complexity — an (AT)n tract for ZSCAN16 in CIS-BP, poly-C for ZNF444, poly-A for ZKSCAN2 — and should not be scanned at all. Eight of 19 HOCOMOCO models are ChIP-only, so the enriched sequence may be a partner's; ZNF165 in particular works as a SMAD3 cofactor. The CIS-BP ZSCAN26 model is a mouse transfer carrying under 10 bits. Because SCAN domains heterodimerize, occupancy may reflect a partner's fingers rather than the named protein's.",
  "refs": [
   {
@@ -65,5 +65,82 @@
    "pmid": "37971293",
    "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1999,
+   "finding": "The conserved 80-residue leucine-rich region at the N terminus of a subset of C2H2 zinc fingers, named the SCAN box, was shown to function as an oligomerization domain mediating self-association and association with other SCAN-bearing proteins, defining the subfamily by a dimerization module rather than by a shared site.",
+   "methods": "yeast two-hybrid, co-immunoprecipitation, in vitro association assays",
+   "confidence": "medium",
+   "pmids": [
+    "10567577"
+   ],
+   "open": "No DNA sequence was known for any SCAN protein, and it was unclear whether dimerization imposed any site architecture."
+  },
+  {
+   "year": 2004,
+   "finding": "ZNF165 was characterized as a cancer-testis antigen, expressed in testis and in several tumor types and eliciting antibodies in a minority of hepatocellular carcinoma patients, which is still the best-known fact about any member of this entry.",
+   "methods": "RT-PCR, real-time PCR, northern blot, western blot on patient sera",
+   "confidence": "medium",
+   "pmids": [
+    "15354214"
+   ]
+  },
+  {
+   "year": 2005,
+   "finding": "Annotation of the SCAN family established its architecture and genomics: a single SCAN domain combined variously with KRAB or SANT domains and 3 to 14 C2H2 fingers, with the genes clustered in tandem arrays and generating alternative isoforms.",
+   "methods": "comparative genome annotation",
+   "confidence": "medium",
+   "pmids": [
+    "16139965"
+   ],
+   "open": "Function was unknown for most of the family, and remains so for most members of this entry."
+  },
+  {
+   "year": 2006,
+   "finding": "The NMR structure of the MZF1 SCAN domain showed a domain-swapped dimer of five-helix monomers with helix 3 at the core of the interface and a dissociation constant near 600 nM, giving a physical model for SCAN-mediated dimerization across more than 60 human genes.",
+   "methods": "NMR spectroscopy, fluorescence polarization, pull-downs",
+   "confidence": "high",
+   "pmids": [
+    "16950398"
+   ],
+   "open": "Whether a SCAN dimer contacts two DNA half-sites, and with what spacing, was not tested and still has not been."
+  },
+  {
+   "year": 2016,
+   "finding": "Bulk surveys of C2H2 zinc fingers supplied the first motifs for most members of this entry, by inferring a recognition code from thousands of finger domains and by directly profiling 131 proteins, 78 of which had no prior model; the same work showed that the co-factors these proteins recruit are as diverse as their motifs.",
+   "methods": "bacterial one-hybrid, protein-binding microarrays, ChIP-seq, affinity purification-mass spectrometry",
+   "confidence": "high",
+   "pmids": [
+    "25690854",
+    "27852650"
+   ],
+   "open": "Motifs came from screens rather than from study of individual proteins, and almost none were confirmed at a functional target gene."
+  },
+  {
+   "year": 2020,
+   "finding": "ZNF165 was shown to act as a SMAD3 cofactor, with the KRAB zinc finger ZNF446 and TRIM27 as obligate components of the complex, and TRIM27 alone necessary for ZNF165-dependent transcription and tumor growth, so this factor's genomic signal reflects a complex rather than autonomous site recognition.",
+   "methods": "co-immunoprecipitation, ChIP-seq, RNA-seq, orthotopic xenografts",
+   "confidence": "high",
+   "pmids": [
+    "32515734"
+   ]
+  },
+  {
+   "year": 2026,
+   "finding": "Systematic characterization of poorly characterized human factors produced motifs for 177 of 332 targets and mapped 166 of them in cells, splitting them between promoter-enhancer binders that share conserved motif matches and factors that bind unique repeat sets in closed chromatin; most SCAN members have not yet been assigned to either behaviour.",
+   "methods": "multiple in vitro and in vivo binding assays; ChIP-seq in living cells",
+   "confidence": "medium",
+   "pmids": [
+    "42557334",
+    "42557260"
+   ]
+  }
+ ],
+ "open": [
+  "Whether SCAN-mediated dimerization imposes a dyadic site is unresolved: the domain is an obligate dimerization module and a few models here are compatible with two half-sites, but no member has been tested for half-site organization and most matrices are not inverted repeats.",
+  "When two different SCAN proteins heterodimerize it is not known whose fingers contact the DNA, so a ChIP-derived motif attributed to one member may record the specificity of its partner.",
+  "The two best ZSCAN16 models disagree completely, a 31-bit TGTTAACAGAGCCTC supported by methyl-SELEX against a pure (AT)n tract in CIS-BP, and nothing published says whether this is two binding modes or one unusable model.",
+  "Whether ZNF165 recognizes DNA directly at its genomic sites is open, since its transcriptional activity requires SMAD3, ZNF446 and TRIM27, and TRIM27 alone is necessary for that activity."
  ]
 }

@@ -9,7 +9,7 @@
     "LIN28B (cold-shock domain)"
   ],
   "short": "This is not a motif family. It is a warning label. The factors here have motifs that came out of RNA-binding proteins run through DNA assays, or out of inference, so the matrices filed under their names should be read with real caution. Three proteins are present - CPEB1, LIN28B and MBNL2, plus a generic MBNL archetype - across eight models, at cohesion 0.50. All three are bona fide RNA-binding proteins with well-mapped RNA elements, and for CPEB1 the DNA matrix is simply that RNA element with T written for U: its models read TTTTAT and AATAAAA, the cytoplasmic polyadenylation element and its own reverse complement. Scanning genomic DNA against these is usually a mistake. Read the RNA literature instead, and look up the RNA motif.",
-  "long": "## The factors\n\nThree proteins, eight models. MBNL1 is named in the definition but has no model here, and the \"and similar\" resolves to nothing further: the bucket is smaller than its label implies.\n\nCPEB1 was identified as the specificity factor for cytoplasmic polyadenylation during Xenopus oocyte maturation. It binds the cytoplasmic polyadenylation element, UUUUAU, in mRNA 3' untranslated regions using two RRMs and a ZZ zinc-binding domain that close on it in a fly-trap arrangement, and it lengthens poly(A) tails to control translation. MBNL2 is a muscleblind-like protein with tandem CCCH zinc fingers that read YGCY motifs - GC steps embedded in pyrimidines - in single-stranded pre-mRNA to control alternative splicing. LIN28B carries a cold-shock domain and a pair of CCHC zinc knuckles; the knuckles read a GGAG element in the preE loop of pre-let-7, the cold-shock domain contributes little sequence specificity, and the protein blocks let-7 maturation. Its documented nuclear activity is indirect: in neuroblastoma it occupies active promoters through protein-protein interaction with the zinc finger ZNF143.\n\n## The motif\n\nThere is no consensus. The reported aATAAAA is only the medoid, CIS-BP M03581.\n\nCPEB1 contributes three models: HOCOMOCO CPEB1.H14CORE.0.S.B reads TTTTAT (9.9 bits) and CPEB1.H14CORE.1.S.B reads TTTTATttTtTTt (15.1 bits), both from HT-SELEX alone at grade B, and CIS-BP M03581 reads AATAAAA (10.8 bits). TTTTAT is the CPE with T for U. ATAAAA is the exact reverse complement of TTTTAT, which is why those models agree at 0.94 - and it is also the whole problem in miniature. An RNA element is strand-specific; a DNA scan is not. Scan for the CPEB1 matrix and half your hits are reverse-complement copies that correspond to no RNA element at all.\n\nMBNL contributes three: CIS-BP M04659 (MBNL2) cGCtTcGCtT at 8.8 bits, HOCOMOCO MBNL2.H14CORE.0.B.B cGCTT at 8.3 bits from a protein-binding microarray alone at grade B, and the Vierstra archetype AC0360:MBNL:CCCH_ZF, tGCtTcGCtT. Those contain CGCT, a YGCY motif. A microarray presents double-stranded DNA, so a real duplex preference was measured - for a protein whose physiological target is single-stranded.\n\nLIN28B contributes two, CIS-BP M04663 and the Vierstra archetype AC0341:LIN28B:CSD, both reading CGCGATAtaaCaGCG at 16.6 and 15.9 bits. These are the most information-rich models here and the only ones with no match in any other family. Neither LIN28B's RNA specificity nor its documented nuclear mechanism predicts a 15-bp CG-flanked matrix, so do not read 16.6 bits of information as 16.6 bits of biological confidence.\n\nThere are four routes by which an RNA-binding protein acquires a DNA motif. First, direct DNA assay of a protein admitted to a transcription-factor census on the strength of a nucleic-acid-binding domain: HT-SELEX for CPEB1, a microarray for MBNL2. Second, inference by domain similarity, which propagates a measured matrix to relatives and across species. Third, indirect ChIP, where a protein tethered to chromatin by a partner yields the partner's motif. Fourth, archetype clustering, which merges similar matrices under a joint label.\n\n## Where it acts\n\nOn RNA, in every case: CPEB1 at cytoplasmic polyadenylation elements in mRNA 3' untranslated regions, MBNL2 at YGCY in introns and around regulated exons, LIN28B on pre-let-7 and target mRNAs. No validated genomic DNA element exists for any of the three. The arithmetic is decisive: TTTTAT and its reverse complement are expected roughly four million times in 3.1 Gb at human base composition, and GCTT about twenty million times. No threshold localises anything. Restricting a scan to transcribed sequence does not help: a DNA-space match is blind to which strand is transcribed, to whether the position survives splicing, and to whether it lies in the 3' untranslated region where CPEB1 works.\n\n## Biology and disease\n\nThe disease biology here is RNA biology. In myotonic dystrophy type 1, a CTG expansion produces CUG-repeat transcripts that recruit and sequester muscleblind proteins, and the resulting loss of MBNL activity misregulates splicing; that is a disease of an RNA element, which no DNA scan for an MBNL matrix would find. CPEB1 governs translational activation in oocyte maturation and local translation at synapses. LIN28B is an oncofetal factor overexpressed in neuroblastoma, where it potentiates MYCN-driven tumour formation partly by repressing let-7 and partly at promoters through ZNF143.\n\n## Reading a hit\n\nTreat a hit here as a red flag, not a result. Name the matrix, state which assay produced it - S is HT-SELEX and B is a protein-binding microarray in the HOCOMOCO model name - then ask which question you were answering. If you want to know whether the protein binds your sequence as RNA, take the RNA motif from an RNA motif compendium; large collections of RNA-binding specificities exist, and a CPEB1 or MBNL model from one is the right tool. If you want to know what bound your genomic site, discard these matrices and look at the next best hit.\n\nDo not over-correct. Proteins that genuinely bind both exist, and the founding example is in this atlas: TFIIIA/GTF3A binds the internal control region of the 5S rRNA gene as duplex DNA and also binds the 5S RNA transcript, a dual specificity described in 1980; reviews of dual DNA- and RNA-binding proteins document many more. An RNA-binding label is not automatically disqualifying. The test is whether a duplex-DNA measurement exists for your protein, whether the candidate site sits where that protein is known to act, and whether the genomic context makes sense at all. For the three proteins here, at least one of those answers is no.",
+  "long": "## The factors\n\nThree proteins, eight models. MBNL1 is named in the definition but has no model here, and the \"and similar\" resolves to nothing further: the bucket is smaller than its label implies.\n\nCPEB1 was identified as the specificity factor for cytoplasmic polyadenylation during Xenopus oocyte maturation [PMID:7954828]. It binds the cytoplasmic polyadenylation element, UUUUAU, in mRNA 3' untranslated regions using two RRMs and a ZZ zinc-binding domain that close on it in a fly-trap arrangement [PMID:24990967], and it lengthens poly(A) tails to control translation [PMID:7954828]. MBNL2 is a muscleblind-like protein with tandem CCCH zinc fingers that read YGCY motifs - GC steps embedded in pyrimidines - in single-stranded pre-mRNA to control alternative splicing [PMID:20071745]. LIN28B carries a cold-shock domain and a pair of CCHC zinc knuckles; the knuckles read a GGAG element in the preE loop of pre-let-7, the cold-shock domain contributes little sequence specificity, and the protein blocks let-7 maturation [PMID:22078496]. Its documented nuclear activity is indirect: in neuroblastoma it occupies active promoters through protein-protein interaction with the zinc finger ZNF143 [PMID:32601179].\n\n## The motif\n\nThere is no consensus. The reported aATAAAA is only the medoid, CIS-BP M03581.\n\nCPEB1 contributes three models: HOCOMOCO CPEB1.H14CORE.0.S.B reads TTTTAT (9.9 bits) and CPEB1.H14CORE.1.S.B reads TTTTATttTtTTt (15.1 bits), both from HT-SELEX alone at grade B [PMID:37971293], and CIS-BP M03581 reads AATAAAA (10.8 bits). TTTTAT is the CPE with T for U. ATAAAA is the exact reverse complement of TTTTAT, which is why those models agree at 0.94 - and it is also the whole problem in miniature. An RNA element is strand-specific; a DNA scan is not. Scan for the CPEB1 matrix and half your hits are reverse-complement copies that correspond to no RNA element at all.\n\nMBNL contributes three: CIS-BP M04659 (MBNL2) cGCtTcGCtT at 8.8 bits, HOCOMOCO MBNL2.H14CORE.0.B.B cGCTT at 8.3 bits from a protein-binding microarray alone at grade B, and the Vierstra archetype AC0360:MBNL:CCCH_ZF, tGCtTcGCtT. Those contain CGCT, a YGCY motif. A microarray presents double-stranded DNA, so a real duplex preference was measured - for a protein whose physiological target is single-stranded.\n\nLIN28B contributes two, CIS-BP M04663 and the Vierstra archetype AC0341:LIN28B:CSD, both reading CGCGATAtaaCaGCG at 16.6 and 15.9 bits. These are the most information-rich models here and the only ones with no match in any other family. Neither LIN28B's RNA specificity nor its documented nuclear mechanism predicts a 15-bp CG-flanked matrix [PMID:22078496,32601179], so do not read 16.6 bits of information as 16.6 bits of biological confidence.\n\nThere are four routes by which an RNA-binding protein acquires a DNA motif. First, direct DNA assay of a protein admitted to a transcription-factor census [PMID:29425488] on the strength of a nucleic-acid-binding domain: HT-SELEX for CPEB1, a microarray for MBNL2. Second, inference by domain similarity, which propagates a measured matrix to relatives and across species [PMID:31133749]. Third, indirect ChIP, where a protein tethered to chromatin by a partner yields the partner's motif [PMID:32601179]. Fourth, archetype clustering, which merges similar matrices under a joint label [PMID:32728250].\n\n## Where it acts\n\nOn RNA, in every case: CPEB1 at cytoplasmic polyadenylation elements in mRNA 3' untranslated regions, MBNL2 at YGCY in introns and around regulated exons, LIN28B on pre-let-7 and target mRNAs [PMID:24990967,20071745,22078496]. No validated genomic DNA element exists for any of the three. The arithmetic is decisive: TTTTAT and its reverse complement are expected roughly four million times in 3.1 Gb at human base composition, and GCTT about twenty million times. No threshold localises anything. Restricting a scan to transcribed sequence does not help: a DNA-space match is blind to which strand is transcribed, to whether the position survives splicing, and to whether it lies in the 3' untranslated region where CPEB1 works.\n\n## Biology and disease\n\nThe disease biology here is RNA biology. In myotonic dystrophy type 1, a CTG expansion produces CUG-repeat transcripts that recruit and sequester muscleblind proteins, and the resulting loss of MBNL activity misregulates splicing [PMID:10970838,20071745]; that is a disease of an RNA element, which no DNA scan for an MBNL matrix would find. CPEB1 governs translational activation in oocyte maturation and local translation at synapses [PMID:7954828,24990967]. LIN28B is an oncofetal factor overexpressed in neuroblastoma, where it potentiates MYCN-driven tumour formation partly by repressing let-7 and partly at promoters through ZNF143 [PMID:32601179].\n\n## Reading a hit\n\nTreat a hit here as a red flag, not a result. Name the matrix, state which assay produced it - S is HT-SELEX and B is a protein-binding microarray in the HOCOMOCO model name - then ask which question you were answering. If you want to know whether the protein binds your sequence as RNA, take the RNA motif from an RNA motif compendium; large collections of RNA-binding specificities exist, and a CPEB1 or MBNL model from one is the right tool [PMID:23846655]. If you want to know what bound your genomic site, discard these matrices and look at the next best hit.\n\nDo not over-correct. Proteins that genuinely bind both exist, and the founding example is in this atlas: TFIIIA/GTF3A binds the internal control region of the 5S rRNA gene as duplex DNA and also binds the 5S RNA transcript, a dual specificity described in 1980 [PMID:7001457]; reviews of dual DNA- and RNA-binding proteins document many more [PMID:12364590,25269475]. An RNA-binding label is not automatically disqualifying. The test is whether a duplex-DNA measurement exists for your protein, whether the candidate site sits where that protein is known to act, and whether the genomic context makes sense at all. For the three proteins here, at least one of those answers is no.",
   "caveats": "Not a family, and not really a set of DNA motifs. Three RNA-binding proteins are represented by eight models at cohesion 0.50: CPEB1 from HT-SELEX alone, MBNL2 from a protein-binding microarray alone, both at HOCOMOCO grade B, and LIN28B from CIS-BP plus its Vierstra archetype. Two of the CPEB1 models are the cytoplasmic polyadenylation element UUUUAU written as TTTTAT and its own reverse complement, which is the difficulty in miniature: RNA elements are strand-specific and DNA scanning is not. MBNL1, named in the definition, has no model here. Do not build a consensus, do not scan genomic DNA against these matrices, and if you need a CPEB1 or MBNL specificity take it from an RNA motif resource.",
   "refs": [
     {
@@ -58,6 +58,11 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/25269475/"
     },
     {
+      "cite": "Lambert SA, Jolma A, Campitelli LF, et al. The Human Transcription Factors. Cell 2018;172:650-665.",
+      "pmid": "29425488",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29425488/"
+    },
+    {
       "cite": "Lambert SA, Yang AWH, Sasse A, et al. Similarity regression predicts evolution of transcription factor sequence specificity. Nat Genet 2019;51:981-989.",
       "pmid": "31133749",
       "url": "https://pubmed.ncbi.nlm.nih.gov/31133749/"
@@ -68,9 +73,98 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/32601179/"
     },
     {
+      "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
+      "pmid": "32728250",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+    },
+    {
       "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
       "pmid": "37971293",
       "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
     }
+  ],
+  "timeline": [
+    {
+      "year": 1980,
+      "finding": "The transcription factor that binds a control region inside the Xenopus 5S RNA gene is the same abundant oocyte protein that is stored in complex with 5S RNA, and 5S RNA inhibits 5S gene transcription by binding it. One protein can read a specific DNA element and a specific RNA.",
+      "methods": "In vitro transcription in oocyte nuclear extracts, binding and competition assays",
+      "confidence": "medium",
+      "pmids": [
+        "7001457"
+      ],
+      "open": "The structural basis of the dual specificity was unknown."
+    },
+    {
+      "year": 1994,
+      "finding": "CPEB is enriched by RNA affinity chromatography on the U-rich cytoplasmic polyadenylation element, cloned, and shown by immunodepletion and add-back to be required for cytoplasmic polyadenylation in Xenopus egg extracts. Its specificity is defined on RNA, through two RNA recognition motifs.",
+      "methods": "RNA affinity chromatography, cDNA cloning, immunodepletion and add-back",
+      "confidence": "high",
+      "pmids": [
+        "7954828"
+      ],
+      "open": "How the RNA recognition motifs select the CPE was not known."
+    },
+    {
+      "year": 2013,
+      "finding": "A systematic in vitro survey reports RNA motifs for RNA-binding proteins from 205 genes in 24 eukaryotes, finds them deeply conserved and inferable from RNA-binding-domain sequence, and shows they agree with in vivo RNA-binding data. RNA-binding proteins gain a motif resource of their own, separate from the DNA collections.",
+      "methods": "RNAcompete in vitro binding to designed RNA pools, comparison with in vivo RNA-binding data",
+      "confidence": "high",
+      "pmids": [
+        "23846655"
+      ]
+    },
+    {
+      "year": 2014,
+      "finding": "Solution structures of the tandem RRMs of CPEB1 and CPEB4, free and RNA-bound, show an unusual free-state arrangement that closes on the U-rich element on binding, a fly-trap mechanism behind sequence-specific RNA recognition.",
+      "methods": "NMR spectroscopy, functional assays",
+      "confidence": "high",
+      "pmids": [
+        "24990967"
+      ],
+      "open": "The structures explain RNA recognition; they do not address why selection on DNA recovers the same sequence."
+    },
+    {
+      "year": 2018,
+      "finding": "The human transcription factor census classes CPEB1, LIN28B and MBNL2 as transcription factors on the strength of high-throughput in vitro DNA motifs. It notes that the CPEB1 HT-SELEX motif could be an artefact of single-stranded DNA binding by a well-characterized RNA-binding protein, and that MBNL2 has HT-SELEX motifs although the family largely binds RNA. MBNL1 is excluded as an ssDNA/RNA-binding protein.",
+      "methods": "Expert curation of candidate transcription factors",
+      "confidence": "medium",
+      "pmids": [
+        "29425488"
+      ],
+      "open": "The single-stranded-DNA explanation was raised, not tested."
+    },
+    {
+      "year": 2020,
+      "finding": "Archetype clustering, introduced with the reference footprint atlas, groups matrices from several collections under the names of the factor groups they contain. The archetypes used here include AC0341:LIN28B:CSD and AC0360:MBNL:CCCH_ZF, filed alongside the DNA-binding families.",
+      "methods": "Motif clustering; DNase I footprinting in 243 cell and tissue types",
+      "confidence": "medium",
+      "pmids": [
+        "32728250"
+      ],
+      "open": "An archetype name records which matrices clustered, not whether the protein binds DNA in cells."
+    },
+    {
+      "year": 2020,
+      "finding": "In neuroblastoma cells LIN28B occupies active gene promoters through protein-protein interaction with the sequence-specific zinc finger ZNF143, and a LIN28B mutant that cannot block let-7 processing still potentiates MYCN-driven tumours. This is a documented route by which an RNA-binding protein appears in ChIP-seq at sites set by a partner's motif.",
+      "methods": "ChIP-seq, co-immunoprecipitation, in vivo tumour models",
+      "confidence": "medium",
+      "pmids": [
+        "32601179"
+      ]
+    },
+    {
+      "year": 2024,
+      "finding": "The HOCOMOCO collection, rebuilt in 2024 and since extended to v14, carries two CPEB1 models from HT-SELEX alone and an MBNL2 model from a protein-binding microarray alone, all at grade B: none of the RNA-binding-protein models here has support from a second assay type.",
+      "methods": "HT-SELEX and protein-binding-microarray motif discovery, expert curation, benchmarking",
+      "confidence": "medium",
+      "pmids": [
+        "37971293"
+      ]
+    }
+  ],
+  "open": [
+    "Whether the CPEB1 HT-SELEX models record duplex-DNA binding or the selection of single strands is unresolved. The human transcription factor census raised the single-stranded-DNA explanation and found no published evidence that CPEB1 binds DNA, while the TTTTAT models match the RNA element the protein is known to read.",
+    "The LIN28B matrix is not explained by anything known about the protein. CIS-BP and the Vierstra archetype give a 15-bp CG-flanked CGCGATAtaaCaGCG at about 16 bits, whereas Lin28 structures describe recognition of let-7 precursor loops by two separate domains, and the protein's documented promoter occupancy in neuroblastoma is indirect, through ZNF143.",
+    "Whether MBNL2's measured duplex-DNA preference means anything in cells is open. Protein-binding-microarray and HT-SELEX data recover a GCTT-containing preference on double-stranded DNA that is consistent with the protein's YGCY RNA specificity, but the work cited here establishes no cellular DNA-binding function for any muscleblind protein."
   ]
 }

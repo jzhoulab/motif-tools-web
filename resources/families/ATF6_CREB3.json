@@ -13,7 +13,7 @@
  ],
  "consensus": "TGACGTGG",
  "short": "This group collects the endoplasmic-reticulum-tethered basic region-leucine zipper factors ATF6 and ATF6B together with the CREB3 (OASIS/Luman) family - CREB3, CREB3L1, CREB3L2, CREB3L3 and CREB3L4 - and XBP1. All are made as inactive precursors and released by regulated proteolysis or, for XBP1, by IRE1-mediated mRNA splicing, so their activity reports stress in the secretory pathway rather than a signaling kinase. They bind an asymmetric, CRE-like element, TGACGTGG, equivalently CCACGTCA on the opposite strand, whose CCACG half is the ATF6-contacted part of the ER stress response element ERSE (CCAAT-N9-CCACG). Their targets are ER chaperones, ERAD components and secretory-pathway genes. The members are not separable by sequence, and several of their matrices are indistinguishable from an ordinary CRE or a CACGTG E-box.",
- "long": "## The factors\n\nTwo related sets of bZIP proteins share this element, and both are membrane-tethered. ATF6 (ATF6A) and ATF6B (CREB-RP) are type-II transmembrane proteins of the ER; accumulation of unfolded protein in the ER lumen releases them for transport to the Golgi, where site-1 and site-2 proteases cleave off a soluble nuclear fragment, the 50 kDa p50ATF6. The CREB3 family - CREB3 (Luman/LZIP), CREB3L1 (OASIS), CREB3L2 (BBF2H7), CREB3L3 (CREB-H) and CREB3L4 (AIbZIP) - is processed the same way, but the members are tissue-restricted: CREB3L1 in osteoblasts and other secretory cells, CREB3L2 in chondrocytes, CREB3L3 in liver and intestine, CREB3L4 in prostate, while CREB3, ATF6 and ATF6B are broad. XBP1 groups here by motif but is produced differently: IRE1 excises 26 nucleotides from its mRNA, shifting the reading frame to yield the active bZIP XBP1s. Because the bZIP domains are closely related, all of these proteins dimerize with one another to varying degrees, and ATF6-XBP1s heterodimers are documented.\n\n## The motif\n\nThe element is best written as the 8 bp TGACGTGG, or CCACGTCA reading the other strand. It is asymmetric: one half is the CRE half-site TGACG, the other is CCACG (CGTGG on the top strand), so a single subunit reads a CRE-like half and the other reads a G-rich half. The functional promoter element in which ATF6 acts is composite. The ER stress response element ERSE has the consensus CCAAT-N9-CCACG, and p50ATF6 binds CCACG only when the general factor NF-Y occupies the CCAAT box nine bases away; a second element, ERSE-II, has the shorter arrangement ATTGG-N-CCACG and is also ATF6-dependent. The mammalian UPRE, used in reporter work, is the TGACGTG(G/A) core alone. The 26 models collected here give a consensus of GGTGACGTGGC, with the highest-information examples (JASPAR ATF6 MA1466.2, CIS-BP ATF6 and ATF6B) reading TGATGACGTGGCA. Members are not distinguishable: the ATF6, ATF6B, CREB3, CREB3L3, CREB3L4 and XBP1 models sit above 0.95 similarity to one another, and the Vierstra archetype AC0633 is named CREB3L/XBP precisely because their motifs clustered. Two kinds of drift within the family matter in practice. Some entries collapse to a plain CRE - the HOCOMOCO ATF6A HT-SELEX model is TGATGACGTCAT and JASPAR CREB3L4 MA1475.2 is GTGACGTCA - and are then indistinguishable from CREB/ATF. Others collapse to a CACGTG E-box - JASPAR Creb3l2 MA0608.1 is GCCACGTGT and the CIS-BP CREB3L1 model is TGCCACGTGTAC - and are then indistinguishable from USF, MITF or TFE3 motifs. Both drifts follow from the shared ACGT core.\n\n## Where it acts\n\nThis family works mainly at promoters, and its canonical targets are the ER chaperone and quality-control genes: HSPA5 (GRP78/BiP), HSP90B1 (GRP94), CALR, and ERAD components including HERPUD1, SEL1L and EDEM1. These promoters are CpG-island-associated and the elements are promoter-proximal rather than distributed across enhancers, which distinguishes this family's genomic distribution from AP-1. XBP1s occupancy is nonetheless condition- and cell-type-specific, with distinct target networks in different tissues, so the shared motif does not imply a shared target set. The obligate partner for ERSE function is NF-Y at the CCAAT box; ATF6 and XBP1s also co-occupy UPR promoters with ATF4, whose amino-acid response elements lie at overlapping loci. CREB3-family factors additionally act at secretory-pathway and lipid-metabolism promoters outside the classical chaperone set.\n\n## Biology and disease\n\nThese factors implement the transcriptional arm of the unfolded protein response and, more broadly, adjust secretory capacity to demand. XBP1 is required for plasma cell differentiation, the extreme case of secretory expansion, and Xbp1-null mice also fail in hepatocyte development. CREB3L1/OASIS is required for bone formation in mice, and biallelic CREB3L1 loss causes a recessive form of osteogenesis imperfecta in humans. CREB3L2 is the 3-prime partner of the recurrent FUS-CREB3L2 fusion that defines low-grade fibromyxoid sarcoma, in which the CREB3L2 bZIP supplies DNA binding to a chimeric activator. Biallelic ATF6 variants, including multi-exon deletions, cause achromatopsia with foveal hypoplasia, a phenotype that localizes an ER-stress transducer to cone photoreceptor development. Prolonged signaling through this arm, with ATF4 and CHOP, drives apoptosis rather than adaptation.\n\n## Reading a hit\n\nA TGACGTGG match is a reasonable family call and no kind of member call: ATF6, ATF6B, CREB3, CREB3L1 to CREB3L4 and XBP1 are interchangeable at this resolution, and only expression data can narrow it. Before trusting the call, check which half-sites you actually matched. If the 3-prime half is GTCA rather than GTGG, you have a plain CRE and CREB/ATF is at least as likely; if the match is CACGTG with no TGAC half, you have an E-box and the USF/MITF/TFE families are better explanations. A functional ATF6 site normally comes with context: look for a CCAAT box about nine bases away (ERSE) or an ATTGG one base away (ERSE-II), and for promoter proximity. All ten HOCOMOCO models here carry in vitro evidence in their code (S or M), which supports direct binding, but three members - CREB3L1, CREB3L2 and CREB3L4 - also contribute truncated models such as ACGTGG and ACGTGGC that will match far too often to interpret on their own.",
+ "long": "## The factors\n\nTwo related sets of bZIP proteins share this element, and both are membrane-tethered. ATF6 (ATF6A) and ATF6B (CREB-RP) are type-II transmembrane proteins of the ER; accumulation of unfolded protein in the ER lumen releases them for transport to the Golgi, where site-1 and site-2 proteases cleave off a soluble nuclear fragment, the 50 kDa p50ATF6 [PMID:10564271,11163209]. The CREB3 family - CREB3 (Luman/LZIP), CREB3L1 (OASIS), CREB3L2 (BBF2H7), CREB3L3 (CREB-H) and CREB3L4 (AIbZIP) - is processed the same way, but the members are tissue-restricted: CREB3L1 in osteoblasts and other secretory cells, CREB3L2 in chondrocytes, CREB3L3 in liver and intestine, CREB3L4 in prostate, while CREB3, ATF6 and ATF6B are broad [PMID:31334233]. XBP1 groups here by motif but is produced differently: IRE1 excises 26 nucleotides from its mRNA, shifting the reading frame to yield the active bZIP XBP1s [PMID:11779464]. Because the bZIP domains are closely related, all of these proteins dimerize with one another to varying degrees, and ATF6-XBP1s heterodimers are documented.\n\n## The motif\n\nThe element is best written as the 8 bp TGACGTGG, or CCACGTCA reading the other strand [PMID:10856300]. It is asymmetric: one half is the CRE half-site TGACG, the other is CCACG (CGTGG on the top strand), so a single subunit reads a CRE-like half and the other reads a G-rich half. The functional promoter element in which ATF6 acts is composite. The ER stress response element ERSE has the consensus CCAAT-N9-CCACG [PMID:9837962], and p50ATF6 binds CCACG only when the general factor NF-Y occupies the CCAAT box nine bases away [PMID:11112790]; a second element, ERSE-II, has the shorter arrangement ATTGG-N-CCACG and is also ATF6-dependent [PMID:11112790]. The mammalian UPRE, used in reporter work, is the TGACGTG(G/A) core alone [PMID:11779464]. The 26 models collected here give a consensus of GGTGACGTGGC, with the highest-information examples (JASPAR ATF6 MA1466.2, CIS-BP ATF6 and ATF6B) reading TGATGACGTGGCA. Members are not distinguishable: the ATF6, ATF6B, CREB3, CREB3L3, CREB3L4 and XBP1 models sit above 0.95 similarity to one another, and the Vierstra archetype AC0633 is named CREB3L/XBP precisely because their motifs clustered. Two kinds of drift within the family matter in practice. Some entries collapse to a plain CRE - the HOCOMOCO ATF6A HT-SELEX model is TGATGACGTCAT and JASPAR CREB3L4 MA1475.2 is GTGACGTCA - and are then indistinguishable from CREB/ATF. Others collapse to a CACGTG E-box - JASPAR Creb3l2 MA0608.1 is GCCACGTGT and the CIS-BP CREB3L1 model is TGCCACGTGTAC - and are then indistinguishable from USF, MITF or TFE3 motifs. Both drifts follow from the shared ACGT core.\n\n## Where it acts\n\nThis family works mainly at promoters, and its canonical targets are the ER chaperone and quality-control genes: HSPA5 (GRP78/BiP), HSP90B1 (GRP94), CALR [PMID:9837962], and ERAD components including HERPUD1, SEL1L and EDEM1. These promoters are CpG-island-associated and the elements are promoter-proximal rather than distributed across enhancers, which distinguishes this family's genomic distribution from AP-1. XBP1s occupancy is nonetheless condition- and cell-type-specific, with distinct target networks in different tissues [PMID:17612490], so the shared motif does not imply a shared target set. The obligate partner for ERSE function is NF-Y at the CCAAT box; ATF6 and XBP1s also co-occupy UPR promoters with ATF4, whose amino-acid response elements lie at overlapping loci. CREB3-family factors additionally act at secretory-pathway and lipid-metabolism promoters outside the classical chaperone set [PMID:31334233].\n\n## Biology and disease\n\nThese factors implement the transcriptional arm of the unfolded protein response and, more broadly, adjust secretory capacity to demand. XBP1 is required for plasma cell differentiation, the extreme case of secretory expansion [PMID:11460154], and Xbp1-null mice also fail in hepatocyte development. CREB3L1/OASIS is required for bone formation in mice [PMID:19767743], and biallelic CREB3L1 loss causes a recessive form of osteogenesis imperfecta in humans [PMID:31207160]. CREB3L2 is the 3-prime partner of the recurrent FUS-CREB3L2 fusion that defines low-grade fibromyxoid sarcoma [PMID:21406083], in which the CREB3L2 bZIP supplies DNA binding to a chimeric activator. Biallelic ATF6 variants, including multi-exon deletions, cause achromatopsia with foveal hypoplasia [PMID:32271167], a phenotype that localizes an ER-stress transducer to cone photoreceptor development. Prolonged signaling through this arm, with ATF4 and CHOP, drives apoptosis rather than adaptation [PMID:23624402].\n\n## Reading a hit\n\nA TGACGTGG match is a reasonable family call and no kind of member call: ATF6, ATF6B, CREB3, CREB3L1 to CREB3L4 and XBP1 are interchangeable at this resolution, and only expression data can narrow it. Before trusting the call, check which half-sites you actually matched. If the 3-prime half is GTCA rather than GTGG, you have a plain CRE and CREB/ATF is at least as likely; if the match is CACGTG with no TGAC half, you have an E-box and the USF/MITF/TFE families are better explanations. A functional ATF6 site normally comes with context: look for a CCAAT box about nine bases away (ERSE) or an ATTGG one base away (ERSE-II), and for promoter proximity. All ten HOCOMOCO models here carry in vitro evidence in their code (S or M), which supports direct binding, but three members - CREB3L1, CREB3L2 and CREB3L4 - also contribute truncated models such as ACGTGG and ACGTGGC that will match far too often to interpret on their own.",
  "caveats": "The family is internally cohesive, but its motif is the least distinctive in the bZIP set because it is built on an ACGT core shared with the CRE and with CACGTG E-boxes. Several matrices in this collection have drifted to one or the other: two read as plain CREs and two as E-boxes, so an unqualified hit may not even be in the right family. A match also does not tell you which of the eight proteins is bound, nor that any of them is expressed, nor whether the ER stress pathway is active. Because ATF6 needs NF-Y at a CCAAT box to work at ERSE, an isolated CCACG with no CCAAT nearby is weak evidence of a functional UPR element.",
  "refs": [
   {
@@ -25,6 +25,16 @@
    "cite": "Haze K, Yoshida H, Yanagi H, et al. Mammalian transcription factor ATF6 is synthesized as a transmembrane protein and activated by proteolysis in response to endoplasmic reticulum stress. Mol Biol Cell 1999;10:3787-99.",
    "pmid": "10564271",
    "url": "https://pubmed.ncbi.nlm.nih.gov/10564271/"
+  },
+  {
+   "cite": "Wang Y, Shen J, Arenzana N, et al. Activation of ATF6 and an ATF6 DNA binding site by the endoplasmic reticulum stress response. J Biol Chem 2000;275:27013-20.",
+   "pmid": "10856300",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10856300/"
+  },
+  {
+   "cite": "Ye J, Rawson RB, Komuro R, et al. ER stress induces cleavage of membrane-bound ATF6 by the same proteases that process SREBPs. Mol Cell 2000;6:1355-64.",
+   "pmid": "11163209",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/11163209/"
   },
   {
    "cite": "Kokame K, Kato H, Miyata T. Identification of ERSE-II, a new cis-acting element responsible for the ATF6-dependent mammalian unfolded protein response. J Biol Chem 2001;276:9199-205.",
@@ -76,5 +86,92 @@
    "pmid": "32271167",
    "url": "https://pubmed.ncbi.nlm.nih.gov/32271167/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1998,
+   "finding": "Promoter analysis of GRP78, GRP94 and calreticulin defines the ER stress response element ERSE, CCAAT-N9-CCACG, and a yeast one-hybrid screen on it isolates the bZIP protein ATF6.",
+   "methods": "Promoter mutagenesis and reporters, yeast one-hybrid screening",
+   "confidence": "medium",
+   "pmids": [
+    "9837962"
+   ],
+   "open": "Whether ATF6 bound the element directly, and how ER stress activated it, were unknown."
+  },
+  {
+   "year": 1999,
+   "finding": "ATF6 is made as a 90 kDa type-II transmembrane protein of the ER, and ER stress converts it to a soluble nuclear 50 kDa form by proteolysis.",
+   "methods": "Immunoblotting, subcellular localization, truncation mutants",
+   "confidence": "medium",
+   "pmids": [
+    "10564271"
+   ],
+   "open": "The protease was not identified."
+  },
+  {
+   "year": 2000,
+   "finding": "ATF6 is shown to bind DNA directly at its own consensus site, related to but distinct from the CREB site, and the cleavage that releases ATF6 is shown to be carried out by the Golgi proteases S1P and S2P that process SREBPs.",
+   "methods": "In vitro DNA binding, reporter assays, protease-deficient cell lines",
+   "confidence": "high",
+   "pmids": [
+    "10856300",
+    "11163209"
+   ]
+  },
+  {
+   "year": 2001,
+   "finding": "ERSE-II, ATTGG-N-CCACG, is defined as a second ATF6-dependent element; separately, XBP1 is shown to be induced by ATF6 and spliced by IRE1 to give the active factor, which acts on the UPRE TGACGTG(G/A).",
+   "methods": "Reporter assays, mRNA splicing analysis",
+   "confidence": "high",
+   "pmids": [
+    "11112790",
+    "11779464"
+   ],
+   "open": "How ATF6 and XBP1s divide targets between ERSE, ERSE-II and UPRE was not resolved."
+  },
+  {
+   "year": 2001,
+   "finding": "XBP1 is required for the differentiation of B cells into plasma cells, tying this motif family to secretory-cell specialization rather than stress alone.",
+   "methods": "Lymphoid chimeras from Xbp1-deficient cells",
+   "confidence": "medium",
+   "pmids": [
+    "11460154"
+   ]
+  },
+  {
+   "year": 2007,
+   "finding": "Genome-wide XBP1 occupancy separates a core ER-maintenance target set from cell-type- and condition-specific targets, and XBP1 regulates functionally distinct targets through different sequence motifs.",
+   "methods": "ChIP-chip, expression profiling",
+   "confidence": "medium",
+   "pmids": [
+    "17612490"
+   ],
+   "open": "Which non-UPRE motifs XBP1 uses directly, and which reflect partners, was left open."
+  },
+  {
+   "year": 2009,
+   "finding": "CREB3L1/OASIS-null mice are severely osteopenic; OASIS activates Col1a1 through a UPRE-like sequence, extending the motif from stress response to a developmental secretory program.",
+   "methods": "Mouse knockout, promoter analysis",
+   "confidence": "medium",
+   "pmids": [
+    "19767743"
+   ]
+  },
+  {
+   "year": 2020,
+   "finding": "Human loss-of-function alleles confirm member-specific roles: biallelic CREB3L1 mutation causes osteogenesis imperfecta, and ATF6 multi-exon deletions cause achromatopsia.",
+   "methods": "Family sequencing, functional assays of recombinant ATF6",
+   "confidence": "medium",
+   "pmids": [
+    "31207160",
+    "32271167"
+   ],
+   "open": "Why a broadly expressed ER-stress transducer is required specifically in cones is unexplained."
+  }
+ ],
+ "open": [
+  "Whether the CRE-like and E-box-like matrices recorded for some members are selection artifacts or genuine alternative specificities is unresolved: the HOCOMOCO ATF6A HT-SELEX model and JASPAR CREB3L4 MA1475.2 read as the plain CRE TGACGTCA, while JASPAR Creb3l2 MA0608.1 and the CIS-BP CREB3L1 model read as CACGTG E-boxes, so the same proteins are represented by matrices pointing to two different neighboring families.",
+  "Which of XBP1's cell-type-specific targets are bound directly through the UPRE, and which through other motifs or partners, is open; genome-wide XBP1 occupancy found different motifs at functionally distinct target sets.",
+  "Why loss of ATF6, which is broadly expressed and shares its motif with ATF6B and XBP1s, causes a disease confined to cone photoreceptors is not explained; ATF6B transcripts are also present in cones, so simple redundancy does not account for it."
  ]
 }

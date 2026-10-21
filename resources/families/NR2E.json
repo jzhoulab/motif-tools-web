@@ -12,9 +12,9 @@
   "NR2E group"
  ],
  "consensus": "AAGTCA",
- "short": "NR2E is a small orphan nuclear-receptor group with two human members: NR2E1 (TLX, the homolog of Drosophila tailless) and NR2E3 (PNR, photoreceptor-specific nuclear receptor). Unusually for the superfamily, they prefer the hexamer AAGTCA rather than the AGGTCA half-site read by most nuclear receptors, a switch traced to a residue in the P-box of the recognition helix; the fuller models add a 5' A/T-rich extension and a tandem repeat of the core. The two factors are almost never co-expressed: TLX maintains neural stem and progenitor cells in the forebrain, while PNR acts in rod photoreceptors with CRX and NRL. NR2E3 mutations cause enhanced S-cone syndrome, a retinal cell-fate disorder.",
- "long": "## The factors\n\nNR2E is a two-member orphan group within the nuclear receptor superfamily: NR2E1, usually called TLX (the vertebrate homolog of *Drosophila* tailless), and NR2E3, usually called PNR (photoreceptor-specific nuclear receptor). Both have the canonical receptor layout — a short N-terminal region, a DNA-binding domain (DBD) built from two zinc-coordinating modules with a C-terminal extension, and a ligand-binding domain. No endogenous ligand is established for either, which is why they remain formally orphan. The two are expressed in almost non-overlapping places. TLX is confined to the developing forebrain and to adult neural stem and progenitor cells in the subventricular zone and dentate gyrus, where it maintains the undifferentiated state; PNR is essentially retina-specific, restricted to rod photoreceptors, where it works downstream of NRL and alongside CRX. Neither is broadly expressed, and neither has a large paralogue set — with two genes, this is one of the smallest nuclear-receptor groups in the human genome. TLX represses target genes through the atrophin/LSD1 and HDAC corepressor machinery; PNR can both activate rod genes and repress cone genes, depending on context and partner.\n\n## The motif\n\nThe NR2E group is unusual in the superfamily for what it reads. Most nuclear receptors recognize the hexamer AGGTCA; tailless and PNR instead prefer AAGTCA, and the switch has been traced to a subclass-specific residue in the P-box, the part of the recognition helix that reads the core. The consensus given here, AAGTCA with a 5' A/T-rich extension (i.e. AAAGTCAA in the fuller models), reflects that. This is where the literature disagrees with itself, and with some database annotation: the group is frequently described as binding \"AAGGTCA monomeric sites\", which is the ordinary extended half-site. The difference is one base in the core, and the in vitro selection data assembled here fall on the AAGTCA side, including a tandem form AAGTCAATAAGTCA from HT-SELEX. Both renderings are in print; the shorter core is the better supported one for these two proteins specifically.\n\nThe family is loosely cohesive (0.67, low for this atlas). Models split into an AAGTCA-centered set (the HOCOMOCO NR2E1 in vitro entries, JASPAR Nr2e1, two Vierstra archetypes) and a second set centered on GGGATCA/AAAGATCA. One CIS-BP entry labelled NR2E1 (M02394_2.00, GAGGTCA) is flagged here as a probable member of the RXR-heterodimer family instead, and the JASPAR profile Nr2e3 (MA0164.2) has a consensus (AAGCTT) that resembles nothing else in the family. Work reported for NR2E3 indicates it binds only dimeric arrangements, while NR2E1 tolerates both monomeric and dimeric sites — a real difference between the two, but not one you can read off a single match.\n\n## Where it acts\n\nBecause both factors are cell-type restricted, so is the useful signal. PNR sites cluster at rod photoreceptor gene promoters and enhancers, typically adjacent to CRX (the OTX-family site) and NRL (a Maf-family site), and PNR physically interacts with CRX through its DBD. TLX sites are found at neural stem cell and cell-cycle genes, including *PTEN* and *CDKN1A*, in forebrain progenitors. Neither motif is CpG-island associated. The bare AAGTCA hexamer is far too short to be informative on its own; at any usable threshold a 6-mer occurs hundreds of thousands of times in the human genome, so only the extended or tandem forms are worth scanning.\n\n## Biology and disease\n\n*NR2E3* mutations cause enhanced S-cone syndrome (Goldmann-Favre syndrome), in which S-cone photoreceptors are overproduced at the expense of rods — a cell-fate disorder rather than a simple degeneration — and also account for a share of autosomal recessive retinitis pigmentosa. The naturally occurring *rd7* mouse carries an *Nr2e3* mutation and reproduces the phenotype, and gene supplementation in that model is an active therapeutic line. Disease-associated substitutions in the NR2E3 DBD impair both dimerization and the interaction with CRX, which is consistent with a dimer-only binding mode. *Nr2e1*-null mice have a defective limbic system, with a hypoplastic amygdala and cortical and hypothalamic abnormalities, aggressive behavior, and impaired maintenance of adult neural stem cells.\n\n## Reading a hit\n\nAn NR2E match should be read cautiously. The core is short, the family is only loosely cohesive, and the two members are almost never co-expressed, so context does most of the work: a TLX call in retina or a PNR call in brain is almost certainly wrong regardless of motif score. Nothing in the sequence distinguishes NR2E1 from NR2E3, and the AAGTCA core overlaps the AGGTCA half-site used by much of the nuclear receptor superfamily, so a permissive scan will pull in ESRRA, NR4A, NR5A and RXR-partner sites. Prefer the extended or tandem models, and prefer the HOCOMOCO entries with in vitro evidence codes (`S`, `SM`) over the archetype and ChIP-derived profiles. Treat the two Vierstra archetypes whose consensus is GGGATCA or AAAGATCA as separate observations that happen to be labelled NR2E rather than as confirmation of the AAGTCA site; archetypes are named after the majority of the factor labels that clustered, not after a demonstrated binding protein.",
- "caveats": "This is a weak family to call from sequence. The core is a 6-mer, family cohesion is only 0.67, and the assigned motifs split into an AAGTCA-centered set and a GGGATCA/AAAGATCA set. One CIS-BP entry labelled NR2E1 is flagged here as belonging with the RXR heterodimers, and the JASPAR Nr2e3 profile does not resemble the rest of the family. NR2E1 and NR2E3 are not separable by motif, but they are nearly non-overlapping in expression, so tissue is the more informative discriminator. Note also that the group is often described as binding AAGGTCA; the in vitro data here favor AAGTCA, one base shorter in the core.",
+ "short": "NR2E is a small orphan nuclear-receptor group with two human members: NR2E1 (TLX, the homolog of Drosophila tailless) and NR2E3 (PNR, photoreceptor-specific nuclear receptor). Unusually for the superfamily, they prefer the hexamer AAGTCA rather than the AGGTCA half-site read by most nuclear receptors, a switch traced to a residue in the P-box of the recognition helix; the fuller models add a 5' A/T-rich extension and a tandem repeat of the core. The two factors are expressed in different cell types: TLX regulates neural stem and progenitor cells in the forebrain and retina, while PNR acts in rod photoreceptors with CRX and NRL. NR2E3 mutations cause enhanced S-cone syndrome, a retinal cell-fate disorder.",
+ "long": "## The factors\n\nNR2E is a two-member orphan group within the nuclear receptor superfamily: NR2E1, usually called TLX (the vertebrate homolog of *Drosophila* tailless), and NR2E3, usually called PNR (photoreceptor-specific nuclear receptor) [PMID:8047143,10220376]. Both have the canonical receptor layout — a short N-terminal region, a DNA-binding domain (DBD) built from two zinc-coordinating modules with a C-terminal extension, and a ligand-binding domain. No endogenous ligand is established for either, which is why they remain formally orphan. The two are expressed in different cell types, although both act in the retina. TLX is expressed in the neuroepithelium of the developing brain and in adult neural stem and progenitor cells of the subventricular zone and dentate gyrus, where it maintains the undifferentiated state [PMID:8047143,14702088]; it is also expressed in the optic cup, in retinal progenitors and later in Muller glia and retinal astrocytes [PMID:10706625,15371513]. PNR is essentially retina-specific, restricted to rod photoreceptors, where it works downstream of NRL and alongside CRX [PMID:10220376,19823680]. Neither is broadly expressed, and neither has a large paralogue set — with two genes, this is one of the smallest nuclear-receptor groups in the human genome. TLX represses target genes through the atrophin/LSD1 and HDAC corepressor machinery [PMID:16702404,17873065,20123967]; PNR can both activate rod genes and repress cone genes, depending on context and partner [PMID:19823680].\n\n## The motif\n\nThe NR2E group is unusual in the superfamily for what it reads. Most nuclear receptors recognize the hexamer AGGTCA; tailless and PNR instead prefer AAGTCA, and the switch has been traced to a subclass-specific residue in the P-box, the part of the recognition helix that reads the core [PMID:8047143,10220376,18179707]. The consensus given here, AAGTCA with a 5' A/T-rich extension (i.e. AAAGTCAA in the fuller models), reflects that. This is where the literature disagrees with itself, and with some database annotation: the group is frequently described as binding \"AAGGTCA monomeric sites\", which is the ordinary extended half-site. The difference is one base in the core, and the in vitro selection data assembled here fall on the AAGTCA side, including a tandem form AAGTCAATAAGTCA from HT-SELEX. Both renderings are in print; the shorter core is the better supported one for these two proteins specifically.\n\nThe family is loosely cohesive (0.67, low for this atlas). Models split into an AAGTCA-centered set (the HOCOMOCO NR2E1 in vitro entries, JASPAR Nr2e1, two Vierstra archetypes) and a second set centered on GGGATCA/AAAGATCA. One CIS-BP entry labelled NR2E1 (M02394_2.00, GAGGTCA) is flagged here as a probable member of the RXR-heterodimer family instead, and the JASPAR profile Nr2e3 (MA0164.2) has a consensus (AAGCTT) that resembles nothing else in the family. Work reported for NR2E3 indicates it binds only dimeric arrangements, while NR2E1 tolerates both monomeric and dimeric sites [PMID:18179707] — a real difference between the two, but not one you can read off a single match.\n\n## Where it acts\n\nBecause both factors are cell-type restricted, so is the useful signal. PNR sites cluster at rod photoreceptor gene promoters and enhancers, typically adjacent to CRX (the OTX-family site) and NRL (a Maf-family site), and PNR physically interacts with CRX through its DBD [PMID:19823680]. TLX sites are found at neural stem cell and cell-cycle genes, including *PTEN* and *CDKN1A*, in neural stem cells and retinal progenitors [PMID:17873065,16702404]. Neither motif is CpG-island associated. The bare AAGTCA hexamer is far too short to be informative on its own; at any usable threshold a 6-mer occurs hundreds of thousands of times in the human genome, so only the extended or tandem forms are worth scanning.\n\n## Biology and disease\n\n*NR2E3* mutations cause enhanced S-cone syndrome (Goldmann-Favre syndrome), in which S-cone photoreceptors are overproduced at the expense of rods — a cell-fate disorder rather than a simple degeneration [PMID:10655056] — and also account for a share of autosomal recessive retinitis pigmentosa. The naturally occurring *rd7* mouse carries an *Nr2e3* mutation and reproduces the phenotype [PMID:34561487], and gene supplementation in that model is an active therapeutic line. Disease-associated substitutions in the NR2E3 DBD impair both dimerization and the interaction with CRX, which is consistent with a dimer-only binding mode [PMID:19823680]. *Nr2e1*-null mice have a defective limbic system, with a hypoplastic amygdala and cortical and hypothalamic abnormalities, aggressive behavior, and impaired maintenance of adult neural stem cells [PMID:9394001,14702088]. Their retinas are thin, overproduce S-cones and degenerate early, with progressive optic nerve degeneration and blindness [PMID:10706625,16702404].\n\n## Reading a hit\n\nAn NR2E match should be read cautiously. The core is short, the family is only loosely cohesive, and the two members are expressed in different cell types, so context does much of the work: a PNR call in brain is almost certainly wrong regardless of motif score [PMID:10220376]. The retina is the exception: TLX acts there in progenitors and glia and PNR in photoreceptors [PMID:15371513,10220376], so in retinal data only the cell type separates them. Nothing in the sequence distinguishes NR2E1 from NR2E3, and the AAGTCA core overlaps the AGGTCA half-site used by much of the nuclear receptor superfamily, so a permissive scan will pull in ESRRA, NR4A, NR5A and RXR-partner sites [PMID:31175293]. Prefer the extended or tandem models, and prefer the HOCOMOCO entries with in vitro evidence codes (`S`, `SM`) over the archetype and ChIP-derived profiles. Treat the two Vierstra archetypes whose consensus is GGGATCA or AAAGATCA as separate observations that happen to be labelled NR2E rather than as confirmation of the AAGTCA site; archetypes are named after the majority of the factor labels that clustered, not after a demonstrated binding protein.",
+ "caveats": "This is a weak family to call from sequence. The core is a 6-mer, family cohesion is only 0.67, and the assigned motifs split into an AAGTCA-centered set and a GGGATCA/AAAGATCA set. One CIS-BP entry labelled NR2E1 is flagged here as belonging with the RXR heterodimers, and the JASPAR Nr2e3 profile does not resemble the rest of the family. NR2E1 and NR2E3 are not separable by motif, but they are expressed in different cell types, so expression is the more informative discriminator — except in the retina, where both act and only the cell type (progenitors and glia for TLX, photoreceptors for PNR) separates them. Note also that the group is often described as binding AAGGTCA; the in vitro data here favor AAGTCA, one base shorter in the core.",
  "refs": [
   {
    "cite": "Yu RT, McKeown M, Evans RM, et al. Relationship between Drosophila gap gene tailless and a vertebrate nuclear receptor Tlx. Nature 1994;370:375-9.",
@@ -60,6 +60,114 @@
    "cite": "Shi Y, Chichung Lie D, Taupin P, et al. Expression and function of orphan nuclear receptor TLX in adult neural stem cells. Nature 2004;427:78-83.",
    "pmid": "14702088",
    "url": "https://pubmed.ncbi.nlm.nih.gov/14702088/"
+  },
+  {
+   "cite": "Zhang CL, Zou Y, Yu RT, et al. Nuclear receptor TLX prevents retinal dystrophy and recruits the corepressor atrophin1. Genes Dev 2006;20:1308-20.",
+   "pmid": "16702404",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/16702404/"
+  },
+  {
+   "cite": "Sun G, Yu RT, Evans RM, et al. Orphan nuclear receptor TLX recruits histone deacetylases to repress transcription and regulate neural stem cell proliferation. Proc Natl Acad Sci U S A 2007;104:15282-7.",
+   "pmid": "17873065",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17873065/"
+  },
+  {
+   "cite": "Sun G, Alzayady K, Stewart R, et al. Histone demethylase LSD1 regulates neural stem cell proliferation. Mol Cell Biol 2010;30:1997-2005.",
+   "pmid": "20123967",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20123967/"
+  },
+  {
+   "cite": "Yu RT, Chiang MY, Tanabe T, et al. The orphan nuclear receptor Tlx regulates Pax2 and is essential for vision. Proc Natl Acad Sci U S A 2000;97:2621-5.",
+   "pmid": "10706625",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10706625/"
+  },
+  {
+   "cite": "Miyawaki T, Uemura A, Dezawa M, et al. Tlx, an orphan nuclear receptor, regulates cell numbers and astrocyte development in the developing retina. J Neurosci 2004;24:8124-34.",
+   "pmid": "15371513",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15371513/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1994,
+   "finding": "Tlx is identified as the vertebrate homolog of the Drosophila gap gene tailless, expressed in embryonic brain neuroepithelium; in vitro, Tlx and Tll share a DNA-binding specificity unlike that of other nuclear receptors.",
+   "methods": "cDNA cloning, in situ expression, in vitro DNA binding, ectopic expression in fly embryos",
+   "confidence": "medium",
+   "pmids": [
+    "8047143"
+   ],
+   "open": "Which DBD residue set the unusual half-site preference was not known."
+  },
+  {
+   "year": 1997,
+   "finding": "Tlx-null mice are viable but have reduced limbic and rhinencephalic structures, including amygdala and dentate gyrus, and are abnormally aggressive.",
+   "methods": "Gene knockout, neuroanatomy, behavior",
+   "confidence": "medium",
+   "pmids": [
+    "9394001"
+   ]
+  },
+  {
+   "year": 1999,
+   "finding": "PNR (NR2E3) is cloned as a photoreceptor-restricted receptor with an unusual P-box (CNGCSG) that, despite DBD differences, recognizes a subset of TLX target sequences in vitro.",
+   "methods": "cDNA cloning, expression analysis, in vitro DNA binding",
+   "confidence": "medium",
+   "pmids": [
+    "10220376"
+   ]
+  },
+  {
+   "year": 2000,
+   "finding": "NR2E3 mutations are found in 94% of a cohort of enhanced S-cone syndrome probands, a recessive retinopathy marked by a gain of S-cone function, which points to a role for NR2E3 in photoreceptor fate.",
+   "methods": "Mutation screening of a patient cohort, retinal expression",
+   "confidence": "high",
+   "pmids": [
+    "10655056"
+   ]
+  },
+  {
+   "year": 2004,
+   "finding": "TLX maintains adult neural stem cells in an undifferentiated, proliferative state; TLX-null adult stem cells fail to proliferate and are rescued by re-expressing TLX.",
+   "methods": "FACS isolation, knockout cells, rescue, in vivo proliferation labeling",
+   "confidence": "medium",
+   "pmids": [
+    "14702088"
+   ]
+  },
+  {
+   "year": 2006,
+   "finding": "TLX is shown to repress Pten in retinal progenitors and to recruit the corepressor atrophin1; Tlx-null retinas are thin, overproduce S-cones and degenerate. HDAC3 and HDAC5 (2007) and LSD1 (2010) are later added as TLX corepressors at Pten and p21.",
+   "methods": "Knockout mice, ChIP, co-immunoprecipitation, knockdown",
+   "confidence": "medium",
+   "pmids": [
+    "16702404",
+    "17873065",
+    "20123967"
+   ]
+  },
+  {
+   "year": 2008,
+   "finding": "In the nematode orthologues, a subclass-specific P-box residue (Asp vs Asn at DBD position 19) partly sets AAGTCA versus AGGTCA preference, and the NR2E3-class protein binds only dimeric sites while the NR2E1 class binds monomers and dimers.",
+   "methods": "EMSA, site-directed mutagenesis (C. elegans FAX-1 and NHR-67)",
+   "confidence": "medium",
+   "pmids": [
+    "18179707"
+   ],
+   "open": "Shown for nematode proteins; the dimer-only rule for human NR2E3 is inferred by orthology."
+  },
+  {
+   "year": 2009,
+   "finding": "Disease-causing substitutions in the NR2E3 DBD impair homodimerization and CRX interaction in living cells, except an adRP-linked G56R mutant that still binds CRX and represses in trans.",
+   "methods": "BRET in transfected cells, reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "19823680"
+   ]
+  }
+ ],
+ "open": [
+  "Whether the NR2E receptors read AAGTCA or AGGTCA is not fully settled: biochemical work on tailless, TLX, PNR and their nematode orthologues points to AAGTCA, with a single P-box residue able to shift the preference to AGGTCA, while the family is widely annotated as binding AAGGTCA and one CIS-BP NR2E1 model (GAGGTCA) clusters with the RXR heterodimers instead.",
+  "What the GGGATCA/AAAGATCA-centered motifs labelled NR2E represent is unresolved: one CIS-BP NR2E3 model and three Vierstra archetypes share this core, which differs from the AAGTCA half-site described for TLX and PNR, and it has not been established whether it is a second binding mode or a labelling or assay artifact.",
+  "Whether human NR2E3 binds only dimeric sites is not established: the dimer-only rule comes from the nematode orthologue FAX-1, human NR2E3 has mainly been studied by cell-based dimerization and partner assays, and the JASPAR Nr2e3 profile (AAGCTT) resembles neither monomeric nor tandem AAGTCA sites."
  ]
 }

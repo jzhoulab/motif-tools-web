@@ -9,8 +9,8 @@
   "HMG-box superfamily (other)"
  ],
  "short": "This entry holds the HMG-box factors that are neither SOX nor TCF/LEF: HMG20A (iBRAF), HMG20B (BRAF35) and BBX (bobby sox homolog). They share only the fold. HMG20A and HMG20B are paralogous subunits of chromatin complexes - HMG20B of the LSD1-CoREST-HDAC complex that keeps neuronal genes off in non-neuronal cells, HMG20A of KMT2A/MLL complexes that turn them on - so their genomic distribution is largely set by whichever partner recruits the complex. BBX is a poorly characterized protein that groups phylogenetically with CIC rather than with SOX. The three measured motifs are unrelated to each other and to the SOX core, and this is the least coherent family in the HMG class; a hit here should be treated as a lead, not an identification.",
- "long": "## The factors\n\nThree proteins are collected here, and what they have in common is a single HMG box, not a site.\nHMG20B, originally named BRAF35 (BRCA2-associated factor 35), is a core subunit of the BHC\ncomplex that pairs LSD1 (KDM1A) and CoREST with histone deacetylases and represses neuronal\ngenes in non-neuronal cells. HMG20A, its paralogue, was named iBRAF for inhibitor of BRAF35: it\nopposes that complex and instead recruits KMT2A/MLL to drive neuronal gene expression, and it is\nalso found in a KMT2A-associated PHF5A-PHF14-HMG20A-RAI1 subcomplex. HMG20B has a separate\nmitotic function that depends on its interaction with the BRC repeats of BRCA2. Both are broadly\nexpressed. BBX is a larger, much less studied protein, broadly expressed with enrichment in the\ncentral nervous system, which phylogenetic analysis places with CIC (capicua) in an HMG-box\nsubfamily distinct from both SOX and TCF/LEF. The important structural point is that most HMG\nboxes are architectural rather than sequence-reading domains: the HMGB1/HMGB2 type binds and\nbends DNA with little sequence preference, and only a minority of the superfamily - SOX,\nTCF/LEF, CIC and a few others - has demonstrable sequence specificity. Nothing published\nestablishes that HMG20A or HMG20B selects a specific sequence in cells.\n\n## The motif\n\nThere is no single consensus for this family, which is why none is given. The four models here\ndisagree with each other; cohesion is 0.45, the lowest of the HMG-class families. BBX gives the\nmost informative model, and it is the family medoid: CIS-BP reports TGAACRVCGTTCA (15.1 bits)\nand the Vierstra archetype AC0363 independently reports TGAACRNYGTTCA (15.8 bits). These are the\nsame 13-base element - an inverted repeat, since TGAAC and GTTCA are reverse complements, with\nthree variable bases between them. The half-site resembles the TGAAT half of the dimeric,\npalindromic sites that appear in SOX models (Vierstra TGAATGTGCAGTCA, HOCOMOCO SOX1\nTGAATANCATTCAT), differing at one position, which is consistent with BBX reading DNA in the same\ngeneral way as other sequence-specific HMG boxes. HMG20A's single HOCOMOCO model,\nHM20A.H14CORE.0.SB.A, reads TCCCTAGGC (11.5 bits); its fourth field carries S, so it rests on\nHT-SELEX rather than on ChIP, and it is graded A. CCTAGG is itself palindromic but bears no\nrelation to the SOX or TCF/LEF core. The HMG20B model, CIS-BP M02487_2.00, is ATTATAT (10.5\nbits) and is inferred from the mouse protein at 94% DNA-binding-domain identity; a short AT-rich\nstring of this kind is what a non-sequence-specific HMG box tends to produce in a selection\nexperiment, and it should not be read as a recognition sequence.\n\n## Where it acts\n\nFor HMG20A and HMG20B the practical answer is: wherever the complex goes. LSD1-CoREST-HDAC is\nrecruited to neuronal gene promoters largely by REST binding its own RE1/NRSE element, and KMT2A\ncomplexes are recruited by their own targeting subunits; HMG20A and HMG20B come along as\nsubunits. Locations reported for them therefore track partner occupancy - neuronal gene\npromoters, pancreatic islet regulatory regions where HMG20A is required for beta cell\nmaturation, adipocyte loci where HMG20A acts through MEF2C, and KMT2A targets in pancreatic\ncancer stem cells. BBX has been mapped less. Its 13-base palindrome is specific by the standards\nof this atlas: with two degenerate inner positions, TGAACRVCGTTCA is expected only a few hundred\ntimes in a 3.1 Gb genome, against tens of thousands for the nine-base HMG20A model and millions\nfor a bare six-base HMG core.\n\n## Biology and disease\n\nHMG20B is required for repression of the neuronal program in non-neuronal cells and for\ncompletion of mitosis, and its splicing has been implicated in breast cancer; the HMG20A locus\nis a genome-wide-association signal for type 2 diabetes, and HMG20A is needed for functional\nmaturity of pancreatic beta cells, restrains adipogenesis through MEF2C, and supports the stem-\ncell state in pancreatic cancer. The HMG20A/HMG20B antagonism is a clean example of two\nparalogues with the same DNA-binding domain having opposite effects by virtue of the complexes\nthey join. BBX has been linked to phosphate homeostasis through regulation of FGF23 in bone, and\nis maternally expressed and CNS-enriched in zebrafish and mouse. None of the three has an\nestablished monogenic human disease.\n\n## Reading a hit\n\nTreat this family as a fold, not a motif: the models do not resemble one another and the family\ncohesion is 0.45. The BBX palindrome is worth taking seriously as a sequence - two databases\nderived it independently and it is long enough to be rare - but the label rests on in vitro\nselection with no structural or functional follow-up, so \"BBX site\" is provisional, and because\nthe half-sites resemble those of dimeric SOX sites you should exclude SOX before settling on\nBBX. An HMG20A match does not license the conclusion that HMG20A occupies the site: the HT-SELEX\nevidence supports \"this protein can bind this sequence\", while in cells HMG20A is a passenger in\nLSD1-CoREST and KMT2A complexes whose distribution is set by REST and other partners, so check\nfor an RE1/NRSE element nearby. The HMG20B model is mouse-inferred and low in information; do\nnot use it to call sites. More generally, a weak AT-rich match labelled with an HMG-box protein\nis more likely to reflect a shape preference than a recognition sequence.\n",
- "caveats": "Low confidence throughout. This is a fold-defined group with no shared consensus and the lowest cohesion in the HMG class (0.45) across only four models. The BBX 13-base palindrome is reproduced by two databases and is rare enough to be useful, but rests on in vitro selection alone and its half-sites overlap those of dimeric SOX sites. The HMG20A motif has HT-SELEX support, yet HMG20A acts as a subunit of LSD1-CoREST and KMT2A complexes, so genomic locations attributed to it may belong to REST or another recruiting factor. The HMG20B model is inferred from mouse at 94% DNA-binding-domain identity and is an uninformative AT-rich string.",
+ "long": "## The factors\n\nThree proteins are collected here, and what they have in common is a single HMG box, not a site.\nHMG20B, originally named BRAF35 (BRCA2-associated factor 35), is a core subunit of the BHC\ncomplex that pairs LSD1 (KDM1A) and CoREST with histone deacetylases and represses neuronal\ngenes in non-neuronal cells [PMID:12032298]. HMG20A, its paralogue, was named iBRAF for inhibitor of BRAF35: it\nopposes that complex and instead recruits KMT2A/MLL to drive neuronal gene expression [PMID:16227968], and it is\nalso found in a KMT2A-associated PHF5A-PHF14-HMG20A-RAI1 subcomplex [PMID:37709746]. HMG20B has a separate\nmitotic function that depends on its interaction with the BRC repeats of BRCA2 [PMID:21399666]. Both are broadly\nexpressed. BBX is a larger, much less studied protein, broadly expressed with enrichment in the\ncentral nervous system, which phylogenetic analysis places with CIC (capicua) in an HMG-box\nsubfamily distinct from both SOX and TCF/LEF [PMID:25079045]. The important structural point is that most HMG\nboxes are architectural rather than sequence-reading domains: the HMGB1/HMGB2 type binds and\nbends DNA with little sequence preference, and only a minority of the superfamily - SOX,\nTCF/LEF, CIC and a few others - has demonstrable sequence specificity [PMID:7774012]. Nothing published\nestablishes that HMG20A or HMG20B selects a specific sequence in cells.\n\n## The motif\n\nThere is no single consensus for this family, which is why none is given. The four models here\ndisagree with each other; cohesion is 0.45, the lowest of the HMG-class families. BBX gives the\nmost informative model, and it is the family medoid: CIS-BP reports TGAACRVCGTTCA (15.1 bits), the human HT-SELEX matrix of Yin et al. 2017,\nand the Vierstra archetype AC0363 reports TGAACRNYGTTCA (15.8 bits) [PMID:25215497,28473536,32728250]. These are the same 13-base element - an inverted repeat, since TGAAC and GTTCA are reverse complements, with three variable bases between them - but not two measurements of it: Vierstra archetypes are clusters of models compiled from existing collections [PMID:32728250], so AC0363 most likely re-renders the same in vitro data. The half-site resembles the TGAAT half of the dimeric,\npalindromic sites that appear in SOX models (Vierstra TGAATGTGCAGTCA, HOCOMOCO SOX1\nTGAATANCATTCAT), differing at one position, which is consistent with BBX reading DNA in the same\ngeneral way as other sequence-specific HMG boxes. HMG20A's single HOCOMOCO model,\nHM20A.H14CORE.0.SB.A, reads TCCCTAGGC (11.5 bits); its fourth field carries S, so it rests on\nHT-SELEX rather than on ChIP, and it is graded A. CCTAGG is itself palindromic but bears no\nrelation to the SOX or TCF/LEF core. The HMG20B model, CIS-BP M02487_2.00, is ATTATAT (10.5\nbits) and is inferred from the mouse protein at 94% DNA-binding-domain identity [PMID:25215497]; a short AT-rich\nstring of this kind is what a non-sequence-specific HMG box tends to produce in a selection\nexperiment, and it should not be read as a recognition sequence.\n\n## Where it acts\n\nFor HMG20A and HMG20B the practical answer is: wherever the complex goes. LSD1-CoREST-HDAC is\nrecruited to neuronal gene promoters largely by REST binding its own RE1/NRSE element [PMID:12032298], and KMT2A\ncomplexes are recruited by their own targeting subunits; HMG20A and HMG20B come along as\nsubunits. Locations reported for them therefore track partner occupancy - neuronal gene\npromoters, pancreatic islet regulatory regions where HMG20A is required for beta cell\nmaturation [PMID:29449530], adipocyte loci where HMG20A acts through MEF2C [PMID:36142473], and KMT2A targets in pancreatic\ncancer stem cells [PMID:37709746]. BBX has been mapped less. Its 13-base palindrome is specific by the standards\nof this atlas: with two degenerate inner positions, TGAACRVCGTTCA is expected only a few hundred\ntimes in a 3.1 Gb genome, against tens of thousands for the nine-base HMG20A model and millions\nfor a bare six-base HMG core.\n\n## Biology and disease\n\nHMG20B is required for repression of the neuronal program in non-neuronal cells and for\ncompletion of mitosis [PMID:12032298,21399666], and its splicing has been implicated in breast cancer [PMID:39731153]; the HMG20A locus\nis a genome-wide-association signal for type 2 diabetes, and HMG20A is needed for functional\nmaturity of pancreatic beta cells [PMID:29449530], restrains adipogenesis through MEF2C [PMID:36142473], and supports the stem-\ncell state in pancreatic cancer. The HMG20A/HMG20B antagonism is a clean example of two\nparalogues with the same DNA-binding domain having opposite effects by virtue of the complexes\nthey join. BBX has been linked to phosphate homeostasis through regulation of FGF23 in bone [PMID:39482539], and\nis maternally expressed and CNS-enriched in zebrafish and mouse [PMID:25079045]. None of the three has an\nestablished monogenic human disease.\n\n## Reading a hit\n\nTreat this family as a fold, not a motif: the models do not resemble one another and the family\ncohesion is 0.45. The BBX palindrome is worth taking seriously as a sequence - it is long enough to be rare - but its presence in two databases is not independent confirmation, and the label rests on in vitro selection with no structural or functional follow-up, so \"BBX site\" is provisional, and because\nthe half-sites resemble those of dimeric SOX sites you should exclude SOX before settling on\nBBX. An HMG20A match does not license the conclusion that HMG20A occupies the site: the HT-SELEX\nevidence supports \"this protein can bind this sequence\", while in cells HMG20A is a passenger in\nLSD1-CoREST and KMT2A complexes whose distribution is set by REST and other partners, so check\nfor an RE1/NRSE element nearby. The HMG20B model is mouse-inferred and low in information; do\nnot use it to call sites. More generally, a weak AT-rich match labelled with an HMG-box protein\nis more likely to reflect a shape preference than a recognition sequence.\n",
+ "caveats": "Low confidence throughout. This is a fold-defined group with no shared consensus and the lowest cohesion in the HMG class (0.45) across only four models. The BBX 13-base palindrome appears in two databases that most likely share one in vitro source, so they do not confirm each other; it is rare enough to be useful, but rests on in vitro selection alone and its half-sites overlap those of dimeric SOX sites. The HMG20A motif has HT-SELEX support, yet HMG20A acts as a subunit of LSD1-CoREST and KMT2A complexes, so genomic locations attributed to it may belong to REST or another recruiting factor. The HMG20B model is inferred from mouse at 94% DNA-binding-domain identity and is an uninformative AT-rich string.",
  "refs": [
   {
    "cite": "Hakimi MA, Bochar DA, Chenoweth J, et al. A core-BRAF35 complex containing histone deacetylase mediates repression of neuronal-specific genes. Proc Natl Acad Sci U S A 2002;99:7420-5.",
@@ -71,6 +71,94 @@
    "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
    "pmid": "32728250",
    "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  },
+  {
+   "cite": "Yin Y, Morgunova E, Jolma A, et al. Impact of cytosine methylation on DNA binding specificities of human transcription factors. Science 2017;356.",
+   "pmid": "28473536",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28473536/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 2002,
+   "finding": "BRAF35 (HMG20B) is purified as a subunit of the BHC complex, which joins LSD1 and CoREST to histone deacetylases and is recruited by REST to the RE1/NRSE element of neuronal genes; a point mutation in the BRAF35 HMG domain blocks REST-mediated repression.",
+   "methods": "Complex purification and mass spectrometry, chromatin immunoprecipitation, reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "12032298"
+   ],
+   "open": "The HMG domain mattered for repression, but no sequence preference was defined for BRAF35 itself."
+  },
+  {
+   "year": 2005,
+   "finding": "HMG20A, named iBRAF, is shown to antagonize BRAF35: it accumulates at neuronal gene promoters during differentiation, recruits the methyltransferase MLL and raises H3K4 trimethylation, activating the genes BRAF35 helps repress.",
+   "methods": "Chromatin immunoprecipitation, knockdown and overexpression in P19 cells",
+   "confidence": "medium",
+   "pmids": [
+    "16227968"
+   ]
+  },
+  {
+   "year": 2011,
+   "finding": "HMG20B acquires a function unrelated to transcription: it binds the BRC5 repeat of BRCA2, and its depletion blocks completion of cell division.",
+   "methods": "RNA interference, in vitro binding, peptide competition",
+   "confidence": "medium",
+   "pmids": [
+    "21399666"
+   ]
+  },
+  {
+   "year": 2017,
+   "finding": "HT-SELEX of human BBX gives a 13-base palindrome, TGAACGCCGTTCA, the only informative model in this group; the CIS-BP BBX model (TGAACRVCGTTCA) is the same matrix. A 2014 phylogenetic analysis had already placed BBX with CIC in an HMG-box subfamily separate from SOX and TCF/LEF.",
+   "methods": "HT-SELEX (as compiled in JASPAR and CIS-BP); earlier phylogenetics and expression analysis",
+   "confidence": "low",
+   "pmids": [
+    "28473536",
+    "25079045"
+   ],
+   "open": "No structure, no genomic occupancy data and no functional test of the proposed BBX site."
+  },
+  {
+   "year": 2018,
+   "finding": "HMG20A is linked to beta cell biology: it is expressed in human and mouse islets, reduced in islets from type 2 diabetic donors, needed for glucose-stimulated insulin secretion, and the diabetes-associated rs7119 variant lowers its expression in a reporter assay.",
+   "methods": "Expression profiling, knockdown in islets and cell lines, chromatin immunoprecipitation, reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "29449530"
+   ]
+  },
+  {
+   "year": 2020,
+   "finding": "Clustering human motif collections into archetypes keeps the BBX palindrome as its own archetype, AC0363, rather than folding it into the SOX or TCF/LEF clusters, which is the strongest evidence that it is a distinct element.",
+   "methods": "Genomic footprinting and motif clustering",
+   "confidence": "low",
+   "pmids": [
+    "32728250"
+   ],
+   "open": "Archetypes are clustered from the same motif collections, so this is not an independent measurement of the BBX site."
+  },
+  {
+   "year": 2023,
+   "finding": "HMG20A is found in a PHF5A-PHF14-HMG20A-RAI1 subcomplex that binds the histone methyltransferase KMT2A in pancreatic cancer stem cells, reinforcing the picture of HMG20A as a complex subunit rather than a site-selecting factor.",
+   "methods": "Proteomics, chromatin profiling, inhibitor and xenograft experiments",
+   "confidence": "medium",
+   "pmids": [
+    "37709746"
+   ]
+  },
+  {
+   "year": 2024,
+   "finding": "The first mammalian loss-of-function phenotype for BBX: Bbx-null and osteocyte-specific Bbx-deleted mice have raised serum FGF23, low serum phosphate and reduced bone mass, and BBX suppresses vitamin D-induced Fgf23 promoter activity.",
+   "methods": "Mouse knockouts, serum chemistry, promoter and interaction assays",
+   "confidence": "medium",
+   "pmids": [
+    "39482539"
+   ],
+   "open": "Whether BBX acts at the Fgf23 promoter through its own palindromic site or through its interaction with the vitamin D receptor was not resolved."
+  }
+ ],
+ "open": [
+  "Whether HMG20A and HMG20B select DNA sequences in cells at all is unresolved: HT-SELEX gives HMG20A a grade-A model for TCCCTAGGC, yet both proteins are documented as subunits of LSD1-CoREST and KMT2A complexes whose placement is set by REST and other targeting factors, and no ChIP-derived motif exists for either.",
+  "How BBX represses FGF23 is open: the mouse work shows both a vitamin D receptor interaction with ubiquitin-dependent BBX degradation and an effect on Fgf23 promoter activity, without establishing whether a BBX site in that promoter is occupied."
  ]
 }

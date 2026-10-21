@@ -10,7 +10,7 @@
  ],
  "consensus": "GCGCATGCGC",
  "short": "NRF1 (nuclear respiratory factor 1, also alpha-PAL) is a single-gene family whose DNA-binding domain belongs to no common fold class, its closest relatives being sea urchin P3A2 and Drosophila Erect wing. It binds as a homodimer to a palindrome, GCGCATGCGC, with each subunit contacting one GCGC half; motif models extend this to TGCGCATGCGC. The site contains two CpG dinucleotides in its most informative positions, so it is strongly associated with CpG-island promoters and is blocked by cytosine methylation. NRF1 sites sit in promoters of nuclear genes for mitochondrial proteins, including cytochrome c, cytochrome c oxidase subunits and TFAM, making NRF1 the main nuclear coordinator of mitochondrial biogenesis. It should not be confused with NFE2L1, also abbreviated Nrf1.",
- "long": "## The factors\n\nThis family has exactly one human member: NRF1, nuclear respiratory factor 1, also called alpha-PAL for \"alpha palindromic-binding protein\". It was defined functionally, by mutational and binding analysis of the somatic cytochrome *c* promoter, before it was cloned. Its DNA-binding domain lies in the N-terminal half of the protein and belongs to no previously described class; the closest relatives are the sea urchin developmental regulator P3A2 and the *Drosophila* protein Erect wing (EWG), and the three define a small, conserved family unrelated to zinc fingers, helix-turn-helix, bZIP or any other common fold. The C-terminal half, which carries the activation function, is divergent between the three. NRF1 binds as a homodimer and is broadly expressed; it is a housekeeping factor rather than a tissue-specific one, and its activity is modulated by phosphorylation of an N-terminal serine cluster and by coactivation from the PGC-1 family. Because there is one gene, the usual paralogue problem does not arise — but a nomenclature problem does, described under **Reading a hit**.\n\n## The motif\n\nNRF1 recognizes a palindrome, GCGCATGCGC, and the palindromic character is the defining feature: each subunit of the homodimer contacts one GCGC half, and the guanine contacts on the two strands mirror each other. The motif models in this collection extend it slightly, to an 11- or 12-mer — the HOCOMOCO and Vierstra consensus is TGCGCATGCGC — so the element is equally well described as a tandem pair of TGCGC half-sites separated by a single base. The palindrome is the older rendering; the extended repeat is what the matrices encode. Some models (JASPAR MA0506.3, CIS-BP M08177_2.00) place a C rather than an A/T at the central position, giving TGCGCCTGCGC, which reflects tolerance at the one position that is not part of either half-site.\n\nTwo features follow directly from the composition and matter in practice. First, the site contains two CpG dinucleotides, and both fall in the positions that carry the most information. Second, it is therefore methylation-sensitive: cytosine methylation within the site blocks NRF1 binding, and in cells lacking DNA methyltransferases NRF1 gains occupancy at sites it cannot bind in wild-type cells. NRF1 was the factor used to demonstrate this competition genome-wide, and it also scores as methylation-avoiding in systematic methyl-SELEX surveys. Family cohesion is 0.94, the highest tier in this atlas: all four models are effectively the same matrix.\n\n## Where it acts\n\nNRF1 sites are promoter elements, not distal enhancers, and they are strongly associated with CpG islands — which follows from the motif itself, since an unmethylated CpG-rich 10-mer is exactly what a CpG island is made of. The original targets were nuclear genes for mitochondrial proteins: somatic cytochrome *c*, cytochrome *c* oxidase subunits, a ubiquinone-binding subunit of the reductase complex, and the RNA component of RNase MRP, which functions in mitochondrial DNA replication. NRF1 also activates the promoter of *TFAM*, the mitochondrial transcription factor A gene, which is the direct mechanistic link between a nuclear promoter element and mitochondrial genome expression. Beyond respiratory genes, NRF1 sites occur in many broadly expressed promoters, frequently alongside GABP (historically NRF-2), SP1 and YY1 sites. An exact 10-mer of this composition is expected only a few thousand times in 3 Gb of uniform sequence, and because CpGs are depleted outside CpG islands, genuine matches concentrate in island promoters rather than being spread across the genome.\n\n## Biology and disease\n\nNRF1 is the central nuclear factor coordinating expression of the respiratory apparatus with the mitochondrial genome. Mouse *Nrf1* knockouts die at peri-implantation stages with depleted and unstable mitochondrial DNA, a phenotype consistent with loss of *Tfam* and related targets rather than with a single metabolic defect. Through *TFAM*, *TFB1M/TFB2M* and the mitochondrial ribosome and import machinery, NRF1 sets the capacity of oxidative phosphorylation, and its activity is the point at which PGC-1-family coactivators act during mitochondrial biogenesis in muscle and brown fat. The methylation dependence also gives NRF1 a role as a readout of the epigenome: in promoters that become hypermethylated, NRF1 occupancy is lost even though the sequence is intact, so changes in NRF1 target expression can reflect methylation change rather than any change in the factor.\n\n## Reading a hit\n\nThe most common error with this family is not motif-related at all, it is naming. \"NRF1\" in this atlas means nuclear respiratory factor 1 and nothing else. It is not NFE2L1, which is also routinely abbreviated Nrf1 and belongs to the CNC-bZIP antioxidant-response family; it is not NFE2L2/NRF2; and it is not NRF-2, which turned out to be GABP, an ETS-domain factor. A hit on GCGCATGCGC says nothing about antioxidant response elements or the KEAP1-NRF2 pathway.\n\nWith one gene in the family, a match is unusually close to a protein-level call, and the evidence supports direct binding: HOCOMOCO's NRF1.H14CORE.0.PS.A combines ChIP-seq with HT-SELEX at grade A, so this is not a ChIP-only inference. The 10-11-mer is long and information-rich enough that a strong match in a CpG-island promoter is genuinely suggestive. What a match does not tell you is occupancy, and here the gap is specific and checkable: because the site carries two CpGs and NRF1 will not bind a methylated site, a perfect match inside a methylated region is probably unbound, so check methylation state. Finally, the Vierstra archetype here is AC0555:NRF:Unknown: the class is recorded as unknown, and the label names clustered factor annotations, not a validated protein.",
+ "long": "## The factors\n\nThis family has exactly one human member: NRF1, nuclear respiratory factor 1, also called alpha-PAL for \"alpha palindromic-binding protein\". It was defined functionally, by mutational and binding analysis of the somatic cytochrome *c* promoter, before it was cloned [PMID:2166701]. Its DNA-binding domain lies in the N-terminal half of the protein and belongs to no previously described class; the closest relatives are the sea urchin developmental regulator P3A2 and the *Drosophila* protein Erect wing (EWG), and the three define a small, conserved family unrelated to zinc fingers, helix-turn-helix, bZIP or any other common fold [PMID:8253388]. The C-terminal half, which carries the activation function, is divergent between the three [PMID:8253388]. NRF1 binds as a homodimer [PMID:38055835] and is broadly expressed; it is a housekeeping factor rather than a tissue-specific one, and its activity is modulated by phosphorylation of an N-terminal serine cluster and by coactivation from the PGC-1 family [PMID:18391175]. Because there is one gene, the usual paralogue problem does not arise — but a nomenclature problem does, described under **Reading a hit**.\n\n## The motif\n\nNRF1 recognizes a palindrome, GCGCATGCGC, and the palindromic character is the defining feature: each subunit of the homodimer contacts one GCGC half, and the guanine contacts on the two strands mirror each other [PMID:2166701,38055835]. The motif models in this collection extend it slightly, to an 11- or 12-mer — the HOCOMOCO and Vierstra consensus is TGCGCATGCGC — so the element is equally well described as a tandem pair of TGCGC half-sites separated by a single base [PMID:38055835]. The palindrome is the older rendering; the extended repeat is what the matrices encode. Some models (JASPAR MA0506.3, CIS-BP M08177_2.00) place a C rather than an A/T at the central position, giving TGCGCCTGCGC, which reflects tolerance at the one position that is not part of either half-site [PMID:38055835].\n\nTwo features follow directly from the composition and matter in practice. First, the site contains two CpG dinucleotides, and both fall in the positions that carry the most information. Second, it is therefore methylation-sensitive: cytosine methylation within the site blocks NRF1 binding, and in cells lacking DNA methyltransferases NRF1 gains occupancy at sites it cannot bind in wild-type cells. NRF1 was the factor used to demonstrate this competition genome-wide [PMID:26675734], and it also scores as methylation-avoiding in systematic methyl-SELEX surveys [PMID:28473536]. Family cohesion is 0.94, the highest tier in this atlas: all four models are effectively the same matrix.\n\n## Where it acts\n\nNRF1 sites are promoter elements, not distal enhancers, and they are strongly associated with CpG islands — which follows from the motif itself, since an unmethylated CpG-rich 10-mer is exactly what a CpG island is made of. The original targets were nuclear genes for mitochondrial proteins: somatic cytochrome *c*, cytochrome *c* oxidase subunits, a ubiquinone-binding subunit of the reductase complex, and the RNA component of RNase MRP, which functions in mitochondrial DNA replication [PMID:2166701]. NRF1 also activates the promoter of *TFAM*, the mitochondrial transcription factor A gene, which is the direct mechanistic link between a nuclear promoter element and mitochondrial genome expression [PMID:8108407]. Beyond respiratory genes, NRF1 sites occur in many broadly expressed promoters, frequently alongside GABP (historically NRF-2), SP1 and YY1 sites [PMID:8383622,18391175]. An exact 10-mer of this composition is expected only a few thousand times in 3 Gb of uniform sequence, and because CpGs are depleted outside CpG islands, genuine matches concentrate in island promoters rather than being spread across the genome.\n\n## Biology and disease\n\nNRF1 is the central nuclear factor coordinating expression of the respiratory apparatus with the mitochondrial genome. Mouse *Nrf1* knockouts die at peri-implantation stages with depleted and unstable mitochondrial DNA [PMID:11134350], a phenotype consistent with loss of *Tfam* and related targets rather than with a single metabolic defect. Through *TFAM*, *TFB1M/TFB2M* and the mitochondrial ribosome and import machinery, NRF1 sets the capacity of oxidative phosphorylation, and its activity is the point at which PGC-1-family coactivators act during mitochondrial biogenesis in muscle and brown fat [PMID:18391175]. The methylation dependence also gives NRF1 a role as a readout of the epigenome: in promoters that become hypermethylated, NRF1 occupancy is lost even though the sequence is intact [PMID:26675734], so changes in NRF1 target expression can reflect methylation change rather than any change in the factor.\n\n## Reading a hit\n\nThe most common error with this family is not motif-related at all, it is naming. \"NRF1\" in this atlas means nuclear respiratory factor 1 and nothing else. It is not NFE2L1, which is also routinely abbreviated Nrf1 and belongs to the CNC-bZIP antioxidant-response family; it is not NFE2L2/NRF2; and it is not NRF-2, which turned out to be GABP, an ETS-domain factor [PMID:8383622]. A hit on GCGCATGCGC says nothing about antioxidant response elements or the KEAP1-NRF2 pathway.\n\nWith one gene in the family, a match is unusually close to a protein-level call, and the evidence supports direct binding: HOCOMOCO's NRF1.H14CORE.0.PS.A combines ChIP-seq with HT-SELEX at grade A, so this is not a ChIP-only inference. The 10-11-mer is long and information-rich enough that a strong match in a CpG-island promoter is genuinely suggestive. What a match does not tell you is occupancy, and here the gap is specific and checkable: because the site carries two CpGs and NRF1 will not bind a methylated site, a perfect match inside a methylated region is probably unbound, so check methylation state [PMID:26675734]. Finally, the Vierstra archetype here is AC0555:NRF:Unknown: the class is recorded as unknown, and the label names clustered factor annotations, not a validated protein.",
  "caveats": "Two cautions dominate. First, nomenclature: this family is nuclear respiratory factor 1, not NFE2L1 (also abbreviated Nrf1), not NFE2L2/NRF2, and not NRF-2, which is GABP; a hit here has nothing to do with antioxidant response elements. Second, methylation: the palindrome carries two CpGs in its most informative positions and methylation blocks binding, so an intact match inside a methylated region is likely unoccupied — check methylation state, not just sequence. Otherwise this is a strong family. One gene, cohesion 0.94, all four models essentially identical, and HOCOMOCO grade A evidence combining ChIP-seq with HT-SELEX, so the motif is not a ChIP-only inference.",
  "refs": [
   {
@@ -52,6 +52,84 @@
    "cite": "Yin Y, Morgunova E, Jolma A, et al. Impact of cytosine methylation on DNA binding specificities of human transcription factors. Science 2017;356.",
    "pmid": "28473536",
    "url": "https://pubmed.ncbi.nlm.nih.gov/28473536/"
+  },
+  {
+   "cite": "Liu K, Li W, Xiao Y, et al. Molecular mechanism of specific DNA sequence recognition by NRF1. Nucleic Acids Res 2024;52:953-966.",
+   "pmid": "38055835",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38055835/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1990,
+   "finding": "NRF-1 is defined as an activator binding the somatic cytochrome c promoter, and functional sites with the same guanine contacts are found in genes for cytochrome oxidase subunit VIc, the ubiquinone-binding protein of the reductase complex and the RNA of RNase MRP.",
+   "methods": "Promoter mutagenesis, EMSA, methylation interference, competition binding",
+   "confidence": "medium",
+   "pmids": [
+    "2166701"
+   ],
+   "open": "The protein had not been cloned, so its DNA-binding domain was unknown."
+  },
+  {
+   "year": 1993,
+   "finding": "The second nuclear respiratory factor, NRF-2, is purified and identified as GABP, a multisubunit ETS-domain activator, so NRF-1 and NRF-2 are unrelated proteins with unrelated sites.",
+   "methods": "Protein purification, peptide sequencing, DNA binding",
+   "confidence": "medium",
+   "pmids": [
+    "8383622"
+   ]
+  },
+  {
+   "year": 1993,
+   "finding": "NRF-1 is cloned; its N-terminal DNA-binding domain is shared with sea urchin P3A2 and Drosophila EWG and is unrelated to known DNA-binding motifs, founding a new class.",
+   "methods": "cDNA cloning, deletion mapping, recombinant DNA binding, reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "8253388"
+   ],
+   "open": "The structure of the new DNA-binding domain remained unknown until 2024."
+  },
+  {
+   "year": 1994,
+   "finding": "The TFAM (mtTFA) promoter is shown to depend mainly on an NRF-1 site, linking a nuclear promoter element directly to mitochondrial transcription.",
+   "methods": "Promoter mutagenesis, in vitro transcription with recombinant protein",
+   "confidence": "medium",
+   "pmids": [
+    "8108407"
+   ]
+  },
+  {
+   "year": 2001,
+   "finding": "Nrf1-null mouse embryos die between E3.5 and E6.5, and null blastocysts have markedly reduced mitochondrial DNA.",
+   "methods": "Gene knockout, blastocyst culture, mtDNA quantification",
+   "confidence": "medium",
+   "pmids": [
+    "11134350"
+   ]
+  },
+  {
+   "year": 2015,
+   "finding": "In mouse ES cells lacking DNA methylation, NRF1 occupies several thousand additional sites; restoring de novo methyltransferase activity remethylates them and evicts NRF1, showing genome-wide that methylation, not sequence, restricts its binding.",
+   "methods": "DNase-seq, ChIP-seq, DNMT knockout and rescue, motif deletion",
+   "confidence": "high",
+   "pmids": [
+    "26675734"
+   ]
+  },
+  {
+   "year": 2024,
+   "finding": "The crystal structure of an NRF1 homodimer on ATGCGCATGCGCAT shows a dimerization domain with an SRF MADS-like dimer interface linked flexibly to a helical DNA-binding domain; one monomer makes a U-turn so that the two DBDs read the two TGCGC half-sites from opposite sides of the DNA.",
+   "methods": "X-ray crystallography, ITC, mutagenesis, reporter assays",
+   "confidence": "high",
+   "pmids": [
+    "38055835"
+   ],
+   "open": "The isolated DBD binds a single TGCGC half-site in vitro; whether that happens in cells was not tested."
+  }
+ ],
+ "open": [
+  "Whether the central base pair of the site is constrained is not settled: JASPAR MA0506.3 and CIS-BP M08177_2.00 place a C there (TGCGCCTGCGC), whereas the HOCOMOCO model and the 2024 crystal structure use the A/T form, and binding measurements show only about a three-fold preference for a central AT over CG.",
+  "Whether NRF1 binds isolated TGCGC half-sites in vivo is unknown: its DNA-binding domain alone binds a half-site in vitro, but the full-length protein needs cooperation between the dimerization and DNA-binding domains to bind the intact palindrome and to activate transcription.",
+  "Which factors keep NRF1 sites unmethylated is only partly understood: NRF1 cannot bind methylated sites and depends on neighboring motifs or other factors to keep its sites hypomethylated, and whether NRF1 itself helps maintain that state once bound has not been established."
  ]
 }

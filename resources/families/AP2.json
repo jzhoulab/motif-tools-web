@@ -9,8 +9,8 @@
  ],
  "consensus": "GCC(N3)GGC",
  "short": "The five human TFAP2 proteins (TFAP2A-E, historically AP-2 alpha through epsilon) bind a pseudo-palindrome made of GCC and GGC triplets separated by exactly three bases. Each subunit contributes a basic region that inserts a loop into the major groove, and the two subunits are held together by a helix-span-helix domain; the factors are constitutive dimers even off DNA, and all paralogue combinations heterodimerize. The site is GC-rich and sits in GC-rich promoters and neural crest enhancers. TFAP2 factors behave as pioneer factors during neural crest specification, and mutations cause branchio-oculo-facial syndrome (TFAP2A) and Char syndrome (TFAP2B). A hit identifies the family, not a paralogue.",
- "long": "## The factors\n\nFive human genes encode this family: TFAP2A, TFAP2B, TFAP2C, TFAP2D and TFAP2E, still widely\ncalled AP-2 alpha, beta, gamma, delta and epsilon. Each protein has an N-terminal proline- and\nglutamine-rich activation domain, a basic region, and a C-terminal helix-span-helix (HSH)\ndimerization domain: two amphipathic helices separated by a long span. The HSH domain drives\ndimerization on its own and can be transplanted onto a foreign basic region, but it cannot bind\nDNA without an adjacent basic region. AP-2 is a dimer in solution as well as on DNA, and all of\nthe paralogue pairs can heterodimerize; in neural crest development TFAP2A switches partners from\nTFAP2C to TFAP2B as specification proceeds, and the two heterodimers open different sets of\nelements. Expression is restricted rather than housekeeping: TFAP2A and TFAP2B in neural crest,\nsurface ectoderm, facial mesenchyme and kidney; TFAP2C in trophoblast, germ cells and luminal\nbreast epithelium; TFAP2D mainly in retina and midbrain; TFAP2E in olfactory epithelium. TFAP2D\nis the outlier, with a divergent basic region and weaker transactivation.\n\n## The motif\n\nThe functional element is a pseudo-palindrome of two triplets, GCC and GGC, with a three-base\nspacer: GCC(N3)GGC. Older literature writes the same site as GCCYGCRGGC or in specific promoters\nas GCCTGAGGC and CCCCAGGC, and databases here report both a 9-mer form (GCCTGAGGC, GCCTCAGGC) and\nan extended 11-12-mer form (GCCCTBAGGGCA), which is the same core with an extra C/G pair on each\nflank. The data consensus for this family, GCCTCAGGGCA, is that extended form; it does not\nconflict with GCC(N3)GGC but simply includes flanking positions that are only partly informative.\nThe crystal structure of the TFAP2A DBD-HSH tandem domain on DNA explains the geometry: the two\nflat amphipathic HSH helices stack against each other through hydrophobic contacts, and a\nstabilized loop from each DBD inserts into one of two neighboring major grooves. Because the two\nloops are a fixed distance apart, spacer length, not just spacer sequence, determines binding: a\nthree-base gap is strongly preferred and altering it costs affinity. This makes the informative\npositions the GCC and GGC triplets, with the central three bases nearly free (commonly written\nYAG or TCA/TGA). The five paralogues are not separable from sequence. Every model in this family's\ndata, across all four source databases, converges on the same GCC-N3-GGC pattern with 7-15 bits.\n\n## Where it acts\n\nAP-2 sites are GC-rich, so they are enriched in GC-rich and CpG-island promoters, where they can\nbe hard to distinguish from SP/KLF GC-boxes on loose models. The functionally important sites,\nhowever, are largely distal: TFAP2A occupies thousands of enhancers at the neural plate border and\nin specified neural crest, acting as a pioneer factor that remodels chromatin ahead of the\nlineage program. In melanocytes TFAP2 paralogues bind in parallel with MITF at pigmentation genes.\nIn luminal breast cancer cells TFAP2C co-occupies enhancers with estrogen receptor and FOXA1 and\nregulates ESR1 itself. Co-occurring motifs therefore depend on the tissue: SOX and PAX motifs in\nneural crest, MITF E-boxes in melanocytes, ERE and forkhead sites in breast. AP-2 sites are common\nenough in GC-rich sequence that a genome-wide scan returns very large numbers of matches; the\nconstraint on real occupancy is TFAP2 expression, which is narrow.\n\n## Biology and disease\n\nTfap2a-null mice fail cranial neural tube closure and have severe craniofacial defects, matching\nAP-2's expression in ectoderm and migrating cranial neural crest. In humans, heterozygous TFAP2A\nmutations, mostly missense changes in the basic region and HSH domain, cause branchio-oculo-facial\nsyndrome: cervical and infra-auricular skin defects, ocular anomalies, cleft lip or palate, and\nsometimes inner ear malformation and deafness. Mutations in TFAP2B cause Char syndrome, a dominant\ncondition combining patent ductus arteriosus, a distinctive face and hand anomalies, with a\ngenotype-phenotype relationship that tracks with how much DNA binding is lost. TFAP2C is amplified\nand overexpressed in a subset of breast cancers, where it governs the luminal epithelial phenotype\nand hormone response and higher expression predicts worse outcome on anti-hormonal therapy.\nTFAP2A and TFAP2C are also required in trophoblast and germ cell programs. A structural survey of\ndisease mutations concluded that reduced or abolished DNA binding is the primary mechanism in\nTFAP2-associated disease.\n\n## Reading a hit\n\nA GCC(N3)GGC match tells you that a TFAP2 dimer could bind, and nothing about which one. The five\nparalogues share one matrix; assign a member from expression, and remember that the biologically\nactive species is often a heterodimer, so the question may have no single answer. Check the spacer\nbefore believing a match: GCC and GGC separated by two or four bases is a much weaker site than one\nseparated by three, and permissive scanning tools will happily report the wrong spacing. Because\nthe site is GC-rich, the main false-positive risk is confusion with other GC-binding families. A\nloose AP-2 model will score on SP1/KLF GC-boxes (GGGGCGGGG) and on CpG-island sequence generally;\nconversely, GC-box models score on AP-2 sites. Require the discontinuous GCC...GGC arrangement\nrather than a continuous GC run before calling a hit AP-2. The evidence base here is comparatively\nclean: HOCOMOCO models for AP2A and AP2C are grade A with combined ChIP-seq and in vitro selection\n(PSM), and the AP2B and AP2E models rest on in vitro selection alone (SM), so the family's\nspecificity does not depend on ChIP data. The one provenance caveat is the CIS-BP TFAP2D entry,\nwhich is transferred from a mouse protein at 80% DNA-binding-domain identity.",
- "caveats": "All five TFAP2 paralogues share one matrix and heterodimerize freely, so a hit identifies the family only. The three-base spacer is part of the motif: check it, because loose scans report mis-spaced matches. The biggest practical risk is GC-richness. AP-2 models cross-score with SP/KLF GC-boxes and with CpG-island sequence, so a GC-rich promoter hit needs the discontinuous GCC...GGC arrangement to be credible. Genome-wide matches vastly outnumber occupied sites because TFAP2 expression is narrow. In vitro evidence supports the core specificity; the CIS-BP TFAP2D model is inferred from mouse at 80% domain identity.",
+ "long": "## The factors\n\nFive human genes encode this family: TFAP2A, TFAP2B, TFAP2C, TFAP2D and TFAP2E, still widely\ncalled AP-2 alpha, beta, gamma, delta and epsilon. Each protein has an N-terminal proline- and\nglutamine-rich activation domain [PMID:3063603,2010091], a basic region, and a C-terminal helix-span-helix (HSH)\ndimerization domain: two amphipathic helices separated by a long span. The HSH domain drives\ndimerization on its own and can be transplanted onto a foreign basic region, but it cannot bind\nDNA without an adjacent basic region [PMID:1998122]. AP-2 is a dimer in solution as well as on DNA [PMID:2010091], and all of\nthe paralogue pairs can heterodimerize; in neural crest development TFAP2A switches partners from\nTFAP2C to TFAP2B as specification proceeds, and the two heterodimers open different sets of\nelements [PMID:31848212]. Expression is restricted rather than housekeeping: TFAP2A and TFAP2B in neural crest,\nsurface ectoderm, facial mesenchyme and kidney [PMID:1989904]; TFAP2C in trophoblast, germ cells and luminal\nbreast epithelium; TFAP2D mainly in retina and midbrain; TFAP2E in olfactory epithelium. TFAP2D\nis the outlier, with a divergent basic region and weaker transactivation.\n\n## The motif\n\nThe functional element is a pseudo-palindrome of two triplets, GCC and GGC, with a three-base\nspacer: GCC(N3)GGC [PMID:37409559]. SELEX with AP-2 alpha also recovered GCC(N4)GGC and GCC(N3/4)GGG\nsites [PMID:10373594], and the older consensus GCCYGCRGGC is an N4 form. The database 9-mers (GCCTGAGGC,\nGCCTCAGGC) are N3; the longer models are not that core plus flanks, since the extra C and G sit inside\nthe triplets: GCCCYAGGGC is GCC(N4)GGC, and GCCCTBAGGGC reads as GCC(N4)GGG. The data consensus,\nGCCTCAGGGCA, is a longer form (GCC(N4)GGC, or GCC(N3)GGG), so it differs from the literature's\nGCC(N3)GGC in spacing, not only in flanks.\nThe crystal structure of the TFAP2A DBD-HSH tandem domain on DNA explains the geometry: the two\nflat amphipathic HSH helices stack against each other through hydrophobic contacts, and a\nstabilized loop from each DBD inserts into one of two neighboring major grooves [PMID:37409559]. Because the two\nloops are a fixed distance apart, spacer length, not just spacer sequence, determines binding: a\nthree-base gap is strongly preferred: TFAP2A bound a four-base spacer about 18-fold more weakly and two-\nor five-base spacers barely at all [PMID:37409559]. This makes the informative\npositions the GCC and GGC triplets, with the central three bases nearly free (commonly written\nYAG or TCA/TGA). The five paralogues are not separable from sequence. Every model in this family's\ndata carries the same GCC and GGC/GGG triplets (7.5-14.5 bits); they differ in spacer length, but\nTFAP2A, TFAP2B and TFAP2C each have models of more than one spacing.\n\n## Where it acts\n\nAP-2 sites are GC-rich, so they are enriched in GC-rich and CpG-island promoters, where they can\nbe hard to distinguish from SP/KLF GC-boxes on loose models. The functionally important sites,\nhowever, are largely distal: TFAP2A occupies thousands of enhancers at the neural plate border and\nin specified neural crest, acting as a pioneer factor that remodels chromatin ahead of the\nlineage program [PMID:31848212]. In melanocytes TFAP2 paralogues bind in parallel with MITF at pigmentation genes [PMID:28249010].\nIn luminal breast cancer cells TFAP2C co-occupies enhancers with estrogen receptor and FOXA1 and\nregulates ESR1 itself [PMID:24469049]. Co-occurring motifs therefore depend on the tissue: SOX and PAX motifs in\nneural crest, MITF E-boxes in melanocytes, ERE and forkhead sites in breast. AP-2 sites are common\nenough in GC-rich sequence that a genome-wide scan returns very large numbers of matches; the\nconstraint on real occupancy is TFAP2 expression, which is narrow.\n\n## Biology and disease\n\nTfap2a-null mice fail cranial neural tube closure and have severe craniofacial defects, matching\nAP-2's expression in ectoderm and migrating cranial neural crest [PMID:8622765,1989904]. In humans, heterozygous TFAP2A\nmutations, mostly missense changes in the basic region and HSH domain, cause branchio-oculo-facial\nsyndrome: cervical and infra-auricular skin defects, ocular anomalies, cleft lip or palate, and\nsometimes inner ear malformation and deafness [PMID:18423521]. Mutations in TFAP2B cause Char syndrome, a dominant\ncondition combining patent ductus arteriosus, a distinctive face and hand anomalies, with a\ngenotype-phenotype relationship that tracks with how much DNA binding is lost [PMID:10802654]. TFAP2C is amplified\nand overexpressed in a subset of breast cancers, where it governs the luminal epithelial phenotype\nand hormone response and higher expression predicts worse outcome on anti-hormonal therapy [PMID:24469049].\nTFAP2A and TFAP2C are also required in trophoblast and germ cell programs. A structural survey of\ndisease mutations concluded that reduced or abolished DNA binding is the primary mechanism in\nTFAP2-associated disease [PMID:37409559].\n\n## Reading a hit\n\nA GCC(N3)GGC match tells you that a TFAP2 dimer could bind, and nothing about which one. The five\nparalogues share one matrix; assign a member from expression, and remember that the biologically\nactive species is often a heterodimer, so the question may have no single answer. Check the spacer\nbefore believing a match: two bases is a poor site, while four binds more weakly than three in vitro\nbut was recovered by SELEX and is common in the models here, so it is weaker evidence, not a non-site\n[PMID:37409559,10373594]. Permissive scanners report all of these spacings. Because\nthe site is GC-rich, the main false-positive risk is confusion with other GC-binding families. A\nloose AP-2 model will score on SP1/KLF GC-boxes (GGGGCGGGG) and on CpG-island sequence generally;\nconversely, GC-box models score on AP-2 sites. Require the discontinuous GCC...GGC arrangement\nrather than a continuous GC run before calling a hit AP-2. The evidence base here is comparatively\nclean: HOCOMOCO models for AP2A and AP2C are grade A with combined ChIP-seq and in vitro selection\n(PSM), and the AP2B and AP2E models rest on in vitro selection alone (SM), so the family's\nspecificity does not depend on ChIP data. The one provenance caveat is the CIS-BP TFAP2D entry,\nwhich is transferred from a mouse protein at 80% DNA-binding-domain identity [PMID:25215497].",
+ "caveats": "All five TFAP2 paralogues share one matrix and heterodimerize freely, so a hit identifies the family only. Spacer length is part of the motif: three bases is the canonical, tightest-binding form, four is weaker but was recovered by selection and appears in many models here, and two is a poor site. The biggest practical risk is GC-richness. AP-2 models cross-score with SP/KLF GC-boxes and with CpG-island sequence, so a GC-rich promoter hit needs the discontinuous GCC...GGC arrangement to be credible. Genome-wide matches vastly outnumber occupied sites because TFAP2 expression is narrow. In vitro evidence supports the core specificity; the CIS-BP TFAP2D model is inferred from mouse at 80% domain identity.",
  "refs": [
   {
    "cite": "Williams T, Admon A, Lüscher B, et al. Cloning and expression of AP-2, a cell-type-specific transcription factor that activates inducible enhancer elements. Genes Dev 1988;2:1557-69.",
@@ -71,6 +71,86 @@
    "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
    "pmid": "25215497",
    "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  },
+  {
+   "cite": "Mohibullah N, Donner A, Ippolito JA, et al. SELEX and missing phosphate contact analyses reveal flexibility within the AP-2[alpha] protein: DNA binding complex. Nucleic Acids Res 1999;27:2760-9.",
+   "pmid": "10373594",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/10373594/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1988,
+   "finding": "Cloning of human AP-2, a factor that binds inducible viral and cellular enhancers, reveals a DNA-binding region unlike any known motif and a proline- and glutamine-rich activation region.",
+   "methods": "cDNA cloning, bacterial expression, in vitro transcription, transfection",
+   "confidence": "medium",
+   "pmids": [
+    "3063603"
+   ],
+   "open": "How a protein with no recognizable DNA-binding motif contacted DNA."
+  },
+  {
+   "year": 1991,
+   "finding": "AP-2 binds a palindromic site as a dimer and is dimeric even without DNA; sequence-specific binding needs a helix-span-helix dimerization domain plus an adjacent basic region, and the HSH domain can drive DNA binding by the c-Jun basic region.",
+   "methods": "DNA contact studies, cross-linking, deletion mutants, domain-swap chimeras",
+   "confidence": "high",
+   "pmids": [
+    "2010091",
+    "1998122"
+   ]
+  },
+  {
+   "year": 1996,
+   "finding": "AP-2-null mice die perinatally with failed cranial neural tube closure and severe malformations of face, skull, sensory organs and cranial ganglia.",
+   "methods": "Gene targeting in mice",
+   "confidence": "medium",
+   "pmids": [
+    "8622765"
+   ]
+  },
+  {
+   "year": 1999,
+   "finding": "SELEX and missing-phosphate analysis of AP-2 alpha show a flexible protein-DNA complex that accepts three related site classes, GCC N3 GGC, GCC N4 GGC and GCC N3/4 GGG, rather than a single fixed spacing.",
+   "methods": "SELEX, missing-phosphate and nucleotide competition analysis",
+   "confidence": "medium",
+   "pmids": [
+    "10373594"
+   ],
+   "open": "Which site class predominates in cells, and whether the paralogues differ in it."
+  },
+  {
+   "year": 2000,
+   "finding": "Missense TFAP2B mutations cause Char syndrome; the mutant proteins dimerize normally but bind the TFAP2 site abnormally and act as dominant negatives, the first human TFAP2 disease.",
+   "methods": "Positional candidate cloning, in vitro binding and transactivation assays",
+   "confidence": "medium",
+   "pmids": [
+    "10802654"
+   ]
+  },
+  {
+   "year": 2020,
+   "finding": "During neural crest development TFAP2A acts as a pioneer factor whose genomic targets depend on its partner: TFAP2A/C heterodimers at the neural plate border, then TFAP2A/B heterodimers during crest specification.",
+   "methods": "Genomic occupancy and chromatin-state profiling, loss of function",
+   "confidence": "medium",
+   "pmids": [
+    "31848212"
+   ],
+   "open": "Whether heterodimers differ in sequence preference or only in where they are expressed."
+  },
+  {
+   "year": 2023,
+   "finding": "Structures of the TFAP2A DBD-HSH tandem on DNA show the stacked HSH helices fixing two DBD loops in adjacent major grooves, so both the GCC/GGC triplets and the spacer length set specificity; disease mutations act mainly by reducing DNA binding.",
+   "methods": "X-ray crystallography, binding assays with spacer variants, mutant analysis",
+   "confidence": "high",
+   "pmids": [
+    "37409559"
+   ],
+   "open": "How the strict-spacer model accommodates the N4 and GGG-type sites selected in 1999."
+  }
+ ],
+ "open": [
+  "How strict the spacer is remains disputed: the 2023 TFAP2A structure and binding data favor a fixed three-base spacer, while 1999 SELEX with AP-2 alpha recovered GCC N4 GGC and GCC N3/4 GGG sites as well, and the extended database models (GCCCTBAGGGC) read as GCC N4 GGG rather than GCC N3 GGC.",
+  "Whether TFAP2 heterodimers differ in DNA specificity is unknown: TFAP2A/B and TFAP2A/C heterodimers occupy different elements in neural crest, but every measured paralogue model is the same matrix, so the difference may come from partner availability and chromatin rather than sequence.",
+  "TFAP2D has a divergent basic region, yet its only model here is inferred from a mouse protein at 80% domain identity, so whether TFAP2D shares the family specificity has not been measured."
  ]
 }

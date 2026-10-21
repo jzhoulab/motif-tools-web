@@ -12,8 +12,8 @@
   "ETS class II"
  ],
  "consensus": "ACCCGGAAGT",
- "short": "ELF1, ELF2, ELF3, ELF4, ELF5 and EHF are the ELF branch of the ETS family. They bind the same GGA(A/T) core as every other ETS protein through the same winged helix-turn-helix domain, but prefer a C where class I ETS factors prefer an A three bases 5' of the core, giving the ten-base site ACCCGGAAGT. ELF3, ELF5 and EHF are the epithelium-specific \"ESE\" members, expressed in gut, salivary gland, breast, airway, cornea, prostate and bladder epithelium; ELF1, ELF2 and ELF4 are broader, with strong hematopoietic expression. These factors set and maintain epithelial differentiation - mammary alveolar cell fate, intestinal goblet cells, airway CFTR expression - and are recurrently mutated or silenced in carcinomas of the bladder, biliary tract, cervix and breast.",
- "long": "## The factors\n\nSix human genes make up this group: ELF1, ELF2 (NERF), ELF3 (ESE-1/ESX), ELF4 (MEF), ELF5 (ESE-2)\nand EHF (ESE-3). Each has a single ETS domain of about 85 residues - three alpha-helices on a\nfour-stranded antiparallel beta-sheet, a winged helix-turn-helix - that binds DNA as a monomer,\nwith no obligate dimerization partner of the kind GABPA requires. Binding profiles of all human\nand mouse ETS proteins place the ELF proteins in class II (subclass IIa), separate from the large\nclass I group and from ETV6/ETV7. Expression splits the group in two. ELF3, ELF5 and EHF, together\nwith SPDEF, form the epithelium-specific ETS (\"ESE\") subfamily: ELF3 is highest in\ngastrointestinal tract, salivary gland, bladder, liver and prostate; ELF5 is restricted to\nsalivary gland, breast and bladder with some lung, kidney and skin; EHF covers salivary gland,\nesophagus, prostate, colon, skin, bladder and breast. ELF1, ELF2 and ELF4 are more widely\nexpressed, with prominent hematopoietic and lymphoid expression.\n\n## The motif\n\nThe literature writes the class II site as CCCGGAAGT, differing from the class I consensus\nACCGGAAGT at a single position: the base three steps 5' of the GGA core, where class I strongly\ndisfavors C and the ELF group accepts or prefers it. With the extra 5' adenine that most\nin vitro models here include, the site reads ACCCGGAAGT, which is what the motifs assigned to this\nfamily agree on. The recognition chemistry is identical to the rest of the family: two invariant\narginines in helix H3 hydrogen-bond the two guanines of GGA, a wing lysine contacts DNA 5' of the\ncore and a turn lysine contacts the opposite strand 3' of it, so the core is read directly and the\nflanks through backbone geometry. That makes the discriminating information one or two low-content\npositions, and the six ELF/EHF proteins are not distinguishable from each other by sequence: the\nJASPAR models for EHF (MA0598.4) and ELF3 (MA0640.3) have the identical consensus CACTTCCTG.\nOne variant is worth recognizing. CCGGAAGT contains a CpG, and methylating that CpG blocks ETS\nbinding; the methylation-aware HOCOMOCO models for ELF2, ELF3 and ELF4 in this family instead read\nCAGGAAGT, a form with no CpG. Whether that is cause or coincidence, both forms are in wide use and\na scan should allow CAGGAAG as well as CCGGAAG.\n\n## Where it acts\n\nTwo contexts dominate. ELF1, ELF2 and ELF4 contribute to the redundant ETS occupancy of\nCpG-island promoters, where a strong consensus 20-40 bp upstream of the transcription start site is\nbound interchangeably by many ETS proteins; a hit there is a poor basis for naming a factor. The\nESE members act mostly at epithelial enhancers and tissue-specific promoters, where their sites\nare frequently non-consensus and sit among other epithelial regulators. Documented examples\ninclude EHF at the CFTR promoter in bronchial epithelium, where it acts as a repressor and is\ninduced by inflammatory mediators; EHF across enhancers that define corneal epithelial identity;\nand ELF5 at genes of the mammary alveolar program, including repression of SNAI2. Because the\nmotif is short and its family-discriminating positions weak, cell type - which ELF genes are\nactually expressed - is usually more informative about which protein is bound than the sequence is.\n\n## Biology and disease\n\nThe ESE factors maintain epithelial differentiation. Elf5-null mouse embryos die by about E7.5\nfrom a trophoblast defect, and loss of a single Elf5 allele blocks mammary alveolar development in\npregnancy; ELF5 also holds cells in an epithelial state by repressing SNAI2, and its loss promotes\nepithelial-mesenchymal transition and metastasis in breast cancer models. About 30% of Elf3-null\nembryos die around E11.5 and survivors have abnormal small intestinal epithelium with reduced\ngoblet cells. The consequences in human cancer are mostly loss of function: ELF3 is recurrently\nmutated in roughly 6% of bladder cancers, mucinous ovarian cancers, cholangiocarcinomas and\ngallbladder cancers, about 10% of ampullary carcinomas and about 13% of cervical adenocarcinomas,\nwith a large share of inactivating alleles; EHF is downregulated with promoter methylation in\nprostate cancer. An Ehf knockout phenotype has not been reported.\n\n## Reading a hit\n\nA match identifies an ELF/EHF-type ETS site, and it does so only weakly. The sequence separating\nthis family from class I ETS is a single flanking base, so a hit that scores well for ELF3 will\nalmost always also score well for ETS1, ERG or ELK1, and the reverse; if you need to know which\nprotein is bound, use expression and ChIP data, not the motif. The GGAA core is expected millions\nof times per strand in a 3.1-Gb genome, so context - accessibility, conservation, an epithelial\nenhancer, neighboring sites - has to carry the inference. Evidence quality is uneven within the\nfamily: ELF1, ELF2, ELF3, ELF4 and ELF5 all have in vitro (HT-SELEX or methyl-HT-SELEX) HOCOMOCO\nmodels, but EHF's only HOCOMOCO model here is ChIP-derived, so \"EHF binds this sequence\" rests on\nweaker evidence than for its relatives. Two of the three Vierstra archetypes grouped here\n(AC0452:ELF, AC0645:ELF) have GGAT-containing consensus sequences and match motifs outside this\nfamily better than motifs inside it; treat them as loosely attached. Consensus strings also appear\non either strand - CACTTCCTG and CAGGAAGTG are the same site.",
+ "short": "ELF1, ELF2, ELF3, ELF4, ELF5 and EHF are the ELF branch of the ETS family. They bind the same GGA(A/T) core as every other ETS protein through the same winged helix-turn-helix domain, but prefer a C where class I ETS factors prefer an A three bases 5' of the core, giving the ten-base site ACCCGGAAGT. ELF3, ELF5 and EHF are the epithelium-specific \"ESE\" members, expressed in gut, salivary gland, breast, airway, cornea, prostate and bladder epithelium; ELF1, ELF2 and ELF4 are broader, with strong hematopoietic expression. These factors set and maintain epithelial differentiation - mammary alveolar cell fate, intestinal goblet cells - and in airway epithelium EHF represses CFTR; they are recurrently mutated or silenced in carcinomas of the bladder, biliary tract, cervix and breast.",
+ "long": "## The factors\n\nSix human genes make up this group: ELF1, ELF2 (NERF), ELF3 (ESE-1/ESX), ELF4 (MEF), ELF5 (ESE-2)\nand EHF (ESE-3). Each has a single ETS domain of about 85 residues - three alpha-helices on a\nfour-stranded antiparallel beta-sheet, a winged helix-turn-helix - that binds DNA as a monomer,\nwith no obligate dimerization partner of the kind GABPA requires [PMID:8602247,21548782]. Binding profiles of all human\nand mouse ETS proteins place the ELF proteins in class II (subclass IIa), separate from the large\nclass I group and from ETV6/ETV7 [PMID:20517297]. Expression splits the group in two. ELF3, ELF5 and EHF, together\nwith SPDEF, form the epithelium-specific ETS (\"ESE\") subfamily: ELF3 is highest in\ngastrointestinal tract, salivary gland, bladder, liver and prostate; ELF5 is restricted to\nsalivary gland, breast and bladder with some lung, kidney and skin; EHF covers salivary gland,\nesophagus, prostate, colon, skin, bladder and breast [PMID:30200227]. ELF1, ELF2 and ELF4 are more widely\nexpressed, with prominent hematopoietic and lymphoid expression.\n\n## The motif\n\nThe literature writes the class II site as CCCGGAAGT, differing from the class I consensus\nACCGGAAGT at a single position: the base three steps 5' of the GGA core, where class I strongly\ndisfavors C and the ELF group accepts or prefers it [PMID:20517297,21548782]. With the extra 5' adenine that most\nin vitro models here include, the site reads ACCCGGAAGT, which is what the motifs assigned to this\nfamily agree on. The recognition chemistry is identical to the rest of the family: two invariant\narginines in helix H3 hydrogen-bond the two guanines of GGA, a wing lysine contacts DNA 5' of the\ncore and a turn lysine contacts the opposite strand 3' of it [PMID:8602247], so the core is read directly and the\nflanks through backbone geometry [PMID:21548782]. That makes the discriminating information one or two low-content\npositions, and the six ELF/EHF proteins are not distinguishable from each other by sequence: the\nJASPAR models for EHF (MA0598.4) and ELF3 (MA0640.3) have the identical consensus CACTTCCTG.\nOne variant is worth recognizing. CCGGAAGT contains a CpG, and methylating that CpG blocks ETS\nbinding [PMID:21548782,28473536]; the methylation-aware HOCOMOCO models for ELF2, ELF3 and ELF4 in this family instead read\nCAGGAAGT, a form with no CpG. Whether that is cause or coincidence, both forms are in wide use and\na scan should allow CAGGAAG as well as CCGGAAG.\n\n## Where it acts\n\nTwo contexts dominate. ELF1, ELF2 and ELF4 contribute to the redundant ETS occupancy of\nCpG-island promoters, where a strong consensus 20-40 bp upstream of the transcription start site is\nbound interchangeably by many ETS proteins [PMID:20517297,21548782]; a hit there is a poor basis for naming a factor. The\nESE members act mostly at epithelial enhancers and tissue-specific promoters, where their sites\nare frequently non-consensus and sit among other epithelial regulators. Documented examples\ninclude EHF in bronchial epithelium, where it is induced by inflammatory mediators and represses CFTR\nfrom an airway-selective element 35 kb upstream of the CFTR promoter [PMID:29572268,30200227]; EHF across enhancers that define corneal epithelial identity [PMID:24142692];\nand ELF5 at genes of the mammary alveolar program, including repression of SNAI2 [PMID:18316476,23086238]. Because the\nmotif is short and its family-discriminating positions weak, cell type - which ELF genes are\nactually expressed - is usually more informative about which protein is bound than the sequence is.\n\n## Biology and disease\n\nThe ESE factors maintain epithelial differentiation. Elf5-null mouse embryos die by about E7.5\nfrom a trophoblast defect [PMID:15650748,30200227], and loss of a single Elf5 allele blocks mammary alveolar development in\npregnancy [PMID:15650748,18316476]; ELF5 also holds cells in an epithelial state by repressing SNAI2, and its loss promotes\nepithelial-mesenchymal transition and metastasis in breast cancer models [PMID:23086238]. About 30% of Elf3-null\nembryos die around E11.5 and survivors have abnormal small intestinal epithelium with reduced\ngoblet cells [PMID:30200227]. The consequences in human cancer are mostly loss of function: ELF3 is recurrently\nmutated in roughly 6% of bladder cancers, mucinous ovarian cancers, cholangiocarcinomas and\ngallbladder cancers, about 10% of ampullary carcinomas and about 13% of cervical adenocarcinomas,\nwith a large share of inactivating alleles [PMID:30200227]; EHF is downregulated with promoter methylation in\nprostate cancer [PMID:30200227]. Ehf-null mice are born at Mendelian ratios but develop skin papillomas, corneal ulcers and heightened\ncolitis susceptibility, and gut-specific deletion impairs goblet cell differentiation [PMID:34180969].\n\n## Reading a hit\n\nA match identifies an ELF/EHF-type ETS site, and it does so only weakly. The sequence separating\nthis family from class I ETS is a single flanking base, so a hit that scores well for ELF3 will\nalmost always also score well for ETS1, ERG or ELK1, and the reverse; if you need to know which\nprotein is bound, use expression and ChIP data, not the motif. The GGAA core is expected millions\nof times per strand in a 3.1-Gb genome, so context - accessibility, conservation, an epithelial\nenhancer, neighboring sites - has to carry the inference. Evidence quality is uneven within the\nfamily: ELF1, ELF2, ELF3, ELF4 and ELF5 all have in vitro (HT-SELEX or methyl-HT-SELEX) HOCOMOCO\nmodels, but EHF's only HOCOMOCO model here is ChIP-derived, so \"EHF binds this sequence\" rests on\nweaker evidence than for its relatives. Two of the three Vierstra archetypes grouped here\n(AC0452:ELF, AC0645:ELF) [PMID:32728250] have GGAT-containing consensus sequences and match motifs outside this\nfamily better than motifs inside it; treat them as loosely attached. Consensus strings also appear\non either strand - CACTTCCTG and CAGGAAGTG are the same site.",
  "caveats": "The one base that distinguishes this family from class I ETS is a low-information\nflanking position, so in practice a hit means \"an ETS site\" and not \"an ELF site\", let alone a\nspecific ELF protein; the JASPAR EHF and ELF3 models are literally the same consensus. Which of\nthe six proteins is bound has to come from expression or ChIP, not from sequence. Within the\nfamily, EHF's only HOCOMOCO model here is ChIP-derived rather than in vitro, so its label carries\nless weight than ELF1-ELF5, which have HT-SELEX or methyl-HT-SELEX support. Two of the three\nVierstra ELF archetypes in this family have GGAT-type consensus sequences and their nearest\nneighbours lie outside the family. Allow both CCGGAAG and the CpG-free CAGGAAG form when scanning.",
  "refs": [
   {
@@ -65,6 +65,106 @@
    "cite": "Vierstra J, Lazar J, Sandstrom R, et al. Global reference mapping of human transcription factor footprints. Nature 2020;583:729-736.",
    "pmid": "32728250",
    "url": "https://pubmed.ncbi.nlm.nih.gov/32728250/"
+  },
+  {
+   "cite": "Zhou J, Chehab R, Tkalcevic J, et al. Elf5 is essential for early embryogenesis and mammary gland development during pregnancy and lactation. EMBO J 2005;24:635-44.",
+   "pmid": "15650748",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15650748/"
+  },
+  {
+   "cite": "Mutolo MJ, Leir SH, Fossum SL, et al. A transcription factor network represses CFTR gene expression in airway epithelial cells. Biochem J 2018;475:1323-1334.",
+   "pmid": "29572268",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29572268/"
+  },
+  {
+   "cite": "Reehorst CM, Nightingale R, Luk IY, et al. EHF is essential for epidermal and colonic epithelial homeostasis, and suppresses Apc-initiated colonic tumorigenesis. Development 2021;148.",
+   "pmid": "34180969",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34180969/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 2005,
+   "finding": "Elf5-null embryos die before E7.5, and loss of one Elf5 allele arrests mammary alveolar development in pregnancy through an epithelial-autonomous defect; a second knockout line confirmed the embryonic lethality and traced it to loss of extraembryonic ectoderm.",
+   "methods": "Mouse knockout, mammary transplantation",
+   "confidence": "high",
+   "pmids": [
+    "15650748",
+    "30200227"
+   ],
+   "open": "Which Elf5 target genes, and which DNA sites, carry the mammary phenotype was unknown."
+  },
+  {
+   "year": 2008,
+   "finding": "Elf5 specifies the secretory alveolar lineage: knockout prevents formation of secretory epithelium, inducible overexpression drives alveolar differentiation and milk secretion in virgin mice, and CD61+ luminal progenitors accumulate without it.",
+   "methods": "Knockout, inducible transgenic overexpression, flow cytometry of mammary progenitors",
+   "confidence": "high",
+   "pmids": [
+    "18316476"
+   ]
+  },
+  {
+   "year": 2010,
+   "finding": "Profiling all human and mouse ETS proteins puts the ELF proteins in class II, which tolerates the C three bases 5' of the core that class I rejects, a difference traced to a single leucine where class I carries phenylalanine or tyrosine; ETV6 and ETV7 are split off as class IIb, and ELF1 ChIP-seq peaks are strongly promoter-enriched.",
+   "methods": "High-throughput microwell binding assay, protein-binding microarrays, site-directed mutagenesis, ChIP-seq",
+   "confidence": "high",
+   "pmids": [
+    "20517297"
+   ],
+   "open": "No sequence feature separated one class IIa ELF protein from another."
+  },
+  {
+   "year": 2012,
+   "finding": "Elf5 suppresses the epithelial-mesenchymal transition in mammary development and breast cancer metastasis by directly repressing Snail2.",
+   "methods": "Conditional knockout, EMT and metastasis models, MMTV-neu tumour model, clinical breast cancer samples",
+   "confidence": "medium",
+   "pmids": [
+    "23086238"
+   ]
+  },
+  {
+   "year": 2013,
+   "finding": "EHF promotes corneal epithelial fate through both activating and repressing target genes, with likely interplay with KLF4 and KLF5.",
+   "methods": "Transcriptome time course, loss of function, ChIP-seq",
+   "confidence": "medium",
+   "pmids": [
+    "24142692"
+   ]
+  },
+  {
+   "year": 2017,
+   "finding": "Methylation-sensitive SELEX across 542 human transcription factors finds ETS-family proteins generally inhibited by CpG methylation, which bears directly on the CpG inside CCGGAAGT.",
+   "methods": "Methyl-HT-SELEX",
+   "confidence": "medium",
+   "pmids": [
+    "28473536"
+   ],
+   "open": "How methylation shapes which ELF sites are used in cells was not measured."
+  },
+  {
+   "year": 2018,
+   "finding": "In bronchial epithelium EHF targets inflammation and wound-repair genes, and an siRNA screen of about 1500 factors identifies it, with KLF5, as one of the strongest repressors of CFTR, acting at an airway-selective element 35 kb upstream of the CFTR promoter.",
+   "methods": "ChIP-seq, RNA-seq after depletion, siRNA screen, ChIP in primary bronchial epithelial cells",
+   "confidence": "medium",
+   "pmids": [
+    "28461336",
+    "29572268"
+   ],
+   "open": "How the cystic fibrosis modifier variant near EHF changes EHF activity was not established."
+  },
+  {
+   "year": 2021,
+   "finding": "Ehf-null mice are born at Mendelian ratios but develop facial skin papillomas, preputial or vulval abscesses and corneal ulcers and are more susceptible to colitis; gut-specific deletion impairs goblet cell differentiation and enhances Apc-initiated adenomas. This overturns the 2018 review statement that no Ehf deletion phenotype had been reported.",
+   "methods": "Germline and intestine-specific knockout mice",
+   "confidence": "medium",
+   "pmids": [
+    "34180969"
+   ]
+  }
+ ],
+ "open": [
+  "Why the methylation-aware HOCOMOCO models for ELF2, ELF3 and ELF4 read CAGGAAGT while the unmethylated in vitro models read CCGGAAGT is not established: the A may simply avoid a CpG whose methylation blocks ETS binding, or it may be a genuine second preference that persists in cells.",
+  "Two footprint archetypes grouped here read GGAT, whereas the ESE literature describes ELF3, ELF5 and EHF as GGAA binders and class II proteins as more sensitive than class I to the A-to-T change that creates GGAT; whether these archetypes record real ELF binding at GGAT sites or SPDEF-like footprints is unresolved.",
+  "Whether ELF3 acts as a tumour suppressor or a tumour promoter depends on context and is unsettled: inactivating, often heterozygous, mutations in bladder, ovarian and biliary cancers argue for loss of function, while amplification in colorectal and gastric cancer and raised expression in prostate cancer and mutant cervical adenocarcinomas point the other way."
  ]
 }

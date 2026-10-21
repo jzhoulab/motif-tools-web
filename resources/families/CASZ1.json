@@ -8,7 +8,7 @@
   "Drosophila castor orthologue"
  ],
  "short": "CASZ1 is the single human orthologue of Drosophila castor, a large multi-zinc-finger transcription factor that in flies specifies a late temporal window of neuroblast identity. The human gene sits at 1p36.22 and produces two main isoforms with different numbers of C2H2 zinc fingers. Its binding preference is poorly characterized: the only motif in these databases is a long, AT-rich composite model from in vitro selection, and no consensus has been established by focused biochemistry. CASZ1 is required for cardiac and vascular morphogenesis in Xenopus and mouse, its expression is low in high-risk neuroblastoma where 1p36 is frequently deleted, and common variants at the CASZ1 locus are among the earliest replicated blood-pressure associations.",
- "long": "## The factors\n\nCASZ1 (castor zinc finger 1, CST, ZNF693) is the vertebrate orthologue of Drosophila castor, which was\ncloned in 1992 as a novel zinc-finger protein required for the development of a subset of CNS neurons and\nis best known as one of the temporal identity factors that mark a late window in neuroblast lineages. The\nhuman gene is at 1p36.22. It encodes a large protein with multiple C2H2 zinc fingers arranged in an\nunusual pattern, and two principal isoforms are described, commonly referred to by their finger counts\n(an eleven-finger and a five-finger form), which differ at the C terminus. CASZ1 binds DNA as a monomer\nas far as is known; no obligate dimerization partner has been reported, though it associates with\ncongenital heart disease protein 5 (CHD5/CONGDD) and with chromatin-remodelling activity in cardiac\ntissue. There is one human gene, so there is no paralogue problem within the family, but there is also\nvery little comparative information to lean on. Expression is highest in heart, vasculature and\nneural-crest-derived sympathetic tissue, with additional expression in kidney and lung.\n\n## The motif\n\nThis family has no established consensus, and this entry does not invent one. The only model in these\ndatabases is a single HOCOMOCO matrix, CASZ1.H14CORE.0.SGI.A, with the data consensus\nTTTTGGGGNAAAATNNGNNDTTT - a 23-position, mostly AT-rich composite with two loosely specified blocks\nseparated by a degenerate middle. Its evidence code (S, G, I) includes in vitro selection and integrative\ndata and it carries a grade-A quality flag, so the measurement is credible as a measurement; what is\nmissing is independent confirmation and any focused structural or mutational work assigning positions to\nparticular fingers. There is no JASPAR, CIS-BP or Vierstra model for CASZ1 in this atlas, so cohesion is\nundefined (recorded as zero because there is nothing to compare against), and the motif's nearest\nneighbour in any other family reaches only about 0.64 similarity - it does not clearly resemble any other\nknown element.\n\nA long AT-rich model with a degenerate middle behaves in a scan much like a low-complexity filter. The\ninformation is spread thinly over many positions, poly-T and poly-A tracts will score, and the effective\nspecificity is much lower than the length of the model suggests. Nothing is known about half-sites,\nspacing rules or which of the many CASZ1 zinc fingers contact DNA. Whether the two isoforms have different\nspecificities has not been tested.\n\n## Where it acts\n\nDirect, validated CASZ1 target genes are few. The best-characterized is EGFL7, which CASZ1 binds and\nactivates in endothelial cells; CASZ1 depletion phenocopies EGFL7 loss in vascular sprouting, and\nrestoring Egfl7 rescues the defect, acting through RhoA and focal-adhesion localization. In neuroblastoma\ncells, restoring CASZ1 changes the expression of a broad set of growth- and differentiation-related genes,\nbut these were identified by expression profiling rather than by direct occupancy, so most are downstream\nrather than bound. Genome-wide occupancy maps for CASZ1 in human cells are sparse. The practical\nconsequence is that there is no established picture of whether CASZ1 works from promoters or enhancers,\nwhat chromatin context its sites occupy, or which factors it co-occurs with. The literature here is thin\nand should be described as thin.\n\n## Biology and disease\n\nCASZ1 is required for heart and blood-vessel development. In Xenopus, loss of CASZ1 blocks differentiation\nof cardiac precursor cells at the ventral midline, and CASZ1-depleted embryos fail to form a branched,\nlumenized vascular network; human endothelial cells depleted of CASZ1 show altered adhesion, morphology\nand sprouting. CASZ1 associates with CHD5 to maintain myocardial tissue integrity. In humans, a\nheterozygous CASZ1 missense variant (p.L38P) segregating with ventricular septal defect in one family was\nreported with reduced transactivation in reporter assays, the first link between CASZ1 and congenital\nheart disease; this rests on a single pedigree and should be treated as suggestive. In neuroblastoma, low\nCASZ1 expression correlates with older age at diagnosis, high-risk classification, 1p loss of\nheterozygosity and MYCN amplification, and with worse survival; restoring CASZ1 in neuroblastoma lines\ninduces differentiation and suppresses tumorigenicity, making it a candidate for the 1p36 tumour\nsuppressor. Separately, common variants at the CASZ1 locus were among the loci identified in early\ngenome-wide association studies of blood pressure and hypertension, though the causal gene and mechanism\nat that locus have not been settled.\n\n## Reading a hit\n\nTreat a CASZ1 match as weak. The model is a single long AT-rich composite from one database; there is no\nreplication across databases, no structure, and no defined core, so a match does not license the\nconclusion that CASZ1 bound the sequence. AT-rich models of this shape also overlap the preferences of\nhomeodomain, forkhead, HMG and other minor-groove AT readers, and they score poly-A/poly-T tracts, so\nsequence composition alone can produce hits. There is no paralogue ambiguity within the family, because\nthere is only one gene, but that is not reassurance - it just means the usual family-versus-member caveat\nis replaced by a cruder one: the motif itself is not well enough established to support a specific call.\nUse a CASZ1 hit as a hypothesis to test with expression and occupancy data in a tissue where CASZ1 is\nactually expressed (heart, endothelium, sympathetic neuroblast lineage), and do not build an argument on\nthe match alone.",
+ "long": "## The factors\n\nCASZ1 (castor zinc finger 1, CST, ZNF693) is the vertebrate orthologue of Drosophila castor, which was\ncloned in 1992 as a novel zinc-finger protein required for the development of a subset of CNS neurons [PMID:1418995] and\nis best known as one of the temporal identity factors that mark a late window in neuroblast lineages. The\nhuman gene is at 1p36.22. It encodes a large protein with multiple C2H2 zinc fingers arranged in an\nunusual pattern, and two principal isoforms are described, commonly referred to by their finger counts\n(an eleven-finger and a five-finger form), which differ at the C terminus. CASZ1 binds DNA as a monomer\nas far as is known; no obligate dimerization partner has been reported, though it binds\ncongenital heart disease protein 5 (CHD5, also called tryptophan-rich basic protein or WRB, a chromosome 21 gene unrelated to the chromodomain helicase CHD5) [PMID:24993940], and in retinal progenitors it associates with the NuRD nucleosome-remodelling complex [PMID:33594190]. There is one human gene, so there is no paralogue problem within the family, but there is also\nvery little comparative information to lean on. Expression is highest in heart, vasculature and\nneural-crest-derived sympathetic tissue, with additional expression in kidney and lung.\n\n## The motif\n\nThis family has no established consensus, and this entry does not invent one. The only model in these\ndatabases is a single HOCOMOCO matrix, CASZ1.H14CORE.0.SGI.A, with the data consensus\nTTTTGGGGNAAAATNNGNNDTTT - a 23-position, mostly AT-rich composite with two loosely specified blocks\nseparated by a degenerate middle. Its evidence code (S, G, I) is three in vitro assays, HT-SELEX, GHT-SELEX and SMiLE-seq, and it carries a grade-A quality flag [PMID:41203846], so the measurement is credible as a measurement; what is\nmissing is independent confirmation and any focused structural or mutational work assigning positions to\nparticular fingers. There is no JASPAR, CIS-BP or Vierstra model for CASZ1 in this atlas, so cohesion is\nundefined (recorded as zero because there is nothing to compare against), and the motif's nearest\nneighbour in any other family reaches only about 0.64 similarity - it does not clearly resemble any other\nknown element.\n\nA long AT-rich model with a degenerate middle behaves in a scan much like a low-complexity filter. The\ninformation is spread thinly over many positions, poly-T and poly-A tracts will score, and the effective\nspecificity is much lower than the length of the model suggests. Nothing is known about half-sites,\nspacing rules or which of the many CASZ1 zinc fingers contact DNA. Whether the two isoforms have different\nspecificities has not been tested.\n\n## Where it acts\n\nDirect, validated CASZ1 target genes are few. The best-characterized is EGFL7, which CASZ1 binds and\nactivates in endothelial cells; CASZ1 depletion phenocopies EGFL7 loss in vascular sprouting, and\nrestoring Egfl7 rescues the defect, acting through RhoA and focal-adhesion localization [PMID:23639441]. In neuroblastoma\ncells, restoring CASZ1 changes the expression of a broad set of growth- and differentiation-related genes,\nbut these were identified by expression profiling rather than by direct occupancy, so most are downstream\nrather than bound [PMID:21252912]. Genome-wide occupancy maps for CASZ1 in human cells are sparse. The practical\nconsequence is that there is no established picture of whether CASZ1 works from promoters or enhancers,\nwhat chromatin context its sites occupy, or which factors it co-occurs with. The literature here is thin\nand should be described as thin.\n\n## Biology and disease\n\nCASZ1 is required for heart and blood-vessel development. In Xenopus, loss of CASZ1 blocks differentiation\nof cardiac precursor cells at the ventral midline [PMID:18410736], and CASZ1-depleted embryos fail to form a branched,\nlumenized vascular network; human endothelial cells depleted of CASZ1 show altered adhesion, morphology\nand sprouting [PMID:23639441]. CASZ1 associates with CHD5 to maintain myocardial tissue integrity [PMID:24993940]. In humans, a\nheterozygous CASZ1 missense variant (p.L38P) segregating with ventricular septal defect in one family was\nreported with reduced transactivation in reporter assays, the first link between CASZ1 and congenital\nheart disease [PMID:27693370]; this rests on a single pedigree and should be treated as suggestive. In neuroblastoma, low\nCASZ1 expression correlates with older age at diagnosis, high-risk classification, 1p loss of\nheterozygosity and MYCN amplification, and with worse survival; restoring CASZ1 in neuroblastoma lines\ninduces differentiation and suppresses tumorigenicity, making it a candidate for the 1p36 tumour\nsuppressor [PMID:21252912]. Separately, common variants at the CASZ1 locus were among the loci identified in early\ngenome-wide association studies of blood pressure and hypertension [PMID:19430479], though the causal gene and mechanism\nat that locus have not been settled.\n\n## Reading a hit\n\nTreat a CASZ1 match as weak. The model is a single long AT-rich composite from one database; there is no\nreplication across databases, no structure, and no defined core, so a match does not license the\nconclusion that CASZ1 bound the sequence. AT-rich models of this shape also overlap the preferences of\nhomeodomain, forkhead, HMG and other minor-groove AT readers, and they score poly-A/poly-T tracts, so\nsequence composition alone can produce hits. There is no paralogue ambiguity within the family, because\nthere is only one gene, but that is not reassurance - it just means the usual family-versus-member caveat\nis replaced by a cruder one: the motif itself is not well enough established to support a specific call.\nUse a CASZ1 hit as a hypothesis to test with expression and occupancy data in a tissue where CASZ1 is\nactually expressed (heart, endothelium, sympathetic neuroblast lineage), and do not build an argument on\nthe match alone.",
  "caveats": "The whole family rests on one HOCOMOCO matrix, a 23-position AT-rich composite with a degenerate middle. Its evidence includes in vitro selection at grade A, so the measurement is credible, but there is no independent model in JASPAR, CIS-BP or Vierstra to corroborate it, cohesion is undefined, and no structural or mutational work assigns positions to specific zinc fingers. Long AT-rich models function partly as low-complexity filters: poly-A and poly-T tracts score, and the preferences overlap homeodomain, forkhead and HMG factors. Whether the two CASZ1 isoforms differ in specificity is untested. There is only one human gene, so no paralogue problem - but a match should be treated as a hypothesis, not an identification.",
  "refs": [
   {
@@ -60,6 +60,100 @@
    "cite": "Weirauch MT, Yang A, Albu M, et al. Determination and inference of eukaryotic transcription factor sequence specificity. Cell 2014;158:1431-1443.",
    "pmid": "25215497",
    "url": "https://pubmed.ncbi.nlm.nih.gov/25215497/"
+  },
+  {
+   "cite": "Vorontsov IE, Kozin I, Abramov S, et al. Cross-platform motif discovery and benchmarking to explore binding specificities of poorly studied human transcription factors. Commun Biol 2025;8:1545.",
+   "pmid": "41203846",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41203846/"
+  },
+  {
+   "cite": "Mattar P, Jolicoeur C, Dang T, et al. A Casz1-NuRD complex regulates temporal identity transitions in neural progenitors. Sci Rep 2021;11:3858.",
+   "pmid": "33594190",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33594190/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1992,
+   "finding": "Drosophila castor is cloned in an enhancer-detection screen as a zinc-finger protein expressed in a subset of CNS neuroblasts and required for their development.",
+   "methods": "Enhancer-detection screen; mutant analysis",
+   "confidence": "medium",
+   "pmids": [
+    "1418995"
+   ],
+   "open": "No DNA-binding specificity was determined."
+  },
+  {
+   "year": 2008,
+   "finding": "Vertebrate CASTOR (CASZ1) is shown to be required in Xenopus for differentiation of cardiac precursors at the ventral midline.",
+   "methods": "Morpholino depletion; fate mapping in Xenopus",
+   "confidence": "medium",
+   "pmids": [
+    "18410736"
+   ]
+  },
+  {
+   "year": 2009,
+   "finding": "A CASZ1 variant (rs880315, P = 2.1 x 10^-7) is reported among the systolic blood pressure association signals of the CHARGE genome-wide association study.",
+   "methods": "Genome-wide association meta-analysis",
+   "confidence": "low",
+   "pmids": [
+    "19430479"
+   ],
+   "open": "The signal fell short of conventional genome-wide significance (5 x 10^-8) in that study, and no causal gene was assigned."
+  },
+  {
+   "year": 2011,
+   "finding": "Low CASZ1 expression in neuroblastoma correlates with high-risk features and poor survival, and restoring CASZ1 induces differentiation and suppresses tumorigenicity, nominating it as a 1p36 tumour suppressor.",
+   "methods": "Quantitative RT-PCR in tumors; restoration in cell lines; expression profiling",
+   "confidence": "medium",
+   "pmids": [
+    "21252912"
+   ],
+   "open": "Responsive genes were found by expression profiling, not occupancy, so direct targets remained unknown."
+  },
+  {
+   "year": 2013,
+   "finding": "CASZ1 is shown to directly regulate EGFL7 to promote vascular assembly; Egfl7 restores the defects of CASZ1-depleted endothelial cells.",
+   "methods": "Xenopus depletion; human endothelial cell knockdown; direct-target analysis; rescue",
+   "confidence": "medium",
+   "pmids": [
+    "23639441"
+   ]
+  },
+  {
+   "year": 2014,
+   "finding": "CASZ1 is found to interact directly with congenital heart disease protein 5 (CHD5/WRB), and the interaction is needed for cardiac morphogenesis in Xenopus.",
+   "methods": "Protein interaction assays; Xenopus loss of function",
+   "confidence": "medium",
+   "pmids": [
+    "24993940"
+   ]
+  },
+  {
+   "year": 2016,
+   "finding": "A heterozygous CASZ1 missense variant (p.L38P) co-segregating with ventricular septal defect in one family reduces transcriptional activity in reporter assays.",
+   "methods": "Candidate-gene sequencing in 172 patients; pedigree segregation; luciferase assays",
+   "confidence": "low",
+   "pmids": [
+    "27693370"
+   ],
+   "open": "A single pedigree; no replication."
+  },
+  {
+   "year": 2025,
+   "finding": "Cross-platform data on poorly studied human transcription factors (HT-SELEX, genomic HT-SELEX and SMiLE-seq) underlie the first CASZ1 motif, the grade-A HOCOMOCO v14 model that is the only CASZ1 model in this atlas.",
+   "methods": "HT-SELEX; GHT-SELEX; SMiLE-seq; cross-platform motif benchmarking",
+   "confidence": "medium",
+   "pmids": [
+    "41203846"
+   ],
+   "open": "No independent laboratory, mutational or structural work has yet tested the model or assigned it to particular fingers."
+  }
+ ],
+ "open": [
+  "Whether the single CASZ1 model describes a defined recognition site or a broad AT-rich preference is unresolved: it is reproducible across three in vitro platforms, but no independent study, mutational analysis or structure has identified a core or tied positions to particular zinc fingers.",
+  "Whether CASZ1 itself is the causal gene behind the blood-pressure association at its locus is unsettled: the association comes from genome-wide association data, and the cited work does not connect it to a CASZ1-dependent mechanism.",
+  "Whether CASZ1 variants cause human congenital heart disease is unresolved: the p.L38P variant co-segregates with ventricular septal defect in one pedigree and reduces reporter activity, but no independent family has been reported in the cited work."
  ]
 }

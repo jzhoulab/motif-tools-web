@@ -66,6 +66,28 @@ table.mem td.s{font-family:var(--font-mono);font-size:11.5px;color:var(--muted)}
 .flag.x{background:#2a1a1a;color:#e0866f;border:1px solid #4a2a26}
 .flag.i{background:#1c2436;color:#8FA3BC;border:1px solid #2a3category}
 .flag.w{background:#231d12;color:#c9a35a;border:1px solid #3a2f1c}
+sup.cite{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.02em;margin-left:2px;white-space:nowrap}
+sup.cite a{color:var(--muted-2);text-decoration:none;border-bottom:1px dotted var(--line)}
+sup.cite a:hover{color:var(--cyan);border-color:var(--cyan)}
+sup.cite i{font-style:normal;color:var(--line)}
+.tl{list-style:none;padding:0;margin:14px 0 0;border-left:2px solid var(--line-soft)}
+.tl li{position:relative;padding:0 0 18px 20px}
+.tl li::before{content:"";position:absolute;left:-5px;top:7px;width:8px;height:8px;border-radius:50%;background:var(--panel-2);border:2px solid var(--line)}
+.tl li:last-child::before{background:var(--cyan);border-color:var(--cyan)}
+.tl-head{display:flex;flex-wrap:wrap;gap:9px;align-items:baseline;margin-bottom:4px}
+.tl-year{font-family:var(--font-display);font-weight:700;font-size:15px;color:var(--text)}
+.tl-conf{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;border-radius:4px;padding:1px 6px;border:1px solid var(--line)}
+.tl-conf.high{color:#6fbf8f;border-color:#1e3a2a;background:#111c16}
+.tl-conf.medium{color:#d2a344;border-color:#3a2f1c;background:#1b1710}
+.tl-conf.low{color:#8FA3BC}
+.tl-meth{font-size:12px;color:var(--muted-2);font-style:italic}
+.tl-pm{font-family:var(--font-mono);font-size:10.5px}
+.tl-pm a{color:var(--muted-2)}
+.tl-pm a:hover{color:var(--cyan)}
+.tl li p{font-size:14.5px;color:#dbe4f0;line-height:1.6;margin:0;max-width:74ch}
+.tl-open{margin-top:5px!important;font-size:13px!important;color:var(--muted)!important;font-style:italic}
+.openq{margin:12px 0 0;padding-left:20px;max-width:76ch}
+.openq li{margin:8px 0;color:#dbe4f0;font-size:14.5px;line-height:1.65}
 .sbars{margin-top:12px}
 .sbar-row{display:grid;grid-template-columns:minmax(190px,22ch) 1fr 120px;gap:12px;align-items:center;padding:5px 0}
 .sbar-l{font-size:13.5px;color:#cfdaea}
@@ -248,6 +270,18 @@ export function buildFamilies(dist) {
             + `<div class="checks">${checks}</div>`
             + (f.short ? `<p class="lead">${esc(f.short)}</p>` : `<p class="lead">${esc(f.def)}</p>`)
             + `<div class="prose">${md(f.long || '')}</div>`
+            + (f.timeline?.length ? `<h2 style="font-size:21px;margin-top:34px">How this was worked out</h2>`
+                + `<ol class="tl">` + f.timeline.map((t) => `<li>`
+                    + `<div class="tl-head"><span class="tl-year">${esc(String(t.year ?? ''))}</span>`
+                    + (t.confidence ? `<span class="tl-conf ${esc(String(t.confidence))}">${esc(String(t.confidence))}</span>` : '')
+                    + (t.methods ? `<span class="tl-meth">${esc(t.methods)}</span>` : '')
+                    + (t.pmids?.length ? `<span class="tl-pm">${t.pmids.map((id) =>
+                        `<a href="https://pubmed.ncbi.nlm.nih.gov/${esc(String(id))}/" rel="noopener nofollow">${esc(String(id))}</a>`).join(' ')}</span>` : '')
+                    + `</div><p>${esc(t.finding || '')}</p>`
+                    + (t.open ? `<p class="tl-open">Still open then: ${esc(t.open)}</p>` : '')
+                    + `</li>`).join('') + `</ol>` : '')
+            + (f.open?.length ? `<h2 style="font-size:21px;margin-top:34px">Still unresolved</h2>`
+                + `<ul class="openq">` + f.open.map((q) => `<li>${esc(q)}</li>`).join('') + `</ul>` : '')
             + (f.caveats ? `<div class="caveat"><div class="eyebrow">How much to trust a hit</div><p style="margin-top:8px">${esc(f.caveats)}</p></div>` : '')
             + (f.refs?.length ? `<h2 style="font-size:19px;margin-top:30px">References</h2><ul class="refs">`
                 + f.refs.map((r) => `<li>${esc(r.cite)}${r.url ? ` <a href="${esc(r.url)}" rel="noopener nofollow">${r.pmid ? 'PMID ' + esc(r.pmid) : 'link'}</a>` : ''}</li>`).join('') + `</ul>` : '')
@@ -280,6 +314,7 @@ export function buildFamilies(dist) {
             motifCount: f.n, bySource: f.bySource, symbols: f.symbols,
             representative: f.representative, cohesion: f.cohesion,
             short: f.short, long: f.long, caveats: f.caveats, references: f.refs,
+            timeline: f.timeline || [], openQuestions: f.open || [],
             members: f.members,
             url: `https://motif.zhoulab.io/families/${f.key.toLowerCase()}/`,
             generated: data.generated,
@@ -300,6 +335,12 @@ export function buildFamilies(dist) {
             json: `https://motif.zhoulab.io/families/${f.key.toLowerCase()}.json`,
         })),
     }, null, 1));
+
+    // The published record of the fact-checking pass, so the methods page reports what
+    // the check found rather than asserting that a check happened.
+    const AUDIT_FILE = resolve(root, 'apps/motif-match/scripts/families/audit/anchoring-2026-10.json');
+    const audit = existsSync(AUDIT_FILE) ? JSON.parse(readFileSync(AUDIT_FILE, 'utf8')).summary : null;
+    const AUDIT_URL = 'https://github.com/jzhoulab/motif-tools-web/blob/main/apps/motif-match/scripts/families/audit/anchoring-2026-10.json';
 
     // ---- methods and limits ----
     const stat = {
@@ -341,11 +382,14 @@ Two different things sit on every family page, and they have different reliabili
 
 - **Every citation.** All ${stat.pmids.toLocaleString()} distinct PMIDs behind the ${stat.refs.toLocaleString()} references resolve against PubMed, and each one names an author the citation claims. The printed citation text is then *regenerated from PubMed's own record*, so what you read cannot drift from the identifier beside it. A wrong identifier surfaces as a mismatch rather than sitting there looking plausible.
 - **Structure.** Every entry carries the five required sections in order, within set word budgets, with at least six references.
-- **Claims about the motifs.** Where an entry states a consensus, it is compared with the consensus computed from the member matrices. ${stat.noConsensus} families state that they have **no single consensus** rather than being given one, and the pages and the map show that instead of substituting the medoid.
-
+- **Claims about the motifs.** Where an entry states a consensus, it is compared with the consensus computed from the member matrices. ${stat.noConsensus} families state that they have **no single consensus** rather than being given one, and the pages and the map show that instead of substituting the medoid. Statements about a named model's evidence type, a family's cohesion or a motif's information content are linted against the computed values.
+- **Retractions.** Every cited PMID is checked against PubMed's retraction flag. Citing a retraction *notice* is allowed — an entry may need to say a study was withdrawn — but citing the withdrawn work is not.
+${audit ? `- **Every anchored sentence, against its source.** A second pass tied each substantive claim to the paper that supports it, marked inline, and read that paper to do so. It flagged **${audit.flagged} problems in ${audit.entries} entries**: ${audit.byKind.error} where the prose contradicted its source or the atlas's own data, ${audit.byKind.overstated} overstatements, ${audit.byKind.loose} anchors to a paper that did not actually state the claim, and ${audit.byKind.unverified} claims nobody could source. ${audit.corrected} were corrected${audit.open ? `, ${audit.open} remain open` : ''}, and ${audit.rejected} flags turned out to be wrong themselves and were rejected. One retracted paper was found cited and removed. [The full list is published](${AUDIT_URL}), problem by problem.
+` : ''}
 ## What is not checked
 
-- **Whether a sentence is a fair reading of the paper it cites.** The citation is verified to exist and to be the paper named. That it supports the specific claim is not mechanically verified.
+- **Sentences without an anchor.** Anchored sentences have been read against their source, but framing sentences and some textbook background carry no anchor, and those rest on the model's training rather than on a retrieved paper.
+- **Abstracts, mostly.** Most anchors were checked against the abstract, because many papers are not open access. A claim drawn from a paper's main text but absent from its abstract can still be mis-stated.
 - **Claims with no citation.** Several entries state textbook background without a reference, because the reference list is capped at twelve. Those sentences rest on the model's training, not on a retrieved source.
 - **Completeness.** No claim is made that an entry covers the important literature for its family, only that what it cites is real.
 
@@ -355,6 +399,8 @@ Two different things sit on every family page, and they have different reliabili
 - **${counts.chipOnly} of ${counts.withEvidence} HOCOMOCO matrices are ChIP-only.** A ChIP-derived matrix records where a protein was crosslinked, which need not be a sequence it binds itself. Those are flagged in amber in every member table.
 - **${counts.transfer} CIS-BP entries are inherited from a non-human protein**, down to 55% DNA-binding-domain identity — the human RFX8 motif comes from a louse. Each is labelled with its species and identity.
 - **${counts.suspect} motifs sit under a label their own matrix contradicts**, and ${counts.resembles} uncharacterised zinc-finger motifs are essentially a known family's motif. Both are listed on the [label checks](/families/label-checks/) page rather than quietly corrected.
+- **HOCOMOCO v14 has no dedicated paper.** The motif ids used throughout are v14 (\`H14CORE\`), but the citable description is the 2024 paper for v12, which used ChIP-seq and HT-SELEX only. The GHT-SELEX, SMiLE-seq and PBM evidence codes postdate it.
+- **The process made one systematic error of its own.** The first version of the writing brief mis-decoded three HOCOMOCO evidence letters (G, I and B, which are all in vitro assays) as "integrative" or "other collections". Twelve sentences in ten entries repeated it, understating the evidence behind those models, before it was caught and corrected.
 - **Family assignment is from the label, not the matrix.** A motif's family comes from the protein name it carries, routed through a curated gene-symbol table. Only ${counts.inferred} of the ${stat.motifs.toLocaleString()} were assigned from similarity instead, and a further ${counts.generic} carry a label so generic ("ZNF") that they are grouped as unnamed archetypes rather than placed. That independence from the matrices is what makes the label checks possible — but it also means a mislabelled matrix lands in the wrong family until someone notices.
 
 ## Reproducing it
@@ -489,6 +535,19 @@ If something here is wrong, it probably is somewhere. Corrections are the fastes
         + bar('PMIDs that resolve and name the author cited', stat.pmids, stat.pmids, 'ok')
         + `</div>`
         + `<p class="note">${stat.refs.toLocaleString()} references across ${stat.families} entries, ${stat.pmids.toLocaleString()} of them distinct; median ${refCounts[Math.floor(refCounts.length / 2)]} per family, minimum ${refCounts[0]}. Citation text is regenerated from PubMed's own record, so it cannot drift from the identifier beside it. What is <em>not</em> checked is whether each sentence is a fair reading of the paper it cites — see <a href="/families/methods/">methods</a>.</p>`
+
+        + `<h2 style="font-size:20px;margin-top:34px">Anchoring and fact-check</h2>`
+        + `<div class="sbars">`
+        + bar('families with inline citations', fams.filter((f) => /\[PMID:/.test(f.long || '')).length, stat.families, 'ok')
+        + bar('families with a dated history', fams.filter((f) => (f.timeline || []).length).length, stat.families, 'ok')
+        + `</div>`
+        + `<p class="note">${fams.reduce((a, f) => a + [...String(f.long || '').matchAll(/\[PMID:([\d,\s]+)\]/g)].length, 0).toLocaleString()} inline citations, ${fams.reduce((a, f) => a + (f.timeline || []).length, 0).toLocaleString()} history steps and ${fams.reduce((a, f) => a + (f.open || []).length, 0).toLocaleString()} open questions.</p>`
+        + (audit ? `<div class="sbars" style="margin-top:14px">`
+            + bar('problems the anchoring pass corrected', audit.corrected, audit.flagged, 'ok')
+            + bar('flags rejected as wrong on checking', audit.rejected, audit.flagged)
+            + (audit.open ? bar('still open', audit.open, audit.flagged, 'warn') : '')
+            + `</div>`
+            + `<p class="note">Reading each anchored sentence against its paper found ${audit.flagged} problems: ${audit.byKind.error} contradictions, ${audit.byKind.overstated} overstatements, ${audit.byKind.loose} anchors to the wrong paper and ${audit.byKind.unverified} unsourced claims. <a href="${AUDIT_URL}">Every one is listed.</a></p>` : '')
 
         + `<h2 style="font-size:20px;margin-top:34px">Entries that decline to answer</h2>`
         + `<p class="note">${stat.noConsensus} of ${stat.families} families state that they have <b>no single consensus</b> rather than being given one. That is a result, not a gap: a KRAB zinc-finger hit identifies a kind of protein, not a site.</p>`

@@ -12,7 +12,7 @@
  ],
  "consensus": "TTAATTAC",
  "short": "These are transcriptional corepressors, not classical sequence-specific activators. DACH1 and DACH2 are the vertebrate Dachshund proteins, and SKI, SKIL/SnoN, SKOR1 and SKOR2 are the Ski family; all share a Dachshund homology domain with a winged-helix fold related to forkhead. They work mostly by being recruited: DACH proteins into SIX/EYA complexes and onto forkhead sites where they compete with FOXM1, the Ski proteins onto SMAD complexes to shut down TGF-beta signalling, and SKOR1/SKOR2 onto homeodomain factors such as LBX1. The motifs in this family therefore look borrowed. The best-supported models, TTAATTAC for SKOR1 and SKOR2, are indistinguishable from homeodomain dimer sites, which is what you would expect from proteins that arrive at DNA on someone else's back.",
- "long": "## The factors\n\nTwo lineages sit in this family because they share one domain. DACH1 and DACH2 are the vertebrate\nhomologues of *Drosophila* dachshund, a retinal determination gene. Their conserved N-terminal region, the\nDachshund homology domain or DD1, was solved crystallographically and turned out to adopt a winged-helix\nfold of the kind used by forkhead proteins, with a surface consistent with DNA binding; a second conserved\nregion, DD2, mediates protein-protein interaction. The Ski family, SKI, SKIL (SnoN), SKOR1 and SKOR2,\ncarries a homologous Dachshund homology domain; the crystal structure of the human SKI domain confirmed the\nsame fold and identified a SAND-like element within it as the likely DNA-contacting surface. None of these\nproteins has a homeodomain, a zinc finger or a leucine zipper. All of them function primarily as\ncorepressors that recruit histone deacetylase and N-CoR complexes to sites chosen by a partner: DACH\nproteins into SIX-EYA complexes on SIX target promoters, SKI and SnoN onto SMAD2/3 and SMAD4 complexes at\nTGF-beta response elements, and SKOR1 and SKOR2, originally named Corl1 and Corl2, onto the homeodomain\nprotein LBX1 and related factors in developing neurons.\n\n## The motif\n\nThere is no single well-founded consensus, and the two lineages point in different directions. For the DACH\nproteins, the functional claim from cell biology is that DACH1 binds forkhead-type sequences and thereby\ncompetes with FOXM1 for its targets; the winged-helix fold of DD1 makes that structurally plausible. The\ndatabase models for DACH1 and DACH2, however, are HT-SELEX motifs reading CAATCGTCATAATT and TGACGATTG,\nwhich are not forkhead sites, are the weakest-matching members of this family internally, and should be\ntreated as provisional. For SKOR1 and SKOR2 the models are much stronger and mutually consistent: in vitro\nselection and methyl-selection give TTAATTAC and CTTTAATTAA, around 15 to 16 bits, reproduced in CIS-BP as\nTTAATTACAGNT. Read as a homeodomain site, TTAATTAC is a TAAT/ATTA arrangement of exactly the type that\nLHX, ALX and ARX homeodomains bind as cooperative dimers, and that is what the data show: the\nnearest neighbours of these models outside the family are LHX, ALX and ARX homeodomain motifs, at\nsimilarities of 0.88 to 0.93. Whether the Ski/Dachshund winged helix genuinely prefers this sequence, or\nwhether the selection experiments captured the preference of an associated homeodomain partner, is not\nsettled. The family consensus offered here, TTAATTAC, is therefore the observed motif, not a validated\nstatement about which protein reads it.\n\n## Where it acts\n\nDACH1 occupies promoters and enhancers in complexes with SIX1 and EYA proteins, where the three together\nconvert a SIX-bound site from repressed to activated via CREB-binding protein, and at forkhead sites where\nDACH1 opposes FOXM1-driven proliferative programs. SKI and SnoN are found wherever SMAD complexes are, so\ntheir apparent binding footprint is the SMAD-binding element landscape of TGF-beta and BMP signalling.\nSKOR1 and SKOR2 are restricted to specific neuronal lineages: SKOR1 in dorsal horn interneurons with LBX1,\nSKOR2 in cerebellar Purkinje cell precursors, where it is a selective marker and drives early\ndifferentiation. The practical consequence is that these factors' genome-wide occupancy tracks the\nexpression and occupancy of their partners, so composite elements in the useful sense are the partner's\nelements: a SIX site, a SMAD-binding element, or an LBX1-type homeodomain site.\n\n## Biology and disease\n\nDACH1 restrains proliferation: it inhibits cyclin D1 and breast tumour growth, binds SMAD4 to attenuate\nTGF-beta signalling, and attenuates forkhead signalling. It is downregulated in several carcinomas, and\ntranscriptome-wide association work identified DACH1 as a kidney disease risk gene contributing to fibrosis,\nmaking it a candidate target in chronic kidney disease. DACH1 and DACH2 act redundantly in Mullerian duct\ndevelopment. SKI and SnoN are proto-oncoproteins by virtue of repressing TGF-beta growth inhibition, and\nSKI mutations cause Shprintzen-Goldberg syndrome. SKOR2/Corl2 is required for early Purkinje cell\ndifferentiation. The SKOR1 locus, formerly LBXCOR1, was one of the three regions identified in the first\ngenome-wide association study of restless legs syndrome, alongside MEIS1 and BTBD9.\n\n## Reading a hit\n\nBe sceptical in a specific way. A TTAATTAC hit is a good homeodomain dimer site and a poor SKOR\nidentification: if you scan with the SKOR1 or SKOR2 model you will recover LHX, ALX and ARX sites, and in\nthis family's own data those motifs are the nearest neighbours. Conversely, if a ChIP experiment on any of\nthese proteins yields a homeodomain or SMAD or forkhead motif, the most likely explanation is indirect\nbinding through the partner that recruited them, which is the mechanism these proteins are known for. The\nDACH1 and DACH2 models are the weakest members of the family internally and do not match the forkhead-like\nspecificity that the functional literature describes, so a DACH1 motif hit should not be used as evidence\nof DACH1 occupancy. In practice, use expression of the partner, not the motif, to decide whether a DACH or\nSki family protein is plausibly at a locus.",
+ "long": "## The factors\n\nTwo lineages sit in this family because they share one domain. DACH1 and DACH2 are the vertebrate\nhomologues of *Drosophila* dachshund, a retinal determination gene. Their conserved N-terminal region, the\nDachshund homology domain or DD1, was solved crystallographically and turned out to adopt a winged-helix\nfold of the kind used by forkhead proteins, with a surface consistent with DNA binding [PMID:12057194]; a second conserved\nregion, DD2, mediates protein-protein interaction. The Ski family, SKI, SKIL (SnoN), SKOR1 and SKOR2,\ncarries a homologous Dachshund homology domain; the crystal structure of the human SKI domain confirmed the\nsame fold and identified a SAND-like element within it as the likely DNA-contacting surface [PMID:15130471]. None of these\nproteins has a homeodomain, a zinc finger or a leucine zipper. All of them function primarily as\ncorepressors that recruit histone deacetylase and N-CoR complexes to sites chosen by a partner: DACH\nproteins into SIX-EYA complexes on SIX target promoters, SKI and SnoN onto SMAD2/3 and SMAD4 complexes at\nTGF-beta response elements, and SKOR1 and SKOR2, originally named Corl1 and Corl2, onto the homeodomain\nprotein LBX1 and related factors in developing neurons [PMID:12215533,10485843,15528197].\n\n## The motif\n\nThere is no single well-founded consensus, and the two lineages point in different directions. For the DACH\nproteins, the functional claim from cell biology is that DACH1 binds forkhead-type sequences and thereby\ncompetes with FOXM1 for its targets [PMID:20351289]; the winged-helix fold of DD1 makes that structurally plausible. The\ndatabase models for DACH1 and DACH2, however, are HT-SELEX motifs reading CAATCGTCATAATT and TGACGATTG,\nwhich are not forkhead sites, are the weakest-matching members of this family internally, and should be\ntreated as provisional [PMID:23332764]. For SKOR1 and SKOR2 the models are much stronger and mutually consistent: in vitro\nselection and methyl-selection give TTAATTAC and CTTTAATTAA, around 15 to 16 bits, reproduced in CIS-BP as\nTTAATTACAGNT [PMID:23332764,28473536]. Read as a homeodomain site, TTAATTAC is a TAAT/ATTA arrangement of exactly the type that\nLHX, ALX and ARX homeodomains bind as cooperative dimers, and that is what the data show: the\nnearest neighbours of these models outside the family are LHX, ALX and ARX homeodomain motifs, at\nsimilarities of 0.88 to 0.93. Whether the Ski/Dachshund winged helix genuinely prefers this sequence, or\nwhether the selection experiments captured the preference of an associated homeodomain partner, is not\nsettled. The family consensus offered here, TTAATTAC, is therefore the observed motif, not a validated\nstatement about which protein reads it.\n\n## Where it acts\n\nDACH1 occupies promoters and enhancers in complexes with SIX1 and EYA proteins, where the three together\nconvert a SIX-bound site from repressed to activated via CREB-binding protein [PMID:12215533], and at forkhead sites where\nDACH1 opposes FOXM1-driven proliferative programs. SKI and SnoN are found wherever SMAD complexes are, so\ntheir apparent binding footprint is the SMAD-binding element landscape of TGF-beta and BMP signalling [PMID:10485843].\nSKOR1 and SKOR2 are restricted to specific neuronal lineages: SKOR1 in dorsal horn interneurons with LBX1 [PMID:15528197],\nSKOR2 in cerebellar Purkinje cell precursors, where it is a selective marker and drives early\ndifferentiation [PMID:18522874,24491816]. The practical consequence is that these factors' genome-wide occupancy tracks the\nexpression and occupancy of their partners, so composite elements in the useful sense are the partner's\nelements: a SIX site, a SMAD-binding element, or an LBX1-type homeodomain site.\n\n## Biology and disease\n\nDACH1 restrains proliferation: it inhibits cyclin D1 and breast tumour growth [PMID:16980615], binds SMAD4 to attenuate\nTGF-beta signalling [PMID:14525983], and attenuates forkhead signalling [PMID:20351289]. It is downregulated in several carcinomas, and\ntranscriptome-wide association work identified DACH1 as a kidney disease risk gene contributing to fibrosis,\nmaking it a candidate target in chronic kidney disease [PMID:33998598]. DACH1 and DACH2 act redundantly in Mullerian duct\ndevelopment. SKI and SnoN are proto-oncoproteins by virtue of repressing TGF-beta growth inhibition [PMID:10485843], and\nSKI mutations cause Shprintzen-Goldberg syndrome [PMID:23023332]. SKOR2/Corl2 is required for early Purkinje cell\ndifferentiation [PMID:24491816]. The SKOR1 locus, formerly LBXCOR1, was one of the three regions identified in the first\ngenome-wide association study of restless legs syndrome, alongside MEIS1 and BTBD9 [PMID:17637780].\n\n## Reading a hit\n\nBe sceptical in a specific way. A TTAATTAC hit is a good homeodomain dimer site and a poor SKOR\nidentification: if you scan with the SKOR1 or SKOR2 model you will recover LHX, ALX and ARX sites, and in\nthis family's own data those motifs are the nearest neighbours. Conversely, if a ChIP experiment on any of\nthese proteins yields a homeodomain or SMAD or forkhead motif, the most likely explanation is indirect\nbinding through the partner that recruited them, which is the mechanism these proteins are known for. The\nDACH1 and DACH2 models are the weakest members of the family internally and do not match the forkhead-like\nspecificity that the functional literature describes, so a DACH1 motif hit should not be used as evidence\nof DACH1 occupancy. In practice, use expression of the partner, not the motif, to decide whether a DACH or\nSki family protein is plausibly at a locus.",
  "caveats": "This family's motifs probably belong to other proteins. DACH and Ski family members have no homeodomain, no zinc finger and no leucine zipper; they are corepressors recruited by SIX/EYA, SMAD or homeodomain partners, and their conserved Dachshund homology domain has only a plausible, not a demonstrated, sequence preference. The strongest models here, SKOR1 and SKOR2 reading TTAATTAC, sit among LHX, ALX and ARX homeodomain motifs at 0.88 to 0.93 similarity, which is the expected signature of partner carry-over. The DACH1 and DACH2 models do not match the forkhead-like specificity the functional literature reports and are the weakest members internally. Do not call occupancy for these factors from a motif hit alone.",
  "refs": [
   {
@@ -74,6 +74,106 @@
    "cite": "Doyle AJ, Doyle JJ, Bessling SL, et al. Mutations in the TGF-β repressor SKI cause Shprintzen-Goldberg syndrome with aortic aneurysm. Nat Genet 2012;44:1249-54.",
    "pmid": "23023332",
    "url": "https://pubmed.ncbi.nlm.nih.gov/23023332/"
+  },
+  {
+   "cite": "Wu K, Yang Y, Wang C, et al. DACH1 inhibits transforming growth factor-beta signaling through binding Smad4. J Biol Chem 2003;278:51673-84.",
+   "pmid": "14525983",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/14525983/"
+  },
+  {
+   "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
+   "pmid": "23332764",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  },
+  {
+   "cite": "Yin Y, Morgunova E, Jolma A, et al. Impact of cytosine methylation on DNA binding specificities of human transcription factors. Science 2017;356.",
+   "pmid": "28473536",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28473536/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1999,
+   "finding": "SKI is shown to bind Smad2, Smad3 and Smad4 and to repress TGF-beta target genes from the Smad complex, establishing that a protein with no classical DNA-binding domain reaches TGF-beta response elements by riding on a partner.",
+   "methods": "coimmunoprecipitation, reporter assays and mutational analysis in mammalian cells",
+   "confidence": "medium",
+   "pmids": [
+    "10485843"
+   ],
+   "open": "Left open whether SKI contributes any sequence preference of its own at those elements."
+  },
+  {
+   "year": 2002,
+   "finding": "The crystal structure of the Dachshund homology domain of DACH shows a winged-helix fold of the type used by forkhead proteins, with a surface compatible with DNA binding, which is the structural basis for every later claim that these corepressors can contact DNA directly.",
+   "methods": "X-ray crystallography of the isolated domain",
+   "confidence": "high",
+   "pmids": [
+    "12057194"
+   ],
+   "open": "No DNA was present in the structure and no bound sequence was identified."
+  },
+  {
+   "year": 2004,
+   "finding": "The crystal structure of the Dachshund homology domain of human SKI confirms the same winged-helix fold in the Ski lineage and identifies a SAND-like element as the probable DNA-contacting surface, unifying the two lineages on structure rather than on sequence preference.",
+   "methods": "X-ray crystallography of the isolated domain",
+   "confidence": "high",
+   "pmids": [
+    "15130471"
+   ],
+   "open": "Again without DNA, so the predicted contacts remained untested."
+  },
+  {
+   "year": 2005,
+   "finding": "Corl1, later named SKOR1, is identified as a neuronal lineage-specific corepressor that binds the homeodomain protein Lbx1, which gives a concrete mechanism by which a Ski-family protein can be delivered to homeodomain sites.",
+   "methods": "yeast two-hybrid, interaction mapping and expression analysis in mouse neural tube",
+   "confidence": "medium",
+   "pmids": [
+    "15528197"
+   ]
+  },
+  {
+   "year": 2010,
+   "finding": "DACH1 is shown to attenuate forkhead signaling and to compete with FOXM1 at forkhead target genes, the main functional evidence that the DACH winged helix engages forkhead-type sequences.",
+   "methods": "reporter assays, chromatin immunoprecipitation and expression analysis in cancer cell lines",
+   "confidence": "medium",
+   "pmids": [
+    "20351289"
+   ],
+   "open": "Occupancy at forkhead sites could also reflect displacement of FOXM1 through protein contact rather than direct DNA binding by DACH1."
+  },
+  {
+   "year": 2013,
+   "finding": "HT-SELEX on recombinant proteins produces the first measured models for this family and contradicts the functional picture: the DACH1 and DACH2 models are not forkhead-like, while SKOR models select a TTAATTAC arrangement that is a classic homeodomain dimer site.",
+   "methods": "HT-SELEX",
+   "confidence": "medium",
+   "pmids": [
+    "23332764"
+   ],
+   "open": "Selection on a recombinant protein cannot exclude that a copurified or added homeodomain partner shaped the result."
+  },
+  {
+   "year": 2017,
+   "finding": "Methylation-sensitive HT-SELEX reproduces the SKOR1 and SKOR2 preference for TTAATTAA-type sites, making the homeodomain-like SKOR motif the best-supported model in the family while leaving its attribution unresolved.",
+   "methods": "methyl-HT-SELEX",
+   "confidence": "medium",
+   "pmids": [
+    "28473536"
+   ]
+  },
+  {
+   "year": 2021,
+   "finding": "A transcriptome-wide association study in human kidney identifies DACH1 as a risk gene for chronic kidney disease whose reduced expression contributes to fibrosis, giving the DACH lineage a human genetic phenotype outside cancer.",
+   "methods": "transcriptome-wide association analysis with mouse and cell validation",
+   "confidence": "medium",
+   "pmids": [
+    "33998598"
+   ]
+  }
+ ],
+ "open": [
+  "It is unknown whether the Dachshund homology domain binds DNA directly in cells: both crystal structures show folds compatible with DNA binding, but neither contains DNA, and no protein-DNA complex or validated site has been reported for any member.",
+  "Whether TTAATTAC is the SKOR proteins' own preference or the preference of an associated homeodomain is unsettled: the site is a canonical LHX, ALX and ARX dimer element and the nearest neighbours of the SKOR models across all four databases are those homeodomain motifs, but no experiment has separated the two possibilities.",
+  "The functional literature and the database models disagree for DACH1: cell biology reports competition with FOXM1 at forkhead sites, while in vitro selection gives sequences that are not forkhead-like, and no study has tested the selected sequences for DACH1 occupancy or activity.",
+  "Whether SKOR1 is the gene through which the restless legs syndrome association acts is not established: the associated variants are non-coding, and the locus was named for SKOR1 by proximity rather than by a demonstrated effect on the protein."
  ]
 }

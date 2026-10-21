@@ -10,7 +10,7 @@
  ],
  "consensus": "TAATCC",
  "short": "PRD-like homeobox genes are a small set of rapidly evolving, single-homeodomain factors, ARGFX, DPRX, LEUTX, TPRX1 and RHOXF1/2 among them, that are expressed almost exclusively in the oocyte, the cleavage-stage embryo and the germ line. Several arose by retrotransposition of a CRX-like ancestor within mammals, and several have been lost or pseudogenised in other lineages, so there are no mouse orthologues for much of the group. Most of them select a short K50-type homeodomain site, TAATCC, in vitro; ARGFX instead prefers a TAATTA palindrome. They are candidate drivers of human zygotic genome activation, acting at promoters derived from endogenous retroviral repeats. The evidence base is thin and largely in vitro, and the motifs are short.",
- "long": "## The factors\n\nThe PRD-like class, as defined in the standard classification of human homeobox genes, contains ARGFX,\nDPRX, LEUTX, TPRX1 and its relatives, RHOXF1 and RHOXF2, and several others. Their names record features of\nthe domain itself: ARGFX is \"arginine-fifty homeobox\" and LEUTX is \"leucine-twenty homeobox\", after the\nresidue at those positions of the homeodomain. Each protein is small, carries one homeodomain, and has no\nother recognisable DNA-binding or dimerisation module. Evolutionarily this is the most volatile corner of\nthe homeobox repertoire: the genes arose in eutherian mammals, several by retrotransposition from a\nCRX-like ancestor, and they have been repeatedly pseudogenised or deleted, so there is no one-to-one mouse\ncounterpart for ARGFX, DPRX or LEUTX. Expression is correspondingly narrow. LEUTX, TPRX1, DPRX and ARGFX\nare detected in the oocyte and in 4- to 8-cell human embryos and essentially nowhere else; RHOXF1 and\nRHOXF2 are expressed in human oocytes and male germ cells. Because the genes are off in every accessible\nadult tissue, almost nothing is known about them from conventional cell-line work.\n\n## The motif\n\nMost members select TAATCC, written GGATTA on the other strand: a canonical homeodomain TAAT core followed\nby two positions specified by residue 50 of the recognition helix, which is the position that separates\nK50-type factors (TAATCC) from Q50-type factors (TAATTG or TAATTA). DPRX and RHOXF1 models extend this to\nGATAATCC, and TPRX1 to AWCGGATTA. ARGFX is the exception and reads CTAATTAG, a TAAT/ATTA palindrome of the\nQ50 type, consistent with its unusual residue 50. Information content is low throughout. The strongest\nmodel in the family carries about 15 bits, most carry 8 to 13, and several are 6-mers or shorter; one\nCIS-BP TPRX1 entry has 2 bits and reduces to \"At\", which is why the representative consensus computed from\nthe data is uninformative and should not be used. There is no single family consensus: the honest\ndescription is two shapes, a K50 TAATCC site shared by most members and an ARGFX-specific TAATTA\npalindrome. Crucially, the TAATCC form is not distinguishable from the site of the much better known K50\nfactors CRX, OTX1/2, PITX1-3 and GSC; nearest-neighbour similarity to motifs outside this family reaches\n0.99 for several members.\n\n## Where it acts\n\nWhat is known comes from early-embryo transcriptomics rather than from chromatin maps. PRD-like binding\nsequences are enriched at transcription start regions active at the 4-cell stage in human embryos, and a\nsubstantial fraction of the promoters concerned are derived from repeat families, including MLT2A1/HERVL\nlong terminal repeats and Alu elements. Overexpression of nine of these genes in human cells activated\noverlapping sets of embryo-specific targets, and LEUTX and the TPRX proteins converge on the 8-cell-stage\nprogram. Outside those windows the sites are not occupied by these factors, because the proteins are\nabsent; any match in somatic chromatin is far more likely to be read by a K50 factor such as CRX in\nphotoreceptors, OTX2 in brain and retina, or PITX proteins more broadly. No composite element involving a\nPRD-like factor has been named and characterised.\n\n## Biology and disease\n\nThe central proposal is that these factors help drive human zygotic genome activation, the handover from\nmaternal transcripts to embryonic transcription that in humans occurs around the 4- to 8-cell stage.\nLEUTX is expressed in a sharp pulse at that point and its manipulation changes 8-cell-stage gene\nexpression; depletion of the TPRX proteins impairs zygotic genome activation and subsequent development,\nwhich is currently the strongest functional evidence in the group. The RHOXF cluster is regulated by DNA\nmethylation and histone H1, is imprinted in mouse, and its methylation state and expression have been\nassociated with human male infertility, but no PRD-like gene is an established Mendelian disease gene. The\nabsence of mouse orthologues for most members means there are no informative knockouts, and human\nembryo work is limited in scale, so almost every functional statement in this family rests on a small\nnumber of studies.\n\n## Reading a hit\n\nTreat a TAATCC match as a K50 homeodomain site and stop there. It does not identify a PRD-like factor; the\nsame sequence is read by CRX, OTX and PITX proteins, which are expressed in far more tissues and have far\nmore supporting data. Almost all motif evidence for this family is in vitro: HOCOMOCO models for ARGFX,\nDPRX, RHOXF1 and RHOXF2 are built on HT-SELEX and methyl-HT-SELEX only, with quality grade B, and the\nJASPAR models are HT-SELEX. Only TPRX1 and LEUTX have HOCOMOCO models with any in vivo component. One\nJASPAR entry labelled RHOXF1 in this family is in fact the mouse Rhox11 protein-binding-microarray motif,\nconsensus CGCTGTAAA, which resembles nothing else here; the mouse Rhox cluster is a lineage-specific\nexpansion rather than a set of RHOXF1/2 orthologues, and that model should not be transferred to human\nsequence. Unless your material is oocyte, cleavage-stage embryo or germ line, the prior on PRD-like\noccupancy is very low.",
+ "long": "## The factors\n\nThe PRD-like class, as defined in the standard classification of human homeobox genes, contains ARGFX,\nDPRX, LEUTX, TPRX1 and its relatives, RHOXF1 and RHOXF2, and several others [PMID:17963489]. Their names record features of\nthe domain itself: ARGFX is \"arginine-fifty homeobox\" and LEUTX is \"leucine-twenty homeobox\", after the\nresidue at those positions of the homeodomain [PMID:17005330,17963489]. Each protein is small, carries one homeodomain, and has no\nother recognisable DNA-binding or dimerisation module. Evolutionarily this is the most volatile corner of\nthe homeobox repertoire: the genes arose in eutherian mammals, several by retrotransposition from a\nCRX-like ancestor, and they have been repeatedly pseudogenised or deleted, so there is no one-to-one mouse\ncounterpart for ARGFX, DPRX or LEUTX [PMID:17005330,27296695]. Expression is correspondingly narrow. LEUTX, TPRX1, DPRX and ARGFX\nare detected in the oocyte and in 4- to 8-cell human embryos and essentially nowhere else [PMID:26360614,27296695]; RHOXF1 and\nRHOXF2 are expressed in human oocytes and male germ cells [PMID:23482336]. Because the genes are off in every accessible\nadult tissue, almost nothing is known about them from conventional cell-line work.\n\n## The motif\n\nMost members select TAATCC, written GGATTA on the other strand: a canonical homeodomain TAAT core followed\nby two positions specified by residue 50 of the recognition helix, which is the position that separates\nK50-type factors (TAATCC) from Q50-type factors (TAATTG or TAATTA) [PMID:2572327]. DPRX and RHOXF1 models extend this to\nGATAATCC, and TPRX1 to AWCGGATTA. ARGFX is the exception and reads CTAATTAG, a TAAT/ATTA palindrome of the\nQ50 type, consistent with its unusual residue 50 [PMID:28473536]. Information content is low throughout. The strongest\nmodel in the family carries about 15 bits, most carry 8 to 13, and several are 6-mers or shorter; one\nCIS-BP TPRX1 entry has 2 bits and reduces to \"At\", which is why the representative consensus computed from\nthe data is uninformative and should not be used. There is no single family consensus: the honest\ndescription is two shapes, a K50 TAATCC site shared by most members and an ARGFX-specific TAATTA\npalindrome. Crucially, the TAATCC form is not distinguishable from the site of the much better known K50\nfactors CRX, OTX1/2, PITX1-3 and GSC; nearest-neighbour similarity to motifs outside this family reaches\n0.99 for several members [PMID:23332764,18585359].\n\n## Where it acts\n\nWhat is known comes from early-embryo transcriptomics rather than from chromatin maps. PRD-like binding\nsequences are enriched at transcription start regions active at the 4-cell stage in human embryos, and a\nsubstantial fraction of the promoters concerned are derived from repeat families, including MLT2A1/HERVL\nlong terminal repeats and Alu elements [PMID:26360614]. Overexpression of nine of these genes in human cells activated\noverlapping sets of embryo-specific targets [PMID:27412763], and LEUTX and the TPRX proteins converge on the 8-cell-stage\nprogram [PMID:27578796,36074823]. Outside those windows the sites are not occupied by these factors, because the proteins are\nabsent; any match in somatic chromatin is far more likely to be read by a K50 factor such as CRX in\nphotoreceptors, OTX2 in brain and retina, or PITX proteins more broadly. No composite element involving a\nPRD-like factor has been named and characterised.\n\n## Biology and disease\n\nThe central proposal is that these factors help drive human zygotic genome activation, the handover from\nmaternal transcripts to embryonic transcription that in humans occurs around the 4- to 8-cell stage.\nLEUTX is expressed in a sharp pulse at that point and its manipulation changes 8-cell-stage gene\nexpression [PMID:27578796]; depletion of the TPRX proteins impairs zygotic genome activation and subsequent development [PMID:36074823],\nwhich is currently the strongest functional evidence in the group. The RHOXF cluster is regulated by DNA\nmethylation and histone H1, is imprinted in mouse, and its methylation state and expression have been\nassociated with human male infertility [PMID:23943794], but no PRD-like gene is an established Mendelian disease gene. The\nabsence of mouse orthologues for most members means there are no informative knockouts, and human\nembryo work is limited in scale, so almost every functional statement in this family rests on a small\nnumber of studies.\n\n## Reading a hit\n\nTreat a TAATCC match as a K50 homeodomain site and stop there. It does not identify a PRD-like factor; the\nsame sequence is read by CRX, OTX and PITX proteins, which are expressed in far more tissues and have far\nmore supporting data. Almost all motif evidence for this family is in vitro: HOCOMOCO models for ARGFX,\nDPRX, RHOXF1 and RHOXF2 are built on HT-SELEX and methyl-HT-SELEX only, with quality grade B, and the\nJASPAR models are HT-SELEX [PMID:37971293,28473536]. Only TPRX1 and LEUTX have HOCOMOCO models with any in vivo component. One\nJASPAR entry labelled RHOXF1 in this family is in fact the mouse Rhox11 protein-binding-microarray motif,\nconsensus CGCTGTAAA [PMID:18585359], which resembles nothing else here; the mouse Rhox cluster is a lineage-specific\nexpansion rather than a set of RHOXF1/2 orthologues, and that model should not be transferred to human\nsequence. Unless your material is oocyte, cleavage-stage embryo or germ line, the prior on PRD-like\noccupancy is very low.",
  "caveats": "Low-confidence family. The shared motif is a 6-base K50 homeodomain site, TAATCC, that occurs by chance roughly every few kilobases and is indistinguishable from the CRX, OTX and PITX site, so a hit almost never identifies a PRD-like factor. Several models in the family carry under 3 bits and cannot be scanned meaningfully. The evidence is overwhelmingly in vitro selection on recombinant protein; only TPRX1 and LEUTX have any in vivo support. One JASPAR entry labelled RHOXF1 is a mouse Rhox11 microarray motif with an unrelated consensus. Because the genes are expressed only in the oocyte, early embryo and germ line, matches in somatic data should be attributed elsewhere.",
  "refs": [
   {
@@ -72,6 +72,106 @@
    "cite": "Vorontsov IE, Eliseeva IA, Zinkevich A, et al. HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors. Nucleic Acids Res 2024;52:D154-D163.",
    "pmid": "37971293",
    "url": "https://pubmed.ncbi.nlm.nih.gov/37971293/"
+  },
+  {
+   "cite": "Treisman J, Gönczy P, Vashishtha M, et al. A single amino acid can determine the DNA binding specificity of homeodomain proteins. Cell 1989;59:553-62.",
+   "pmid": "2572327",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/2572327/"
+  },
+  {
+   "cite": "Berger MF, Badis G, Gehrke AR, et al. Variation in homeodomain DNA binding revealed by high-resolution analysis of sequence preferences. Cell 2008;133:1266-76.",
+   "pmid": "18585359",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18585359/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1989,
+   "finding": "Swapping the single residue at position 50 of the homeodomain recognition helix is shown to be necessary and sufficient to convert the DNA preference of one homeodomain into another, establishing the K50/Q50 rule that later separates TAATCC readers from TAATTA readers.",
+   "methods": "site-directed mutagenesis and in vitro DNA binding in Drosophila Paired",
+   "confidence": "high",
+   "pmids": [
+    "2572327"
+   ],
+   "open": "Said nothing about which mammalian proteins carry K50 domains, and the PRD-like genes had not yet been found."
+  },
+  {
+   "year": 2007,
+   "finding": "Genome annotation names ARGFX, DPRX, TPRX1 and DUXA as rapidly evolving homeobox genes whose processed pseudogenes imply germline expression, proposes that they are divergent derivatives of CRX, and places them in the PRD-like class of the human homeobox catalogue.",
+   "methods": "comparative genome annotation and phylogenetics",
+   "confidence": "medium",
+   "pmids": [
+    "17005330",
+    "17963489"
+   ],
+   "open": "Expression was inferred from retrotransposed pseudogenes rather than measured, and no protein had been shown to bind DNA."
+  },
+  {
+   "year": 2013,
+   "finding": "HT-SELEX on recombinant human proteins yields the first directly measured PRD-like specificities, including the K50-type TAATCC site assigned to RHOXF1.",
+   "methods": "HT-SELEX",
+   "confidence": "medium",
+   "pmids": [
+    "23332764"
+   ],
+   "open": "The same site is selected by CRX, OTX and PITX proteins, so in vitro selection could not say which factor uses it in cells."
+  },
+  {
+   "year": 2015,
+   "finding": "Single-cell RNA sequencing of 348 human oocytes, zygotes and blastomeres shows that ARGFX, DPRX, LEUTX, DUXA and DUXB are transcribed across the 4- to 8-cell transition, and that promoter motifs enriched at these stage-specific transcription start regions often overlap Alu and other repeats.",
+   "methods": "single-cell RNA-seq of human preimplantation embryos with transcript far 5'-end quantification and de novo motif discovery",
+   "confidence": "medium",
+   "pmids": [
+    "26360614"
+   ],
+   "open": "Motif enrichment is correlative; no PRD-like protein had been shown to occupy those promoters in an embryo."
+  },
+  {
+   "year": 2016,
+   "finding": "A phylogenetic reconstruction derives the group, renamed ETCHbox genes, from tandem duplication of Crx on the forerunner of human chromosome 19 in the stem lineage of placental mammals, with repeated gene loss, and argues from ectopic-expression transcriptomes that they tune an 8-cell-to-morula program rather than drive genome activation generally.",
+   "methods": "phylogenomics plus RNA-seq after ectopic expression in cultured human cells",
+   "confidence": "medium",
+   "pmids": [
+    "27296695"
+   ],
+   "open": "Revises the earlier retrotransposition account toward tandem duplication without settling the origin of every member."
+  },
+  {
+   "year": 2016,
+   "finding": "Overexpression studies in human embryonic stem cells separate the group into activators and repressors, with LEUTX activating a large share of the genes upregulated at embryo genome activation and DPRX acting as a counterbalancing repressor at the 8-cell stage.",
+   "methods": "cloning of embryo transcript variants plus overexpression and RNA-seq in human embryonic stem cells",
+   "confidence": "medium",
+   "pmids": [
+    "27578796",
+    "27412763"
+   ],
+   "open": "Forced expression in a stem-cell line is not evidence that the endogenous protein does the same in an embryo."
+  },
+  {
+   "year": 2017,
+   "finding": "Methylation-sensitive HT-SELEX adds models for ARGFX and DPRX and shows that many extended homeodomain proteins prefer methylated CpG-containing sites, a preference traced to hydrophobic contact with the 5-methyl group.",
+   "methods": "methyl-HT-SELEX with supporting structural analysis",
+   "confidence": "high",
+   "pmids": [
+    "28473536"
+   ],
+   "open": "ARGFX selects a Q50-type palindrome unlike the rest of the group, and why it diverged is unexplained."
+  },
+  {
+   "year": 2022,
+   "finding": "Knockdown of TPRX1, TPRX2 and TPRXL in human embryos causes defective zygotic genome activation and impaired preimplantation development, the first loss-of-function evidence that a PRD-like factor is required in human embryos.",
+   "methods": "ribosome profiling and RNA-seq of human oocytes and embryos plus knockdown in embryos",
+   "confidence": "medium",
+   "pmids": [
+    "36074823"
+   ],
+   "open": "Whether the TPRX proteins act through the TAATCC sites they select in vitro was not established by occupancy data in embryos."
+  }
+ ],
+ "open": [
+  "The origin of the group is unsettled: the original annotation derived ARGFX, DPRX and TPRX1 by retrotransposition from a CRX-like ancestor, whereas the later phylogenomic reconstruction derives them by tandem duplication of Crx on a dynamic region of the chromosome-19 forerunner.",
+  "It is disputed whether these factors drive human zygotic genome activation broadly or only tune a narrow 8-cell-to-morula program: the embryo transcriptome and LEUTX overexpression work treats them as genome-activation regulators, while the comparative study argues their targets are a restricted set of stage-specific genes rather than the activation wave itself.",
+  "No PRD-like protein has been shown to occupy a TAATCC site in a human embryo; every specificity model comes from in vitro selection or from forced expression in stem cells, so the in vivo site of each factor remains unknown.",
+  "The RHOXF1 motif label is unresolved: one JASPAR model under that name is a mouse Rhox11 microarray motif with an unrelated consensus, and whether the mouse Rhox cluster, a lineage-specific expansion, has any specificity relationship to human RHOXF1 and RHOXF2 has not been tested."
  ]
 }

@@ -11,7 +11,7 @@
   "spalt"
  ],
  "short": "SALL1 to SALL4 are the human Spalt-like proteins: large C2H2 zinc-finger factors built from several clusters of paired fingers, with a short N-terminal motif that recruits the NuRD corepressor complex. Their DNA binding is unusual in being defined by base composition rather than by a sequence. A single C-terminal pair of fingers in SALL4 reads AT-rich DNA, and a crystal structure shows why it is promiscuous: the contacts use small side chains in the major groove, so many different AT-rich combinations are accepted. There is consequently no reliable consensus string for this family. SALL1 mutations cause Townes-Brocks syndrome and SALL4 mutations Okihiro syndrome; SALL4 is also the cereblon substrate whose degradation explains thalidomide limb teratogenicity.",
- "long": "## The factors\n\nThe four human SALL genes, SALL1 to SALL4, are homologues of Drosophila spalt. Each protein is large\nand built from several clusters of C2H2 zinc fingers, usually a set of paired fingers (three or four\ndouble-finger clusters) plus one unpaired finger, separated by long low-complexity linkers. A short\nmotif at the extreme N terminus recruits the nucleosome remodeling and deacetylase (NuRD) complex,\nand NuRD recruitment accounts for much of the repressive activity attributed to these proteins; the\nsame interaction is required for SALL4's contribution to reprogramming. SALL4 is highly expressed in\nembryonic stem cells and in germ-cell and hepatocellular tumors but silenced in most adult tissues,\nwhich is why it is used as an immunohistochemical marker. SALL1 is prominent in kidney and limb,\nSALL3 in the nervous system. Mouse work shows Sall1, Sall2 and Sall4 are each required for neural\ntube closure.\n\n## The motif\n\nOnly one of the SALL clusters binds DNA in SALL4: a pair of fingers near the C terminus (ZFC4).\nInactivating that one cluster drastically reduces SALL4's genome occupancy and reproduces the\nphenotype of a complete Sall4 knockout, including precocious differentiation of embryonic stem cells\nand embryonic lethality, whereas deleting two of the other clusters is phenotypically neutral. What\nthat cluster reads is AT-richness rather than a defined word: SALL4 was recovered in a screen for\nproteins that bind AT-rich motifs, and genes are de-repressed on SALL4 loss in proportion to their AT\ncontent. Protein-binding-microarray and CUT&RUN experiments define an AT-rich consensus, and the\ncrystal structure of the C-terminal fingers on AT-rich DNA explains the flexibility: recognition uses\nsmall hydrophobic and polar side chains in the major groove, so many different combinations of A and\nT are accepted. We therefore give no consensus string for this family; any single IUPAC word\noverstates what the protein specifies.\n\nThe database situation reflects this awkwardly. Of the three matrices assigned here, only the SALL3\nmodel (consensus TTATGAATTATGATAT, HOCOMOCO grade A with HT-SELEX, integrative and ChIP support) is\nthe AT-rich motif the literature describes, and it has no close neighbor among the other family\nmembers. The SALL1 and SALL4 models are ChIP-only (grades C and B) and are GC-rich, with the\nconsensus GGGTGGGG, which is also the family's data consensus and its medoid. GGGTGGGG is a GC-box-\nand KLF/SP-like sequence, and the most economical explanation is that these ChIP-derived models\ncapture a co-occupancy or promoter signal rather than SALL binding preference. Cohesion in this\nfamily is 0.51, essentially because the literature motif and the database medoid disagree.\n\n## Where it acts\n\nSALL4 occupancy is broad and follows base composition: it accumulates over long AT-rich domains and\nat AT-rich genes, a distribution unlike the punctate enhancer occupancy of most transcription\nfactors, and it acts largely to hold such genes down. That makes the relevant genomic feature a\nregion rather than a site. Reported partners include NuRD and, in pluripotent cells, the core\npluripotency factors. SALL1 in kidney and limb, and SALL4 in limb and heart development, act at\ndevelopmental enhancers, but no well-validated composite element carrying a named SALL site is\nestablished in the way that exists for, say, GATA or ETS composites.\n\n## Biology and disease\n\nHeterozygous truncating SALL1 mutations cause Townes-Brocks syndrome (imperforate anus, thumb\nmalformations, dysplastic ears and hearing loss, with variable renal and cardiac involvement).\nHeterozygous SALL4 mutations cause Okihiro (Duane-radial ray) syndrome, which overlaps the\nradial-ray phenotype of Holt-Oram syndrome and includes Duane anomaly. The SALL4 phenotype is\nmechanistically informative in two directions. First, the Okihiro missense mutations that fall inside\nthe C-terminal fingers reduce overall DNA binding without abolishing the AT preference and shift the\nprotein's association with AT-rich genomic sites, which supports their pathogenicity. Second, SALL4\nis a thalidomide-dependent cereblon neosubstrate: thalidomide and its analogs recruit SALL4 to\ncereblon for degradation, and this provides a molecular explanation for thalidomide limb\nteratogenicity, since chemical SALL4 loss phenocopies genetic SALL4 loss. A crystal structure of the\nSALL4-pomalidomide-cereblon-DDB1 complex shows how the degron is presented.\n\n## Reading a hit\n\nThere is little to read. This family specifies base composition rather than a word, so a PWM hit is\nclose to meaningless on its own: an AT-rich match is expected anywhere in AT-rich DNA, and the same\nmatrices score homeodomain, forkhead and poly-A sequence. The four paralogues are not separable, and\nin these databases only SALL1, SALL3 and SALL4 have models at all. The specific trap is the opposite\nof the usual one: if your hit came from the GC-rich GGGTGGGG matrices labelled SALL1 or SALL4, you\nhave almost certainly matched a GC-box-like sequence, and a KLF, SP or other GC-box factor is the\nmore likely direct binder; those two models are ChIP-only and disagree with every in vitro\nmeasurement of SALL4 specificity. A credible SALL4 claim rests on AT-rich domain-level enrichment,\non the effect of degrading or mutating the ZFC4 cluster, or on the clinical genetics, not on a motif\nmatch.",
+ "long": "## The factors\n\nThe four human SALL genes, SALL1 to SALL4, are homologues of Drosophila spalt. Each protein is large\nand built from several clusters of C2H2 zinc fingers, usually a set of paired fingers (three or four\ndouble-finger clusters) plus one unpaired finger, separated by long low-complexity linkers. A short\nmotif at the extreme N terminus recruits the nucleosome remodeling and deacetylase (NuRD) complex,\nand NuRD recruitment accounts for much of the repressive activity attributed to these proteins; the\nsame interaction is required for SALL4's contribution to reprogramming [PMID:37208322]. SALL4 is highly expressed in\nembryonic stem cells and in germ-cell and hepatocellular tumors but silenced in most adult tissues,\nwhich is why it is used as an immunohistochemical marker. SALL1 is prominent in kidney and limb,\nSALL3 in the nervous system. Mouse work shows Sall1, Sall2 and Sall4 are each required for neural\ntube closure [PMID:18818376].\n\n## The motif\n\nOnly one of the SALL clusters binds DNA in SALL4: a pair of fingers near the C terminus (ZFC4).\nInactivating that one cluster drastically reduces SALL4's genome occupancy and reproduces the\nphenotype of a complete Sall4 knockout, including precocious differentiation of embryonic stem cells\nand embryonic lethality, whereas deleting two of the other clusters is phenotypically neutral [PMID:33406384]. What\nthat cluster reads is AT-richness rather than a defined word: SALL4 was recovered in a screen for\nproteins that bind AT-rich motifs, and genes are de-repressed on SALL4 loss in proportion to their AT\ncontent [PMID:33406384]. Protein-binding-microarray and CUT&RUN experiments define an AT-rich consensus [PMID:33406418], and the\ncrystal structure of the C-terminal fingers on AT-rich DNA explains the flexibility: recognition uses\nsmall hydrophobic and polar side chains in the major groove, so many different combinations of A and\nT are accepted [PMID:36635047]. We therefore give no consensus string for this family; any single IUPAC word\noverstates what the protein specifies.\n\nThe database situation reflects this awkwardly. Of the three matrices assigned here, only the SALL3\nmodel (consensus TTATGAATTATGATAT, HOCOMOCO grade A with HT-SELEX, GHT-SELEX and ChIP-seq support) is\nthe AT-rich motif the literature describes, and it has no close neighbor among the other family\nmembers. The SALL1 and SALL4 models are ChIP-only (grades C and B) and are GC-rich, with the\nconsensus GGGTGGGG, which is also the family's data consensus and its medoid. GGGTGGGG is a GC-box-\nand KLF/SP-like sequence, and the most economical explanation is that these ChIP-derived models\ncapture a co-occupancy or promoter signal rather than SALL binding preference. Cohesion in this\nfamily is 0.51, essentially because the literature motif and the database medoid disagree.\n\n## Where it acts\n\nSALL4 occupancy is broad and follows base composition: it accumulates over long AT-rich domains and\nat AT-rich genes, a distribution unlike the punctate enhancer occupancy of most transcription\nfactors, and it acts largely to hold such genes down [PMID:33406384]. That makes the relevant genomic feature a\nregion rather than a site. Reported partners include NuRD and, in pluripotent cells, the core\npluripotency factors [PMID:37208322]. SALL1 in kidney and limb, and SALL4 in limb and heart development, act at\ndevelopmental enhancers, but no well-validated composite element carrying a named SALL site is\nestablished in the way that exists for, say, GATA or ETS composites.\n\n## Biology and disease\n\nHeterozygous truncating SALL1 mutations cause Townes-Brocks syndrome (imperforate anus, thumb\nmalformations, dysplastic ears and hearing loss, with variable renal and cardiac involvement) [PMID:9425907,20301618].\nHeterozygous SALL4 mutations cause Okihiro (Duane-radial ray) syndrome [PMID:12393809], which overlaps the\nradial-ray phenotype of Holt-Oram syndrome and includes Duane anomaly. The SALL4 phenotype is\nmechanistically informative in two directions. First, the Okihiro missense mutations that fall inside\nthe C-terminal fingers reduce overall DNA binding without abolishing the AT preference and shift the\nprotein's association with AT-rich genomic sites, which supports their pathogenicity [PMID:36635047]. Second, SALL4\nis a thalidomide-dependent cereblon neosubstrate: thalidomide and its analogs recruit SALL4 to\ncereblon for degradation, and this provides a molecular explanation for thalidomide limb\nteratogenicity, since chemical SALL4 loss phenocopies genetic SALL4 loss [PMID:30190590,30067223]. A crystal structure of the\nSALL4-pomalidomide-cereblon-DDB1 complex shows how the degron is presented [PMID:32251415].\n\n## Reading a hit\n\nThere is little to read. This family specifies base composition rather than a word, so a PWM hit is\nclose to meaningless on its own: an AT-rich match is expected anywhere in AT-rich DNA, and the same\nmatrices score homeodomain, forkhead and poly-A sequence. The four paralogues are not separable, and\nin these databases only SALL1, SALL3 and SALL4 have models at all. The specific trap is the opposite\nof the usual one: if your hit came from the GC-rich GGGTGGGG matrices labelled SALL1 or SALL4, you\nhave almost certainly matched a GC-box-like sequence, and a KLF, SP or other GC-box factor is the\nmore likely direct binder; those two models are ChIP-only and disagree with every in vitro\nmeasurement of SALL4 specificity. A credible SALL4 claim rests on AT-rich domain-level enrichment,\non the effect of degrading or mutating the ZFC4 cluster, or on the clinical genetics, not on a motif\nmatch.",
  "caveats": "SALL proteins read base composition, not a word: a C-terminal finger pair in SALL4 binds AT-rich DNA promiscuously, and the crystal structure shows the contacts accept many A/T combinations. We give no consensus for that reason, and an AT-rich hit is expected throughout AT-rich DNA and overlaps homeodomain, forkhead and poly-A signals. The paralogues are indistinguishable, and SALL2 has no model here. Worse, the family's medoid and data consensus come from ChIP-only SALL1 and SALL4 matrices that are GC-rich (GGGTGGGG, a GC-box/KLF-like sequence) and contradict every in vitro measurement; cohesion is 0.51. Matches to those two models are most likely GC-box factors, not SALL.",
  "refs": [
   {
@@ -69,5 +69,89 @@
    "pmid": "32251415",
    "url": "https://pubmed.ncbi.nlm.nih.gov/32251415/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1998,
+   "finding": "Heterozygous SALL1 mutations are shown to cause Townes-Brocks syndrome, the first human phenotype for a vertebrate spalt homologue.",
+   "methods": "Positional cloning and mutation screening in families",
+   "confidence": "medium",
+   "pmids": [
+    "9425907"
+   ]
+  },
+  {
+   "year": 2002,
+   "finding": "SALL4 mutations are shown to cause Okihiro (Duane-radial ray) syndrome, whose radial-ray limb phenotype overlaps that of thalidomide embryopathy.",
+   "methods": "Linkage analysis and mutation screening in families",
+   "confidence": "medium",
+   "pmids": [
+    "12393809"
+   ],
+   "open": "The resemblance to thalidomide embryopathy had no mechanistic explanation."
+  },
+  {
+   "year": 2008,
+   "finding": "Mouse mutants show Sall1, Sall2 and Sall4 are each required for neural tube closure, establishing partially overlapping developmental requirements across the family.",
+   "methods": "Single and compound mouse mutants with embryo phenotyping",
+   "confidence": "medium",
+   "pmids": [
+    "18818376"
+   ]
+  },
+  {
+   "year": 2018,
+   "finding": "Two groups identify SALL4 as a thalidomide-dependent cereblon neosubstrate, so the drug degrades the protein whose mutation causes the overlapping limb syndrome; chemical loss phenocopies genetic loss.",
+   "methods": "Quantitative proteomics of drug-treated cells, CRBN binding and ubiquitination assays, zebrafish and chicken limb models",
+   "confidence": "high",
+   "pmids": [
+    "30190590",
+    "30067223"
+   ]
+  },
+  {
+   "year": 2020,
+   "finding": "A crystal structure of the SALL4-pomalidomide-cereblon-DDB1 complex shows how a SALL4 zinc finger is presented as a drug-induced degron, explaining the species and analog specificity of the effect.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "32251415"
+   ]
+  },
+  {
+   "year": 2021,
+   "finding": "SALL4 is recovered in a screen for proteins that read AT-rich motifs: a single C-terminal pair of zinc fingers accounts for genome occupancy, inactivating it reproduces the null phenotype, and genes are de-repressed in proportion to their AT content, so the protein reads base composition rather than a word; a parallel study defines an AT-rich consensus by protein-binding microarray and CUT&RUN.",
+   "methods": "Proteomic screen with AT-rich baits, mutant mouse and ESC genetics, genome-wide occupancy; protein-binding microarray and CUT&RUN",
+   "confidence": "high",
+   "pmids": [
+    "33406384",
+    "33406418"
+   ],
+   "open": "Whether the AT-rich consensus derived in vitro adds anything beyond composition was not resolved."
+  },
+  {
+   "year": 2023,
+   "finding": "The crystal structure of the SALL4 C-terminal zinc fingers on AT-rich DNA shows recognition through small hydrophobic and polar side chains in the major groove, which explains why many A/T combinations are accepted, and Okihiro missense mutations in these fingers reduce binding without changing the AT preference.",
+   "methods": "X-ray crystallography with binding assays and genomic occupancy of mutants",
+   "confidence": "high",
+   "pmids": [
+    "36635047"
+   ]
+  },
+  {
+   "year": 2023,
+   "finding": "The N-terminal NuRD-interacting motif is shown to be required for SALL4's contribution to reprogramming, tying the family's repressive output to a recruited complex rather than to its own binding site.",
+   "methods": "Reprogramming assays with interaction-deficient mutants, complex purification",
+   "confidence": "medium",
+   "pmids": [
+    "37208322"
+   ]
+  }
+ ],
+ "open": [
+  "Whether SALL4 recognizes anything more specific than base composition is unsettled: protein-binding microarray and CUT&RUN data are reported as an AT-rich consensus, while the structural and genomic work describes flexible recognition of many A/T combinations over long domains, and the two readings differ on whether a position weight matrix is meaningful here at all.",
+  "The GC-rich GGGTGGGG models labeled SALL1 and SALL4 in HOCOMOCO contradict every in vitro measurement of SALL4 specificity; whether they capture an unrecognized GC-box-like binding mode or simply promoter co-occupancy in ChIP has not been tested directly.",
+  "Whether SALL1, SALL2 and SALL3 share SALL4's AT preference is unknown: only SALL3 has an in vitro-supported model in these databases, and it is not close to any other family member's motif.",
+  "Whether degradation of SALL4 alone accounts for thalidomide limb teratogenicity remains open, since other cereblon neosubstrates have been proposed to contribute and the drug degrades many zinc-finger proteins."
  ]
 }

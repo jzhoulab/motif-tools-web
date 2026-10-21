@@ -12,7 +12,7 @@
  ],
  "consensus": "TNGCGTG",
  "short": "The xenobiotic response element is the site bound by the aryl hydrocarbon receptor, AHR, paired with ARNT. Both are bHLH-PAS proteins. AHR sits in the cytoplasm in a complex with HSP90 and XAP2 until it binds a ligand: dioxins and polycyclic aromatic hydrocarbons, or endogenous tryptophan metabolites such as kynurenine. It then enters the nucleus, exchanges its chaperones for ARNT, and binds an asymmetric half-site pair in which AHR reads the 5' TNGC and ARNT reads the 3' GTG, giving the core TNGCGTG. The paralogue AHRR is induced by AHR and represses it by competing for ARNT and for the same element. Occupied sites drive the cytochrome P450 genes CYP1A1, CYP1A2 and CYP1B1, so this motif is the entry point of the classical xenobiotic-metabolism response.",
- "long": "## The factors\n\nAHR (aryl hydrocarbon receptor, also called the dioxin receptor) and AHRR (AHR repressor) are bHLH-PAS proteins: a basic helix-loop-helix DNA-binding domain followed by PAS-A and PAS-B. Unliganded AHR is cytoplasmic in a complex with HSP90, p23 and XAP2/AIP1, whose architecture has been resolved by cryo-EM with agonist bound (Gruszczyk et al. 2022). Ligand binding in the PAS-B pocket triggers nuclear translocation and heterodimerization with ARNT, the same beta subunit used by HIF, SIM1/2 and the NPAS factors; ARNT is the shared partner of the whole class, and its loss in mice is embryonic lethal (Maltepe et al. 1997). AHRR is an AHR-induced gene lacking a functional ligand pocket; it represses by competing with AHR for ARNT and for the response element, a negative-feedback circuit that helps set tissue-specific sensitivity to pollutants (Mimura et al. 1999). AHR is widely expressed, with highest levels in liver, lung, placenta and immune cells. This atlas family is small: five motifs, one from JASPAR, two from HOCOMOCO and two Vierstra archetypes, with no CIS-BP entry.\n\n## The motif\n\nThe element has several names: xenobiotic response element (XRE), dioxin response element (DRE) and AH response element (AHRE). Its core was defined as 5'-TA/TGCGTG-3' in the dioxin-responsive enhancers of the CYP1A1 locus, with flanking bases needed for full enhancer function (Denison et al. 1988); it is conventionally written TNGCGTG. The two half-sites are not equivalent. Selection experiments assign high-affinity 5' half-sites T(C/T)GC to AHR and GT(G/A)C to SIM, and the 3' half-site GTG to ARNT, so ARNT contributes the same GTG in every complex and the partner supplies the discriminating 5' half (Swanson et al. 1995). Within that scheme the invariant string is GCGTG, and a single position, the base immediately 5' of CGTG, separates the XRE (G) from the hypoxia response element (A) and from the palindromic E-box CACGTG that ARNT homodimers prefer. The crystal structure of the AHR-ARNT heterodimer on the DRE shows ARNT curling around AHR in an intertwined, asymmetric architecture; specificity is set locally by the DNA-contacting residues that discriminate the DRE from the HRE and globally by the dimerization and interdomain interfaces (Seok et al. 2017). Systematic measurements across the family report 12-15 bp footprints in which flanking preferences, not the core, separate members that share a core (Bersten et al. 2026). Two presentation issues matter when reading the collected models. The pooled consensus for this family is CACGCaA, which is the reverse complement of TTGCGTG: the Vierstra archetypes here are written on the minus strand, and CACGCAA is not a separate motif. And de novo discovery in AHR ChIP-seq recovers a symmetrical variant, GTGCGTG (Lo and Matthews 2012). AHR and AHRR are not distinguishable: their HOCOMOCO models are TGCGTGC and TGCGTGCcA. The long archetype AC0516:AHR:bHLH (about 20 bits) is an outlier whose best within-family similarity is only 0.66, so it encodes flanking or composite information absent from the other four.\n\n## Where it acts\n\nIn TCDD-treated MCF-7 cells, ChIP-seq found 2,594 AHR-bound, 1,352 ARNT-bound and 882 co-bound regions; about 60% of the co-bound regions contained at least one core GCGTG. Peak density was highest within 1 kb of transcription start sites, though some sites lay up to 100 kb away, and the same regions were enriched for FOXA1 and SP1 motifs, placing AHR in cell-type-specific enhancer contexts (Lo and Matthews 2012). Canonical targets are CYP1A1, CYP1A2, CYP1B1, NQO1, ALDH3A1, TIPARP and AHRR itself; the CYP1A1 enhancer carries several XREs. Occupancy is ligand-dependent, so in untreated cells most matches are unbound. The core contains a CpG and is methylation-sensitive; relatedly, a CpG in AHRR (cg05575921) is the strongest and most reproducible blood DNA-methylation marker of cigarette smoking (Joehanes et al. 2016).\n\n## Biology and disease\n\nAHR mediates the toxicity of dioxins and related planar aromatic pollutants. Ahr-null mice have reduced liver size, hepatic fibrosis and immune defects, and are resistant to TCDD (Fernandez-Salguero et al. 1995). It also responds to endogenous and diet-derived tryptophan metabolites: kynurenine produced by TDO in gliomas activates AHR and promotes tumor growth and immune suppression, making AHR an immuno-oncology target (Opitz et al. 2011). AHR contributes to barrier immunity and intestinal lymphocyte programs, and AHRR behaves as a candidate tumor suppressor in several epithelial cancers.\n\n## Reading a hit\n\nTNGCGTG carries roughly six informative base pairs, so chance matches are frequent and a hit alone licenses no conclusion. Separating an XRE from an HRE rests on one base plus weak flanking preferences, and the two are routinely confused by scanners. A hit cannot distinguish AHR from AHRR. Provenance here is thin: both HOCOMOCO models are ChIP-only (letter P) at grades B and C, the JASPAR entry is a dimer model, and the other two are Vierstra footprint archetypes, so nothing in the collection is in vitro evidence that AHR binds this sequence. That support comes from the older selection work and the crystal structure, not from these models. Roughly 40% of AHR/ARNT co-bound regions have no core AHRE, so indirect and tethered binding is common in ChIP-derived versions. Finally, the archetype label AC0073:AHR:bHLH names the factor group whose motifs clustered together; it is not a claim that AHR is separable from other bHLH-PAS proteins.",
+ "long": "## The factors\n\nAHR (aryl hydrocarbon receptor, also called the dioxin receptor) and AHRR (AHR repressor) are bHLH-PAS proteins: a basic helix-loop-helix DNA-binding domain followed by PAS-A and PAS-B. Unliganded AHR is cytoplasmic in a complex with HSP90, p23 and XAP2/AIP1, whose architecture has been resolved by cryo-EM with agonist bound (Gruszczyk et al. 2022) [PMID:36385050]. Ligand binding in the PAS-B pocket triggers nuclear translocation and heterodimerization with ARNT, the same beta subunit used by HIF, SIM1/2 and the NPAS factors; ARNT is the shared partner of the whole class, and its loss in mice is embryonic lethal (Maltepe et al. 1997) [PMID:9121557]. AHRR is an AHR-induced gene lacking a functional ligand pocket; it represses by competing with AHR for ARNT and for the response element, a negative-feedback circuit that helps set tissue-specific sensitivity to pollutants (Mimura et al. 1999) [PMID:9887096]. AHR is widely expressed, with highest levels in liver, lung, placenta and immune cells. This atlas family is small: five motifs, one from JASPAR, two from HOCOMOCO and two Vierstra archetypes, with no CIS-BP entry.\n\n## The motif\n\nThe element has several names: xenobiotic response element (XRE), dioxin response element (DRE) and AH response element (AHRE). Its core was defined as 5'-TA/TGCGTG-3' in the dioxin-responsive enhancers of the CYP1A1 locus, with flanking bases needed for full enhancer function (Denison et al. 1988) [PMID:2846558]; it is conventionally written TNGCGTG. The two half-sites are not equivalent. Selection experiments assign high-affinity 5' half-sites T(C/T)GC to AHR and GT(G/A)C to SIM, and the 3' half-site GTG to ARNT, so ARNT contributes the same GTG in every complex and the partner supplies the discriminating 5' half (Swanson et al. 1995) [PMID:7592839]. Within that scheme the invariant string is GCGTG, and a single position, the base immediately 5' of CGTG, separates the XRE (G) from the hypoxia response element (A) and from the palindromic E-box CACGTG that ARNT homodimers prefer. The crystal structure of the AHR-ARNT heterodimer on the DRE shows ARNT curling around AHR in an intertwined, asymmetric architecture; specificity is set locally by the DNA-contacting residues that discriminate the DRE from the HRE and globally by the dimerization and interdomain interfaces (Seok et al. 2017) [PMID:28396409]. Systematic measurements across the family report 12-15 bp footprints in which flanking preferences, not the core, separate members that share a core (Bersten et al. 2026) [PMID:41495897]. Two presentation issues matter when reading the collected models. The pooled consensus for this family is CACGCaA, which is the reverse complement of TTGCGTG: the Vierstra archetypes here are written on the minus strand, and CACGCAA is not a separate motif. And de novo discovery in AHR ChIP-seq recovers a symmetrical variant, GTGCGTG (Lo and Matthews 2012) [PMID:22903824]. AHR and AHRR are not distinguishable: their HOCOMOCO models are TGCGTGC and TGCGTGCcA. The long archetype AC0516:AHR:bHLH (about 20 bits) is an outlier whose best within-family similarity is only 0.66, so it encodes flanking or composite information absent from the other four.\n\n## Where it acts\n\nIn TCDD-treated MCF-7 cells, ChIP-seq found 2,594 AHR-bound, 1,352 ARNT-bound and 882 co-bound regions; about 60% of the co-bound regions contained at least one core GCGTG. Peak density was highest within 1 kb of transcription start sites, though some sites lay up to 100 kb away, and the same regions were enriched for FOXA1 and SP1 motifs, placing AHR in cell-type-specific enhancer contexts (Lo and Matthews 2012) [PMID:22903824]. Canonical targets are CYP1A1, CYP1A2, CYP1B1, NQO1, ALDH3A1, TIPARP and AHRR itself; the CYP1A1 enhancer carries several XREs. Occupancy is ligand-dependent, so in untreated cells most matches are unbound. The core contains a CpG and is methylation-sensitive; relatedly, a CpG in AHRR (cg05575921) is the strongest and most reproducible blood DNA-methylation marker of cigarette smoking (Joehanes et al. 2016) [PMID:27651444].\n\n## Biology and disease\n\nAHR mediates the toxicity of dioxins and related planar aromatic pollutants. Ahr-null mice have reduced liver size, hepatic fibrosis and immune defects, and are resistant to TCDD (Fernandez-Salguero et al. 1995) [PMID:7732381]. It also responds to endogenous and diet-derived tryptophan metabolites: kynurenine produced by TDO in gliomas activates AHR and promotes tumor growth and immune suppression, making AHR an immuno-oncology target (Opitz et al. 2011) [PMID:21976023]. AHR contributes to barrier immunity and intestinal lymphocyte programs, and AHRR behaves as a candidate tumor suppressor in several epithelial cancers.\n\n## Reading a hit\n\nTNGCGTG carries roughly six informative base pairs, so chance matches are frequent and a hit alone licenses no conclusion. Separating an XRE from an HRE rests on one base plus weak flanking preferences, and the two are routinely confused by scanners. A hit cannot distinguish AHR from AHRR. Provenance here is thin: both HOCOMOCO models are ChIP-only (letter P) at grades B and C, the JASPAR entry is a dimer model, and the other two are Vierstra footprint archetypes, so nothing in the collection is in vitro evidence that AHR binds this sequence. That support comes from the older selection work and the crystal structure, not from these models. Roughly 40% of AHR/ARNT co-bound regions have no core AHRE, so indirect and tethered binding is common in ChIP-derived versions. Finally, the archetype label AC0073:AHR:bHLH names the factor group whose motifs clustered together [PMID:32728250]; it is not a claim that AHR is separable from other bHLH-PAS proteins.",
  "caveats": "Every model in this family is ChIP-derived or footprint-derived, at grade B or C, so it evidences occupancy in cells rather than direct AHR binding; the in vitro anchor for TNGCGTG is the older selection literature and the AHR-ARNT crystal structure. About 40% of AHR/ARNT co-bound regions lack any core element, so indirect binding is well documented. AHR and AHRR share one motif and cannot be told apart. The XRE differs from the hypoxia response element at a single base 5' of CGTG, so XRE and HRE calls are easily swapped. Note also that the pooled consensus CACGCAA is simply TTGCGTG on the opposite strand, not a different site. Occupancy requires a ligand, so an unbound match in untreated cells is expected.",
  "refs": [
   {
@@ -75,5 +75,88 @@
    "pmid": "41495897",
    "url": "https://pubmed.ncbi.nlm.nih.gov/41495897/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1988,
+   "finding": "The dioxin-responsive element of the CYP1A1 enhancer was narrowed to the core 5'-TA/TGCGTG-3', with flanking bases required for full enhancer activity, giving the family its first sequence definition.",
+   "methods": "Enhancer deletion and point mutagenesis with protein-DNA binding assays",
+   "confidence": "medium",
+   "pmids": [
+    "2846558"
+   ],
+   "open": "Which subunit of the receptor complex read which half of the element."
+  },
+  {
+   "year": 1995,
+   "finding": "Binding-site selection with AHR, ARNT and SIM resolved the half-sites: ARNT supplies the 3' GTG in every complex while AHR prefers a 5' T(C/T)GC, so the XRE and the hypoxia response element differ mainly at the base immediately 5' of CGTG.",
+   "methods": "In vitro binding-site selection (SELEX) with recombinant proteins",
+   "confidence": "medium",
+   "pmids": [
+    "7592839"
+   ]
+  },
+  {
+   "year": 1995,
+   "finding": "Mice lacking Ahr were shown to be resistant to TCDD and to develop reduced liver size, hepatic fibrosis and immune defects, establishing that dioxin toxicity is mediated by the receptor rather than by nonspecific chemical injury.",
+   "methods": "Mouse germline knockout with toxicological challenge",
+   "confidence": "high",
+   "pmids": [
+    "7732381"
+   ]
+  },
+  {
+   "year": 1999,
+   "finding": "AHRR was identified as an AHR-induced repressor that competes with AHR for ARNT and for the same response element, making the family a negative-feedback circuit and leaving the two proteins with one indistinguishable motif.",
+   "methods": "Cloning, reporter assays, expression analysis",
+   "confidence": "medium",
+   "pmids": [
+    "9887096"
+   ]
+  },
+  {
+   "year": 2012,
+   "finding": "Genome-wide ChIP-seq in TCDD-treated cells found 2,594 AHR-bound, 1,352 ARNT-bound and 882 co-bound regions, of which only about 60% contained a core GCGTG, and recovered a symmetrical GTGCGTG variant de novo; peaks were densest within 1 kb of transcription start sites but extended up to 100 kb away.",
+   "methods": "ChIP-seq with de novo motif discovery",
+   "confidence": "medium",
+   "pmids": [
+    "22903824"
+   ],
+   "open": "Whether the core-free co-bound regions reflect tethering or unrecognized variant elements."
+  },
+  {
+   "year": 2017,
+   "finding": "The crystal structure of the AHR-ARNT heterodimer on a DRE showed ARNT curling around AHR in an intertwined asymmetric architecture and identified the contacts that discriminate the DRE from the hypoxia response element, placing specificity in local base contacts plus the dimerization interfaces.",
+   "methods": "X-ray crystallography",
+   "confidence": "high",
+   "pmids": [
+    "28396409"
+   ]
+  },
+  {
+   "year": 2022,
+   "finding": "Cryo-EM of the agonist-bound cytosolic Hsp90-XAP2-AHR complex resolved how the unliganded receptor is held before nuclear translocation, completing the path from ligand binding to DNA occupancy.",
+   "methods": "Cryo-electron microscopy",
+   "confidence": "high",
+   "pmids": [
+    "36385050"
+   ]
+  },
+  {
+   "year": 2026,
+   "finding": "Systematic binding measurements across bHLH-PAS proteins reported 12-15 bp footprints in which flanking-base preferences, not the shared core, separate family members, revising the view that a 6-7 bp XRE core captures the specificity of this complex.",
+   "methods": "High-throughput in vitro binding across family members",
+   "confidence": "medium",
+   "pmids": [
+    "41495897"
+   ],
+   "open": "Whether the flanking information is recoverable from the ChIP-derived models that make up this family."
+  }
+ ],
+ "open": [
+  "Whether the symmetrical GTGCGTG element recovered de novo from AHR ChIP-seq is a genuine second binding mode or a composite of overlapping canonical sites has not been settled, and no in vitro measurement for AHR discriminates between the two.",
+  "About 40% of AHR/ARNT co-bound regions contain no core element, and it remains open whether these reflect tethering of the receptor through other factors, degenerate sites below the scoring threshold, or a distinct low-affinity mode.",
+  "Whether AHR and AHRR can be distinguished at the level of DNA at all is unresolved: the two existing models are ChIP-derived and near-identical, and there is no in vitro specificity measurement for AHRR to compare against.",
+  "It is unclear whether the single base 5' of CGTG plus weak flanking preferences is sufficient in practice to separate an XRE from a hypoxia response element in genomic sequence, since the in vitro work says the discriminating information lies in the flanks while every collected model here encodes little beyond the core."
  ]
 }

@@ -10,7 +10,7 @@
  ],
  "consensus": "TCAAGGTCA",
  "short": "NR5A1 (steroidogenic factor 1, SF-1) and NR5A2 (liver receptor homolog 1, LRH-1) are the mammalian relatives of Drosophila FTZ-F1. Like the NR4A receptors they bind DNA as monomers rather than dimers, occupying one AGGTCA half-site plus a short 5' extension read by a separate protein surface called the A box, which gives the nine-base SF-1 response element TCAAGGTCA. NR5A1 drives adrenal and gonadal development and the steroidogenic enzyme genes; NR5A2 works in liver, pancreas, intestine and the early embryo. The two proteins have indistinguishable motifs but almost non-overlapping tissue distributions, so cell type, not sequence, tells them apart. The element differs from the NR4A site at a single base and is contained inside the NR6A1 direct repeat.",
- "long": "## The factors\n\nThe subfamily has two human members: NR5A1 (SF-1, Ad4BP, STF-1, ELP) and NR5A2 (LRH-1, FTF, CPF, hB1F), both mammalian homologs of the Drosophila regulator FTZ-F1 (Lala et al. 1992). Their DNA-binding domain is the usual pair of C4 zinc modules plus a carboxy-terminal extension carrying the A box, or FTZ-F1 box, and a terminal helix required for a stable complex on DNA (Little et al. 2006). The ligand-binding domain has a large hydrophobic pocket: crystal structures identify bound phosphatidylinositols, making these receptors phospholipid sensors rather than true orphans (Krylova et al. 2005), although LRH-1 adopts an active conformation with the pocket essentially empty (Sablin et al. 2003). The paralogues occupy largely non-overlapping tissues: NR5A1 in adrenal cortex, gonadal somatic cells, pituitary gonadotropes, spleen and ventromedial hypothalamus; NR5A2 in liver, pancreas, intestine and the preimplantation embryo. Six motifs are collected here, two each from JASPAR, HOCOMOCO and CIS-BP; HOCOMOCO files the NR5A1 model under the symbol STF1.\n\n## The motif\n\nThe element is usually written (T)CAAGGTCA, the SF-1 response element or SFRE: one AGGTCA half-site with a short 5' extension, bound by a single receptor molecule. Domain swaps placed SF-1 and NGFI-B (NR4A1) in the same monomeric paradigm, zinc modules on the half-site and A box in the minor groove 5' of it; the SF-1 sequence requires an amino group in the minor groove and the SF-1 A box supplies an asparagine (Wilson et al. 1993). The consequence for sequence analysis is stark: the NR4A element is AAAGGTCA and the NR5A element is CAAGGTCA, a difference of one base. The collected models are tight: both HOCOMOCO models, STF1.H14CORE.0.PSM.A and NR5A2.H14CORE.0.PSM.A, are tCAAGGtCA and the CIS-BP NR5A1 model is CAAGGtCA, so the paralogues cannot be separated by sequence. Three entries need care. JASPAR Nr5A2 (MA0505.3) is written TGACCTTGA, the reverse complement of TCAAGGTCA and so the same element on the other strand. CIS-BP M05589_2.00 is TCAAGGTCATGACCTTGA, 21 bits, a head-to-head pair of SF-1 elements with no spacer; its best within-family similarity is only 0.71, so it is an outlier. And JASPAR NR5A1 (MA1540.3) is the 12-mer AGTTCAAGGTCA, which can be read either as the SF-1 element with an extended 5' flank or as a DR0 pair of AGTTCA and AGGTCA half-sites. That ambiguity is real rather than an artifact: the DR0 bound by NR6A1 is AAGTTCAAGGTCA, and its 3' nine bases are exactly the SF-1 element, so every NR6A1 site contains an SFRE match.\n\n## Where it acts\n\nSF-1 sites sit in promoters of the steroidogenic machinery, including STAR, CYP11A1, CYP17A1, CYP19A1 and HSD3B2, and of hypothalamic-pituitary-gonadal genes such as INHA, MC2R and NR0B1/DAX1; SF-1 cooperates with SOX9 at the anti-Mullerian hormone promoter and is antagonized by DAX-1, which binds the protein rather than DNA (Ferraz-de-Souza et al. 2011). LRH-1 acts on bile acid and cholesterol genes such as CYP7A1, CYP8B1 and NR0B2/SHP and on pancreatic and intestinal programs. An eight- to nine-base element is expected tens of thousands of times in a mammalian genome, so almost every match lies in a cell expressing neither receptor. Cell type is the strongest filter here, and an unusually effective one: the two cistromes barely overlap because the tissues do not.\n\n## Biology and disease\n\nSf1-null mice lack adrenal glands and gonads entirely, undergo male-to-female sex reversal and have an abnormal ventromedial hypothalamus (Luo et al. 1994). The first reported human NR5A1 mutation was a heterozygous DNA-binding-domain change causing 46,XY sex reversal with adrenal failure (Achermann et al. 1999); the spectrum now includes 46,XY differences of sex development without adrenal insufficiency, hypospadias, male infertility and primary ovarian insufficiency (Ferraz-de-Souza et al. 2011). SF-1 is overexpressed, and the gene amplified, in adrenocortical tumors, more frequently in children than in adults (Almeida et al. 2010). Mouse embryos lacking Nr5a2 die early with defects in cholesterol homeostasis (Pare et al. 2004), and common variants at NR5A2 on 1q32.1 are an established pancreatic cancer susceptibility signal (Petersen et al. 2010).\n\n## Reading a hit\n\nA monomeric half-site is much harder to call than a spaced dimer. A DR3, DR4 or DR5 element constrains two half-sites plus a defined spacer, 13-15 positions, and the arrangement is itself evidence; the SFRE constrains eight or nine positions, six of which are the AGGTCA half-site shared across the nuclear receptor superfamily, leaving two or three bases of family-level information and no spacer to check. One substitution turns an SFRE into an NR4A NBRE, and any NR6A1 DR0 contains an SFRE, so a hit may belong to a different family or be one half of a genuine dimeric site. Prediction improves substantially when dimer configuration can be modeled, which is not possible here (Sandelin and Wasserman 2005). The sequence evidence is strong: both HOCOMOCO models are grade A with ChIP-seq, HT-SELEX and methyl-HT-SELEX support, so TCAAGGTCA is well supported as directly bound, unlike the ChIP-only models common elsewhere in this atlas. What a hit cannot do is name the receptor. Use expression: outside adrenal, gonad, gonadotrope and hypothalamus an SF-1 call is implausible, as is an LRH-1 call outside liver, pancreas, intestine and early embryo. Note also that databases report this element on either strand, as TCAAGGTCA or TGACCTTGA.",
+ "long": "## The factors\n\nThe subfamily has two human members: NR5A1 (SF-1, Ad4BP, STF-1, ELP) and NR5A2 (LRH-1, FTF, CPF, hB1F), both mammalian homologs of the Drosophila regulator FTZ-F1 (Lala et al. 1992) [PMID:1406703]. Their DNA-binding domain is the usual pair of C4 zinc modules plus a carboxy-terminal extension carrying the A box, or FTZ-F1 box, and a terminal helix required for a stable complex on DNA (Little et al. 2006) [PMID:16339274]. The ligand-binding domain has a large hydrophobic pocket: crystal structures identify bound phosphatidylinositols, making these receptors phospholipid sensors rather than true orphans (Krylova et al. 2005) [PMID:15707893], although LRH-1 adopts an active conformation with the pocket essentially empty (Sablin et al. 2003) [PMID:12820970]. The paralogues occupy largely non-overlapping tissues: NR5A1 in adrenal cortex, gonadal somatic cells, pituitary gonadotropes, spleen and ventromedial hypothalamus; NR5A2 in liver, pancreas, intestine and the preimplantation embryo. Six motifs are collected here, two each from JASPAR, HOCOMOCO and CIS-BP; HOCOMOCO files the NR5A1 model under the symbol STF1.\n\n## The motif\n\nThe element is usually written (T)CAAGGTCA, the SF-1 response element or SFRE: one AGGTCA half-site with a short 5' extension, bound by a single receptor molecule. Domain swaps placed SF-1 and NGFI-B (NR4A1) in the same monomeric paradigm, zinc modules on the half-site and A box in the minor groove 5' of it; the SF-1 sequence requires an amino group in the minor groove and the SF-1 A box supplies an asparagine (Wilson et al. 1993) [PMID:8395013]. The consequence for sequence analysis is stark: the NR4A element is AAAGGTCA and the NR5A element is CAAGGTCA, a difference of one base. The collected models are tight: both HOCOMOCO models, STF1.H14CORE.0.PSM.A and NR5A2.H14CORE.0.PSM.A, are tCAAGGtCA and the CIS-BP NR5A1 model is CAAGGtCA, so the paralogues cannot be separated by sequence. Three entries need care. JASPAR Nr5A2 (MA0505.3) is written TGACCTTGA, the reverse complement of TCAAGGTCA and so the same element on the other strand. CIS-BP M05589_2.00 is TCAAGGTCATGACCTTGA, 21 bits, a head-to-head pair of SF-1 elements with no spacer; its best within-family similarity is only 0.71, so it is an outlier. And JASPAR NR5A1 (MA1540.3) is the 12-mer AGTTCAAGGTCA, which can be read either as the SF-1 element with an extended 5' flank or as a DR0 pair of AGTTCA and AGGTCA half-sites. That ambiguity is real rather than an artifact: the DR0 bound by NR6A1 is AAGTTCAAGGTCA, and its 3' nine bases are exactly the SF-1 element, so every NR6A1 site contains an SFRE match.\n\n## Where it acts\n\nSF-1 sites sit in promoters of the steroidogenic machinery, including STAR, CYP11A1, CYP17A1, CYP19A1 and HSD3B2, and of hypothalamic-pituitary-gonadal genes such as INHA, MC2R and NR0B1/DAX1; SF-1 cooperates with SOX9 at the anti-Mullerian hormone promoter and is antagonized by DAX-1, which binds the protein rather than DNA (Ferraz-de-Souza et al. 2011) [PMID:21078366]. LRH-1 acts on bile acid and cholesterol genes such as CYP7A1, CYP8B1 and NR0B2/SHP and on pancreatic and intestinal programs. An eight- to nine-base element is expected tens of thousands of times in a mammalian genome, so almost every match lies in a cell expressing neither receptor. Cell type is the strongest filter here, and an unusually effective one: the two cistromes barely overlap because the tissues do not.\n\n## Biology and disease\n\nSf1-null mice lack adrenal glands and gonads entirely, undergo male-to-female sex reversal and have an abnormal ventromedial hypothalamus (Luo et al. 1994) [PMID:8187173]. The first reported human NR5A1 mutation was a heterozygous DNA-binding-domain change causing 46,XY sex reversal with adrenal failure (Achermann et al. 1999) [PMID:10369247]; the spectrum now includes 46,XY differences of sex development without adrenal insufficiency, hypospadias, male infertility and primary ovarian insufficiency (Ferraz-de-Souza et al. 2011) [PMID:21078366]. SF-1 is overexpressed, and the gene amplified, in adrenocortical tumors, more frequently in children than in adults (Almeida et al. 2010) [PMID:20080844]. Mouse embryos lacking Nr5a2 die early with defects in cholesterol homeostasis (Pare et al. 2004) [PMID:15014077], and common variants at NR5A2 on 1q32.1 are an established pancreatic cancer susceptibility signal (Petersen et al. 2010) [PMID:20101243].\n\n## Reading a hit\n\nA monomeric half-site is much harder to call than a spaced dimer. A DR3, DR4 or DR5 element constrains two half-sites plus a defined spacer, 13-15 positions, and the arrangement is itself evidence; the SFRE constrains eight or nine positions, six of which are the AGGTCA half-site shared across the nuclear receptor superfamily, leaving two or three bases of family-level information and no spacer to check. One substitution turns an SFRE into an NR4A NBRE, and any NR6A1 DR0 contains an SFRE, so a hit may belong to a different family or be one half of a genuine dimeric site. Prediction improves substantially when dimer configuration can be modeled, which is not possible here (Sandelin and Wasserman 2005) [PMID:15563547]. The sequence evidence is strong: both HOCOMOCO models are grade A with ChIP-seq, HT-SELEX and methyl-HT-SELEX support, so TCAAGGTCA is well supported as directly bound, unlike the ChIP-only models common elsewhere in this atlas. What a hit cannot do is name the receptor. Use expression: outside adrenal, gonad, gonadotrope and hypothalamus an SF-1 call is implausible, as is an LRH-1 call outside liver, pancreas, intestine and early embryo. Note also that databases report this element on either strand, as TCAAGGTCA or TGACCTTGA.",
  "caveats": "The motif is well measured but weakly diagnostic. Both HOCOMOCO models carry grade-A in vitro support, so TCAAGGTCA really is bound directly, yet it constrains only eight or nine positions, six of them the AGGTCA half-site used across the nuclear receptor superfamily. One substitution converts it into the NR4A element AAAGGTCA, and every NR6A1 DR0 contains an exact SFRE, so family assignment from sequence alone is unreliable. NR5A1 and NR5A2 have identical motifs; only tissue distinguishes them, which in practice works well because their expression barely overlaps. Watch for presentation differences across databases: one JASPAR model is the reverse complement, one CIS-BP model is a head-to-head pair of elements, and HOCOMOCO files NR5A1 under the symbol STF1.",
  "refs": [
   {
@@ -73,5 +73,89 @@
    "pmid": "21078366",
    "url": "https://pubmed.ncbi.nlm.nih.gov/21078366/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1992,
+   "finding": "Steroidogenic factor 1, identified as the regulator of the steroid hydroxylase genes, was shown to be the mouse homolog of Drosophila FTZ-F1, establishing the subfamily and its characteristic FTZ-F1 box.",
+   "methods": "Cloning and sequence comparison with binding and expression analysis",
+   "confidence": "medium",
+   "pmids": [
+    "1406703"
+   ]
+  },
+  {
+   "year": 1993,
+   "finding": "Domain swaps placed SF-1 and NGFI-B in a common monomeric binding paradigm, zinc modules on one AGGTCA half-site and the A box in the minor groove 5' of it, and attributed the one-base difference between the two elements to an asparagine in the SF-1 A box reading an amino group in the minor groove.",
+   "methods": "Chimeric protein domain swaps with binding and reporter assays",
+   "confidence": "medium",
+   "pmids": [
+    "8395013"
+   ],
+   "open": "No crystal structure of an NR5A protein on DNA was available to confirm the inferred contacts."
+  },
+  {
+   "year": 1994,
+   "finding": "Mice lacking Sf1 were found to have no adrenal glands or gonads, to undergo male-to-female sex reversal and to have an abnormal ventromedial hypothalamus, making the receptor non-redundant for steroidogenic organ development.",
+   "methods": "Mouse germline knockout with developmental analysis",
+   "confidence": "high",
+   "pmids": [
+    "8187173"
+   ]
+  },
+  {
+   "year": 1999,
+   "finding": "A heterozygous change in the NR5A1 DNA-binding domain was reported in a patient with 46,XY sex reversal and adrenal failure, carrying the mouse phenotype into human genetics.",
+   "methods": "Candidate-gene sequencing in a single patient with functional assays",
+   "confidence": "medium",
+   "pmids": [
+    "10369247"
+   ],
+   "open": "Whether milder NR5A1 variants cause phenotypes short of adrenal failure."
+  },
+  {
+   "year": 2003,
+   "finding": "A crystal structure showed LRH-1 adopting a transcriptionally active conformation with its ligand pocket essentially empty, supporting genuine ligand-independent activation for this subfamily.",
+   "methods": "X-ray crystallography of the ligand-binding domain",
+   "confidence": "high",
+   "pmids": [
+    "12820970"
+   ]
+  },
+  {
+   "year": 2005,
+   "finding": "Structures of SF-1 and LRH-1 ligand-binding domains were found to contain bound phosphatidylinositols, revising the empty-pocket picture and recasting these receptors as phospholipid sensors rather than true orphans.",
+   "methods": "X-ray crystallography with lipid identification by mass spectrometry",
+   "confidence": "high",
+   "pmids": [
+    "15707893",
+    "12820970"
+   ],
+   "open": "Whether the bound phospholipids are regulatory signals or structural occupants was left unresolved."
+  },
+  {
+   "year": 2006,
+   "finding": "A helix carboxy-terminal to the DNA-binding domain, beyond the A box itself, was shown to be necessary for a stable SF-1 complex on DNA, extending the protein surface that defines the nine-base element.",
+   "methods": "Mutagenesis with DNA-binding and stability assays",
+   "confidence": "medium",
+   "pmids": [
+    "16339274"
+   ]
+  },
+  {
+   "year": 2011,
+   "finding": "The human NR5A1 phenotype was broadened well beyond the original adrenal-failure presentation to include 46,XY differences of sex development with intact adrenals, hypospadias, male infertility and primary ovarian insufficiency.",
+   "methods": "Review of clinical cohorts and variant series",
+   "confidence": "medium",
+   "pmids": [
+    "21078366"
+   ]
+  }
+ ],
+ "open": [
+  "Whether the phospholipids found in the NR5A ligand pocket act as regulatory signals or merely as structural occupants is unresolved: crystal structures identify bound phosphatidylinositols, yet LRH-1 adopts an active conformation with the pocket essentially empty.",
+  "Whether NR5A1 and NR5A2 differ in DNA preference at all is untested at the resolution that would matter; the grade-A models for the two proteins are the same nine-base element, so any difference would have to lie in flanking positions that no current model resolves.",
+  "How to read the 12-mer AGTTCAAGGTCA is genuinely ambiguous: it can be taken as the SF-1 element with an extended 5' flank or as a DR0 pair of half-sites, and because the NR6A1 direct repeat contains an exact SFRE, sequence alone cannot assign such a match to one family.",
+  "It is unclear whether the head-to-head pair of SF-1 elements in the CIS-BP model M05589_2.00 reflects cooperative occupancy by two receptor molecules or an artifact of motif discovery on sequences containing two independent sites."
  ]
 }

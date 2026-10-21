@@ -11,7 +11,7 @@
  ],
  "consensus": "AACCGGTT",
  "short": "The Grainyhead/CP2 family binds the palindrome AACCGGTT through an immunoglobulin-like DNA-binding domain that shares a fold with p53 but differs from it in important details. Six human members split into two branches: the epithelial GRHL1, GRHL2 and GRHL3, and the more broadly expressed TFCP2 (LSF/CP2), TFCP2L1 and UBP1 (LBP-1a). They bind as dimers, and many real elements are doubled, giving 16-26 bp tandem sites. GRHL factors control epidermal barrier formation, neural tube and palate closure, and epithelial identity, and they sit at the epithelial end of EMT regulation. Human mutations cause Van der Woude syndrome and nonsyndromic cleft palate.",
- "long": "## The factors\n\nSix human genes belong to this family. The grainyhead-like branch, GRHL1, GRHL2 and GRHL3, is\nepithelial: GRHL1 and GRHL3 in epidermis and periderm, GRHL2 in most simple and stratified\nepithelia including airway, gut and bladder. The CP2 branch, TFCP2 (also LSF or CP2), TFCP2L1\n(CRTR-1) and UBP1 (LBP-1a), is more broadly expressed and includes the factor originally\ncharacterized on the alpha-globin promoter. All six share a roughly 250-residue region that carries\nboth DNA binding and dimerization, inherited from Drosophila Grainyhead (also called NTF-1 and\nElf-1), and the Drosophila and human domains are interchangeable enough that the family was\nrecognized by that conservation. Crystal structures of the GRHL1 and GRHL2 DNA-binding domains\nshowed a closely similar immunoglobulin-like core sharing the overall fold of the p53 DNA-binding\ndomain while differing in the DNA-contacting elements. GRHL1 binds its recognition element as a\ndimer, and target-site selection is parsimonious: two conserved arginine residues make most of\nthe base-specific contacts.\n\n## The motif\n\nThe consensus is the 8-bp palindrome AACCGGTT, often written with flanking A/T as AAACCGGTTT.\nBecause selection rests on a small number of arginine contacts, the central CCGG is the most\nconstrained part and the flanking AA/TT contribute the rest. The palindrome means the two halves\nare equivalent, and dimer binding is the normal mode. A conspicuous feature of this family's\nmodels is doubling: HOCOMOCO entries for TFCP2, TFCP2L1, UBP1 and GRHL3 span 15-26 columns and\ncontain two AACCGGTT-like units, sometimes in the arrangement AACCGGTT-N(2)-AACCGGTT. That is a\ngenuine property of Grh/CP2 elements rather than a modelling artifact, and it is why the highest\ninformation content in this family (about 20 bits) comes from CP2-branch models rather than from\nthe single-site GRHL models. Degenerate variants are common and legitimate: AACAGGTT, AACTGGTT and\nAACCAGTT all appear as database consensuses, reflecting tolerance at the central positions. No\nmember is reliably distinguishable from another by sequence. The GRHL and CP2 branches are similar\nenough that Vierstra collapses them into archetypes named GRHL/TFCP, and this family's cohesion\n(0.78) is limited mainly by the mixture of single-site and doubled models, not by disagreement\nabout the core.\n\n## Where it acts\n\nGrh/CP2 sites occur at both promoters and enhancers, with a strong bias toward epithelial\ndifferentiation loci: the epidermal differentiation complex, tight junction and desmosome genes,\ntransglutaminases, and the genes of the cornified envelope. GRHL3 binding is highly dynamic, with\nenhancer usage rearranging as keratinocytes move between proliferative and differentiating states.\nGRHL2 also occupies enhancers in pluripotent cells during exit from naive pluripotency and in\nairway basal cells during mucociliary regeneration. Common neighbors are KLF4 and TP63 in\nkeratinocytes, IRF6 in periderm (GRHL3 and IRF6 act in the same genetic pathway for oral periderm),\nand AP-1 at differentiation enhancers. GRHL factors recruit Trithorax-group complexes to switch on\ndifferentiation genes, and in cancer they sit in a mutually repressive loop with ZEB1 and the\nmiR-200 family that keeps cells epithelial. The palindrome is 8 bp, so chance matches are frequent;\ndoubled sites are much rarer and much more indicative.\n\n## Biology and disease\n\nGrhl3-null mice fail to form a skin permeability barrier and develop spina bifida that is\nresistant to both inositol and folate supplementation, identifying Grhl3 as the gene behind the\nlong-studied curly tail mouse. Grhl3 is also required for eyelid closure and urothelial\ndifferentiation. In humans, dominant GRHL3 mutations cause Van der Woude syndrome, the commonest\nsyndromic form of cleft lip and palate, in families without IRF6 mutations; separate GRHL3 coding\nvariants, including a common susceptibility allele and rare truncating variants, cause and predispose\nto nonsyndromic cleft palate. GRHL2 variants are associated with age-related hearing impairment,\nand GRHL2 has both oncogenic and tumor-suppressive effects depending on context, promoting the\nepithelial phenotype in breast, ovarian and prostate cancer while restraining metastatic\ndissemination. TFCP2 appears in cancer as a fusion partner: EWSR1-TFCP2 and FUS-TFCP2 fusions define\nan aggressive intraosseous spindle and epithelioid rhabdomyosarcoma with frequent ALK\noverexpression, often in the jaw and skull.\n\n## Reading a hit\n\nAn AACCGGTT match identifies the Grh/CP2 family and no individual member. That matters because the\ntwo branches have different biology: a hit could correspond to epithelial GRHL2 or to broadly\nexpressed TFCP2, and only expression or ChIP data can tell you which. At 8 bp with a palindromic\ncore, single matches occur often by chance, so treat a lone AACCGGTT the way you would treat any\n8-mer: as a hypothesis. A doubled site, two AACCGGTT-like units within about 20 bp, is a much\nstronger signal and is the form in which many validated elements occur. Also note that models in\nthis family differ in width by a factor of three, from 8 to 26 columns, so scores from different\ndatabases are not comparable and a \"weaker\" hit may simply reflect a narrower model. The evidence\nbase is mixed but reasonable: several HOCOMOCO models for GRHL1, GRHL3, TFCP2, TFCP2L1 and UBP1\nrest on in vitro selection (evidence codes SM, SB, S), which supports direct binding, whereas the\nGRHL2 models here are ChIP-only (P) and their degenerate variants (AACAGGTT, CCGGTTTGGCCAG) should\nbe read as descriptions of GRHL2 peaks rather than of GRHL2's intrinsic specificity.",
+ "long": "## The factors\n\nSix human genes belong to this family. The grainyhead-like branch, GRHL1, GRHL2 and GRHL3, is\nepithelial: GRHL1 and GRHL3 in epidermis and periderm, GRHL2 in most simple and stratified\nepithelia including airway, gut and bladder. The CP2 branch, TFCP2 (also LSF or CP2), TFCP2L1\n(CRTR-1) and UBP1 (LBP-1a), is more broadly expressed and includes the factor originally\ncharacterized on the alpha-globin promoter [PMID:8157699]. All six share a roughly 250-residue region that carries\nboth DNA binding and dimerization, inherited from Drosophila Grainyhead (also called NTF-1 and\nElf-1), and the Drosophila and human domains are interchangeable enough that the family was\nrecognized by that conservation [PMID:8196641,12175488]. Crystal structures of the GRHL1 and GRHL2 DNA-binding domains\nshowed a closely similar immunoglobulin-like core sharing the overall fold of the p53 DNA-binding\ndomain while differing in the DNA-contacting elements [PMID:29309642]. GRHL1 binds its recognition element as a\ndimer, and target-site selection is parsimonious: two conserved arginine residues make most of\nthe base-specific contacts [PMID:29309642].\n\n## The motif\n\nThe consensus is the 8-bp palindrome AACCGGTT, often written with flanking A/T as AAACCGGTTT.\nBecause selection rests on a small number of arginine contacts, the central CCGG is the most\nconstrained part and the flanking AA/TT contribute the rest. The palindrome means the two halves\nare equivalent, and dimer binding is the normal mode. A conspicuous feature of this family's\nmodels is doubling: HOCOMOCO entries for TFCP2, TFCP2L1, UBP1 and GRHL3 span 15-26 columns and\ncontain two AACCGGTT-like units, sometimes in the arrangement AACCGGTT-N(2)-AACCGGTT. That is a\ngenuine property of Grh/CP2 elements rather than a modelling artifact [PMID:9668115], and it is why the highest\ninformation content in this family (about 20 bits) comes from CP2-branch models rather than from\nthe single-site GRHL models. Degenerate variants are common and legitimate: AACAGGTT, AACTGGTT and\nAACCAGTT all appear as database consensuses, reflecting tolerance at the central positions. No\nmember is reliably distinguishable from another by sequence. The GRHL and CP2 branches are similar\nenough that Vierstra collapses them into archetypes named GRHL/TFCP, and this family's cohesion\n(0.78) is limited mainly by the mixture of single-site and doubled models, not by disagreement\nabout the core.\n\n## Where it acts\n\nGrh/CP2 sites occur at both promoters and enhancers, with a strong bias toward epithelial\ndifferentiation loci: the epidermal differentiation complex, tight junction and desmosome genes,\ntransglutaminases, and the genes of the cornified envelope. GRHL3 binding is highly dynamic: when\nprogenitor keratinocytes differentiate it binds mainly at super-enhancers, whereas when they migrate it\nbinds mainly at promoters, together with REST [PMID:28445475].\nGRHL2 also occupies enhancers in pluripotent cells during exit from naive pluripotency and in\nairway basal cells during mucociliary regeneration. Common neighbors are KLF4 and TP63 in\nkeratinocytes, IRF6 in periderm (IRF6 binds an enhancer near GRHL3 and is needed for Grhl3 expression in periderm [PMID:22931925],\nalthough Irf6;Grhl3 double-heterozygous mice show no epistasis [PMID:24360809]),\nand AP-1 at differentiation enhancers. GRHL factors recruit Trithorax-group complexes to switch on\ndifferentiation genes [PMID:22829784], and in cancer they sit in a mutually repressive loop with ZEB1 and the\nmiR-200 family that keeps cells epithelial [PMID:26887977]. The palindrome is 8 bp, so chance matches are frequent;\ndoubled sites are much rarer and much more indicative.\n\n## Biology and disease\n\nGrhl3-null mice fail to form a skin permeability barrier [PMID:15831758] and develop spina bifida that is\nresistant to both inositol and folate supplementation, identifying Grhl3 as the gene behind the\nlong-studied curly tail mouse [PMID:14608380]. Grhl3 is also required for eyelid closure and urothelial\ndifferentiation. In humans, dominant GRHL3 mutations cause Van der Woude syndrome, the commonest\nsyndromic form of cleft lip and palate, in families without IRF6 mutations [PMID:24360809]; separate GRHL3 coding\nvariants, including a common susceptibility allele and rare truncating variants, cause and predispose\nto nonsyndromic cleft palate [PMID:27018472]. GRHL2 variants are associated with age-related hearing impairment [PMID:17921507],\nand GRHL2 has both oncogenic and tumor-suppressive effects depending on context, promoting the\nepithelial phenotype in breast, ovarian and prostate cancer while restraining metastatic\ndissemination. TFCP2 appears in cancer as a fusion partner: EWSR1-TFCP2 and FUS-TFCP2 fusions define\nan aggressive intraosseous spindle and epithelioid rhabdomyosarcoma with frequent ALK\noverexpression, often in the jaw and skull [PMID:33382123].\n\n## Reading a hit\n\nAn AACCGGTT match identifies the Grh/CP2 family and no individual member. That matters because the\ntwo branches have different biology: a hit could correspond to epithelial GRHL2 or to broadly\nexpressed TFCP2, and only expression or ChIP data can tell you which. At 8 bp with a palindromic\ncore, single matches occur often by chance, so treat a lone AACCGGTT the way you would treat any\n8-mer: as a hypothesis. A doubled site, two AACCGGTT-like units within about 20 bp, is a much\nstronger signal and is the form in which many validated elements occur. Also note that models in\nthis family differ in width by a factor of three, from 8 to 26 columns, so scores from different\ndatabases are not comparable and a \"weaker\" hit may simply reflect a narrower model. The evidence\nbase is mixed but reasonable: several HOCOMOCO models for GRHL1, GRHL3, TFCP2, TFCP2L1 and UBP1\nrest on in vitro selection (evidence codes SM, SB, S), which supports direct binding, whereas the\nGRHL2 models here are ChIP-only (P) and their degenerate variants (AACAGGTT, CCGGTTTGGCCAG) should\nbe read as descriptions of GRHL2 peaks rather than of GRHL2's intrinsic specificity.",
  "caveats": "A hit names the family, not the member, and the family spans two branches with different expression: epithelial GRHL1-3 versus broadly expressed TFCP2, TFCP2L1 and UBP1. The 8-bp palindrome occurs frequently by chance, so single matches are weak; doubled AACCGGTT units within about 20 bp are much more convincing. Model widths in this family range from 8 to 26 columns, so scores across databases are not comparable. Degenerate variants such as AACAGGTT come mostly from ChIP-only GRHL2 models and describe peak composition rather than intrinsic specificity; the in vitro-supported models converge on AACCGGTT.",
  "refs": [
   {
@@ -73,6 +73,95 @@
    "cite": "Swendeman SL, Spielholz C, Jenkins NA, et al. Characterization of the genomic structure, chromosomal location, promoter, and development expression of the alpha-globin transcription factor CP2. J Biol Chem 1994;269:11663-71.",
    "pmid": "8157699",
    "url": "https://pubmed.ncbi.nlm.nih.gov/8157699/"
+  },
+  {
+   "cite": "Shirra MK, Hansen U. LSF and NTF-1 share a conserved DNA recognition motif yet require different oligomerization states to form a stable protein-DNA complex. J Biol Chem 1998;273:19260-8.",
+   "pmid": "9668115",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/9668115/"
+  },
+  {
+   "cite": "Ting SB, Caddy J, Hislop N, et al. A homolog of Drosophila grainy head is essential for epidermal integrity in mice. Science 2005;308:411-3.",
+   "pmid": "15831758",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15831758/"
+  },
+  {
+   "cite": "de la Garza G, Schleiffarth JR, Dunnwald M, et al. Interferon regulatory factor 6 promotes differentiation of the periderm by activating expression of Grainyhead-like 3. J Invest Dermatol 2013;133:68-77.",
+   "pmid": "22931925",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22931925/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1994,
+   "finding": "Mapping of Drosophila Grainyhead (NTF-1) identifies a large DNA-binding domain and a separate dimerization domain that stabilizes DNA binding; both are conserved in the human alpha-globin factor CP2, which has similar activities, defining the Grh/CP2 family.",
+   "methods": "Deletion mapping, DNA-binding and dimerization assays",
+   "confidence": "medium",
+   "pmids": [
+    "8196641"
+   ],
+   "open": "The DNA-binding domain resembled no known fold."
+  },
+  {
+   "year": 1998,
+   "finding": "LSF (CP2) and NTF-1 (Grainyhead) share a recognition motif but not a binding mode: dimeric NTF-1 binds a single half-site, whereas LSF cannot and instead binds directly repeated elements as a tetramer.",
+   "methods": "EMSA with truncation mutants and mixed complexes, cross-linking",
+   "confidence": "medium",
+   "pmids": [
+    "9668115"
+   ],
+   "open": "Whether the mammalian grainyhead-like proteins behave like NTF-1 or like LSF."
+  },
+  {
+   "year": 2002,
+   "finding": "Cloning of two new mammalian genes more closely related to grainyhead than CP2, LBP-1a and LBP-9 splits the family into a grainyhead-like branch and a CP2 branch.",
+   "methods": "cDNA cloning, phylogenetics, expression and promoter assays",
+   "confidence": "medium",
+   "pmids": [
+    "12175488"
+   ]
+  },
+  {
+   "year": 2003,
+   "finding": "Grhl3 is identified as the gene underlying the curly tail mouse; Grhl3-null embryos have neural tube defects that resist both folate and inositol.",
+   "methods": "Gene targeting, genetic mapping and complementation",
+   "confidence": "high",
+   "pmids": [
+    "14608380"
+   ]
+  },
+  {
+   "year": 2005,
+   "finding": "Grhl3-null mice have a defective epidermal barrier and poor wound repair with reduced transglutaminase 1, mirroring Grainyhead's control of cuticle cross-linking in flies.",
+   "methods": "Knockout mice, barrier and wound assays, expression analysis",
+   "confidence": "medium",
+   "pmids": [
+    "15831758"
+   ]
+  },
+  {
+   "year": 2014,
+   "finding": "Dominant GRHL3 mutations cause Van der Woude syndrome in families lacking IRF6 mutations; double-heterozygous mice show no Irf6-Grhl3 epistasis, although a 2013 study had placed Grhl3 directly downstream of Irf6 in periderm.",
+   "methods": "Family sequencing, zebrafish periderm assay, mouse genetics; microarrays and enhancer assays (2013)",
+   "confidence": "medium",
+   "pmids": [
+    "24360809",
+    "22931925"
+   ],
+   "open": "Whether IRF6 and GRHL3 act in one pathway or in convergent ones."
+  },
+  {
+   "year": 2018,
+   "finding": "Crystal structures of the GRHL1 and GRHL2 DNA-binding domains show an immunoglobulin-like core with the p53 fold; GRHL1 binds its consensus element as a dimer and selects it through two conserved arginines, one of which is hit by a cancer-associated mutation that abolishes binding.",
+   "methods": "X-ray crystallography, binding assays, reporter assays",
+   "confidence": "high",
+   "pmids": [
+    "29309642"
+   ],
+   "open": "No structure explains the tetrameric CP2-branch complex on repeated sites."
+  }
+ ],
+ "open": [
+  "Whether IRF6 and GRHL3 act in one pathway in oral periderm is disputed: zebrafish, frog and mouse data place Grhl3 directly downstream of Irf6, whereas Irf6;Grhl3 double-heterozygous mice show no epistasis and were read as separate, convergent pathways.",
+  "How far the doubled-site arrangement extends is unresolved: biochemistry shows the CP2-branch factor LSF needs directly repeated elements and binds as a tetramer while Grainyhead binds a single site as a dimer, yet the in vitro-supported HOCOMOCO GRHL1 and GRHL3 models are partly doubled too."
  ]
 }

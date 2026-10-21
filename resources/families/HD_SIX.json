@@ -13,7 +13,7 @@
  ],
  "consensus": "TGATAC",
  "short": "The six human SIX genes encode homeodomain proteins with an additional SIX domain that recruits the EYA family of transcriptional coactivators. Their shared DNA core is TGATAC (GTATCA on the other strand), usually embedded in a longer element written GTAACCTGATAC, which on the opposite strand contains the MEF3 site TCAGGTT first defined in the myogenin promoter. SIX1, SIX2 and SIX4 partner with EYA proteins and activate transcription; SIX3 and SIX6 instead recruit Groucho/TLE corepressors and repress. The family builds muscle, kidney, inner ear and eye: SIX1 mutations cause branchio-oto-renal syndrome, SIX3 mutations cause holoprosencephaly, and SIX1 with EYA is re-activated in several carcinomas.",
- "long": "## The factors\n\nSix human genes - SIX1, SIX2, SIX3, SIX4, SIX5 and SIX6 - encode the vertebrate relatives of *Drosophila* sine oculis. Each protein carries a homeodomain preceded by a roughly 110-residue SIX domain, which is the family's second functional module: it does not bind DNA but provides the interaction surface for the EYA coactivators, and the crystal structure of the human SIX1 SIX domain bound to the EYA2 ED domain shows how that interface is organized. The family splits on cofactor use rather than on sequence. SIX1, SIX2 and SIX4 bind EYA1-4; EYA has intrinsic protein tyrosine phosphatase activity and its recruitment converts a SIX-DACH complex from repressing to activating, so the same site can give opposite outputs depending on which partner is present. SIX3 and SIX6 do not bind EYA and instead recruit Groucho-related corepressors through an eh1-like motif in the SIX domain, acting as repressors. SIX1 and SIX4 are expressed in somites, muscle satellite cells, kidney and otic placode; SIX2 in nephron progenitors; SIX3 and SIX6 in the anterior neural plate, retina and hypothalamus. SIX5 is a family member with no motif model in any of the four collections used here.\n\n## The motif\n\nAll SIX models in these databases converge on a GATAC core. The HT-SELEX and methyl-SELEX models - SIX1.H14CORE.1.SM.B, SIX2.H14CORE.2.SM.B, SIX3.H14CORE.0.SM.B, SIX6.H14CORE.0.SM.B and two CIS-BP models - reduce to tGATAC, 6-9 bits. The ChIP-derived and longer JASPAR models extend it: SIX1 and SIX2 give tGaAAcyTGAtac, JASPAR SIX1 gives GtAACCTGA, JASPAR SIX2 TGAAACCTGAt, SIX4 TGtAAccTGAcACC, and the Vierstra archetype AC0459 GtAACcTGAta. Read the long version on the opposite strand and the classical name appears: GTAACCTGATAC is GTATCAGGTTAC reversed, and TCAGGTT is the MEF3 motif identified in the myogenin promoter as the site through which Six1 and Six4 activate myogenin during somitogenesis. So the family has one site described under two names and two strand conventions; the pooled consensus here, GtaACgcGATACc, is the long form. Two caveats about the split written into this family's definition. First, SIX3 and SIX6 are sometimes described as preferring a TAAT-type site rather than the MEF3 site, but in these four databases their in vitro models give the same TGATAC core as SIX1/2/4, and the JASPAR Six3 model (AtaGGGTATCA) is the GTATCA form - so the SIX1/2/4 versus SIX3/6 division is a cofactor distinction, not one you can make from sequence. Second, one CIS-BP member of this family reads GAgTTGTAGT and has nearest neighbours among the ETS factors; it should not be used as a SIX motif.\n\n## Where it acts\n\nSIX sites occur in tissue-specific enhancers and promoters: the myogenin promoter MEF3 element, nephron progenitor enhancers for SIX2, otic and branchial arch enhancers for SIX1, and forebrain and retinal enhancers for SIX3 and SIX6. The functional unit is usually a SIX site plus its cofactor complex rather than a cluster of different motifs, which is why composite element names are rare for this family. Because the core is only 6 bp, exact TGATAC matches number on the order of 10^6 genome-wide and carry almost no information alone; the 11-13 bp extended form is far more discriminating. Note that the short models will also match GATA-like sequence by coincidence - one Vierstra archetype in this family is labelled SIX/GATA for that reason.\n\n## Biology and disease\n\nHeterozygous SIX1 mutations cause branchio-oto-renal syndrome by disrupting EYA1-SIX1-DNA complexes, and Six1 or Six4 loss in mouse impairs myogenesis and kidney and inner ear development. SIX2 is required to maintain nephron progenitors. Mutations in the SIX3 homeodomain cause holoprosencephaly, and Six3 represses Wnt signaling in the anterior neuroectoderm, which is required for forebrain formation; SIX6 lies in a chromosome 14 cluster and is associated with eye malformation and, in common variation, with optic disc and glaucoma phenotypes. The SIX1-EYA complex is re-expressed in breast, ovarian and other carcinomas, where it promotes migration and metastasis, and is being pursued as a drug target.\n\n## Reading a hit\n\nA bare TGATAC hit is close to meaningless: 6 bp, high genomic frequency, and shared by every SIX paralogue. Insist on the extended GTAACCTGATAC / MEF3 form before calling a site. Even then the hit identifies the family and not the member, and it does not tell you the output, because SIX1/2/4 with EYA activate while SIX3/6 with Groucho repress at what looks like the same sequence. The SIX1, SIX2 and SIX4 models graded P in HOCOMOCO come from ChIP alone and their 5' extension may reflect co-bound partners; the SM-graded models are the in vitro evidence and are the short GATAC form.",
+ "long": "## The factors\n\nSix human genes - SIX1, SIX2, SIX3, SIX4, SIX5 and SIX6 - encode the vertebrate relatives of *Drosophila* sine oculis [PMID:10878574,18989625]. Each protein carries a homeodomain preceded by a roughly 110-residue SIX domain, which is the family's second functional module: together with the homeodomain it is required for specific DNA binding [PMID:10878574], and it provides the interaction surface for the EYA coactivators. The crystal structure of human SIX1 (SIX domain plus homeodomain) bound to the EYA2 Eya domain shows how that interface is organized, and suggests that the last helix of the SIX domain, where BOR syndrome mutations that abolish DNA binding cluster, could contact the major groove [PMID:23435380]. The family splits on cofactor use rather than on sequence. SIX1 binds EYA1 and EYA2 [PMID:15141091,23435380], and SIX2, SIX4 and SIX5 bind EYA1-3 and carry them into the nucleus [PMID:10490620]; EYA has intrinsic protein tyrosine phosphatase activity and its recruitment converts a SIX-DACH complex from repressing to activating, so the same site can give opposite outputs depending on which partner is present [PMID:14628042]. SIX3 does not bind EYA [PMID:10490620,12050133]; SIX3 and SIX6 instead bind Groucho-related corepressors, SIX3 through an eh1-like motif in its SIX domain, and SIX3 then acts as a repressor [PMID:12050133]. SIX1 and SIX4 are expressed in somites, muscle satellite cells, kidney and otic placode; SIX2 in nephron progenitors; SIX3 and SIX6 in the anterior neural plate, retina and hypothalamus. SIX5 is a family member with no motif model in any of the four collections used here.\n\n## The motif\n\nAll SIX models in these databases converge on a GATAC core. The HT-SELEX and methyl-SELEX models - SIX1.H14CORE.1.SM.B, SIX2.H14CORE.2.SM.B, SIX3.H14CORE.0.SM.B, SIX6.H14CORE.0.SM.B and two CIS-BP models - reduce to tGATAC, 6-9 bits. The ChIP-derived and longer JASPAR models extend it: SIX1 and SIX2 give tGaAAcyTGAtac, JASPAR SIX1 gives GtAACCTGA, JASPAR SIX2 TGAAACCTGAt, SIX4 TGtAAccTGAcACC, and the Vierstra archetype AC0459 GtAACcTGAta. Read the long version on the opposite strand and the classical name appears: GTAACCTGATAC is GTATCAGGTTAC reversed, and TCAGGTT is the MEF3 motif identified in the myogenin promoter as the site through which Six1 and Six4 activate myogenin during somitogenesis [PMID:9826681]. So the family has one site described under two names and two strand conventions; the pooled consensus here, GtaACgcGATACc, is the long form. Two caveats about the split written into this family's definition. First, SIX3 and SIX6 are sometimes described as preferring a TAAT-type site rather than the MEF3 site, but in these four databases their in vitro models give the same TGATAC core as SIX1/2/4, and the JASPAR Six3 model (AtaGGGTATCA) is the GTATCA form [PMID:18585359] - so the SIX1/2/4 versus SIX3/6 division is a cofactor distinction, not one you can make from sequence. Second, one CIS-BP member of this family reads GAgTTGTAGT and has nearest neighbours among the ETS factors; it should not be used as a SIX motif.\n\n## Where it acts\n\nSIX sites occur in tissue-specific enhancers and promoters: the myogenin promoter MEF3 element [PMID:9826681], nephron progenitor enhancers for SIX2, otic and branchial arch enhancers for SIX1, and forebrain and retinal enhancers for SIX3 and SIX6 [PMID:12569128]. The functional unit is usually a SIX site plus its cofactor complex rather than a cluster of different motifs, which is why composite element names are rare for this family. Because the core is only 6 bp, exact TGATAC matches number on the order of 10^6 genome-wide and carry almost no information alone; the 11-13 bp extended form is far more discriminating. Note that the short models will also match GATA-like sequence by coincidence - one Vierstra archetype in this family is labelled SIX/GATA for that reason.\n\n## Biology and disease\n\nHeterozygous SIX1 mutations cause branchio-oto-renal syndrome by disrupting EYA1-SIX1-DNA complexes [PMID:15141091], and Six1 loss in mouse impairs kidney, muscle and inner ear development [PMID:14628042]; Six4-null mice have no developmental defect, but removing Six4 as well as Six1 aggravates the Six1 phenotype, with general muscle hypoplasia and impaired expression of the myogenic regulatory factors [PMID:15788460]. SIX2 is required to maintain nephron progenitors [PMID:17036046]. Mutations in the SIX3 homeodomain cause holoprosencephaly [PMID:10369266], and Six3 represses Wnt signaling in the anterior neuroectoderm, which is required for forebrain formation [PMID:12569128]; SIX6 lies in a chromosome 14 cluster and is associated with eye malformation [PMID:10512683] and, in common variation, with optic disc and glaucoma phenotypes [PMID:24875647]. The SIX1-EYA complex is re-expressed in breast, ovarian and other carcinomas, where it promotes migration and metastasis, and is being pursued as a drug target [PMID:23435380].\n\n## Reading a hit\n\nA bare TGATAC hit is close to meaningless: 6 bp, high genomic frequency, and shared by every SIX paralogue. Insist on the extended GTAACCTGATAC / MEF3 form before calling a site. Even then the hit identifies the family and not the member, and it does not tell you the output, because SIX1/2/4 with EYA activate while SIX3/6 with Groucho repress at what looks like the same sequence. The SIX1, SIX2 and SIX4 models graded P in HOCOMOCO come from ChIP alone and their 5' extension may reflect co-bound partners; the SM-graded models are the in vitro evidence and are the short GATAC form.",
  "caveats": "The GATAC core is only 6 bp and is shared by all SIX paralogues, so short matches are uninformative and will also pick up GATA-like sequence - one Vierstra archetype here is labelled SIX/GATA. Use the extended 11-13 bp MEF3 form. A hit cannot distinguish SIX1, SIX2, SIX3, SIX4 or SIX6, and cannot predict activation versus repression, since that depends on whether EYA or Groucho is recruited. SIX5 has no model here at all. One CIS-BP member of the family reads an ETS-like sequence (GAGTTGTAGT) and is flagged as belonging elsewhere; the longer SIX1/2/4 models are ChIP-derived and may include partner contributions.",
  "refs": [
   {
@@ -75,6 +75,99 @@
    "cite": "Jolma A, Yan J, Whitington T, et al. DNA-binding specificities of human transcription factors. Cell 2013;152:327-39.",
    "pmid": "23332764",
    "url": "https://pubmed.ncbi.nlm.nih.gov/23332764/"
+  },
+  {
+   "cite": "Berger MF, Badis G, Gehrke AR, et al. Variation in homeodomain DNA binding revealed by high-resolution analysis of sequence preferences. Cell 2008;133:1266-76.",
+   "pmid": "18585359",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/18585359/"
+  },
+  {
+   "cite": "Self M, Lagutin OV, Bowling B, et al. Six2 is required for suppression of nephrogenesis and progenitor renewal in the developing kidney. EMBO J 2006;25:5214-28.",
+   "pmid": "17036046",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/17036046/"
+  },
+  {
+   "cite": "Carnes MU, Liu YP, Allingham RR, et al. Discovery and functional annotation of SIX6 variants in primary open-angle glaucoma. PLoS Genet 2014;10:e1004372.",
+   "pmid": "24875647",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24875647/"
+  },
+  {
+   "cite": "Grifone R, Demignon J, Houbron C, et al. Six1 and Six4 homeoproteins are required for Pax3 and Mrf expression during myogenesis in the mouse embryo. Development 2005;132:2235-49.",
+   "pmid": "15788460",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15788460/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1998,
+   "finding": "Mutating the MEF3 motif (TCAGGTT) in a 184-bp myogenin promoter fragment abolishes correct transgene expression in the embryo, and the MEF3-binding activity in muscle is identified as Six1 and Six4, which transactivate MEF3 reporters.",
+   "methods": "Transgenic promoter mutagenesis, EMSA with specific antibodies, transfection",
+   "confidence": "high",
+   "pmids": [
+    "9826681"
+   ],
+   "open": "Whether the other SIX proteins read the same site was not addressed."
+  },
+  {
+   "year": 1999,
+   "finding": "Six2, Six4 and Six5, but not Six3, bind EYA proteins and carry them into the nucleus, and Six-Eya combinations synergistically activate the myogenin promoter and multimerized Six4 sites; the SIX domain plus homeodomain is necessary and sufficient.",
+   "methods": "Cotransfection, coimmunoprecipitation, yeast two-hybrid",
+   "confidence": "medium",
+   "pmids": [
+    "10490620"
+   ]
+  },
+  {
+   "year": 2002,
+   "finding": "Six3 and Six6 instead bind the Groucho-related corepressors Grg4 and Grg5 through an eh1-like motif in the SIX domain, and Six3 acts as a potent repressor; a PCR-selected Six3 binding site is reported.",
+   "methods": "Protein interaction assays, site selection, retinal and lens overexpression",
+   "confidence": "medium",
+   "pmids": [
+    "12050133"
+   ],
+   "open": "Whether the Six3-selected site and the MEF3 site are distinct specificities or one site read by both subclasses was not settled."
+  },
+  {
+   "year": 2003,
+   "finding": "EYA is shown to be a protein phosphatase whose activity switches SIX1-DACH from repression to activation, and Six1 is shown to be required for kidney, muscle and inner ear development.",
+   "methods": "Mouse genetics, phosphatase assays, coactivator recruitment assays",
+   "confidence": "high",
+   "pmids": [
+    "14628042"
+   ]
+  },
+  {
+   "year": 2004,
+   "finding": "SIX1 mutations cause branchio-oto-renal and branchio-otic syndromes; all three disrupt EYA1-SIX1 interaction, and the two in the homeodomain also abolish specific DNA binding.",
+   "methods": "Human genetics, protein-protein and protein-DNA binding assays",
+   "confidence": "medium",
+   "pmids": [
+    "15141091"
+   ]
+  },
+  {
+   "year": 2008,
+   "finding": "Protein-binding microarrays for 168 mouse homeodomains resolve at least 65 distinct binding activities; the Six3 model reads GGTATCA, the reverse complement of the TGATAC core that later in vitro models give for SIX1, SIX2, SIX4 and SIX6 alike.",
+   "methods": "Universal protein-binding microarrays",
+   "confidence": "medium",
+   "pmids": [
+    "18585359"
+   ]
+  },
+  {
+   "year": 2013,
+   "finding": "The 2.0-A structure of SIX1 bound to the EYA2 ED domain shows that SIX1 contacts EYA mainly through a single helix; one substitution in it disrupts the complex, SIX1-driven epithelial-mesenchymal transition and metastasis in mice.",
+   "methods": "X-ray crystallography, mutagenesis, mouse metastasis models",
+   "confidence": "high",
+   "pmids": [
+    "23435380"
+   ],
+   "open": "No SIX protein has been solved on DNA, so how the SIX domain and homeodomain divide the extended site remains structural inference."
+  }
+ ],
+ "open": [
+  "Whether the SIX domain contacts DNA is unsettled: reviews describe both the SIX domain and the homeodomain as required for specific DNA binding, the SIX1-EYA2 structure was read as suggesting a new DNA-binding mode, but without a SIX-DNA structure it is unknown how the two domains share the extended GTAACCTGATAC site.",
+  "The databases disagree over site length: the HT-SELEX and methyl-HT-SELEX models give only the 6-bp TGATAC core, while the ChIP-derived models give the 11-13 bp MEF3 form, and it is not resolved whether the 5' AACC extension is read by the SIX protein itself or reflects co-bound factors in ChIP.",
+  "Whether SIX3 and SIX6 prefer a site different from SIX1, SIX2 and SIX4 is unsettled: the subclasses differ clearly in cofactor (EYA versus Groucho), but the systematic in vitro models for all five paralogues in these databases give the same TGATAC core."
  ]
 }

@@ -10,7 +10,7 @@
  ],
  "consensus": "GCCBMGGCCT",
  "short": "ZFX and its Y-linked paralogue ZFY are thirteen-finger C2H2 zinc-finger activators that bind a short GC-rich site containing a GGCCT core. Their placement is the interesting part: they bind inside CpG-island promoters a couple of hundred base pairs downstream of the transcription start site, between the open region at the TSS and the first downstream nucleosome, and they activate the promoters they occupy. Together with the related ZNF711, they occupy the majority of active CpG-island promoters in a cell. ZFX loss slows proliferation, which is why the gene recurs in growth-based CRISPR screens, and ZFX supports embryonic and hematopoietic stem-cell self-renewal. Germline ZFX variants cause an X-linked neurodevelopmental disorder.",
- "long": "## The factors\n\nZFY was cloned in 1987 from the sex-determining region of the human Y chromosome and proposed as the\ntestis-determining factor, a role later taken by SRY. Its X-linked paralogue ZFX has a similar gene\nstructure, escapes X inactivation, and was recognized early as a probable transcriptional activator\nwith alternative isoforms. The third member, ZNF711, is also X-linked and has an overlapping binding\npattern. All three are ubiquitously expressed, which is unusual among C2H2 factors and consistent\nwith a housekeeping role at promoters.\n\nThe proteins have an acidic N-terminal region and thirteen C2H2 zinc fingers. Mutational dissection\nshows that fingers 11 to 13 are necessary and sufficient for DNA binding, and that these fingers\ntogether with the N-terminal region constitute a functional transactivator; the remaining ten fingers\nare not required for site recognition. In the databases behind this family, only ZFX has matrices,\nand the four of them agree closely (cohesion 0.91), so this is one of the more internally consistent\nzinc-finger families despite the short motif.\n\n## The motif\n\nThe consensus is GC-rich and short. The core that all models share is GGCCT, and the fuller form used\nby JASPAR and CIS-BP is GCCBMGGCCT, which is also the data consensus for this family; the HOCOMOCO\nChIP-derived version, CCAGGCCBCG, is the same core with different flanks. There is no crystal or NMR\nstructure of the ZFX fingers on DNA, so which bases the three DNA-binding fingers contact is inferred\nfrom the standard C2H2 recognition rules rather than observed. With roughly five to eight informative\npositions, the motif is one of the least specific in routine use, and it is intrinsically GC-rich, so\nmatches are dense wherever GC content is high. Reported analyses note that the GGCCT motif occurs\nthroughout the genome but at higher density inside CpG islands, which is where occupancy is found.\n\nZFX, ZFY and ZNF711 are not separable by sequence in practice, and their genomic binding patterns at\nCpG-island promoters are essentially the same. ZNF711 also has its own reported motif, and where the\ntwo are distinguished, ZFX appears to be the dominant of the pair, with ZNF711 playing a subordinate\nrole at shared promoters.\n\n## Where it acts\n\nThis family is a promoter family, and the position of binding is its defining feature. ChIP in four\ncancer cell lines recovered roughly 9,000 ZFX sites, most of them in CpG-island promoters, and genes\nwith ZFX-bound promoters were expressed at higher levels than unbound ones; knocking ZFX down\ndown-regulated many of them, so ZFX is an activator. The binding position is about 240 base pairs\ndownstream of the transcription start site of responsive promoters, and nucleosome-occupancy and\nmethylome sequencing places it between the nucleosome-free region at the TSS and the first downstream\nnucleosome. Taking ZFX, ZFY and ZNF711 together, the union of their bound promoters covers on the\norder of 10,000 CpG-island promoters, a large majority of the active CpG-island promoters in a cell.\nMechanistically, reducing ZFX lowers histone H4 acetylation and increases RNA polymerase II pausing\nat target promoters, which is consistent with a role in promoter architecture and early elongation\nrather than in enhancer-driven, cell-type-specific regulation.\n\n## Biology and disease\n\nZfx-null mice are viable but smaller, with reduced self-renewal of embryonic and hematopoietic stem\ncells, so the gene supports proliferative capacity rather than specifying a lineage. That fits the\ncancer literature, in which ZFX expression correlates with proliferation and outcome across several\ntumor types, and in which Zfx facilitates tumorigenesis driven by Hedgehog-pathway activation.\nBecause ZFX contributes to growth in many cell types, bi-allelic ZFX knockouts reduce cell growth and\ncombined ZFX/ZNF711 knockouts cause major proliferation defects, which is why ZFX turns up repeatedly\nas a hit in growth-based genome-wide CRISPR knockout screens; readers should be aware that a ZFX hit\nin such a screen usually reflects this general proliferative requirement rather than a\npathway-specific dependency. In human genetics, germline ZFX variants cause an X-linked\nneurodevelopmental disorder with a recurrent facial gestalt. ZFY, on the Y chromosome, has a distinct\nrole in male germ-cell development.\n\n## Reading a hit\n\nA GGCCT-containing match is weak evidence by itself: the motif is short, GC-rich, and denser in CpG\nislands, so hits accumulate in exactly the sequence people usually submit. Position is the most useful\nfilter. A match a couple of hundred base pairs downstream of a CpG-island TSS is a plausible ZFX site;\nthe same match in an intergenic or AT-poor enhancer is probably not. The hit identifies the family\nrather than the protein: ZFX, ZFY and ZNF711 bind the same sequence, and which one matters depends on\nthe sex and expression of the cells. Note also that the CIS-BP human ZFX motif in this collection is\ntransferred from mouse Zfx rather than measured on the human protein, though at 99% DNA-binding-domain\nidentity that transfer is harmless. Finally, because ZFX sits at a large fraction of all active\npromoters, a ZFX-like motif recovered from another factor's ChIP data is more likely to reflect\npromoter co-occupancy than that factor's own specificity.",
+ "long": "## The factors\n\nZFY was cloned in 1987 from the sex-determining region of the human Y chromosome and proposed as the\ntestis-determining factor [PMID:3690661], a role later taken by SRY [PMID:1695712]. Its X-linked paralogue ZFX has a similar gene\nstructure, escapes X inactivation [PMID:2500252], and was recognized early as a probable transcriptional activator\nwith alternative isoforms [PMID:2512506]. The third member, ZNF711, is also X-linked and has an overlapping binding\npattern [PMID:32406922]. All three are ubiquitously expressed, which is unusual among C2H2 factors and consistent\nwith a housekeeping role at promoters.\n\nThe proteins have an acidic N-terminal region and thirteen C2H2 zinc fingers. Mutational dissection\nshows that fingers 11 to 13 are necessary and sufficient for DNA binding, and that these fingers\ntogether with the N-terminal region constitute a functional transactivator [PMID:32406922]; the remaining ten fingers\nare not required for site recognition. In the databases behind this family, only ZFX has matrices,\nand the four of them agree closely (cohesion 0.91), so this is one of the more internally consistent\nzinc-finger families despite the short motif.\n\n## The motif\n\nThe consensus is GC-rich and short. The core that all models share is GGCCT, and the fuller form used\nby JASPAR and CIS-BP is GCCBMGGCCT, which is also the data consensus for this family; the HOCOMOCO\nChIP-derived version, CCAGGCCBCG, is the same core with different flanks. There is no crystal or NMR\nstructure of the ZFX fingers on DNA, so which bases the three DNA-binding fingers contact is inferred\nfrom the standard C2H2 recognition rules rather than observed. With roughly five to eight informative\npositions, the motif is one of the least specific in routine use, and it is intrinsically GC-rich, so\nmatches are dense wherever GC content is high. Reported analyses note that the GGCCT motif occurs\nthroughout the genome but at higher density inside CpG islands, which is where occupancy is found [PMID:29429977].\n\nZFX, ZFY and ZNF711 are not separable by sequence in practice, and their genomic binding patterns at\nCpG-island promoters are essentially the same. ZNF711 also has its own reported motif, and where the\ntwo are distinguished, ZFX appears to be the dominant of the pair, with ZNF711 playing a subordinate\nrole at shared promoters [PMID:32406922].\n\n## Where it acts\n\nThis family is a promoter family, and the position of binding is its defining feature. ChIP in four\ncancer cell lines recovered roughly 9,000 ZFX sites, most of them in CpG-island promoters, and genes\nwith ZFX-bound promoters were expressed at higher levels than unbound ones [PMID:29429977]; knocking ZFX down\ndown-regulated many of them, so ZFX is an activator. The binding position is about 240 base pairs\ndownstream of the transcription start site of responsive promoters, and nucleosome-occupancy and\nmethylome sequencing places it between the nucleosome-free region at the TSS and the first downstream\nnucleosome [PMID:29429977]. Taking ZFX, ZFY and ZNF711 together, the union of their bound promoters covers on the\norder of 10,000 CpG-island promoters, a large majority of the active CpG-island promoters in a cell [PMID:32406922].\nMechanistically, reducing ZFX lowers histone H4 acetylation and increases RNA polymerase II pausing\nat target promoters [PMID:38726870], which is consistent with a role in promoter architecture and early elongation\nrather than in enhancer-driven, cell-type-specific regulation.\n\n## Biology and disease\n\nZfx-null mice are viable but smaller, with reduced self-renewal of embryonic and hematopoietic stem\ncells [PMID:17448993], so the gene supports proliferative capacity rather than specifying a lineage. That fits the\ncancer literature, in which ZFX expression correlates with proliferation and outcome across several\ntumor types, and in which Zfx facilitates tumorigenesis driven by Hedgehog-pathway activation [PMID:25164012].\nBecause ZFX contributes to growth in many cell types, bi-allelic ZFX knockouts reduce cell growth and\ncombined ZFX/ZNF711 knockouts cause major proliferation defects [PMID:32406922], which is why ZFX turns up repeatedly\nas a hit in growth-based genome-wide CRISPR knockout screens; readers should be aware that a ZFX hit\nin such a screen usually reflects this general proliferative requirement rather than a\npathway-specific dependency. In human genetics, germline ZFX variants cause an X-linked\nneurodevelopmental disorder with a recurrent facial gestalt [PMID:38325380]. ZFY, on the Y chromosome, has a distinct\nrole in male germ-cell development [PMID:37354519].\n\n## Reading a hit\n\nA GGCCT-containing match is weak evidence by itself: the motif is short, GC-rich, and denser in CpG\nislands, so hits accumulate in exactly the sequence people usually submit. Position is the most useful\nfilter. A match a couple of hundred base pairs downstream of a CpG-island TSS is a plausible ZFX site;\nthe same match in an intergenic or AT-poor enhancer is probably not. The hit identifies the family\nrather than the protein: ZFX, ZFY and ZNF711 bind the same sequence, and which one matters depends on\nthe sex and expression of the cells. Note also that the CIS-BP human ZFX motif in this collection is\ntransferred from mouse Zfx rather than measured on the human protein, though at 99% DNA-binding-domain\nidentity that transfer is harmless. Finally, because ZFX sits at a large fraction of all active\npromoters, a ZFX-like motif recovered from another factor's ChIP data is more likely to reflect\npromoter co-occupancy than that factor's own specificity.",
  "caveats": "The motif is short (roughly five to eight informative positions) and GC-rich, so hits are dense in CpG islands and GC-rich sequence generally, and a match alone means very little. Position carries more information than score: credible sites lie a couple of hundred base pairs downstream of a CpG-island transcription start site. ZFX, ZFY and ZNF711 read the same sequence and cannot be separated, and only ZFX has matrices here; the CIS-BP entry is transferred from mouse Zfx, benign at 99% DNA-binding-domain identity. No structure of these fingers on DNA exists, so the base contacts are inferred. Because ZFX occupies most active CpG-island promoters, a ZFX-like motif in another factor's ChIP data usually means co-occupancy.",
  "refs": [
   {
@@ -62,6 +62,94 @@
    "cite": "Holmlund H, Yamauchi Y, Ruthig VA, et al. Return of the forgotten hero: the role of Y chromosome-encoded Zfy in male reproduction. Mol Hum Reprod 2023;29.",
    "pmid": "37354519",
    "url": "https://pubmed.ncbi.nlm.nih.gov/37354519/"
+  },
+  {
+   "cite": "Sinclair AH, Berta P, Palmer MS, et al. A gene from the human sex-determining region encodes a protein with homology to a conserved DNA-binding motif. Nature 1990;346:240-4.",
+   "pmid": "1695712",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/1695712/"
   }
+ ],
+ "timeline": [
+  {
+   "year": 1987,
+   "finding": "A zinc-finger gene, ZFY, is cloned from the sex-determining region of the human Y chromosome and proposed as the testis-determining factor.",
+   "methods": "Deletion mapping of the Y chromosome in sex-reversed individuals, cDNA cloning",
+   "confidence": "medium",
+   "pmids": [
+    "3690661"
+   ],
+   "open": "No DNA-binding site was known, and the assignment rested on map position."
+  },
+  {
+   "year": 1989,
+   "finding": "The X-linked paralogue ZFX is shown to have the same gene structure, to escape X inactivation, and to encode alternative isoforms with the features of a transcriptional activator, making the pair a dosage-related gene family rather than a male-specific switch.",
+   "methods": "Genomic and cDNA comparison, X-inactivation escape assays, domain analysis",
+   "confidence": "medium",
+   "pmids": [
+    "2500252",
+    "2512506"
+   ]
+  },
+  {
+   "year": 1990,
+   "finding": "SRY is identified as the testis-determining factor, removing the role that had motivated interest in ZFY and leaving the family without an assigned function for a decade.",
+   "methods": "Positional cloning in sex-reversed individuals, sequence analysis",
+   "confidence": "high",
+   "pmids": [
+    "1695712"
+   ]
+  },
+  {
+   "year": 2007,
+   "finding": "Zfx-null mice are viable but small, with reduced self-renewal of embryonic and hematopoietic stem cells, giving the family a proliferative rather than a lineage-specifying role.",
+   "methods": "Conditional mouse knockout with stem-cell transplantation and self-renewal assays",
+   "confidence": "medium",
+   "pmids": [
+    "17448993"
+   ]
+  },
+  {
+   "year": 2018,
+   "finding": "ChIP in human tumor cell lines places roughly 9,000 ZFX sites overwhelmingly in CpG-island promoters, about 240 base pairs downstream of the start site, between the nucleosome-free region and the first downstream nucleosome, and knockdown lowers expression of bound genes, so ZFX is an activator positioned by promoter architecture rather than by enhancer context.",
+   "methods": "ChIP-seq in four cell lines, knockdown with RNA-seq, nucleosome-occupancy and methylome sequencing",
+   "confidence": "medium",
+   "pmids": [
+    "29429977"
+   ],
+   "open": "Whether ZFY and ZNF711 occupy the same promoters was untested."
+  },
+  {
+   "year": 2020,
+   "finding": "Treating ZFX, ZFY and ZNF711 as one family shows their bound promoters cover on the order of 10,000 CpG islands, that zinc fingers 11-13 are necessary and sufficient for DNA binding, and that losing ZFX and ZNF711 together causes major proliferation defects.",
+   "methods": "CRISPR bi-allelic knockouts in HEK293T, RNA-seq, structure-function analysis of ZFX mutants",
+   "confidence": "medium",
+   "pmids": [
+    "32406922"
+   ]
+  },
+  {
+   "year": 2024,
+   "finding": "Reducing ZFX lowers histone H4 acetylation and increases RNA polymerase II pausing at target promoters, which recasts the family as acting on promoter chromatin and early elongation rather than on recruitment of the polymerase.",
+   "methods": "Degron and knockdown of ZFX with chromatin profiling and nascent transcription assays",
+   "confidence": "medium",
+   "pmids": [
+    "38726870"
+   ]
+  },
+  {
+   "year": 2024,
+   "finding": "Germline ZFX variants are shown to cause an X-linked neurodevelopmental disorder with a recurrent facial gestalt, establishing that a factor sitting at most active CpG-island promoters is dosage-sensitive in human development.",
+   "methods": "Clinical exome and genome sequencing in a patient cohort with functional assays",
+   "confidence": "medium",
+   "pmids": [
+    "38325380"
+   ]
+  }
+ ],
+ "open": [
+  "How ZFX is positioned a couple of hundred base pairs downstream of the start site is unexplained: the GGCCT core is short and common in CpG islands, so either an unidentified feature of promoter architecture selects the bound copy, or the position reflects nucleosome placement rather than sequence.",
+  "Whether ZFX, ZFY and ZNF711 differ at all in intrinsic specificity is untested; their measured motifs are the same and their promoter occupancy overlaps, so the apparent dominance of ZFX over ZNF711 at shared promoters has no sequence explanation.",
+  "No structure of the ZFX fingers on DNA has been determined, so which bases fingers 11-13 contact is inferred from the standard C2H2 recognition rules rather than observed, and the GCCBMGGCCT and CCAGGCCBCG forms in the databases have not been reconciled structurally.",
+  "Whether the transcriptional effects of ZFX loss are direct or follow from a general proliferation defect is hard to separate, which is also why ZFX recurs as a hit in growth-based CRISPR screens."
  ]
 }

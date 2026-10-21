@@ -1,0 +1,750 @@
+{
+ "summary": {
+  "pass": "anchoring pass, October 2026",
+  "flagged": 106,
+  "corrected": 101,
+  "rejected": 5,
+  "open": 0,
+  "byKind": {
+   "error": 66,
+   "overstated": 15,
+   "loose": 17,
+   "unverified": 6
+  },
+  "entries": 70
+ },
+ "items": [
+  {
+   "key": "TFAP4",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Cited a retracted paper (PMID 34630654, Gu 2021, retracted 2024). Ref, anchor and the FOXK1 sentence removed."
+  },
+  {
+   "key": "SREBF",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Prose said the SREBP-1a co-crystal (PMID 9634703) was on an E-box; the paper says SRE. Writer corrected the sentence. Accepted."
+  },
+  {
+   "key": "MITF_TFE",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Prose says MiT/TFE need a T immediately 5' of the core at CACGTG. Aksan & Goding 1998 found the T essential only at CATGTG, with no flank requirement at CACGTG. Writer filed it as an open question instead of fixing it.",
+   "action": "corrected: T required only at CATGTG; misfiled open question rewritten"
+  },
+  {
+   "key": "BHLHE40_41",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Prose says BHLHE40 models prefer G/C flanks (GCACGTG, tCACGTGa); tCACGTGa is T/A-flanked and St-Pierre 2002 shows a T/A preference. Only the HOCOMOCO model reads GCACGTG. Filed as an open question.",
+   "action": "corrected; misfiled open question removed; P384R/P385R numbering reconciled"
+  },
+  {
+   "key": "BHLHE40_41",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Prose gives the short-sleep variant as P384R; He 2009 reports P385R.",
+   "action": "corrected; misfiled open question removed; P384R/P385R numbering reconciled"
+  },
+  {
+   "key": "BHLH_OTHER",
+   "found": "overstated",
+   "outcome": "corrected",
+   "what": "'Obligate heterodimerization' overstates Suzuki 2012, which also found SOHLH homodimers in vivo. Filed as an open question.",
+   "action": "softened: heterodimer essential, not obligate"
+  },
+  {
+   "key": "MYC_MAX",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Sentence says the central CG is contacted only through the backbone and water, in the same sentence as an arginine-guanine contact; could not be confirmed from the structure paper and may be self-contradictory.",
+   "action": "corrected contacts from Wang 2017"
+  },
+  {
+   "key": "SREBF",
+   "found": "overstated",
+   "outcome": "corrected",
+   "what": "'SREBP contacts the Btd domain of SP1' goes beyond Athanikar 1997, which shows the Btd region is required, not a direct contact.",
+   "action": "softened SP1 contact claim"
+  },
+  {
+   "key": "E_PROTEIN",
+   "found": "overstated",
+   "outcome": "corrected",
+   "what": "'Among the strongest' schizophrenia associations is stronger than Stefansson 2009 alone supports.",
+   "action": "softened to what Stefansson 2009 shows"
+  },
+  {
+   "key": "HAND_TWIST",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Prose credits PKC alongside PKA and PP2A for the Twist1/Hand2 phospho-switch; the anchored Firulli 2005 reports PKA and PP2A only.",
+   "action": "corrected"
+  },
+  {
+   "key": "HNF4",
+   "found": "loose",
+   "outcome": "corrected",
+   "what": "'Die during gastrulation' is anchored to Hayhurst 2001, which says 'die during embryogenesis'. Either the wording or the anchor (primary Hnf4a-null paper) needs fixing.",
+   "action": "re-anchored to Chen 1994"
+  },
+  {
+   "key": "ESR",
+   "found": "loose",
+   "outcome": "corrected",
+   "what": "Esr1/Esr2-null phenotypes anchored to the Hewitt & Korach 2018 review, whose abstract does not list them.",
+   "action": "re-anchored knockouts to Lubahn 1993 and Krege 1998"
+  },
+  {
+   "key": "NEUROD_ATOH",
+   "found": "loose",
+   "outcome": "corrected",
+   "what": "Neurog1/2 requirement for sensory neurons anchored to the Bertrand 2002 review rather than the primary knockouts. Acceptable; low priority.",
+   "action": "re-anchored to Ma 1998 and 1999"
+  },
+  {
+   "key": "GATA",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "\"No experiment distinguishes GATA1 from GATA2 from GATA6 by sequence\" conflicts with Ko & Engel 1993 (PMID 8321208): AGATCTTA is bound by GATA2 and GATA3 but poorly by GATA1.",
+   "action": "corrected: AGATCTTA distinguishes GATA1 (Ko & Engel 1993)"
+  },
+  {
+   "key": "RFX",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Prose (The motif and Reading a hit) says RFX5 models are half-sites of 7-12 bits. Our own data contradicts this: JASPAR MA0510.3 is a full palindrome at 20.2 bits and HOCOMOCO RFX5 PSG.A is 18.6 bits.",
+   "action": "corrected RFX5 palindrome; softened metazoan dating"
+  },
+  {
+   "key": "RFX",
+   "found": "loose",
+   "outcome": "corrected",
+   "what": "\"Predate metazoans\" anchored to Chu 2010; Piasecki 2010 (already cited) argues the program arose early in the animal lineage instead.",
+   "action": "corrected RFX5 palindrome; softened metazoan dating"
+  },
+  {
+   "key": "RFX",
+   "found": "loose",
+   "outcome": "flag rejected",
+   "what": "DDIT4 is named as a target but is not in the Coronel 2021 abstract it is anchored to.",
+   "action": "flag was wrong: DDIT4 is a direct RFX7 target in Table 1 of the full text (PMC8287911)"
+  },
+  {
+   "key": "SMAD",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "\"Homozygously deleted in roughly half of pancreatic adenocarcinomas\" overstates Hahn 1996: homozygous deletions in 25 of 84 tumours (~30%), plus mutations in 6 of 27 others.",
+   "action": "corrected to 25 of 84"
+  },
+  {
+   "key": "NFI",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "\"Tolerates very little change in spacer length\" is anchored to Gronostajski 1987, which accepted both 6- and 7-bp spacers.",
+   "action": "corrected; added Roulet 2000"
+  },
+  {
+   "key": "AP2",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Prose calls the 11-mer models (GCCCTBAGGGC) the same core plus flanks; they read GCC-N4-GGG, a site class Mohibullah 1999 recovered by selection, so \"two or four bases is much weaker\" is disputed.",
+   "action": "corrected: longer models are N4 sites, not N3 plus flanks"
+  },
+  {
+   "key": "GRHL",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "\"GRHL3 and IRF6 act in the same genetic pathway\" anchored to de la Garza 2013; Peyrard-Janvid 2014 (already cited) concluded the pathways are separate and convergent.",
+   "action": "corrected"
+  },
+  {
+   "key": "GRHL",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Klein 2017 compares differentiating with migrating keratinocytes, not proliferating with differentiating as the prose says.",
+   "action": "corrected"
+  },
+  {
+   "key": "TEAD",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Calling MCAT \"the Sph motif\": Davidson 1988 describes GT-IIC and Sph as two unrelated motifs.",
+   "action": "corrected: Sph is unrelated to MCAT"
+  },
+  {
+   "key": "HSF",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "\"Two flanking bases of each unit are nearly free\" is contradicted by Amin 1988 and by the model preferences.",
+   "action": "corrected flank claim; Pelham palindrome re-anchored"
+  },
+  {
+   "key": "HSF",
+   "found": "unverified",
+   "outcome": "corrected",
+   "what": "1982 timeline step says Pelhams element was \"at first read as a single palindrome\"; the writer recalled this from the main text and the abstract does not say it.",
+   "action": "corrected flank claim; Pelham palindrome re-anchored"
+  },
+  {
+   "key": "P53",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Prose says the p53 DNA-binding fold is \"shared with no other vertebrate transcription factor family\". Contradicted by Muller 1995 (PMID 7830764: p50 N-terminal domain resembles the p53 core) and Nagata 1999 (PMID 10404214: Runt domain in the same fold as NF-kB, NFAT, p53 and STAT) — and by the atlas own RUNX entry.",
+   "action": "corrected fold claim; softened site count to 542"
+  },
+  {
+   "key": "P53",
+   "found": "unverified",
+   "outcome": "corrected",
+   "what": "\"About 1,600\" upper figure for p53 binding sites is not confirmed by the Wei 2006 abstract, which supports \"at least 542\" high-confidence sites.",
+   "action": "corrected fold claim; softened site count to 542"
+  },
+  {
+   "key": "MEF2",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Prose credits Andres 1995 with determining the MEF2 consensus; Pollock & Treisman 1991 (PMID 1748287) defined CTA(A/T)4TAG first.",
+   "action": "corrected consensus credit; CAD link stated as unreplicated"
+  },
+  {
+   "key": "MEF2",
+   "found": "overstated",
+   "outcome": "corrected",
+   "what": "MEF2A and coronary artery disease is stated on the original report alone; the failed replication (Weng 2005, PMID 15841183, verified) should be cited in the sentence, not only in an open question.",
+   "action": "corrected consensus credit; CAD link stated as unreplicated"
+  },
+  {
+   "key": "RUNX",
+   "found": "overstated",
+   "outcome": "corrected",
+   "what": "Prose says tandem-core models reflect paired enhancer sites \"rather than any dimeric binding\"; HT-SELEX recovers fixed spacings, so cooperative binding of paired cores is unresolved rather than excluded.",
+   "action": "corrected: tandem models from HT-SELEX, not enhancers"
+  },
+  {
+   "key": "NFKB",
+   "found": "loose",
+   "outcome": "corrected",
+   "what": "Knockout phenotypes anchored to the Gerondakis 2006 review; verified primaries available: 7603567 Beg 1995, 7834753 Weih 1995, 7834752 Sha 1995.",
+   "action": "re-anchored knockouts to four primaries"
+  },
+  {
+   "key": "PUR",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "In long AND caveats, evidence code B is described as \"imported from another collection\". B means PBM. This error originated in the coordinator brief (which mis-decoded I/B as other collections) and has been fixed there; PUR is the only entry that repeated it."
+  },
+  {
+   "key": "SAND",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Long says AIRE, SP100 and SP140 all lack the KDWK motif; Bottomley 2001 (cited in the entry) solved the SAND structure from Sp100b and places KDWK there, so SP100 has it."
+  },
+  {
+   "key": "SAND",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Long AND caveats say to treat the SP100/SP140 models as records of where the protein was found; those HOCOMOCO models are grade A with HT-SELEX, GHT-SELEX and SMiLE-seq support (plus PBM for SP140), i.e. in vitro evidence of direct binding."
+  },
+  {
+   "key": "TBP",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Long says \"co-crystal structures of human and yeast TBP\"; the 1993 and 1994 Burley-lab structures used plant (Arabidopsis) TBP. The timeline row already says plant and yeast.",
+   "action": "plant (Arabidopsis) and yeast"
+  },
+  {
+   "key": "E2F",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Writer dropped \"and polyploidy\" from the E2f7/E2f8 double-knockout sentence; Li 2008 reports apoptosis and dilated vessels. Accepted."
+  },
+  {
+   "key": "PUR",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Writer replaced a genotype-phenotype claim to match Reijnders 2018 (no significant correlation in 32 individuals). Accepted."
+  },
+  {
+   "key": "NFE2_BACH",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "ARE core given as (A/G)TGACNNNGC; the Rushmore 1991 abstract gives puGTGACNNNGC. Writer corrected it to (A/G)GTGACNNNGC. Accepted."
+  },
+  {
+   "key": "NFE2_BACH",
+   "found": "overstated",
+   "outcome": "corrected",
+   "what": "Sun 2004 supports heme displacing BACH1 from DNA but not the \"nuclear export\" part of the sentence.",
+   "action": "re-anchored to Suzuki 2004 (PMID 15175654)"
+  },
+  {
+   "key": "BZIP_OTHER",
+   "found": "loose",
+   "outcome": "corrected",
+   "what": "Cui 2024 does not cover the insulin-resistance and macrophage links; nothing in refs covers the Schwann-cell claim.",
+   "action": "re-anchored each claim; added three papers"
+  },
+  {
+   "key": "HD_PAIRED",
+   "found": "loose",
+   "outcome": "corrected",
+   "what": "PAX2 renal-coloboma and PAX8 congenital-hypothyroidism claims anchored to the Blake & Ziman review rather than the primary papers. Low priority.",
+   "action": "re-anchored to Sanyanusin 1995 and Macchia 1998"
+  },
+  {
+   "key": "HD_HOX_ANT",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "\"19 of 23 HOCOMOCO models have HT-SELEX support\" — the data show 21 of 23.",
+   "action": "corrected count to 21 of 23"
+  },
+  {
+   "key": "HD_HOX_POST",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Cohesion 0.89 called \"the highest of the homeodomain families\"; HD_K50 is now 0.90 after the K50/Q50 reassignment (stale claim caused by the ontology change).",
+   "action": "corrected stale cohesion ranking"
+  },
+  {
+   "key": "HD_NKX",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "CAAGTG called \"the same sequence read the other way\" as TAAGTG. It is a one-base variant (from TCAAGTG); the reverse complement of TAAGTG is CACTTA.",
+   "action": "corrected CAAGTG reading; Tyr54 verified in full text"
+  },
+  {
+   "key": "HD_Q50",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "\"A ChIP-derived VENTX model reads AATTTGCATA\" — that model (VENTX.H14CORE.1.S.C) is HT-SELEX, not ChIP, so the indirect-binding interpretation does not apply. May also appear in caveats.",
+   "action": "VENTX model is HT-SELEX, corrected in long and caveats"
+  },
+  {
+   "key": "HD_K50",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "\"Striking dominant disease load\" includes GSC, but Parry 2013 shows SAMS is autosomal recessive.",
+   "action": "corrected"
+  },
+  {
+   "key": "HD_NKX",
+   "found": "unverified",
+   "outcome": "corrected",
+   "what": "Tyr54 claim anchored to Noyes 2008 based on full-text search hits; the full text was not read. Worth one manual check.",
+   "action": "corrected CAAGTG reading; Tyr54 verified in full text"
+  },
+  {
+   "key": "*",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Coordinator brief mis-decoded HOCOMOCO evidence letters (G as integrative, I/B as other collections). Correct: G = GHT-SELEX, I = SMiLE-seq, B = PBM, all in vitro. 12 sentences in CAMTA, CASZ1, HD_IRX, MYB, MYT1, NDT80, PUR(x2), SALL, SAND(x2), ZBTB_OTHER repeat it. Coordinator to fix directly from each model id. DONE for CAMTA, CASZ1, MYB, NDT80, PUR, SAND, ZBTB_OTHER; pending HD_IRX, MYT1, SALL (batches still running). ALL 12 sentences in 10 entries now corrected."
+  },
+  {
+   "key": "HD_POU",
+   "found": "false-positive",
+   "outcome": "flag rejected",
+   "what": "[lint] Calls PO3F2.H14CORE.0.P.B in vitro; its id says ChIP-seq only. — linter crossed a clause boundary; sentence is correct."
+  },
+  {
+   "key": "OSR",
+   "found": "false-positive",
+   "outcome": "flag rejected",
+   "what": "[lint] Calls OSR2.H14CORE.1.M.C ChIP-derived; its id says methyl-HT-SELEX. — linter crossed a clause boundary; sentence is correct."
+  },
+  {
+   "key": "GCM",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Gcm2-null mice remain viable \"with parathyroid hormone produced from the thymus\" is out of date: Liu 2010 (PMID 21203493) showed the thymus is not a backup source of serum PTH; thymic PTH comes from misplaced parathyroid clusters.",
+   "action": "corrected: thymus not a PTH source"
+  },
+  {
+   "key": "NR2E",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "\"TLX is confined to the developing forebrain\" and \"a TLX call in retina is almost certainly wrong\" are contradicted by Zhang 2006 (PMID 16702404): TLX acts in retinal progenitors and Tlx-null retinas degenerate.",
+   "action": "corrected: TLX acts in retina (long, caveats, short)"
+  },
+  {
+   "key": "OSR",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "\"OSR2 additionally has isoforms differing at the N-terminus\" — Gao 2009 says the isoforms differ in having three or five fingers, by alternative splicing.",
+   "action": "corrected; softened in long, caveats and short"
+  },
+  {
+   "key": "OSR",
+   "found": "overstated",
+   "outcome": "corrected",
+   "what": "\"Interchangeable when expressed from each other locus\" overstates Gao 2009: only Osr1 was knocked into the Osr2 locus, and eyelid closure was not rescued.",
+   "action": "corrected; softened in long, caveats and short"
+  },
+  {
+   "key": "CAMTA",
+   "found": "overstated",
+   "outcome": "corrected",
+   "what": "Prose implies no vertebrate CAMTA consensus exists; Long 2014 (already cited) derived one.",
+   "action": "corrected: mammalian consensus from Long 2014 now stated"
+  },
+  {
+   "key": "PRDM",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Reading a hit and caveats say the PRDM13 and PRDM16 HOCOMOCO models are both ChIP-only; PRD13.H14CORE.0.PSGI.A has in vitro support at grade A. Only PRDM16 is ChIP-only.",
+   "action": "corrected PRDM13 evidence; softened cardiomyopathy"
+  },
+  {
+   "key": "PRDM",
+   "found": "overstated",
+   "outcome": "corrected",
+   "what": "PRDM16 cardiomyopathy stated as fact; disputed by de Leeuw 2014 (PMID 24387995, in refs).",
+   "action": "corrected PRDM13 evidence; softened cardiomyopathy"
+  },
+  {
+   "key": "MECOM",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "\"Germline biallelic or dominant\" mutations — Niihori 2015 reports only heterozygous missense mutations in finger 8; \"biallelic\" is unsupported.",
+   "action": "corrected: missense, finger 8"
+  },
+  {
+   "key": "PLAG",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Lipoblastoma sentence names HMGA2-PLAG1 and CHCHD7-PLAG1 fusions; Hibbard 2000 reports HAS2-PLAG1 and COL1A2-PLAG1.",
+   "action": "corrected fusion partners; spacer per Voz 2000 vs 2004"
+  },
+  {
+   "key": "PLAG",
+   "found": "overstated",
+   "outcome": "corrected",
+   "what": "Spacer given as 6-8 bp; Voz 2000 found seven.",
+   "action": "corrected fusion partners; spacer per Voz 2000 vs 2004"
+  },
+  {
+   "key": "CASZ1",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "\"CHD5/CONGDD and chromatin-remodelling activity\" conflates two genes: the CHD5 in Sojka 2014 is WRB, not the chromodomain helicase.",
+   "action": "corrected CHD5/WRB conflation; added Mattar 2021"
+  },
+  {
+   "key": "CDC5L",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "\"Depletion delays G2/M\" — Bernstein 1998 used a dominant-negative mutant, not depletion.",
+   "action": "corrected"
+  },
+  {
+   "key": "OVOL",
+   "found": "loose",
+   "outcome": "corrected",
+   "what": "\"Finds OVO at genomic CCGTTA motifs\" anchored to Benner 2024, which reports TAACNGT.",
+   "action": "corrected Benner 2024 reading"
+  },
+  {
+   "key": "RREB1",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Prose says the functional literature never converged on a short RREB1 word, but Thiagalingam 1996 reported exactly CCCCAAACCACCCC. Writer turned it into an open question instead.",
+   "action": "corrected: matrices reproduce the 1996 consensus"
+  },
+  {
+   "key": "MTF1",
+   "found": "loose",
+   "outcome": "corrected",
+   "what": "Three disease sentences (cadmium/prostate carcinogenesis, metallothionein chemoresistance, huntingtin-toxicity screens) have no supporting paper in refs.",
+   "action": "re-anchored three disease claims"
+  },
+  {
+   "key": "KLF_SP",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "The Asano 1998 sentence implies KLF1 skips the gamma-globin promoter because its CACCC sequence differs; the paper promoter swaps show overall promoter structure decides, not the CACCC sequence. Timeline row is correct.",
+   "action": "corrected Asano 1998 reading"
+  },
+  {
+   "key": "WT1",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "\"+KTS WT1 binds RNA\" (attributed to Caricasole 1996, repeated in Reading a hit). Bardeesy 1998 (in refs) found +KTS isoforms could NOT bind the selected RNAs; the Caricasole abstract does not name an isoform.",
+   "action": "corrected RNA-binding isoform claim and G-rich model reading"
+  },
+  {
+   "key": "WT1",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Prose calls the ChIP-derived WT1 models generic G-rich elements, but GCGGGGGAGG matches the biochemically defined WT1 site GCGTGGGAGT at 8 of 10 positions, including the A that matters most for affinity.",
+   "action": "corrected RNA-binding isoform claim and G-rich model reading"
+  },
+  {
+   "key": "VEZF1",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Prose says the literature defines VEZF1 elements only as \"CT/GC-rich\"; Aitsebaomo 2001 (in refs) mapped a 6-bp ACCCCC element that recombinant VEZF1 binds, and Dickson 2010 describes G-rich elements.",
+   "action": "corrected; ACCCCC element and G-rich sites now stated"
+  },
+  {
+   "key": "CTCFL",
+   "found": "overstated",
+   "outcome": "corrected",
+   "what": "\"The N and C termini, not the fingers\" explain the paralogues different behaviour; Nishana 2020 found the zinc-finger region also targets them to distinct sites. \"Histone variant context\" is looser than Sleutels 2012 (\"nucleosome composition\").",
+   "action": "corrected"
+  },
+  {
+   "key": "ZNF281",
+   "found": "overstated",
+   "outcome": "corrected",
+   "what": "Wang 2008 (knockdown: required for pluripotency, activates Nanog) and Fidalgo 2011/2012 (null: dispensable, represses Nanog) contradict each other; the prose cites both without saying so.",
+   "action": "corrected: opposing reports stated"
+  },
+  {
+   "key": "HD_HNF1",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Long says the Tronche 1997 survey found HNF1 sites \"concentrated in such promoters rather than spread through the genome\"; the abstract says sites are also common in genes of cells lacking HNF1, with no counter-selection.",
+   "action": "corrected Tronche 1997 reading"
+  },
+  {
+   "key": "HD_SIX",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Long says the SIX domain \"does not bind DNA\"; the cited Kawakami 2000 review says both the SIX domain and homeodomain are needed for specific binding.",
+   "action": "corrected SIX-domain DNA binding; re-anchored Six4 to Grifone 2005"
+  },
+  {
+   "key": "HD_SIX",
+   "found": "loose",
+   "outcome": "corrected",
+   "what": "\"Six1 or Six4 loss impairs myogenesis\" anchored to Li 2003, which covers Six1 only.",
+   "action": "corrected SIX-domain DNA binding; re-anchored Six4 to Grifone 2005"
+  },
+  {
+   "key": "HD_CUT",
+   "found": "overstated",
+   "outcome": "corrected",
+   "what": "Han 2008 SATB1 breast-cancer claim stated without the failed replication (Iorns 2010, PMID 20595686, now in refs).",
+   "action": "corrected: failed replication stated"
+  },
+  {
+   "key": "HD_ONECUT",
+   "found": "overstated",
+   "outcome": "corrected",
+   "what": "\"A MODY-like presentation\" rests on Philippi 2021, which Russ-Silsby 2023 (PMID 37639628) contradicts.",
+   "action": "softened MODY-like claim; corrected Odom 2004 reading"
+  },
+  {
+   "key": "HD_ONECUT",
+   "found": "loose",
+   "outcome": "corrected",
+   "what": "\"Within a few hundred base pairs of HNF1 and HNF4 sites\" is not supported by Odom 2004 (a promoter-array study).",
+   "action": "softened MODY-like claim; corrected Odom 2004 reading"
+  },
+  {
+   "key": "HD_TALE",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "The 12-bp TGIF palindrome is said to occur \"in the low thousands per genome\"; an exact 12-mer palindrome is expected ~3.1e9/4^12 = ~185 times.",
+   "action": "corrected; unsupported SMAD claim removed"
+  },
+  {
+   "key": "HD_TALE",
+   "found": "unverified",
+   "outcome": "corrected",
+   "what": "\"TGIF palindromes co-occur with SMAD sites\" has no support in refs.",
+   "action": "corrected; unsupported SMAD claim removed"
+  },
+  {
+   "key": "ZBTB17",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Prose asserted JASPAR MA2102.1 AATCGATT has no counterpart in the MIZ1 literature; MA2102.1 cites Barrilleaux 2014 Bind-n-Seq, which reports ATCGAT for the MIZ1 zinc-finger domain. Writer replaced the clause with an accurate one. Accepted."
+  },
+  {
+   "key": "ZBTB33+ZEB",
+   "found": "loose",
+   "outcome": "corrected",
+   "what": "\"Independently in Xenopus\" (ZBTB33) and ZEB2 \"independently isolated as a SMAD-interacting protein\" anchored to the nearest in-entry paper; the primaries (Ruzov 2004; Verschueren 1999) are not in refs. [re-keyed: the sentences are in ZBTB33.json and ZEB.json]",
+   "action": "coordinator applied verified fixes: ZEB re-anchored to Verschueren 1999; ZBTB33 rewritten with Yoon 2003 and Ruzov 2004"
+  },
+  {
+   "key": "ETS_EHF",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "\"An Ehf knockout phenotype has not been reported\" is wrong: Reehorst 2021 (PMID 34180969, now in refs) reports Ehf-null mice with skin papillomas, corneal ulcers and colitis susceptibility. Suggested: \"Ehf-null mice are viable but develop skin papillomas, corneal ulcers and heightened colitis susceptibility, and gut-specific deletion impairs goblet cell differentiation [PMID:34180969].\"",
+   "action": "corrected knockout and CFTR element"
+  },
+  {
+   "key": "ETS_EHF",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "EHF said to repress \"at the CFTR promoter\"; Mutolo 2018 (PMID 29572268) places it at an element 35 kb upstream of the promoter.",
+   "action": "corrected knockout and CFTR element"
+  },
+  {
+   "key": "ETV2_ETV6",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Garbled sentence in Reading a hit: \"the single best match anywhere is a motif rather than a motif from this family\" has lost words.",
+   "action": "garbled sentence repaired"
+  },
+  {
+   "key": "SPI1",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "SPIC described in \"related tissue macrophages\"; Kohyama 2009 says SPIC is not in other tissue macrophages (red pulp only).",
+   "action": "corrected SPIC expression; affinity claim re-anchored (secondary)"
+  },
+  {
+   "key": "SPI1",
+   "found": "unverified",
+   "outcome": "corrected",
+   "what": "\"Raising IRF affinity 20- to 40-fold\" — no source found.",
+   "action": "corrected SPIC expression; affinity claim re-anchored (secondary)"
+  },
+  {
+   "key": "ZIC",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "\"Cooperates with the Mediator and elongation machinery\" is not supported by Luo 2015 (PMID 25699711), whose abstract reports Mbd3/NuRD.",
+   "action": "corrected"
+  },
+  {
+   "key": "HMG_OTHER",
+   "found": "overstated",
+   "outcome": "corrected",
+   "what": "Long says CIS-BP and Vierstra derived the BBX palindrome \"independently\"; Vierstra archetypes are clustered from the same source collections, so the two records are probably not independent.",
+   "action": "corrected: Vierstra archetype not independent"
+  },
+  {
+   "key": "ZNF_SCAN_OTHER",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Long says XPA zinc-finger annotation is \"how censuses of putative transcription factors caught it\"; the Lambert 2018 census gives XPA DBD as Unknown and keeps it because of a strong HT-SELEX motif. Accurate account is already in the 2018 timeline step and first open question.",
+   "action": "coordinator: census lists XPA for its HT-SELEX motif"
+  },
+  {
+   "key": "*",
+   "found": "note",
+   "outcome": "disclosed",
+   "what": "HOCOMOCO v14 (the H14CORE ids used throughout) has no dedicated paper; entries cite the 2024 NAR paper (PMID 37971293), which describes v12 (ChIP-seq and HT-SELEX only). Evidence codes G, I and B postdate it. Methods page should say so."
+  },
+  {
+   "key": "ZNF_SCAN_OTHER",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "XPA clause corrected by coordinator: the census lists it for its HT-SELEX motif, not its zinc-finger domain [PMID:29425488]."
+  },
+  {
+   "key": "ZBED",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Caveats called the grade-A, four-assay HOCOMOCO ZBED4 model unsupported; corrected by coordinator to two incompatible models each with in vitro support."
+  },
+  {
+   "key": "THAP",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Writer corrected mouse work to rat and patient-derived neurons (Cheng 2022, PMID 35015830). Accepted."
+  },
+  {
+   "key": "CSD",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Writer corrected duplex to single-stranded DNA for the cited CSD structure (PMID 32710623). Accepted."
+  },
+  {
+   "key": "BHLHE40_41",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "[found while fixing] tandem E-box model said to have a 3-bp separation; matrix shows 5.",
+   "action": "corrected"
+  },
+  {
+   "key": "ETV2_ETV6",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "[found while fixing] \"15 of the 16 models\" have low label agreement; all 16 do.",
+   "action": "corrected"
+  },
+  {
+   "key": "VEZF1",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "[found while fixing] the model matching MAZ is grade C and 11 positions, not \"the longest and most confident\".",
+   "action": "corrected"
+  },
+  {
+   "key": "VEZF1",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "VEZF1.H14CORE.1.P.B quoted as a 21-position run with a 23-letter string; the matrix is 23 wide and its A falls one position off the quoted string.",
+   "action": "corrected: matrix is 23 wide, A positions fixed"
+  },
+  {
+   "key": "TBP",
+   "found": "loose",
+   "outcome": "corrected",
+   "what": "A cryo-EM sentence is also anchored to PMID 7675079, which is a crystal structure.",
+   "action": "corrected: dropped crystal-structure anchor from cryo-EM claim"
+  },
+  {
+   "key": "BHLHE40_41",
+   "found": "unverified",
+   "outcome": "corrected",
+   "what": "Tandem model \"matches the clustered E-boxes typical of circadian target promoters\" has no anchor.",
+   "action": "corrected: the paper contradicts it (5-bp spacer abolishes oscillation); added Nakahata 2008"
+  },
+  {
+   "key": "HD_SIX",
+   "found": "loose",
+   "outcome": "corrected",
+   "what": "\"SIX1, SIX2 and SIX4 bind EYA1-4 [PMID:10490620]\": Ohto 1999 shows Six2, Six4 and Six5 with Eya1-3 and does not test Six1; Ruf 2004 (PMID 15141091, in refs) supports SIX1-EYA1. \"SIX3 and SIX6 do not bind EYA\" is shown only for Six3.",
+   "action": "corrected and re-anchored SIX-EYA pairings"
+  },
+  {
+   "key": "RFX",
+   "found": "loose",
+   "outcome": "flag rejected",
+   "what": "\"An estrogen-receptor-RFX4 fusion has been reported in breast tumors [PMID:10706293]\" is anchored to the RFX1 crystal-structure paper; probably the wrong paper.",
+   "action": "flag was wrong: the Gajiwala 2000 abstract itself reports ER-RFX4 fusions in breast tumours"
+  },
+  {
+   "key": "P53",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Long says p53 elements sit \"at promoters and at distal enhancers in roughly comparable numbers\"; Fischer 2017 full text says most functional p53 binding sites are in proximal promoters.",
+   "action": "corrected: most functional sites are proximal (Fischer 2017)"
+  },
+  {
+   "key": "PLAG",
+   "found": "error",
+   "outcome": "flag rejected",
+   "what": "Long says \"PLAG1 and PLAGL2 bind the same bipartite site\"; Hensen 2002 abstract says the three PLAG proteins bind different DNA sequences in a distinct fashion.",
+   "action": "flag was wrong: Hensen 2002 full text shows PLAG1 and PLAGL2 share the bipartite site; the abstract contrasts PLAGL1. Timeline row clarified."
+  },
+  {
+   "key": "SPI1",
+   "found": "loose",
+   "outcome": "corrected",
+   "what": "The 20- to 40-fold PU.1-IRF4 cooperativity is now anchored to a 2021 secondary source (Sundararaj); primaries Brass 1999 (PMID 10022840) or Escalante 2002 not checked in full text.",
+   "action": "re-anchored to the primary (Escalante 2002); wording corrected to DBD cooperativity"
+  },
+  {
+   "key": "HMG_OTHER",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "2014 timeline row credits Weirauch 2014 (CIS-BP) with the BBX palindrome; JASPAR traces the only human BBX HT-SELEX matrix to Yin 2017 (PMID 28473536). CIS-BP source for M05763 unconfirmed.",
+   "action": "corrected: BBX matrix is Yin 2017, not a 2014 record; added Yin 2017"
+  },
+  {
+   "key": "ETS_EHF",
+   "found": "error",
+   "outcome": "corrected",
+   "what": "Short lists \"airway CFTR expression\" among things these factors \"set and maintain\", but EHF represses CFTR.",
+   "action": "corrected short: EHF represses CFTR"
+  }
+ ]
+}
